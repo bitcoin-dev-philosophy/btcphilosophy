@@ -1,0 +1,46 @@
+= Bitcoin tech philosophy
+== Censorship resistance
+* The mother of all properties
+** Decentralization
+** Trustlessness
+** Privacy
+** Fungability
+
+=== Decentralization
+
+=== Trustlessness
+* Personal perspective
+* Systems perspective
+
+=== Privacy
+
+=== Fungibility
+
+== Adversarial thinking
+
+== Review
+* Simplicity is key for proper review
+* idea/BIP review?
+* Code review
+
+== Scaling
+* Inward scaling vs. horiz and vert scaling
+* Verification cost
+* Layered architecture 
+
+== Limited supply
+* What happens when block subsidy -> 0. Will tx fees be enough to secure the network?
+
+== Upgrading
+* Upgradeability
+* softforks vs hardforks
+* deployment
+* avoid feature bloat
+
+== When shit hits the fan
+
+== Case study: Taproot
+* privacy
+* fungability
+* upgradeability
+* inward scaling

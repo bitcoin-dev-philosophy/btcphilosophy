@@ -1,0 +1,41 @@
+= Trustlessness
+
+People often say things like "Bitcoin is great because it's
+trustless". What do they mean by that? Pieter Wuille explains this
+widely used term on StackExchange
+(https://bitcoin.stackexchange.com/a/45674/69518).
+
+____
+The trust we're talking about in "trustless" is an abstract technical
+term. A distributed system is called trustless when it does not
+require any trusted parties to function correctly.
+____
+
+In short, the word _trustless_ refers to a property of the Bitcoin
+protocal, that means it can function without "any trusted
+parties". This is different from the trust that you inevitably have to
+put into the software or hardware you run.
+
+Bitcoin is thus trustless, but you still have to trust your software
+or hardware to some degree. Very advanced users can verify a lot of
+aspects of the software they run, and reduce their needed trust to
+just trusting their computer hardware, and possibly their operating
+system.
+
+Bitcoin's trustlessness is absolutely imperative. In 2018, Matt
+Corallo, spoke about trustlessness at the Baltic Honeybadger
+conference in Riga.
+
+* Video: https://youtu.be/66ZoGUAnY9s?t=4019
+* Transcript: https://btctranscripts.com/baltic-honeybadger/2018/trustlessness-scalability-and-directions-in-security-models/
+
+The essence of that talk was that you can't build trustless systems on
+top of a trusted system, but you can build trusted systems, for
+example a custodial wallet, on top of a trustless system.
+
+.A trustless base layer allows for various trade-offs on higher levels.
+image::trust.png[width=50%,align=center]
+
+
+This security model allows the system designer to select trade-offs
+that make sense to them, without forcing those trade-offs on others.
