@@ -1,0 +1,47 @@
+Various links to great material that may or may not be used in posts. This is a living file. Please add stuff as you please.
+
+Bitcoin paper
+https://bitcoin.org/bitcoin.pdf
+
+GMAX on decentralization. Analog English language:
+https://www.reddit.com/r/Bitcoin/comments/s82t2n/bitcoin_is_completely_autonomous_right/htdte7w/?context=3
+
+Greg Maxwell on opcodes
+https://bitcoin.stackexchange.com/questions/106851/what-are-the-downsides-to-enabling-potentially-suboptimal-or-unused-opcodes-in-a/106915#106915
+"Every piece of additional consensus logic has implementation and
+ongoing maintenance cost which is perpetual and can never be removed
+without potentially confiscating some user's assets."
+
+Greg Maxwell on decentralization
+https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/
+"A far bigger risk to Bitcoin is that the public using it won't
+understand, won't care, and won't protect the decentralization
+properties that make it valuable over centralized alternatives in the
+first place. ... a risk we can see playing out constantly in the
+billion dollar market caps of totally centralized systems. The ability
+demonstrated by system with fake decentralization to arbitrarily
+change the rules out from under users is far more concerning than the
+risk that an expensive attack could allow some theft in the case of
+over-eagerly finalized transactions."
+
+Andrew Poelstra
+On Stake and Consensus
+https://nakamotoinstitute.org/static/docs/on-stake-and-consensus.pdf
+
+Matt Corallo on trustlessness
+Trust models. You can build trusted systems on top of trustless systems, but not the other way around.
+If users expect the system to not change, they will preserve the rules. This separates Bitcoin from most other coins.
+Don't force your preferred trust model upon others.
+https://youtu.be/66ZoGUAnY9s?t=3998
+
+Eric Voskuil, Axiom of Resistance
+https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance
+"an assumption that it is possible for a system to resist state control"
+
+Limited money supply [trust, consensus rules]
+https://bitcoin.stackexchange.com/a/106830/69518
+"So the answer is that you don't have to trust someone to not increase the supply. You just have to run some code that will verify that they haven't."
+
+Pieter Wuille counts money
+https://bitcoin.stackexchange.com/a/38998/69518
+"However... However... However..."
