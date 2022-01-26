@@ -7,6 +7,12 @@
 ** Fungability
 
 === Decentralization
+* POW/POS
+* Network block propagation
+* Maintaing low resource requirements
+* Trusted third parties are security holes
+* https://www.youtube.com/watch?v=66ZoGUAnY9s&t=4019s[Trustlessness, scalability and directions in security models]
+* https://bluematt.bitcoin.ninja/
 
 === Trustlessness
 * Personal perspective
@@ -17,6 +23,8 @@
 === Fungibility
 
 == Adversarial thinking
+* https://www.youtube.com/watch?v=fwcl17Q0bpk
+* https://www.gutenberg.org/files/26184/page-images/26184-images.pdf
 
 == Review
 * Simplicity is key for proper review
@@ -38,6 +46,9 @@
 * avoid feature bloat
 
 == When shit hits the fan
+* https://en.bitcoin.it/wiki/Value_overflow_incident
+* BDB in v0.7 to LevelDB in v0.8
+* 2018 inflation bug
 
 == Case study: Taproot
 * privacy
