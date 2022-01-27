@@ -93,3 +93,13 @@ https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/
 Andrew Poelstra- Using The Chain For What Chains Are Good For
 "There’s a distinction between validation and execution"
 https://btctranscripts.com/scalingbitcoin/stanford-2017/using-the-chain-for-what-chains-are-good-for/
+
+Alex B: The Tao Of Bitcoin Development
+https://medium.com/@bergealex4/the-tao-of-bitcoin-development-ff093c6155cd
+
+0xB10C: The Incomplete History of Bitcoin Development
+https://b10c.me/blog/004-the-incomplete-history-of-bitcoin-development/
+
+Jameson Lopp: Who Controls Bitcoin Core?
+https://blog.lopp.net/who-controls-bitcoin-core-/
+

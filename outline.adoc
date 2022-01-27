@@ -4,7 +4,7 @@
 ** Decentralization
 ** Trustlessness
 ** Privacy
-** Fungability
+** Fungibility
 
 === Decentralization
 * POW/POS
@@ -15,8 +15,6 @@
 * https://bluematt.bitcoin.ninja/
 
 === Trustlessness
-* Personal perspective
-* Systems perspective
 
 === Privacy
 
@@ -52,6 +50,6 @@
 
 == Case study: Taproot
 * privacy
-* fungability
+* fungibility
 * upgradeability
 * inward scaling
