@@ -12,6 +12,9 @@ https://bitcoin.stackexchange.com/questions/106851/what-are-the-downsides-to-ena
 ongoing maintenance cost which is perpetual and can never be removed
 without potentially confiscating some user's assets."
 
+Gmax - Mutliple implementations:
+https://bitcointalk.org/index.php?topic=5035144.msg46077622#msg46077622
+
 Greg Maxwell on decentralization
 https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/
 "A far bigger risk to Bitcoin is that the public using it won't
@@ -24,9 +27,18 @@ change the rules out from under users is far more concerning than the
 risk that an expensive attack could allow some theft in the case of
 over-eagerly finalized transactions."
 
+Arvind Narayanan - Lessons For Bitcoin From 150 Years Of Decentralization
+https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2016/lessons-for-bitcoin-from-150-years-of-decentralization/
+
+The Scaling Debate is a Proxy Battle Over Centralization
+https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2016/scaling-debate-is-a-proxy-battle-over-centralization/
+
 Andrew Poelstra
 On Stake and Consensus
 https://nakamotoinstitute.org/static/docs/on-stake-and-consensus.pdf
+
+Andrew Poelstra - security assumptions
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/
 
 Matt Corallo on trustlessness
 Trust models. You can build trusted systems on top of trustless systems, but not the other way around.
@@ -45,3 +57,39 @@ https://bitcoin.stackexchange.com/a/106830/69518
 Pieter Wuille counts money
 https://bitcoin.stackexchange.com/a/38998/69518
 "However... However... However..."
+
+Gmax - Scaling roadmap
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-December/011865.html
+
+Pieter - Segregated Witness And Its Impact On Scalability
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/segregated-witness-and-its-impact-on-scalability/
+
+Jonas Nick - Validation Cost Metric
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/validation-cost-metric/
+
+Udi Wertheimer - Privacy Concepts
+https://btctranscripts.com/scalingbitcoin/tel-aviv-2019/edgedevplusplus/privacy-concepts/
+
+Chris Belcher - Breaking Bitcoin Privacy
+https://btctranscripts.com/breaking-bitcoin/2019/breaking-bitcoin-privacy/
+
+Adam Back - Fungibility And Scalability
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/fungibility-and-scalability/
+https://btctranscripts.com/misc/bitcoin-adam3us-fungibility-privacy/
+
+Matt Corallo - Fungibility Overview
+https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/
+
+Adam Back - Scaling Tradeoffs
+https://btctranscripts.com/misc/adam3us-bitcoin-scaling-tradeoffs/
+
+Peter Todd - Scaling
+https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2015/peter-todd-scalability/
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/in-adversarial-environments-blockchains-dont-scale/
+
+Jimmy Song - Socialized Costs Of Hard Forks
+https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/
+
+Andrew Poelstra- Using The Chain For What Chains Are Good For
+"There’s a distinction between validation and execution"
+https://btctranscripts.com/scalingbitcoin/stanford-2017/using-the-chain-for-what-chains-are-good-for/
