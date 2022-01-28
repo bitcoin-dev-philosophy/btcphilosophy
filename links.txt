@@ -40,12 +40,6 @@ https://nakamotoinstitute.org/static/docs/on-stake-and-consensus.pdf
 Andrew Poelstra - security assumptions
 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/
 
-Matt Corallo on trustlessness
-Trust models. You can build trusted systems on top of trustless systems, but not the other way around.
-If users expect the system to not change, they will preserve the rules. This separates Bitcoin from most other coins.
-Don't force your preferred trust model upon others.
-https://youtu.be/66ZoGUAnY9s?t=3998
-
 Eric Voskuil, Axiom of Resistance
 https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance
 "an assumption that it is possible for a system to resist state control"
@@ -66,16 +60,6 @@ https://btctranscripts.com/scalingbitcoin/hong-kong-2015/segregated-witness-and-
 
 Jonas Nick - Validation Cost Metric
 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/validation-cost-metric/
-
-Udi Wertheimer - Privacy Concepts
-https://btctranscripts.com/scalingbitcoin/tel-aviv-2019/edgedevplusplus/privacy-concepts/
-
-Chris Belcher - Breaking Bitcoin Privacy
-https://btctranscripts.com/breaking-bitcoin/2019/breaking-bitcoin-privacy/
-
-Adam Back - Fungibility And Scalability
-https://btctranscripts.com/scalingbitcoin/hong-kong-2015/fungibility-and-scalability/
-https://btctranscripts.com/misc/bitcoin-adam3us-fungibility-privacy/
 
 Matt Corallo - Fungibility Overview
 https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/
@@ -102,4 +86,32 @@ https://b10c.me/blog/004-the-incomplete-history-of-bitcoin-development/
 
 Jameson Lopp: Who Controls Bitcoin Core?
 https://blog.lopp.net/who-controls-bitcoin-core-/
+
+Jameson Lopp: Nobody Understands Bitcoin (And That’s OK)
+https://blog.lopp.net/nobody-understands-bitcoin-and-thats-ok/
+
+Hal Finney: Digital Cach And Privacy (1993!)
+https://nakamotoinstitute.org/digital-cash-and-privacy/
+
+David D. Friedman: The Case for Privacy (2005)
+https://nakamotoinstitute.org/the-case-for-privacy/
+Nice conclusion!
+
+
+Privacy
+=======
+
+Adam Back on privacy and fungibility
+https://btctranscripts.com/misc/bitcoin-adam3us-fungibility-privacy/
+https://www.youtube.com/watch?v=3dAdI3Gzodo
+
+Chris Belcher - Breaking Bitcoin Privacy
+https://btctranscripts.com/breaking-bitcoin/2019/breaking-bitcoin-privacy/
+
+Adam Back - Fungibility And Scalability
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/fungibility-and-scalability/
+https://btctranscripts.com/misc/bitcoin-adam3us-fungibility-privacy/
+
+Udi Wertheimer - Privacy Concepts
+https://btctranscripts.com/scalingbitcoin/tel-aviv-2019/edgedevplusplus/privacy-concepts/
 

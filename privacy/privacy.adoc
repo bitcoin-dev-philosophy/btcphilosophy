@@ -1,0 +1,139 @@
+== Privacy
+
+Bitcoin can be described as a pseudonomous system, where users can
+have multiple pseudonyms in the form of public keys. At first glance,
+this looks like a pretty good way to keep users from being identified,
+but it's really easy to accidentaly leak financial information to
+people you didn't intend to give it to.
+
+We are going to look at what privacy means in the context of Bitcoin
+and why you'd want privacy at all. Some commonly known attack vectors,
+both on-chain and off-chain, on privacy are also discussed.
+
+=== What does privacy mean?
+
+Privacy can mean different things in different contexts, but in
+Bitcoin it generally means that users don't have to reveal their
+financial information to others, unless they voluntarily do so.
+
+There are lots of ways in which you may leak your private information
+to others, with or without knowing it. This can leak both from the
+public blockchain and through other means, for example intercepting
+your internet communication.
+
+=== Why is privacy important
+
+It may seem obvious why privacy is important in Bitcoin, but there are
+privacy aspects you might not immediately think about. Gregory
+Maxwell, on the Bitcoin Talk forum
+(https://bitcointalk.org/index.php?topic=334316.msg3588908#msg3588908),
+walks us through a lot of good reasons why he thinks privacy
+matters. Among them is fungibility:
+
+____
+Financial privacy is an essential element to fungibility in Bitcoin:
+if you can meaningfully distinguish one coin from another, then their
+fungibility is weak. If our fungibility is too weak in practice, then
+we cannot be decentralized: if someone important announces a list of
+stolen coins they won't accept coins derived from, you must carefully
+check coins you accept against that list and return the ones that
+fail.  Everyone gets stuck checking blacklists issued by various
+authorities because in that world we'd all not like to get stuck with
+bad coins. This adds friction and transactional costs and makes
+Bitcoin less valuable as a money.
+____
+
+Maxwell also explains how privacy is important for a free market, your
+personal safety, and human dignity.
+
+Now that we've got a grip on why privacy matters, let's have a look at
+Bitcoin's privacy in practice.
+
+=== On-chain privacy
+
+On-chain privacy refers to the information you disclose in
+transactions on the blockchain. It can be transations you make or
+transactions other people make to send you money.
+
+Satoshi Nakamoto ponders around on-chain privacy in section 7 of his Bitcoin paper
+https://bitcoin.org/bitcoin.pdf[Bitcoin paper]footnote:[https://bitcoin.org/bitcoin.pdf]:
+
+[quote, Satoshi Nakamoto, the Bitcoin paper (https://bitcoin.org/bitcoin.pdf)]
+____
+As an additional firewall, a new key pair should be used for each
+transaction to keep them from being linked to a common owner. Some
+linking is still unavoidable with multi-input transactions, which
+necessarily reveal that their inputs were owned by the same owner. The
+risk is that if the owner of a key is revealed, linking could reveal
+other transactions that belonged to the same owner.
+____
+
+The paper summarizes the main problems of Bitcoin on-chain privacy:
+Address reuse and address clustering, the ability to decide, with some
+level of certainty, that a set of different addresses belong to the
+same user.
+
+Chris Belcher wrote in great deatail about the different kinds of
+privacy leaks that can happen on the Bitcoin blockchain
+(https://en.bitcoin.it/Privacy#Blockchain_attacks_on_privacy). We
+recommend you to read at least the first few subsections under
+"Blockchain attacks on privacy."
+
+The takeaway is that privacy in Bitcoin isn't perfect. It requires a
+significant amount of work to transact privately. Most people aren't
+prepared to go that far for privacy. It seems there is a clear
+trade-off between privacy and convenience.
+
+Another aspect of privacy is that your privacy measures affects other
+users as well. If you are sloppy with your privacy, other people might
+experience reduced privacy too. Gregory Maxwell explains this in a
+simple manner on the same Bitcoin Talk discussion that we linked above
+(https://bitcointalk.org/index.php?topic=334316.msg3589252#msg3589252),
+and concludes with an example:
+
+____
+This actually works in practice, too... A nice whitehat hacker on IRC
+was playing around with brainwallet cracking and hit a phrase with
+~250 BTC in it.  We were able to identify the owner from just the
+address alone, because they'd been paid by a Bitcoin service that
+reused addresses and he was able to talk them into giving up the users
+contact information. He actually got the user on the phone, they were
+shocked and confused— but grateful to not be out their coin.  A happy
+ending there. (This isn't the only example of it, by far ... but its
+one of the more fun ones).
+____
+
+In this case, all went well thanks to the philantropically minded
+hacker, but don't count on that it'll go well next time.
+
+=== Off-chain privacy
+
+While the blockchain proves to be a notorious source of privacy leaks,
+there are plenty of other techniques that don't use the blockchain,
+some more sneaky than others. These range from key-loggers to network
+traffic analysis. To read up on some of these methods, please refer
+again to Chris Belcher's piece, specifically the section
+"Non-blockchain attacks on privacy"
+(https://en.bitcoin.it/Privacy#Non-blockchain_attacks_on_privacy).
+
+Among a plethora of attacks, Belcher mentions the possibility of
+someone snooping on your internet connection, for example your ISP:
+
+____
+If the adversary sees a transaction or block coming out of your node
+which did not previously enter, then it can know with near-certainty
+that the transaction was made by you or the block was mined by you. As
+internet connections are involved, the adversary will be able to link
+the IP address with the discovered bitcoin information.
+____
+
+Again, protecting against the wide range of attacks is hard and you
+probably won't fully be able to, so you have to use some kind of
+trade-off between convenience and privacy that works for you.
+
+
+=== Conclusion
+
+Privacy is hard, and there is no privacy silver bullet. To get decent
+privacy in Bitcoin you have to take active measures that are costly
+and time-consuming.
