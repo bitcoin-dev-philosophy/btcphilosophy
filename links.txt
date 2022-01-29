@@ -3,6 +3,13 @@ Various links to great material that may or may not be used in posts. This is a 
 Bitcoin paper
 https://bitcoin.org/bitcoin.pdf
 
+Bitcoin's Academic Pedigree: The concept of cryptocurrencies is built from forgotten ideas in research literature.
+Bitcoin wasn't built in a vacuum
+https://queue.acm.org/detail.cfm?id=3136559
+
+Weaknesses from bitcoin wiki
+https://en.bitcoin.it/wiki/Weaknesses
+
 GMAX on decentralization. Analog English language:
 https://www.reddit.com/r/Bitcoin/comments/s82t2n/bitcoin_is_completely_autonomous_right/htdte7w/?context=3
 
@@ -66,6 +73,9 @@ https://btctranscripts.com/scalingbitcoin/hong-kong-2015/segregated-witness-and-
 
 Jonas Nick - Validation Cost Metric
 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/validation-cost-metric/
+
+Privacy wiki - 
+https://en.bitcoin.it/wiki/Privacy
 
 Udi Wertheimer - Privacy Concepts
 https://btctranscripts.com/scalingbitcoin/tel-aviv-2019/edgedevplusplus/privacy-concepts/
