@@ -3,6 +3,13 @@ Various links to great material that may or may not be used in posts. This is a 
 Bitcoin paper
 https://bitcoin.org/bitcoin.pdf
 
+Bitcoin's Academic Pedigree: The concept of cryptocurrencies is built from forgotten ideas in research literature.
+Bitcoin wasn't built in a vacuum
+https://queue.acm.org/detail.cfm?id=3136559
+
+Weaknesses from bitcoin wiki
+https://en.bitcoin.it/wiki/Weaknesses
+
 GMAX on decentralization. Analog English language:
 https://www.reddit.com/r/Bitcoin/comments/s82t2n/bitcoin_is_completely_autonomous_right/htdte7w/?context=3
 
@@ -114,4 +121,3 @@ https://btctranscripts.com/misc/bitcoin-adam3us-fungibility-privacy/
 
 Udi Wertheimer - Privacy Concepts
 https://btctranscripts.com/scalingbitcoin/tel-aviv-2019/edgedevplusplus/privacy-concepts/
-
