@@ -121,3 +121,12 @@ https://btctranscripts.com/misc/bitcoin-adam3us-fungibility-privacy/
 
 Udi Wertheimer - Privacy Concepts
 https://btctranscripts.com/scalingbitcoin/tel-aviv-2019/edgedevplusplus/privacy-concepts/
+
+Resource collections
+====================
+
+https://btctranscripts.com/
+https://www.lopp.net/bitcoin-information.html
+https://bitcoiner.guide/
+https://bitcoin-only.com/
+
