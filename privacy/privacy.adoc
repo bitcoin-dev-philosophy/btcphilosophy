@@ -40,7 +40,7 @@ check coins you accept against that list and return the ones that
 fail.  Everyone gets stuck checking blacklists issued by various
 authorities because in that world we'd all not like to get stuck with
 bad coins. This adds friction and transactional costs and makes
-Bitcoin less valuable as a monetary medium.
+Bitcoin less valuable as a money.
 ____
 
 Maxwell also explains how privacy is important for a free market, your
