@@ -3,12 +3,12 @@
 Bitcoin can be described as a pseudonomous system, where users can
 have multiple pseudonyms in the form of public keys. At first glance,
 this looks like a pretty good way to keep users from being identified,
-but it's really easy to accidentaly leak financial information to
+but it's really easy to accidentally leak financial information to
 people you didn't intend to give it to.
 
 We are going to look at what privacy means in the context of Bitcoin
-and why you'd want privacy at all. Some commonly known attack vectors,
-both on-chain and off-chain, on privacy are also discussed.
+and why you'd want privacy in the first place. Some well known privacy attack vectors,
+both on-chain and off-chain, are also discussed.
 
 === What does privacy mean?
 
@@ -21,7 +21,7 @@ to others, with or without knowing it. This can leak both from the
 public blockchain and through other means, for example intercepting
 your internet communication.
 
-=== Why is privacy important
+=== Why is privacy important?
 
 It may seem obvious why privacy is important in Bitcoin, but there are
 privacy aspects you might not immediately think about. Gregory
@@ -40,7 +40,7 @@ check coins you accept against that list and return the ones that
 fail.  Everyone gets stuck checking blacklists issued by various
 authorities because in that world we'd all not like to get stuck with
 bad coins. This adds friction and transactional costs and makes
-Bitcoin less valuable as a money.
+Bitcoin less valuable as a monetary medium.
 ____
 
 Maxwell also explains how privacy is important for a free market, your
@@ -52,7 +52,7 @@ Bitcoin's privacy in practice.
 === On-chain privacy
 
 On-chain privacy refers to the information you disclose in
-transactions on the blockchain. It can be transations you make or
+transactions on the blockchain. It can be transactions you make or
 transactions other people make to send you money.
 
 Satoshi Nakamoto ponders around on-chain privacy in section 7 of his Bitcoin paper
@@ -73,7 +73,7 @@ Address reuse and address clustering, the ability to decide, with some
 level of certainty, that a set of different addresses belong to the
 same user.
 
-Chris Belcher wrote in great deatail about the different kinds of
+Chris Belcher wrote in great detail about the different kinds of
 privacy leaks that can happen on the Bitcoin blockchain
 (https://en.bitcoin.it/Privacy#Blockchain_attacks_on_privacy). We
 recommend you to read at least the first few subsections under
@@ -82,7 +82,7 @@ recommend you to read at least the first few subsections under
 The takeaway is that privacy in Bitcoin isn't perfect. It requires a
 significant amount of work to transact privately. Most people aren't
 prepared to go that far for privacy. It seems there is a clear
-trade-off between privacy and convenience.
+trade-off between privacy and usability.
 
 Another aspect of privacy is that your privacy measures affects other
 users as well. If you are sloppy with your privacy, other people might
@@ -104,13 +104,13 @@ one of the more fun ones).
 ____
 
 In this case, all went well thanks to the philantropically minded
-hacker, but don't count on that it'll go well next time.
+hacker, but don't count on that next time.
 
 === Off-chain privacy
 
 While the blockchain proves to be a notorious source of privacy leaks,
 there are plenty of other techniques that don't use the blockchain,
-some more sneaky than others. These range from key-loggers to network
+some sneakier than others. These range from key-loggers to network
 traffic analysis. To read up on some of these methods, please refer
 again to Chris Belcher's piece, specifically the section
 "Non-blockchain attacks on privacy"
