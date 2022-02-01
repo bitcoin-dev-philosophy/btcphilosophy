@@ -5,6 +5,12 @@ Bitcoin to learn about this new digital currency's fundamental
 properties and how seasoned Bitcoin developers think about these
 properties.
 
+image::under-construction.svg[width=20%,float="right",align="center"]
+
+WARNING: This repo is heavily under construction. If this sign is
+still here on 2022-06-01 (CEST), we have abandoned this
+project. Sorry.
+
 === Intended reader
 
 The typical reader is a developer who just started digging into
