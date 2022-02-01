@@ -1,0 +1,12 @@
+= Bitcoin philosophy
+Kalle Rosenbaum, Linnéa Rosenbaum
+:doctype: book
+:toc: left
+:toclevels: 3
+:imagesdir: images
+
+include::readme.adoc[]
+
+include::privacy.adoc[]
+
+include::trustlessness.adoc[]

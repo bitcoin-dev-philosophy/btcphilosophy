@@ -1,4 +1,4 @@
-=== Trustlessness
+== Trustlessness
 
 People often say things like "Bitcoin is great because it's
 trustless". What do they mean by that? Pieter Wuille explains this
