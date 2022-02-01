@@ -104,6 +104,16 @@ David D. Friedman: The Case for Privacy (2005)
 https://nakamotoinstitute.org/the-case-for-privacy/
 Nice conclusion!
 
+Censorship resistance
+=====================
+
+Eric Voskuil, libbitcoin wiki
+https://github.com/libbitcoin/libbitcoin-system/wiki/Censorship-Resistance-Property
+
+Layered architecture
+====================
+Gregory Maxwell on layered systems (and Bitcoin).
+https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/
 
 Privacy
 =======
@@ -121,6 +131,19 @@ https://btctranscripts.com/misc/bitcoin-adam3us-fungibility-privacy/
 
 Udi Wertheimer - Privacy Concepts
 https://btctranscripts.com/scalingbitcoin/tel-aviv-2019/edgedevplusplus/privacy-concepts/
+
+Sam Wouters - Protect your bitcoin through privacy
+https://bitcoinsnippets.com/protect-your-bitcoin-through-privacy/
+Easy but long read. With cute cartoons.
+
+Bitcoin Q+A - 10 Tips to Interact with Bitcoin More Privately
+https://bitcoiner.guide/privacytips/
+
+Finite supply
+=============
+
+Pieter Wuille, BIP42 - A finite monetary supply for Bitcoin
+https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki
 
 Resource collections
 ====================
