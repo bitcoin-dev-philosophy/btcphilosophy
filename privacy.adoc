@@ -52,12 +52,13 @@ Bitcoin's privacy in practice.
 
 === Blockchain privacy
 
-On-chain privacy refers to the information you disclose in
+Blockchain privacy refers to the information you disclose in
 transactions on the blockchain. It can be transactions you make or
 transactions other people make to send you money.
 
-Satoshi Nakamoto ponders around on-chain privacy in section 7 of his Bitcoin paper
-https://bitcoin.org/bitcoin.pdf[Bitcoin paper]footnote:[https://bitcoin.org/bitcoin.pdf]:
+Satoshi Nakamoto ponders around on-chain privacy in section 7 of his
+Bitcoin paper https://bitcoin.org/bitcoin.pdf[Bitcoin
+paper]footnote:[https://bitcoin.org/bitcoin.pdf]:
 
 [[satoshi-unique-addresses]]
 [quote, Satoshi Nakamoto, the Bitcoin paper (https://bitcoin.org/bitcoin.pdf)]
@@ -70,10 +71,12 @@ risk is that if the owner of a key is revealed, linking could reveal
 other transactions that belonged to the same owner.
 ____
 
-The paper summarizes the main problems of Bitcoin on-chain privacy:
-Address reuse and address clustering, the ability to decide, with some
-level of certainty, that a set of different addresses belong to the
-same user.
+The paper summarizes the main problems of blockchain privacy: Address
+reuse and address clustering, the ability to decide, with some level
+of certainty, that a set of different addresses belong to the same
+user.
+
+image::address-reuse-clustering.png[]
 
 Chris Belcher wrote in great detail about the different kinds of
 privacy leaks that can happen on the Bitcoin blockchain
@@ -111,11 +114,11 @@ hacker, but don't count on that next time.
 === Non-blockchain privacy
 
 While the blockchain proves to be a notorious source of privacy leaks,
-there are plenty of other techniques that don't use the blockchain,
-some sneakier than others. These range from key-loggers to network
-traffic analysis. To read up on some of these methods, please refer
-again to Chris Belcher's piece, specifically the section
-"Non-blockchain attacks on privacy"
+there are plenty of other leaks that don't use the blockchain, some
+sneakier than others. These range from key-loggers to network traffic
+analysis. To read up on some of these methods, please refer again to
+Chris Belcher's piece, specifically the section "Non-blockchain
+attacks on privacy"
 (https://en.bitcoin.it/Privacy#Non-blockchain_attacks_on_privacy).
 
 Among a plethora of attacks, Belcher mentions the possibility of
@@ -129,7 +132,7 @@ internet connections are involved, the adversary will be able to link
 the IP address with the discovered bitcoin information.
 ____
 
-Again, protecting against the wide range of attacks is hard and you
+Again, protecting against this wide range of attacks is hard and you
 probably won't fully be able to, so you have to use some kind of
 trade-off between convenience and privacy that works for you.
 
@@ -157,7 +160,23 @@ example the Lightning Network and Blockstream's Liquid sidechain.
 CoinJoin:: a way for multiple people to merge their transactions into
 one, making it harder to do address clustering.
 
-For more in-depth reading about coutermeasures, refer to the
+Note how better privacy can be achieved by building systems on top of
+Bitcoin, as is the case with Lightning Network:
+
+.Layers can add privacy
+image::privacy.png[width=50%]
+
+We noted in <<trustlessness>> that trust can only decrease with layers
+on top, but that doesn't seem to hold for privacy, which can be
+improved or made worse arbitrarily in layers on top. Why is that?
+Layers on top of Bitcoin must use on-chain transactions now and then,
+otherwise they wouldn't be "on top of Bitcoin", and privacy enhancing
+layers generally try to use the base layer as little as possible to
+leak a minimum of information. However, these few transactions still
+rely on the trustlessness of the base layer. If that trustlessness is
+broken on the base layer, so is the trust-level on the layers above.
+
+For more in-depth reading about countermeasures, refer to the
 previously mentioned wiki article on privacy, starting at
 https://en.bitcoin.it/wiki/Privacy#Methods_for_improving_privacy_.28non-blockchain.29.
 

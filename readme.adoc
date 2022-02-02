@@ -1,0 +1,63 @@
+== About btcphilosophy
+
+This project is meant as teaching material for new developers in
+Bitcoin to learn about this new digital currency's fundamental
+properties and how seasoned Bitcoin developers think about these
+properties.
+
+image::under-construction.svg[width=20%,float="right",align="center"]
+
+WARNING: This repo is heavily under construction. If this sign is
+still here on 2022-06-01 (CEST), we have abandoned this
+project. Sorry.
+
+=== Intended reader
+
+The typical reader is a developer who just started digging into
+Bitcoin and possibly have worked in the Bitcoin space in one form or
+the other for a while.
+
+In order to follow along through the material, the reader is expected
+to know how Bitcoin works on a basic technical level.
+
+The reader is expected to stay humble and be prepared to have
+his/her opinions challenged.
+
+=== How is this organized?
+
+The project is sectioned into topics. Each topic will guide you
+through a number of links with recommended reading and briefly discuss
+each link.
+
+The links refer to external resources on platforms we can't
+control. We have therefore saved the linked articles locally in this
+repository, along with info on where it was copied from, and when.
+
+=== What to expect
+
+There are lots and lots of people involved in Bitcoin and they
+sometimes have opposing opinions on some topics, so some resources may
+appear contradictory others. However, we will mostly try to stick to
+the facts, where opinions don't matter.
+
+It should help the reader to more quickly get up to speed
+on basic Bitcoin developer philosophy.
+
+* your opinions/values may be challenged
+
+=== What you'll learn
+
+After reading this collection of articles, you'll 
+
+* have leap-frogged more than a decade of experience
+* be able to distinguish useful Bitcoin ideas from, well, less useful ideas
+* get accustomed to some great places for Bitcoin information
+* be humbled by the vast amount of wisdom available
+* be humbled by the width of this field
+
+=== Who wrote this?
+
+The main authors are Kalle Rosenbaum and Linnéa Rosenbaum. This work
+is commissioned and funded by Chaincode Labs. Chaincode Labs run
+internships for developers where the attendants learn about Bitcoin
+development.

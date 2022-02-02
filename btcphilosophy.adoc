@@ -1,0 +1,15 @@
+= Bitcoin development philosophy
+Kalle Rosenbaum <kalle@rosenbaum.se>; Linnéa Rosenbaum <linnea@rosenbaum.se>
+:doctype: book
+:toc: left
+:toclevels: 3
+:imagesdir: images
+
+[[readme]]
+include::readme.adoc[]
+
+[[trustlessness]]
+include::trustlessness.adoc[]
+
+[[privacy]]
+include::privacy.adoc[]

@@ -1,4 +1,4 @@
-=== Trustlessness
+== Trustlessness
 
 People often say things like "Bitcoin is great because it's
 trustless". What do they mean by that? Pieter Wuille explains this
@@ -34,8 +34,7 @@ top of a trusted system, but you can build trusted systems, for
 example a custodial wallet, on top of a trustless system.
 
 .A trustless base layer allows for various trade-offs on higher levels.
-image::trust.png[width=50%,align=center]
-
+image::trust.png[width=50%]
 
 This security model allows the system designer to select trade-offs
 that make sense to them, without forcing those trade-offs on others.
