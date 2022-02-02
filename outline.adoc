@@ -1,4 +1,5 @@
 = Bitcoin tech philosophy
+
 == Censorship resistance
 * The mother of all properties
 ** Decentralization
@@ -9,7 +10,7 @@
 === Decentralization
 * POW/POS
 * Network block propagation
-* Maintaing low resource requirements
+* Maintaining low resource requirements
 * Trusted third parties are security holes
 * https://www.youtube.com/watch?v=66ZoGUAnY9s&t=4019s[Trustlessness, scalability and directions in security models]
 * https://bluematt.bitcoin.ninja/

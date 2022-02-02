@@ -51,14 +51,6 @@ Eric Voskuil, Axiom of Resistance
 https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance
 "an assumption that it is possible for a system to resist state control"
 
-Limited money supply [trust, consensus rules]
-https://bitcoin.stackexchange.com/a/106830/69518
-"So the answer is that you don't have to trust someone to not increase the supply. You just have to run some code that will verify that they haven't."
-
-Pieter Wuille counts money
-https://bitcoin.stackexchange.com/a/38998/69518
-"However... However... However..."
-
 Gmax - Scaling roadmap
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-December/011865.html
 
@@ -142,8 +134,19 @@ https://bitcoiner.guide/privacytips/
 Finite supply
 =============
 
+Limited money supply [trust, consensus rules]
+https://bitcoin.stackexchange.com/a/106830/69518
+"So the answer is that you don't have to trust someone to not increase the supply. You just have to run some code that will verify that they haven't."
+
+Pieter Wuille counts money
+https://bitcoin.stackexchange.com/a/38998/69518
+"However... However... However..."
+
 Pieter Wuille, BIP42 - A finite monetary supply for Bitcoin
 https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki
+
+G. Maxwell on fee sniping and 
+https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacerbate-instability-in-bitcoin-in-the-future
 
 Resource collections
 ====================

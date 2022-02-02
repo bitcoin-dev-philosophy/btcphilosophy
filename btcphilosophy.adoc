@@ -13,3 +13,7 @@ include::trustlessness.adoc[]
 
 [[privacy]]
 include::privacy.adoc[]
+
+[[finitesupply]]
+include::finitesupply.adoc[]
+
