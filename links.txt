@@ -60,6 +60,9 @@ https://btctranscripts.com/scalingbitcoin/hong-kong-2015/segregated-witness-and-
 Jonas Nick - Validation Cost Metric
 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/validation-cost-metric/
 
+gmax on privacy and confidential txs
+https://youtu.be/ZIugzFygviw?t=2108
+
 Matt Corallo - Fungibility Overview
 https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/
 
