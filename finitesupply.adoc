@@ -5,18 +5,22 @@ Is it set in stone that Bitcoin has a finite supply of 21 million BTC? No, it is
 First of all, Pieter Wuille clears tings out regarding the exact amount: https://bitcoin.stackexchange.com/a/38998/69518.
 
 Secondly, https://bitcoin.stackexchange.com/a/106830/69518 explains how the consensus rule of limited supply is enforced:
- ____
+
+____
  So the answer is that you don't have to trust someone to not increase the supply. You just have to run some code that will verify that they haven't.
- ____
+____
 
 We can say fore sure that this is how things are right now, with today's block subsidy, transaction fees, bitcoin price, mempool size, hash power, degree of decentralization, etc, etc.  
 
-But what the future holds for us on this subject, we cannot know. Given that the consensus on finite supply remains, the block subsidy will be zero from year 2214: https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki. Will the transaction fees then be enough to secure the network? It's impossible to say, but we do know some things:
+But what the future holds for us on this subject, we cannot know. The uncertainty factors are numerous and we are left to speculations. 
 
-* A hundred year is a long time in the Bitcoin perspective. If it is still around it has probably evolved enormously.
-* With zero block subsidy and an empty or almost empty mempool things will be shaky https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacerbate-instability-in-bitcoin-in-the-future
-* If a majority of the hash power finds it attractive to change the rules and introduce e.g. 0.1% or 1% monetary inflation tax to pay for security, the supply of bitcoin will no longer be finite.
+Given that the consensus on finite supply remains, the block subsidy will, thanks to BIP42:  https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki, be zero from year 2140. Will the transaction fees after that be enough to secure the network? It's impossible to say, but we do know some things:
+
+* A century is a _long_ time in the Bitcoin perspective. If it is still around, it has probably evolved enormously.
+* With zero block subsidy and an empty or almost empty mempool, things will be shaky. For example, fee sniping might become more profitable than regular mining https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacerbate-instability-in-bitcoin-in-the-future
+* If a majority finds it attractive to change the rules and introduce for example a perpetual annual 0.1% or 1% monetary inflation, to ensure that the chain keeps marching forward, the supply of bitcoin will no longer be finite.
 
 
-
+=== Conclusion
+Ensuring that the security budget remains high enough is crucial but not urgent. Let's have this discussion in 10-15 years when we know more. If it's still relevant.
 
