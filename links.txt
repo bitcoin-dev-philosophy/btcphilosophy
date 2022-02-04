@@ -60,9 +60,6 @@ https://btctranscripts.com/scalingbitcoin/hong-kong-2015/validation-cost-metric/
 gmax on privacy and confidential txs
 https://youtu.be/ZIugzFygviw?t=2108
 
-Matt Corallo - Fungibility Overview
-https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/
-
 Adam Back - Scaling Tradeoffs
 https://btctranscripts.com/misc/adam3us-bitcoin-scaling-tradeoffs/
 
@@ -182,6 +179,15 @@ https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/
 
 Pieter Wuille - on feasability of an adverse blockchain rollback
 https://bitcoin.stackexchange.com/questions/87652/51-attack-apparently-very-easy-refering-to-czs-rollback-btc-chain-how-t
+https://www.truthcoin.info/blog/security-budget/
+
+Fungibility
+===========
+
+Matt Corallo - Fungibility Overview
+https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/
+
+https://t.co/pkqoq7TXwd
 
 
 

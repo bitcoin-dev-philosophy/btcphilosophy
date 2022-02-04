@@ -1,0 +1,10 @@
+== Fungibility
+
+[quote, Matt Corallo and Adam Back, Fungibility Overview]
+____
+... for money to be functional, it has to be fungible.
+____
+
+The quote is from a very good talk by Matt Corallo and Adam Back at the Scaling Bitcoin in 2016: 
+https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/. Note that several of the 
+

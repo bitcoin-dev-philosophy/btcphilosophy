@@ -12,7 +12,13 @@ ____
 
 We can say fore sure that this is how things are right now, with today's block subsidy, transaction fees, bitcoin price, mempool size, hash power, degree of decentralization, etc, etc.  
 
-But what the future holds for us on this subject, we cannot know. The uncertainty factors are numerous and we are left to speculations. 
+But what the future holds for us on this subject, we cannot know. The uncertainty factors are numerous and we are left to speculations. For example Paul Storc contribution to the subject (https://www.truthcoin.info/blog/security-budget/) is mostly speculations, but he has at least one good solid point:
+
+____
+While the two are mixed into the same “security budget”, the block subsidy and txn-fees are utterly and completely different. They are as different from each other, as “VISA’s total profits in 2017” are from the “total increase in M2 in 2017”.
+____
+
+Today, hodlers pay for security (via monetary inflation). Tomorrow it's the spenders that somehow need to shoulder this burden.
 
 Given that the consensus on finite supply remains, the block subsidy will, thanks to BIP42:  https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki, be zero from year 2140. Will the transaction fees after that be enough to secure the network? It's impossible to say, but we do know some things:
 
