@@ -44,9 +44,6 @@ Andrew Poelstra
 On Stake and Consensus
 https://nakamotoinstitute.org/static/docs/on-stake-and-consensus.pdf
 
-Andrew Poelstra - security assumptions
-https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/
-
 Eric Voskuil, Axiom of Resistance
 https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance
 "an assumption that it is possible for a system to resist state control"
@@ -98,6 +95,20 @@ https://nakamotoinstitute.org/digital-cash-and-privacy/
 David D. Friedman: The Case for Privacy (2005)
 https://nakamotoinstitute.org/the-case-for-privacy/
 Nice conclusion!
+
+Hasu: The Onion Model of Blockchain Security – Part 1
+https://bitcoinwords.github.io/the-onion-model-of-blockchain-security
+
+Gregory Maxwell: You paid a bitcent, here's my thoughts
+https://www.youtube.com/watch?v=Gs9lJTRZCDc
+Here's the building analogy Andrew Poelstra presented in <<adversarialthinking>>.
+Also philosophy on developing cryptographic systems (selection cryptography)
+Also why privacy matters
+Also privacy in Bitcoin Core "now" and future (2015).
+https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cryptography/#:~:text=sunlight
+
+Gregory Maxwell: 
+https://www.youtube.com/watch?v=ZIugzFygviw&t=2111s
 
 Censorship resistance
 =====================
@@ -151,6 +162,29 @@ https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki
 G. Maxwell on fee sniping and 
 https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacerbate-instability-in-bitcoin-in-the-future
 
+Adversarial thinking
+====================
+
+Ragnar Lifthrasir - On Adversarial Thinking
+https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinkin
+
+Peter Todd - In Adversarial Environments Blockchains Don't Scale
+https://www.youtube.com/watch?v=ivgxcEOyWNs&t=1835s
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/in-adversarial-environments-blockchains-dont-scale/
+
+Poul-Henning Kamp: FOSDEM'14, NSA operation ORCHESRA: Annual Status Report
+https://www.youtube.com/watch?v=fwcl17Q0bpk
+
+https://www.gutenberg.org/files/26184/page-images/26184-images.pdf
+
+Andrew Poelstra - security assumptions
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/
+
+Pieter Wuille - on feasability of an adverse blockchain rollback
+https://bitcoin.stackexchange.com/questions/87652/51-attack-apparently-very-easy-refering-to-czs-rollback-btc-chain-how-t
+
+
+
 Resource collections
 ====================
 
@@ -158,4 +192,4 @@ https://btctranscripts.com/
 https://www.lopp.net/bitcoin-information.html
 https://bitcoiner.guide/
 https://bitcoin-only.com/
-
+https://bitcoinwords.github.io/

@@ -11,6 +11,10 @@ include::readme.adoc[]
 [[trustlessness]]
 include::trustlessness.adoc[]
 
+
+[[adversarialthinking]]
+include::adversarial-thinking.adoc[]
+
 [[privacy]]
 include::privacy.adoc[]
 
