@@ -159,6 +159,9 @@ https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki
 G. Maxwell on fee sniping and 
 https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacerbate-instability-in-bitcoin-in-the-future
 
+https://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/
+
+
 Adversarial thinking
 ====================
 
@@ -180,6 +183,12 @@ https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/
 Pieter Wuille - on feasability of an adverse blockchain rollback
 https://bitcoin.stackexchange.com/questions/87652/51-attack-apparently-very-easy-refering-to-czs-rollback-btc-chain-how-t
 https://www.truthcoin.info/blog/security-budget/
+
+
+https://insights.deribit.com/market-research/the-onion-model-of-blockchain-security-part-1/
+
+Jameson Lopp on security model
+https://www.coindesk.com/markets/2016/11/13/bitcoins-security-model-a-deep-dive/
 
 Fungibility
 ===========

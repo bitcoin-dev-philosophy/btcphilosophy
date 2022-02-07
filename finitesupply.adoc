@@ -20,6 +20,8 @@ ____
 
 Today, hodlers pay for security (via monetary inflation). Tomorrow it's the spenders that somehow need to shoulder this burden.
 
+image::finitesupply.png[]
+
 Given that the consensus on finite supply remains, the block subsidy will, thanks to BIP42:  https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki, be zero from year 2140. Will the transaction fees after that be enough to secure the network? It's impossible to say, but we do know some things:
 
 * A century is a _long_ time in the Bitcoin perspective. If it is still around, it has probably evolved enormously.
