@@ -1,6 +1,6 @@
-== Finite Supply?
+== Finite Supply
 
-Is it set in stone that Bitcoin has a finite supply of 21 million BTC? No, it is not. 
+Is it set in stone that Bitcoin has a finite supply of 21 million BTC? No. 
 
 First of all, Pieter Wuille clears tings out regarding the exact amount: https://bitcoin.stackexchange.com/a/38998/69518.
 
@@ -10,6 +10,7 @@ ____
  So the answer is that you don't have to trust someone to not increase the supply. You just have to run some code that will verify that they haven't.
 ____
 
+=== Bock Subsidy and Transaction Fees
 We can say fore sure that this is how things are right now, with today's block subsidy, transaction fees, bitcoin price, mempool size, hash power, degree of decentralization, etc, etc.  
 
 But what the future holds for us on this subject, we cannot know. The uncertainty factors are numerous and we are left to speculations. For example Paul Storc contribution to the subject (https://www.truthcoin.info/blog/security-budget/) is mostly speculations, but he has at least one good solid point:
@@ -28,7 +29,15 @@ Given that the consensus on finite supply remains, the block subsidy will, thank
 * With zero block subsidy and an empty or almost empty mempool, things will be shaky. For example, fee sniping might become more profitable than regular mining https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacerbate-instability-in-bitcoin-in-the-future
 * If a majority finds it attractive to change the rules and introduce for example a perpetual annual 0.1% or 1% monetary inflation, to ensure that the chain keeps marching forward, the supply of bitcoin will no longer be finite.
 
+=== Security Despite Uncertainty 
+If nothing is set in stone and future is so uncertain, how can we trust this system to keep our savings safe?
+
+Well, security without centralized trust is new to us humans and we need time to grasp this new mind set. Just because consensus rules _can_ change does not mean that they will. Perhaps we could think of bitcoin evolvement as something organic. Imagine a small slowly growing oak plant. And that you had never seen a full grown tree before in you life. Would it not be wise then to restrain your control issues and not set all rules in advance on how this plant should be allowed to evolve and grow? Below are two articles showing how the bitcoin system is secured, despite all uncertainties.
+
+* https://insights.deribit.com/market-research/the-onion-model-of-blockchain-security-part-1/
+
+* Jameson Lopp on security model: https://www.coindesk.com/markets/2016/11/13/bitcoins-security-model-a-deep-dive/
 
 === Conclusion
-Ensuring that the security budget remains high enough is crucial but not urgent. Let's have this discussion in 10-15 years when we know more. If it's still relevant.
+Weather the bitcoin supply will grow above 21 million we cannot say today and that is probably not so bad. Ensuring that the security budget remains high enough is crucial but not urgent. Let's have this discussion in 10-15 years when we know more. If it's still relevant.
 
