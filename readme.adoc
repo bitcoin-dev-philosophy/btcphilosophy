@@ -1,9 +1,8 @@
 == About btcphilosophy
 
-This project is meant as teaching material for new developers in
-Bitcoin to learn about this new digital currency's fundamental
-properties and how seasoned Bitcoin developers think about these
-properties.
+This project is meant as a guide for new developers in Bitcoin to
+learn about this new digital currency's fundamental properties and how
+seasoned Bitcoin developers think about them.
 
 image::under-construction.svg[width=20%,float="right",align="center"]
 
@@ -14,20 +13,28 @@ project. Sorry.
 === Intended reader
 
 The typical reader is a developer who just started digging into
-Bitcoin and possibly have worked in the Bitcoin space in one form or
+Bitcoin development or have worked in the Bitcoin space in one form or
 the other for a while.
 
-In order to follow along through the material, the reader is expected
-to know how Bitcoin works on a basic technical level.
+The reader doesn't have to know every ins an outs of Bitcoin, but
+should understand how it operates on a high level. For example, the
+following should be clear to the reader beforehand:
 
-The reader is expected to stay humble and be prepared to have
-his/her opinions challenged.
+* What proof-of-work is
+* How blocks are interconnected
+* That transactions are usually signed using private keys before being
+  published to the Bitcoin peer-to-peer network.
+
+The reader should also be humble and willing to re-evaluate his/her
+opinion. The materials we present here are written by people who have
+been studying Bitcoin for a very long time and some were into digital
+money way before Bitcoin existed (yes, they existed before Bitcoin).
 
 === How is this organized?
 
 The project is sectioned into topics. Each topic will guide you
-through a number of links with recommended reading and briefly discuss
-each link.
+through a number of links to articles or videos, that we recommend
+reading and we briefly discuss each link.
 
 The links refer to external resources on platforms we can't
 control. We have therefore saved the linked articles locally in this
@@ -40,20 +47,15 @@ sometimes have opposing opinions on some topics, so some resources may
 appear contradictory others. However, we will mostly try to stick to
 the facts, where opinions don't matter.
 
-It should help the reader to more quickly get up to speed
-on basic Bitcoin developer philosophy.
+This guide should help the reader to more quickly get up to speed on basic
+Bitcoin developer philosophy. After reading this collection of
+articles, you'll
 
-* your opinions/values may be challenged
-
-=== What you'll learn
-
-After reading this collection of articles, you'll 
-
-* have leap-frogged more than a decade of experience
+* have leapfrogged more than a decade of Bitcoin experience
 * be able to distinguish useful Bitcoin ideas from, well, less useful ideas
 * get accustomed to some great places for Bitcoin information
 * be humbled by the vast amount of wisdom available
-* be humbled by the width of this field
+* be humbled by the breadth of this field
 
 === Who wrote this?
 
