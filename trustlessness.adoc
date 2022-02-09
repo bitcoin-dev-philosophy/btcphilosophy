@@ -1,9 +1,8 @@
 == Trustlessness
 
 People often say things like "Bitcoin is great because it's
-trustless". What do they mean by that? Pieter Wuille explains this
-widely used term on StackExchange
-(https://bitcoin.stackexchange.com/a/45674/69518).
+trustless". What do they mean by trustless? Pieter Wuille explains
+this widely used term on https://bitcoin.stackexchange.com/a/45674/69518[Stack Exchange]:
 
 ____
 The trust we're talking about in "trustless" is an abstract technical
@@ -12,23 +11,20 @@ require any trusted parties to function correctly.
 ____
 
 In short, the word _trustless_ refers to a property of the Bitcoin
-protocal, that means it can function without "any trusted
+protocol, that means it can logically function without "any trusted
 parties". This is different from the trust that you inevitably have to
-put into the software or hardware you run.
+put into the software or hardware you run. More on this trust further
+down this article.
 
-Bitcoin is thus trustless, but you still have to trust your software
-or hardware to some degree. Very advanced users can verify a lot of
-aspects of the software they run, and reduce their needed trust to
-just trusting their computer hardware, and possibly their operating
-system.
+To use Bitcoin in a trustless manner, you have to run a full Bitcoin
+node. Without that, you outsource verification of Bitcoin data to
+someone else, and thus trust someone else which means you're not using
+Bitcoin trustlessly.
 
-Bitcoin's trustlessness is absolutely imperative. In 2018, Matt
-Corallo, spoke about trustlessness at the Baltic Honeybadger
-conference in Riga.
-
-* Video: https://youtu.be/66ZoGUAnY9s?t=4019
-* Transcript: https://btctranscripts.com/baltic-honeybadger/2018/trustlessness-scalability-and-directions-in-security-models/
-
+Bitcoin's trustlessness is absolutely imperative from a system
+perspective. In 2018, Matt Corallo, https://btctranscripts.com/baltic-honeybadger/2018/trustlessness-scalability-and-directions-in-security-models/[spoke about trustlessness] at the
+Baltic Honeybadger conference in Riga.
+// Video: https://youtu.be/66ZoGUAnY9s?t=4019
 The essence of that talk was that you can't build trustless systems on
 top of a trusted system, but you can build trusted systems, for
 example a custodial wallet, on top of a trustless system.
@@ -38,3 +34,55 @@ image::trust.png[width=50%]
 
 This security model allows the system designer to select trade-offs
 that make sense to them, without forcing those trade-offs on others.
+
+=== Don't trust, verify
+
+Bitcoin is trustless, but you still have to trust your software or
+hardware to some degree. That's because your software or hardware
+might not be programmed to do what's stated on the box. For example:
+
+* The CPU is maliciously programmed to detect private key
+  cryptographic operations and leak the private key data.
+* the operating system's random number generator might not be as
+  random as it claims.
+* Bitcoin Core might have sneaked in code that will send your private
+  keys to some bad actor.
+
+So besides running a full node, you also need to make sure you're
+running what you intend to. There's a mantra, that many Bitcoiners
+subscribe to, which captures this well:
+
+[quote, Bitcoiners everywhere]
+____
+Don't trust, verify.
+____
+
+Some users <<adversarialthinking, think adversarially>> and verify a
+lot of aspects of the software they run, and reduce their needed trust
+to just trusting their computer hardware, and possibly their operating
+system. In doing so they also help people who don't verify as
+thoroughly by raising their voices in public to warn about the issues
+they find. One good example of this is an
+https://bitcoincore.org/en/2018/09/20/notice/[event that occurred
+2018], where a bug was discovered that would allow miners to spend an
+output twice in the same transaction:
+
+[quote, CVE-2018-17144 Full Disclosure, Bitcoin Core website]
+____
+CVE-2018-17144, a fix for which was released on September 18th in
+Bitcoin Core versions 0.16.3 and 0.17.0rc4, includes both a Denial of
+Service component and a critical inflation vulnerability. It was
+originally reported to several developers working on Bitcoin Core, as
+well as projects supporting other cryptocurrencies, including ABC and
+Unlimited on September 17th as a Denial of Service bug only, however
+we quickly determined that the issue was also an inflation
+vulnerability with the same root cause and fix.
+____
+
+Here an anonymous person reported an issue that turned out much worse
+than the reporter realized, but the lesson here is that people who
+verify the code often report security flaws, instead of exploiting
+them. This is of great help for people who aren't able to verify
+everything themselves. However, users should not trust others to keep
+them safe, but should verify when and what they can, that's how you
+remain as sovereign as possible and how Bitcoin prospers.
