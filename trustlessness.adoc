@@ -57,6 +57,14 @@ ____
 Don't trust, verify.
 ____
 
+This alludes to the phrase
+"https://en.wikipedia.org/wiki/Trust,_but_verify[trust, but verify]"
+that former U.S. president Ronald Reagan used in the context of
+nuclear
+disarmament. https://twitter.com/Truthcoin/status/1491415722123153408?s=20&t=ZyROxZxlBppdRpuuzsiF5w[Bitcoiners
+switched it around to highlight the rejection of trust and the
+importance of running a full node].
+
 Some users <<adversarialthinking, think adversarially>> and verify a
 lot of aspects of the software they run, and reduce their needed trust
 to just trusting their computer hardware, and possibly their operating
