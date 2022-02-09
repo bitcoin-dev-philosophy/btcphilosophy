@@ -93,4 +93,6 @@ verify the code often report security flaws, instead of exploiting
 them. This is of great help for people who aren't able to verify
 everything themselves. However, users should not trust others to keep
 them safe, but should verify when and what they can, that's how you
-remain as sovereign as possible and how Bitcoin prospers.
+remain as sovereign as possible and how Bitcoin prospers, and the more
+eye-balls on the software the less likely it is that security flaws
+slip through.
