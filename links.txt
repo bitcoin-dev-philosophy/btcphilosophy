@@ -93,9 +93,6 @@ David D. Friedman: The Case for Privacy (2005)
 https://nakamotoinstitute.org/the-case-for-privacy/
 Nice conclusion!
 
-Hasu: The Onion Model of Blockchain Security – Part 1
-https://bitcoinwords.github.io/the-onion-model-of-blockchain-security
-
 Gregory Maxwell: You paid a bitcent, here's my thoughts
 https://www.youtube.com/watch?v=Gs9lJTRZCDc
 Here's the building analogy Andrew Poelstra presented in <<adversarialthinking>>.
@@ -106,6 +103,13 @@ https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cr
 
 Gregory Maxwell: 
 https://www.youtube.com/watch?v=ZIugzFygviw&t=2111s
+
+Review
+=======
+
+Gregory Maxwell on cryptographic systems and cryptography selection
+https://youtu.be/Gs9lJTRZCDc?t=2799
+
 
 Censorship resistance
 =====================
@@ -184,11 +188,15 @@ Pieter Wuille - on feasability of an adverse blockchain rollback
 https://bitcoin.stackexchange.com/questions/87652/51-attack-apparently-very-easy-refering-to-czs-rollback-btc-chain-how-t
 https://www.truthcoin.info/blog/security-budget/
 
-
-https://insights.deribit.com/market-research/the-onion-model-of-blockchain-security-part-1/
-
 Jameson Lopp on security model
 https://www.coindesk.com/markets/2016/11/13/bitcoins-security-model-a-deep-dive/
+
+Peter Todd on selfish mining
+https://bitcointalk.org/index.php?topic=324413.msg3484951#msg3484951
+
+Hasu: The Onion Model of Blockchain Security – Part 1
+https://bitcoinwords.github.io/the-onion-model-of-blockchain-security
+
 
 Fungibility
 ===========

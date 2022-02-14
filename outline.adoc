@@ -48,6 +48,7 @@
 * https://en.bitcoin.it/wiki/Value_overflow_incident
 * BDB in v0.7 to LevelDB in v0.8
 * 2018 inflation bug
+* https://crypto.stackexchange.com/questions/9694/technical-details-of-attack-on-android-bitcoin-usage-of-securerandom
 
 == Case study: Taproot
 * privacy

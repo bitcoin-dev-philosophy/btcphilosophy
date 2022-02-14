@@ -4,6 +4,11 @@ Kalle Rosenbaum <kalle@rosenbaum.se>; Linnéa Rosenbaum <linnea@rosenbaum.se>
 :toc: left
 :toclevels: 3
 :imagesdir: images
+:stylesdir: style
+//:stylesheet: btcphilosophy.css
+:linkcss:
+:docinfo: shared
+:docinfodir: {stylesdir}
 
 [[readme]]
 include::readme.adoc[]
@@ -20,4 +25,3 @@ include::privacy.adoc[]
 
 [[finitesupply]]
 include::finitesupply.adoc[]
-
