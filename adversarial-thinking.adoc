@@ -1,25 +1,25 @@
 == Adversarial thinking
 
-When we discuss security in various systems, it's important to
-understand what the security assumptions are. A typical security
-assumption is the Discrete Logarithm problem is hard to solve, which
-means it's very hard to find a private key that corresponds to a
-certain public key.
-
-Bitcoin's security relies on a set of security assumptions. If those
-assumptions are proven wrong, then Bitcoin is in deep trouble.
+When we discuss security in various systems, it's good to understand
+what the security assumptions are. A typical security assumption in
+Bitcoin is "the Discrete Logarithm problem is hard to solve", which,
+simply put, means it's _practically_ impossible to find a private key
+that corresponds to a certain public key. Another, pretty strong,
+security assumption is that a majority of the network's hashpower are
+honest, meaning they play by the rules. If these assumptions are
+proven wrong, then Bitcoin is in trouble.
 
 Andrew Poelstra
 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/[made
 a talk] at the Scaling Bitcoin conference in Hong Kong 2015, where he
 talked about Bitcoin's security assumptions. He says that many systems
-can disregard adversaries to some extent, for example it's really hard
-to protect a building against all types of adversarial events, instead
-we accept that someone may burn the building down, and we prevent
+disregard adversaries to some extent, for example it's really hard to
+protect a building against all types of adversarial events, instead we
+accept that someone may burn the building down, and we prevent
 adversarial behavior to some extent through law enforcement etc.
 // See greg maxwell's analogy of the building: https://youtu.be/Gs9lJTRZCDc?t=2799
 
-But online is different:
+But online things are different:
 
 [quote, Andrew Poelstra, Scaling Bitcoin, Hong Kong 2015]
 ____
@@ -31,6 +31,27 @@ ____
 
 The consequence is that all known weaknesses in Bitcoin must be taken
 care of somehow, otherwise they will be exploited.
+
+Poelstra goes on to mention how Bitcoin is a new kind of system, which
+is more nebulous than for example a signing protocol which has very
+clear-cut security assumptions.
+
+On his personal blog, software engineer Jameson Lopp,
+https://blog.lopp.net/bitcoins-security-model-a-deep-dive/[dives into this]:
+
+[quote, Jameson Lopp, Bitcoin’s Security Model: A Deep Dive]
+____
+In reality, the bitcoin protocol was and is being built without a
+formally defined specification or security model. The best that we can
+do is to study the incentives and behavior of actors within the system
+in order to better understand and attempt to describe it.
+____
+
+So we have a system that seems to be working in practice, but we can't
+formally prove it's secure. A proof is probably not possible due to
+the complexity of the system.
+
+=== Adversarial thinking for plebs
 
 The importance of adversarial thinking probably extends to the general
 public as well to some
@@ -50,8 +71,8 @@ ____
 
 He refers to these simplistic narratives as monomania, meaning that by
 focusing only on a single thing, eg "just HODL", you stop thinking
-about important stuff like keeping Bitcoin as a system secure and
-developing great new systems around Bitcoin.
+about important stuff like keeping your Bitcoin secure and doing your
+best to use Bitcoin in a trustless manner.
 
 === Threats
 
@@ -72,19 +93,25 @@ ____
 
 These are examples of real threats that need to be taken care of.
 
+[.float-group]
+--
+.Exerpt from the Simple Sabotage Field Manual
+image::sabotage-manual.png[role="right half-width"]
+
 To better understand the minds of an adversary, it might be useful to
 get a glimpse into how they might operate. A government body named
-Office of Strategic Services, that operated during World War II and
+Office of Strategic Services, that operated during World War II,
 conducted spionage, performed sabotage and propaganda, among other
 things, wrote a
 https://www.gutenberg.org/files/26184/page-images/26184-images.pdf[manual]
 for their personell on how to sabotage. It's title was "Simple
 Sabotage Field Manual" and contained concrete tips on how to
-infiltrate the enemy make their lifes hard.
+infiltrate the enemy to make their lifes hard. They range from burning
+down warehouses to causing wear to drills to decrease the enemy's
+efficiency. For example, there is a section about how an infiltrator
+can disrupt organizations.
 
-For example, there is a section about how an infiltrator can disrupt
-organizations.
-
+////
 [quote, Office of Strategic Services, Simple Sabotage Field Manual]
 ____
 [Formatting edited]
@@ -113,13 +140,14 @@ of whether such action as is contemplated lies within the jurisdiction
 of the group or whether it might conflict with the policy of some
 higher echelon.
 ____
-
+////
 This highlights how a determined state can and will do everything in
 their power to destroy their enemy, including breaking it down from
 the inside.
 
 Since Bitcoin is a form of money that competes with established fiat
-currencies, chances are that states will regard Bitcoin as en enemy.
+currencies, chances are that states will regard Bitcoin as an enemy.
+--
 
 Eric Voskuil
 https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance[writes
@@ -130,8 +158,8 @@ Resistance":
 ____
 In other words there is an assumption that it is _possible_ for a
 system to resist state control. This is not accepted as a fact but
-deemed to be a reasonable assumption, due to the behavior of similar
-systems, on which to base the system.
+deemed to be a reasonable assumption, due to empirical study of
+behavior of similar systems, on which to base the system.
 
 *One who does not accept the axiom of resistance is contemplating an
 entirely different system than Bitcoin.* If one assumes it is _not
