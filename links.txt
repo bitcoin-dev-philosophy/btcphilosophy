@@ -165,6 +165,11 @@ https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacer
 
 https://freedom-to-tinker.com/2016/10/21/bitcoin-is-unstable-without-the-block-reward/
 
+https://insights.deribit.com/market-research/the-onion-model-of-blockchain-security-part-1/
+
+Jameson Lopp on security model
+https://www.coindesk.com/markets/2016/11/13/bitcoins-security-model-a-deep-dive/
+
 
 Adversarial thinking
 ====================
