@@ -1,0 +1,95 @@
+== Decentralization
+
+A system without a central point of control is often referred to as
+_decentralized_. Bitcoin is decentralized but it might be good to
+ponder why it's made that way and what challenges lies therein.
+
+Bitcoin is made decentralized to avoid having a central point of
+control, or more specifically, a central point of censorship. Satoshi
+Nakamoto writes in his https://bitcoin.org/bitcoin.pdf[Bitcoin paper]
+about how to solve the _double spending problem_, the problem of
+making sure no one can spend the same coin twice, a problem that many
+thought was impossible to solve in a decentralized fashion.
+
+[quote, Satoshi Nakamoto, The Bitcoin paper]
+____
+In this paper, we propose a solution to the double-spending problem
+using a peer-to-peer distributed timestamp server to generate
+computational proof of the chronological order of transactions.
+____
+
+He uses the weird sounding phrase _peer-to-peer distributed timestamp
+server_, but the key here is the word _distributed_, which in this
+context means that there is no central point of control. Nakamoto then
+goes on to explain how proof-of-work is the solution, but no one
+explains it better than
+https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/[Gregory
+Maxwell on Reddit] where he responds to someone who proposes to limit
+miners' hashpower to avoid 51% attacks:
+
+[quote, Gregory Maxwell, r/Bitcoin subreddit]
+____
+A decentralized system like Bitcoin uses a public election. But you
+can't just have a vote of 'people' in a decentralized system because
+that would require a centralized party to authorize people to
+vote. Instead, Bitcoin uses a vote of computing power because it's
+possible to verify computing power without the help of any centralized
+third party.
+____
+
+The post explains how the decentralized Bitcoin network can come to
+agreement on a transaction ordering through the use of proof-of-work,
+then he concludes by saying that the 51% attack is not particularly
+worrisome, compared to people not caring about, or lack of
+understanding about Bitcoin's decentralization properties.
+
+[quote, Gregory Maxwell, r/Bitcoin subreddit]
+____
+A far bigger risk to Bitcoin is that the public using it won't
+understand, won't care, and won't protect the decentralization
+properties that make it valuable over centralized alternatives in the
+first place.
+____
+
+The conclusion is an important one. If people don't protect Bitcoin's
+decentralization, which is a proxy for censorship resistance, Bitcoin
+might fall victim for centralizating powers until it's so centralized
+that censoship becomes a thing. Then most, if not all, of its value
+proposition is gone.
+
+An interesting aspect of decentralization is the hard to grasp fact
+that no one controls it. There are no committees or exectutives in
+Bitcoin. Gregory Maxwell, again
+https://www.reddit.com/r/Bitcoin/comments/s82t2n/comment/htdte7w/?utm_source=share&utm_medium=web2x&context=3[on
+the Bitcoin subreddit], compares this to the English languate in an
+interesting way:
+
+[quote, Gregory Maxwell, r/Bitcoin subreddit]
+____
+Many people have a hard time understanding autonomous systems, there
+are many in their lives things like the english language-- but people
+just take them for granted and don't even think of them as
+systems. They're stuck in a centralized way of thinking where
+everything they think of as a 'thing' has an authority that
+controls it.
+
+Bitcoin doesn't focus on anything. Various people who have adopted
+Bitcoin chose of their own free will to promote it, and how they
+choose to do so is their own business. Authority fixated people may
+see these activities and believe they're some operation by the bitcoin
+authority, but no such authority exists.
+____
+
+No matter what you think about Bitcoin, its decentralized nature makes
+it very hard to control. It's a thing to be studied, not debated.
+
+////
+
+Arvind Narayanan - Lessons For Bitcoin From 150 Years Of Decentralization
+https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2016/lessons-for-bitcoin-from-150-years-of-decentralization/
+
+The Scaling Debate is a Proxy Battle Over Centralization
+https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2016/scaling-debate-is-a-proxy-battle-over-centralization/
+" If it becomes centralized, it’s no-longer censorship resistant. Imagine a currency where censorship is available. Well, then it’s not a currency. The dream is gone and we have nothing."
+
+////

@@ -149,6 +149,7 @@ Since Bitcoin is a form of money that competes with established fiat
 currencies, chances are that states will regard Bitcoin as an enemy.
 --
 
+[[axiomofresistance]]
 Eric Voskuil
 https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance[writes
 on his Cryptoeconomics wiki page] about what he calls "Axiom of

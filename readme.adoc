@@ -26,7 +26,7 @@ following should be clear to the reader beforehand:
   published to the Bitcoin peer-to-peer network.
 
 The reader should also be humble and willing to re-evaluate his/her
-opinion. The materials we present here are written by people who have
+opinions. The materials we present here are written by people who have
 been studying Bitcoin for a very long time and some were into digital
 money way before Bitcoin existed (yes, they existed before Bitcoin).
 

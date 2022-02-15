@@ -13,6 +13,9 @@ Kalle Rosenbaum <kalle@rosenbaum.se>; Linnéa Rosenbaum <linnea@rosenbaum.se>
 [[readme]]
 include::readme.adoc[]
 
+[[decentralization]]
+include::decentralization.adoc[]
+
 [[trustlessness]]
 include::trustlessness.adoc[]
 

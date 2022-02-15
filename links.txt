@@ -19,8 +19,11 @@ https://bitcoin.stackexchange.com/questions/106851/what-are-the-downsides-to-ena
 ongoing maintenance cost which is perpetual and can never be removed
 without potentially confiscating some user's assets."
 
-Gmax - Mutliple implementations:
+Gmax - Multiple implementations:
 https://bitcointalk.org/index.php?topic=5035144.msg46077622#msg46077622
+
+Gmax: Hardware support for altcoins
+https://www.reddit.com/r/Bitcoin/comments/jlwxpq/why_do_you_think_coldcard_doesnt_support_altcoins/gasoyuj?utm_source=share&utm_medium=web2x&context=3
 
 Greg Maxwell on decentralization
 https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/
@@ -103,6 +106,10 @@ https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cr
 
 Gregory Maxwell: 
 https://www.youtube.com/watch?v=ZIugzFygviw&t=2111s
+
+Gregory Maxwell on "making mining useful" 
+https://www.reddit.com/r/Bitcoin/comments/hlu2ah/why_cant_hash_power_be_used_for_something_useful/fx1axlt/?utm_source=share&utm_medium=web2x&context=3
+"No one expects their padlocks to cure cancer."
 
 Review
 =======
