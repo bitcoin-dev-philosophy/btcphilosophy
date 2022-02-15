@@ -34,7 +34,7 @@ money way before Bitcoin existed (yes, they existed before Bitcoin).
 
 The project is sectioned into topics. Each topic will guide you
 through a number of links to articles or videos, that we recommend
-reading and we briefly discuss each link.
+reading and we briefly discuss each link. Note that some topics cannot be fully separated from others; overlaps do exist.
 
 The links refer to external resources on platforms we can't
 control. We have therefore saved the linked articles locally in this

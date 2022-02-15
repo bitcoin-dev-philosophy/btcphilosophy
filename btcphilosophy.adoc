@@ -25,3 +25,6 @@ include::privacy.adoc[]
 
 [[finitesupply]]
 include::finitesupply.adoc[]
+
+[[fugibility]]
+include::fungibility.adoc[]
