@@ -2,7 +2,8 @@
 
 People often say things like "Bitcoin is great because it's
 trustless". What do they mean by trustless? Pieter Wuille explains
-this widely used term on https://bitcoin.stackexchange.com/a/45674/69518[Stack Exchange]:
+this widely used term on
+https://bitcoin.stackexchange.com/a/45674/69518[Stack Exchange]:
 
 ____
 The trust we're talking about in "trustless" is an abstract technical
@@ -37,11 +38,11 @@ that make sense to them, without forcing those trade-offs on others.
 
 === Don't trust, verify
 
-Bitcoin is trustless, but you still have to trust your software or
+Bitcoin is trustless, but you still have to trust your software and
 hardware to some degree. That's because your software or hardware
 might not be programmed to do what's stated on the box. For example:
 
-* The CPU is maliciously programmed to detect private key
+* The CPU might be maliciously programmed to detect private key
   cryptographic operations and leak the private key data.
 * the operating system's random number generator might not be as
   random as it claims.

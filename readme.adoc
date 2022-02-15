@@ -45,7 +45,10 @@ repository, along with info on where it was copied from, and when.
 There are lots and lots of people involved in Bitcoin and they
 sometimes have opposing opinions on some topics, so some resources may
 appear contradictory others. However, we will mostly try to stick to
-the facts, where opinions don't matter.
+the facts, where opinions don't matter. Note also that topics cannot
+be fully separated from others; overlaps do exist. For example,
+fungibility is briefly discussed in the privacy chapter, eventhough
+there is a separate chapter for fungibility.
 
 This guide should help the reader to more quickly get up to speed on basic
 Bitcoin developer philosophy. After reading this collection of
