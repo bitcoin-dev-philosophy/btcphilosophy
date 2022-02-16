@@ -177,6 +177,11 @@ https://insights.deribit.com/market-research/the-onion-model-of-blockchain-secur
 Jameson Lopp on security model
 https://www.coindesk.com/markets/2016/11/13/bitcoins-security-model-a-deep-dive/
 
+When shit hits the fan
+======================
+
+Satoshi ALERT
+https://satoshi.nakamotoinstitute.org/emails/bitcoin-list/32/
 
 Adversarial thinking
 ====================
@@ -218,6 +223,10 @@ https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/
 
 https://t.co/pkqoq7TXwd
 
+https://bitcointalk.org/index.php?topic=428494.0 // links to the below links
+https://bitcointalk.org/index.php?topic=333882.0
+https://bitcointalk.org/index.php?topic=333882.msg3584447#msg3584447
+https://bitcointalk.org/index.php?topic=333882.msg3585877#msg3585877
 
 
 Resource collections

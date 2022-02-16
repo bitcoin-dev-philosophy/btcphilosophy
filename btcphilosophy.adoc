@@ -5,7 +5,6 @@ Kalle Rosenbaum <kalle@rosenbaum.se>; Linnéa Rosenbaum <linnea@rosenbaum.se>
 :toclevels: 3
 :imagesdir: images
 :stylesdir: style
-//:stylesheet: btcphilosophy.css
 :linkcss:
 :docinfo: shared
 :docinfodir: {stylesdir}
@@ -18,7 +17,6 @@ include::decentralization.adoc[]
 
 [[trustlessness]]
 include::trustlessness.adoc[]
-
 
 [[adversarialthinking]]
 include::adversarial-thinking.adoc[]

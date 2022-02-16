@@ -81,7 +81,8 @@ authority, but no such authority exists.
 ____
 
 No matter what you think about Bitcoin, its decentralized nature makes
-it very hard to control. It's a thing to be studied, not debated.
+it very hard to control. Bitcoin exists and there's nothing you can do
+about it. It's a thing to be studied, not debated.
 
 ////
 
@@ -92,4 +93,6 @@ The Scaling Debate is a Proxy Battle Over Centralization
 https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2016/scaling-debate-is-a-proxy-battle-over-centralization/
 " If it becomes centralized, it’s no-longer censorship resistant. Imagine a currency where censorship is available. Well, then it’s not a currency. The dream is gone and we have nothing."
 
+Satoshi - Bitcoin open source implementation of P2P currency
+https://satoshi.nakamotoinstitute.org/posts/p2pfoundation/1/
 ////
