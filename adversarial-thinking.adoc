@@ -30,7 +30,8 @@ cannot assume they will be visible and that they will be caught.
 ____
 
 The consequence is that all known weaknesses in Bitcoin must be taken
-care of somehow, otherwise they will be exploited.
+care of somehow, otherwise they will be exploited. After all, Bitcoin
+is the greatest honey pot in the world.
 
 Poelstra goes on to mention how Bitcoin is a new kind of system, which
 is more nebulous than for example a signing protocol which has very
