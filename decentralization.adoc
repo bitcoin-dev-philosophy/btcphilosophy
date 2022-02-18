@@ -139,7 +139,7 @@ the consensus rules.
 
 === Grokking decentralization
 
-An interesting aspect of decentralization is the hard to grasp fact
+An interesting aspect of Bitcoin is how hard it is to grasp the fact
 that no one controls it. There are no committees or exectutives in
 Bitcoin. Gregory Maxwell, again
 https://www.reddit.com/r/Bitcoin/comments/s82t2n/comment/htdte7w/?utm_source=share&utm_medium=web2x&context=3[on
@@ -161,6 +161,31 @@ choose to do so is their own business. Authority fixated people may
 see these activities and believe they're some operation by the bitcoin
 authority, but no such authority exists.
 ____
+
+[.right.half-width.thumb]
+image::fishschool2.jpeg[]
+
+The way Bitcoin works through decentralization resembles the
+extraordinary collective intelligence found among many species in
+nature. Computer scientist Radhika Nagpal speaks in a
+https://www.ted.com/talks/radhika_nagpal_what_intelligent_machines_can_learn_from_a_school_of_fish[Ted
+talk] about the collective behavior of fish schools, and how they try
+to mimic that using robots.
+
+[quote, Radhika Nagpal, What intelligent machines can learn from a school of fish]
+____
+Secondly, and the thing that I still find most remarkable, is that we
+know that there are no leaders supervising this fish school. Instead,
+this incredible collective mind behavior is emerging purely from the
+interactions of one fish and another. Somehow, there are these
+interactions or rules of engagement between neighboring fish that make
+it all work out.
+____
+
+She points out that many systems, in nature or mad-made, can and do
+work without leaders, and they are very powerful and resilient. Each
+individual just interacts with its immediate surroundings, but
+together they form something tremendous.
 
 No matter what you think about Bitcoin, its decentralized nature makes
 it very hard to control. Bitcoin exists and there's nothing you can do
