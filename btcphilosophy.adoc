@@ -3,9 +3,9 @@ Kalle Rosenbaum <kalle@rosenbaum.se>; Linnéa Rosenbaum <linnea@rosenbaum.se>
 :doctype: book
 :toc: left
 :toclevels: 3
+:sectanchors:
 :imagesdir: images
 :stylesdir: style
-//:stylesheet: btcphilosophy.css
 :linkcss:
 :docinfo: shared
 :docinfodir: {stylesdir}
@@ -13,12 +13,13 @@ Kalle Rosenbaum <kalle@rosenbaum.se>; Linnéa Rosenbaum <linnea@rosenbaum.se>
 [[readme]]
 include::readme.adoc[]
 
+:sectnums:
+
 [[decentralization]]
 include::decentralization.adoc[]
 
 [[trustlessness]]
 include::trustlessness.adoc[]
-
 
 [[adversarialthinking]]
 include::adversarial-thinking.adoc[]
