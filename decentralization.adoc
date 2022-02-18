@@ -7,7 +7,7 @@ therein.
 
 === Miner decentralization
 
-Bitcoin is made decentralized to avoid having a central point of
+Bitcoin has a decentralized design to avoid having a central point of
 control, or more specifically, a _central point of censorship_. If the
 system was censorable, it would most likely, based on historic events,
 be co-opted by governments. They would apply pressure on users, for
@@ -82,13 +82,13 @@ ____
 The conclusion is an important one. If people don't protect Bitcoin's
 decentralization, which is a proxy for censorship resistance, Bitcoin
 might fall victim for centralizing powers until it's so centralized
-that censoship becomes a thing. Then most, if not all, of its value
+that censorship becomes a thing. Then most, if not all, of its value
 proposition is gone. This brings us to the next section, on full node
 decentralization.
 
 === Full node decentralization
 
-We've mostly talked about miner dentralization above, and how miner
+We've mostly talked about miner decentralization above, and how miner
 centralization can allow for censorship. But there's also another
 aspect of decentralization, which is full node decentralization.
 
@@ -144,10 +144,10 @@ the consensus rules.
 === Grokking decentralization
 
 An interesting aspect of Bitcoin is how hard it is to grasp the fact
-that no one controls it. There are no committees or exectutives in
+that no one controls it. There are no committees or executives in
 Bitcoin. Gregory Maxwell, again
 https://www.reddit.com/r/Bitcoin/comments/s82t2n/comment/htdte7w/?utm_source=share&utm_medium=web2x&context=3[on
-the Bitcoin subreddit], compares this to the English languate in an
+the Bitcoin subreddit], compares this to the English language in an
 interesting way:
 
 [quote, Gregory Maxwell, r/Bitcoin subreddit]
