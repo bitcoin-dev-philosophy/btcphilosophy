@@ -10,24 +10,27 @@ therein.
 Bitcoin is made decentralized to avoid having a central point of
 control, or more specifically, a _central point of censorship_. If the
 system was censorable, it would most likely, based on historic events,
-be co-opted by governments in order to apply pressure on users, for
-example to require identification or that they declare where their
-money is coming from, before their transactions are allowed to enter
+be co-opted by governments. They would apply pressure on users, for
+example require identification or that they declare where their
+money is coming from before their transactions are allowed to enter
 the blockchain.
 
-The censor could also change the rules of the system arbitrarily, for
-example increase the money supply in order to enrich themselves. Users
-are left with three options:
+The censor could also try to change the rules of the system, for
+example increase the money supply in order to enrich themselves. A
+user verifying the blocks is left with three options for how to handle
+the changed rules:
 
-* Accept the changes and adopt them into their verifying software.
-* Reject the changes, leaving them with a system that doesn't process
-transactions anymore.
-* Appoint a new central point of control, after which the same issues
-  will most likely resurface sooner or later. Also this election would
-  in itself probably have to be somewhat centrally controlled or
-  censored.
+* Adopt: Accept the changes and adopt them into its full node.
+* Reject: This leaves the user with a system that doesn't process
+transactions anymore, because the censor's blocks are deemed invalid
+by the user's full node.
+* Move: Appoint a new central point of control. The users have to
+  coordinate this somehow so that they agree on what new central point
+  of control to use. If they succeed, the same issues will most likely
+  resurface sooner or later, because the system is as censorable now
+  as it was before.
 
-None of these options are beneficial to the end user. Censorship
+None of these options are beneficial to the user. Censorship
 resistance through decentralization is what separates Bitcoin from
 other money systems, but it's not an easy thing to accomplish, due to
 the _double spending problem_. This is the problem of making sure no
@@ -80,7 +83,7 @@ The conclusion is an important one. If people don't protect Bitcoin's
 decentralization, which is a proxy for censorship resistance, Bitcoin
 might fall victim for centralizing powers until it's so centralized
 that censoship becomes a thing. Then most, if not all, of its value
-proposition is gone. This brings us to the next section, on Full node
+proposition is gone. This brings us to the next section, on full node
 decentralization.
 
 === Full node decentralization
@@ -90,13 +93,14 @@ centralization can allow for censorship. But there's also another
 aspect of decentralization, which is full node decentralization.
 
 The importance of full node decentralization is related to
-<<trustlessness, trustlessness>>. If a user stops running his/her own
-full node due to prohibitively increased cost of operation, they have
-to interact with the Bitcoin network in some other way, for example
-web wallets, or lightweight wallets, which require more or less
-trust. Aaron Van Wirdum of Bitcoin Magazine writes in
+<<trustlessness,trustlessness>>. If a user stops running his/her own
+full node, for example due to prohibitively increased cost of
+operation, they have to interact with the Bitcoin network in some
+other way, for example web wallets, or lightweight wallets, which
+require more or less trust. Aaron Van Wirdum of Bitcoin Magazine
+writes in
 https://bitcoinmagazine.com/technical/decentralist-perspective-bitcoin-might-need-small-blocks-1442090446[his
-article about decentralization]:
+Bitcoin Magazine article] about decentralization:
 
 [quote, Aaron Van Wirdum, Bitcoin Magazine]
 ____
@@ -182,7 +186,7 @@ interactions or rules of engagement between neighboring fish that make
 it all work out.
 ____
 
-She points out that many systems, in nature or mad-made, can and do
+She points out that many systems, in nature or man-made, can and do
 work without leaders, and they are very powerful and resilient. Each
 individual just interacts with its immediate surroundings, but
 together they form something tremendous.
