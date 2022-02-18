@@ -39,6 +39,7 @@ reading and we briefly discuss each link.
 The links refer to external resources on platforms we can't
 control. We have therefore saved the linked articles locally in this
 repository, along with info on where it was copied from, and when.
+All content can be found at https://github.com/kallerosenbaum/btcphilosophy/[github.com/kallerosenbaum/btcphilosophy].
 
 === What to expect
 
