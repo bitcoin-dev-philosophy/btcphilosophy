@@ -2,14 +2,39 @@
 
 A system without a central point of control is often referred to as
 _decentralized_. Bitcoin is decentralized but it might be good to
-ponder why it's made that way and what challenges lies therein.
+ponder why it's made that way and what challenges lies
+therein.
+
+=== Miner decentralization
 
 Bitcoin is made decentralized to avoid having a central point of
-control, or more specifically, a central point of censorship. Satoshi
-Nakamoto writes in his https://bitcoin.org/bitcoin.pdf[Bitcoin paper]
-about how to solve the _double spending problem_, the problem of
-making sure no one can spend the same coin twice, a problem that many
-thought was impossible to solve in a decentralized fashion.
+control, or more specifically, a _central point of censorship_. If the
+system was censorable, it would most likely, based on historic events,
+be co-opted by governments in order to apply pressure on users, for
+example to require identification or that they declare where their
+money is coming from, before their transactions are allowed to enter
+the blockchain.
+
+The censor could also change the rules of the system arbitrarily, for
+example increase the money supply in order to enrich themselves. Users
+are left with three options:
+
+* Accept the changes and adopt them into their verifying software.
+* Reject the changes, leaving them with a system that doesn't process
+transactions anymore.
+* Appoint a new central point of control, after which the same issues
+  will most likely resurface sooner or later. Also this election would
+  in itself probably have to be somewhat centrally controlled or
+  censored.
+
+None of these options are beneficial to the end user. Censorship
+resistance through decentralization is what separates Bitcoin from
+other money systems, but it's not an easy thing to accomplish, due to
+the _double spending problem_. This is the problem of making sure no
+one can spend the same coin twice, a problem that many thought was
+impossible to solve in a decentralized fashion. Satoshi Nakamoto
+writes in his https://bitcoin.org/bitcoin.pdf[Bitcoin paper] about how
+to solve the double spending problem:
 
 [quote, Satoshi Nakamoto, The Bitcoin paper]
 ____
@@ -53,9 +78,66 @@ ____
 
 The conclusion is an important one. If people don't protect Bitcoin's
 decentralization, which is a proxy for censorship resistance, Bitcoin
-might fall victim for centralizating powers until it's so centralized
+might fall victim for centralizing powers until it's so centralized
 that censoship becomes a thing. Then most, if not all, of its value
-proposition is gone.
+proposition is gone. This brings us to the next section, on Full node
+decentralization.
+
+=== Full node decentralization
+
+We've mostly talked about miner dentralization above, and how miner
+centralization can allow for censorship. But there's also another
+aspect of decentralization, which is full node decentralization.
+
+The importance of full node decentralization is related to
+<<trustlessness, trustlessness>>. If a user stops running his/her own
+full node due to prohibitively increased cost of operation, they have
+to interact with the Bitcoin network in some other way, for example
+web wallets, or lightweight wallets, which require more or less
+trust. Aaron Van Wirdum of Bitcoin Magazine writes in
+https://bitcoinmagazine.com/technical/decentralist-perspective-bitcoin-might-need-small-blocks-1442090446[his
+article about decentralization]:
+
+[quote, Aaron Van Wirdum, Bitcoin Magazine]
+____
+An obvious consequence would be that it injects trust in the
+system. Instead of using trustless full nodes, users would, for
+instance, use web-wallets – which obviously require a lot of trust in
+the service. But even solutions such as Simplified Payments
+Verification (SPV) nodes are no better in this regard, as they do not
+verify the consensus rules either.
+____
+
+In the article, Van Wirdum interviews some Bitcoin developers about
+their views on decentralization and the risks involved in increasing
+Bitcoin's maximum block size. This topic was very hot during the
+period 2014-2017, when many people argued for and against increasing
+the block size limit to allow for more transaction throughput.
+
+A very strong argument against increasing the block size is that it
+increases the cost of verification. If verification cost increases, it
+will push some full node users to stop running their full nodes. This
+in turn leads to more people not being able to use the system in a
+trustless way. Pieter Wuille is quoted in the article, where he
+explains the risks in full node decentralization.
+
+[quote, Pieter Wuille, Bitcoin Magazine]
+____
+If lots companies run a full node, it means they all need to be
+convinced to implement a different rule set. In other words: the
+decentralization of block validation is what gives consensus rules
+their weight. But if full node count would drop very low, for instance
+because everyone uses the same web-wallets, exchanges and SPV or
+mobile wallets, regulation could become a reality. And if authorities
+can regulate the consensus rules, it means they can change anything
+that makes Bitcoin Bitcoin. Even the 21 million bitcoin limit.
+____
+
+There you go. It's important that Bitcoin users run their own full
+nodes to deter regulators and big corporations from trying to change
+the consensus rules.
+
+=== Grokking decentralization
 
 An interesting aspect of decentralization is the hard to grasp fact
 that no one controls it. There are no committees or exectutives in
@@ -83,16 +165,3 @@ ____
 No matter what you think about Bitcoin, its decentralized nature makes
 it very hard to control. Bitcoin exists and there's nothing you can do
 about it. It's a thing to be studied, not debated.
-
-////
-
-Arvind Narayanan - Lessons For Bitcoin From 150 Years Of Decentralization
-https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2016/lessons-for-bitcoin-from-150-years-of-decentralization/
-
-The Scaling Debate is a Proxy Battle Over Centralization
-https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2016/scaling-debate-is-a-proxy-battle-over-centralization/
-" If it becomes centralized, it’s no-longer censorship resistant. Imagine a currency where censorship is available. Well, then it’s not a currency. The dream is gone and we have nothing."
-
-Satoshi - Bitcoin open source implementation of P2P currency
-https://satoshi.nakamotoinstitute.org/posts/p2pfoundation/1/
-////

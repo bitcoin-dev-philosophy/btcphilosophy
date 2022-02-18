@@ -183,6 +183,9 @@ When shit hits the fan
 Satoshi ALERT
 https://satoshi.nakamotoinstitute.org/emails/bitcoin-list/32/
 
+BIP66 upgrade debacle: See wuille's answer here
+https://bitcoin.stackexchange.com/questions/50349/how-long-does-block-validation-take?rq=1
+
 Adversarial thinking
 ====================
 
@@ -228,6 +231,24 @@ https://bitcointalk.org/index.php?topic=333882.0
 https://bitcointalk.org/index.php?topic=333882.msg3584447#msg3584447
 https://bitcointalk.org/index.php?topic=333882.msg3585877#msg3585877
 
+Upgrading
+=========
+
+Gregory	Maxwell on slow/stalled taproot upgrade
+https://diyhpl.us/wiki/transcripts/greg-maxwell/greg-maxwell-taproot-pace/
+
+Decentalization
+===============
+
+Arvind Narayanan - Lessons For Bitcoin From 150 Years Of Decentralization
+https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2016/lessons-for-bitcoin-from-150-years-of-decentralization/
+
+The Scaling Debate is a Proxy Battle Over Centralization
+https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2016/scaling-debate-is-a-proxy-battle-over-centralization/
+" If it becomes centralized, it’s no-longer censorship resistant. Imagine a currency where censorship is available. Well, then it’s not a currency. The dream is gone and we have nothing."
+
+Satoshi - Bitcoin open source implementation of P2P currency
+https://satoshi.nakamotoinstitute.org/posts/p2pfoundation/1/
 
 Resource collections
 ====================
