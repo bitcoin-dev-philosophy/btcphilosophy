@@ -5,6 +5,7 @@ trustless". What do they mean by trustless? Pieter Wuille explains
 this widely used term on
 https://bitcoin.stackexchange.com/a/45674/69518[Stack Exchange]:
 
+[quote, Pieter Wuille, Bitcoin Stack Exchange]
 ____
 The trust we're talking about in "trustless" is an abstract technical
 term. A distributed system is called trustless when it does not

@@ -31,6 +31,7 @@ Maxwell, on the Bitcoin Talk forum
 walks us through a lot of good reasons why he thinks privacy
 matters. Among them is <<fungibility>>:
 
+[quote, Gregory Maxwell, Bitcoin Talk forum]
 ____
 Financial privacy is an essential element to fungibility in Bitcoin:
 if you can meaningfully distinguish one coin from another, then their
@@ -75,6 +76,7 @@ reuse and address clustering. The latter is the ability to decide,
 with some level of certainty, that a set of different addresses belong
 to the same user.
 
+.Typical privacy leaks on the blockchain.
 image::address-reuse-clustering.png[]
 
 Chris Belcher wrote in great detail about the different kinds of
@@ -95,6 +97,7 @@ simple manner on the same Bitcoin Talk discussion that we linked above
 (https://bitcointalk.org/index.php?topic=334316.msg3589252#msg3589252),
 and concludes with an example:
 
+[quote, Gregory Maxwell, Bitcoin Talk forum]
 ____
 This actually works in practice, too... A nice whitehat hacker on IRC
 was playing around with brainwallet cracking and hit a phrase with
@@ -123,6 +126,7 @@ attacks on privacy"
 Among a plethora of attacks, Belcher mentions the possibility of
 someone snooping on your internet connection, for example your ISP:
 
+[quote, Chris Belcher, Bitcoin wiki]
 ____
 If the adversary sees a transaction or block coming out of your node
 which did not previously enter, then it can know with near-certainty

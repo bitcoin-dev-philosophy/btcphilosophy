@@ -166,8 +166,9 @@ see these activities and believe they're some operation by the bitcoin
 authority, but no such authority exists.
 ____
 
+.Fish schools have no leaders.
 [.right.half-width.thumb]
-image::fishschool2.jpeg[]
+image::fishschool.jpg[]
 
 The way Bitcoin works through decentralization resembles the
 extraordinary collective intelligence found among many species in

@@ -56,11 +56,11 @@ the complexity of the system.
 The importance of adversarial thinking probably extends to the general
 public as well to some
 degree. https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking[Ragnar
-Lifthrasir mentions in a tweetstorm] how simpilstic narratives around
+Lifthasir mentions in a tweetstorm] how simpilstic narratives around
 Bitcoin, for example "just HODL", can be degrading to Bitcoin and
 concludes
 
-[quote, Ragnar Lifthrasir, Twitter]
+[quote, Ragnar Lifthasir, Twitter]
 ____
 To make Bitcoin and ourselves stronger we need to think like the
 software engineers who contribute to Bitcoin. They peer review,
@@ -82,7 +82,7 @@ https://en.bitcoin.it/wiki/Weaknesses[the Weaknesses page] on the
 Bitcoin wiki. They mention a wide variety of problems, for example
 wallet theft and denial-of-service attacks. 
 
-[quote, Various authors, The Bitcion wiki]
+[quote, Various authors, The Bitcoin wiki]
 ____
 If an attacker attempts to fill the network with clients that they
 control, you would then be very likely to connect only to attacker
