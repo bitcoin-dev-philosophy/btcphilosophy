@@ -52,7 +52,7 @@ So we have a system that seems to be working in practice, but we can't
 formally prove it's secure. A proof is probably not possible due to
 the complexity of the system.
 
-=== Adversarial thinking for plebs
+=== Not just for experts
 
 The importance of adversarial thinking probably extends to the general
 public as well to some
