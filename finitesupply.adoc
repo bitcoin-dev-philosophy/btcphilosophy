@@ -1,6 +1,6 @@
 == Finite supply
 
-Is it set in stone that Bitcoin has a finite supply of 21 million BTC? No. First of all, the famous number 21 million is only approximate. Pieter Wuille clears tings out regarding the exact amount https://bitcoin.stackexchange.com/a/38998/69518[on Stack Exchange].
+Is it set in stone that Bitcoin has a finite supply of 21 million BTC? No. First of all, the famous number 21 million is only approximate. Pieter Wuille clears things up regarding the exact amount https://bitcoin.stackexchange.com/a/38998/69518[on Stack Exchange].
 
 [cite, Pieter Wuille, Stack Exchange]
 ____
@@ -22,7 +22,7 @@ Even if some full nodes give themselves to the dark side and decide to accept bl
 Full nodes may intentionally or unintentionally run bad software, yet the collective robustly secures the blockchain together. Thus you can trust the system without having to trust anyone.  
 
 === Block subsidy and transaction fees
-It is the block subsidy together with transaction fees that together need to cover Bitcoin's security costs. We can say fore sure that with today's block subsidy, transaction fees, bitcoin price, mempool size, hash power, degree of decentralization, etc, etc, the incentives to play by the rules are high enough to preserve a secure monetary system.
+It is the block subsidy together with transaction fees that together need to cover Bitcoin's security costs. We can say for sure that with today's block subsidy, transaction fees, bitcoin price, mempool size, hash power, degree of decentralization, etc, etc, the incentives to play by the rules are high enough to preserve a secure monetary system.
 
 But what the future holds for us, we cannot know. The uncertainty factors are numerous and we are left to speculations. For example Paul Sztorc's contribution to the subject https://www.truthcoin.info/blog/security-budget/[in his Truthcoin blog] is mostly speculations, but he has at least one good solid point:
 
@@ -59,4 +59,4 @@ ____
 Finally, there are some nice onion pictures in https://insights.deribit.com/market-research/the-onion-model-of-blockchain-security-part-1/[Hasu's article at Insights] worth mentioning. The illustrations pedagogically present the different security layers, but the text is written in a general crypto point of view and is sometimes difficult to follow.
 
 === Conclusion
-Weather the bitcoin supply will grow above 21 million we cannot say today and that is probably not so bad. Ensuring that the security budget remains high enough is crucial but not urgent. Let's have this discussion in 10-50 years when we know more. If it's still relevant.
+Whether the bitcoin supply will grow above 21 million we cannot say today and that is probably not so bad. Ensuring that the security budget remains high enough is crucial but not urgent. Let's have this discussion in 10-50 years when we know more. If it's still relevant.

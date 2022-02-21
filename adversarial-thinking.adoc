@@ -10,7 +10,7 @@ honest, meaning that they play by the rules. If these assumptions are
 proven wrong, then Bitcoin is in trouble.
 
 Andrew Poelstra
-https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/[made
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/[gave
 a talk] at the Scaling Bitcoin conference in Hong Kong 2015, where he
 talked about Bitcoin's security assumptions. He says that many systems
 disregard adversaries to some extent, for example it's really hard to
@@ -57,7 +57,7 @@ the complexity of the system.
 The importance of adversarial thinking probably extends to the general
 public as well to some
 degree. https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking[Ragnar
-Lifthasir mentions in a tweetstorm] how simpilstic narratives around
+Lifthasir mentions in a tweetstorm] how simplistic narratives around
 Bitcoin, for example "just HODL", can be degrading to Bitcoin and
 concludes
 
@@ -102,12 +102,12 @@ image::sabotage-manual.png[role="right half-width"]
 To better understand the minds of an adversary, it might be useful to
 get a glimpse into how they might operate. A government body named
 Office of Strategic Services, that operated during World War II,
-conducted spionage, performed sabotage and propaganda, among other
+conducted espionage, performed sabotage and propaganda, among other
 things, wrote a
 https://www.gutenberg.org/files/26184/page-images/26184-images.pdf[manual]
-for their personell on how to sabotage. It's title was "Simple
+for their personnel on how to sabotage. It's title was "Simple
 Sabotage Field Manual" and contained concrete tips on how to
-infiltrate the enemy to make their lifes hard. They range from burning
+infiltrate the enemy to make their lives hard. They range from burning
 down warehouses to causing wear to drills to decrease the enemy's
 efficiency. For example, there is a section about how an infiltrator
 can disrupt organizations.

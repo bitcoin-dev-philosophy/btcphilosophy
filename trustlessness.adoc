@@ -18,10 +18,10 @@ parties". This is different from the trust that you inevitably have to
 put into the software or hardware you run. More on this trust further
 down this article.
 
-To use Bitcoin in a trustless manner, you have to run a full Bitcoin
-node. Without that, you outsource verification of Bitcoin data to
-someone else, and thus trust someone else which means you're not using
-Bitcoin trustlessly.
+To use Bitcoin in a trustless manner, you have to run a 
+fully-validating Bitcoin node. Without that, you outsource 
+verification of Bitcoin data to someone else, and thus trust someone 
+else which means you're not using Bitcoin trustlessly.
 
 Bitcoin's trustlessness is absolutely imperative from a system
 perspective. In 2018, Matt Corallo, https://btctranscripts.com/baltic-honeybadger/2018/trustlessness-scalability-and-directions-in-security-models/[spoke about trustlessness] at the
@@ -45,7 +45,7 @@ might not be programmed to do what's stated on the box. For example:
 
 * The CPU might be maliciously programmed to detect private key
   cryptographic operations and leak the private key data.
-* the operating system's random number generator might not be as
+* The operating system's random number generator might not be as
   random as it claims.
 * Bitcoin Core might have sneaked in code that will send your private
   keys to some bad actor.

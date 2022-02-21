@@ -1,6 +1,6 @@
 == Privacy
 
-Bitcoin can be described as a pseudonomous system, where users have
+Bitcoin can be described as a pseudonymous system, where users have
 multiple pseudonyms in the form of public keys. At first glance, this
 looks like a pretty good way to keep users from being identified, but
 it is in fact really easy to unintentionally leak private financial
