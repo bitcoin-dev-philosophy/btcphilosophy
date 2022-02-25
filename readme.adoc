@@ -1,8 +1,17 @@
 == About btcphilosophy
 
-This project is meant as a guide for new developers in Bitcoin to
-learn about this new digital currency's fundamental properties and how
-seasoned Bitcoin developers think about them.
+This project is as a guide for new developers in Bitcoin to learn about the
+digital currency's fundamental properties and how seasoned Bitcoin developers
+think about them.
+
+This guide should help the reader to get up to speed on basic Bitcoin developer
+philosophy. After reading this collection of articles, you'll:
+
+* have cruised over a decade of Bitcoin experience
+* be able to distinguish useful Bitcoin ideas from, well, less useful ideas
+* get accustomed to some great places for Bitcoin information
+* be humbled by the vast amount of wisdom available
+* be humbled by the breadth of this field
 
 image::under-construction.svg[width=20%,float="right",align="center"]
 
@@ -13,28 +22,22 @@ project. Sorry.
 === Intended reader
 
 The typical reader is a developer who just started digging into
-Bitcoin development or have worked in the Bitcoin space in one form or
-the other for a while.
+Bitcoin development or has worked in the Bitcoin space in one form or
+the other.
 
-The reader doesn't have to know every ins an outs of Bitcoin, but
+The reader doesn't have to know all the ins and outs of Bitcoin, but
 should understand how it operates on a high level. For example, the
 following should be clear to the reader beforehand:
 
 * What proof-of-work is
 * How blocks are interconnected
-* That transactions are usually signed using private keys before being
-  published to the Bitcoin peer-to-peer network.
-
-The reader should also be humble and willing to re-evaluate his/her
-opinions. The materials we present here are written by people who have
-been studying Bitcoin for a very long time and some were into digital
-money way before Bitcoin existed (yes, they existed before Bitcoin).
+* Lifecycle of transactions
 
 === How is this organized?
 
 The project is sectioned into topics. Each topic will guide you
 through a number of links to articles or videos, that we recommend
-reading and we briefly discuss each link.
+reading and briefly discuss each link.
 
 The links refer to external resources on platforms we can't
 control. We have therefore saved the linked articles locally in this
@@ -42,27 +45,17 @@ repository, along with info on where it was copied from, and when.
 
 === What to expect
 
-There are lots and lots of people involved in Bitcoin and they
-sometimes have opposing opinions on some topics, so some resources may
-appear contradictory others. However, we will mostly try to stick to
-the facts, where opinions don't matter. Note also that topics cannot
-be fully separated from others; overlaps do exist. For example,
-fungibility is briefly discussed in the privacy chapter, eventhough
+There are lots people involved in Bitcoin; some have opposing opinions and so
+certain resources may appear contradictory to one another. However, we will
+attempt to stick to the facts, where opinions do not matter.
+
+Topics cannot be fully separated from others; overlaps do exist. For example,
+fungibility is briefly discussed in the privacy chapter, even though
 there is a separate chapter for fungibility.
-
-This guide should help the reader to more quickly get up to speed on basic
-Bitcoin developer philosophy. After reading this collection of
-articles, you'll
-
-* have leapfrogged more than a decade of Bitcoin experience
-* be able to distinguish useful Bitcoin ideas from, well, less useful ideas
-* get accustomed to some great places for Bitcoin information
-* be humbled by the vast amount of wisdom available
-* be humbled by the breadth of this field
 
 === Who wrote this?
 
-The main authors are Kalle Rosenbaum and Linnéa Rosenbaum. This work
-is commissioned and funded by Chaincode Labs. Chaincode Labs run
-internships for developers where the attendants learn about Bitcoin
-development.
+The material presented is written by individuals who have studied Bitcoin for a
+long time. The main authors are Kalle Rosenbaum and Linnéa Rosenbaum. This work
+is commissioned and funded by Chaincode Labs. Chaincode Labs runs internships
+for developers where the attendants learn about Bitcoin development.
