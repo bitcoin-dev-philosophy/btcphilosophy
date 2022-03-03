@@ -111,11 +111,19 @@ Gregory Maxwell on "making mining useful"
 https://www.reddit.com/r/Bitcoin/comments/hlu2ah/why_cant_hash_power_be_used_for_something_useful/fx1axlt/?utm_source=share&utm_medium=web2x&context=3
 "No one expects their padlocks to cure cancer."
 
-Review
+Review (Rename to Open source???)
 =======
 
 Gregory Maxwell on cryptographic systems and cryptography selection
 https://youtu.be/Gs9lJTRZCDc?t=2799
+
+[quote, wumpus, IRC #bitcoin-core-dev 2018-02-26]
+____
+And if you want to change the bitcoin logo to a purple elephant and
+denominate coins in 'fluppydoodleblurz' from now on, go ahead and
+release a wallet that does that, use that on your sites, make a
+BIP, etc. By nature, bitcoin is permissionless.
+____
 
 
 Censorship resistance
@@ -128,6 +136,9 @@ Layered architecture
 ====================
 Gregory Maxwell on layered systems (and Bitcoin).
 https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/
+
+Pieter Wuille: Why use BTC instead of PayPal or CC?
+https://bitcoin.stackexchange.com/a/75112/69518
 
 Privacy
 =======
@@ -258,3 +269,16 @@ https://www.lopp.net/bitcoin-information.html
 https://bitcoiner.guide/
 https://bitcoin-only.com/
 https://bitcoinwords.github.io/
+
+
+IRC gems
+===============
+1335905812|1|gmaxwell|I don't agree with you on that point. Trying to use checkpoints to stop reorgs makes things much worse.  Persistent (unrecoverable) splitting is probably the worse possible outcome— worse than one shot fradulent multi-spending... and it's completely precluded by the current design.
+1335905821|1|gavinandresen|(assuming they haven't detected a split with a big drop in hash rate yada yada yada)
+1335905852|32|t7|#bitcoin-dev
+1335905865|1|gavinandresen|A split less than 100 blocks deep is not a problem for anybody unless there are double-spends on the two forks.
+1335905909|1|gmaxwell|In order to make such a mechnism safe from preventing non-trivial persistent splits you need an agreement mechinism on the checkpoints. Our options are either to (quasi)centeralize it which removes the attractiveness of bitcoin, or to use distributed consensus for it and in that case the distributed consensus has the same attack vulnerabilities.
+
+
+
+"Blacklist incident"

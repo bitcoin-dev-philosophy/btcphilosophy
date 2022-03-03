@@ -55,6 +55,7 @@ https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_o
 Maxwell on Reddit] where he responds to someone who proposes to limit
 miners' hashpower to avoid 51% attacks:
 
+[[maxwelldecentralization]]
 [quote, Gregory Maxwell, r/Bitcoin subreddit]
 ____
 A decentralized system like Bitcoin uses a public election. But you
@@ -123,7 +124,7 @@ increases the cost of verification. If verification cost increases, it
 will push some full node users to stop running their full nodes. This
 in turn leads to more people not being able to use the system in a
 trustless way. Pieter Wuille is quoted in the article, where he
-explains the risks in full node decentralization.
+explains the risks in full node centralization.
 
 [quote, Pieter Wuille, Bitcoin Magazine]
 ____
@@ -140,6 +141,152 @@ ____
 There you go. It's important that Bitcoin users run their own full
 nodes to deter regulators and big corporations from trying to change
 the consensus rules.
+
+=== Neutrality
+
+Bitcoin is neutral, or permissionless as people like to call it. This
+means that Bitcoin doesn't care who you are or what you use
+Bitcoin for.
+
+[quote, wumpus, #bitcoin-core-dev IRC freenode]
+____
+1333560844|1|wumpus|bitcoin is neutral, which is a good thing, and the
+only way it can work
+____
+
+As long as you play by the rules, you're free to use it
+as you please, without asking anyone for permission. This includes
+_mining_, _transacting_ in, and _building protocols and services_ on top of
+Bitcoin.
+
+////
+In the foreword of [Grokking Bitcoin], David Harding writes about
+Bitcoin's neutrality and how it differs from regular systems:
+
+[quote, David Harding, Foreword of Grokking Bitcoin
+____
+"A decentralized system that doesn’t use identities or depend on trust
+is quite different from the everyday systems with which most of us are
+familiar."
+____
+////
+
+* If *mining* would have been a permissioned process, you'd need a central
+authority to select who's allowed to mine. This would most likely lead
+to miners having to sign legal contracts where agree to censor
+transactions according to the whims of the central authority, which
+defeats the purpose of mining in the first place.
+
+* If people *transacting* in Bitcoin would have to to provide personal
+information, what their transactions are used Bitcoin for, or
+otherwise prove that they are worthy of transacting, we would also
+need a central point of authority to give permission to users or
+transactions. Again, this would lead to censorship and exclusion.
+
+* If developers had to ask for permission to *build protocols* on top of
+Bitcoin, only protocols that the central developer granting commitee
+allows would be developed. This would, due to government intervention,
+inevitably exclude all privacy preserving protocols and all attempts
+at improving decentralization.
+
+At all levels, trying to impose restrictions on who gets to use
+Bitcoin for what will hurt Bitcoin to the point where it's no longer
+living up to its value proposition.
+
+Pieter Wuille https://bitcoin.stackexchange.com/a/92055/69518[answers
+a question on Stack Exchange] about how the blockchain relates to
+normal databases. He explains how permissionlessness is achievable
+through use of proof-of-work in combination with economic
+incentives. He concludes:
+
+[quote, Pieter Wuille, Stack Exchange]
+____
+Using trustless consensus algorithms like PoW does add something no
+other construction gives you (permissionless participation, meaning
+there is no set group of participants that can censor your changes),
+but comes at a high cost, and its economic assumptions make it pretty
+much only useful for systems that define their own
+cryptocurrency. There is probably only place in the world for one or a
+few actually used ones of these.
+____
+
+He describes that to achieve premissionlessness, the system [most
+likely] needs its own currency.
+
+
+
+////
+Andreas M. Antonopoulos - Bitcoin Neutrality
+https://www.youtube.com/watch?v=BT8FXQN-9-A
+"How does this change affect the core principle of neutrality?"
+Comparing Internet neutrality to Bitcoin neutrality
+
+Andreas: Internetdagarna, touches on neutrality
+https://www.youtube.com/watch?v=T2zH-T_hmLs
+
+David Harding on Bitcoin's permissionless
+http://rosenbaum.se/book/grokking-bitcoin-fm.html
+
+
+
+Attaching identity ruins neutrality
+
+A decentralized system has to be permissionless, which means that
+there's no 
+
+
+* Miners come and go anonymously, no questions asked
+** Many miners doxx themselves for some reason
+* Nodes (users) come and go, no questions asked
+
+* we keep the barrier to entry for running a node as low as possible
+  (resource minimization, good UX)
+* favor solutions that enhance privacy
+* keep up-to-date and correct translations for Bitcoin Core
+* ensure that features are not introduced that favor the laws and
+  regulations of one particular jurisdiction over another
+* ensure the p2p network is resilient against preventing nodes from
+  specific geographic regions from joining
+
+
+Arvind Narayanan and Jeremy Clark - Bitcoin's Academic Pedigree
+https://queue.acm.org/detail.cfm?id=3136559 "Virtually all
+fault-tolerant systems assume that a strict majority or supermajority
+(e.g., more than half or two-thirds) of nodes in the system are both
+honest and reliable. In an open peer-to-peer network, there is no
+registration of nodes, and they freely join and leave. Thus an
+adversary can create enough Sybils, or sockpuppet nodes, to overcome
+the consensus guarantees of the system. The Sybil attack was
+formalized in 2002 by John Douceur,14 who turned to a cryptographic
+construction called proof of work to mitigate it."
+
+
+Pieter Wuille - PoW is used to reach consensus on transaction ordering
+https://bitcoin.stackexchange.com/a/72693/69518
+
+Keiser Report on permissionlessness
+https://www.rt.com/shows/to-the-moon/458411-bitcoin-conference-taaki-barlow/
+~"We are so conditioned to seek permission..."
+No one to bail you out
+Burn your hand is a good lesson, can't intellectually learn that.
+
+
+Users - Anyone interacting through the Bitcoin protocol. Miners, hodlers, merchants, etc.
+
+Bitcoin can be used on any level without asking anyone for permission.
+
+Why is this important?
+
+
+* If mining becomes too centralized, users can opt to start mining
+
+* If Bitcoin wasn't permissionless, some authority would be needed to
+  decide who's allowed to participate and who's not. This would be a
+  <<maxwelldecentralization,centralized>> system and Bitcoin would
+  fall under censorship pressure.
+
+////
+
 
 === Grokking decentralization
 
