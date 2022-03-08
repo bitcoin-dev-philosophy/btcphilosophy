@@ -175,7 +175,7 @@ likely lead to miners having to sign legal contracts where they agree
 to censor transactions according to the whims of the central
 authority, which defeats the purpose of mining in the first place.
 
-* If people *transacting* in Bitcoin would have to to provide personal
+* If people *transacting* in Bitcoin would have to provide personal
 information, what their transactions are used for, or otherwise prove
 that they are worthy of transacting, we would also need a central
 point of authority to give permission to users or transactions. Again,
