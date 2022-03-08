@@ -1,8 +1,8 @@
 == About btcphilosophy
 
-This project is as a guide for new developers in Bitcoin to learn about the
-digital currency's fundamental properties and how seasoned Bitcoin developers
-think about them.
+This project is a guide for new developers in Bitcoin to learn about
+the digital currency's fundamental properties and how seasoned Bitcoin
+developers think about them.
 
 This guide should help the reader to get up to speed on basic Bitcoin developer
 philosophy. After reading this collection of articles, you'll:
@@ -37,11 +37,19 @@ following should be clear to the reader beforehand:
 
 The project is sectioned into topics. Each topic will guide you
 through a number of links to articles or videos, that we recommend
-reading and briefly discuss each link.
+reading and briefly discuss each link. The material presented is
+written by individuals who have studied Bitcoin for a long time.
 
 The links refer to external resources on platforms we can't
 control. We have therefore saved the linked articles locally in this
-repository, along with info on where it was copied from, and when.
+repository, along with info on where it was copied from, and when. The
+resources are collected in an appendix grouped by the chapter they are
+linked from.
+
+The links throughout the chapters refer to the original sources, but
+if you don't have an internet connection, the links appear dead, or
+the content seems severely changed, you can read the content from the
+appendix.
 
 === What to expect
 
@@ -55,7 +63,6 @@ there is a separate chapter for fungibility.
 
 === Who wrote this?
 
-The material presented is written by individuals who have studied Bitcoin for a
-long time. The main authors are Kalle Rosenbaum and Linnéa Rosenbaum. This work
+The main authors are Kalle Rosenbaum and Linnéa Rosenbaum. This work
 is commissioned and funded by Chaincode Labs. Chaincode Labs runs internships
 for developers where the attendants learn about Bitcoin development.
