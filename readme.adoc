@@ -13,6 +13,9 @@ philosophy. After reading this collection of articles, you'll:
 * be humbled by the vast amount of wisdom available
 * be humbled by the breadth of this field
 
+The content can be found at
+https://github.com/kallerosenbaum/btcphilosophy/[github.com/kallerosenbaum/btcphilosophy].
+
 image::under-construction.svg[width=20%,float="right",align="center"]
 
 WARNING: This repo is heavily under construction. If this sign is
@@ -60,6 +63,29 @@ attempt to stick to the facts, where opinions do not matter.
 Topics cannot be fully separated from others; overlaps do exist. For example,
 fungibility is briefly discussed in the privacy chapter, even though
 there is a separate chapter for fungibility.
+
+=== Build
+
+The book is written in https://asciidoctor.org/[Asciidoctor]. To build
+this book, clone the GitHub repository:
+
+----
+$ git clone https://github.com/kallerosenbaum/btcphilosophy.git
+$ cd btcphilosophy
+----
+
+and then build using `asciidoctor`:
+
+----
+$ asciidoctor btcphilosophy.adoc
+----
+
+This will result in a file `btcphilosophy.html` in your current
+directory that you can view in any browser, for example:
+
+----
+$ brave-browser btcphilosophy.html
+----
 
 === Who wrote this?
 
