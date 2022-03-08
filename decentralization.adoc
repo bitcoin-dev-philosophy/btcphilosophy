@@ -55,7 +55,6 @@ https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_o
 Maxwell on Reddit] where he responds to someone who proposes to limit
 miners' hashpower to avoid 51% attacks:
 
-[[maxwelldecentralization]]
 [quote, Gregory Maxwell, r/Bitcoin subreddit]
 ____
 A decentralized system like Bitcoin uses a public election. But you
@@ -148,10 +147,11 @@ Bitcoin is neutral, or permissionless as people like to call it. This
 means that Bitcoin doesn't care who you are or what you use
 Bitcoin for.
 
-[quote, wumpus, #bitcoin-core-dev IRC freenode]
+[quote, wumpus on freenode IRC (punctuation added), #bitcoin-core-dev 2012-04-04T17:34:04 UTC]
 ____
-1333560844|1|wumpus|bitcoin is neutral, which is a good thing, and the
-only way it can work
+bitcoin is neutral, which is a good thing, and the only way it can
+work. if it was controlled by an organisation it'd just be another
+virtual object type and I would have zero interest in it
 ____
 
 As long as you play by the rules, you're free to use it
@@ -282,8 +282,7 @@ Why is this important?
 
 * If Bitcoin wasn't permissionless, some authority would be needed to
   decide who's allowed to participate and who's not. This would be a
-  <<maxwelldecentralization,centralized>> system and Bitcoin would
-  fall under censorship pressure.
+  centralized system and Bitcoin would fall under censorship pressure.
 
 ////
 

@@ -41,7 +41,7 @@ image::finitesupply.png[width=60%]
 So, given that the consensus on finite supply remains, the block subsidy will, thanks to https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki[BIP42 ;)], be zero from around year 2140. Will the transaction fees after that be enough to secure the network? It's impossible to say, but we do know some things:
 
 * A century is a _long_ time from the Bitcoin perspective. If it is still around, it has probably evolved enormously.
-* With zero block subsidy and an empty or almost empty mempool, things will be shaky. For example, fee sniping might become more profitable than regular mining https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacerbate-instability-in-bitcoin-in-the-future
+* With zero block subsidy and an empty or almost empty mempool, things will be shaky. For example, fee https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacerbate-instability-in-bitcoin-in-the-future[sniping might become more profitable than regular mining]
 * If an overwhelming economic majority finds it attractive to change the rules and introduce for example a perpetual annual 0.1% or 1% monetary inflation, to ensure that the chain keeps marching forward, the supply of bitcoin will no longer be finite.
 
 === Security despite uncertainty 

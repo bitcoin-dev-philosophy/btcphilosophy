@@ -1,0 +1,25 @@
+==== Pieter Wuille On neutrality
+
+****
+
+* Source: https://bitcoin.stackexchange.com/a/92055/69518
+* Author: Pieter Wuille
+* Date copied: 2022-03-04
+****
+
+This is hard to answer, as "blockchain" isn't a very well defined thing. Often the term refers to some use of cryptography in a distributed system, but what it means beyond that depends on who you ask. To those who use it as a generic term, it is usually little more than a marketing term.
+
+If you assume that at least there is an actual chain of blocks being built, either by a permissionless set of participants based on economic incentive ("miners"), or by a permissioned set of signers with long-term identities, the question you're asking actually does not make sense. Blockchain consensus algorithms do not compete with or replace databases as such. They are a mechanism for obtaining consensus on a global state, where multiple participants have authority to accept changes. Arguably, each of those participants _already_ needs a database themselves - the blockchain is merely a log of all accepted updates to those databases. Even in Bitcoin, every node actually has a local database with the UTXO set. In Bitcoin Core, that is a LevelDB database, but there is no fundamental reason why another database couldn't be used.
+
+Of course, in some scenarios all you need is a single authority deciding on all changes to the database. In that case a database is indeed all you need. But that's a silly comparison: there are plenty of use cases for distributed systems with multiple writers today, in production use, that have no relation with blockchains. Look up Paxos, or Google Spanner for example. The complexity is not in the database part, but in keeping the participants synchronized. That is what a consensus algorithm does. Most production instances I know of this use mutually trusting authorities (and a distributed system is used for performance/latency reasons rather than trust), but algorithms that permit distrusting participants are well known as well, e.g. PBFT.
+
+Now, digging deeper: how does a private blockchain compare with such a system? The answer is trivial: it is effectively a new way of looking at the same thing. Private blockchains (i.e. there is a set of known identities that can approve changes) rely on running a traditional consensus algorithm (e.g. PBFT) between the block signers to make sure only a single chain emerges. Here the "blockchain" is literally the log of changes, as many of its properties (e.g. the ability to temporarily fork) aren't even used. That log may be useful for auditing purposes, and if you structure it as a hash chain, you could indeed call it a blockchain. But there is no innovation here whatsoever. That doesn't mean "blockchain technology" is necessecarily useless here, as some of the cryptography for e.g. transaction verification may still be applicable (depending on the use case), but, arguably, the blockchain as a datastructure itself not novel in any way here.
+
+Things get much more interesting when you're talking about a public blockchain (where anyone can become an authorizer of changes) but its use cases are very limited. I'm going to focus here on proof-of-work, as I don't believe any solution that completely avoids PoW actually securely offers the same properties. What PoW does is replace the signing of blocks by known identities with betting on particular versions of history and paying for the bet. Everyone who consistently bets with the majority ("miners") gets paid, and those who diverge don't. There are two fundamental changes here: (a) there must be something of value to pay miners, which typically implies that your blockchain needs to define its own currency, limiting the use cases to effectively just cryptocurrencies (b) you don't get guaranteed convergence anymore, only probabilistically and under economical assumptions.
+
+To summarize, the answer to your question really depends on what you mean by blockchain, and what kind of thing you're comparing it to:
+
+* Cryptography used in blockchains may be widely applicable in a variety of settings, but doesn't really have anything to do with blockchains or databases themselves.
+* Using consensus algorithms (private or public, including typical "blockchain based" ones) in situations where there is only a single authorizer is silly; you should use the database directly.
+* Using fault tolerant consensus algorithms (either traditional BFT like ones, or PoW) is overkill when your authorizers are trusted (e.g. because they're all run by the same company). Use something like Paxos instead.
+* Using trustless consensus algorithms like PoW does add something no other construction gives you (permissionless participation, meaning there is no set group of participants that can censor your changes), but comes at a high cost, and its economic assumptions make it pretty much only useful for systems that define their own cryptocurrency. There is probably only place in the world for one or a few actually used ones of these.

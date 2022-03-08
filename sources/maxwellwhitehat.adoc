@@ -1,0 +1,20 @@
+==== Gregory Maxwell - Bad privacy contagious
+****
+
+* Source: https://bitcointalk.org/index.php?topic=334316.msg3589252#msg3589252
+* Author: Gregory Maxwell
+* Date copied: 2022-03-07
+****
+
+[quote, BitThink, BitcoinTalk forum 2013-11-15]
+____
+Could you provide a concrete example to explain why reusing addresses by A will affect B if B always carefully choosing address. and how both A and B never reusing addresses prevent it? I'm still not so clear about it.
+____
+
+A always reuses addresses. Blockchain.info uses this to display their name and IP address along with their transactions, everyone else they've ever transacted with knows who they are, anyone can identify who they are with a simple google search, etc. Because A reuses so often even if A sometimes doesn't reuse, the coins they receive inevitably get mixed up with the non-reused one. A is entirely public.
+
+Now B is super careful and paranoid... and we're not even in a world where blacklisting or whitelisting prevents B from comfortably using his paranoid practices. He never reuses.  Someone is trying to figure out who B is because they want to defraud him.  Initially they are thwarted by B's pratices but then they see that B initially received his coins from A. Everyone knows who A is. Moreover, they see when they did so. From that alone they've learned a ton of information about B, beyond that they can now go ask A to tell them— they could coerce A, or just trick him, as we've already established that A is pretty happy go lucky and not very cautious.   Beyond that it isn't just A,  B also transacts with other people who are not hygienic and those all potentially leak information too.
+
+This actually works in practice, too... A nice whitehat hacker on IRC was playing around with brainwallet cracking and hit a phrase with ~250 BTC in it.  We were able to identify the owner from just the address alone, because they'd been paid by a Bitcoin service that reused addresses and he was able to talk them into giving up the users contact information. He actually got the user on the phone, they were shocked and confused— but grateful to not be out their coin.  A happy ending there. (This isn't the only example of it, by far ... but its one of the more fun ones).
+
+Uh. We've gone pretty far offtopic here, perhaps these posts should be split from this thread?

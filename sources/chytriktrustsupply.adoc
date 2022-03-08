@@ -1,0 +1,19 @@
+==== chytrik - How can we trust supply won't be increased in 2140 by just a few lines of code?
+****
+
+* Source: https://bitcoin.stackexchange.com/a/106830/69518
+* Author: User chytrik on Bitcoin Stack Exchange
+* Date copied: 2022-03-07
+****
+
+
+
+The bitcoin network is composed of 'bitcoin full nodes', which are computers located all around the world, each one running independently to verify the state of the network.
+
+Part of that verification includes making sure that the right number of coins are being created with each passing block, such that the total number of coins in existence is known, and predictable.
+
+To change this 'coin issuance schedule', you would have to change the code running on all of those computers, so that they would all independently agree on some new issuance schedule, and could all continue to verify which blocks are valid (or not), in independent consensus. If you could only change the code on some of those computers, then those computers would start to follow blocks which the remaining bitcoin network nodes would consider invalid, effectively creating an altcoin-fork of the network (similar to what happened with 'bitcoin cash').
+
+Anybody, at any point in time, could create some software that changes the issuance schedule. Thats easy. The hard part is convincing everyone that is running a bitcoin full node to switch to this new code, which creates more coins. Nobody has the authority to push such a change onto the network (top-down governance), rather it is the independent choices of all of the network's nodes (bottom-up governance) that defines the network.
+
+So the answer is that you _don't have to trust someone_ to not increase the supply. You just have to run some code that will _verify that they haven't_.

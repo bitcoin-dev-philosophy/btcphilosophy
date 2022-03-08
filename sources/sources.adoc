@@ -1,0 +1,62 @@
+[appendix]
+== Sources
+
+=== Decentralization
+
+include::maxwelldecentralization.adoc[]
+
+include::bitcoinpaper.adoc[]
+
+include::bitcoinmagarticle.adoc[]
+
+include::wuillese.adoc[]
+
+include::maxwellautonomous.adoc[]
+
+include::ted.adoc[]
+
+=== Trustlessness
+
+include::wuilletrustless.adoc[]
+
+include::corallotrustless.adoc[]
+
+include::cve-2018-17144.adoc[]
+
+=== Adversarial thinking
+
+include::poelstrasecurityassumptions.adoc[]
+
+include::loppsecuritymodel.adoc[]
+
+include::lifthasir.adoc[]
+
+include::wikithreats.adoc[]
+
+include::sabotagemanual.adoc[]
+
+include::voskuilresistance.adoc[]
+
+=== Privacy
+
+include::maxwellprivacy.adoc[]
+
+include::bitcoinpaper.adoc[]
+
+include::belcherprivacy.adoc[]
+
+include::maxwellwhitehat.adoc[]
+
+=== Finite supply
+
+include::wuillesupply.adoc[]
+
+include::chytriktrustsupply.adoc[]
+
+include::truthcoin.adoc[]
+
+include::feesniping.adoc[]
+
+include::loppsecuritymodel.adoc[]
+
+include::hasuonionmodel.adoc[]

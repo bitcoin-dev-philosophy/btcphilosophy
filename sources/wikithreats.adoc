@@ -1,0 +1,208 @@
+==== Bitcoin Wiki - Weaknesses
+****
+
+* Source: https://en.bitcoin.it/wiki/Weaknesses
+* Author: Various
+* Date copied: 2022-03-07
+****
+
+===== Might be a problem
+
+*Wallet Vulnerable To Theft*
+
+The wallet is stored unencrypted, by default, and thus becomes a valuable target for theft. Recent releases of the Bitcoin client now supports encryption to protect the wallet data, though the user must opt-in.
+
+*New wallets vulnerable with old passwords via backups*
+
+An old copy of a wallet with its old password is often easily retrievable via an existing backup facility (particularly Apple Time-Machine): draining that old wallet, with its old password, drains the current wallet with the current password -- this is contrary to most non-technical users expectation of what 'change the password on your wallet' should mean following password compromise.
+
+An initial solution is to mandate (either in code or as expressed policy) that changing a wallet's password causes (or asks the user to cause) the creation of a new wallet with new addresses, and the sending of existing sums to them. Backed-up copies of the original wallet with the original password would then be empty, should they be compromised. On the downside, the password-changing process would potentially take much longer, cost a transaction fee or more, and - intially at least - the new wallet is no longer backed up. On the upside, non-technical users won't find their wallets drained from security compromises they believed they had closed, nor be required to locate existing backups of a wallet in order to destroy them.
+
+*Tracing a coin's history*
+
+Tracing a coin's history can be used to connect identities to addresses (the Anonymity article elaborates on this concern in greater detail).
+
+*Sybil attack*
+
+If an attacker attempts to fill the network with clients that they control, you would then be very likely to connect only to attacker nodes. Although Bitcoin never uses a count of nodes for anything, completely isolating a node from the honest network can be helpful in the execution of other attacks.
+
+This state can be exploited in (at least) the following ways:
+
+* the attacker can refuse to relay blocks and transactions from everyone, effectively disconnecting you from the network
+* the attacker can relay only blocks that they create, effectively putting you on a separate network and then also leaving you open to double-spending attacks
+* if you rely on transactions with 0 confirmations, the attacker can just filter out certain transactions to execute double-spending attacks
+* low-latency encryption/anonymization of Bitcoin's transmissions (with Tor, JAP, etc.) can be defeated relatively easily with a timing attack if you're connected to several of the attacker's nodes and the attacker is watching your transmissions at your ISP
+
+Bitcoin makes these attacks more difficult by only making an outbound connection to one IP address per /16 (x.y.0.0). Incoming connections are unlimited and unregulated, but this is generally only a problem in the anonymity case where you're probably already unable to accept incoming connections.
+
+Looking for suspiciously-low network hash-rates may help prevent the second one.
+
+*Packet sniffing*
+
+Someone who can see all of your Internet traffic can easily see when you send a transaction that you didn't receive (which suggests you originated it). Bitcoin-QT has good Tor integration which closes this attack vector if used.
+
+*Denial of Service (DoS) attacks*
+
+Sending lots of data to a node may make it so busy it cannot process normal Bitcoin transactions. Bitcoin has some denial-of-service prevention built-in, but is likely still vulnerable to more sophisticated denial-of-service attacks.
+
+These are the current Bitcoin Satoshi client protections to deter DoS attacks, as of version 0.7.0:
+
+. Does not forward orphan transactions/blocks
+. Does not forward double-spend transactions
+. Does not forward the same block, transaction or alert twice to the same peer.
+. Continuous rate-limit of free transactions to mitigate 'penny-flooding'
+. Keeps a DoS score of each connected peer and disconnects from a peer that send messages that fail to comply with the rules.
+. Bans IP addresses that misbehave for a time lapse (24 hours default)
+. Limits the number of stored orphan transactions (10000 by default)
+. Uses a signature cache to prevent attacks that try to continuously trigger the re-verification of stored orphan transactions (protects from https://bitcointalk.org/index.php?topic=136422.0 attack)
+. Limits the number of stored signatures in the signature cache (50000 signatures by default)
+. Tries to catch all possible errors in transactions before the signature verifications take place, to avoid DoS attacks on CPU usage.
+. Penalizes peers that send lots of duplicate/expired/invalid-signature/whatever alerts, so they eventually get banned.
+. In orphan/signature caches, when removing an item, evicts a random entry.
+. Data structures are specially chosen to avoid loops in which the number of iterations can be controlled by an attacker that result in exponential complexity.
+. Ignores big orphan transactions, to avoid a send-big-orphans memory exhaustion attack.
+. In RPC: Only sends a HTTP 403 response if it's not using SSL to prevent a DoS during the SSL handshake.
+. In RPC: Sleeps some time if authorization fails to deter brute-forcing short passwords.
+. In GUI: Limits URI length to prevent a DoS against the QR-Code dialog
+. Considers non-standard signature scripts with size greater than 500 bytes.
+. Considers non-standard signature scripts that contain operations that are not PUSHs.
+. Does not forward nor process non-standard transactions
+
+These are protocol rules built to prevent DoS:
+
+. Restricts the block size to 1 megabyte.
+. Restricts the maximum number of signature checks a transaction input may request
+. Limits the size of each script (up to 10000 bytes)
+. Limits the size of each value pushed while evaluating a a script (up to 520 bytes)
+. Limits the number of expensive operations in a script (up to 201 operations). All but pushs are considered expensive. Also each key argument of signature checking in multi-signature checking (OP_CHECKMULTISIG) is considered an additional operation.
+. Limits the number of key arguments OP_CHECKMULTISIG can use (up to 20 keys)
+. Limits the number of the stack elements that can be stored simultaneously (up to 1000 elements, in standard and alt stacks together)
+. Limits the number of signature checks a block may request (up to 20000 checks)
+
+These are the Satoshi client protections added in version 0.8.0:
+
+. Transactions greater than 100 Kbytes are considered non-standard (protects from variations of the https://bitcointalk.org/index.php?topic=140078.0 attack).
+. Only the UXTO (Unspent Transaction Output Set) is stored in memory, the remaining data is stored on disk.
+. When processing a transaction, before fetching transaction inputs from disk to memory, the client checks that all the inputs are unspent (protects from the Continuous Hard Disk Seek/Read Activity (https://bitcointalk.org/index.php?topic=144122.0) DoS attack)
+
+Satoshi client does not directly limit peer bandwidth nor CPU usage.
+
+*Forcing clock drift against a target node*
+
+See Timejacking for a description of this attack. It can be fixed by changing how nodes calculate the current time.
+
+*Illegal content in the block chain*
+
+It is illegal in some countries to possess/distribute certain kinds of data. Since arbitrary data can be included in Bitcoin transactions, and full Bitcoin nodes must normally have a copy of all unspent transactions, this could cause legal problems. However, Local node policy generally doesn't permit arbitrary data (transactions attempting to embed data are non-standard), but steganographic embedding can still be used though this generally limits storage to small amounts. Various ideas have been proposed to further limit data storage in the UTXO set (but are not currently being seriously considered for deployment).
+
+*Security Vulnerabilities and bugs*
+It's possible but unlikely that a newly discovered bug or security vulnerability in the standard client could lead to a block chain split, or the need for every node to upgrade in a short time period. For example, a single malformed message tailored to exploit a specific vulnerability, when spread from node to node, could cause the whole network to shutdown in a few hours. Bugs that break user anonymity, on the contrary, have been found, since the pseudo-anonymity property of Bitcoin has been analyzed less. Starting from version 0.7.0, Bitcoin client can be considered a mature project. The security critical sections of the source code are updated less and less frequently and those parts have been reviewed by many computer security experts. Also Bitcoin Satoshi client has passed the test of being on-line for more than 3 years, without a single vulnerability being exploited in the wild. See Common Vulnerabilities and Exposures for a detailed list of vulnerabilities detected and fixed.
+
+*Energy Consumption*
+Energy consumption for mining has a high correlation with bitcoin value (exchange rate). Because variable costs of mining are dominated by electricity price, the economic equilibrium for the mining rate is reached when global electricity costs for mining approximate the value of mining reward plus transaction fees.
+
+So the higher the value of one bitcoin, the higher the value of mining rewards and transaction fees, the higher the energy consumption of the bitcoin network in the long run.
+
+* more efficient mining gear does not reduce energy use of the bitcoin network. It will only raise the network difficulty
+* cheaper energy linearly increases mining energy use of the bitcoin network
+* the same conclusions apply to all proof of work based currencies.
+
+===== Probably not a problem
+
+*Breaking the cryptography*
+
+SHA-256 and ECDSA are considered very strong currently, but they might be broken in the far future. If that happens, Bitcoin can shift to a stronger algorithm. More info.
+
+*Scalability*
+
+Bitcoin can easily scale beyond the level of traffic VISA sees globally today. See the discussion on the scalability page for more information.
+
+*Segmentation*
+
+If there is even a "trickle" of a connection between two sides of a segmented network, things should still work perfectly. When block chains are combined, all of the non-generation transactions in the shorter chain are re-added to the transaction pool -- they'll start over at 0/unconfirmed, but they'll still be valid. No mature transactions will be lost unless the segmentation persists for longer than ~120 blocks. Then generations will start to mature, and any transactions based on those generations will become invalid when recombined with the longer chain. More info.
+
+*Attacking all users*
+
+The IP addresses of most users are totally public. You can use Tor to hide this, but the network won't work if everyone does this. Bitcoin requires that some country is still free.
+
+*Dropping transactions*
+
+Nodes that generate blocks can choose not to include a transaction in their blocks. When this happens, the transaction remains "active" and can be included in a later block. Two things discourage this:
+
+* Nodes only hash a fixed-size header, so there is no speed advantage to dropping transactions.
+* Satoshi has communicated that he will write code to stop this kind of thing if it becomes a problem.
+
+*Attacker has a lot of computing power*
+An attacker that controls more than 50% of the network's computing power can, for the time that he is in control, exclude and modify the ordering of transactions. This allows him to:
+
+* Reverse transactions that he sends while he's in control. This has the potential to double-spend transactions that previously had already been seen in the block chain, affecting all coins that share a history with the reversed transaction
+* Reverse confirmations for any transaction that had previously been seen in the block chain while he’s in control.
+* Prevent some or all transactions from gaining any confirmations
+* Prevent some or all other miners from mining any valid blocks
+
+The attacker can't:
+
+* Reverse other people's transactions without their cooperation (unless their coin history has been affected by a double-spend)
+* Prevent transactions from being sent at all (they'll show as 0/unconfirmed)
+* Change the number of coins generated per block
+* Create coins out of thin air
+* Send coins that never belonged to him
+
+Note that the above limitations only apply to the perspective of Bitcoin as seen by full nodes. Some lightweight nodes work by trusting miners absolutely; from the perspective of Bitcoin as seen by lightweight nodes, miners can steal BTC, etc. This is one of the reasons why lightweight nodes are less secure than full nodes.
+
+With less than 50%, the same kind of attacks are possible, but with less than 100% rate of success. For example, someone with only 40% of the network computing power can overcome a 6-deep confirmed transaction with a 50% success rate [1].
+
+It's much more difficult to change historical blocks, and it becomes exponentially more difficult the further back you go. As above, changing historical blocks only allows you to exclude and change the ordering of transactions. If miners rewrite historical blocks too far back, then full nodes with pruning enabled will be unable to continue, and will shut down; the network situation would then probably need to be untangled manually (eg. by updating the software to reject this chain even though it is longer).
+
+Since this attack doesn't permit all that much power over the network, it is expected that rational miners will not attempt it. A profit-seeking miner should always gain more by just following the rules, and even someone trying to destroy the system might find other attacks more attractive. Probably the most likely scenario where this attack would be employed would be for a government to try to get control over Bitcoin by acquiring a majority of hashing power (either directly or by enforcing rules on private miners within its borders). Then this government could use the transaction-censorship power listed above to do things like:
+
+* Prevent any transactions spending "stolen" coins, effectively destroying those coins. If the coins clearly are stolen, then there is a risk that this action will be accepted by the Bitcoin community, but this would set a very damaging precedent. If it becomes possible for coins to be blacklisted in this way, then it is a slippery slope toward blacklisting of other "suspicious" coins.
+* Prevent all transactions from unknown people, so everyone has to register with the government in order to transact.
+
+The appropriate response to any long-term attack by miners is a hardfork to change the proof-of-work function. This fires all existing miners, and allows totally new ones to replace them.
+
+See also: Majority_attack
+
+*Spamming transactions*
+
+Main article: Flood attack
+
+It is easy to send transactions to yourself repeatedly. If these transactions fill blocks to the maximum size (1MB), other transactions would be delayed until the next block.
+
+This is made expensive by the fees that would be required after the 50KB of free transactions per block are exhausted. An attacker will eventually eliminate free transactions, but Bitcoin fees will always be low because raising fees above 0.01 BTC per KB would require spending transaction fees. An attacker will eventually run out of money. Even if an attacker wants to waste money, transactions are further prioritized by the time since the coins were last spent, so attacks spending the same coins repeatedly are less effective.
+
+*The Finney attack*
+
+Named for Hal Finney, who first described this variation of a double-spend attack involving accepting 0-confirmation transactions. Accepting 0-confirmation large-value transactions is problematic; accepting them for low-value transactions (after waiting several seconds to detect an ordinary double-spend attempt) is probably safe.
+
+*Rival/malicious client code*
+
+Any rival client must follow Bitcoin's rules or else all current Bitcoin clients will ignore it. You'd have to actually get people to use your client. A better client that pretends to follow the same rules, but with an exception known only to the author (possibly by making it closed source), might conceivably be able to gain widespread adoption. At that point, its author could use his exception and go largely unnoticed.
+
+===== Definitely not a problem
+
+*Coin destruction*
+
+Bitcoin has 2.1 quadrillion raw units, making up 8 decimals of BTC precision, so the entire network could potentially operate on much less than the full quantity of Bitcoins. If deflation gets to the point where transactions of more than 10 BTC are unheard of, clients can just switch to another unit so that, for example, it shows 10 mBTC rather than 0.01 BTC.
+
+The maximum number of raw units might not be enough if the entire world starts using BTC, but it would not be too difficult to increase precision in that case. The transaction format and version number would be scheduled to change at some particular block number after a year or two, and everyone would have to update by then.
+
+*Generating tons of addresses*
+
+Generating an address doesn't touch the network at all. You'd only be wasting your CPU resources and disk space.
+
+Also, a collision is highly unlikely.
+
+Keys are 256 bit in length and are hashed in a 160 bit address.(2^160^th power) Divide it by the world population and you have about 215,000,000,000,000,000,000,000,000,000,000,000,000 addresses per capita.(2.15 x 10^38^)[1]
+
+*Everyone calculates at the same rate*
+
+If everyone began with identical blocks and started their nonce at 1 and incremented, the fastest machine would always win. However, each block contains a new, random public key known only to you in the list of transactions. The 256-bit "Merkle tree" hash of this is part of the block header.
+
+So everyone begins with slightly different blocks and everyone truly has a random chance of winning (modified by CPU power).
+
+*Generate "valid" blocks with a lower difficulty than normal*
+
+Using unmodified Bitcoin code, an attacker could segment himself from the main network and generate a long block chain with a lower difficulty than the real network. These blocks would be totally valid for his network. However, it would be impossible to combine the two networks (and the "false" chain would be destroyed in the process).
+
+"Block chain length" is calculated from the combined difficulty of all the blocks, not just the number of blocks in the chain. The one that represents the most computation will win.

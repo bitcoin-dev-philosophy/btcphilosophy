@@ -1,0 +1,50 @@
+==== Pieter Wuille - Will there be 21 million bitcoins eventually?
+****
+
+* Source: https://bitcoin.stackexchange.com/a/38998/69518
+* Author: Pieter Wuille
+* Date copied: 2022-03-07
+****
+
+People say the total will be *21000000* BTC.
+
+\... however:
+
+* The 1st 210000 blocks each allow creating 50 BTC.
+* The 2nd 210000 blocks each allow creating 25 BTC.
+* The 3rd 210000 blocks each allow creating 12.5 BTC.
+* ...
+* The 10th 210000 blocks each allow creating 0.09765625 BTC.
+* The 11th 210000 blocks each allow creating 0.04882812 BTC, and not 0.048828125 BTC, because only 8 decimals of precision are supported.
+* ...
+* The 33rd 210000 blocks each allow creating 0.00000001 BTC.
+
+After that, the reward is 0.
+
+If you sum all these numbers together, you get *20999999.9769* BTC.
+
+\... however, either due to an oversight or intentionally, the coins created in the genesis block cannot be spent.
+
+This leaves us with *20999949.9769* BTC.
+
+\... however, due to an early problem in Bitcoin, fixed by BIP30, it was possible to create a coinbase transaction identical to a previous coinbase. This caused the coins created by that older coinbase to be irreversibly "overwritten". This happened in block 91842 (overwriting the coinbase of block 91812) and 91880 (overwriting the coinbase of block 91722). Each time, 50 BTC was lost.
+
+This leaves us with *20999849.9769* BTC.
+
+\... however, the protocol rules allow creating up to the amounts listed above. Due to various bugs and miners experimenting with code, some blocks claim less than allowed. Those coins can never be recovered.
+
+* Block https://bitcointalk.org/index.php?topic=7253.msg184414#msg184414[124724] tried to intentionally claim 0.00000001 BTC less than allowed, but accidentally also failed to claim the fees, losing 0.01000001 BTC.
+* Between block 162705 and block 169899, 193 blocks claimed less than allowed due to a bug, resulting in a total loss of 9.66184623 BTC.
+* Between block 180324 and block 249185, another 836 blocks claimed less than allowed, resulting in a total loss of 0.52584193 BTC.
+* Block 501726 had no transaction outputs (except a 0-value commitment), losing the entire 12.5 BTC subsidy.
+* Block 526591 didn't claim half of the block reward, losing 6.25 BTC.
+
+This leaves us with 20999821.02921183 BTC.
+
+\... however, since recently there is a concept of provably unspendable coins. Coins can be sent to an "address" which provably burns them (using OP_RETURN). Bitcoin Core tracks these and removes them from its database, so they are easily accounted for. At least 3.71612692 BTC were burned this way.
+
+This leaves us with *20999817.31308491* BTC (taking everything up to block 528333 into account)
+
+\... However, various wallets have been lost or stolen, transactions have been sent to the wrong address, people forgot they owned bitcoin. The totals of this may well be millions. People have tried to tally known losses up https://bitcointalk.org/index.php?topic=7253.0[here].
+
+This leaves us with: *???* BTC.

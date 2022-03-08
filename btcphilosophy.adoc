@@ -32,3 +32,8 @@ include::finitesupply.adoc[]
 
 [[fugibility]]
 include::fungibility.adoc[]
+
+:imagesdir: sources/images
+
+[[sources]]
+include::sources/sources.adoc[]

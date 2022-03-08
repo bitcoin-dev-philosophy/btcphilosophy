@@ -1,0 +1,14 @@
+==== Pieter Wuille on trustlessness
+
+****
+
+* Source: https://bitcoin.stackexchange.com/questions/45670/can-a-closed-source-wallet-ever-be-completely-trust-less/45674#45674
+* Author: Pieter Wuille
+* Date copied: 2022-03-04
+****
+
+The term _trustless_ is often misunderstood. I suspect you mean _not needing to trust anyone_, but if a program being open source helps for that, aren't you implicitly relying on the people who are capable of reviewing the source code to have actually done so? Isn't that also a form of trust? Of course it is. Every production system needs to trust various aspects of the infrastructure: the hardware it's running on, the compiler that was used, the operating system, and last but not least the human operating it.
+
+The trust we're talking about in "trustless" is an abstract *technical term*. A distributed system is called trustless when it does not require any *trusted parties* to function correctly. In that sense, a "trustless wallet" does not make sense: wallets are an implementation aspect of a cryptocurrency, the design of which may or may not rely on trusted parties. The wallet software being open or closed source doesn't change this.
+
+Does that mean you should use a closed-source wallet? Hell no. Not because it's "trustless" or not, but because there is no chance it'll have been sufficiently *reviewed* (unless, perhaps, you have access to the source code under NDA and paid for thorough review yourself).

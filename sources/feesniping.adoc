@@ -1,0 +1,47 @@
+==== Stack Exchange - Fee sniping Budget in the Long Run
+
+****
+* Source: https://www.truthcoin.info/blog/security-budget/
+* Author: Nick Odell, Gregory Maxwell
+* Date copied: 2022-03-07
+****
+
+____
+*How do transaction fees exacerbate instability in Bitcoin in the future?*
+
+I came across the paper https://www.cs.princeton.edu/~smattw/CKWN-CCS16.pdf[On the Instability of Bitcoin Without the Block Reward] where it says that in the near future where the incentives are only due to the transactions, instability issues will appear. With only transaction fees, the variance of the miner reward is very high due to the randomness of the block arrival time, and it becomes attractive to fork a “wealthy” block to “steal” the rewards therein.
+
+I tried to read the paper, however I could not understand the exact reason for the instability. So, what is the simple idea that rewards only composed from transaction fees will result in instability that does not appear while there still is a block subsidy?
+____
+
+*Nick Odell answers*
+
+Suppose I see that the Bitcoin network has just created block 100. I can mine on top of that block, as the protocol intends.
+
+Or, I could mine my own block 100 to take the mining reward. If enough miners mine on top of my block, I'll steal the block reward. But if I steal the block reward for block 100, I forgo the opportunity to earn the block reward for block 101.
+
+Now, suppose that I see that the Bitcoin network has just created a block that contains transaction A. I could mine a block with transaction B on top of that block, as the protocol intends.
+
+Or, I could mine my own block that contains both A and B, and get the transaction fee for both. If enough miners mine on top of my block, I'll steal the fee from A and earn the fee from B. I can get both fees at the same time.
+
+*Gregory Maxwell answers*
+
+As Nick answered quite adequately:
+
+After subsidy has diminished sufficiently as soon as a block is mined that clears out the mempool there will be no income for a miner that mines a successor block, but full income if they successfully remine the prior block. Even once more transactions show up, it will continue to be more profitable to remine the last block for some time especially since they can also take the new transactions that show up.
+
+I wanted to also offer an answer to talk about some of what we've been doing about it.
+
+This issue has been known about in the Bitcoin community for a long time, we've normally discussed it under the name "fee sniping"-- and it was one of the points I raised in my https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-May/007880.html[first post in the modern blocksize debate].
+
+https://github.com/bitcoin/bitcoin/pull/6216[Already implemented] in Bitcoin Core and some other wallets is a anti-fee-sniping technique where wallets nlocktime their newly created transactions to the current block height. The effect of this is that a sniping miner can take the transactions in the prior block, but not newly arriving ones. This makes the incentive to go forward build faster. Future enhancements to this move could might be to set the locktime further in the future when the user authors a transaction which has a feerate below the next block worth of transactions, or just don't care about confirmation speed.
+
+The primary response, which is why it came up in a post about the block size, is that the blocksize limit helps tremendously: If there is a consistent backlog there is still a drop of income immediately after a block but it is much less significant. The paper doesn't really consider this case, basically dismissing it, and noting that fees are not isotropic. They aren't but they don't need to be to substantially diminish instability and even today we find that when the network isn't under-loaded the backlog appears to be enough to produce stability.
+
+image::fees.png[]
+
+(Red: Block template fees immediately before a block was found, green is immediately after)
+
+Finally, it has been proposed that if/when the network is hardforked the rules be adjusted so that coinbase transactions can spend immature coinbase outputs. Among other things, this would allow miners to pay forward excess fees to encourage other miners to confirm their blocks. Analysis of the strategies seems to suggest that there is no stable equilibrium when there is no block size limit or back-log, but it seems likely that there is with a limit (e.g. pay forward the difference between your candidate block and a hypothetical double-size alternative, down scaled by your opponents odds of successfully getting two blocks in a row). But this is an open area for research.
+
+Unfortunately the paper you cite just considers perpetual inflation to be the solution and doesn't consider it too carefully. It even advocates Ethereum which at most has an inflation rate which asymptotically tends to zero (meaning even if inflation rescues them from this issue now, it will eventually do so no longer)-- and thats even if it goes that far: It is my understanding that the Ethereum Foundation has recently stated an intent to lower the inflation rate to combat the price falling.

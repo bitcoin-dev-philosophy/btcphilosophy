@@ -1,0 +1,30 @@
+==== Gregory Maxwell On decetralization
+
+****
+
+* Source: https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/
+* Author: Gregory Maxwell (nullc)
+* Date copied: 2022-03-04
+****
+
+I think questions like this are ultimately the result of a fundamental lack of understanding about what Bitcoin is doing.
+
+The problem Bitcoin is attempting to solve is getting everyone everywhere to agree on the same stable history of transactions. This is necessary because in order to prevent users from printing money from nothing the system must have a rule that you can't spend a given coin more than once-- like I have a dollar then pay both alice and bob that dollar, creating a dollar out of nothing.
+
+The intuitive way to prevent that excessive spending is to decide that first transaction that spends a coin is valid and any additional spends are invalid. However, in a truly decentralized system "first" is actually logically meaningless! As an inescapable result of relativity the order which different parties will perceive events depends on their relative positions, no matter how good or fast your communication system is.
+
+So any system that needs to prevent duplication has to have a way to artificially assign "firstness". Centralized systems like ripple, eos, iota, blockstream liquid, etc. just have a single party (or a virtual single party) use its idea of whatever came first and everyone else just has to accept its decision.
+
+A decentralized system like Bitcoin uses a public election. But you can't just have a vote of 'people' in a decentralized system because that would require a centralized party to authorize people to vote. Instead, Bitcoin uses a vote of computing power because it's possible to verify computing power without the help of any centralized third party.
+
+If we didn't have the constraint that this system needed to work online, then you could imagine an alternative where consensus could be determined by people presenting large amounts of some rare element. ... but you can't prove you control osmium online, it appears that computing power is the only thing that can work for this purpose online.
+
+When people talk about "51%" all they're really talking about is people rigging that election, so that they can override what everyone previously thought was the accepted order of transactions with a new order that changes some of their payments from one party to another.
+
+With this understanding maybe you can see that the concern doesn't even depend on a single person having too much of the hash-power. The attack would work just as well if there were 100 people each with an equal amount and a majority of them colluded to dishonestly override the result.
+
+Also, any mechanism that would let you prevent one party (much less a secret collusion) from having too much authority would almost certainly let you just replace mining entirely. The only known way to do that is to introduce centralization and if you're willing to do that it's trivial, if you're not it appears impossible. People have cooked up 1001 complicated schemes that claim to do it without introducing centralization, but careful analysis finds again and again that these fixes centralize the system but just hide the centralization.
+
+I think people obsess far too much about "51%"-- it has some kind of attractive mystery to it that distracts people. If you're worried that someone might reorder history using a high hash-power collusion-- just wait longer before you consider your transactions final.
+
+A far bigger risk to Bitcoin is that the public using it won't understand, won't care, and won't protect the decentralization properties that make it valuable over centralized alternatives in the first place. ... a risk we can see playing out constantly in the billion dollar market caps of totally centralized systems. The ability demonstrated by system with fake decentralization to arbitrarily change the rules out from under users is far more concerning than the risk that an expensive attack could allow some theft in the case of over-eagerly finalized transactions.
