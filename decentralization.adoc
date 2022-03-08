@@ -169,17 +169,17 @@ familiar."
 ____
 ////
 
-* If *mining* would have been a permissioned process, you'd need a central
-authority to select who's allowed to mine. This would most likely lead
-to miners having to sign legal contracts where agree to censor
-transactions according to the whims of the central authority, which
-defeats the purpose of mining in the first place.
+* If *mining* would have been a permissioned process, you'd need a
+central authority to select who's allowed to mine. This would most
+likely lead to miners having to sign legal contracts where they agree
+to censor transactions according to the whims of the central
+authority, which defeats the purpose of mining in the first place.
 
 * If people *transacting* in Bitcoin would have to to provide personal
-information, what their transactions are used Bitcoin for, or
-otherwise prove that they are worthy of transacting, we would also
-need a central point of authority to give permission to users or
-transactions. Again, this would lead to censorship and exclusion.
+information, what their transactions are used for, or otherwise prove
+that they are worthy of transacting, we would also need a central
+point of authority to give permission to users or transactions. Again,
+this would lead to censorship and exclusion.
 
 * If developers had to ask for permission to *build protocols* on top of
 Bitcoin, only protocols that the central developer granting commitee
