@@ -18,9 +18,9 @@ parties". This is different from the trust that you inevitably have to
 put into the software or hardware you run. More on this trust further
 down this article.
 
-To use Bitcoin in a trustless manner, you have to run a 
-fully-validating Bitcoin node. Without that, you outsource 
-verification of Bitcoin data to someone else, and thus trust someone 
+To use Bitcoin in a trustless manner, you have to run a
+fully-validating Bitcoin node. Without that, you outsource
+verification of Bitcoin data to someone else, and thus trust someone
 else which means you're not using Bitcoin trustlessly.
 
 Bitcoin's trustlessness is absolutely imperative from a system
@@ -51,7 +51,7 @@ might not be programmed to do what's stated on the box. For example:
   keys to some bad actor.
 
 So besides running a full node, you also need to make sure you're
-running what you intend to. There's a mantra, that many Bitcoiners
+running what you intend to. There's a mantra that many Bitcoiners
 subscribe to, which captures this well:
 
 [quote, Bitcoiners everywhere]
@@ -67,14 +67,13 @@ disarmament. https://twitter.com/Truthcoin/status/1491415722123153408?s=20&t=ZyR
 switched it around to highlight the rejection of trust and the
 importance of running a full node].
 
-Some users <<adversarialthinking, think adversarially>> and verify a
-lot of aspects of the software they run, and reduce their needed trust
-to just trusting their computer hardware, and possibly their operating
-system. In doing so they also help people who don't verify as
-thoroughly by raising their voices in public to warn about the issues
+Some users <<adversarialthinking, think adversarially>> and many aspects of the
+software they run, and reduce their needed trust to just trusting their computer
+hardware and operating system. In doing so they also help people who don't
+verify as thoroughly by raising their voices in public to warn about the issues
 they find. One good example of this is an
 https://bitcoincore.org/en/2018/09/20/notice/[event that occurred
-2018], where a bug was discovered that would allow miners to spend an
+in 2018], where a bug was discovered that would allow miners to spend an
 output twice in the same transaction:
 
 [quote, CVE-2018-17144 Full Disclosure, Bitcoin Core website]
@@ -89,12 +88,10 @@ we quickly determined that the issue was also an inflation
 vulnerability with the same root cause and fix.
 ____
 
-Here an anonymous person reported an issue that turned out much worse
-than the reporter realized, but the lesson here is that people who
-verify the code often report security flaws, instead of exploiting
-them. This is of great help for people who aren't able to verify
-everything themselves. However, users should not trust others to keep
-them safe, but should verify when and what they can, that's how you
-remain as sovereign as possible and how Bitcoin prospers, and the more
-eye-balls on the software the less likely it is that security flaws
-slip through.
+Here an anonymous person reported an issue that turned out much worse than the
+reporter realized. This highlights that people who verify the code often report
+security flaws instead of exploiting them. This is beneficial to those who
+aren't able to verify everything themselves. However, users should not trust 
+others to keep them safe but should verify when and what they can; that's how
+you remain as sovereign as possible and how Bitcoin prospers. The more eye-balls
+on the software the less likely it is that security flaws slip through.

@@ -1,23 +1,21 @@
 == Decentralization
 
-A system without a central point of control is often referred to as
-_decentralized_. Bitcoin is decentralized but it might be good to
-ponder why it's made that way and what challenges lies
-therein.
+Bitcoin has been designed to avoid a central point of control, or more
+specifically, a _central point of censorship_. A system without a central point
+of control is often referred to as _decentralized_.
 
 === Miner decentralization
 
-Bitcoin has a decentralized design to avoid having a central point of
-control, or more specifically, a _central point of censorship_. If the
-system was censorable, it would most likely, based on historic events,
-be co-opted by governments. They would apply pressure on users, for
-example require identification or that they declare where their
-money is coming from before their transactions are allowed to enter
-the blockchain.
+If Bitcoin were centralized and therefore censorable, it would be vulnerable to
+those who wish to censor, such as governments.
 
-The censor could also try to change the rules of the system, for
-example increase the money supply in order to enrich themselves. A
-user verifying the blocks is left with three options for how to handle
+The censor would apply pressure on users. They could require identification or
+that users declare where their money is coming from before their transactions
+are allowed to enter the blockchain.
+
+The censor could also try to change the system's rules, for
+example, inflate the money supply to enrich themselves. In such an event,
+A user verifying blocks has three options for how to handle
 the changed rules:
 
 * Adopt: Accept the changes and adopt them into its full node.
@@ -81,7 +79,7 @@ ____
 
 The conclusion is an important one. If people don't protect Bitcoin's
 decentralization, which is a proxy for censorship resistance, Bitcoin
-might fall victim for centralizing powers until it's so centralized
+might fall victim to centralizing powers until it's so centralized
 that censorship becomes a thing. Then most, if not all, of its value
 proposition is gone. This brings us to the next section, on full node
 decentralization.
