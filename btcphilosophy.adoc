@@ -30,8 +30,11 @@ include::privacy.adoc[]
 [[finitesupply]]
 include::finitesupply.adoc[]
 
-[[fugibility]]
-include::fungibility.adoc[]
+//[[fugibility]]
+//include::fungibility.adoc[]
+
+[[opensource]]
+include::opensource.adoc[]
 
 :imagesdir: sources/images
 

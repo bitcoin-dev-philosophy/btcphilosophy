@@ -197,6 +197,10 @@ https://satoshi.nakamotoinstitute.org/emails/bitcoin-list/32/
 BIP66 upgrade debacle: See wuille's answer here
 https://bitcoin.stackexchange.com/questions/50349/how-long-does-block-validation-take?rq=1
 
+[bitcoin-dev] Vulnerability relating to 64-byte transactions in Bitcoin Core 0.13 branch
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2019-February/016697.html
+Also: https://bitcoinops.org/en/newsletters/2019/03/12/#bitcoin-core-vulnerability-disclosure
+
 Adversarial thinking
 ====================
 
@@ -247,6 +251,12 @@ Upgrading
 
 Gregory	Maxwell on slow/stalled taproot upgrade
 https://diyhpl.us/wiki/transcripts/greg-maxwell/greg-maxwell-taproot-pace/
+
+David Harding: Harmony and Discord
+https://bitcointalk.org/dec/p1.html
+
+Hasu - Unpacking Bitcoin’s Social Contract
+https://uncommoncore.co/unpacking-bitcoins-social-contract/
 
 Decentalization
 ===============
