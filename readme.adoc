@@ -46,7 +46,7 @@ written by individuals who have studied Bitcoin for a long time.
 The links refer to external resources on platforms we can't
 control. We have therefore saved the linked articles locally in this
 repository, along with info on where it was copied from, and when. The
-resources are collected in a separate document
+resources are collected in link:sources/sources.html[a separate document]
 (`sources/sources.adoc`) organized by the chapter they are linked
 from.
 
