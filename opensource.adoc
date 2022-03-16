@@ -3,9 +3,12 @@
 Most Bitcoin software, and especially Bitcoin Core, are open
 source. This means that the source code of the software is made
 available to the general public for scrutiny, tinkering, modification,
-and redistribution. The definition at https://opensource.org/osd
-includes the following important points:
+and redistribution. The definition of open source at
+https://opensource.org/osd includes, among others, the following
+important points:
 
+[quote, The Open Source Definition, Open Source Initiative webside]
+____
 Free Redistribution:: The license shall not restrict any party from
 selling or giving away the software as a component of an aggregate
 software distribution containing programs from several different
@@ -23,6 +26,7 @@ preprocessor or translator are not allowed.
 Derived Works:: The license must allow modifications and derived
 works, and must allow them to be distributed under the same terms as
 the license of the original software.
+____
 
 Bitcoin Core adheres to this definition by being distributed under the
 https://github.com/bitcoin/bitcoin/blob/master/COPYING[MIT License]:
@@ -44,14 +48,13 @@ The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
 ----
 
-As noted in <<_don_t_trust_verify>>, it's important that users are
-able to verify that the Bitcoin software they run isn't
-compromised. To do that, these users must have unrestricted access to
-the source code of the software they verify.
+As noted in <<_dont_trust_verify>>, it's important that users are able
+to verify that the Bitcoin software they run "`works as advertised`". To
+do that, these users must have unrestricted access to the source code
+of the software they verify.
 
 But there are several other good reasons for why Bitcoin software need
-to be open source. We will talk about permissionless development, code
-review, freedom to fork.
+to be open source. We will talk about some of them in the coming sections.
 
 === Software maintenance
 
@@ -66,7 +69,7 @@ but socially, it has become the focal point of Bitcoin development.
 
 Bitcoin and security expert Jameson Lopp
 https://blog.lopp.net/who-controls-bitcoin-core-/[explains this] very
-well in a blog post he calls "Who Controls Bitcoin Core?":
+well in a blog post he calls "`Who Controls Bitcoin Core?`":
 
 [quote, Jameson Lopp on his blog, Who Controls Bitcoin Core?]
 ____
@@ -93,7 +96,7 @@ ____
 Bitcoin Core developer Eric Lombrozo talks further about the
 development process in his
 https://medium.com/@elombrozo/the-bitcoin-core-merge-process-74687a09d81d[Medium.com
-post] titled "The Bitcoin Core Merge Process".
+post] titled "`The Bitcoin Core Merge Process`".
 
 [quote, Eric Lombrozo on Medium.com, The Bitcoin Core Merge Process]
 ____
@@ -118,7 +121,7 @@ We've established the fact that anyone can write code for Bitcoin Core
 without permission, but not necessarily have it merged into the main
 git repository. This includes changing color schemes of the graphical
 user interface, how the peer-to-peer messages are formatted, and the
-consensus rules, which are the set of rules that defines a valid
+consensus rules, which are the set of rules that define a valid
 blockchain.
 
 Apart from that, and probably equally important is that users are free
@@ -128,22 +131,17 @@ build on top of Bitcoin, among them are:
 
 Lightning Network:: A payment network that allows for fast payment of
 very small amounts. Requires very few Bitcoin transactions to be
-published. Various interoperable implementations exists, c-lightning,
-LND, Eclair, ldk.
+published to the blockchain. Various interoperable implementations
+exists, https://github.com/ElementsProject/lightning[c-lightning], https://github.com/lightningnetwork/lnd[LND], https://github.com/ACINQ/eclair[Eclair], https://github.com/lightningdevkit[Lightning Dev Kit].
 CoinJoin:: Multiple parties collaborate to combine their payments into a single transaction to make <<_blockchain_privacy,address clustering>> harder. Various implementations exist.
 Sidechains:: Lock a coin on Bitcoin's blockchain in a certain way to
-unlock them on some other blockchain, and vice versa. This allows for
-Bitcoin to be moved to some other blockchain, sidechain, to use
-features available on that sidechain. Examples include Blockstream's
-Elements.
-Discreet Log Contracts:: A system to bet on real world outcomes, based
-on trusted oracles.
-OpenTimestamps:: Allows you to timestamp a document in a
-private way. Users can then use the timestamp to prove that a document
-must have existed prior to that time.
-BtcPay server:: An advanced payment processing server suitable for
-self-hosting aimed at making closed source payment processing
-companies like https://twitter.com/NicolasDorier/status/898378514256207872?s=20&t=5Kh8vKKsxa0VgcqJDz9QIQ[BitPay obsolete].
+unlock them on some other blockchain. This allows for Bitcoin to be
+moved to some other blockchain, sidechain, to use features available
+on that sidechain. Examples include
+https://github.com/ElementsProject/elements[Blockstream's Elements].
+OpenTimestamps:: Allows you to https://opentimestamps.org/[timestamp a
+document] in a private way. Users can then use the timestamp to prove
+that a document must have existed prior to that time.
 
 Without permissionless development, many of these projects would
 <<_neutrality,not have been possible>>. As stated in <<_neutrality>>,
@@ -182,8 +180,8 @@ ____
 He then coins the term _selection cryptography_, which is the art of
 selecting cryptographic tools, and explains how that is an important
 part of cryptography. It revolves around how to select cryptographic
-libraries, tools, and practices, or as he says "The cryptosystem of
-picking cryptosystems".
+libraries, tools, and practices, or as he says "`The cryptosystem of
+picking cryptosystems`".
 
 Using concrete examples, he shows how selection cryptography can
 easily go horribly wrong and also proposes a list of things to think
@@ -209,53 +207,32 @@ it's exposure to third party libraries]. Of course, you can't
 eradicate all external dependencies, or you'd have to write everything
 from font rendering to implementation of system calls yourself.
 
-
-////
-According to GitHub, there has been more than 31,000 forks made by
-various people.
-
-
-
-
-The art of selection cryptography
-    Redefine cryptography
-    Information wants to be free (natural law)
-    How to tame this law (for example prevent private info from leaking)
-    "Software testing is making sure your program does what it's supposed to, security testing is making sure that's _all_ it does."
-    Selecting cryptosystems is cryptography
-    	      Understand and adhere to the security assumptions
-	      How to respond when selection fail?
-    Risk mitigation, a 7-step guide
-    Is it possible to implement the consensus rules in another lang than c++ and know it's correct? --> In Decentr. consensus, consistency is more important than correctness
-    Documentation for consensus rules?. In case of consensus failure, a docs won't help.
-https://youtu.be/Gs9lJTRZCDc?t=2239
-
-////
-
 === Review
 
-This section is named "Review", rather than "Code review", because
+This section is named "`Review`", rather than "`Code review`", because
 Bitcoin's security relies heavily on review on multiple levels, not
 just source code. Also, different ideas require review on different
 levels. For example a consensus rule change would require more review
 on more levels than a color scheme change, or a typo fix.
 
-The general way an idea becomes broadly adopted can be as:
+An idea usually flows through several phases of discussion and review
+on its way to final adoption. Some of these phases are listed below:
 
 . An idea is posted on the bitcoin-dev mailing list
 . The idea is formalized in a Bitcoin Improvement Proposal (BIP)
 . The BIP is implemented in a pull request to Bitcoin Core
-. The deployment mechanism is discussed
-. The deployment mechanism is implemented in a pull request in Bitcoin Core
-. The pull requests are merged into master branch
+. Deployment mechanisms are discussed
+. Some competing deployment mechanisms are implemented in pull request
+to Bitcoin Core
+. Pull requests are merged into master branch
 . Users choose whether to use the software or not
-. The idea is deployed
 
-On each of these steps people with different points of view and
-backgrounds review the available information, be it the code, a BIP, or
-a loosely described idea. The steps usually aren't performed in a
-strictly top-down manner, but multiple steps can happen
-simultaneously, and sometimes you go back and forth between them.
+In each of these phases people with different points of view and
+backgrounds review the available information, be it the source code, a
+BIP, or a loosely described idea. The phases usually aren't performed
+in any strict top-down manner, but multiple phases can happen
+simultaneously, and sometimes you go back and forth between
+them. Different people may also provide feedback on different phases.
 
 One of the most prolific code reviewers on Bitcoin Core is Jon
 Atack. He wrote
@@ -301,7 +278,7 @@ and endless heated debates and that the Bitcoin developers are
 incapable of making decisions.
 
 For example, the taproot deployment mechanism was discussed over a
-long period of time and two "camps" formed. One which wanted to "fail"
+long period of time and two "`camps`" formed. One which wanted to "`fail`"
 the upgrade if miners hadn't overwhelmingly voted for the new rules
 after a certain timeout occurred, and one which wanted to enforce the
 rules after the timeout. Michael Folkson summarizes the arguments from
@@ -328,22 +305,23 @@ investing if they felt confident about the activation timeframe.
 ____
 
 Someone not used to Bitcoin's development process would probably think
-these heated debates look awfully bad and toxic. There are at least
-two factors that make it look bad, in some people's eyes:
+these heated debates look awfully bad and even toxic. There are at
+least two factors that make it look bad, in some people's eyes:
 
 * Compared to closed source companies, all debates happen in the open,
   unedited. A software company like Google would never let employees
-  debate proposed features in the open, and at most put up a statement
-  about the company's stance on the subject. This makes the company
-  look more harmonic than Bitcoin.
+  debate proposed features in the open, and at most publish a
+  statement about the company's stance on the subject. This makes the
+  company look more harmonic than Bitcoin.
 * Since Bitcoin is permissionless, it means anyone is allowed to voice
   their opinions. This is fundamentally different from a closed source
-  company that at most have a handful of usually like-minded people
-  with an opinion. The plethora of expressed opinions in Bitcoin is
-  simply staggering compared to, for example PayPal.
+  company that have a handful of people with an opinion, usually
+  like-minded. The plethora of expressed opinions in Bitcoin is simply
+  staggering compared to, for example PayPal.
 
-Most Bitcoin developers would argue that this is a good and healthy
-environment, and even necessary for producing the best outcome.
+Most Bitcoin developers would argue that this openness is a good and
+healthy environment, and even necessary for producing the best
+outcome.
 
 ////
 Gabriella Coleman, an anthropologist who studied various open source
