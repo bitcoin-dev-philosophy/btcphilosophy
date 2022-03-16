@@ -1,4 +1,4 @@
-==== Pieter Wuille on trustlessness
+=== Pieter Wuille on trustlessness
 
 ****
 

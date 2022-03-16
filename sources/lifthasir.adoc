@@ -1,4 +1,4 @@
-==== Ragnar Lifthrasir - Twitter thread on Adversarial thinking
+=== Ragnar Lifthrasir - Twitter thread on Adversarial thinking
 ****
 
 * Source: https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking

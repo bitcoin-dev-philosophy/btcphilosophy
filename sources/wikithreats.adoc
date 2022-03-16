@@ -1,4 +1,4 @@
-==== Bitcoin Wiki - Weaknesses
+=== Bitcoin Wiki - Weaknesses
 ****
 
 * Source: https://en.bitcoin.it/wiki/Weaknesses
@@ -6,7 +6,7 @@
 * Date copied: 2022-03-07
 ****
 
-===== Might be a problem
+==== Might be a problem
 
 *Wallet Vulnerable To Theft*
 
@@ -107,7 +107,7 @@ So the higher the value of one bitcoin, the higher the value of mining rewards a
 * cheaper energy linearly increases mining energy use of the bitcoin network
 * the same conclusions apply to all proof of work based currencies.
 
-===== Probably not a problem
+==== Probably not a problem
 
 *Breaking the cryptography*
 
@@ -179,7 +179,7 @@ Named for Hal Finney, who first described this variation of a double-spend attac
 
 Any rival client must follow Bitcoin's rules or else all current Bitcoin clients will ignore it. You'd have to actually get people to use your client. A better client that pretends to follow the same rules, but with an exception known only to the author (possibly by making it closed source), might conceivably be able to gain widespread adoption. At that point, its author could use his exception and go largely unnoticed.
 
-===== Definitely not a problem
+==== Definitely not a problem
 
 *Coin destruction*
 

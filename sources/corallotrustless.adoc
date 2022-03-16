@@ -1,4 +1,4 @@
-==== Corallo on trustlessness
+=== Corallo on trustlessness
 
 ****
 

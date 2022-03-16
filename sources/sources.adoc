@@ -1,7 +1,10 @@
-[appendix]
-== Sources
+= Sources
+include::../settings.adoc[]
+:sectnums:
+:sectnumlevels: 2
+:toclevels: 2
 
-=== Decentralization
+== Decentralization
 
 include::maxwelldecentralization.adoc[]
 
@@ -15,7 +18,7 @@ include::maxwellautonomous.adoc[]
 
 include::ted.adoc[]
 
-=== Trustlessness
+== Trustlessness
 
 include::wuilletrustless.adoc[]
 
@@ -23,7 +26,7 @@ include::corallotrustless.adoc[]
 
 include::cve-2018-17144.adoc[]
 
-=== Adversarial thinking
+== Adversarial thinking
 
 include::poelstrasecurityassumptions.adoc[]
 
@@ -37,7 +40,7 @@ include::sabotagemanual.adoc[]
 
 include::voskuilresistance.adoc[]
 
-=== Privacy
+== Privacy
 
 include::maxwellprivacy.adoc[]
 
@@ -47,7 +50,7 @@ include::belcherprivacy.adoc[]
 
 include::maxwellwhitehat.adoc[]
 
-=== Finite supply
+== Finite supply
 
 include::wuillesupply.adoc[]
 

@@ -1,4 +1,4 @@
-==== Jameson Lopp - Bitcoin’s Security Model: A Deep Dive
+=== Jameson Lopp - Bitcoin’s Security Model: A Deep Dive
 ****
 
 * Source: https://blog.lopp.net/bitcoins-security-model-a-deep-dive/
@@ -25,7 +25,7 @@ that are output by the model.
 Let’s dig into the security model that appears to be offered to bitcoin
 users who run a full node.
 
-===== In search of truth
+==== In search of truth
 
 [quote, Pieter Wuille, https://www.reddit.com/r/BitcoinBeginners/comments/3eq3y7/full_node_question/ctk4lnd/] 
 ____
@@ -109,7 +109,7 @@ inputs with a locktime] before the block in which they are confirmed.
 * https://en.bitcoin.it/wiki/Protocol_rules[Many other rules] that would
 take too long to cover here.
 
-===== Thermodynamic security
+==== Thermodynamic security
 
 Once a transaction is confirmed in a block it can’t be reversed without
 someone expending a minimum amount of energy to rewrite the chain.
@@ -161,7 +161,7 @@ Also note that this doesn’t take into account the costs required to
 obtain and operate sufficient mining equipment to carry out such an
 attack.
 
-===== Sybil resistance
+==== Sybil resistance
 
 Because the bitcoin protocol considers the true chain to be the one with
 the most cumulative proof of work (not the longest chain as is often
@@ -182,7 +182,7 @@ single honest peer is passing the true blockchain data to your full
 node, it will be quite clear that any Sybil attackers are attempting to
 deceive you and your node will ignore them.
 
-===== Real-time consensus
+==== Real-time consensus
 
 The bitcoin protocol creates a number of other interesting attributes
 with regard to maintaining network-wide consensus once your node is at
@@ -234,7 +234,7 @@ rather than external resources (electricity.) This creates a very
 different set of incentives for (and trust in) validators on the network
 which drastically changes the security model.
 
-===== Security model misunderstandings
+==== Security model misunderstandings
 
 A common mistaken assumption is that there is a well-defined security
 model for bitcoin.
@@ -391,7 +391,7 @@ not compromised or 1 / Y Core developers is honest about
 https://github.com/bitcoin/bitcoin/pull/7415[reviewing the validity of
 hard-coded peer changes].
 
-===== Nothing is perfectly secure
+==== Nothing is perfectly secure
 
 At an even deeper level, when you run a full node, you are probably
 trusting the hardware and software you are running to a certain extent.
@@ -411,7 +411,7 @@ However, given that hardware architectures for CPUs, RAM and other
 important hardware tend to be proprietary, you can never be 100% sure
 that they aren’t compromised.
 
-===== Bitcoin’s balance of power
+==== Bitcoin’s balance of power
 
 The waters become even murkier when you begin to investigate the
 relationship between different participants in the system.
@@ -467,7 +467,7 @@ us would like, it still seems to work well because bitcoin miners have a
 lot of capital invested – they can’t risk destroying their investment by
 acting maliciously in a system where everyone is watching.
 
-===== SPV security
+==== SPV security
 
 A lot of bitcoin users employ a lightweight client to access the network
 rather than a full node since it requires far fewer resources while
@@ -534,7 +534,7 @@ concept] but no implemented
 https://gist.github.com/justusranvier/451616fa4697b5f25f60[proposals]
 for building them into the protocol.
 
-===== There’s no place like 127.0.0.1
+==== There’s no place like 127.0.0.1
 
 If you aren’t running a full node (and actually using it to validate
 transactions) then you’re outsourcing at least some level of trust to
@@ -573,7 +573,7 @@ BitGoD software]. This hybrid model can give you the best of both
 worlds: you can leverage advanced features offered by third parties
 while still retaining your financial sovereignty.
 
-===== Full nodes for freedom
+==== Full nodes for freedom
 
 It’s clear that running your own full node offers superior security with
 the fewest required assumptions. Given that you can build a computer

@@ -1,14 +1,6 @@
 = Bitcoin development philosophy
 Kalle Rosenbaum <kalle@rosenbaum.se>; Linnéa Rosenbaum <linnea@rosenbaum.se>
-:doctype: book
-:toc: left
-:toclevels: 3
-:sectanchors:
-:imagesdir: images
-:stylesdir: style
-:linkcss:
-:docinfo: shared
-:docinfodir: {stylesdir}
+include::settings.adoc[]
 
 [[readme]]
 include::readme.adoc[]
@@ -35,8 +27,3 @@ include::finitesupply.adoc[]
 
 [[opensource]]
 include::opensource.adoc[]
-
-:imagesdir: sources/images
-
-[[sources]]
-include::sources/sources.adoc[]

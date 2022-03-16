@@ -46,8 +46,9 @@ written by individuals who have studied Bitcoin for a long time.
 The links refer to external resources on platforms we can't
 control. We have therefore saved the linked articles locally in this
 repository, along with info on where it was copied from, and when. The
-resources are collected in an appendix grouped by the chapter they are
-linked from.
+resources are collected in a separate document
+(`sources/sources.adoc`) organized by the chapter they are linked
+from.
 
 The links throughout the chapters refer to the original sources, but
 if you don't have an internet connection, the links appear dead, or
@@ -86,6 +87,16 @@ directory that you can view in any browser, for example:
 ----
 $ brave-browser btcphilosophy.html
 ----
+
+The source material is collected and maintained as a separate book
+under the `sources` folder. To build it:
+
+----
+$ asciidoctor sources/sources.adoc
+----
+
+This will result in a file `sources/sources.html` that you can open in
+a web browser in the same way as the main book.
 
 === Who wrote this?
 

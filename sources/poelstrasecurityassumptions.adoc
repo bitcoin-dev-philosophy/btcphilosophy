@@ -1,4 +1,4 @@
-==== Andrew Poelstra on security assumptions
+=== Andrew Poelstra on security assumptions
 
 ****
 

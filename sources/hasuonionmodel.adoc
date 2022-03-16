@@ -1,4 +1,4 @@
-==== Hasu - The Onion Model of Blockchain Security
+=== Hasu - The Onion Model of Blockchain Security
 
 ****
 * Source: https://insights.deribit.com/market-research/the-onion-model-of-blockchain-security-part-1/
@@ -30,7 +30,7 @@ it must be the combination and interplay of the different parts that
 generate the amount of security needed for a permissionless digital cash
 system.
 
-===== The onion model of blockchain security
+==== The onion model of blockchain security
 
 The model I propose hopes to synthesize the individual elements of
 security into a coherent picture. The goal is to look at public
@@ -52,7 +52,7 @@ image::space-of-possible-attack.png[image,width=1086,height=462]
 Attacks have to pass through this funnel of defensive layers before
 touching the core. We now discuss the layers one by one.
 
-===== Cryptographic guarantees
+==== Cryptographic guarantees
 
 The outermost shield is provided by cryptographic guarantees.
 Cryptography gives the most reliable form of guarantee, so we want it to
@@ -79,7 +79,7 @@ real world, such as “which of them will other people switch to” and
 cannot force miners to mine on a specific block, publish a block once
 they found it, or even ensure they include specific transactions.
 
-===== Consensus guarantees
+==== Consensus guarantees
 
 Some of the attacks that pass the first layer will be stopped in the
 consensus process. In Nakamoto consensus, nodes constantly observe the
@@ -124,7 +124,7 @@ smaller shares of hashpower or stake. In that case, the space of
 possible attackers can include smaller (rogue) governments as well as
 the entire private sector.
 
-===== Economic guarantees
+==== Economic guarantees
 
 I’ve previously argued that thanks to economic guarantees,
 https://www.coindesk.com/no-concentration-among-miners-isnt-going-to-break-bitcoin?utm_source=hootsuite&utm_medium=twitter&utm_term=Events&utm_content=Register&utm_campaign=FATF[blockchains
@@ -166,7 +166,7 @@ skin in the game (e.g.
 https://insights.deribit.com/market-research/vertcoins-51-attack-a-case-study-for-blockchain-security/[by
 renting hashpower]).
 
-===== Social guarantees
+==== Social guarantees
 
 Previously we said that to permanently destroy a public blockchain, it
 is necessary to destroy the faith of users in its ledger state (the list
@@ -227,7 +227,7 @@ hard-fork policies
 (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2579482[recommended
 read on the topic]).
 
-===== Conclusion and future parts
+==== Conclusion and future parts
 
 I find the onion model useful to see how individual layers of a
 blockchain can create a secure whole. In some ways, it builds on my

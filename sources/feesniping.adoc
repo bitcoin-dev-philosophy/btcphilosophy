@@ -1,4 +1,4 @@
-==== Stack Exchange - Fee sniping Budget in the Long Run
+=== Stack Exchange - Fee sniping Budget in the Long Run
 
 ****
 * Source: https://www.truthcoin.info/blog/security-budget/

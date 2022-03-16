@@ -1,4 +1,4 @@
-==== Eric Voskuil - Axiom of Resistance
+=== Eric Voskuil - Axiom of Resistance
 
 In modern logic an axiom is a premise, it cannot be proven. It is a starting assumption against which other things may be proven. For example, in Euclidean geometry one cannot prove that parallel lines never meet. It simply defines the particular geometry.
 

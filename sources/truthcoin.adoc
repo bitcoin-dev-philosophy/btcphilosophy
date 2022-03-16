@@ -1,4 +1,4 @@
-==== Paul Sztorc - Security Budget in the Long Run
+=== Paul Sztorc - Security Budget in the Long Run
 
 ****
 * Source: https://www.truthcoin.info/blog/security-budget/
@@ -18,7 +18,7 @@ Blockspace Demand”]. And to my
 http://www.drivechain.info/literature/index.html#bob[Building-on-Bitcoin
 talk].
 
-===== 1. The “Security Budget”
+==== 1. The “Security Budget”
 
 Bitcoin’s
 https://medium.com/coinmonks/bitcoin-security-in-one-chart-694ee3ed8c2d[“security
@@ -35,7 +35,7 @@ was $590 billion, and the
 https://www.federalreserve.gov/publications/2017-ar-federal-system-budgets.htm[FED’s
 annual operating expenses] totaled $5.7 billion.
 
-===== 2. The Block Subsidy
+==== 2. The Block Subsidy
 
 Fortunately, we can expect the _block subsidy_ to give us more security
 in the future. Even though it “halves” once every four years
@@ -74,10 +74,10 @@ deter 51% attacks even from ultra-wealthy motivated adversaries. But the
 “decline” epoch shows us a bleak future, in which 51% attacks on Bitcoin
 are easy again.
 
-===== Transaction Fees
+==== Transaction Fees
 
 [[i-the-desired-fee-pressure]]
-====== i. The Desired “Fee Pressure”
+===== i. The Desired “Fee Pressure”
 
 As is commonly known, _transaction fees_ are expected to come to the
 rescue. As
@@ -108,7 +108,7 @@ quotes] from other Bitcoin intelligentsia. Roger did this in order to
 discredit them politically, but the quotes are nonetheless accurate.
 
 [[ii-the-dual-nature]]
-====== ii. The Dual Nature
+===== ii. The Dual Nature
 
 The *dual nature* of Bitcoin (as both a money-unit, and a payment-rail)
 has confused people since Bitcoin was first invented.
@@ -151,7 +151,7 @@ Japanese Yen, but there are really no senses in which it competes with
 MasterCard.
 
 [[iii-are-fees-truly-paid-in-btc]]
-====== iii. Are fees truly paid “in BTC”?
+===== iii. Are fees truly paid “in BTC”?
 
 Transaction fees are explicitly priced in BTC. But, unlike the block
 reward, they _do_ react to changes in the exchange rate. As the exchange
@@ -173,7 +173,7 @@ tx-fees were “as high as .0015,0000 BTC”. For if the BTC price had been
 the tx-fees would have only reached .0001,5000 BTC.
 
 [[iv-stimulating-production]]
-====== iv. Stimulating Production
+===== iv. Stimulating Production
 
 Whenever prices rise, entrepreneurs are induced to produce. (Owners are
 also induced to sell, but we are not interested in that right now.)
@@ -199,7 +199,7 @@ rate (of 1 block per 10 minutes).
 Alternatively, entrepreneurs can create, and mine, Altcoins.
 
 [[v-altcoins-as-substitute-goods]]
-====== v. Altcoins as Substitute Goods
+===== v. Altcoins as Substitute Goods
 
 Alt-“coins” are _very poor_ substitutes for Bit-“coins”. Each form of
 money, is necessarily in competition with all other forms: money has
@@ -239,7 +239,7 @@ Pouliot]
 digital currency for payments”]
 
 [[vi-competitive-demand-for-the-payment-rail]]
-====== vi. Competitive Demand for the Payment Rail
+===== vi. Competitive Demand for the Payment Rail
 
 The supposedly-essential “fee pressure” has, for the moment, deserted
 us.
@@ -296,7 +296,7 @@ If the consumer is cost-conscious, and will only pay the lowest tx-fees,
 then how can we get those numbers up?
 
 [[vii-alternative-fee-sources]]
-====== vii. Alternative Fee-Sources
+===== vii. Alternative Fee-Sources
 
 [[a-lightning-network]]
 *a. Lightning Network*
@@ -360,7 +360,7 @@ small percentage of the total payments market (which includes checks,
 WesternUnion, ApplePay, etc), but it is a good first look.
 
 [[viii-visas-transaction-fee-revenues]]
-====== viii. VISA’s Transaction Fee Revenues
+===== viii. VISA’s Transaction Fee Revenues
 
 Contrary to what I believed just moments before looking this up, VISA
 does not earn any money off of the interest that it charges its
@@ -400,7 +400,7 @@ subsidy amounts, to get a new total security budget.
 This security budget _does_ seem to be much safer in the long run, and
 safer in general.
 
-===== Conclusion
+==== Conclusion
 
 To deter 51% attacks, Bitcoin needs a high “security budget”. Today’s
 tx-fee revenues are not high enough; we must ensure that they are
@@ -414,7 +414,7 @@ A better way, is to attempt to devour the entire payments market, and
 claim all of its fee revenues. This can be done using Merge Mined
 Sidechains, without any decentralization loss.
 
-===== Updates
+==== Updates
 
 Update (4/2020):
 https://twitter.com/Truthcoin/status/1247177271267467265?s=20[Tweetstorm
@@ -436,7 +436,7 @@ image::fee-elasticity-table.png[image]
 
 '''''
 
-===== Footnotes
+==== Footnotes
 
 . {blank}
 +

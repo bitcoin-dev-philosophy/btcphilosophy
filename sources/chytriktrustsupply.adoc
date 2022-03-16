@@ -1,4 +1,4 @@
-==== chytrik - How can we trust supply won't be increased in 2140 by just a few lines of code?
+=== chytrik - How can we trust supply won't be increased in 2140 by just a few lines of code?
 ****
 
 * Source: https://bitcoin.stackexchange.com/a/106830/69518

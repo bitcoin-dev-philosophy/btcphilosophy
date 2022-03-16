@@ -1,0 +1,9 @@
+:doctype: book
+:toc: left
+:toclevels: 3
+:sectanchors:
+:imagesdir: images
+:stylesdir: style
+:linkcss:
+:docinfo: shared
+:docinfodir: {stylesdir}

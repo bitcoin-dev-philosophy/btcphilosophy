@@ -1,4 +1,4 @@
-==== Chris Belcher - Bitcoin wiki page on Privacy
+=== Chris Belcher - Bitcoin wiki page on Privacy
 
 ****
 
@@ -23,7 +23,7 @@ This article was written in February 2019. A good way to read the
 article is to link:#Examples_and_case_studies[skip to the examples] and
 then come back to read the core concepts.
 
-===== [#Summary .mw-headline]#Summary#
+==== [#Summary .mw-headline]#Summary#
 
 To save you reading the rest of the article, here is a quick summary of
 how normal bitcoin users can improve their privacy:
@@ -58,7 +58,7 @@ solution like https://tails.boum.org/[Tails Operating System].
 See also link:#Examples_and_case_studies[the privacy examples] for
 real-life case-studies.
 
-===== [#Introduction .mw-headline]#Introduction#
+==== [#Introduction .mw-headline]#Introduction#
 
 Users interact with bitcoin through link:/wiki/Software[software] which
 may leak information about them in various ways that damages their
@@ -83,7 +83,7 @@ web, or a variety of other methods. The encouraged practice of
 link:/wiki/Address_reuse[using a new address for every transaction] is
 intended to make this attack more difficult.
 
-====== [#Example_-_Adversary_controls_source_and_destination_of_coins .mw-headline]#Example - Adversary controls source and destination of coins#
+===== [#Example_-_Adversary_controls_source_and_destination_of_coins .mw-headline]#Example - Adversary controls source and destination of coins#
 
 The second image shows a simple example. An adversary runs both a money
 exchanger and a honeypot website meant to trap people. If someone uses
@@ -108,7 +108,7 @@ unrelated, or the two transactions may actually involve a smart contract
 effectively teleports the coins off-chain to a completely different
 address somewhere on the blockchain.
 
-====== [#Example_-_Non-anonymous_Chinese_newspaper_buying .mw-headline]#Example - Non-anonymous Chinese newspaper buying#
+===== [#Example_-_Non-anonymous_Chinese_newspaper_buying .mw-headline]#Example - Non-anonymous Chinese newspaper buying#
 
 In this example the adversary controls the destination and finds the
 source from metadata.
@@ -137,7 +137,7 @@ must remain secret, like the scammer example) and reverse attacks
 (getting something that must remain secret using coins that identify
 you, like the newspaper example).
 
-====== [#Example_-_A_perfectly_private_donation .mw-headline]#Example - A perfectly private donation#
+===== [#Example_-_A_perfectly_private_donation .mw-headline]#Example - A perfectly private donation#
 
 On the other hand, here is an example of somebody using bitcoin to make
 a donation that is completely anonymous.
@@ -168,7 +168,7 @@ to be a
 https://www.torproject.org/docs/faq.html.en#AttacksOnOnionRouting[global
 adversary] that can exploit the known weaknessness of Tor.
 
-====== [#Multiple_interpretations_of_a_blockchain_transaction .mw-headline]#Multiple interpretations of a blockchain transaction#
+===== [#Multiple_interpretations_of_a_blockchain_transaction .mw-headline]#Multiple interpretations of a blockchain transaction#
 
 Bitcoin link:/wiki/Transaction[transactions] are made up of inputs and
 outputs, of which there can be one or more. Previously-created outputs
@@ -237,7 +237,7 @@ question of where the 1 btc ended up. This fungibility of bitcoin within
 one transaction is an important reason for the different possibility
 interpretations of the above transaction.
 
-====== [#Threat_model .mw-headline]#Threat model#
+===== [#Threat_model .mw-headline]#Threat model#
 
 When considering privacy you need to think about exactly who you're
 hiding from. You must examine how a hypothetical adversary could spy on
@@ -265,7 +265,7 @@ Much of the time plausible deniability is not good enough because lots
 of spying methods only need to work on a statistical level (e.g.
 targeted advertising).
 
-====== [#Method_of_data_fusion .mw-headline]#Method of data fusion#
+===== [#Method_of_data_fusion .mw-headline]#Method of data fusion#
 
 Multiple privacy leaks when combined together can be far more damaging
 to privacy than any single leak. Imagine if a receiver of a
@@ -289,7 +289,7 @@ But together the two privacy leaks resulted in a trip to the reeducation
 camp. The method of data fusion is very important when understanding
 privacy in bitcoin (and other situations).
 
-====== [#Why_privacy .mw-headline]#Why privacy#
+===== [#Why_privacy .mw-headline]#Why privacy#
 
 Financial privacy is an essential element to
 link:/wiki/Fungibility[fungibility] in Bitcoin: if you can meaningfully
@@ -347,7 +347,7 @@ whitepaper even has a section on privacy. It's incorrect to say that
 Bitcoin isn't focused on privacy. Sufficient privacy is an essential
 prerequisite for a viable digital currency^link:#cite_note-2[[2]]^.
 
-===== [#Blockchain_attacks_on_privacy .mw-headline]#Blockchain attacks on privacy#
+==== [#Blockchain_attacks_on_privacy .mw-headline]#Blockchain attacks on privacy#
 
 Bitcoin uses a link:/wiki/Block_chain[block chain]. Users can
 link:/wiki/Full_node[download and verify the blockchain] to check that
@@ -389,7 +389,7 @@ It can be very difficult to fine-tune heuristics for wallet clustering
 that lead to obtaining actually correct
 information^link:#cite_note-3[[3]]^.
 
-====== [#Common-input-ownership_heuristic .mw-headline]#link:/wiki/Common-input-ownership_heuristic[Common-input-ownership heuristic]#
+===== [#Common-input-ownership_heuristic .mw-headline]#link:/wiki/Common-input-ownership_heuristic[Common-input-ownership heuristic]#
 
 This is a heuristic or assumption which says that if a transaction has
 more than one input then all those inputs are owned by the same entity.
@@ -419,7 +419,7 @@ on the wallet behaviour: for example, if a wallet usually receives small
 amounts and sends large amounts then it will create many multi-input
 transactions.
 
-====== [#Change_address_detection .mw-headline]#link:/wiki/Change[Change] address detection#
+===== [#Change_address_detection .mw-headline]#link:/wiki/Change[Change] address detection#
 
 Many bitcoin link:/wiki/Transaction[transactions] have
 link:/wiki/Change[change outputs]. It would be a serious privacy leak if
@@ -727,7 +727,7 @@ deduce the change address is to find which output causes the clusters to
 grow only slowly. The exact value for "how slowly" a cluster is allowed
 to grow is an open question.
 
-====== [#Transaction_graph_heuristic .mw-headline]#Transaction graph heuristic#
+===== [#Transaction_graph_heuristic .mw-headline]#Transaction graph heuristic#
 
 As described in the introduction, link:/wiki/Address[addresses] are
 connected together by link:/wiki/Transaction[transactions] on the
@@ -764,7 +764,7 @@ information about the source of those coins. Taint analysis may only be
 useful for breaking schemes where someone tries to hide the origin of
 coins by sending dozens of fake transactions to themselves many times.
 
-====== [#Amount .mw-headline]#Amount#
+===== [#Amount .mw-headline]#Amount#
 
 Blockchain link:/wiki/Transactions[transactions] contain amount
 information of the transaction inputs and outputs, as well as an
@@ -810,7 +810,7 @@ require change (or required a change amount that is negligible enough to
 waive), or advanced users using manual coin selection to explicitly
 avoid change.
 
-====== [#Batching .mw-headline]#Batching#
+===== [#Batching .mw-headline]#Batching#
 
 link:/wiki/Techniques_to_reduce_transaction_fees#Payment_batching[Payment
 batching] is a technique to reduce the link:/wiki/Miner_fees[miner fee]
@@ -842,7 +842,7 @@ weak, such as making payroll in a small company where you don’t want
 each employee to learn the other employees’ salaries.
 ____
 
-====== [#Unusual_scripts .mw-headline]#Unusual scripts#
+===== [#Unusual_scripts .mw-headline]#Unusual scripts#
 
 Most but not all bitcoin link:/wiki/Script[scripts] are
 single-signature. Other scripts are possible with the most common being
@@ -852,7 +852,7 @@ particularly unusual can leak information simply by being so unique.
 2-of-3 multisig is by far the most common non-single-signature script as
 of 2019.
 
-====== [#Mystery_shopper_payment .mw-headline]#Mystery shopper payment#
+===== [#Mystery_shopper_payment .mw-headline]#Mystery shopper payment#
 
 A link:/wiki/Mystery_shopper_payments[mystery shopper payment] is when
 an adversary pays bitcoin to a target in order to obtain
@@ -872,7 +872,7 @@ link:/wiki/CoinJoin[CoinJoin] are not used) and could give a lower-bound
 for the sales volume. This works because anybody on the entire internet
 can request one of the merchant's link:/wiki/Address[addresses].
 
-====== [#Forced_address_reuse .mw-headline]#Forced address reuse#
+===== [#Forced_address_reuse .mw-headline]#Forced address reuse#
 
 *Forced link:/wiki/Address_reuse[address reuse]* is when an adversary
 pays an (often small) amount of bitcoin to link:/wiki/Address[addresses]
@@ -895,7 +895,7 @@ coins ever. If the coins have landed on addresses which are not empty,
 then the correct behaviour by wallets is to fully-spend all the coins on
 that address in the same transaction.
 
-====== [#Amount_correlation .mw-headline]#Amount correlation#
+===== [#Amount_correlation .mw-headline]#Amount correlation#
 
 Amounts correlation refers to searching the entire
 link:/wiki/Block_chain[block chain] for output amounts.
@@ -930,7 +930,7 @@ right time period and find transactions with output amounts close to
 $5000. Even if multiple matches are found it still gives Bob a good idea
 of which bitcoin addresses belong to Alice.
 
-====== [#Timing_correlation .mw-headline]#Timing correlation#
+===== [#Timing_correlation .mw-headline]#Timing correlation#
 
 Timing correlation refers to using the time information of transactions
 on the blockchain. Similar to amount correlation, if an adversary
@@ -944,9 +944,9 @@ transaction. This forces an adversary to search much more of the
 existing transactions; they have to equally consider the entire
 anonymity set between now and time_period.
 
-===== [#Non-blockchain_attacks_on_privacy .mw-headline]#Non-blockchain attacks on privacy#
+==== [#Non-blockchain_attacks_on_privacy .mw-headline]#Non-blockchain attacks on privacy#
 
-====== [#Traffic_analysis .mw-headline]#Traffic analysis#
+===== [#Traffic_analysis .mw-headline]#Traffic analysis#
 
 Bitcoin link:/wiki/Full_node[nodes] communicate with each other via a
 link:/wiki/Network[peer-to-peer network] to transmit
@@ -996,7 +996,7 @@ be connected only to your own link:/wiki/Full_node[full node], and if
 that is done then their privacy with respect to traffic analysis will be
 improved to the level of a full node.
 
-====== [#Custodial_Wallets .mw-headline]#Custodial Wallets#
+===== [#Custodial_Wallets .mw-headline]#Custodial Wallets#
 
 Some bitcoin wallets are just front-ends that connects to a back-end
 server run by some company. This kind of wallet has no privacy at all,
@@ -1006,7 +1006,7 @@ Users should not use web wallets.
 
 Main article: link:/wiki/Browser-based_wallet[Browser-based wallet]
 
-====== [#Wallet_history_retrieval_from_third-party .mw-headline]#Wallet history retrieval from third-party#
+===== [#Wallet_history_retrieval_from_third-party .mw-headline]#Wallet history retrieval from third-party#
 
 All bitcoin wallets must somehow obtain information about their balance
 and history, which may leak information about which
@@ -1066,7 +1066,7 @@ see which addresses or transactions the wallet is interested in. Then
 link:/wiki/Electrum[Electrum] becomes a link:/wiki/Full_node[full node]
 wallet.
 
-====== [#Communication_eavesdropping .mw-headline]#Communication eavesdropping#
+===== [#Communication_eavesdropping .mw-headline]#Communication eavesdropping#
 
 A simple but effective privacy leak. Alice gives Bob one of her
 link:/wiki/Address[addresses] to receive a payment, but the
@@ -1085,7 +1085,7 @@ here is to show each potential donator a new address, for example
 link:/wiki/Receiving_donations_with_bitcoin#Improving_privacy_by_avoiding_address_re-use[by
 setting up a web server to hand out unique addresses to each visitor].
 
-====== [#Revealing_data_when_transacting_bitcoin .mw-headline]#Revealing data when transacting bitcoin#
+===== [#Revealing_data_when_transacting_bitcoin .mw-headline]#Revealing data when transacting bitcoin#
 
 Sometimes users may voluntarily reveal data about themselves, or be
 required to by the entity they interact with. For example many exchanges
@@ -1101,7 +1101,7 @@ This links the bitcoin transaction with the delivery address. The same
 applies to the user's IP address (unless privacy technology like
 link:/wiki/Tor[Tor] is used).
 
-====== [#Digital_forensics .mw-headline]#Digital forensics#
+===== [#Digital_forensics .mw-headline]#Digital forensics#
 
 Wallet software usually stores information it needs to operate on the
 disk of the computer it runs on. If an adversary has access to that disk
@@ -1125,9 +1125,9 @@ protection are options, as is using special operating systems like
 https://tails.boum.org/[Tails OS] which does not read or write from the
 hard drive but only uses RAM, and then deletes all data on shutdown.
 
-===== [#Methods_for_improving_privacy_.28non-blockchain.29 .mw-headline]#Methods for improving privacy (non-blockchain)#
+==== [#Methods_for_improving_privacy_.28non-blockchain.29 .mw-headline]#Methods for improving privacy (non-blockchain)#
 
-====== [#Obtaining_bitcoins_anonymously .mw-headline]#Obtaining bitcoins anonymously#
+===== [#Obtaining_bitcoins_anonymously .mw-headline]#Obtaining bitcoins anonymously#
 
 If the adversary has not linked your bitcoin address with your identity
 then privacy is much easier. Blockchain spying methods like the
@@ -1237,13 +1237,13 @@ spyware company that was selling surveillance products to
 dictators^link:#cite_note-26[[26]]^. The hacker used bitcoin stolen from
 other people to anonymously rent infrastructure for later attacks.
 
-====== [#Spending_bitcoins_anonymously .mw-headline]#Spending bitcoins anonymously#
+===== [#Spending_bitcoins_anonymously .mw-headline]#Spending bitcoins anonymously#
 
 If you give up your delivery address (which you'll have to if you're
 buying physical goods online) then that will be a data leak. Obviously
 this is unavoidable in many cases.
 
-====== [#Wallet_history_synchronization .mw-headline]#Wallet history synchronization#
+===== [#Wallet_history_synchronization .mw-headline]#Wallet history synchronization#
 
 Bitcoin wallets must somehow obtain information about their balance and
 history. As of late-2018 the most practical and private existing
@@ -1305,7 +1305,7 @@ should be taken to avoid timing correlation linking the addresses
 together, otherwise the server could use the fact that the addresses
 were requested close to each other in time.
 
-====== [#Countermeasures_to_traffic_analysis .mw-headline]#Countermeasures to traffic analysis#
+===== [#Countermeasures_to_traffic_analysis .mw-headline]#Countermeasures to traffic analysis#
 
 link:/wiki/Bitcoin_Core[Bitcoin Core] and its forks have countermeasures
 against link:/wiki/Weaknesses#Sybil_attack[sybil attack] and eclipse
@@ -1417,7 +1417,7 @@ the blockchain will always be free.
 
 Main article: https://blockstream.com/satellite/
 
-===== [#Methods_for_improving_privacy_.28blockchain.29 .mw-headline]#Methods for improving privacy (blockchain)#
+==== [#Methods_for_improving_privacy_.28blockchain.29 .mw-headline]#Methods for improving privacy (blockchain)#
 
 This section describes different techniques for improving the privacy of
 link:/wiki/Transaction[transactions] related to the permanent record of
@@ -1429,7 +1429,7 @@ Many of these techniques focus on breaking different heuristics and
 assumptions about the blockchain, so they work best when combined
 together.
 
-====== [#Avoiding_address_reuse .mw-headline]#Avoiding link:/wiki/Address_reuse[address reuse]#
+===== [#Avoiding_address_reuse .mw-headline]#Avoiding link:/wiki/Address_reuse[address reuse]#
 
 link:/wiki/Address[Addresses] being used more than once is very damaging
 to privacy because that links together more blockchain
@@ -1480,7 +1480,7 @@ link:/wiki/OP_CHECKSIG[OP_CHECKSIG] sighash flags so they can be easily
 eliminated from the adversary's analysis, but at least the forced
 address reuse payments don't lead to further privacy loss.
 
-====== [#Coin_control .mw-headline]#Coin control#
+===== [#Coin_control .mw-headline]#Coin control#
 
 Coin control is a feature of some bitcoin wallets that allow the user to
 choose which link:/wiki/Coin_analogy[coins] are to be spent as inputs in
@@ -1505,7 +1505,7 @@ link:/wiki/Coin_analogy[coins] that were obtained anonymously with cash
 were sent to the charity. This avoids the employer ever knowing that the
 user financially supports this charity.
 
-====== [#Multiple_transactions .mw-headline]#Multiple transactions#
+===== [#Multiple_transactions .mw-headline]#Multiple transactions#
 
 Paying someone with more than one on-chain
 link:/wiki/Transaction[transaction] can greatly reduce the power of
@@ -1518,7 +1518,7 @@ add up to 5 BTC.
 Privacy-conscious merchants and services should provide customers with
 more than one bitcoin link:/wiki/Address[address] that can be paid.
 
-====== [#Change_avoidance .mw-headline]#Change avoidance#
+===== [#Change_avoidance .mw-headline]#Change avoidance#
 
 Change avoidance is where transaction inputs and outputs are carefully
 chosen to not require a change output at all. Not having a change output
@@ -1542,7 +1542,7 @@ link:/wiki/Payment_channel[payment channel]. Another example would be
 when sweeping funds into a link:/wiki/Cold_storage[cold storage] wallet
 where the exact amount may not matter.
 
-====== [#Multiple_change_outputs .mw-headline]#Multiple change outputs#
+===== [#Multiple_change_outputs .mw-headline]#Multiple change outputs#
 
 If link:#Change_avoidance[change avoidance] is not an option then
 creating more than one change output can improve privacy. This also
@@ -1550,7 +1550,7 @@ breaks change detection heuristics which usually assume there is only a
 single change output. As this method uses more block space than usual,
 change avoidance is preferable.
 
-====== [#Script_privacy_improvements .mw-headline]#Script privacy improvements#
+===== [#Script_privacy_improvements .mw-headline]#Script privacy improvements#
 
 The link:/wiki/Script[script] of each bitcoin output leaks
 privacy-relevant information. For example as of late-2018 around 70% of
@@ -1635,7 +1635,7 @@ link:/wiki/Transaction[transaction] format. It can be used in certain
 situations to create a more private link:/wiki/Timelock[timelock] which
 avoids using link:/wiki/Script[script] opcodes.
 
-====== [#ECDH_addresses .mw-headline]#ECDH addresses#
+===== [#ECDH_addresses .mw-headline]#ECDH addresses#
 
 link:/wiki/ECDH_address[ECDH addresses] can be used to improve privacy
 by helping avoid link:/wiki/Address_reuse[address reuse]. For example, a
@@ -1663,7 +1663,7 @@ unclear whether ECDH are useful outside the use-case of non-interactive
 donations or a self-contained application which sends money to one
 destination without any interactivity.
 
-====== [#Centralized_mixers .mw-headline]#Centralized mixers#
+===== [#Centralized_mixers .mw-headline]#Centralized mixers#
 
 This is an old method for breaking the
 link:#Transaction_graph[transaction graph]. Also called "tumblers" or
@@ -1700,7 +1700,7 @@ the privacy gained.
 
 Main article: link:/wiki/Mixing_service[Mixing service]
 
-====== [#CoinJoin .mw-headline]#CoinJoin#
+===== [#CoinJoin .mw-headline]#CoinJoin#
 
 link:/wiki/CoinJoin[CoinJoin] is a special kind of bitcoin transaction
 where multiple people or entities cooperate to create a single
@@ -1807,7 +1807,7 @@ link:/wiki/Transaction_surveillance_company[transaction surveillance
 companies] mostly depend on that heuristic, as of 2019 there is great
 excitement about the PayJoin idea^link:#cite_note-72[[72]]^.
 
-====== [#CoinSwap .mw-headline]#CoinSwap#
+===== [#CoinSwap .mw-headline]#CoinSwap#
 
 _Main article: link:/wiki/CoinSwap[CoinSwap]_
 
@@ -1858,7 +1858,7 @@ https://en.bitcoin.it/wiki/User:Belcher[Chris Belcher] (one of the main
 contributors to this very page) to work on the
 project.^link:#cite_note-76[[76]]^
 
-====== [#CoinJoinXT .mw-headline]#CoinJoinXT#
+===== [#CoinJoinXT .mw-headline]#CoinJoinXT#
 
 CoinJoinXT is non-custodial privacy technique which is closely related
 to link:/wiki/CoinJoin[CoinJoin]^link:#cite_note-77[[77]]^. It allows
@@ -1889,7 +1889,7 @@ of transactions are segwit, so an observer of the blockchain could
 easily eliminate non-PTG transactions by checking whether they are
 legacy or segwit.
 
-====== [#TumbleBit .mw-headline]#TumbleBit#
+===== [#TumbleBit .mw-headline]#TumbleBit#
 
 link:/wiki/TumbleBit[TumbleBit] is privacy technology which is
 non-custodial and where the coordinating server cannot tell the true
@@ -1902,7 +1902,7 @@ From the point of view of an observer of the blockchain, TumbleBit
 transactions appear as two transactions with many (800 in the author's
 example) outputs and all transaction outputs must be of the same amount.
 
-====== [#Off-chain_transactions .mw-headline]#Off-chain transactions#
+===== [#Off-chain_transactions .mw-headline]#Off-chain transactions#
 
 Off-chain transactions refer to any technology which allows bitcoin
 transactions on a layer above the blockchain. Bitcoin payments done
@@ -1944,7 +1944,7 @@ better privacy properties than the regular bitcoin blockchain.
 
 Main article: link:/wiki/Sidechain[Sidechain]
 
-====== [#Confidential_transactions .mw-headline]#Confidential transactions#
+===== [#Confidential_transactions .mw-headline]#Confidential transactions#
 
 _Main article: link:/wiki/Confidential_transactions[Confidential
 transactions]_
@@ -1958,7 +1958,7 @@ exact transaction amounts. Confidential transactions requires a
 link:/wiki/Softfork[softfork] consensus change to be added to bitcoin,
 although they could be added to a link:/wiki/Sidechain[sidechain] too.
 
-====== [#Discussion .mw-headline]#Discussion#
+===== [#Discussion .mw-headline]#Discussion#
 
 *[#Privacy_vs_scalability .mw-headline]#Privacy vs scalability#*
 
@@ -2045,7 +2045,7 @@ heuristic] analysis, but depositing and then withdrawing from a
 high-volume bitcoin website like a casino or altcoin exchange is better
 because its possible that the user simply wanted to gamble.
 
-===== [#Lightning_Network .mw-headline]#Lightning Network#
+==== [#Lightning_Network .mw-headline]#Lightning Network#
 
 link:/wiki/Lightning_Network[Lightning Network] is an
 link:/wiki/Off-Chain_Transactions[off-chain transaction] technology
@@ -2099,7 +2099,7 @@ development community is still studying all its privacy properties.
 Certainly its privacy is better than the privacy of on-chain
 link:/wiki/Transaction[transactions].
 
-====== [#Onion_routing .mw-headline]#Onion routing#
+===== [#Onion_routing .mw-headline]#Onion routing#
 
 The Lightning protocol uses onion
 routing^link:#cite_note-80[[80]]link:#cite_note-81[[81]]^ to improve
@@ -2159,7 +2159,7 @@ link:/wiki/Tor[Tor] connection going via a Tor exit node to its
 destination, and rendez-vous onion routing is like a Tor connection
 going to a Tor hidden service.
 
-====== [#Atomic_Multipath_Payments .mw-headline]#Atomic Multipath Payments#
+===== [#Atomic_Multipath_Payments .mw-headline]#Atomic Multipath Payments#
 
 Atomic Multipath Payments (AMP) is a protocol in Lightning which allows
 a single payment to be routed over multiple lightning network
@@ -2172,7 +2172,7 @@ the full payment amount of 7 btc but only the partial payment amounts of
 as routed payments would no longer leak the exact payment amount, but
 only a lower bound.
 
-====== [#Common_hashlock_value .mw-headline]#Common hashlock value#
+===== [#Common_hashlock_value .mw-headline]#Common hashlock value#
 
 For non-AMP payments, the payment hash is the same for all nodes along
 the route of a payment. This could allow multiple nodes if they
@@ -2196,7 +2196,7 @@ a scheme using zero-knowledge proofs which would allow each hash value
 in the payment route to be different. The scheme is much more expensive
 in terms of computation, but it may still be practical.
 
-====== [#Custodial_wallets_2 .mw-headline]#Custodial wallets#
+===== [#Custodial_wallets_2 .mw-headline]#Custodial wallets#
 
 Lightning-enabled wallets can be of the custodial type, where the wallet
 is just a front-end that connects to a back-end server run by some
@@ -2224,7 +2224,7 @@ link:/wiki/Client-side_block_filtering[Client-side block filtering]
 which is a very good fit for link:/wiki/Lightning_Network[Lightning
 Network]-enabled wallets.
 
-====== [#Private_script_types .mw-headline]#Private script types#
+===== [#Private_script_types .mw-headline]#Private script types#
 
 Advances in script type privacy like link:/wiki/Schnorr[Schnorr],
 scriptless scripts, taproot and ECDSA-2P benefit
@@ -2233,7 +2233,7 @@ link:/wiki/Payment_channel[payment channel] blockchain transactions
 appear indistinguishable from regular single-signature blockchain
 transactions.
 
-====== [#Probing_payments_to_reveal_channel_states .mw-headline]#Probing payments to reveal channel states#
+===== [#Probing_payments_to_reveal_channel_states .mw-headline]#Probing payments to reveal channel states#
 
 The balance state of each channel is hidden from the public and is only
 known to the two entities making up the
@@ -2264,7 +2264,7 @@ if the channel balance state is actually adequate. This likely would not
 degrade the user experience of link:/wiki/Lightning_Network[Lightning
 Network] much, but would impose a serious cost on the attacker.
 
-===== [#Existing_privacy_solutions .mw-headline]#Existing privacy solutions#
+==== [#Existing_privacy_solutions .mw-headline]#Existing privacy solutions#
 
 This section is about bitcoin software which implements privacy features
 as its main goal, especially avoiding the privacy leaks due to the
@@ -2276,7 +2276,7 @@ dream is that one day all bitcoin wallets will include privacy tech
 already built in. But as of late-2018 many privacy implementations are
 separate applications.
 
-====== [#Lightning_Network_2 .mw-headline]#Lightning Network#
+===== [#Lightning_Network_2 .mw-headline]#Lightning Network#
 
 There are several implementations of
 link:/wiki/Lightning_Network[Lightning Network] as of early-2019; such
@@ -2299,7 +2299,7 @@ Some LN wallets such as Zap Wallet and Lightning Peach are actually
 custodial, they are backed by a centralized server which can spy on
 everything the user does, so they should be avoided.
 
-====== [#Handmade_CoinJoin .mw-headline]#Handmade CoinJoin#
+===== [#Handmade_CoinJoin .mw-headline]#Handmade CoinJoin#
 
 link:/wiki/CoinJoin[CoinJoin] transactions can be hand-made without a
 special wallet just using link:/wiki/Raw_Transactions[Raw Transactions].
@@ -2309,7 +2309,7 @@ might decide to coinjoin together some of their transactions so that the
 link:/wiki/Common-input-ownership_heuristic[common-input-ownership
 heuristic] would imply they are all the same wallet cluster.
 
-====== [#JoinMarket .mw-headline]#JoinMarket#
+===== [#JoinMarket .mw-headline]#JoinMarket#
 
 link:/wiki/JoinMarket[JoinMarket] is an implementation of
 link:/wiki/CoinJoin[CoinJoin] where the required liquidity is paid for
@@ -2357,7 +2357,7 @@ volunteers there can be no roadmap for this.
 
 Main article: link:/wiki/JoinMarket[JoinMarket]
 
-====== [#Wasabi_Wallet .mw-headline]#Wasabi Wallet#
+===== [#Wasabi_Wallet .mw-headline]#Wasabi Wallet#
 
 *Wasabi Wallet* is an open-source, non-custodial, *privacy-focused*
 Bitcoin wallet for Desktop, that implements trustless
@@ -2396,7 +2396,7 @@ program, on its functioning and tutorials on how to use it.
 
 Main article: link:/wiki/Wasabi_Wallet[Wasabi Wallet]
 
-====== [#Samourai_Wallet .mw-headline]#Samourai Wallet#
+===== [#Samourai_Wallet .mw-headline]#Samourai Wallet#
 
 Samourai Wallet is a smartphone wallet which implements some privacy
 features. Stowaway is an implementation of link:/wiki/PayJoin[PayJoin].
@@ -2424,7 +2424,7 @@ this server. In June 2019 with the release and open sourcing of the
 Samourai Wallet server, Dojo, users may now host their own server
 privately and direct their Samourai Wallet to connect to it.
 
-====== [#Liquid_sidechain .mw-headline]#Liquid sidechain#
+===== [#Liquid_sidechain .mw-headline]#Liquid sidechain#
 
 As of 2018 the Liquid link:/wiki/Sidechain[sidechain] implements
 Confidential Transaction (CT) which allows bitcoins to be transferred on
@@ -2441,12 +2441,12 @@ excellent privacy, and the link:/wiki/Sidechain[sidechain] itself is
 marketed towards traders and hedgers who certainly want to keep their
 trading activities private to stop other traders front-running them.
 
-===== [#Examples_and_case_studies .mw-headline]#Examples and case studies#
+==== [#Examples_and_case_studies .mw-headline]#Examples and case studies#
 
 Privacy is a very multifaceted and practical topic, it is helpful to
 follow examples to better understand how all the concepts are related.
 
-====== [#Bad_privacy_example_-_Exchange_front_running .mw-headline]#Bad privacy example - Exchange front running#
+===== [#Bad_privacy_example_-_Exchange_front_running .mw-headline]#Bad privacy example - Exchange front running#
 
 . You are a trader and have an account on a bitcoin
 link:/wiki/Exchange[exchange].
@@ -2465,7 +2465,7 @@ button on the exchange's website and depositing there.
 
 Lesson: link:/wiki/Address_reuse[Address reuse] is terrible for privacy.
 
-====== [#Bad_privacy_example_-_Savings_revealed_with_address_reuse .mw-headline]#Bad privacy example - Savings revealed with link:/wiki/Address_reuse[address reuse]#
+===== [#Bad_privacy_example_-_Savings_revealed_with_address_reuse .mw-headline]#Bad privacy example - Savings revealed with link:/wiki/Address_reuse[address reuse]#
 
 . You save in bitcoin, using a link:/wiki/Paper_Wallet[single-address
 paper wallet] which results in link:/wiki/Address_reuse[address reuse].
@@ -2481,7 +2481,7 @@ until $1 million in bitcoin is handed over^link:#cite_note-94[[94]]^.
 
 Lesson: link:/wiki/Address_reuse[Address reuse] is terrible for privacy.
 
-====== [#Bad_privacy_example_-_Savings_revealed_with_data_collection .mw-headline]#Bad privacy example - Savings revealed with data collection#
+===== [#Bad_privacy_example_-_Savings_revealed_with_data_collection .mw-headline]#Bad privacy example - Savings revealed with data collection#
 
 . You save in bitcoin. Trading on an exchange which you
 link:#Revealing_data_when_transacting_bitcoin[reveal all your data to].
@@ -2491,7 +2491,7 @@ one exchange.
 still knows all your trades and can find exactly how much bitcoin you
 hold at any time.
 
-====== [#Example_-_Evading_sanctions .mw-headline]#Example - Evading sanctions#
+===== [#Example_-_Evading_sanctions .mw-headline]#Example - Evading sanctions#
 
 . You live in a country that is under international trade sanctions from
 other countries.
@@ -2503,7 +2503,7 @@ computer, then use the bitcoins to buy the newspaper.
 . Bitcoin transactions don't have geographical information about them,
 so your payment is not discovered as coming from a sanctioned country.
 
-====== [#Example_-_Transacting_with_your_online_poker_buddies_without_revealing_your_real_name .mw-headline]#Example - Transacting with your online poker buddies without revealing your real name#
+===== [#Example_-_Transacting_with_your_online_poker_buddies_without_revealing_your_real_name .mw-headline]#Example - Transacting with your online poker buddies without revealing your real name#
 
 . You play online poker with some people (for real money).
 . You win big. Lots of money goes to you and your buddies are annoyed.
@@ -2519,7 +2519,7 @@ with your IP address (in the case that you used a
 link:/wiki/Lightweight_node[lightweight node] instead of a
 link:/wiki/Full_node[full node]).
 
-====== [#Example_-_Donation_without_your_employer_knowing .mw-headline]#Example - Donation without your employer knowing#
+===== [#Example_-_Donation_without_your_employer_knowing .mw-headline]#Example - Donation without your employer knowing#
 
 . You earn money in bitcoin, your employer has sent you bitcoins as
 salary.
@@ -2541,7 +2541,7 @@ to the group. Privacy comes from mixing your coins with the coins of
 everybody else who uses that casino in the time period that your coins
 were deposited.
 
-====== [#Example_-_Donation_without_anyone_knowing .mw-headline]#Example - Donation without anyone knowing#
+===== [#Example_-_Donation_without_anyone_knowing .mw-headline]#Example - Donation without anyone knowing#
 
 . You want to support X charity or political group without anyone
 knowing.
@@ -2566,7 +2566,7 @@ Tor is required to stop your ISP or a
 link:/wiki/Transaction_surveillance_company[transaction surveillance
 company] from learning that your IP address broadcast the transaction.
 
-====== [#Example_-_Receiving_donations_privately .mw-headline]#Example - Receiving donations privately#
+===== [#Example_-_Receiving_donations_privately .mw-headline]#Example - Receiving donations privately#
 
 . You have a link:/wiki/Address_reuse[single] donation address for your
 group or project, anybody can see all donations and their amounts by
@@ -2610,7 +2610,7 @@ custodial risk as each website has the power to steal your money, but in
 this example the bitcoin amount is relatively low so the risk is
 acceptable.
 
-====== [#Example_-_Storing_savings_privately .mw-headline]#Example - Storing savings privately#
+===== [#Example_-_Storing_savings_privately .mw-headline]#Example - Storing savings privately#
 
 . You want to link:/wiki/Bitcoin_as_an_investment[store value in
 bitcoin] without anybody else knowing what you do with that value, or
@@ -2645,7 +2645,7 @@ or link them with your IP address. The full node is run entirely over
 link:/wiki/Tor[Tor] to stop your internet service provider or any
 network-level adversary from seeing that you run a bitcoin node.
 
-====== [#Example_-_Stopping_incoming_payments_from_different_sources_from_being_linked_together .mw-headline]#Example - Stopping incoming payments from different sources from being linked together#
+===== [#Example_-_Stopping_incoming_payments_from_different_sources_from_being_linked_together .mw-headline]#Example - Stopping incoming payments from different sources from being linked together#
 
 . If you had both payments in the same wallet they may be linked
 together with the
@@ -2667,7 +2667,7 @@ users of the casino. Probably the best way to do this is to receive one
 or both of the income streams over
 link:/wiki/Lightning_Network[Lightning Network].
 
-====== [#Example_-_Withdrawing_casino_winnings_to_a_bitcoin_exchange_without_either_entity_knowing_the_source_or_destination_of_funds .mw-headline]#Example - Withdrawing casino winnings to a bitcoin exchange without either entity knowing the source or destination of funds#
+===== [#Example_-_Withdrawing_casino_winnings_to_a_bitcoin_exchange_without_either_entity_knowing_the_source_or_destination_of_funds .mw-headline]#Example - Withdrawing casino winnings to a bitcoin exchange without either entity knowing the source or destination of funds#
 
 . You have won 10 BTC at a bitcoin casino, you want withdraw them to a
 bitcoin exchange to sell without either party knowing (maybe because
@@ -2688,7 +2688,7 @@ heuristic], and the other JoinMarket features stop
 link:/wiki/Address_reuse[address reuse] and analysis of the transaction
 graph^link:#cite_note-96[[96]]^.
 
-====== [#Bad_privacy_example_-_Using_a_blockchain_explorer .mw-headline]#Bad privacy example - Using a blockchain explorer#
+===== [#Bad_privacy_example_-_Using_a_blockchain_explorer .mw-headline]#Bad privacy example - Using a blockchain explorer#
 
 . You receive a payment of bitcoin at one of your
 link:/wiki/Address[addresses].
@@ -2709,7 +2709,7 @@ that _somebody_ is interested in that link:/wiki/Address[bitcoin
 address] but doesn't reveal their IP address, and does not reveal any
 other bitcoin addresses controlled by the same user.
 
-====== [#Bad_privacy_example_-_Privacy_altcoin_mixing_failing_due_to_amount_correlation .mw-headline]#Bad privacy example - Privacy altcoin mixing failing due to amount correlation#
+===== [#Bad_privacy_example_-_Privacy_altcoin_mixing_failing_due_to_amount_correlation .mw-headline]#Bad privacy example - Privacy altcoin mixing failing due to amount correlation#
 
 . You own 1.456225 BTC for which some privacy-relevant information has
 been leaked (maybe you bought it from a AML/KYC exchange) and want to
@@ -2726,7 +2726,7 @@ altcoin exchange you used.
 Lesson: Transactions have amounts visible to all which must be treated
 with care for privacy.
 
-====== [#Example_-_Privacy_altcoin_mixing .mw-headline]#Example - Privacy altcoin mixing#
+===== [#Example_-_Privacy_altcoin_mixing .mw-headline]#Example - Privacy altcoin mixing#
 
 . Similar to the previous example, you have bitcoins you want to mix.
 You trade into and out of a privacy altcoin to do it.
@@ -2745,7 +2745,7 @@ run than bitcoin's. Privacy altcoins are likely to have a more volatile
 price than bitcoin which increases the risk of losing part of the money
 due to price movements.
 
-====== [#Example_-_Daily_commerce_with_Lightning_Network .mw-headline]#Example - Daily commerce with Lightning Network#
+===== [#Example_-_Daily_commerce_with_Lightning_Network .mw-headline]#Example - Daily commerce with Lightning Network#
 
 . You have some bitcoin and want to spend it on regular goods and
 services. (Coffee, phone credit, VPN, hosting, hotel and apartment
@@ -2759,7 +2759,7 @@ heuristic], link:/wiki/Address_reuse[address reuse] and change address
 detection fundamentally don't work on any
 link:/wiki/Off-Chain_Transactions[Off-Chain Transactions] technology.
 
-====== [#Bad_privacy_example_-_Sending_to_a_static_donation_address_without_precautions .mw-headline]#Bad privacy example - Sending to a static donation address without precautions#
+===== [#Bad_privacy_example_-_Sending_to_a_static_donation_address_without_precautions .mw-headline]#Bad privacy example - Sending to a static donation address without precautions#
 
 . You own bitcoin and keep it in a custodial wallet.
 . You want to donate to charity or political group X.
@@ -2773,7 +2773,7 @@ Lesson: Using a custodial wallet is bad for privacy because the
 custodian can see everything you do. link:/wiki/Address_reuse[Address
 reuse] is harmful to privacy (but common with donation addresses).
 
-====== [#Bad_privacy_example_-_Receiving_donations_spied_on_with_mystery_shopper_payments .mw-headline]#Bad privacy example - Receiving donations spied on with link:/wiki/Mystery_shopper_payments[mystery shopper payments]#
+===== [#Bad_privacy_example_-_Receiving_donations_spied_on_with_mystery_shopper_payments .mw-headline]#Bad privacy example - Receiving donations spied on with link:/wiki/Mystery_shopper_payments[mystery shopper payments]#
 
 . You want to accept bitcoin donations but don't want to reveal the
 total donated amount.
@@ -2793,7 +2793,7 @@ revealed with the
 link:/wiki/Common-input-ownership_heuristic[common-input-ownership
 heuristic].
 
-====== [#Real_life_example_-_Bitcoin-stealing_malware_using_static_addresses .mw-headline]#Real life example - Bitcoin-stealing malware using static addresses#
+===== [#Real_life_example_-_Bitcoin-stealing_malware_using_static_addresses .mw-headline]#Real life example - Bitcoin-stealing malware using static addresses#
 
 . You are a creator of stealware (malware that steals money from its
 victim).
@@ -2806,7 +2806,7 @@ This has been done in many cases including: the Wannacry
 malware^link:#cite_note-97[[97]]link:#cite_note-98[[98]]^ and Electrum
 stealware^link:#cite_note-99[[99]]link:#cite_note-100[[100]]^
 
-====== [#Bad_privacy_example_-_Bitcoin-stealing_malware_spied_on_with_mystery_shopper_payments .mw-headline]#Bad privacy example - Bitcoin-stealing malware spied on with link:/wiki/Mystery_shopper_payments[mystery shopper payments]#
+===== [#Bad_privacy_example_-_Bitcoin-stealing_malware_spied_on_with_mystery_shopper_payments .mw-headline]#Bad privacy example - Bitcoin-stealing malware spied on with link:/wiki/Mystery_shopper_payments[mystery shopper payments]#
 
 . You are an infosec researcher studying bitcoin-stealing malware.
 . The malware author has coded a link:/wiki/ECDH_address[ECDH address
@@ -2833,7 +2833,7 @@ link:/wiki/Common-input-ownership_heuristic[common-input-ownership
 heuristic] can be used to deanonymize even people who avoid
 link:/wiki/Address_reuse[address reuse].
 
-====== [#Example_-_Single-use_lightweight_wallet_over_Tor .mw-headline]#Example - Single-use lightweight wallet over Tor#
+===== [#Example_-_Single-use_lightweight_wallet_over_Tor .mw-headline]#Example - Single-use lightweight wallet over Tor#
 
 . You want to anonymously buy something or donate to something online.
 . You install link:/wiki/Electrum[Electrum] wallet and configure it to
@@ -2854,7 +2854,7 @@ there is no link:/wiki/Change[change address] which can leak
 information. This setup actually results in strong privacy even though a
 third-party server is used.
 
-====== [#Bad_privacy_example_-_Lightweight_wallet_over_Tor_used_multiple_times .mw-headline]#Bad privacy example - Lightweight wallet over Tor used multiple times#
+===== [#Bad_privacy_example_-_Lightweight_wallet_over_Tor_used_multiple_times .mw-headline]#Bad privacy example - Lightweight wallet over Tor used multiple times#
 
 Very similar to the previous example, but more than one
 link:/wiki/Address[address] and link:/wiki/Transaction[transaction] is
@@ -2882,7 +2882,7 @@ which is backed by your own link:/wiki/Full_node[full node].
 Lesson 2: Note that https://tails.boum.org[TailsOS] as of 2018 uses this
 privacy model for Electrum(!)
 
-====== [#Real_life_example_-_Public_donation_address_combined_with_the_common-input-ownership_heuristic .mw-headline]#Real life example - Public donation address combined with the link:/wiki/Common-input-ownership_heuristic[common-input-ownership heuristic]#
+===== [#Real_life_example_-_Public_donation_address_combined_with_the_common-input-ownership_heuristic .mw-headline]#Real life example - Public donation address combined with the link:/wiki/Common-input-ownership_heuristic[common-input-ownership heuristic]#
 
 . Go to a website which accepts bitcoin donations like the
 https://tails.boum.org/donate/[Tails OS donation page].
@@ -2897,7 +2897,7 @@ techniques to cluster together addresses.
 https://www.walletexplorer.com/wallet/04d3d17f766c4e53?from_address=1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2
 The amounts look realistic so we're probably on the right lines.
 
-====== [#Real_life_example_-_Digital_forensics_aids_with_investigation_of_the_MtGox_exchange .mw-headline]#Real life example - link:#Digital_forensics[Digital forensics] aids with investigation of the MtGox exchange#
+===== [#Real_life_example_-_Digital_forensics_aids_with_investigation_of_the_MtGox_exchange .mw-headline]#Real life example - link:#Digital_forensics[Digital forensics] aids with investigation of the MtGox exchange#
 
 . link:/wiki/Mt._Gox[Mt. Gox] is a now-defunct bitcoin exchange which
 shut down in 2013 due to insolvency.
@@ -2922,7 +2922,7 @@ Full talk: https://www.youtube.com/watch?v=l70iRcSxqzo[Breaking Bitcoin
 2017 conference. Kim Nilsson - Cracking MtGox]
 https://breaking-bitcoin.com/slides/CrackingMtGox.pdf[Slides].
 
-====== [#Real_life_example_-_Flawed_use_of_the_common-input-ownership_heuristic_exaggerates_donation_income .mw-headline]#Real life example - Flawed use of the link:/wiki/Common-input-ownership_heuristic[common-input-ownership heuristic] exaggerates donation income#
+===== [#Real_life_example_-_Flawed_use_of_the_common-input-ownership_heuristic_exaggerates_donation_income .mw-headline]#Real life example - Flawed use of the link:/wiki/Common-input-ownership_heuristic[common-input-ownership heuristic] exaggerates donation income#
 
 . Go to a website which accepts bitcoin donations like ThePirateBay.
 . Take their donation address (in this case
@@ -2946,7 +2946,7 @@ that the custodial exchange could block or censor incoming donations.
 . Another possibility is that ThePirateBay is using
 link:/wiki/CoinJoin[CoinJoin].
 
-====== [#Real_life_example_-_Incorrect_clusters_found_by_the_common-input-ownership_heuristic .mw-headline]#Real life example - Incorrect clusters found by the link:/wiki/Common-input-ownership_heuristic[common-input-ownership heuristic]#
+===== [#Real_life_example_-_Incorrect_clusters_found_by_the_common-input-ownership_heuristic .mw-headline]#Real life example - Incorrect clusters found by the link:/wiki/Common-input-ownership_heuristic[common-input-ownership heuristic]#
 
 . The www.walletexplorer.com website uses the
 link:/wiki/Common-input-ownership_heuristic[common-input-ownership
@@ -2972,7 +2972,7 @@ which is a coinjoin created by the old SharedCoin centralized
 service^link:#cite_note-104[[104]]^, it is also in the MtGoxAndOthers
 cluster according to walletexplorer.
 
-====== [#Real_life_example_-_Handmade_coinjoin_mislead_a_bitcoin_analyist .mw-headline]#Real life example - Handmade coinjoin mislead a bitcoin analyist#
+===== [#Real_life_example_-_Handmade_coinjoin_mislead_a_bitcoin_analyist .mw-headline]#Real life example - Handmade coinjoin mislead a bitcoin analyist#
 
 . The inventor of link:/wiki/CoinJoin[CoinJoin] Greg Maxwell posted a
 thread on https://bitcointalk.org/index.php?topic=139581.0[bitcointalk
@@ -3012,7 +3012,7 @@ Lesson: The
 link:/wiki/Common-input-ownership_heuristic[common-input-ownership
 heuristic] isn't always right.
 
-====== [#Real_life_example_-_The_QuadrigaCX_exchange_wallet_analysis .mw-headline]#Real life example - The QuadrigaCX exchange wallet analysis#
+===== [#Real_life_example_-_The_QuadrigaCX_exchange_wallet_analysis .mw-headline]#Real life example - The QuadrigaCX exchange wallet analysis#
 
 . In early 2019 the exchange QuadrigaCX shut down and many of its
 customers were left unable to access their bitcoin deposits, likely
@@ -3046,7 +3046,7 @@ https://blog.zerononcense.com/2019/02/04/quadrigacx-chain-analysis-report-pt-1-b
 Reddit comments:
 https://www.reddit.com/r/Bitcoin/comments/amut05/investigation_proves_an_exchange_quadriga_ran_a/
 
-====== [#Real_life_example_-_Stopping_Bustabit_casino_customers_getting_banned_from_Coinbase.com .mw-headline]#Real life example - Stopping Bustabit casino customers getting banned from Coinbase.com#
+===== [#Real_life_example_-_Stopping_Bustabit_casino_customers_getting_banned_from_Coinbase.com .mw-headline]#Real life example - Stopping Bustabit casino customers getting banned from Coinbase.com#
 
 . Coinbase.com is a bitcoin link:/wiki/Exchange[exchange]. Bustabit is
 an online casino that uses bitcoin.
@@ -3073,7 +3073,7 @@ link:/wiki/Transaction_surveillance_company[transaction surveillance
 company] partner was unable to identify Bustabit's wallet addresses
 anymore.
 
-====== [#Real_life_example_-_Rare_multisignature_scripts .mw-headline]#Real life example - Rare multisignature scripts#
+===== [#Real_life_example_-_Rare_multisignature_scripts .mw-headline]#Real life example - Rare multisignature scripts#
 
 . As of January 2019 link:/wiki/Multisignature[multisignature] contracts
 are visible to any observer of the blockchain.
@@ -3094,7 +3094,7 @@ addresses, the movement of 120,000 bitcoins out of 2-of-3 multisig was
 visible on the blockchain, and it revealed the size of the
 theft^link:#cite_note-108[[108]]^.
 
-====== [#Real_life_example_-_Freelance_IT_contractor_has_his_co-workers_figure_out_his_salary .mw-headline]#Real life example - Freelance IT contractor has his co-workers figure out his salary#
+===== [#Real_life_example_-_Freelance_IT_contractor_has_his_co-workers_figure_out_his_salary .mw-headline]#Real life example - Freelance IT contractor has his co-workers figure out his salary#
 
 . A user posted on the bitcoin reddit forum^link:#cite_note-109[[109]]^
 about his experience with co-workers figuring out his salary because of
@@ -3108,7 +3108,7 @@ of addresses for the daily personal-use expenditure."_
 
 Lesson: link:/wiki/Address_reuse[Address reuse] is terrible for privacy.
 
-====== [#Real_life_example_-_Hacker_hides_destination_of_445_btc_with_CoinJoin .mw-headline]#Real life example - Hacker hides destination of 445 btc with link:/wiki/CoinJoin[CoinJoin]#
+===== [#Real_life_example_-_Hacker_hides_destination_of_445_btc_with_CoinJoin .mw-headline]#Real life example - Hacker hides destination of 445 btc with link:/wiki/CoinJoin[CoinJoin]#
 
 . In May 2017 a reddit user posted a thread saying they kept 445 btc on
 blockchain.info's web wallet, and their coins were
@@ -3125,7 +3125,7 @@ For good advice on how to store bitcoins without having them stolen by
 hackers see the link:/wiki/Storing_bitcoins[Storing bitcoins] article on
 this wiki.
 
-====== [#Bad_privacy_example_-_Data_fusion_of_blockchain_data_and_web_cookies_when_online_shopping_with_Bitcoin .mw-headline]#Bad privacy example - Data fusion of blockchain data and web cookies when online shopping with Bitcoin#
+===== [#Bad_privacy_example_-_Data_fusion_of_blockchain_data_and_web_cookies_when_online_shopping_with_Bitcoin .mw-headline]#Bad privacy example - Data fusion of blockchain data and web cookies when online shopping with Bitcoin#
 
 . Online shopping has several potential privacy leaks. Examples are
 third-party tracking cookies (such as from sites Doubleclick, Google
@@ -3156,13 +3156,13 @@ payments where much less privacy-relevant information is leaked. Most
 practically as of 2019 would be using
 link:/wiki/Lightning_Network[Lightning Network] for online shopping.
 
-====== [#Bad_privacy_example_-_Centralized_mixers_being_easily_unmixed_with_amount_correlation .mw-headline]#Bad privacy example - Centralized mixers being easily unmixed with amount correlation#
+===== [#Bad_privacy_example_-_Centralized_mixers_being_easily_unmixed_with_amount_correlation .mw-headline]#Bad privacy example - Centralized mixers being easily unmixed with amount correlation#
 
 . BitcoinFog is a centralized bitcoin mixer, it charges 1-3% for a mix.
 . Someone on reddit easily unmixes many BitcoinFog mixes using
 link:#Amount_correlation[Amount correlation]^link:#cite_note-112[[112]]^
 
-====== [#Bad_privacy_example_-_Data_fusion_of_blockchain_data_and_IP_address_transaction_broadcasting_data .mw-headline]#Bad privacy example - Data fusion of blockchain data and IP address transaction broadcasting data#
+===== [#Bad_privacy_example_-_Data_fusion_of_blockchain_data_and_IP_address_transaction_broadcasting_data .mw-headline]#Bad privacy example - Data fusion of blockchain data and IP address transaction broadcasting data#
 
 . A 2018 paper^link:#cite_note-113[[113]]^ uses blockchain analysis and
 the tracking of transaction broadcasts to deanonymize bitcoin users.
@@ -3184,7 +3184,7 @@ today.
 Lesson: Private transaction broadcasting (for example over
 link:/wiki/Tor[tor]) is necessary for privacy.
 
-====== [#Real_life_example_-_2018_paper_on_analysis_of_bitcoin_ransomware_transactions .mw-headline]#Real life example - 2018 paper on analysis of bitcoin ransomware transactions#
+===== [#Real_life_example_-_2018_paper_on_analysis_of_bitcoin_ransomware_transactions .mw-headline]#Real life example - 2018 paper on analysis of bitcoin ransomware transactions#
 
 . A 2018 paper uses tracking techniques to study bitcoin
 ransomware^link:#cite_note-114[[114]]^.
