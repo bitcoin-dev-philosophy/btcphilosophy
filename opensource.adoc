@@ -49,12 +49,11 @@ all copies or substantial portions of the Software.
 ----
 
 As noted in <<_dont_trust_verify>>, it's important that users are able
-to verify that the Bitcoin software they run "`works as advertised`". To
-do that, these users must have unrestricted access to the source code
-of the software they verify.
-
-But there are several other good reasons for why Bitcoin software need
-to be open source. We will talk about some of them in the coming sections.
+to verify that the Bitcoin software they run "`works as
+advertised`". To do that, these users must have unrestricted access to
+the source code of the software they verify. In this chapter we'll
+talk about some other interesting aspects of open source software in
+Bitcoin.
 
 === Software maintenance
 
@@ -111,6 +110,10 @@ submitted, anyone can review the changes and comment on them
 regardless of whether or not they have commit access to Bitcoin Core
 itself.
 ____
+
+It should be noted that many pull requests can take a very long time
+before being merged by maintainers and that's usually because of lack
+of review, which often is due to <<_reviews,lack of _reviewers_>>.
 
 He also talks about the process around consensus changes, but that's a
 bit beyond the scope of this chapter, see instead <<upgrading>>.
@@ -322,6 +325,22 @@ least two factors that make it look bad, in some people's eyes:
 Most Bitcoin developers would argue that this openness is a good and
 healthy environment, and even necessary for producing the best
 outcome.
+
+Another important thing to mention is that, as noted in
+<<_libraries>>, since Bitcoin is money, and Bitcoin Core secures
+unfathomable amounts of money, security is not taken lightly. Seasoned
+Bitcoin Core developers might appear very hard-headed for this reason,
+and it's usually warranted. A feature with a weak rationale is not
+going to be accepted. The same would happen if it breaks the
+<<_dont_trust_verify,reproducible builds>>, adds new dependencies, or
+if your code doesn't follow
+https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md[best
+practices].
+
+New (and old) developers can get frustrated by this. But as usual in
+open source software, you can always fork the repository and merge
+whatever you want into your fork. Then you can build and run your own
+binary.
 
 ////
 Gabriella Coleman, an anthropologist who studied various open source

@@ -24,6 +24,8 @@ include::wuilletrustless.adoc[]
 
 include::corallotrustless.adoc[]
 
+include::brianddktrust.adoc[]
+
 include::cve-2018-17144.adoc[]
 
 == Adversarial thinking

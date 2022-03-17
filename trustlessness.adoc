@@ -19,9 +19,13 @@ put into the software or hardware you run. More on this trust further
 down this article.
 
 To use Bitcoin in a trustless manner, you have to run a
-fully-validating Bitcoin node. Without that, you outsource
-verification of Bitcoin data to someone else, and thus trust someone
-else which means you're not using Bitcoin trustlessly.
+fully-validating Bitcoin node. Only then will you be able to verify
+that the blocks you receive from others are following the consensus
+rules, for example that the coin issuance schedule is kept and that no
+double spends occur on the blockchain. If you don't run a full node,
+you outsource verification of Bitcoin blocks to someone else, and
+trust them to tell you the truth, which means you're not using Bitcoin
+trustlessly.
 
 Bitcoin's trustlessness is absolutely imperative from a system
 perspective. In 2018, Matt Corallo, https://btctranscripts.com/baltic-honeybadger/2018/trustlessness-scalability-and-directions-in-security-models/[spoke about trustlessness] at the
@@ -51,8 +55,28 @@ might not be programmed to do what's stated on the box. For example:
   keys to some bad actor.
 
 So besides running a full node, you also need to make sure you're
-running what you intend to. There's a mantra that many Bitcoiners
-subscribe to, which captures this well:
+running what you intend to. Reddit user brianddk
+https://www.reddit.com/r/Bitcoin/comments/smj1ep/bitcoin_v220_and_guix_stronger_defense_against/[wrote
+an article] about the various levels of trust you can chose from when
+verifying your software. In the section "Trusting the builders", he
+talks about _reproducible builds_:
+
+[quote, brianddk on Reddit, Bitcoin v22.0 and Guix; Stronger defense against the "Trusting Trust Attack"]
+____
+Reproducible builds are a way to design software so that many
+community developers can each build the software and ensure that the
+final installer built is identical to what other developers
+produce. With a very public, reproducible project like bitcoin, no
+single developer needs to be completely trusted. Many developers can
+all perform the build and attest that they produced the same file as
+the one the original builder digitally signed.
+____
+
+The article defines 5 levels of trust: Trusting the 1) site, 2)
+builders, 3) compiler, 4) kernel, and 5) hardware.
+
+There's a mantra that many Bitcoiners subscribe to, which captures
+much of the above well:
 
 [quote, Bitcoiners everywhere]
 ____
@@ -67,13 +91,14 @@ disarmament. https://twitter.com/Truthcoin/status/1491415722123153408?s=20&t=ZyR
 switched it around to highlight the rejection of trust and the
 importance of running a full node].
 
-Some users <<adversarialthinking, think adversarially>> and many aspects of the
-software they run, and reduce their needed trust to just trusting their computer
-hardware and operating system. In doing so they also help people who don't
-verify as thoroughly by raising their voices in public to warn about the issues
-they find. One good example of this is an
-https://bitcoincore.org/en/2018/09/20/notice/[event that occurred
-in 2018], where a bug was discovered that would allow miners to spend an
+Some users <<adversarialthinking, think adversarially>> and verify
+many aspects of the software they run, and reduce their needed trust
+to just trusting their computer hardware and operating system. In
+doing so they also help people who don't verify as thoroughly by
+raising their voices in public to warn about the issues they find. One
+good example of this is an
+https://bitcoincore.org/en/2018/09/20/notice/[event that occurred in
+2018], where a bug was discovered that would allow miners to spend an
 output twice in the same transaction:
 
 [quote, CVE-2018-17144 Full Disclosure, Bitcoin Core website]
