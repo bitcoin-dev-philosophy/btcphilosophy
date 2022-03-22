@@ -103,8 +103,7 @@ To better understand the minds of an adversary, it might be useful to
 get a glimpse into how they might operate. A government body named
 Office of Strategic Services, that operated during World War II,
 conducted espionage, performed sabotage and propaganda, among other
-things, wrote a
-https://www.gutenberg.org/files/26184/page-images/26184-images.pdf[manual]
+things, wrote a https://www.gutenberg.org/ebooks/26184[manual]
 for their personnel on how to sabotage. It's title was "Simple
 Sabotage Field Manual" and contained concrete tips on how to
 infiltrate the enemy to make their lives hard. They range from burning
