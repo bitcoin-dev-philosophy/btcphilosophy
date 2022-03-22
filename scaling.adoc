@@ -1,0 +1,268 @@
+== Scaling
+
+This has been a very hot topic since the early days of
+Bitcoin. Scaling can mean different things to different people, for
+example:
+
+* Increasing the transaction capacity of the blockchain
+* Use the blockchain more efficiently
+* Develop systems on top of Bitcoin
+
+In the context of Bitcoin, it might be useful to define scaling as
+_the process of increasing Bitcoin's utility_. This definition would
+encompass several different kinds of changes, for example:
+
+* Making transaction inputs use fewer bytes
+* Improving signature verification performance
+* Make peer-to-peer network use less bandwith
+* Transaction batching
+* Layered architecture
+
+=== History
+
+Scaling has been discussed since the very beginning of Bitcoin. The
+very first sentence of the
+https://satoshi.nakamotoinstitute.org/emails/cryptography/threads/1/#014814[very
+first mail response] to Satoshi's announcement of the paper on the
+Cryptography mailing list was about scaling:
+
+[quote, James A. Donald and Satoshi Nakamoto, Cryptography email list ]
+____
+Satoshi Nakamoto wrote: +
+> I've been working on a new electronic cash system that's fully +
+> peer-to-peer, with no trusted third party. +
+> +
+> The paper is available at: +
+> http://www.bitcoin.org/bitcoin.pdf
+
+We very, very much need such a system, but the way I understand your
+proposal, it does not seem to scale to the required size.
+____
+
+The conversation itself might not be very interesting or accurate, but
+it shows that scaling was a concern very early on.
+
+Scaling discussions reached peak interest around 2015-2017 where many
+different ideas floated around about if and how to increase the
+maximum block size limit. This is a rather uninteresting discussion
+about changing a parameter in the source code, a change that doesn't
+really solve anything fundamentally, but kicking the can down the
+road. 
+
+During 2015, a conference called https://scalingbitcoin.org/[Scaling
+Bitcoin] was held in Montreal, and 6 months later in Hong Kong
+followed by other locations, to address scaling. Many Bitcoin
+developers and others gathered there to discuss various scaling issues
+and proposals. Most of these discussions didn't revolve around block
+size increases but more long term solutions.
+
+After the Hong Kong conference in December 2015, Gregory Maxwell
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-December/011865.html[summarized
+his view] on many of the discussions, and started off with
+some general scaling philosophy.
+
+[quote, Gregory Maxwell on Bitcoin-dev mailing list, Capacity increases for the Bitcoin system.]
+____
+With the available technology, there are fundamental trade-offs
+between scale and decentralization. If the system is too costly people
+will be forced to trust third parties rather than independently
+enforcing the system's rules. If the Bitcoin blockchain’s resource
+usage, relative to the available technology, is too great, Bitcoin
+loses its competitive advantages compared to legacy systems because
+validation will be too costly (pricing out many users), forcing trust
+back into the system.  If capacity is too low and our methods of
+transacting too inefficient, access to the chain for dispute
+resolution will be too costly, again pushing trust back into the
+system.
+____
+
+He speaks about the trade-off between throughput and
+decentralization. If you allow for bigger blocks, you will push some
+people off the network because they don't have the resources to verify
+the blocks anymore. This was the general theme of the block size
+fight.
+
+=== Scaling approaches
+
+Scaling Bitcoin doesn't neccesarily have to be about increasing block
+size or other limitations. We'll go through some general scaling
+approaches, of which some don't suffer from the
+throughput-decentralization trade-off we mentioned in the previous
+section.
+
+==== Vertical scaling
+
+Vertical scaling is the process of increasing the computing resources
+of the machines processing data. In the case of Bitcoin this would be
+the full nodes, the machines that verifies the blockchain on behalf of
+its users.
+
+Typical vertical scaling in Bitcoin would be an increase of the block
+size limit. This would require some full nodes to upgrade their
+hardware in order to keep up with the increasing computational
+demands.
+
+The downside of this is that it happens at the cost of centralization,
+as was discussed in the previous section.
+
+==== Horizontal scaling
+
+Horizontal scaling refers to techniqes that divide the work load
+across multiple machines. While this is a very common scaling approach
+among popular web sites and databases, it's not so easy to do in
+Bitcoin.
+
+Many people refer to this scaling approach as _sharding_. You let each
+full node verify just a part of the blockchain. Peter Todd has put a
+lot of thought into the concept of sharding. He
+https://petertodd.org/2015/why-scaling-bitcoin-with-sharding-is-very-hard[wrote
+a blog post] explaining sharding from a high level, and also presented
+his own idea called _treechains_. The article is a quite hard read,
+but he makes some general points that are more digestable.
+
+[quote, Peter Todd on his blog, Why Scaling Bitcoin With Sharding Is Very Hard]
+____
+In sharded systems the “full node defense” doesn’t work, at least
+directly. The whole point is that not everyone has all the data, so
+you have to decide what happens when it’s not available.
+____
+
+[quote, Peter Todd on his blog, Why Scaling Bitcoin With Sharding Is Very Hard]
+____
+There’s a big problem though: holy !@#$ is the above complex compared
+to Bitcoin! Even the “kiddy” version of sharding - my linearization
+scheme rather than zk-SNARKS - is probably one or two orders of
+magnitude more complex than using the Bitcoin protocol is right now,
+yet right now a huge % of the companies in this space seem to have
+thrown their hands up and used centralized API providers
+instead. Actually implementing the above and getting it into the hands
+of end-users won’t be easy.
+
+On the other hand, decentralization isn’t cheap: using PayPal is one
+or two orders of magnitude simpler than the Bitcoin protocol.
+____
+
+The conclusion he makes is that sharding might be technically
+possible, but it comes at the cost of tremendous complexity. And the
+fact that many users already find Bitcoin too complex, it's going to
+be hard convincing them to use something even more complex.
+
+==== Inward scaling
+
+While horizontal and vertical scaling has worked out well historically
+in centralized systems like databases and web servers, they don't seem
+to be suitable for a decentralized network like Bitcoin due to their
+centralization effects.
+
+An approach that get far too little appreciation is what we can called
+_inward scaling_, which translates to "do more with less". It refers
+to the constantly ongoing work by many developers to optimize the
+algorithms already in place so that we can do more within the existing
+limits of the system.
+
+The amount of improvement that's been done using inward scaling is
+impressive, to say the least. To give you a high level view of the
+improvements over the years, Jameson Lopp
+https://blog.lopp.net/bitcoin-core-performance-evolution/[has run
+benchmark tests] on blockchain synchronization over many years,
+comparing different versions of Bitcoin Core.
+
+.Initial block download performance of various versions of Bitcoin Core. Source: https://blog.lopp.net/bitcoin-core-performance-evolution/
+image::Bitcoin-Core-Sync-Performance-1.png[]
+
+The improvements made could be categorized as either space (RAM, disk,
+bandwidth, etc) savings or computational savings. Both categories
+contribute to the improvements in the diagram above.
+
+As good example of computational improvements can be found in the
+https://github.com/bitcoin-core/secp256k1[libsecp256k1] library, which
+implements the cryptographic primitives needed to make and verify
+digital signatures, among other things. Pieter Wuille is one of the
+contributors to this library and he
+https://twitter.com/pwuille/status/1450471673321381896[wrote a twitter
+thread] showcasing the performance improvements made by various pull
+requests.
+
+.Performance of signature verification as a function of pull requests. Source: Pieter Wuille
+image::libsecp256k1speedups.png[]
+
+There are also several good examples of where space savings have
+contributed to performance improvements. In a Medium blog post about
+Taproot's contribution to space savings, user Murch compared how much
+block space a 2-of-3 threshold signature would require, both without
+using Taproot and using Taproot in various ways.
+
+.Space savings for different spending types Taproot and legacy versions.
+image::murch-taproot.png[]
+
+A 2-of-3 multisig using native segwit would require a total of
+104.5+43 vB = 147.5 vB, while the most space conservative Taproot
+usage would in the standard use case require only 57.5+43 vB = 100.5
+vB, and at worst in rare cases, for example when a standard signer is
+not available for some reason, 107.5+43 vB = 150.5 vB. You don't have
+to understand all the details of this, but it should give you an idea
+of how developers think about space savings.
+
+////
+
+==== Layered scaling
+
+Gregory Maxwell on layered systems (and Bitcoin).
+https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/
+
+Pieter Wuille: Why use BTC instead of PayPal or CC?
+https://bitcoin.stackexchange.com/a/75112/69518
+
+
+
+
+Jonathan Bier - The Block Size War
+https://blog.bitmex.com/the-blocksize-war-chapter-1-first-strike/
+
+Pieter - Segregated Witness And Its Impact On Scalability
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/segregated-witness-and-its-impact-on-scalability/
+
+
+
+
+=== Tradeoffs
+
+Adam Back - Scaling Tradeoffs
+https://btctranscripts.com/misc/adam3us-bitcoin-scaling-tradeoffs/
+
+
+
+
+
+Andrew Poelstra- Using The Chain For What Chains Are Good For
+"There’s a distinction between validation and execution"
+https://btctranscripts.com/scalingbitcoin/stanford-2017/using-the-chain-for-what-chains-are-good-for/
+A bit too technical
+
+
+Jonas Nick - Validation Cost Metric
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/validation-cost-metric/
+
+Peter Todd - Scaling
+https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2015/peter-todd-scalability/
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/in-adversarial-environments-blockchains-dont-scale/
+5:53:15
+How do we scale?
+Bubble sort is O(n^2), we might be able to improve it 10x, but not 100x.
+Bitcoin as we know it today is bubble sort.
+It's not a technical debate, it's politics
+Some will lose out for the benefit of others
+What can we do? Scaling without transactions
+Fundamental improvements:
+Sharding etc - NOT EASY
+We don't know what the threats are
+If we do too good of a job (with scaling/layering) there might not be enough fees for mining rewards, resulting in a less secure base layer.
+
+Gavin Andresen - his take on scaling
+https://web.archive.org/web/20150129023502/https://blog.bitcoinfoundation.org/a-scalability-roadmap/
+
+
+Layered architecture
+
+
+////

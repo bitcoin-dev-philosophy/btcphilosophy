@@ -27,3 +27,6 @@ include::finitesupply.adoc[]
 
 [[opensource]]
 include::opensource.adoc[]
+
+[[scaling]]
+include::scaling.adoc[]
