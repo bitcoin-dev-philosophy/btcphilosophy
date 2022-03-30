@@ -72,8 +72,38 @@ all perform the build and attest that they produced the same file as
 the one the original builder digitally signed.
 ____
 
-The article defines 5 levels of trust: Trusting the 1) site, 2)
-builders, 3) compiler, 4) kernel, and 5) hardware.
+The article defines 5 levels of trust: Trusting the site, the
+builders, the compiler, the kernel, and the hardware.
+
+To further deepen the topic of reproducible builds, Carl Dong
+https://btctranscripts.com/breaking-bitcoin/2019/bitcoin-build-system/[made
+a presentation about Guix]
+(https://www.youtube.com/watch?v=I2iShmUTEl8[video]) that explains why
+trusting the operating system, libraries, and compilers can be
+problematic and how to fix that with a system called Guix, which is
+used by Bitcoin today.
+
+[quote, Carl Dong on Guix, Breaking Bitcoin conference 2019]
+____
+So what can we do about the fact that our toolchain can have a bunch
+of trusted binaries that can be reproducibly malicious? We need to be
+more than reproducible. We need to be bootstrappable. We cannot have
+that many binary tools that we need to download and trust from
+external servers controlled by other organizations. We should know how
+these tools are built and exactly how we can go through the process of
+building them again, preferably from a much smaller set of trusted
+binaries. We need to minimize our trusted set of binaries as much as
+possible, and have an easily auditable path from those toolchains to
+what we use how to build bitcoin. This allows us to maximize
+verification and minimize trust.
+____
+
+He then explains how Guix can let us trust only a minimal binary of
+357 bytes, that can be verified and fully understood if you know how
+to interpret the instructions. This is quite remarkable: Verify that
+the 357 byte binary does what it should do, then use that build the
+full build system from source code and end up with a Bitcoin Core
+binary that should be an exact copy of anyone else's build.
 
 There's a mantra that many Bitcoiners subscribe to, which captures
 much of the above well:

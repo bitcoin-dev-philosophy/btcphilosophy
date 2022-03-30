@@ -7,7 +7,7 @@ and redistribution. The definition of open source at
 https://opensource.org/osd includes, among others, the following
 important points:
 
-[quote, The Open Source Definition, Open Source Initiative webside]
+[quote, The Open Source Definition, Open Source Initiative website]
 ____
 Free Redistribution:: The license shall not restrict any party from
 selling or giving away the software as a component of an aggregate
@@ -134,7 +134,7 @@ build on top of Bitcoin, among them are:
 
 Lightning Network:: A payment network that allows for fast payment of
 very small amounts. Requires very few Bitcoin transactions to be
-published to the blockchain. Various interoperable implementations
+published to the blockchain. Various inter-operable implementations
 exists, https://github.com/ElementsProject/lightning[c-lightning], https://github.com/lightningnetwork/lnd[LND], https://github.com/ACINQ/eclair[Eclair], https://github.com/lightningdevkit[Lightning Dev Kit].
 CoinJoin:: Multiple parties collaborate to combine their payments into a single transaction to make <<_blockchain_privacy,address clustering>> harder. Various implementations exist.
 Sidechains:: Lock a coin on Bitcoin's blockchain in a certain way to
@@ -153,10 +153,18 @@ Bitcoin, only protocols that the central developer granting committee
 allows would be developed.
 
 Common for all of the listed systems are that they themselves are
-licensed as open source software. It has become the gold standard of
-Bitcoin software licensing. A software project that's not open source
-will have a hard time convincing people to use it, since people can't
-verify that the software does what it says it does.
+licensed as open source software, often because they want people to
+contribute to the code, re-use the code, or review the code, without
+asking for permission. Open source has become the gold standard of
+Bitcoin software licensing
+
+////
+A software project that's not open source will have a hard time
+convincing people to use it, since people can't verify that the
+software does what it says it does, but also because people can't
+contribute to the project or re-use parts of the source code without
+asking for permission.
+////
 
 === Libraries
 
@@ -166,11 +174,15 @@ ecosystem. But Bitcoin software deals with real money, and as such it
 needs to be extra careful when choosing which third party libraries it
 will depend on.
 
-In a https://www.youtube.com/watch?v=Gs9lJTRZCDc&t=2239s[philosophical
-talk about cryptography], Gregory Maxwell wants to redefine the term
-cryptography which he believes is too narrow. He speaks about how,
-fundamentally, _information wants to be free_, and makes his
-definition of cryptography based on that:
+// https://www.youtube.com/watch?v=Gs9lJTRZCDc&t=2239s
+
+In a
+https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cryptography/#:~:text=art%20of%20selection%20cryptography[philosophical
+talk about cryptography] (search for the relevant part that starts
+with "`The art of selection cryptography`"), Gregory Maxwell wants to
+redefine the term cryptography which he believes is too narrow. He
+speaks about how, fundamentally, _information wants to be free_, and
+makes his definition of cryptography based on that:
 
 [quote, Gregory Maxwell, The Art Of Selection Cryptography]
 ____
@@ -274,6 +286,77 @@ The second half of the post covers some really useful hands-on
 technical guidance on how to actually do the reviews, and provides
 links to important documentation for further reading.
 
+Gloria Zhao has written
+https://github.com/glozow/bitcoin-notes/blob/master/review-checklist.md[a
+guide with questions] she might ask herself during a review. She also
+explains what she consider a good review.
+
+[quote, Gloria Zhao on GitHub, Common PR Review Questions]
+____
+I personally think a good review is one where I've asked myself a lot
+of pointed questions about the PR and been satisfied with the answers
+to them.
+
+...
+
+Naturally, I start with conceptual questions, then approach-related
+questions, and then implementation questions. Generally, I personally
+think it's useless to leave C++ syntax-related comments on a draft PR,
+and would feel rude going back to "does this make sense" after the
+author has addressed 20+ of my code organization suggestions.
+____
+
+She proposes lots of questions at various levels of review, but
+stresses that this list is not in any way exhaustive or that it should
+be used as a straight-out recipe. The list is illustrated with
+real-world examples from GitHub.
+
+=== Funding
+
+Lots of people work with Bitcoin open souce development, for Bitcoin
+Core or for other projects. Some do it on their spare time without
+getting any compensation, but many developers are actually getting
+paid to do it.
+
+Companies, individuals, and organizations who have an interest in
+Bitcoin's continued success can donate funds to developers, either
+directly or through organizations that distribute the funds to
+individual developers. The website polylunar.com has
+https://polylunar.com/bitcoin-grants-tracker/[compiled a list of
+grants] made by a broad range of individuals, organizations, and
+companies.
+
+There are also a number of Bitcoin-focussed companies who hire Bitcoin
+developers to let them work full-time on Bitcoin. These hires often
+comes with special clauses in their contracts saying that the company
+has no say in the direction of development.
+
+In a talk about open source development funding, Tadge Dryja
+https://btctranscripts.com/cryptoeconomic-systems/2019/funding/[summarizes
+a number of funding models]
+(https://www.youtube.com/watch?v=IPtWegnXhJQ&list=PLaXwSyee0z4zWO0JLgcwhnjKqNBNJhBXY&index=32[video])
+used for open source projects, not only Bitcoin. On his question about
+how to fund Bitcoin he answers:
+
+[quote, Tadge Dryja, Cryptoeconomic Systems Summit '19]
+____
+Bitcoin seems to have sublinear development costs. When bitcoin was
+$20, there was a bunch of people working on it. Then we had these
+coredev.tech meetings, and as bitcoin is worth 100s of times worth
+more now, there’s not even 2x as many people working on it. There’s
+more people working on it, as the price has gone up, but it’s
+definitely sublinear.
+____
+
+The 2x figure should be taken with a grain of salt, it's probably
+more, but his point is that the amount of development work scales
+sublinearly with the price of bitcoin. He's not sure whether that's a
+good thing or a bad thing. On one hand we'd get even better systems
+with more funding, but on the other hand we'd get almost as good a
+system with less funding. The https://coredev.tech/[coredev.tech] he
+mentions is an initiative by developers to meet in person to write and
+review code together, but it seems to be discontinued at this point.
+
 === Culture shock
 
 People sometimes get the impression that there's a lot of infighting
@@ -307,6 +390,16 @@ not investing as much additional review effort as they would be
 investing if they felt confident about the activation timeframe.
 ____
 
+Eventually, this dispute got resolved through a new proposal from
+David Harding and Russel O'Connor called _Speedy Trial_, which would
+be a comparatively short signalling period to give miners a chance to
+lock in activation of Taproot, or fail fast. If they do activate
+within that window, then Taproot activates approximately 6 months
+later. If they don't, then the community has gained some new knowledge
+about the miners' intentions, and can make a new proposal for
+deployment. This upgrade will be covered in more detail in
+<<upgrading>>.
+
 Someone not used to Bitcoin's development process would probably think
 these heated debates look awfully bad and even toxic. There are at
 least two factors that make it look bad, in some people's eyes:
@@ -320,7 +413,7 @@ least two factors that make it look bad, in some people's eyes:
   their opinions. This is fundamentally different from a closed source
   company that have a handful of people with an opinion, usually
   like-minded. The plethora of expressed opinions in Bitcoin is simply
-  staggering compared to, for example PayPal.
+  staggering compared to for example PayPal.
 
 Most Bitcoin developers would argue that this openness is a good and
 healthy environment, and even necessary for producing the best
