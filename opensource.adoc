@@ -113,7 +113,7 @@ ____
 
 It should be noted that many pull requests can take a very long time
 before being merged by maintainers and that's usually because of lack
-of review, which often is due to <<_reviews,lack of _reviewers_>>.
+of review, which often is due to <<_review,lack of _reviewers_>>.
 
 He also talks about the process around consensus changes, but that's a
 bit beyond the scope of this chapter, see instead <<upgrading>>.
@@ -324,12 +324,8 @@ directly or through organizations that distribute the funds to
 individual developers. The website polylunar.com has
 https://polylunar.com/bitcoin-grants-tracker/[compiled a list of
 grants] made by a broad range of individuals, organizations, and
-companies.
-
-There are also a number of Bitcoin-focussed companies who hire Bitcoin
-developers to let them work full-time on Bitcoin. These hires often
-comes with special clauses in their contracts saying that the company
-has no say in the direction of development.
+companies. There are also a number of Bitcoin-focussed companies that
+hire skilled Bitcoin developers to let them work full-time on Bitcoin.
 
 In a talk about open source development funding, Tadge Dryja
 https://btctranscripts.com/cryptoeconomic-systems/2019/funding/[summarizes
