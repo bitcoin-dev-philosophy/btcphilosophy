@@ -78,11 +78,13 @@ $ cd btcphilosophy
 and then build using `asciidoctor`:
 
 ----
-$ asciidoctor btcphilosophy.adoc
+$ asciidoctor -v btcphilosophy.adoc
 ----
 
-This will result in a file `btcphilosophy.html` in your current
-directory that you can view in any browser, for example:
+The `-v` flag is recommended and instructs asciidoctor to be verbose,
+which means it will show invalid references and other issues. The
+above command will result in a file `btcphilosophy.html` in your
+current directory that you can view in any browser, for example:
 
 ----
 $ brave-browser btcphilosophy.html
@@ -92,7 +94,7 @@ The source material is collected and maintained as a separate book
 under the `sources` folder. To build it:
 
 ----
-$ asciidoctor sources/sources.adoc
+$ asciidoctor -v sources/sources.adoc
 ----
 
 This will result in a file `sources/sources.html` that you can open in
