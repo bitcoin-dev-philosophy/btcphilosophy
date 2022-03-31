@@ -1,0 +1,57 @@
+[appendix]
+== Discussion Questions
+
+These discussion questions are not just a recap of the content in "Bitcoin development philosophy", they are meant to encourage you to research further so make sure to go out and explore.
+
+
+=== Decentralization
+
+* Decentralization is hard. Why do we go through all of this hassle to make it work? Could we opt for a hybrid approach, where some parts are centralized and others aren't?
+* Does decentralization introduce the double spending problem, or does the double spending problem require decentralization? How did Satoshi solve the double spending problem?
+* In which aspects is Bitcoin still most prone to censorship, and why is censorship such a bad thing? Are there any arguments in favor of censorship?
+* It is stated that Bitcoin is permissionless. Are there any other payment methods you could consider permissionless?
+
+
+=== Trustlessness
+
+* Trustlessness is often a spectrum, not binary. Which aspects of Bitcoin are rather trustless, and which typically involve a higher level of trust? Can they be mitigated?
+* You want to run a full node to be able to fully validate all transactions. You download Bitcoin Core from https://bitcoin.org/en/download. Where did you place trust, and where are you fully trustless?
+* Why can't you build a trustless system on top of a trusted system?
+
+
+=== Adversarial thinking
+
+* What is a sybil attack, and what makes a decentralized network so prone to it?
+* Why is it important that all players in the Bitcoin network - and not just developers - think adversarially?
+
+
+=== Privacy
+
+* What are some important benefits a user gains when he maintains good privacy when interacting with Bitcoin? What are some altruistic benefits for the network?
+* How does reusing addresses affect your privacy?
+* Bitcoin uses a UTXO model, whereas some alternative cryptocurrencies use an account model. What are the implications of this choice on privacy?
+
+
+=== Finite supply
+
+* What is the relation between Bitcoin's finite supply and its coin issuance through the coinbase transaction? What is the relation between coin issuance and security budget, and how are they at odds?
+* What parameters could Satoshi have tweaked to change Bitcoin's supply cap? What would change if he had decided to cap the supply to 1 million? What about 1 trillion?
+* Why are some people advocating for an increase in Bitcoin supply? Do you think this will happen?
+
+
+=== Open source
+
+* Only a handful of maintainers have the necessary GitHub permissions to merge code into into the https://github.com/bitcoin/bitcoin repository. Isn't that at odds with a permissionless network?
+* Is the open source development process prone to a sybil attack? If so, how would you counter that?
+* What are the benefits and downsides of relying on third party open source libraries, and what is the approach taken with Bitcoin Core?
+* In which ways do we need review beyond just code review? How to determine how much review is enough?
+* How do we ensure there will always be sufficient people with expertise working on Bitcoin? What happens when there aren't, and how do we asses their integrity and intentions?
+
+
+=== Scaling
+
+* It is argued that sharding offers scaling benefits at the cost of complexity. Why should we or should we not adopt technological improvements because they are difficult to understand, even if they appear technologically sound?
+* What are some examples of inward scaling methods introduced in Bitcoin?
+* Why is vertical scaling much more difficult in a decentralized system? What about horizontal scaling?
+* We don't seem to be anywhere near having consensus on how we could onboard the entire world onto Bitcoin. Shouldn't Satoshi have at least thought of a path of getting there, before mining the first block in 2009?
+* How would you classify (vertical, horizontal, inward, or not a scaling technique) each of the following: sharding, blocksize increase, SegWit, SPV nodes, centralized exchanges, Lightning Network, block interval decrease, Taproot, sidechains
