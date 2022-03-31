@@ -51,7 +51,7 @@ road.
 
 During 2015, a conference called https://scalingbitcoin.org/[Scaling
 Bitcoin] was held in Montreal, and 6 months later in Hong Kong
-followed by other locations, to address scaling. Many Bitcoin
+followed by other locations to address scaling. Many Bitcoin
 developers and others gathered there to discuss various scaling issues
 and proposals. Most of these discussions didn't revolve around block
 size increases but more long term solutions.
@@ -103,18 +103,63 @@ hardware in order to keep up with the increasing computational
 demands.
 
 The downside of this is that it happens at the cost of centralization,
-as was discussed in the previous section.
+as was discussed in the previous section and more in-depth in
+<<https://rosenbaum.se/btcphil/#_full_node_decentralization>>.
+
+This scaling approach could also cause damage to
+<<_miner_decentralization>> decentralization.
+
+Let's have a look on how mining "`should`" operate. Say a miner mines
+block at height 7 and publishes that block to the Bitcoin network. It
+will take some time for this block to reach broad acceptance mainly
+due to two factors:
+
+* Transfer of the block between peers take time due to bandwidth
+  limitations.
+* Verification of the block takes time.
+
+During the time it takes for block 7 to propagate, many miners still
+mine on top of block 6 because they haven't received and validated
+block 7 yet. If any of these miners finds a new block at height 7, it
+means that we're going to have two competing blocks at height 7. There
+can only be one block at height 7, which means that one of the two
+candidates must become stale.
+
+In short, stale blocks happen because it takes time for blocks to
+propagate.
+
+Suppose that the block size limit is lifted and that the average block
+size increased substantially. This would mean that blocks would
+propagate slower across the network, due to both bandwidth limitations
+and to verification time. An increased time for propagation will also
+increase the chance of stale blocks.
+
+Miners don't like to have their blocks staled, because they'll lose
+their block reward, so they will do what they can to avoid this
+scenario. Among the things they can do:
+
+* Delay validation of an incoming block. Just check its proof-of-work
+  and mine on top of it while you download and validate it. This
+  undermines the <<_full_node_decentralization>> of the system since you,
+  at least temporarily, defer to trusting the blocks.
+* Connect to a mining pool with greater bandwidth and connectivity,
+  which hurts <<_miner_decentralization>>.
+
+
+https://bitcoinmagazine.com/business/why-bitcoin-mining-pools-aren-t-incentivized-to-broadcast-blocks-quickly-1475249510
+
+
 
 ==== Horizontal scaling
 
-Horizontal scaling refers to techniqes that divide the work load
+Horizontal scaling refers to techniques that divide the work load
 across multiple machines. While this is a very common scaling approach
 among popular web sites and databases, it's not so easy to do in
 Bitcoin.
 
-Many people refer to this scaling approach as _sharding_. You let each
-full node verify just a part of the blockchain. Peter Todd has put a
-lot of thought into the concept of sharding. He
+Many people refer to this Bitcoin scaling approach as _sharding_. You
+let each full node verify just a part of the blockchain. Peter Todd
+has put a lot of thought into the concept of sharding. He
 https://petertodd.org/2015/why-scaling-bitcoin-with-sharding-is-very-hard[wrote
 a blog post] explaining sharding from a high level, and also presented
 his own idea called _treechains_. The article is a quite hard read,
@@ -126,6 +171,9 @@ In sharded systems the “full node defense” doesn’t work, at least
 directly. The whole point is that not everyone has all the data, so
 you have to decide what happens when it’s not available.
 ____
+
+Then he explains various ideas on how to tackle sharding, or
+horizontal scaling. Towards the end he concludes:
 
 [quote, Peter Todd on his blog, Why Scaling Bitcoin With Sharding Is Very Hard]
 ____
@@ -142,10 +190,11 @@ On the other hand, decentralization isn’t cheap: using PayPal is one
 or two orders of magnitude simpler than the Bitcoin protocol.
 ____
 
-The conclusion he makes is that sharding might be technically
-possible, but it comes at the cost of tremendous complexity. And the
-fact that many users already find Bitcoin too complex, it's going to
-be hard convincing them to use something even more complex.
+The conclusion he makes is that sharding _might_ be technically
+possible, but it comes at the cost of tremendous complexity. And given
+the fact that many users already find Bitcoin too complex and instead
+use centralized services, it's going to be hard convincing them to use
+something even more complex.
 
 ==== Inward scaling
 
@@ -154,7 +203,7 @@ in centralized systems like databases and web servers, they don't seem
 to be suitable for a decentralized network like Bitcoin due to their
 centralization effects.
 
-An approach that get far too little appreciation is what we can called
+An approach that get far too little appreciation is what we can call
 _inward scaling_, which translates to "do more with less". It refers
 to the constantly ongoing work by many developers to optimize the
 algorithms already in place so that we can do more within the existing
@@ -174,7 +223,7 @@ The improvements made could be categorized as either space (RAM, disk,
 bandwidth, etc) savings or computational savings. Both categories
 contribute to the improvements in the diagram above.
 
-As good example of computational improvements can be found in the
+A good example of computational improvements can be found in the
 https://github.com/bitcoin-core/secp256k1[libsecp256k1] library, which
 implements the cryptographic primitives needed to make and verify
 digital signatures, among other things. Pieter Wuille is one of the
@@ -203,13 +252,98 @@ not available for some reason, 107.5+43 vB = 150.5 vB. You don't have
 to understand all the details of this, but it should give you an idea
 of how developers think about space savings.
 
-////
+There are also lots of good ways for users to do inward
+scaling. BATCHING CONSOLIDATION
 
 ==== Layered scaling
 
-Gregory Maxwell on layered systems (and Bitcoin).
-https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/
+The most impactful approach to scaling is probably layering. The
+general idea of layering is that a protocol can settle payments
+between users without adding transactions to the blockchain
+at all. This was already discussed briefly in <<trustlessness>> and
+<<_privacy_measures>>.
 
+A layered protocol is typically started by two or more people agreeing
+on a start transaction that's put on the blockchain, as illustrated in
+<<fig-scaling-layer>>.
+
+[[fig-scaling-layer]]
+.A typical protocol, layer 2, on top of Bitcoin, layer 1.
+image::scaling-layer.png[]
+
+How this start transaction is created varies widely, but a common
+theme is that the participants has a number of semi-signed
+transactions that spend the output of the start transaction in
+different ways. A semi-signed transaction can be made fully signed and
+put on the blockchain if someone misbehaves, to punish them. This
+keeps the participants' incentives aligned so that the protocol can
+work in a trustless way.
+
+After the start transaction is on the blockchain, the protocol can do
+what it's supposed to do, for example super-fast payment between
+participants, or some privacy enhancing techniques, or to do more
+advanced scripting not supported on Bitcoin's blockchain.
+
+We won't go into more detail on how specific protocols work, but as
+you can see in <<fig-scaling-layer>>, the blockchain is rarely used
+during the protocol's life cycle. All the juicy action happens
+_off-chain_. We've seen how this can be a win for privacy if done
+right, but it can also be a big win for scalability.
+
+In a https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/[Reddit post] titled "`A trip to the moon requires a rocket with
+multiple stages or otherwise the rocket equation will eat your
+lunch... packing everyone in clown-car style into a trebuchet and
+hoping for success is right out.`", Gregory Maxwell explains how
+layering is our best shot at getting Bitcoin to scale by orders of
+magnitudes.
+
+He starts by emphasizing the fallacy in viewing Visa or Mastercard as
+Bitcoin's main competitors and how increasing the maximum block size
+is a bad approach to meet said competition. Then he's talking about
+how to make some real difference using layers.
+
+[quote, Gregory Maxwell, r/Bitcoin on Reddit]
+____
+So-- Does that mean that Bitcoin can't be a big winner as a payments
+technology? No. But to reach the kind of capacity required to serve
+the payments needs of the world we must work more intelligently.
+
+From its very beginning Bitcoin was design to incorporate layers in
+secure ways through its smart contracting capability (What, do you
+think that was just put there so people could wax-philosophic about
+meaningless "DAOs"?). In effect we will use the Bitcoin system as a
+highly accessible and perfectly trustworthy robotic judge and conduct
+most of our business outside of the court room-- but transact in such
+a way that if something goes wrong we have all the evidence and
+established agreements so we can be confident that the robotic court
+will make it right. (Geek sidebar: If this seems impossible, go read
+this old post on transaction cut-through)
+
+This is possible precisely because of the core properties of
+Bitcoin. A censorable or reversible base system is not very suitable
+to build powerful upper layer transaction processing on top of... and
+if the underlying asset isn't sound, there is little point in
+transacting with it at all.
+____
+
+The analogy with the judge is quite illustrative of how layering
+works, and this judge must be uncorruptable, and never change her
+mind, otherwise the layers above Bitcoin's base layer will not work
+reliably.
+
+He later makes a good point about centralized services. There's no
+problem with trusting a central server with trivial amounts of Bitcoin
+to get things done. That's also a layered solution.
+
+Many years have past since Maxwell wrote the piece above, and his
+words still stand correct. The success of the Lightning Network proves
+that layering is indeed a way forward to increase the utility of
+Bitcoin.
+
+
+
+
+////
 Pieter Wuille: Why use BTC instead of PayPal or CC?
 https://bitcoin.stackexchange.com/a/75112/69518
 
@@ -221,18 +355,19 @@ https://blog.bitmex.com/the-blocksize-war-chapter-1-first-strike/
 
 Pieter - Segregated Witness And Its Impact On Scalability
 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/segregated-witness-and-its-impact-on-scalability/
-
+////
 
 
 
 === Tradeoffs
 
+////
 Adam Back - Scaling Tradeoffs
 https://btctranscripts.com/misc/adam3us-bitcoin-scaling-tradeoffs/
+////
 
 
-
-
+////
 
 Andrew Poelstra- Using The Chain For What Chains Are Good For
 "There’s a distinction between validation and execution"
@@ -263,6 +398,5 @@ https://web.archive.org/web/20150129023502/https://blog.bitcoinfoundation.org/a-
 
 
 Layered architecture
-
 
 ////
