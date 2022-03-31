@@ -22,11 +22,20 @@ include::privacy.adoc[]
 [[finitesupply]]
 include::finitesupply.adoc[]
 
-//[[fugibility]]
-//include::fungibility.adoc[]
+[[fungibility]]
+include::fungibility.adoc[]
 
 [[opensource]]
 include::opensource.adoc[]
 
 [[scaling]]
 include::scaling.adoc[]
+
+[[upgrading]]
+include::upgrading.adoc[]
+
+[[whenshithitsthefan]]
+include::when-shit-hits-the-fan.adoc[]
+
+[[casestudy]]
+include::case-study.adoc[]

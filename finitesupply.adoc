@@ -2,10 +2,11 @@
 
 Is it set in stone that Bitcoin has a finite supply of 21 million BTC? No. First of all, the famous number 21 million is only approximate. Pieter Wuille clears things up regarding the exact amount https://bitcoin.stackexchange.com/a/38998/69518[on Stack Exchange].
 
-[cite, Pieter Wuille, Stack Exchange]
+[quote, Pieter Wuille, Stack Exchange]
 ____
 However ... however ... however ...
 ____
+
 Due to a number of reasons -- such as early problems with coinbase transactions, miners that unintentionally claim less than allowed, and loss of private keys -- the upper limit of 21m will never be reached.
 
 What's more important than the exact number is how the consensus rule of limited supply is enforced without a central authority. Alias chytrik puts it well on https://bitcoin.stackexchange.com/a/106830/69518[Stack Exchange].

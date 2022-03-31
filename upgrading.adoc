@@ -1,0 +1,20 @@
+== Upgrading
+
+////
+"Speedy Trial" emerges: https://gnusha.org/taproot-activation/2021-03-05.log
+
+[quote, #taproot-activation IRC log]
+____
+06:42 < harding> roconnor: is somebody proposing BIP8(3m, false)?  I mentioned that the other day but I didn't see any responses.
+06:43 <@michaelfolkson> If you weren't following everything you'd be running an old version or whatever Core put out
+06:43 < roconnor> I have had shower thoughts of core releasing a point relase who's only different is a relase note item that reads "Do not upgrade to this version if you don't want taproot". :D
+06:43 < willcl_ark_> Amusingly, I was just thinking to myself that, vs this, the SegWit activation was actually pretty straightforward: simply a LOT=false and if it fails a UASF.
+06:43 < maybehuman> it's funny, "let's see what happens" (i.e. false, 3m) was a poular choice right at the beginning of this channel iirc
+06:44 < roconnor> harding: I think I am.  I don't know how much that is worth.  Mostly I think it would be a widely acceptable configuration based on my understanding of everyone's concerns.
+06:44 < willcl_ark_> maybehuman: becuase everybody actually wants this, even miners reckoned they could upgrade in about two weeks (or at least f2pool said that)
+06:44 < roconnor> harding: BIP8(3m,false) with an extended lockin-period.
+06:45 < harding> roconnor: oh, good.  It's been my favorite option since I first summarized the options on the wiki like seven months ago.
+06:45 <@michaelfolkson> UASF wouldn't release (true,3m) but yeah Core could release (false, 3m)
+06:45 < willcl_ark_> harding: It certainly seems like a good approach to me. _if_ that fails, then you can try an understand why, without wasting too much time
+____
+////
