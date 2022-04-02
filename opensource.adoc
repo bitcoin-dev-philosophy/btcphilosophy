@@ -415,6 +415,12 @@ Most Bitcoin developers would argue that this openness is a good and
 healthy environment, and even necessary for producing the best
 outcome.
 
+As hinted in <<sabotage,the Adversarial thinking chapter>>, the second
+bullet above comes with a downside. An attacker could use stalling
+tactics, from the https://www.gutenberg.org/ebooks/26184[Simple
+Sabotage Field Manual] for example, to distort the decision making and
+development process.
+
 Another important thing to mention is that, as noted in
 <<_libraries>>, since Bitcoin is money, and Bitcoin Core secures
 unfathomable amounts of money, security is not taken lightly. Seasoned

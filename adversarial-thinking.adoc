@@ -92,13 +92,22 @@ completely isolating a node from the honest network can be helpful in
 the execution of other attacks.
 ____
 
-These are examples of real threats that need to be taken care of.
+This type of attack is called a _Sybil attack_, which means that a
+single entity controls multiple nodes in a network, to make it appear
+as multiple entities. But as the quote also mentions, the Sybil attack
+is not effective on the Bitcoin network, because you're not in any way
+voting with nodes or entities, but <<one-cpu-one-vote,with computing
+power>>, but it can help carrying out other attacks.
+
+The above are examples of real threats that need to be taken care of.
 
 [.float-group]
 --
+[[fig-sabotage-manual]]
 .Exerpt from the Simple Sabotage Field Manual
 image::sabotage-manual.png[role="right half-width"]
 
+[[sabotage]]
 To better understand the minds of an adversary, it might be useful to
 get a glimpse into how they might operate. A government body named
 Office of Strategic Services, that operated during World War II,
@@ -108,39 +117,20 @@ for their personnel on how to sabotage. It's title was "Simple
 Sabotage Field Manual" and contained concrete tips on how to
 infiltrate the enemy to make their lives hard. They range from burning
 down warehouses to causing wear to drills to decrease the enemy's
-efficiency. For example, there is a section about how an infiltrator
-can disrupt organizations.
+efficiency.
 
-////
-[quote, Office of Strategic Services, Simple Sabotage Field Manual]
-____
-[Formatting edited]
-*General Interference with Organisations and Production*
+For example, there is a section (<<fig-sabotage-manual>>) about how an
+infiltrator can disrupt organizations. It's not hard to see how such
+tactics could be used to target the Bitcoin development process (see
+<<opensource>>), which is open for anyone to participate in. A
+dedicated attacker can keep stalling progress by endless concerns of
+irrelevant issues, haggle over precise wordings, attempt to reiterate
+already comprehensively addressed discussions. Not only that, the
+attacker can also hire a troll army to multiply their effectiveness,
+we can call it a social Sybil attack. Using a social Sybil attack,
+they can make it look like there's more resistance against a proposed
+change than there actually is.
 
-* Organizations and Conferences
-1. Insist on doing everything through "channels." Never permit
-short-cuts to be taken in order to expedite decisions.
-2. Make "speeches." Talk as frequently as possible and at great
-length. Illustrate your "points" by long anecdotes and accounts of
-personal experiences. Never hesitate to make a few appropriate
-"patriotic" comments.
-3. When possible, refer all matters to committees, for "further study
-and consideration." Attempt to make the committees as large as
-possible — never less than five.
-4. Bring up irrelevant issues as frequently as possible.
-5. Haggle over precise wordings of communications, minutes,
-resolutions.
-6. Refer back to matters decided upon at the last meeting and attempt
-to re-open the question of the advisability of that decision.
-7. Advocate "caution." Be "reasonable" and urge your fellow-conferees
-to be "reasonable" and avoid haste which might result in
-embarrassments or difficulties later on.
-8. Be worried about the propriety of any decision — raise the question
-of whether such action as is contemplated lies within the jurisdiction
-of the group or whether it might conflict with the policy of some
-higher echelon.
-____
-////
 This highlights how a determined state can and will do everything in
 their power to destroy their enemy, including breaking it down from
 the inside.

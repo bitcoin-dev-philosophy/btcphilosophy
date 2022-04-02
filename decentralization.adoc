@@ -53,6 +53,7 @@ https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_o
 Maxwell on Reddit] where he responds to someone who proposes to limit
 miners' hashpower to avoid 51% attacks:
 
+[[one-cpu-one-vote]]
 [quote, Gregory Maxwell, r/Bitcoin subreddit]
 ____
 A decentralized system like Bitcoin uses a public election. But you
