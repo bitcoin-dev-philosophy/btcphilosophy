@@ -8,3 +8,5 @@
 :docinfo: shared
 :docinfodir: {stylesdir}
 :xrefstyle: short
+:big-width: width=75%
+:half-width: width=50%

@@ -17,4 +17,7 @@ ____
 06:45 <@michaelfolkson> UASF wouldn't release (true,3m) but yeah Core could release (false, 3m)
 06:45 < willcl_ark_> harding: It certainly seems like a good approach to me. _if_ that fails, then you can try an understand why, without wasting too much time
 ____
+
+Harding excerpt taproot activation
+https://gist.github.com/harding/4cad67840f386bfa8bca0b6f325eb6e9
 ////

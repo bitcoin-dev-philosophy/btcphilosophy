@@ -18,6 +18,8 @@ parties". This is different from the trust that you inevitably have to
 put into the software or hardware you run. More on this trust further
 down this article.
 
+IMPORTANCE OF TRUSTLESSNESS See Issue https://github.com/kallerosenbaum/btcphilosophy/issues/15
+
 To use Bitcoin in a trustless manner, you have to run a
 fully-validating Bitcoin node. Only then will you be able to verify
 that the blocks you receive from others are following the consensus

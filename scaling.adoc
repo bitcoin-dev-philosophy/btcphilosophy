@@ -1,22 +1,23 @@
 == Scaling
 
-This has been a very hot topic since the early days of
-Bitcoin. Scaling can mean different things to different people, for
-example:
-
-* Increasing the transaction capacity of the blockchain
-* Use the blockchain more efficiently
-* Develop systems on top of Bitcoin
+Scaling has been a very hot topic since the early days of Bitcoin, but
+it can mean different things to different people, for example
+increasing the transaction capacity of the blockchain, use the
+blockchain more efficiently, or develop systems on top of Bitcoin.
 
 In the context of Bitcoin, it might be useful to define scaling as
-_the process of increasing Bitcoin's utility_. This definition would
-encompass several different kinds of changes, for example:
+_increasing Bitcoin's usage capacity without compromising its
+censorship resistance_. This definition would encompass several
+different kinds of changes, for example:
 
 * Making transaction inputs use fewer bytes
 * Improving signature verification performance
-* Make peer-to-peer network use less bandwith
+* Make the peer-to-peer network use less bandwidth
 * Transaction batching
 * Layered architecture
+
+We'll soon dive into different approaches to scaling, but let's start
+with a brief overview of Bitcoin's history in the context of scaling.
 
 === History
 
@@ -46,12 +47,12 @@ Scaling discussions reached peak interest around 2015-2017 where many
 different ideas floated around about if and how to increase the
 maximum block size limit. This is a rather uninteresting discussion
 about changing a parameter in the source code, a change that doesn't
-really solve anything fundamentally, but kicking the can down the
-road. 
+really solve anything fundamentally, but pushes the problem of scaling
+further into the future, building technical debt.
 
 During 2015, a conference called https://scalingbitcoin.org/[Scaling
 Bitcoin] was held in Montreal, and 6 months later in Hong Kong
-followed by other locations to address scaling. Many Bitcoin
+followed by other locations, to address scaling. Many Bitcoin
 developers and others gathered there to discuss various scaling issues
 and proposals. Most of these discussions didn't revolve around block
 size increases but more long term solutions.
@@ -79,14 +80,22 @@ ____
 He speaks about the trade-off between throughput and
 decentralization. If you allow for bigger blocks, you will push some
 people off the network because they don't have the resources to verify
-the blocks anymore. This was the general theme of the block size
-fight.
+the blocks anymore. But on the other hand, if access to block space
+becomes more expensive, fewer people will afford to use it as a
+dispute resolution mechanism. In both these cases users are pushed
+towards trusted services.
+
+He further summarizes the many approaches to scaling presented at the
+conference. Among them are more computationally efficient signature
+verifications, _segregated witness_ including a block size limit
+change, a more space-efficient block propagation mechanism, and
+building protocols on top of Bitcoin in layers.
 
 === Scaling approaches
 
-Scaling Bitcoin doesn't neccesarily have to be about increasing block
-size or other limitations. We'll go through some general scaling
-approaches, of which some don't suffer from the
+As hinted above, scaling Bitcoin doesn't necessarily have to be about
+increasing the block size limit or other limits. We'll go through some
+general scaling approaches, of which some don't suffer from the
 throughput-decentralization trade-off we mentioned in the previous
 section.
 
@@ -97,22 +106,20 @@ of the machines processing data. In the case of Bitcoin this would be
 the full nodes, the machines that verifies the blockchain on behalf of
 its users.
 
-Typical vertical scaling in Bitcoin would be an increase of the block
-size limit. This would require some full nodes to upgrade their
+Typically, vertical scaling in Bitcoin would be an increase of the
+block size limit. This would require some full nodes to upgrade their
 hardware in order to keep up with the increasing computational
-demands.
+demands. The downside of this is that it happens at the cost of
+centralization, as was discussed in the previous section and more
+in-depth in <<_full_node_decentralization>>.
 
-The downside of this is that it happens at the cost of centralization,
-as was discussed in the previous section and more in-depth in
-<<https://rosenbaum.se/btcphil/#_full_node_decentralization>>.
-
-This scaling approach could also cause damage to
-<<_miner_decentralization>> decentralization.
-
-Let's have a look on how mining "`should`" operate. Say a miner mines
-block at height 7 and publishes that block to the Bitcoin network. It
-will take some time for this block to reach broad acceptance mainly
-due to two factors:
+Besides the negative effects on full node decentralization, vertical
+scaling also potentially negatively impacts Bitcoin's
+<<_miner_decentralization,mining decentralization>> and security in
+non-obvious ways. Let's have a look on how miners "`should`"
+operate. Say a miner mines a block at height 7 and publishes that
+block to the Bitcoin network. It will take some time for this block to
+reach broad acceptance mainly due to two factors:
 
 * Transfer of the block between peers take time due to bandwidth
   limitations.
@@ -120,13 +127,14 @@ due to two factors:
 
 During the time it takes for block 7 to propagate, many miners still
 mine on top of block 6 because they haven't received and validated
-block 7 yet. If any of these miners finds a new block at height 7, it
-means that we're going to have two competing blocks at height 7. There
-can only be one block at height 7, which means that one of the two
-candidates must become stale.
+block 7 yet. If, during this time, any of these miners finds a new
+block at height 7, it means that we're going to have two competing
+blocks at that height. There can only be one block at height 7, which
+means that one of the two candidates must become stale.
 
 In short, stale blocks happen because it takes time for blocks to
-propagate.
+propagate, and the more time propagation takes, the higher the
+probability of stale blocks.
 
 Suppose that the block size limit is lifted and that the average block
 size increased substantially. This would mean that blocks would
@@ -138,17 +146,22 @@ Miners don't like to have their blocks staled, because they'll lose
 their block reward, so they will do what they can to avoid this
 scenario. Among the things they can do:
 
-* Delay validation of an incoming block. Just check its proof-of-work
-  and mine on top of it while you download and validate it. This
-  undermines the <<_full_node_decentralization>> of the system since you,
-  at least temporarily, defer to trusting the blocks.
-* Connect to a mining pool with greater bandwidth and connectivity,
-  which hurts <<_miner_decentralization>>.
+* Delay validation of an incoming block, also known as _validationless
+  mining_. Just check the block header's proof-of-work and mine on top
+  of it while you download the full block and validate it.
+* Connect to a mining pool with greater bandwidth and connectivity.
 
+Validationless mining further undermines the
+<<_full_node_decentralization, full node decentralization>> of the
+system since the miner, at least temporarily, defers to trusting
+incoming blocks. It also hurts security to some degree because a
+portion of the network's computing power is potentially building on an
+invalid blockchain, instead of building on the strongest valid chain.
 
-https://bitcoinmagazine.com/business/why-bitcoin-mining-pools-aren-t-incentivized-to-broadcast-blocks-quickly-1475249510
-
-
+The second bullet, has a negative effect on
+<<_miner_decentralization,miner decentralization>>, because the larger
+pools usually are the ones with the best network connectivity and
+bandwidth.
 
 ==== Horizontal scaling
 
@@ -163,7 +176,7 @@ has put a lot of thought into the concept of sharding. He
 https://petertodd.org/2015/why-scaling-bitcoin-with-sharding-is-very-hard[wrote
 a blog post] explaining sharding from a high level, and also presented
 his own idea called _treechains_. The article is a quite hard read,
-but he makes some general points that are more digestable.
+but he makes some general points that are more digestible.
 
 [quote, Peter Todd on his blog, Why Scaling Bitcoin With Sharding Is Very Hard]
 ____
@@ -216,8 +229,14 @@ https://blog.lopp.net/bitcoin-core-performance-evolution/[has run
 benchmark tests] on blockchain synchronization over many years,
 comparing different versions of Bitcoin Core.
 
-.Initial block download performance of various versions of Bitcoin Core. Source: https://blog.lopp.net/bitcoin-core-performance-evolution/
-image::Bitcoin-Core-Sync-Performance-1.png[]
+.Initial block download performance of various versions of Bitcoin Core. On the Y-axis is the block height synced and on the X-axis is the time it took to sync to that height. Source: https://blog.lopp.net/bitcoin-core-performance-evolution/
+image::Bitcoin-Core-Sync-Performance-1.png[{half-width}]
+
+The different lines represents different versions of Bitcoin Core. The
+leftmost line is the latest, as of writing, version 22.0 released
+September 2021 which took 396 minutes to fully sync, and the rightmost
+one is version 0.8 from November 2013 which took 3452 minutes. All of
+this, roughly 10x, improvement is due to inward scaling.
 
 The improvements made could be categorized as either space (RAM, disk,
 bandwidth, etc) savings or computational savings. Both categories
@@ -232,8 +251,15 @@ https://twitter.com/pwuille/status/1450471673321381896[wrote a twitter
 thread] showcasing the performance improvements made by various pull
 requests.
 
-.Performance of signature verification as a function of pull requests. Source: Pieter Wuille
-image::libsecp256k1speedups.png[]
+.Performance of signature verification over time, with significant pull requests marked on the timeline. Source: https://twitter.com/pwuille/status/1450471673321381896
+image::libsecp256k1speedups.png[{half-width}]
+
+The graph shows the trend for two different 64-bit CPU types, ARM and
+x86. The difference in performance is due to the more specialized
+instructions available on x86, compared to the ARM architecture which
+has fewer more generic instructions. But the general trend is the same
+for both architectures. Note that the Y-axis is logarithmic, which
+makes the improvements look less impressive than they actually are.
 
 There are also several good examples of where space savings have
 contributed to performance improvements. In a Medium blog post about
@@ -242,7 +268,7 @@ block space a 2-of-3 threshold signature would require, both without
 using Taproot and using Taproot in various ways.
 
 .Space savings for different spending types Taproot and legacy versions.
-image::murch-taproot.png[]
+image::murch-taproot.png[{half-width}]
 
 A 2-of-3 multisig using native segwit would require a total of
 104.5+43 vB = 147.5 vB, while the most space conservative Taproot
@@ -250,10 +276,44 @@ usage would in the standard use case require only 57.5+43 vB = 100.5
 vB, and at worst in rare cases, for example when a standard signer is
 not available for some reason, 107.5+43 vB = 150.5 vB. You don't have
 to understand all the details of this, but it should give you an idea
-of how developers think about space savings.
+of how developers think about space savings. Every little byte counts.
 
-There are also lots of good ways for users to do inward
-scaling. BATCHING CONSOLIDATION
+Apart from the inward scaling going on in Bitcoin software, there are
+also some ways that users can contribute to inward scaling. They can
+make their transactions in more intelligent ways to save on
+transaction fees, while simultaneously decreasing their footprints on
+full node requirements. Two commonly used techniques are called
+transaction batching and output consolidation.
+
+The idea with transaction batching is to combine multiple payments
+into one single transaction, instead of using one transaction per
+payment. This can save you a lot of fees, while reducing the block
+space load.
+
+.Transaction batching combines multiple payments into a single transaction to save on fees.
+image::tx-batching.png[{half-width}]
+
+Output consolidation means that you take advantage of periods of low
+block space demand to combine your outputs into a single output. This
+saves on fees later when you want to make a payment during high
+block space demand.
+
+.Output consolidation. Melt your coins into one big coin when fees are low to save fees later.
+image::utxo-consolidation.png[{big-width}]
+
+It may not be obvious how output consolidation contributes to inward
+scaling. After all, the total amount of blockchain data even slightly
+increases with this method, but the UTXO set, the database that keeps
+track of who owns which coins, decreases because you spend more coins
+than you create. This alleviates the burden for full nodes to maintain
+their UTXO sets.
+
+Unfortunately however, these two techniques of _UTXO management_ could
+be bad for your own or your payees' privacy. In the batching case, a
+payee will know that all these outputs are from you to other payees
+(except possibly the change), and in the UTXO consolidation case, you
+reveal that the outputs you consolidate belong to the same wallet. So
+you have to make a trade-off between cost efficiency and privacy.
 
 ==== Layered scaling
 
@@ -268,16 +328,17 @@ on a start transaction that's put on the blockchain, as illustrated in
 <<fig-scaling-layer>>.
 
 [[fig-scaling-layer]]
-.A typical protocol, layer 2, on top of Bitcoin, layer 1.
+.A typical layer 2 protocol on top of Bitcoin, layer 1.
 image::scaling-layer.png[]
 
 How this start transaction is created varies widely, but a common
-theme is that the participants has a number of semi-signed
+theme is that the participants create a number of semi-signed
 transactions that spend the output of the start transaction in
-different ways. A semi-signed transaction can be made fully signed and
-put on the blockchain if someone misbehaves, to punish them. This
-keeps the participants' incentives aligned so that the protocol can
-work in a trustless way.
+different ways prior to publishing the start transaction. A
+semi-signed transaction can be made fully signed and put on the
+blockchain if someone misbehaves, to punish them. This keeps the
+participants' incentives aligned so that the protocol can work in a
+trustless way.
 
 After the start transaction is on the blockchain, the protocol can do
 what it's supposed to do, for example super-fast payment between
@@ -287,8 +348,8 @@ advanced scripting not supported on Bitcoin's blockchain.
 We won't go into more detail on how specific protocols work, but as
 you can see in <<fig-scaling-layer>>, the blockchain is rarely used
 during the protocol's life cycle. All the juicy action happens
-_off-chain_. We've seen how this can be a win for privacy if done
-right, but it can also be a big win for scalability.
+_off-chain_. We've seen how this can be a win for <<privacy,privacy>>
+if done right, but it can also be a big win for scalability.
 
 In a https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/[Reddit post] titled "`A trip to the moon requires a rocket with
 multiple stages or otherwise the rocket equation will eat your
@@ -327,13 +388,13 @@ transacting with it at all.
 ____
 
 The analogy with the judge is quite illustrative of how layering
-works, and this judge must be uncorruptable, and never change her
+works, and this judge must be incorruptible, and never change her
 mind, otherwise the layers above Bitcoin's base layer will not work
 reliably.
 
-He later makes a good point about centralized services. There's no
+He later makes a point about centralized services. There's usually no
 problem with trusting a central server with trivial amounts of Bitcoin
-to get things done. That's also a layered solution.
+to get things done. That's also layered scaling.
 
 Many years have past since Maxwell wrote the piece above, and his
 words still stand correct. The success of the Lightning Network proves
@@ -356,13 +417,8 @@ https://blog.bitmex.com/the-blocksize-war-chapter-1-first-strike/
 Pieter - Segregated Witness And Its Impact On Scalability
 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/segregated-witness-and-its-impact-on-scalability/
 ////
-
-
-
-=== Tradeoffs
-
 ////
-Adam Back - Scaling Tradeoffs
+Adam Back - Scaling Trade-offs
 https://btctranscripts.com/misc/adam3us-bitcoin-scaling-tradeoffs/
 ////
 
