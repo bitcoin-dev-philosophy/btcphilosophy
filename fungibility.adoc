@@ -1,5 +1,7 @@
 == Fungibility
 
+WARNING: {wip}
+
 [quote, Matt Corallo and Adam Back, Fungibility Overview]
 ____
 for money to be functional, it has to be fungible.

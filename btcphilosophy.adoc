@@ -13,26 +13,26 @@ include::decentralization.adoc[]
 [[trustlessness]]
 include::trustlessness.adoc[]
 
-[[adversarialthinking]]
-include::adversarial-thinking.adoc[]
-
 [[privacy]]
 include::privacy.adoc[]
+
+[[fungibility]]
+include::fungibility.adoc[]
 
 [[finitesupply]]
 include::finitesupply.adoc[]
 
-[[fungibility]]
-include::fungibility.adoc[]
+[[upgrading]]
+include::upgrading.adoc[]
+
+[[adversarialthinking]]
+include::adversarial-thinking.adoc[]
 
 [[opensource]]
 include::opensource.adoc[]
 
 [[scaling]]
 include::scaling.adoc[]
-
-[[upgrading]]
-include::upgrading.adoc[]
 
 [[whenshithitsthefan]]
 include::when-shit-hits-the-fan.adoc[]

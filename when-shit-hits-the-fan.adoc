@@ -1,5 +1,7 @@
 == When shit hits the fan
 
+WARNING: {wip}
+
 ////
 BIP66 4th july side-effect due to validationless mining
 https://en.bitcoin.it/wiki/Softfork#2015_BIP66_Blockchain_Fork

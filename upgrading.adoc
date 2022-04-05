@@ -1,5 +1,7 @@
 == Upgrading
 
+WARNING: {wip}
+
 ////
 "Speedy Trial" emerges: https://gnusha.org/taproot-activation/2021-03-05.log
 
