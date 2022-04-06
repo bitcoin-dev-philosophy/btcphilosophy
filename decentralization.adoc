@@ -1,22 +1,66 @@
 == Decentralization
 
-Bitcoin has been designed to avoid a central point of control, or more
-specifically, a _central point of censorship_. A system without a central point
-of control is often referred to as _decentralized_.
+Bitcoin has been designed to avoid having a central point of control,
+or more specifically, a _central point of censorship_. A system
+without a central point of control is often referred to as
+_decentralized_.
 
 === Miner decentralization
 
-If Bitcoin were centralized and therefore censorable, it would be vulnerable to
-those who wish to censor, such as governments.
+There have been attempts at creating digital moneys before Bitcoin,
+but most of them failed due to lack of censonship resistance.
 
-The censor would apply pressure on users. They could require identification or
-that users declare where their money is coming from before their transactions
-are allowed to enter the blockchain.
+Miner decentralization in Bitcoin means that the _ordering of
+transactions_ isn't carried out by a single entity, or fixed set of
+entities. It's carried out collectively by all participants who want
+to, this collective of miners is a dynamic set of users. Anyone can
+join or leave as they want. This is what makes Bitcoin censorship
+resistant.
 
-The censor could also try to change the system's rules, for
-example, inflate the money supply to enrich themselves. In such an event,
-A user verifying blocks has three options for how to handle
-the changed rules:
+If Bitcoin were centralized, it would be vulnerable to those who wish
+to censor, such as governments. It'd meet the same fate as earlier
+attempts at creating of digital money. In a paper titled "`Enabling
+Blockchain Innovations with Pegged Sidechains`", the authors explained
+in their introduction how early versions of digital money wasn't
+equipped for an <<adversarialthinking,adversarial environment>>:
+
+[quote, various authors, Enabling Blockchain Innovations with Pegged Sidechains 2014]
+____
+David Chaum introduced digital cash as a research topic in 1983, in a
+setting with a central server that is trusted to prevent
+double-spending[Cha83]. To mitigate the privacy risk to individuals
+from this central trusted party, and to enforce fungibility, Chaum
+introduced the blind signature, which he used to provide a
+cryptographic means to prevent linking of the central server’s
+signatures (which represent coins), while still allowing the central
+server to perform double-spend prevention. The requirement for a
+central server became the Achilles’ heel of digital cash[Gri99]. While
+it is possible to distribute this single point of failure by replacing
+the central server’s signature with a threshold signature of several
+signers, it is important for auditability that the signers be distinct
+and identifiable. This still leaves the system vulnerable to failure,
+since each signer can fail, or be made to fail, one by one.
+____
+
+It became clear that using a central server to order transactions was
+not a viable route to take due to censorship. Even if you replace the
+central server with a federation of a fixed set of stem:[n] servers,
+of which at least stem:[m, m \leq n] must all approve of an
+ordering. The problem then shifts to one where users must agree on
+this set of stem:[n] servers, and of how users replace mailcious
+servers with good ones without using a central authority.
+
+Let's contemplate what could happen in practice if Bitcoin were
+censorable. The censor would apply pressure on users. They could
+require identification, that users declare where their money is coming
+from, or what they're buying, before their transactions are allowed to
+enter the blockchain.
+
+Also, the lack of censorship resistance would open up for the censor
+to blackmail users into adopting new rules of the system. For example,
+inflate the money supply to enrich themselves. In such an event, A
+user verifying blocks has three options for how to handle the changed
+rules:
 
 * Adopt: Accept the changes and adopt them into its full node.
 * Reject: This leaves the user with a system that doesn't process
@@ -30,7 +74,7 @@ by the user's full node.
 
 None of these options are beneficial to the user. Censorship
 resistance through decentralization is what separates Bitcoin from
-other money systems, but it's not an easy thing to accomplish, due to
+other money systems, but it's not an easy thing to accomplish due to
 the _double spending problem_. This is the problem of making sure no
 one can spend the same coin twice, a problem that many thought was
 impossible to solve in a decentralized fashion. Satoshi Nakamoto
@@ -95,8 +139,8 @@ The importance of full node decentralization is related to
 <<trustlessness,trustlessness>>. If a user stops running his/her own
 full node, for example due to prohibitively increased cost of
 operation, they have to interact with the Bitcoin network in some
-other way, for example web wallets, or lightweight wallets, which
-require more or less trust. Aaron Van Wirdum of Bitcoin Magazine
+other way, for example using web wallets, or lightweight wallets,
+which require more or less trust. Aaron Van Wirdum of Bitcoin Magazine
 writes in
 https://bitcoinmagazine.com/technical/decentralist-perspective-bitcoin-might-need-small-blocks-1442090446[his
 Bitcoin Magazine article] about decentralization:
@@ -118,9 +162,10 @@ period 2014-2017, when many people argued for and against increasing
 the block size limit to allow for more transaction throughput.
 
 A very strong argument against increasing the block size is that it
-increases the cost of verification. If verification cost increases, it
-will push some full node users to stop running their full nodes. This
-in turn leads to more people not being able to use the system in a
+increases the cost of verification (see <<_vertical_scaling,the
+Scaling chapter>>). If verification cost increases, it will push some
+full node users to stop running their full nodes. This in turn leads
+to more people not being able to use the system in a
 trustless way. Pieter Wuille is quoted in the article, where he
 explains the risks in full node centralization.
 

@@ -18,8 +18,6 @@ parties". This is different from the trust that you inevitably have to
 put into the software or hardware you run. More on this trust further
 down this article.
 
-IMPORTANCE OF TRUSTLESSNESS See Issue https://github.com/kallerosenbaum/btcphilosophy/issues/15
-
 To use Bitcoin in a trustless manner, you have to run a
 fully-validating Bitcoin node. Only then will you be able to verify
 that the blocks you receive from others are following the consensus
@@ -29,9 +27,66 @@ you outsource verification of Bitcoin blocks to someone else, and
 trust them to tell you the truth, which means you're not using Bitcoin
 trustlessly.
 
+David Harding has authored
+https://bitcoin.org/en/bitcoin-core/features/validation[an article on
+the bitcoin.org website] which explains what running a full node, or
+using Bitcoin trustlessly, actually helps you with.
+
+[quote, David Harding, bitcoin.org website] 
+____
+The bitcoin currency only works when people accept bitcoins in
+exchange for other valuable things. That means it’s the people
+accepting bitcoins who give it value and who get to decide how Bitcoin
+should work.
+
+When you accept bitcoins, you have the power to enforce Bitcoin’s
+rules, such as preventing confiscation of any person’s bitcoins
+without access to that person’s private keys.
+
+Unfortunately, *many users outsource their enforcement power*. This
+leaves Bitcoin’s decentralization in a weakened state where a handful
+of miners can collude with a handful of banks and free services to
+change Bitcoin’s rules for all those non-verifying users who
+outsourced their power.
+
+Unlike other wallets, *Bitcoin Core does enforce the rules*—so if the
+miners and banks change the rules for their non-verifying users, those
+users will be unable to pay full validation Bitcoin Core users
+like you.
+____
+
+He says that running a full node will help you verify every aspect of
+the blockchain, without trusting anyone else, to ensure that coins you
+receive from others are real. This is great, but there's one important
+thing that a full node can't help you with: It can't prevent double
+spending through chain rewrites:
+
+[quote, David Harding, bitcoin.org webside]
+____
+Note that although all programs—including Bitcoin Core—are vulnerable
+to chain rewrites, Bitcoin provides a defense mechanism: the more
+confirmations your transactions have, the safer you are. There is no
+known decentralized defense better than that.
+____
+
+No matter how advanced your software is, you still have to trust that
+the blocks containing your coins won't be rewritten. But as pointed
+out by Harding, you can await a number of confirmations, after which
+you consider the probability of a chain rewrite small enough to be
+acceptable.
+
+The incentives for using Bitcoin in a trustless way aligns with the
+system's need for <<_full_node_decentralization,full node
+decentralization>>. The more people who use their own full node, the
+more full node decentralization, and the stronger Bitcoin stands
+against malicious changes to the protocol. But unfortunately, as
+explained in the full node decentralization section, users often opt
+for trusted services as a trade-off for convenience.
+
 Bitcoin's trustlessness is absolutely imperative from a system
-perspective. In 2018, Matt Corallo, https://btctranscripts.com/baltic-honeybadger/2018/trustlessness-scalability-and-directions-in-security-models/[spoke about trustlessness] at the
-Baltic Honeybadger conference in Riga.
+perspective. In 2018, Matt Corallo,
+https://btctranscripts.com/baltic-honeybadger/2018/trustlessness-scalability-and-directions-in-security-models/[spoke
+about trustlessness] at the Baltic Honeybadger conference in Riga.
 // Video: https://youtu.be/66ZoGUAnY9s?t=4019
 The essence of that talk was that you can't build trustless systems on
 top of a trusted system, but you can build trusted systems, for

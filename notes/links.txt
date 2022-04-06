@@ -114,6 +114,9 @@ https://www.reddit.com/r/Bitcoin/comments/hlu2ah/why_cant_hash_power_be_used_for
 Hal Finney on his last 4 years
 https://bitcointalk.org/index.php?topic=155054.0
 
+David Chaum - Blind Signatures For Untraceable Payments
+http://www.hit.bme.hu/~buttyan/courses/BMEVIHIM219/2009/Chaum.BlindSigForPayment.1982.PDF
+
 // https://bitcoinmagazine.com/business/why-bitcoin-mining-pools-aren-t-incentivized-to-broadcast-blocks-quickly-1475249510
 
 
