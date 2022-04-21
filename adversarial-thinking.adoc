@@ -94,10 +94,16 @@ ____
 
 This type of attack is called a _Sybil attack_, which means that a
 single entity controls multiple nodes in a network, to make it appear
-as multiple entities. But as the quote also mentions, the Sybil attack
-is not effective on the Bitcoin network, because you're not in any way
-voting with nodes or entities, but <<one-cpu-one-vote,with computing
-power>>, but it can help carrying out other attacks.
+as multiple entities.
+
+As the quote also mentions, the Sybil attack is not effective on the
+Bitcoin network because there is no voting with nodes or entities, but
+with <<one-cpu-one-vote,with computing power>>. However, this flat
+structure leaves the system susceptible to carrying out other
+attacks. The authors then lists some possible attacks such as
+information hiding (often refered to as an eclipse attack), and how
+Bitcoin Core implements some heuristic countermeasures against such
+attacks.
 
 The above are examples of real threats that need to be taken care of.
 
@@ -171,3 +177,23 @@ Resistance, otherwise you'd better spend your time on other
 projects. Accepting that axiom helps in focussing your development
 efforts on the real problems at hand: coding around state-level
 adversaries. In other words, think adversarially.
+
+////
+=== Detecting adversarial behavior
+
+
+
+How would we know if someone 
+
+How would we know if 
+
+Peter Todd Pinatas:
+https://bitcointalk.org/index.php?topic=293382.0
+
+Good people raise red flags
+
+Not exactly related, but fun/interesting
+Canary on a server (put 1 BTC on your server. If server hacked, you'll notice when the coin moves)
+
+quantum threat? How to detect, what to expect.
+////
