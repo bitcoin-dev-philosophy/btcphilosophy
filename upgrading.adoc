@@ -2,9 +2,328 @@
 
 WARNING: {wip}
 
-////
-"Speedy Trial" emerges: https://gnusha.org/taproot-activation/2021-03-05.log
+Upgrading Bitcoin safely can be extremely difficult. Some changes take
+multiple years to roll out. In this chapter we'll explore some
+examples of historic upgrades to Bitcoin as well as discuss the pros
+and cons of various upgrade mechanisms. We will start by setting the
+stage with some vocabulary.
 
+There are lots of nuances to upgrade mechanisms and they might be best
+understood by studying previous upgrades. Therefore this chapter will
+put much focus on that.
+
+=== Forward and backward compatibility
+
+According to Wikipedia, forward compatibility means that old software
+can process data created by newer software, ignoring the parts it
+doesn't understand.
+
+[quote, Forward compatibility, Wikipedia]
+____
+A standard supports forward compatibility if a product that complies
+with earlier versions can "gracefully" process input designed for
+later versions of the standard, ignoring new parts which it does not
+understand.
+____
+
+And vice versa, backward compatibility means that data from old
+software is usable on new software. A change is said to be fully
+compatible if it's both forward and backward compatible.
+
+=== Soft forks and hard forks
+
+A change to the Bitcoin consensus rules is said to be a soft fork if
+the change is fully compatible. This is the most common way to upgrade
+Bitcoin, for many reasons that we'll discuss further in this chapter.
+
+If a change to the Bitcoin consensus rules is backward compatible, but
+not forward compatible, it is called a hard fork.
+
+Unforturnately, people often use the term backward compatible to
+describe a soft fork, but that's only one part of it, the easy
+part. The hard part of a soft fork is forward compatibility.
+
+For a technical overview of soft forks and hard forks, please read
+https://rosenbaum.se/book/grokking-bitcoin-11.html[chapter 11 of
+Grokking Bitcoin]. It will explain these terms and also dive into
+upgrade mechanisms. That chapter will be very useful to get a grip on
+before reading the rest of this chapter, but not strictly neccesary.
+
+=== Historic upgrades
+
+Bitcoin is not the same today as it was when the Genesis block was
+created. Several upgrades have been made throughout the years. Eric
+Lombrozo
+https://btctranscripts.com/breaking-bitcoin/2017/changing-consensus-rules-without-breaking-bitcoin/[spoke
+at the Breaking Bitcoin conference]
+(https://www.youtube.com/watch?v=0WCaoGiAOHE&t=1926s[video]) in 2017
+about Bitcoin's different upgrades and points out how the upgrade
+mechanisms have evolved over time. He explained how Satoshi Nakamoto
+once upgraded Bitcoin through a hard fork.
+
+[quote, Eric Lombrozo: Consensus Rules - Changing them without changing, Breaking Bitcoin conference 2017]
+____
+There was actually a hard-fork in bitcoin that Satoshi did that we
+would never do it this way- it’s a pretty bad way to do it. If you
+look at the git commit description here
+[https://github.com/bitcoin/bitcoin/commit/757f0769d8360ea043f469f3a35f6ec204740446[757f076]],
+he says something about reverted makefile.unix wx-config version
+0.3.6. Right. That’s all it says. It has no indication that it has a
+breaking change at all. He was basically hiding it in there. He also
+https://bitcointalk.org/index.php?topic=626.msg6451#msg6451[posted to
+bitcointalk] and said, please upgrade to 0.3.6 ASAP. We fixed an
+implementation bug where it is possible that bogus transactions can be
+displayed as accepted. Do not accept bitcoin payments until you
+upgrade to 0.3.6. If you can’t upgrade right away, then it would be
+best to shutdown your bitcoin node until you do. And then on top of
+that, I don’t know why he decided to do this as well, he decided to
+add some optimizations in the same code. Fix a bug and add some
+optimizations.
+____
+
+He points out that this hard fork, intentionally or not, adds
+opportunities for future soft forks, namely the Script operators
+OP_NOP1-OP_NOP10. These have been used for two soft forks so far:
+https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki[BIP65]
+(OP_CHECKLOCKTIMEVERIFY), and
+https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki[BIP113]
+(OP_SEQUENCEVERIFY).
+
+He provides an overview of how upgrade mechanisms have evolved
+throughout the years, up until 2017. After that, as of this writing,
+only one upgrade of the consensus rules has been deployed: Taproot,
+which was deployed in a somewhat different, and chaotic, manner.
+
+==== Segwit upgrade
+
+While all upgrades preceeding the segwit upgrade was more or less
+painless, this one was different. There seemed to be overwhelming
+support for segwit among Bitcoin users, but for some reason miners
+didn't signal support for this upgrade, which stalled the activation
+with no resolution in sight.
+
+Aaron van Wirdum explains this winding road in his Bitcoin Magazine
+article
+https://bitcoinmagazine.com/technical/the-long-road-to-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality[The
+Long Road To Segwit]. It starts with explaining what segwit is and how
+that taps into the block size debate. van Wirdum then explains the
+turn of events that led up to its final activation. At the center of
+this process was an upgrade mechanism called _user activated soft
+fork_, or UASF for short, that was proposed by user Shaolinfry.
+
+[quote, Aaron van Wirdum - The Long Road To Segwit, Bitcoin Magazine]
+____
+Shaolinfry proposed an alternative: a user activated soft fork
+(UASF). Instead of hash power activation, a user activated soft fork
+would have a “‘flag day activation’ where nodes begin enforcement at a
+predetermined time in the future.” As long as such a UASF is enforced
+by an economic majority, this should compel a majority of miners to
+follow (or activate) the soft fork.
+____
+
+Among other things, he cites Shaolinfry's email to the bitcoin-dev
+mailing list. Shaolinfry
+https://www.mail-archive.com/bitcoin-dev@lists.linuxfoundation.org/msg04703.html[argued
+against miner activated soft forks] and lists a number of problems
+with them
+
+[quote, Shaolinfry, Bitcoin-dev mailing list February 2017]
+____
+Firstly, it requires trusting the hash power will validate after activation. 
+The BIP66 soft fork was a case where 95% of the hashrate was signaling 
+readiness but in reality about half was not actually validating the upgraded 
+rules and mined upon an invalid block by mistake[1].
+
+Secondly, miner signalling has a natural veto which allows a small percentage 
+of hashrate to veto node activation of the upgrade for everyone. To date, soft 
+forks have taken advantage of the relatively centralised mining landscape where 
+there are relatively few mining pools building valid blocks; as we move towards 
+more hashrate decentralization, it's likely that we will suffer more and more 
+from "upgrade inertia" which will veto most upgrades.
+____
+
+He also point to a misinterpretation of miner signaling, that people
+think miners decide on protocol upgrades, rather than help
+coordinating them. Due to this misunderstanding, miners may also feel
+obliged to proclaim in public their views on a soft fork, as if that
+gives weight to the proposal.
+
+The UASF proposal, in a nutshell, is a "flag day" on which nodes
+starts enforcing the new rules. That way miners don't have to
+participate in coordinating the upgrade, but can trigger activation
+earlier than the flag day if enough blocks signal support.
+
+[quote, Shaolinfry, Bitcoin-dev mailing list February 2017]
+____
+My suggestion is to have the best of both worlds. Since a user
+activated soft fork needs a relatively long lead time before
+activation, we can combine with BIP9 to give the option of a faster
+hash power coordinated activation or activation by flag day, whichever
+is the sooner. In both cases, we can leverage the warning systems in
+BIP9. The change is relatively simple, adding an activation-time
+parameter which will transition the BIP9 state to LOCKED_IN before the
+end of the BIP9 deployment timeout.
+____
+
+This idea caught a lot of interest, but didn't seem to reach near
+unanimous support, which caused concern of a potential chain
+split. The article by Aaron van Wirdum explains how this finally got
+resolved by
+https://github.com/bitcoin/bips/blob/master/bip-0091.mediawiki[BIP91],
+authored by James Hilliard.
+
+[quote, Aaron van Wirdum - The Long Road To Segwit, Bitcoin Magazine]
+____
+Hilliard proposed a slightly complex but clever solution that would
+make everything compatible: Segregated Witness activation as proposed
+by the Bitcoin Core development team, the BIP148 UASF and the New York
+Agreement activation mechanism. His BIP91 could keep Bitcoin whole —
+at least throughout SegWit activation.
+____
+
+There were some more complicating factors involved (e.g. the so-called
+"New York Agreement"), that this BIP had to take into consideration,
+and we encourage you to read Van Wirdum's article in full, because
+there are many interesting details in this story.
+
+==== Post-segwit discussion
+
+After the segwit deployment, a discussion about deployment mechanisms
+emerged. As noted by Eric Lombrozo in
+https://btctranscripts.com/breaking-bitcoin/2017/changing-consensus-rules-without-breaking-bitcoin/[his
+talk at the Breaking Bitcoin conference]
+(https://www.youtube.com/watch?v=0WCaoGiAOHE&t=1926s[video]) and by
+Shaolinfry above, a miner activated soft fork isn't the ideal upgrade
+mechanism.
+
+[quote, Eric Lombrozo: Consensus Rules - Changing them without changing, Breaking Bitcoin conference 2017]
+____
+At some point we’re probably going to want to add more features to the
+bitcoin protocol. This is a big philosophical question we’re asking
+ourselves. Do we do a UASF for the next one? What about a hybrid
+approach? Miner activated by itself has been ruled out. bip9 we’re not
+going to use again.
+____
+
+In January 2020, Matt Corallo
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-January/017547.html[sent
+an email] to the Bitcoin-Dev mailing list that started a discussion on
+future soft fork deployment mechanisms. He lists five goals that he
+thinks are important in an upgrade. David Harding
+https://bitcoinops.org/en/newsletters/2020/01/15/#discussion-of-soft-fork-activation-mechanisms[summarizes
+them in a Bitcoin Optech newsletter] as
+
+[quote, David Harding, Bitcoin Optech newsletter #80]
+____
+. The ability to abort if a serious objection to the proposed
+consensus rules changes is encountered
+. The allocation of enough time after the release of updated software
+to ensure that most economic nodes are upgraded to enforce those rules
+. The expectation that the network hash rate will be roughly the same
+before and after the change, as well as during any transition
+. The prevention, as much as possible, of the creation of blocks that
+are invalid under the new rules, which could lead to false
+confirmations in non-upgraded nodes and SPV clients
+. The assurance that the abort mechanisms can’t be misused by griefers
+or partisans to withhold a widely desired upgrade with no known
+problems
+____
+
+What Corallo proposes is a combination of a miner activated soft fork
+and a user activated soft fork:
+
+[quote, Matt Corallo - Modern Soft Fork Activation, Bitcoin-dev mailing list January 2020]
+____
+Thus, as something a bit more concrete, I think an activation method
+which sets the right precedent and appropriately considers the above
+goals, would be:
+
+1) a standard BIP 9 deployment with a one-year time horizon for
+activation with 95% miner readiness, +
+2) in the case that no activation occurs within a year, a six month
+quieting period during which the community can analyze and discussion
+the reasons for no activation and, +
+3) in the case that it makes sense, a simple command-line/bitcoin.conf
+parameter which was supported since the original deployment release
+would enable users to opt into a BIP 8 deployment with a 24-month
+time-horizon for flag-day activation (as well as a new Bitcoin Core
+release enabling the flag universally).
+
+This provides a very long time horizon for more standard activation,
+while still ensuring the goals in #5 are met, even if, in those cases,
+the time horizon needs to be significantly extended to meet the goals of
+#3. Developing Bitcoin is not a race. If we have to, waiting 42 months
+ensures we're not setting a negative precedent that we'll come to regret
+as Bitcoin continues to grow.
+____
+
+==== Taproot upgrade - Speedy trial
+
+When Taproot was ready for deployment, meaning all technical details
+around its consensus rules were implemented and had reached broad
+approval from the community, discussions on how to actually deploy it
+started to heat up. These discussions had been pretty low key up until
+this point.
+
+Lot's of activation mechanism proposals started floating around and
+David Harding
+https://en.bitcoin.it/wiki/Taproot_activation_proposals[summarized
+them on the Bitcoin Wiki]. In that article he explains some properties
+of BIP8 which at that time had some recent changes made to make it
+more flexible.
+
+____
+At the time this document is being written,
+https://github.com/bitcoin/bips/blob/master/bip-0008.mediawiki[BIP8]
+has been drafted based on lessons learned in 2017. One notable change
+following BIPs 9+148 is that forced activation is now based on block
+height rather than median time past; a second notable change is that
+forced activation is a boolean parameter chosen when a soft fork’s
+activation parameters are set either for the initial deployment or
+updated in a later deployment.
+
+BIP8 without forced activation is very similar to
+https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki[BIP9]
+version bits with timeout and delay, with the only significant
+difference being BIP8’s use of block heights compared to BIP9’s use of
+median time past. This setting allows the attempt to fail (but it can
+be retried later).
+
+BIP8 with forced activation concludes with a mandatory signaling
+period where all blocks produced in compliance with its rules must
+signal readiness for the soft fork in a way that will trigger
+activation in an earlier deployment of the same soft fork with
+non-mandatory activation. In other words, if node version x is
+released without forced activation and, later, version y is released
+that successfully forces miners to begin signaling readiness within
+the same time period, both versions will begin enforcing the new
+consensus rules at the same time.
+
+This flexibility of the revised BIP8 proposal makes it possible to
+express some other ideas in terms of what they would look like using
+BIP8. This provides a common factor to use for categorizing many
+different proposals.
+____
+
+From this point forward the discussions were very heated, especially
+around whether `lockinontimeout` should be `true` (as in a user
+activated soft fork) or `false` (as in a miner activated soft fork).
+
+Among the proposals listed, one of them was titled "`Let’s see what
+happens`". This proposal didn't get much traction for some reason
+until 7 months later.
+
+During these 7 months, the discussion went on and it seemed like there
+was no way to reach broad consensus on which deployment mechanism
+to use. There were mainly two camps, one that prefered
+`lockinontimeout=true` (the UASF crowd) and one that preferred
+`lockinontimeout=false` (the try and if it fails rethink crowd). Since
+there were no overwhelming support for any of these options, the
+discussions went in circles with seemingly no way forward. Some of
+these discussions were held on IRC, in a channel called
+##taproot-activation, and on March 5 2021, something changed:
+
+"Speedy Trial" emerges: https://gnusha.org/taproot-activation/2021-03-05.log
 [quote, #taproot-activation IRC log]
 ____
 06:42 < harding> roconnor: is somebody proposing BIP8(3m, false)?  I mentioned that the other day but I didn't see any responses.
@@ -20,6 +339,42 @@ ____
 06:45 < willcl_ark_> harding: It certainly seems like a good approach to me. _if_ that fails, then you can try an understand why, without wasting too much time
 ____
 
+It seems the "`let's see what happens`" approach finally clicked in
+peoples' minds. This idea would later be labeled as "`Speedy Trial`"
+due to it's short signaling period. David Harding explains this idea
+to the broader community in an [email to the Bitcoin-Dev mailing list]:
+
+
+
+
+////
+Matt Corallo: Modern Soft Fork Activation
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-January/017547.html
+
+David Harding summarizing Matt Corrallo on soft fork activation
+https://bitcoinops.org/en/newsletters/2020/01/15/#discussion-of-soft-fork-activation-mechanisms
+
+2020-07-21 
+David Harding summarizing Taproot activation proposals
+https://en.bitcoin.it/wiki/Taproot_activation_proposals
+
+
+Song on Hardforks
+https://www.youtube.com/watch?v=eCE2OzKIab8&t=311s
+Negative externalities (bad things others had to pay for)
+Lists lots of costs for various classes of entities
+
+
+
+
+Speedy Trial email from Anthony Towns:
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020127.html
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020173.html
+
 Harding excerpt taproot activation
 https://gist.github.com/harding/4cad67840f386bfa8bca0b6f325eb6e9
+
+Harding: Harmony and Discord
+https://bitcointalk.org/dec/p1.html
 ////
+

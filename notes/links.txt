@@ -3,8 +3,9 @@ Various links to great material that may or may not be used in posts. This is a 
 Bitcoin paper
 https://bitcoin.org/bitcoin.pdf
 
-Bitcoin's Academic Pedigree: The concept of cryptocurrencies is built from forgotten ideas in research literature.
-Bitcoin wasn't built in a vacuum
+Bitcoin's Academic Pedigree: The concept of cryptocurrencies is built
+from forgotten ideas in research literature.  Bitcoin wasn't built in
+a vacuum
 https://queue.acm.org/detail.cfm?id=3136559
 
 Weaknesses from bitcoin wiki
@@ -69,9 +70,6 @@ https://btctranscripts.com/misc/adam3us-bitcoin-scaling-tradeoffs/
 Peter Todd - Scaling
 https://btctranscripts.com/mit-bitcoin-expo/mit-bitcoin-expo-2015/peter-todd-scalability/
 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/in-adversarial-environments-blockchains-dont-scale/
-
-Jimmy Song - Socialized Costs Of Hard Forks
-https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/
 
 Andrew Poelstra- Using The Chain For What Chains Are Good For
 "There’s a distinction between validation and execution"
@@ -210,6 +208,9 @@ https://bitcoin.stackexchange.com/questions/50349/how-long-does-block-validation
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2019-February/016697.html
 Also: https://bitcoinops.org/en/newsletters/2019/03/12/#bitcoin-core-vulnerability-disclosure
 
+Berkley DB issue 2013:
+https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki
+
 Adversarial thinking
 ====================
 
@@ -266,6 +267,10 @@ https://bitcointalk.org/dec/p1.html
 
 Hasu - Unpacking Bitcoin’s Social Contract
 https://uncommoncore.co/unpacking-bitcoins-social-contract/
+
+Jimmy Song - Socialized Costs Of Hard Forks
+https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/
+
 
 Decentalization
 ===============
