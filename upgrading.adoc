@@ -12,6 +12,32 @@ There are lots of nuances to upgrade mechanisms and they might be best
 understood by studying previous upgrades. Therefore this chapter will
 put much focus on that.
 
+To get in tune for this chapter, you should read
+https://bitcointalk.org/dec/p1.html[David Harding's piece on Harmony
+and Discord].
+
+[quote, David Harding, Harmony and Discord]
+____
+Bitcoin experts talk often of consensus, whose meaning is abstract and
+hard to pin down. But the word consensus evolved from the Latin word
+concentus, "a singing together,
+harmony,"[https://bitcointalk.org/dec/p1.html#ftnt1[1]] so let us talk
+not of Bitcoin consensus but of Bitcoin harmony.
+
+Harmony is what makes Bitcoin work. Thousands of full nodes each work
+independently to verify the transactions they receive are valid,
+producing a harmonious agreement about the state of the Bitcoin ledger
+without any node operator needing to trust anyone else. It's similar
+to a chorus where each member sings the same song at the same time to
+produce something far more beautiful than any of them could produce
+alone.
+
+The result of Bitcoin harmony is a system where bitcoins are safe not
+just from petty thieves (provided you keep your keys secure) but also
+from endless inflation, mass or targeted confiscation, or simply the
+bureaucratic morass that is the legacy financial system.
+____
+
 === Forward and backward compatibility
 
 According to Wikipedia, forward compatibility means that old software
@@ -321,11 +347,13 @@ to use. There were mainly two camps, one that prefered
 there were no overwhelming support for any of these options, the
 discussions went in circles with seemingly no way forward. Some of
 these discussions were held on IRC, in a channel called
-##taproot-activation, and on March 5 2021, something changed:
+##taproot-activation, and
+https://gnusha.org/taproot-activation/2021-03-05.log[on March 5 2021],
+something changed:
 
-"Speedy Trial" emerges: https://gnusha.org/taproot-activation/2021-03-05.log
 [quote, #taproot-activation IRC log]
 ____
+....
 06:42 < harding> roconnor: is somebody proposing BIP8(3m, false)?  I mentioned that the other day but I didn't see any responses.
 06:43 <@michaelfolkson> If you weren't following everything you'd be running an old version or whatever Core put out
 06:43 < roconnor> I have had shower thoughts of core releasing a point relase who's only different is a relase note item that reads "Do not upgrade to this version if you don't want taproot". :D
@@ -337,36 +365,155 @@ ____
 06:45 < harding> roconnor: oh, good.  It's been my favorite option since I first summarized the options on the wiki like seven months ago.
 06:45 <@michaelfolkson> UASF wouldn't release (true,3m) but yeah Core could release (false, 3m)
 06:45 < willcl_ark_> harding: It certainly seems like a good approach to me. _if_ that fails, then you can try an understand why, without wasting too much time
+....
 ____
 
 It seems the "`let's see what happens`" approach finally clicked in
 peoples' minds. This idea would later be labeled as "`Speedy Trial`"
 due to it's short signaling period. David Harding explains this idea
-to the broader community in an [email to the Bitcoin-Dev mailing list]:
+to the broader community in an
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-March/018583.html[email
+to the Bitcoin-Dev mailing list].
+
+[quote, David Harding email on 2021-03-06, Bitcoin-Dev mailing list]
+____
+The earlier version of this proposal was documented over 200 days ago[3]
+and taproot's underlying code was merged into Bitcoin Core over 140 days
+ago.[4]  If we had started Speedy Trial at the time taproot
+was merged (which is a bit unrealistic), we would've either be less than
+two months away from having taproot or we would have moved on to the
+next activation attempt over a month ago.
+
+Instead, we've debated at length and don't appear to be any closer to
+what I think is a widely acceptable solution than when the mailing list
+began discussing post-segwit activation schemes over a year ago.[5]  I
+think Speedy Trial is a way to generate fast progress that will either
+end the debate (for now, if activation is successful) or give us some
+actual data upon which to base future taproot activation proposals.
+____
+
+This deployment mechanism was refined over the course of two months
+and then released in
+https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.1.md#taproot-soft-fork[Bitcoin
+Core version 0.21.1]. The miners quickly started signaling for this
+upgrade moving the deployment state to `LOCKED_IN`, and after a grace
+period the Taproot rules activated mid-November in block
+https://mempool.space/block/0000000000000000000687bca986194dc2c1f949318629b44bb54ec0a94d8244[709632].
+
+==== Future deployment mechanisms
+
+Given the problems with the recent soft forks, Segwit and Taproot,
+it's not clear how the next upgrade will be deployed. Speedy Trial was
+used to deploy Taproot, but it was used to bridge the chasm between
+the UASF and the MASF crowds, not because it has emerged as the best
+known deployment mechanism.
+
+=== Deployment risks
+
+During activation of any fork, hard or soft, there's a risk of a
+long-lasting chain split. A split that lingures for more than a few
+blocks can cause severe damage to the sentiment around Bitcoin and
+also it's price. But above all, it would cause great confusion over
+what Bitcoin is. Is Bitcoin this chain or that chain?
+
+Jimmy Song [speaks about the costs associated with hard forks] at
+Breaking Bitcoin in Paris, but much of it applies to a chain split due
+to a failed soft fork as well. He speaks about _negative
+externalities_, and refers to prices someone else has to pay for your
+own actions.
+
+[quote, Jimmy Song on Socialized Costs Of Hard Forks, Breaking Bitcoin conference 2017]
+____
+The classic example of a negative externality is a factory. Maybe they
+are producing– maybe it’s an oil refinery and they produce a good that
+is good for the economy but they also produce something that is a
+negative externality, like pollution. It’s not just something that
+everyone has to pay for, to clean up, or suffer from. But it’s also
+2nd and 3rd order effects, like more traffic going towards the factory
+as a result of more workers that need to go there. You might also
+have- you might endanger some wildlife around there. It’s not that
+everyone has to pay for hte negative externalities, it might be
+specific people, like people who were previously using that road or
+animals that were near that factory, and they are also paying for the
+cost of that factory.
+____
+
+In the context of Bitcoin, he exemplifies negative externalities using
+Bitcoin Cash (bcash), which is a hard fork of Bitcoin created shortly
+prior to this conference. He categorizes the negative externalities of
+a hard fork into one-time costs and permanent costs.
+
+Among the many examples of one-time costs he mentions those of exchanges.
+
+[quote, Jimmy Song on Socialized Costs Of Hard Forks, Breaking Bitcoin conference 2017]
+____
+So we have a bunch of exchanges and they had a lot of one-time costs
+that they had to pay. The first thing that happened is that deposits
+and withdrawals had to be halted for a day or two for these exchanges
+because they didn’t know what would happen. Many of these exchanges
+had to dip into cold storage because their users were demanding
+bcash. It’s part of their fidicuiary duty, they have to do that. You
+also have to audit the new software. This is something that we had to
+do at itbit. We want to spend bcash- how do we do it? We have to
+download electron cash? Does it have malware? We have to go and
+audit it. We had like 10 days to figure out if this was okay
+or not. And then you have to decide, are we going to just allow a
+one-time withdrawal, or are we going to list this new coin? For an
+exchange to lis ta new coin, it’s not easy- there’s all sorts of new
+procedures for cold storage, signing, deposits, withdrawals. Or you
+could just have this one-off event where you give them their bcash at
+some point and then you never think about it again. But that has its
+problems too. And finally, and whatever way you do it, withdrawals or
+listing– you are going to need new infrastructure to work with this
+token in some way, even if it’s a one-time withdrawal. You need some
+way to give these tokens to your users. Again, short-notice. Right? No
+time to do this, has to be done quickly.
+____
+
+He also lists one-time costs for merchants, payment processors,
+wallets, miners, and users. Then he talks about some permanent costs,
+for example higher risk of reorgs, privacy loss, etc.
 
 
+=== The risks
 
+Whenever an upgrade attempt is made to Bitcoin, no matter the
+deployment mechanism or whether the change is a hard fork or a soft
+fork, there's always a risk of a long-lasting split.
+
+The risk with a user activated soft fork is that the new rules
+activate even if the majority of the hash power doesn't support
+them. This scenario would result in a long lasting chain split that
+would remain until the majority of the hash power adopts the new
+rules. It could be especially hard to incentivize miners to switch to
+the new chain if they had already mined blocks after the split on the
+old chain, because by switching branch they would be abandoning their
+own block rewards.
+
+The risk with a miner activated soft fork is that miners could engage
+in false signaling, which means that the actual share of the hash
+power that support the change is smaller than it looks. If the actual
+support doesn't comprise a majority of the hash power, we'd probably
+see a long lasting chain split similar with the one described in the
+previous paragraph. This, or at least a similar issue, has happened in
+reality when <<bip66-splits,BIP66 was deployed>>, but it got resolved
+within 6 blocks or so.
+
+No matter why the long-lasting split occurs, it will result in the
+problems described by Song above. Also, when a split has happened, and
+the chain with the most general rules becomes stronger than the chain
+with the stricter rules, a reorg will occur. This will have a severe
+impact on all transactions carried out in the wiped-out branch. For
+these reasons it's really important to try to avoid splits at all
+times.
+
+Another risk with a miner activated soft fork is that a small
+percentage of the hash power can veto an upgrade, resulting in a
+failed upgrade. If an upgrade fails, a new attempt must be made,
+further delaying the deployment of the new rules, potentially by
+years.
 
 ////
-Matt Corallo: Modern Soft Fork Activation
-https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-January/017547.html
-
-David Harding summarizing Matt Corrallo on soft fork activation
-https://bitcoinops.org/en/newsletters/2020/01/15/#discussion-of-soft-fork-activation-mechanisms
-
-2020-07-21 
-David Harding summarizing Taproot activation proposals
-https://en.bitcoin.it/wiki/Taproot_activation_proposals
-
-
-Song on Hardforks
-https://www.youtube.com/watch?v=eCE2OzKIab8&t=311s
-Negative externalities (bad things others had to pay for)
-Lists lots of costs for various classes of entities
-
-
-
-
 Speedy Trial email from Anthony Towns:
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020127.html
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020173.html
@@ -376,5 +523,8 @@ https://gist.github.com/harding/4cad67840f386bfa8bca0b6f325eb6e9
 
 Harding: Harmony and Discord
 https://bitcointalk.org/dec/p1.html
+
+Antopoulos in Let's Talk Bitocin on forks
+https://btctranscripts.com/lets-talk-bitcoin-podcast/2017-06-04-consensus-uasf-and-forks/
 ////
 

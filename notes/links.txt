@@ -211,6 +211,8 @@ Also: https://bitcoinops.org/en/newsletters/2019/03/12/#bitcoin-core-vulnerabili
 Berkley DB issue 2013:
 https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki
 
+Gregory Maxwell on infamous OP_CHECKMULTISIG bug
+
 Adversarial thinking
 ====================
 

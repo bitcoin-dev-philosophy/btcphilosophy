@@ -2,7 +2,12 @@
 
 WARNING: {wip}
 
+[[bip66-splits]]
+=== The BIP66 splits
+
 ////
 BIP66 4th july side-effect due to validationless mining
 https://en.bitcoin.it/wiki/Softfork#2015_BIP66_Blockchain_Fork
+
+
 ////
