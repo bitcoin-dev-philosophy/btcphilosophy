@@ -1,6 +1,6 @@
 == Open Source
 
-Most Bitcoin software, and especially Bitcoin Core, are open
+Most Bitcoin software, and especially Bitcoin Core, is open
 source. This means that the source code of the software is made
 available to the general public for scrutiny, tinkering, modification,
 and redistribution. The definition of open source at
@@ -133,11 +133,11 @@ permission. We've seen countless of successful software projects that
 build on top of Bitcoin, among them are:
 
 Lightning Network:: A payment network that allows for fast payment of
-very small amounts. Requires very few Bitcoin transactions to be
-published to the blockchain. Various inter-operable implementations
-exists, https://github.com/ElementsProject/lightning[c-lightning],
+very small amounts. Requires very few on-chain Bitcoin
+transactions. Various inter-operable implementations exist, such as
+https://github.com/ElementsProject/lightning[c-lightning],
 https://github.com/lightningnetwork/lnd[LND],
-https://github.com/ACINQ/eclair[Eclair],
+https://github.com/ACINQ/eclair[Eclair], and
 https://github.com/lightningdevkit[Lightning Dev Kit].
 CoinJoin:: Multiple parties collaborate to combine their payments into
 a single transaction to make <<_blockchain_privacy,address
@@ -162,7 +162,7 @@ Common for all of the listed systems are that they themselves are
 licensed as open source software, often because they want people to
 contribute to the code, re-use the code, or review the code, without
 asking for permission. Open source has become the gold standard of
-Bitcoin software licensing
+Bitcoin software licensing.
 
 ////
 A software project that's not open source will have a hard time
@@ -178,7 +178,7 @@ Open source developers often use open source libraries developed by
 other people. This is a natural, and awesome part of a healthy
 ecosystem. But Bitcoin software deals with real money, and as such it
 needs to be extra careful when choosing which third party libraries it
-depends on.
+should depend on.
 
 // https://www.youtube.com/watch?v=Gs9lJTRZCDc&t=2239s
 
@@ -198,11 +198,11 @@ to direct it to human ends against all chance and efforts to
 oppose it.
 ____
 
-He then coins the term _selection cryptography_, which is the art of
-selecting cryptographic tools, and explains how that is an important
-part of cryptography. It revolves around how to select cryptographic
-libraries, tools, and practices, or as he says "`The cryptosystem of
-picking cryptosystems`".
+He then introduces the term _selection cryptography_, which is the art
+of selecting cryptographic tools, and explains why that is an
+important part of cryptography. It revolves around how to select
+cryptographic libraries, tools, and practices, or as he says "`The
+cryptosystem of picking cryptosystems`".
 
 Using concrete examples, he shows how selection cryptography can
 easily go horribly wrong and also proposes a list of things to think
@@ -251,9 +251,9 @@ requests to Bitcoin Core
 In each of these phases people with different points of view and
 backgrounds review the available information, be it the source code, a
 BIP, or a loosely described idea. The phases usually aren't performed
-in any strict top-down manner, but multiple phases can happen
+in any strict top-down manner, multiple phases can happen
 simultaneously, and sometimes you go back and forth between
-them. Different people may also provide feedback on different phases.
+them. Different people may also provide feedback in different phases.
 
 One of the most prolific code reviewers on Bitcoin Core is Jon
 Atack. He wrote
@@ -270,7 +270,7 @@ A good approach is to make it not about you, but rather "How can I
 best serve?"
 ____
 
-He's also talking about how review is the limiting factor in Bitcoin
+He also talks about how review is the limiting factor in Bitcoin
 Core. Lots of good ideas get stuck in limbo absent of review. Also,
 reviewing is a great way to learn about the software while providing
 value at the same time. His rule of thumb is to review 5-15 PRs before
@@ -295,7 +295,7 @@ important documentation for further reading.
 Bitcoin Core developer and code reviewer Gloria Zhao has written
 https://github.com/glozow/bitcoin-notes/blob/master/review-checklist.md[an
 article containing questions] she might ask herself during a
-review. She explains what she considers a good review.
+review. She states what she considers a good review.
 
 [quote, Gloria Zhao on GitHub, Common PR Review Questions]
 ____
@@ -314,15 +314,15 @@ Her view, that a good review should focus on what's most needed at
 this point in time, aligns well with Jon Atack's writings. She
 proposes lots of questions at various levels of review, but stresses
 that this list is not in any way exhaustive or that it should be used
-as a straight-out recipe. The list is illustrated with real-world
+as a straight-out recipe. The list is illustrated with real-life
 examples from GitHub.
 
 === Funding
 
 Lots of people work with Bitcoin open source development, for Bitcoin
 Core or for other projects. Some do it on their spare time without
-getting any compensation, but many developers are actually getting
-paid to do it.
+getting any compensation, but many developers are also getting paid to
+do it.
 
 Companies, individuals, and organizations who have an interest in
 Bitcoin's continued success can donate funds to developers, either
@@ -365,20 +365,19 @@ People sometimes get the impression that there's a lot of infighting
 and endless heated debates among Bitcoin developers, and that they are
 incapable of making decisions.
 
-For example, the Taproot deployment mechanism was discussed over a
-long period of time and two "`camps`" formed. One which wanted to
-"`fail`" the upgrade if miners hadn't overwhelmingly voted for the new
-rules after a certain timeout occurred, and one which wanted to
-enforce the rules after the timeout. Michael Folkson summarizes the
-arguments from the two camps in
+For example, the <<taproot-deployment,Taproot deployment mechanism>>
+was discussed over a long period of time and two "`camps`" formed. One
+which wanted to "`fail`" the upgrade if miners hadn't overwhelmingly
+voted for the new rules after a certain timeout occurred, and one
+which wanted to enforce the rules after the timeout. Michael Folkson
+summarizes the arguments from the two camps in
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-February/018380.html[an
 email to the bitcoin-dev mailing list].
 
 The discussions went on seemingly forever, and it was really hard to
 see any consensus on this forming any time soon. This got people
-frustrated and as a result the heat intensified. This even got Gregory
-Maxwell to
-https://btctranscripts.com/greg-maxwell/2020-07-20-greg-maxwell-taproot-pace/[worry
+frustrated and as a result the heat intensified. Gregory Maxwell
+https://btctranscripts.com/greg-maxwell/2020-07-20-greg-maxwell-taproot-pace/[worried
 on Reddit] that the lengthy discussions would make the upgrade less
 safe.
 
@@ -399,8 +398,7 @@ lock in activation of Taproot, or fail fast. If they do activate
 within that window, then Taproot activates approximately 6 months
 later. If they don't, then the community has gained some new knowledge
 about the miners' intentions, and can make a new proposal for
-deployment. This upgrade will be covered in more detail in
-<<upgrading>>.
+deployment. This upgrade is covered in more detail in <<upgrading>>.
 
 Someone not used to Bitcoin's development process would probably think
 these heated debates look awfully bad and even toxic. There are at
@@ -409,8 +407,8 @@ least two factors that make it look bad, in some people's eyes:
 * Compared to closed source companies, all debates happen in the open,
   unedited. A software company like Google would never let employees
   debate proposed features in the open, and at most publish a
-  statement about the company's stance on the subject. This makes the
-  company look more harmonic than Bitcoin.
+  statement about the company's stance on the subject. This makes
+  companies look more harmonic compared to Bitcoin.
 * Since Bitcoin is permissionless, it means anyone is allowed to voice
   their opinions. This is fundamentally different from a closed source
   company that have a handful of people with an opinion, usually
@@ -423,16 +421,16 @@ outcome.
 
 As hinted in <<sabotage,the Adversarial thinking chapter>>, the second
 bullet above comes with a downside. An attacker could use stalling
-tactics, from the https://www.gutenberg.org/ebooks/26184[Simple
-Sabotage Field Manual] for example, to distort the decision making and
-development process.
+tactics, maybe from the https://www.gutenberg.org/ebooks/26184[Simple
+Sabotage Field Manual], to distort the decision making and development
+process.
 
-Another important thing to mention is that, as noted in
-<<_libraries>>, since Bitcoin is money, and Bitcoin Core secures
-unfathomable amounts of money, security is not taken lightly. Seasoned
-Bitcoin Core developers might appear very hard-headed for this reason,
-and it's usually warranted. A feature with a weak rationale is not
-going to be accepted. The same would happen if it breaks the
+Another thing worth mentioning is that, as noted in <<_libraries>>,
+since Bitcoin is money, and Bitcoin Core secures unfathomable amounts
+of money, security is not taken lightly. Seasoned Bitcoin Core
+developers might appear very hard-headed for this reason, and it's
+usually warranted. A feature with a weak rationale is not going to be
+accepted. The same would happen if it breaks the
 <<_dont_trust_verify,reproducible builds>>, adds new dependencies, or
 if your code doesn't follow
 https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md[best

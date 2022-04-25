@@ -1,7 +1,7 @@
 == Scaling
 
-Scaling has been a very hot topic since the early days of Bitcoin, but
-it can mean different things to different people, for example
+Scaling has been a hot topic since the early days of Bitcoin. Also,
+different people put different meanings into the word, such as
 increasing the transaction capacity of the blockchain, use the
 blockchain more efficiently, or develop systems on top of Bitcoin.
 
@@ -16,7 +16,7 @@ different kinds of changes, for example:
 * Transaction batching
 * Layered architecture
 
-We'll soon dive into different approaches to scaling, but let's start
+We'll soon dive into different approaches for scaling, but let's start
 with a brief overview of Bitcoin's history in the context of scaling.
 
 === History
@@ -41,7 +41,7 @@ proposal, it does not seem to scale to the required size.
 ____
 
 The conversation itself might not be very interesting or accurate, but
-it shows that scaling was a concern very early on.
+it shows that scaling has been a concern from the very beginning.
 
 Scaling discussions reached peak interest around 2015-2017 where many
 different ideas floated around about if and how to increase the
@@ -50,12 +50,13 @@ about changing a parameter in the source code, a change that doesn't
 really solve anything fundamentally, but pushes the problem of scaling
 further into the future, building technical debt.
 
-During 2015, a conference called https://scalingbitcoin.org/[Scaling
-Bitcoin] was held in Montreal, and 6 months later in Hong Kong
-followed by other locations, to address scaling. Many Bitcoin
-developers and others gathered there to discuss various scaling issues
-and proposals. Most of these discussions didn't revolve around block
-size increases but more long term solutions.
+In 2015, a conference called https://scalingbitcoin.org/[Scaling
+Bitcoin] was held in Montreal, with a followup conference six months
+later in Hong Kong, and thereafter in a number of other locations, to
+address scaling. Many Bitcoin developers and others gathered there to
+discuss various scaling issues and proposals. Most of these
+discussions didn't revolve around block size increases but more long
+term solutions.
 
 After the Hong Kong conference in December 2015, Gregory Maxwell
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-December/011865.html[summarized
@@ -89,14 +90,15 @@ He further summarizes the many approaches to scaling presented at the
 conference. Among them are more computationally efficient signature
 verifications, _segregated witness_ including a block size limit
 change, a more space-efficient block propagation mechanism, and
-building protocols on top of Bitcoin in layers.
+building protocols on top of Bitcoin in layers. Many of these
+approaches have since been implemented.
 
 === Scaling approaches
 
 As hinted above, scaling Bitcoin doesn't necessarily have to be about
 increasing the block size limit or other limits. We'll go through some
 general scaling approaches, of which some don't suffer from the
-throughput-decentralization trade-off we mentioned in the previous
+throughput-decentralization trade-off mentioned in the previous
 section.
 
 ==== Vertical scaling
@@ -144,11 +146,12 @@ increase the chance of stale blocks.
 
 Miners don't like to have their blocks staled, because they'll lose
 their block reward, so they will do what they can to avoid this
-scenario. Among the things they can do:
+scenario. Among the things they can do are:
 
-* Delay validation of an incoming block, also known as _validationless
-  mining_. Just check the block header's proof-of-work and mine on top
-  of it while you download the full block and validate it.
+* Postpone validation of an incoming block, also known as
+  _validationless mining_. Just check the block header's proof-of-work
+  and mine on top of it while you download the full block and
+  validate it.
 * Connect to a mining pool with greater bandwidth and connectivity.
 
 Validationless mining further undermines the
@@ -158,7 +161,7 @@ incoming blocks. It also hurts security to some degree because a
 portion of the network's computing power is potentially building on an
 invalid blockchain, instead of building on the strongest valid chain.
 
-The second bullet, has a negative effect on
+The second bullet has a negative effect on
 <<_miner_decentralization,miner decentralization>>, because the larger
 pools usually are the ones with the best network connectivity and
 bandwidth.
@@ -167,7 +170,7 @@ bandwidth.
 
 Horizontal scaling refers to techniques that divide the work load
 across multiple machines. While this is a very common scaling approach
-among popular web sites and databases, it's not so easy to do in
+among popular web sites and databases, it's not easily done in
 Bitcoin.
 
 Many people refer to this Bitcoin scaling approach as _sharding_. You
@@ -204,9 +207,9 @@ or two orders of magnitude simpler than the Bitcoin protocol.
 ____
 
 The conclusion he makes is that sharding _might_ be technically
-possible, but it comes at the cost of tremendous complexity. And given
-the fact that many users already find Bitcoin too complex and instead
-use centralized services, it's going to be hard convincing them to use
+possible, but it comes at the cost of tremendous complexity. Given the
+fact that many users already find Bitcoin too complex and instead use
+centralized services, it's going to be hard convincing them to use
 something even more complex.
 
 ==== Inward scaling
@@ -214,7 +217,7 @@ something even more complex.
 While horizontal and vertical scaling has worked out well historically
 in centralized systems like databases and web servers, they don't seem
 to be suitable for a decentralized network like Bitcoin due to their
-centralization effects.
+centralizing effects.
 
 An approach that get far too little appreciation is what we can call
 _inward scaling_, which translates to "do more with less". It refers
@@ -222,15 +225,15 @@ to the constantly ongoing work by many developers to optimize the
 algorithms already in place so that we can do more within the existing
 limits of the system.
 
-The amount of improvement that's been done using inward scaling is
+The amount of improvement that's been done through inward scaling is
 impressive, to say the least. To give you a high level view of the
 improvements over the years, Jameson Lopp
 https://blog.lopp.net/bitcoin-core-performance-evolution/[has run
-benchmark tests] on blockchain synchronization over many years,
-comparing different versions of Bitcoin Core.
+benchmark tests] on blockchain synchronization, comparing many
+different versions of Bitcoin Core going back to version 0.8.
 
 .Initial block download performance of various versions of Bitcoin Core. On the Y-axis is the block height synced and on the X-axis is the time it took to sync to that height. Source: https://blog.lopp.net/bitcoin-core-performance-evolution/
-image::Bitcoin-Core-Sync-Performance-1.png[{half-width}]
+image::Bitcoin-Core-Sync-Performance-1.png[{big-width}]
 
 The different lines represents different versions of Bitcoin Core. The
 leftmost line is the latest, as of writing, version 22.0 released
@@ -244,8 +247,8 @@ contribute to the improvements in the diagram above.
 
 A good example of computational improvements can be found in the
 https://github.com/bitcoin-core/secp256k1[libsecp256k1] library, which
-implements the cryptographic primitives needed to make and verify
-digital signatures, among other things. Pieter Wuille is one of the
+among other things implements the cryptographic primitives needed to
+make and verify digital signatures. Pieter Wuille is one of the
 contributors to this library and he
 https://twitter.com/pwuille/status/1450471673321381896[wrote a twitter
 thread] showcasing the performance improvements made by various pull
@@ -262,10 +265,11 @@ for both architectures. Note that the Y-axis is logarithmic, which
 makes the improvements look less impressive than they actually are.
 
 There are also several good examples of where space savings have
-contributed to performance improvements. In a Medium blog post about
-Taproot's contribution to space savings, user Murch compared how much
-block space a 2-of-3 threshold signature would require, both without
-using Taproot and using Taproot in various ways.
+contributed to performance improvements. In a
+https://murchandamus.medium.com/2-of-3-multisig-inputs-using-pay-to-taproot-d5faf2312ba3[Medium
+blog post] about Taproot's contribution to space savings, user Murch
+compared how much block space a 2-of-3 threshold signature would
+require, both without using Taproot and using Taproot in various ways.
 
 .Space savings for different spending types Taproot and legacy versions.
 image::murch-taproot.png[{half-width}]
@@ -287,16 +291,16 @@ transaction batching and output consolidation.
 
 The idea with transaction batching is to combine multiple payments
 into one single transaction, instead of using one transaction per
-payment. This can save you a lot of fees, while reducing the block
-space load.
+payment. This can save you a lot of fees, and at the same time, reduce
+the block space load.
 
 .Transaction batching combines multiple payments into a single transaction to save on fees.
-image::tx-batching.png[{half-width}]
+image::tx-batching.png[{big-width}]
 
 Output consolidation means that you take advantage of periods of low
 block space demand to combine your outputs into a single output. This
-saves on fees later when you want to make a payment during high
-block space demand.
+can reduce your fee cost later, when you need to make a payment during
+high block space demand.
 
 .Output consolidation. Melt your coins into one big coin when fees are low to save fees later.
 image::utxo-consolidation.png[{big-width}]
@@ -304,7 +308,7 @@ image::utxo-consolidation.png[{big-width}]
 It may not be obvious how output consolidation contributes to inward
 scaling. After all, the total amount of blockchain data even slightly
 increases with this method, but the UTXO set, the database that keeps
-track of who owns which coins, decreases because you spend more coins
+track of who owns which coins, decreases because you spend more UTXOs
 than you create. This alleviates the burden for full nodes to maintain
 their UTXO sets.
 

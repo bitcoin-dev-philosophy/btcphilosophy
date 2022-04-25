@@ -281,6 +281,7 @@ ensures we're not setting a negative precedent that we'll come to regret
 as Bitcoin continues to grow.
 ____
 
+[[taproot-deployment]]
 ==== Taproot upgrade - Speedy trial
 
 When Taproot was ready for deployment, meaning all technical details
