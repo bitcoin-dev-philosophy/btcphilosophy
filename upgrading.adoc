@@ -1,7 +1,5 @@
 == Upgrading
 
-WARNING: {wip}
-
 Upgrading Bitcoin safely can be extremely difficult. Some changes take
 multiple years to roll out. In this chapter we'll explore some
 examples of historic upgrades to Bitcoin as well as discuss the pros
