@@ -65,7 +65,7 @@ Bitcoin, for many reasons that we'll discuss further in this chapter.
 If a change to the Bitcoin consensus rules is backward compatible, but
 not forward compatible, it is called a hard fork.
 
-Unforturnately, people often use the term backward compatible to
+Unfortunately, people often use the term backward compatible to
 describe a soft fork, but that's only one part of it, the easy
 part. The hard part of a soft fork is forward compatibility.
 
@@ -73,7 +73,7 @@ For a technical overview of soft forks and hard forks, please read
 https://rosenbaum.se/book/grokking-bitcoin-11.html[chapter 11 of
 Grokking Bitcoin]. It will explain these terms and also dive into
 upgrade mechanisms. That chapter will be very useful to get a grip on
-before reading the rest of this chapter, but not strictly neccesary.
+before reading the rest of this chapter, but not strictly necessary.
 
 === Historic upgrades
 
@@ -122,7 +122,7 @@ which was deployed in a somewhat different, and chaotic, manner.
 
 ==== Segwit upgrade
 
-While all upgrades preceeding the segwit upgrade was more or less
+While all upgrades preceding the segwit upgrade was more or less
 painless, this one was different. There seemed to be overwhelming
 support for segwit among Bitcoin users, but for some reason miners
 didn't signal support for this upgrade, which stalled the activation
@@ -341,7 +341,7 @@ until 7 months later.
 
 During these 7 months, the discussion went on and it seemed like there
 was no way to reach broad consensus on which deployment mechanism
-to use. There were mainly two camps, one that prefered
+to use. There were mainly two camps, one that preferred
 `lockinontimeout=true` (the UASF crowd) and one that preferred
 `lockinontimeout=false` (the try and if it fails rethink crowd). Since
 there were no overwhelming support for any of these options, the
@@ -411,7 +411,7 @@ known deployment mechanism.
 === Deployment risks
 
 During activation of any fork, hard or soft, there's a risk of a
-long-lasting chain split. A split that lingures for more than a few
+long-lasting chain split. A split that lingers for more than a few
 blocks can cause severe damage to the sentiment around Bitcoin and
 also it's price. But above all, it would cause great confusion over
 what Bitcoin is. Is Bitcoin this chain or that chain?
@@ -524,7 +524,7 @@ https://gist.github.com/harding/4cad67840f386bfa8bca0b6f325eb6e9
 Harding: Harmony and Discord
 https://bitcointalk.org/dec/p1.html
 
-Antopoulos in Let's Talk Bitocin on forks
+Antonopoulos in Let's Talk Bitocin on forks
 https://btctranscripts.com/lets-talk-bitcoin-podcast/2017-06-04-consensus-uasf-and-forks/
 ////
 
