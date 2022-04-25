@@ -407,19 +407,41 @@ used to deploy Taproot, but it was used to bridge the chasm between
 the UASF and the MASF crowds, not because it has emerged as the best
 known deployment mechanism.
 
-=== Deployment risks
+=== Risks
 
-During activation of any fork, hard or soft, there's a risk of a
-long-lasting chain split. A split that lingers for more than a few
-blocks can cause severe damage to the sentiment around Bitcoin and
-also it's price. But above all, it would cause great confusion over
-what Bitcoin is. Is Bitcoin this chain or that chain?
+During activation of any fork, hard or soft, miner activated of user
+activated, there's a risk of a long-lasting chain split. A split that
+lingers for more than a few blocks can cause severe damage to the
+sentiment around Bitcoin and also it's price. But above all, it would
+cause great confusion over what Bitcoin is. Is Bitcoin this chain or
+that chain?
 
-Jimmy Song [speaks about the costs associated with hard forks] at
-Breaking Bitcoin in Paris, but much of it applies to a chain split due
-to a failed soft fork as well. He speaks about _negative
-externalities_, and refers to prices someone else has to pay for your
-own actions.
+The risk with a user activated soft fork is that the new rules
+activate even if the majority of the hash power doesn't support
+them. This scenario would result in a long lasting chain split that
+would remain until the majority of the hash power adopts the new
+rules. It could be especially hard to incentivize miners to switch to
+the new chain if they had already mined blocks after the split on the
+old chain, because by switching branch they would be abandoning their
+own block rewards.
+
+The risk with a miner activated soft fork is that miners could engage
+in false signaling, which means that the actual share of the hash
+power that support the change is smaller than it looks. If the actual
+support doesn't comprise a majority of the hash power, we'd probably
+see a long lasting chain split similar with the one described in the
+previous paragraph. This, or at least a similar issue, has happened in
+reality when <<bip66-splits,BIP66 was deployed>>, but it got resolved
+within 6 blocks or so.
+
+==== Costs of a split
+
+Jimmy Song
+https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/[speaks
+about the costs associated with hard forks] at Breaking Bitcoin in
+Paris, but much of it applies to a chain split due to a failed soft
+fork as well. He speaks about _negative externalities_, and refers to
+prices someone else has to pay for your own actions.
 
 [quote, Jimmy Song on Socialized Costs Of Hard Forks, Breaking Bitcoin conference 2017]
 ____
@@ -473,44 +495,11 @@ He also lists one-time costs for merchants, payment processors,
 wallets, miners, and users. Then he talks about some permanent costs,
 for example higher risk of reorgs, privacy loss, etc.
 
-
-=== The risks
-
-Whenever an upgrade attempt is made to Bitcoin, no matter the
-deployment mechanism or whether the change is a hard fork or a soft
-fork, there's always a risk of a long-lasting split.
-
-The risk with a user activated soft fork is that the new rules
-activate even if the majority of the hash power doesn't support
-them. This scenario would result in a long lasting chain split that
-would remain until the majority of the hash power adopts the new
-rules. It could be especially hard to incentivize miners to switch to
-the new chain if they had already mined blocks after the split on the
-old chain, because by switching branch they would be abandoning their
-own block rewards.
-
-The risk with a miner activated soft fork is that miners could engage
-in false signaling, which means that the actual share of the hash
-power that support the change is smaller than it looks. If the actual
-support doesn't comprise a majority of the hash power, we'd probably
-see a long lasting chain split similar with the one described in the
-previous paragraph. This, or at least a similar issue, has happened in
-reality when <<bip66-splits,BIP66 was deployed>>, but it got resolved
-within 6 blocks or so.
-
-No matter why the long-lasting split occurs, it will result in the
-problems described by Song above. Also, when a split has happened, and
-the chain with the most general rules becomes stronger than the chain
-with the stricter rules, a reorg will occur. This will have a severe
-impact on all transactions carried out in the wiped-out branch. For
-these reasons it's really important to try to avoid splits at all
-times.
-
-Another risk with a miner activated soft fork is that a small
-percentage of the hash power can veto an upgrade, resulting in a
-failed upgrade. If an upgrade fails, a new attempt must be made,
-further delaying the deployment of the new rules, potentially by
-years.
+Also, when a split has happened, and the chain with the most general
+rules becomes stronger than the chain with the stricter rules, a reorg
+will occur. This will have a severe impact on all transactions carried
+out in the wiped-out branch. For these reasons it's really important
+to try to avoid splits at all times.
 
 ////
 Speedy Trial email from Anthony Towns:
