@@ -1,14 +1,9 @@
 == Upgrading
 
-Upgrading Bitcoin safely can be extremely difficult. Some changes take
-multiple years to roll out. In this chapter we'll explore some
-examples of historic upgrades to Bitcoin as well as discuss the pros
-and cons of various upgrade mechanisms. We will start by setting the
-stage with some vocabulary.
-
-There are lots of nuances to upgrade mechanisms and they might be best
-understood by studying previous upgrades. Therefore this chapter will
-put much focus on that.
+Upgrading Bitcoin in a safe way can be extremely difficult. Some
+changes take multiple years to roll out. In this chapter we'll explore
+some examples of historic upgrades to Bitcoin as well as discuss the
+pros and cons of various upgrade mechanisms.
 
 To get in tune for this chapter, you should read
 https://bitcointalk.org/dec/p1.html[David Harding's piece on Harmony
@@ -36,11 +31,19 @@ from endless inflation, mass or targeted confiscation, or simply the
 bureaucratic morass that is the legacy financial system.
 ____
 
-=== Forward and backward compatibility
+This chapter will discuss how Bitcoin can be upgraded without causing
+discord. Staying in harmony (consensus) is one of the biggest
+challenges in Bitcoin development. There are lots of nuances to
+upgrade mechanisms and they might be best understood by studying
+previous upgrades, so this chapter will put much focus on that, but
+We'll start by setting the stage with some vocabulary.
 
-According to Wikipedia, forward compatibility means that old software
-can process data created by newer software, ignoring the parts it
-doesn't understand.
+=== Vocabulary
+
+According to
+https://en.wikipedia.org/wiki/Forward_compatibility[Wikipedia],
+*forward compatibility* means that old software can process data
+created by newer software, ignoring the parts it doesn't understand.
 
 [quote, Forward compatibility, Wikipedia]
 ____
@@ -50,28 +53,23 @@ later versions of the standard, ignoring new parts which it does not
 understand.
 ____
 
-And vice versa, backward compatibility means that data from old
-software is usable on new software. A change is said to be fully
-compatible if it's both forward and backward compatible.
+And vice versa,
+https://en.wikipedia.org/wiki/Backward_compatibility[*backward
+compatibility*] means that data from old software is usable on new
+software. A change is said to be fully compatible if it's both forward
+and backward compatible.
 
-=== Soft forks and hard forks
-
-A change to the Bitcoin consensus rules is said to be a soft fork if
+A change to the Bitcoin consensus rules is said to be a *soft fork* if
 the change is fully compatible. This is the most common way to upgrade
-Bitcoin, for many reasons that we'll discuss further in this chapter.
-
-If a change to the Bitcoin consensus rules is backward compatible, but
-not forward compatible, it is called a hard fork.
-
-Unfortunately, people often use the term backward compatible to
-describe a soft fork, but that's only one part of it, the easy
-part. The hard part of a soft fork is forward compatibility.
+Bitcoin, for many reasons that we'll discuss further in this
+chapter. If a change to the Bitcoin consensus rules is backward
+compatible, but not forward compatible, it is called a *hard fork*.
 
 For a technical overview of soft forks and hard forks, please read
 https://rosenbaum.se/book/grokking-bitcoin-11.html[chapter 11 of
 Grokking Bitcoin]. It will explain these terms and also dive into
-upgrade mechanisms. That chapter will be very useful to get a grip on
-before reading the rest of this chapter, but not strictly necessary.
+upgrade mechanisms. It's recommended, although not strictly
+neccesary, to get a grip on this before you continue reading.
 
 === Historic upgrades
 
@@ -172,7 +170,7 @@ coordinating them. Due to this misunderstanding, miners may also feel
 obliged to proclaim in public their views on a soft fork, as if that
 gives weight to the proposal.
 
-The UASF proposal, in a nutshell, is a "flag day" on which nodes
+The UASF proposal is, in a nutshell, a "flag day" on which nodes
 starts enforcing the new rules. That way miners don't have to
 participate in coordinating the upgrade, but can trigger activation
 earlier than the flag day if enough blocks signal support.
@@ -336,17 +334,17 @@ activated soft fork) or `false` (as in a miner activated soft fork).
 
 Among the proposals listed, one of them was titled "`Let’s see what
 happens`". This proposal didn't get much traction for some reason
-until 7 months later.
+until seven months later.
 
-During these 7 months, the discussion went on and it seemed like there
-was no way to reach broad consensus on which deployment mechanism
-to use. There were mainly two camps, one that preferred
+During these seven months, the discussion went on and it seemed like
+there was no way to reach broad consensus on which deployment
+mechanism to use. There were mainly two camps, one that preferred
 `lockinontimeout=true` (the UASF crowd) and one that preferred
 `lockinontimeout=false` (the try and if it fails rethink crowd). Since
 there were no overwhelming support for any of these options, the
 discussions went in circles with seemingly no way forward. Some of
 these discussions were held on IRC, in a channel called
-##taproot-activation, and
+##taproot-activation, but
 https://gnusha.org/taproot-activation/2021-03-05.log[on March 5 2021],
 something changed:
 
@@ -407,14 +405,15 @@ used to deploy Taproot, but it was used to bridge the chasm between
 the UASF and the MASF crowds, not because it has emerged as the best
 known deployment mechanism.
 
+[[upgrading-risks]]
 === Risks
 
-During activation of any fork, hard or soft, miner activated of user
+During activation of any fork, hard or soft, miner activated or user
 activated, there's a risk of a long-lasting chain split. A split that
 lingers for more than a few blocks can cause severe damage to the
-sentiment around Bitcoin and also it's price. But above all, it would
-cause great confusion over what Bitcoin is. Is Bitcoin this chain or
-that chain?
+sentiment around Bitcoin and also to it's price. But above all, it
+would cause great confusion over what Bitcoin is. Is Bitcoin this
+chain or that chain?
 
 The risk with a user activated soft fork is that the new rules
 activate even if the majority of the hash power doesn't support
@@ -423,7 +422,10 @@ would remain until the majority of the hash power adopts the new
 rules. It could be especially hard to incentivize miners to switch to
 the new chain if they had already mined blocks after the split on the
 old chain, because by switching branch they would be abandoning their
-own block rewards.
+own block rewards. However, contrary to this incentive, in March 2013,
+when a <<march2013split,long-lasting split>> occured due to an
+unintentional hard fork, two major mining pools made the decision to
+abandon their branch of the split to restore consensus.
 
 The risk with a miner activated soft fork is that miners could engage
 in false signaling, which means that the actual share of the hash
@@ -500,6 +502,17 @@ rules becomes stronger than the chain with the stricter rules, a reorg
 will occur. This will have a severe impact on all transactions carried
 out in the wiped-out branch. For these reasons it's really important
 to try to avoid splits at all times.
+
+=== Conclusion
+
+Bitcoin grows and evolves over time, and different upgrade mechanisms
+have been used over the years and the learning curve is steep. More
+and more sophisticated and robust methods have been invented as we
+learn more about how the network reacts.
+
+To keep Bitcoin in harmony, soft forks have proven to be the way
+forward, but the big question is still not fully answered: How do we
+safely deploy soft forks without causing discord?
 
 ////
 Speedy Trial email from Anthony Towns:
