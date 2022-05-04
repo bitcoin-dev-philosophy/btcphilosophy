@@ -48,7 +48,7 @@ The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
 ----
 
-As noted in <<_dont_trust_verify>>, it's important that users are able
+As noted in <<donttrustverify>>, it's important that users are able
 to verify that the Bitcoin software they run "`works as
 advertised`". To do that, these users must have unrestricted access to
 the source code of the software they verify. In this chapter we'll
@@ -431,7 +431,7 @@ of money, security is not taken lightly. Seasoned Bitcoin Core
 developers might appear very hard-headed for this reason, and it's
 usually warranted. A feature with a weak rationale is not going to be
 accepted. The same would happen if it breaks the
-<<_dont_trust_verify,reproducible builds>>, adds new dependencies, or
+<<donttrustverify,reproducible builds>>, adds new dependencies, or
 if your code doesn't follow
 https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md[best
 practices].

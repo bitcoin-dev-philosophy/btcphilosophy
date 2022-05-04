@@ -71,6 +71,7 @@ Grokking Bitcoin]. It will explain these terms and also dive into
 upgrade mechanisms. It's recommended, although not strictly
 neccesary, to get a grip on this before you continue reading.
 
+[[historic-upgrades]]
 === Historic upgrades
 
 Bitcoin is not the same today as it was when the Genesis block was

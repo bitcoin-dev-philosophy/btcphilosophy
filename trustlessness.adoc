@@ -98,6 +98,7 @@ image::trust.png[width=50%]
 This security model allows the system designer to select trade-offs
 that make sense to them, without forcing those trade-offs on others.
 
+[[donttrustverify]]
 === Don't trust, verify
 
 Bitcoin is trustless, but you still have to trust your software and
@@ -185,8 +186,9 @@ doing so they also help people who don't verify as thoroughly by
 raising their voices in public to warn about the issues they find. One
 good example of this is an
 https://bitcoincore.org/en/2018/09/20/notice/[event that occurred in
-2018], where a bug was discovered that would allow miners to spend an
-output twice in the same transaction:
+2018] (we also discuss this in <<duplicateinputsissue,the Upgrading
+chapter>>, where a bug was discovered that would allow miners to spend
+an output twice in the same transaction:
 
 [quote, CVE-2018-17144 Full Disclosure, Bitcoin Core website]
 ____
