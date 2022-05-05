@@ -366,18 +366,18 @@ The "value out" in this block #74638 is quite strange:
 
 ----
 
-[snip]
-            "out" : [
-                {
-                    "value" : 92233720368.54277039,
-                    "scriptPubKey" : "OP_DUP OP_HASH160 0xB7A73EB128D7EA3D388DB12418302A1CBAD5E890 OP_EQUALVERIFY OP_CHECKSIG"
-                },
-                {
-                    "value" : 92233720368.54277039,
-                    "scriptPubKey" : "OP_DUP OP_HASH160 0x151275508C66F89DEC2C5F43B6F9CBE0B5C4722C OP_EQUALVERIFY OP_CHECKSIG"
-                }
-            ]
-[snip]
+...
+  "out" : [
+      {
+          "value" : 92233720368.54277039,
+          "scriptPubKey" : "OP_DUP OP_HASH160 0xB7A73EB128D7EA3D388DB12418302A1CBAD5E890 OP_EQUALVERIFY OP_CHECKSIG"
+      },
+      {
+          "value" : 92233720368.54277039,
+          "scriptPubKey" : "OP_DUP OP_HASH160 0x151275508C66F89DEC2C5F43B6F9CBE0B5C4722C OP_EQUALVERIFY OP_CHECKSIG"
+      }
+  ]
+...
 ----
 92233720368.54277039 BTC?  Is that UINT64_MAX, I wonder?
 ____
@@ -591,10 +591,160 @@ Hard fork to remove txid limit protocol rule
 
 ////
 
-
-
 [[bip66-splits]]
-==== The BIP66 splits
+==== BIP66
+
+BIP66 is interesting because it both fixes a consensus bug and,
+ironically, a temporary blockchain split caused by validationless
+mining occurred shortly after it's activation.
+
+BIP66 was a propsal to tighten up the rules for signature encodings in
+Bitcoin Script. The
+https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki#motivation[motivation]
+was to be able to parse signatures with other software or libraries
+than OpenSSL and even recent versions of OpenSSL. OpenSSL is a library
+for general purpose cryptography which was used by Bitcoin Core at
+that time. As a side effect, this BIP would reduce the attack surface
+for transaction malleability.
+
+===== The splits
+
+When BIP66 was activated, it turned out quite messy because some
+miners apperently didn't verify the blocks they try to extend. This is
+called validationless mining. An alert message was sent out to Bitcoin
+nodes with a link to
+https://bitcoin.org/en/alert/2015-07-04-spv-mining[a web page
+describing the issue].
+
+[quote,Bitcoin Core developers,Alert information on bitcoin.org]
+____
+Early morning on 4 July 2015, the 950/1000 (95%) threshold was
+reached. Shortly thereafter, a small miner (part of the non-upgraded
+5%) mined an invalid block–as was an expected
+occurrence. Unfortunately, it turned out that roughly half the network
+hash rate was mining without fully validating blocks (called SPV
+mining), and built new blocks on top of that invalid block.
+____
+
+The alert page instructed people to wait for 30 more confirmations
+than they normally would if they use older versions of Bitcoin Core.
+
+The split mentioned above occured on 2015-07-04 02:10 UTC after block
+height
+https://mempool.space/block/000000000000000006a320d752b46b532ec0f3f815c5dae467aff5715a6e579e[363730]. This
+issue resolved at 03:50 the same day after 6 invalid blocks had been
+mined. Unfortunately the same issue happened again the day after on
+2015-07-05 21:50, but this time the invalid branch only lasted 3
+blocks.
+
+////
+2015-07-04 02:10 - 03:50 UTC (04:10-05:50 CEST) first split after height 363730
+Height confirmed by
+https://bitcointalk.org/index.php?topic=1108644.0
+https://bitcointalk.org/index.php?topic=1108304.0
+https://bitcointalk.org/index.php?topic=1108304.msg11785505#msg11785505
+
+2015-07-05 21:50 - 23:40 UTC (23:50 - 01:50 CEST) second split after height 363997 (2015-07-05 21:27:56) or height 363998 (2015-07-05 23:50:26) 
+////
+
+===== The actual vulnerability
+
+The motivation for BIP66 as mentioned above was not the full
+truth. The actual motivation was a much worse issue, that was
+disclosed publicly by Pieter Wuille in
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-July/009697.html[an
+email to the Bitcoin-dev mailing list]:
+
+[quote,Pieter Wuille on Bitcoin-dev mailing list,Disclosure: consensus bug indirectly solved by BIP66]
+____
+Hello all,
+
+I'd like to disclose a vulnerability I discovered in September 2014,
+which became unexploitable when BIP66's 95% threshold was reached
+earlier this month.
+
+## Short description:
+
+A specially-crafted transaction could have forked the blockchain
+between nodes:
+
+* using OpenSSL on a 32-bit systems and on 64-bit Windows systems
+* using OpenSSL on non-Windows 64-bit systems (Linux, OSX, ...)
+* using some non-OpenSSL codebases for parsing signatures
+____
+
+The email further lays out the details for how the issue got
+discovered and more exactly what caused it. At the end he submitted a
+timeline of the events. What's especially interesting in this issue is
+an event at which a fix could have been deployed without (even Pieter)
+knowing:
+
+[quote,Pieter Wuille on Bitcoin-dev mailing list,Disclosure: consensus bug indirectly solved by BIP66]
+____
+* 2014-Jul-18: In order to make Bitcoin's signature encoding rules not
+depend on OpenSSL's specific parser, I modified the BIP62 proposal to
+have its strict DER signatures requirement also apply to version 1
+transactions. No non-DER signatures were being mined into blocks
+anymore at the time, so this was assumed to not have any impact. See
+https://github.com/bitcoin/bips/pull/90 and
+http://lists.linuxfoundation.org/pipermail/bitcoin-dev/2014-July/006299.html.
+Unknown at the time, but if deployed this would have solved the
+vulnerability.
+____
+
+And then, OpenSSL released new versions with patches that, if used
+from the beginning, would also have solved the issue, but in this case
+would make it worse. Gregory Maxwell
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-January/007097.html[explains
+this] in another email thread in January 2015:
+
+[quote,Gregory Maxwell on OpenSSL upgrade,Bitcoin-dev mailing list]
+____
+While for most applications it is generally acceptable to eagerly
+reject some signatures, Bitcoin is a consensus system where all
+participants must generally agree on the exact validity or
+invalidity of the input data.  In a sense, consistency is more
+important than "correctness".
+
+...
+
+The patches above, however, only fix one symptom of the general
+problem: relying on software not designed or distributed for
+consensus use (in particular OpenSSL) for consensus-normative
+behavior.  Therefore, as an incremental improvement, I propose
+a targeted soft-fork to enforce strict DER compliance soon,
+utilizing a subset of BIP62.
+____
+
+He points out that using code that's not intended for use in consensus
+systems poses serious risks, and proposes that Bitcoin implementes
+strict DER encoding.
+
+.Author's speculation
+****
+From reading this, it gives me the impression that Gregory Maxwell
+knew about the vulnerability Pieter Wuille later published, but wanted
+to sneak in a fix, dressed as a precaution measure, without drawing
+too much attention to the actual problem.
+****
+
+Then BIP66 was created as a subset of BIP62 that specified only strict
+DER encoding. This BIP was apparently broadly accepted and deployed in
+July, albeit the above mentioned splits ironically occured.
+
+The events that led up to BIP66 and its deployment is a very good case
+study for how careful Bitcoin developers have to be. A few takeaways from BIP66:
+
+* The balance between openness and not publishing a vulnerability is a
+delicate one.
+* Deploying fixes for non-published vulnerabilities is a tricky game
+  to play.
+* Retaining consensus is hard.
+* Software not intended for consensus systems are generally dangerous.
+
+
+
+////
 
 Mentioned in <<upgrading-risks>>
 
@@ -614,6 +764,7 @@ https://en.bitcoin.it/wiki/Softfork#2015_BIP66_Blockchain_Fork
 Ironically, the fix actually was part in a split, but not due to
 signature encodings being incompatible between nodes, but due to
 validationless mining.
+////
 
 [[duplicateinputsissue]]
 ==== 2018-09-17 Missing check for duplicate inputs
