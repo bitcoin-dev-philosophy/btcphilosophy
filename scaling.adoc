@@ -149,9 +149,9 @@ their block reward, so they will do what they can to avoid this
 scenario. Among the things they can do are:
 
 * Postpone validation of an incoming block, also known as
-  _validationless mining_. Just check the block header's proof-of-work
-  and mine on top of it while you download the full block and
-  validate it.
+  <<_the_splits,_validationless mining_>>. Just check the block
+  header's proof-of-work and mine on top of it while you download the
+  full block and validate it.
 * Connect to a mining pool with greater bandwidth and connectivity.
 
 Validationless mining further undermines the
