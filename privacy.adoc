@@ -140,6 +140,7 @@ Again, protecting against this wide range of attacks is hard and you
 probably won't fully be able to, so you have to use some kind of
 trade-off between convenience and privacy that works for you.
 
+[[fungibility]]
 === Fungibility
 
 Fungibility was briefly touched upon in the section
