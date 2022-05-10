@@ -11,6 +11,11 @@ interested in are:
 Other kinds of input is of course helpful too, we do want that, but we
 might not handle it promptly due to time restrictions.
 
+To get on the same page regarding intended audience and what to expect
+from this work, it'd help if you read the first few sections of
+link:readme.adoc[readme.adoc] up to (and excluding) the "`Build`"
+section.
+
 We prefer to receive the feedback as Github issues or even better as
 pull requests, but any means will do.
 
