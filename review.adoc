@@ -8,8 +8,14 @@ interested in are:
 * Language (We're Swedes, any help here is useful)
 * Structural improvements
 
-Other kinds of input is of course helpful too, but we might not handle
-it promptly due to time restrictions.
+Other kinds of input is of course helpful too, we do want that, but we
+might not handle it promptly due to time restrictions.
 
-We prefer to receive the feedback as Github issues or even better as pull requests,
-but any means will do.
+We prefer to receive the feedback as Github issues or even better as
+pull requests, but any means will do.
+
+Reading can take place on https://rosenbaum.se/btcphil which we update
+on every push. But if you prefer you can read it directly from source
+on Github (but you won't see the images or the otherwise awesome
+typesetting) or build it yourself. You can find build instructions in
+link:readme.adoc[readme.adoc].
