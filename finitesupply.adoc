@@ -1,63 +1,134 @@
 == Finite supply
 
-Is it set in stone that Bitcoin has a finite supply of 21 million BTC? No. First of all, the famous number 21 million is only approximate. Pieter Wuille clears things up regarding the exact amount https://bitcoin.stackexchange.com/a/38998/69518[on Stack Exchange].
+Is it set in stone that Bitcoin has a finite supply of 21 million
+BTC? No. First of all, the famous number 21 million is only
+approximate. Pieter Wuille clears things up regarding the exact amount
+https://bitcoin.stackexchange.com/a/38998/69518[on Stack Exchange].
 
 [quote, Pieter Wuille, Stack Exchange]
 ____
 However ... however ... however ...
 ____
 
-Due to a number of reasons -- such as early problems with coinbase transactions, miners that unintentionally claim less than allowed, and loss of private keys -- the upper limit of 21m will never be reached.
+Due to a number of reasons -- such as early problems with coinbase
+transactions, miners that unintentionally claim less than allowed, and
+loss of private keys -- the upper limit of 21m will never be reached.
 
-What's more important than the exact number is how the consensus rule of limited supply is enforced without a central authority. Alias chytrik puts it well on https://bitcoin.stackexchange.com/a/106830/69518[Stack Exchange].
+What's more important than the exact number is how the consensus rule
+of limited supply is enforced without a central authority. Alias
+chytrik puts it well on
+https://bitcoin.stackexchange.com/a/106830/69518[Stack Exchange].
 
 [quote, chytrik, Stack Exchange]
 ____
-So the answer is that you don't have to trust someone to not increase the supply. You just have to run some code that will verify that they haven't.
+So the answer is that you don't have to trust someone to not increase
+the supply. You just have to run some code that will verify that they
+haven't.
 ____
 
-Even if some full nodes give themselves to the dark side and decide to accept blocks with larger coinbase transactions, all other full nodes will simply neglect them and continue as usual. 
+Even if some full nodes give themselves to the dark side and decide to
+accept blocks with larger coinbase transactions, all other full nodes
+will simply neglect them and continue as usual.
 
-//And even though no robot is doing anything perfectly, the rules are such that we can get the collective to do its goal robustly together.
+//And even though no robot is doing anything perfectly, the rules are
+//such that we can get the collective to do its goal robustly
+//together.
 
-Full nodes may intentionally or unintentionally run bad software, yet the collective robustly secures the blockchain together. Thus you can trust the system without having to trust anyone.  
+Full nodes may intentionally or unintentionally run bad software, yet
+the collective robustly secures the blockchain together. Thus you can
+trust the system without having to trust anyone.
 
 === Block subsidy and transaction fees
-It is the block subsidy together with transaction fees that together need to cover Bitcoin's security costs. We can say for sure that with today's block subsidy, transaction fees, bitcoin price, mempool size, hash power, degree of decentralization, etc, etc, the incentives to play by the rules are high enough to preserve a secure monetary system.
 
-But what the future holds for us, we cannot know. The uncertainty factors are numerous and we are left to speculations. For example Paul Sztorc's contribution to the subject https://www.truthcoin.info/blog/security-budget/[in his Truthcoin blog] is mostly speculations, but he has at least one good solid point:
+It is the block subsidy together with transaction fees that together
+need to cover Bitcoin's security costs. We can say for sure that with
+today's block subsidy, transaction fees, bitcoin price, mempool size,
+hash power, degree of decentralization, etc, etc, the incentives to
+play by the rules are high enough to preserve a secure monetary
+system.
+
+But what the future holds for us, we cannot know. The uncertainty
+factors are numerous and we are left to speculations. For example Paul
+Sztorc's contribution to the subject
+https://www.truthcoin.info/blog/security-budget/[in his Truthcoin
+blog] is mostly speculations, but he has at least one good solid
+point:
 
 [quote, Paul Sztorc, Truthcoin]
 ____
-While the two are mixed into the same “security budget”, the block subsidy and txn-fees are utterly and completely different. They are as different from each other, as “VISA’s total profits in 2017” are from the “total increase in M2 in 2017”.
+While the two are mixed into the same “security budget”, the block
+subsidy and txn-fees are utterly and completely different. They are as
+different from each other, as “VISA’s total profits in 2017” are from
+the “total increase in M2 in 2017”.
 ____
 
 Here, M2 is a measurement of a fiat money supply. 
 
-Today, hodlers pay for security (via monetary inflation). Tomorrow it's the spenders that somehow need to shoulder this burden, as illustrated below.
+Today, hodlers pay for security (via monetary inflation). Tomorrow
+it's the spenders that somehow need to shoulder this burden, as
+illustrated below.
 
 .As time goes by, the bearing of security costs will shift from hodlers to spenders.
 image::finitesupply.png[width=60%]
 
-So, given that the consensus on finite supply remains, the block subsidy will, thanks to https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki[BIP42 ;)], be zero from around year 2140. Will the transaction fees after that be enough to secure the network? It's impossible to say, but we do know some things:
+So, given that the consensus on finite supply remains, the block
+subsidy will, thanks to
+https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki[BIP42
+;)], be zero from around year 2140. Will the transaction fees after
+that be enough to secure the network? It's impossible to say, but we
+do know some things:
 
-* A century is a _long_ time from the Bitcoin perspective. If it is still around, it has probably evolved enormously.
-* With zero block subsidy and an empty or almost empty mempool, things will be shaky. For example, fee https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacerbate-instability-in-bitcoin-in-the-future[sniping might become more profitable than regular mining]
-* If an overwhelming economic majority finds it attractive to change the rules and introduce for example a perpetual annual 0.1% or 1% monetary inflation, to ensure that the chain keeps marching forward, the supply of bitcoin will no longer be finite.
+* A century is a _long_ time from the Bitcoin perspective. If it is
+  still around, it has probably evolved enormously.
+* With zero block subsidy and an empty or almost empty mempool, things
+  will be shaky. For example, fee
+  https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacerbate-instability-in-bitcoin-in-the-future[sniping
+  might become more profitable than regular mining]
+* If an overwhelming economic majority finds it attractive to change
+  the rules and introduce for example a perpetual annual 0.1% or 1%
+  monetary inflation, to ensure that the chain keeps marching forward,
+  the supply of bitcoin will no longer be finite.
 
 === Security despite uncertainty 
-If nothing is set in stone and future is so uncertain, how can we trust this system to keep our savings safe?
 
-Well, security without centralized trust is new to us humans and we need time to grasp the novel mindset. Just because consensus rules _can_ change does not mean that they will. Perhaps we could think of Bitcoin as something organic. Imagine a small slowly growing oak plant. And that you had never seen a full grown tree in you life. Would it not be wise then, to restrain your control issues and not set all rules in advance on how this plant should be allowed to evolve and grow? Below are two articles showing how the bitcoin system is secured, despite all uncertainties.
+If nothing is set in stone and future is so uncertain, how can we
+trust this system to keep our savings safe?
 
-Jameson Lopp emphasizes in https://blog.lopp.net/bitcoins-security-model-a-deep-dive/[his blog] how important it is to run your own full node and explains why. He also says that even if mining isn't as decentralized as one would like, miners are, due to their large capital investments, highly incentivized to play by the rules.
+Well, security without centralized trust is new to us humans and we
+need time to grasp the novel mindset. Just because consensus rules
+_can_ change does not mean that they will. Perhaps we could think of
+Bitcoin as something organic. Imagine a small slowly growing oak
+plant. And that you had never seen a full grown tree in you
+life. Would it not be wise then, to restrain your control issues and
+not set all rules in advance on how this plant should be allowed to
+evolve and grow? Below are two articles showing how the bitcoin system
+is secured, despite all uncertainties.
+
+Jameson Lopp emphasizes in
+https://blog.lopp.net/bitcoins-security-model-a-deep-dive/[his blog]
+how important it is to run your own full node and explains why. He
+also says that even if mining isn't as decentralized as one would
+like, miners are, due to their large capital investments, highly
+incentivized to play by the rules.
 
 [quote, James Lopp, Cypherpunk Cogitations]
 ____
-It’s clear that running your own full node offers superior security with the fewest required assumptions. Given that you can build a computer capable of running a reliable full node for only a few hundred dollars, do the math and determine if securing your financial sovereignty is worth the price.
+It’s clear that running your own full node offers superior security
+with the fewest required assumptions. Given that you can build a
+computer capable of running a reliable full node for only a few
+hundred dollars, do the math and determine if securing your financial
+sovereignty is worth the price.
 ____
 
-Finally, there are some nice onion pictures in https://insights.deribit.com/market-research/the-onion-model-of-blockchain-security-part-1/[Hasu's article at Insights] worth mentioning. The illustrations pedagogically present the different security layers, but the text is written in a general crypto point of view and is sometimes difficult to follow.
+Finally, there are some nice onion pictures in
+https://insights.deribit.com/market-research/the-onion-model-of-blockchain-security-part-1/[Hasu's
+article at Insights] worth mentioning. The illustrations pedagogically
+present the different security layers, but the text is written in a
+general crypto point of view and is sometimes difficult to follow.
 
 === Conclusion
-Whether the bitcoin supply will grow above 21 million we cannot say today and that is probably not so bad. Ensuring that the security budget remains high enough is crucial but not urgent. Let's have this discussion in 10-50 years when we know more. If it's still relevant.
+
+Whether the bitcoin supply will grow above 21 million we cannot say
+today and that is probably not so bad. Ensuring that the security
+budget remains high enough is crucial but not urgent. Let's have this
+discussion in 10-50 years when we know more. If it's still relevant.
