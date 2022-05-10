@@ -16,9 +16,6 @@ include::trustlessness.adoc[]
 [[privacy]]
 include::privacy.adoc[]
 
-[[fungibility]]
-include::fungibility.adoc[]
-
 [[finitesupply]]
 include::finitesupply.adoc[]
 

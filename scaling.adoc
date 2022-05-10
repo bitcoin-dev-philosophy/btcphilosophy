@@ -325,7 +325,7 @@ The most impactful approach to scaling is probably layering. The
 general idea of layering is that a protocol can settle payments
 between users without adding transactions to the blockchain
 at all. This was already discussed briefly in <<trustlessness>> and
-<<_privacy_measures>>.
+<<privacymeasures>>.
 
 A layered protocol is typically started by two or more people agreeing
 on a start transaction that's put on the blockchain, as illustrated in
