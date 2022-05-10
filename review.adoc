@@ -1,0 +1,15 @@
+= Note to reviewers
+
+Thank you so much for reviewing this work. The things we're most
+interested in are:
+
+* Factual errors
+* Severe omissions
+* Language (We're Swedes, any help here is useful)
+* Structural improvements
+
+Other kinds of input is of course helpful too, but we might not handle
+it promptly due to time restrictions.
+
+We prefer to receive the feedback as Github issues or even better as pull requests,
+but any means will do.

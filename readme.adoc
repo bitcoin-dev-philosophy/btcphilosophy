@@ -4,8 +4,10 @@ This project is a guide for new developers in Bitcoin to learn about
 the digital currency's fundamental properties and how seasoned Bitcoin
 developers think about them.
 
-This guide should help the reader to get up to speed on basic Bitcoin developer
-philosophy. After reading this collection of articles, you'll:
+This guide should provide the reader with a solid, technical
+philosophical foundation from which to further explore this
+fascinating subject. After reading this collection of articles,
+you'll:
 
 * have cruised over a decade of Bitcoin experience
 * be able to distinguish useful Bitcoin ideas from, well, less useful ideas
@@ -52,8 +54,8 @@ from.
 
 The links throughout the chapters refer to the original sources, but
 if you don't have an internet connection, the links appear dead, or
-the content seems severely changed, you can read the content from the
-appendix.
+the content seems severely changed, you can read the content locally
+instead.
 
 === What to expect
 
@@ -61,9 +63,9 @@ There are lots people involved in Bitcoin; some have opposing opinions and so
 certain resources may appear contradictory to one another. However, we will
 attempt to stick to the facts, where opinions do not matter.
 
-Topics cannot be fully separated from others; overlaps do exist. For example,
-fungibility is briefly discussed in the privacy chapter, even though
-there is a separate chapter for fungibility.
+Bitcoin is a huge subject. We cannot cover all aspects of it, but we
+hope that we've discussed enough of it to get you started, and that
+you'll be able to explore further on your own.
 
 === Build
 
