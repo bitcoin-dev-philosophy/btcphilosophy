@@ -1,22 +1,59 @@
 == Finite supply
 
-Is it set in stone that Bitcoin has a finite supply of 21 million
-BTC? No. First of all, the famous number 21 million is only
-approximate. Pieter Wuille clears things up regarding the exact amount
-https://bitcoin.stackexchange.com/a/38998/69518[on Stack Exchange].
+The well known finite supply of 21 million BTC is regarded as a
+fundamental property in Bitcoin. But is it really set in stone?
+
+Let's start by looking at what the current consensus rules say about
+the money supply of Bitcoin, and how much of that will actually be
+usable. Pieter Wuille wrote a piece about this
+https://bitcoin.stackexchange.com/a/38998/69518[on Stack Exchange],
+where he counted how many bitcoins there would be once all coins are
+mined:
 
 [quote, Pieter Wuille, Stack Exchange]
 ____
-However ... however ... however ...
+If you sum all these numbers together, you get *20999999.9769* BTC.
 ____
 
-Due to a number of reasons -- such as early problems with coinbase
+But due to a number of reasons -- such as early problems with coinbase
 transactions, miners that unintentionally claim less than allowed, and
-loss of private keys -- the upper limit of 21m will never be reached.
+loss of private keys -- that upper limit will never be reached. Wuille
+concludes:
 
-What's more important than the exact number is how the consensus rule
-of limited supply is enforced without a central authority. Alias
-chytrik puts it well on
+[quote, Pieter Wuille, Stack Exchange]
+____
+This leaves us with *20999817.31308491* BTC (taking everything up to
+block 528333 into account)
+
+\... However, various wallets have been lost or stolen, transactions
+have been sent to the wrong address, people forgot they owned
+bitcoin. The totals of this may well be millions. People have tried to
+tally known losses up
+https://bitcointalk.org/index.php?topic=7253.0[here].
+
+This leaves us with: *???* BTC.
+____
+
+We can thus be sure that the money supply is at most
+20999817.31308491 BTC. Any lost or unverifiably burnt coins will make
+this number lower, but we don't know how much lower. The interesting
+thing is that it doesn't really matter, or it does matter in a
+positive way for bitcoin holders,
+https://bitcointalk.org/index.php?topic=198.msg1647#msg1647[as
+explained] by Satoshi Nakamoto:
+
+[quote,Satoshi Nakamoto on lost bitcoins, Bitcointalk forum]
+____
+Lost coins only make everyone else's coins worth slightly more.  Think
+of it as a donation to everyone.
+____
+
+The finite supply will shrink which, at least in theory, should cause
+price deflation.
+
+What's more important than the exact number of coins in circulation is
+how the consensus rule of limited supply is enforced without a central
+authority. Alias chytrik puts it well on
 https://bitcoin.stackexchange.com/a/106830/69518[Stack Exchange].
 
 [quote, chytrik, Stack Exchange]
@@ -28,33 +65,33 @@ ____
 
 Even if some full nodes give themselves to the dark side and decide to
 accept blocks with larger coinbase transactions, all other full nodes
-will simply neglect them and continue as usual.
-
-//And even though no robot is doing anything perfectly, the rules are
-//such that we can get the collective to do its goal robustly
-//together.
-
-Full nodes may intentionally or unintentionally run bad software, yet
-the collective robustly secures the blockchain together. Thus you can
-trust the system without having to trust anyone.
+will simply neglect them and continue as usual. Full nodes may
+intentionally or unintentionally (see the
+<<combined-output-overflow,When shit hits the fan>> chapter) run bad
+software, yet the collective robustly secures the blockchain
+together. Thus you can choose to trust the system without having to
+trust anyone.
 
 === Block subsidy and transaction fees
 
-It is the block subsidy together with transaction fees that together
-need to cover Bitcoin's security costs. We can say for sure that with
-today's block subsidy, transaction fees, bitcoin price, mempool size,
-hash power, degree of decentralization, etc, etc, the incentives to
-play by the rules are high enough to preserve a secure monetary
-system.
+A block reward is composed of a block subsidy and transactions
+fees. The block reward needs to cover Bitcoin's security costs. We can
+say for sure that with today's block subsidy, transaction fees,
+bitcoin price, mempool size, hash power, degree of decentralization,
+etc, the incentives to play by the rules are high enough to preserve a
+secure monetary system.
 
-But what the future holds for us, we cannot know. The uncertainty
+What happens when the block subsidy is zero, or very close to zero
+(but for simplicity assume zero)? At that point, the system's security
+budget will be paid for only through transaction fees. What the future
+holds for us when this happens, we cannot know. The uncertainty
 factors are numerous and we are left to speculations. For example Paul
 Sztorc's contribution to the subject
 https://www.truthcoin.info/blog/security-budget/[in his Truthcoin
-blog] is mostly speculations, but he has at least one good solid
-point:
+blog] is mostly speculations, but he has at least one solid point (M2,
+as Sztorc refers to, is a measurement of a fiat money supply):
 
-[quote, Paul Sztorc, Truthcoin]
+[quote, 'Paul Sztorc, Security Budget in the Long Run', Truthcoin blog]
 ____
 While the two are mixed into the same “security budget”, the block
 subsidy and txn-fees are utterly and completely different. They are as
@@ -62,14 +99,50 @@ different from each other, as “VISA’s total profits in 2017” are from
 the “total increase in M2 in 2017”.
 ____
 
-Here, M2 is a measurement of a fiat money supply. 
-
-Today, hodlers pay for security (via monetary inflation). Tomorrow
+Today, holders pay for security (via monetary inflation). Tomorrow
 it's the spenders that somehow need to shoulder this burden, as
 illustrated below.
 
-.As time goes by, the bearing of security costs will shift from hodlers to spenders.
+.As time goes by, the bearing of security costs will shift from holders to spenders.
 image::finitesupply.png[width=60%]
+
+When transaction fees are the main motivation for mining, the
+incentives shift. For example, if the mempool of a miner doesn't
+contain enough transaction fees, it might become more profitable for
+that miner to rewrite Bitcoin's history rather than to
+extend it. Bitcoin Optech has an explainer on this behavior, called
+_fee sniping_, written by David Harding:
+
+[quote,"David Harding, fee sniping", Bitcoin Optech website]
+____
+Fee sniping is a problem that may occur as Bitcoin’s subsidy continues
+to diminish and transaction fees begin to dominate Bitcoin’s block
+rewards. If transaction fees are all that matter, then a miner with
+`x` percent of the hash rate has a `x` percent chance of mining the
+next block, so the expected value to them of honestly mining is `x`
+percent of the
+https://bitcoinops.org/en/newsletters/2021/06/02/#candidate-set-based-csb-block-template-construction[best
+feerate set of transactions] in their mempool.
+
+Alternatively, a miner could dishonestly attempt to re-mine the
+previous block plus a wholly new block to extend the chain. This
+behavior is referred to as fee sniping, and the dishonest miner’s
+chance of succeeding at it if every other miner is honest is
+`(x/(1-x))^2`. Even though fee sniping has an overall lower probability
+of success than honest mining, attempting dishonest mining could be
+the more profitable choice if transactions in the previous block paid
+significantly higher feerates than the transactions currently in the
+mempool—a small chance at a large amount can be worth more than a
+large chance at a small amount.
+____
+
+To further put a wet blanket over our hopes for the future, if miners
+conduct fee sniping, it further incentivizes others to do the same,
+leaving even fewer honest miners. This could severely impair the
+overall security of Bitcoin. Harding goes on to list a few
+countermeasures that have been taken, for example using transaction
+lock time to restrict where in the blockchain the transaction may
+appear.
 
 So, given that the consensus on finite supply remains, the block
 subsidy will, thanks to
@@ -80,51 +153,33 @@ do know some things:
 
 * A century is a _long_ time from the Bitcoin perspective. If it is
   still around, it has probably evolved enormously.
-* With zero block subsidy and an empty or almost empty mempool, things
-  will be shaky. For example, fee
-  https://bitcoin.stackexchange.com/questions/57149/how-do-transaction-fees-exacerbate-instability-in-bitcoin-in-the-future[sniping
-  might become more profitable than regular mining]
 * If an overwhelming economic majority finds it attractive to change
   the rules and introduce for example a perpetual annual 0.1% or 1%
   monetary inflation, to ensure that the chain keeps marching forward,
   the supply of bitcoin will no longer be finite.
+* With zero block subsidy and an empty or almost empty mempool, things
+  can become shaky due to fee sniping.
 
-=== Security despite uncertainty 
+Since the transition to a fee-only economy is so far in the future, it
+might be wise to not jump to conclusions and try to fix the potential
+issues. For example, Peter Todd thinks there's a risk that Bitcoin's
+security budget won't be enough in the future and argued for a small
+perpetual inflation in Bitcoin. However, he also thinks it's not a
+good idea to discuss that at this time, and on the
+https://www.whatbitcoindid.com/podcast/peter-todd-on-the-essence-of-bitcoin[What
+Bitcoin Did podcast he said]:
 
-If nothing is set in stone and future is so uncertain, how can we
-trust this system to keep our savings safe?
-
-Well, security without centralized trust is new to us humans and we
-need time to grasp the novel mindset. Just because consensus rules
-_can_ change does not mean that they will. Perhaps we could think of
-Bitcoin as something organic. Imagine a small slowly growing oak
-plant. And that you had never seen a full grown tree in you
-life. Would it not be wise then, to restrain your control issues and
-not set all rules in advance on how this plant should be allowed to
-evolve and grow? Below are two articles showing how the bitcoin system
-is secured, despite all uncertainties.
-
-Jameson Lopp emphasizes in
-https://blog.lopp.net/bitcoins-security-model-a-deep-dive/[his blog]
-how important it is to run your own full node and explains why. He
-also says that even if mining isn't as decentralized as one would
-like, miners are, due to their large capital investments, highly
-incentivized to play by the rules.
-
-[quote, James Lopp, Cypherpunk Cogitations]
+[quote,Peter Todd on security budget, What Bitcoin Did podcast]
 ____
-It’s clear that running your own full node offers superior security
-with the fewest required assumptions. Given that you can build a
-computer capable of running a reliable full node for only a few
-hundred dollars, do the math and determine if securing your financial
-sovereignty is worth the price.
+But, that’s a risk like 10, 20 years in the future. That is a very
+long time. And, by then, who the hell knows what the risks are?
 ____
 
-Finally, there are some nice onion pictures in
-https://insights.deribit.com/market-research/the-onion-model-of-blockchain-security-part-1/[Hasu's
-article at Insights] worth mentioning. The illustrations pedagogically
-present the different security layers, but the text is written in a
-general crypto point of view and is sometimes difficult to follow.
+Perhaps we could think of Bitcoin as something organic. Imagine a
+small slowly growing oak plant. And that you had never seen a full
+grown tree in your life. Would it not be wise then, to restrain your
+control issues and not set all rules in advance on how this plant
+should be allowed to evolve and grow?
 
 === Conclusion
 
@@ -132,3 +187,41 @@ Whether the bitcoin supply will grow above 21 million we cannot say
 today and that is probably not so bad. Ensuring that the security
 budget remains high enough is crucial but not urgent. Let's have this
 discussion in 10-50 years when we know more. If it's still relevant.
+
+////
+=== What is Bitcoin?
+
+Suppose that the supply schedule of Bitcoin would change through a
+mostly successful hard fork (which is unlikely), what would that do to
+peoples perception of Bitcoin?
+
+What Bitcoin is is an emergent property of Bitcoin. Remember Bitcoin
+consists not only of software, but also humans. Different people will
+have different views on what Bitcoin is, just as they have different
+views on what the English language is. Still, English works pretty
+well.
+
+
+
+How is the supply curve kept? How can
+you trust that?
+
+Is bitcoin still bitcoin if 21M lifted? Any other hard fork?
+
+Conclusion
+
+
+Comments from Jonas:
+
+* Chapter could be bigger
+* Developer's relationship with the community, regarding who change
+  the rules.
+* Meta idea of the reliability/soundness of the protocol. Money
+  shouldn't change on you and you shouldn't be coerced to
+  upgrade. Bitcoin isn't about moving fast and breaking things (see
+  adversarial thinking section).
+* Is Bitcoin still Bitcoin if 21M is lifted? Or any other
+  non-emergency hard-fork.?
+* Fungi
+
+////

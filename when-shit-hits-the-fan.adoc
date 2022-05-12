@@ -356,6 +356,7 @@ Discovered by ArtForz: Spend coins with Sig OP_1 OP_RETURN
 Fixed in 0.3.7 commit 73aa262 2010-07-31 19:15:48 (r121)
 ////
 
+[[combined-output-overflow]]
 ==== 2010-08-15 Combined output overflow (CVE-2010-5139)
 
 Mid August 2010, Bitcointalk forum user jgarzik, Jeff Garzik,
