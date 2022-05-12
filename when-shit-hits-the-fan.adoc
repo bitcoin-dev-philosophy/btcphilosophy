@@ -1,7 +1,5 @@
 == When shit hits the fan
 
-WARNING: {wip}
-
 Bitcoin is built by people; people creating software, and people
 running this software. When a security vulnerability or a severe bug
 is discovered (is there really a distinction between the two?), it's
@@ -98,10 +96,10 @@ ____
 This list displays how careful one must be when publishing patches for
 Bitcoin, because the patch itself might give away the
 vulnerability. The fourth bullet is particularly interesting and
-explains how to test if a patch is good enough disguise. If a few
+explains how to test if a patch is disguised well enough. If a few
 really experienced developers can't spot the vulnerability, even
-knowing that the patch fixes one, then it's probably hard for others
-to discover it from this patch.
+knowing that the patch fixes one, then it will probably be hard for
+others to discover it.
 
 The thread that led up to this email were discussing if, when, and how
 to disclose vulnerabilities to alt-coins and other implementations of
@@ -186,9 +184,10 @@ The Bitcoin wiki has
 https://en.bitcoin.it/wiki/Common_Vulnerabilities_and_Exposures[a list
 of common vulnerabilities and exposures]
 (https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures[CVEs])
-that Bitcoin has gone through. This section will be a little exposé of
-some of the early security issues and incidents from the early years
-of Bitcoin.
+that Bitcoin has gone through. This section is a little exposé of some
+of the security issues and incidents from the early years of
+Bitcoin. We won't cover them all, but we have selected a few that we
+find extra interesting.
 
 ////
 ==== 2010-07-28
@@ -412,11 +411,12 @@ the patch for this.
 ____
 
 His plan was to make a soft fork to make transactions like the one
-discussed here invalid, and thus invalidation blocks (especially
-block 74638) that contain such transactions. Less than an hour later,
-he had committed https://sourceforge.net/p/bitcoin/code/132/[a patch
-in revision 132] of the Subversion repository and posted to the forum
-describing what he thought users should do:
+discussed here invalid, and thus invalidate blocks (especially block
+74638) that contain such transactions. Less than an hour later, he had
+committed https://sourceforge.net/p/bitcoin/code/132/[a patch in
+revision 132] of the Subversion repository and
+https://bitcointalk.org/index.php?topic=823.msg9548#msg9548[posted to
+the forum] describing what he thought users should do:
 
 ____
 Patch is uploaded to SVN rev 132!
@@ -440,18 +440,24 @@ in blkXXXX.dat and blkindex.dat files. The reason for downloading the
 blockchain data this way, as opposed to synchronize from scratch, was
 said to reduce network bandwidth bottlenecks.
 
+There was a big caveat with this: The data users would download from
+knightmb https://bitcoin.stackexchange.com/a/113682/69518[wasn't
+verified by the Bitcoin software] at startup. The blkindex.dat file
+contained the UTXO set and the software would accept any data therein
+as if it had already verified it. knightmb could have manipulated the
+data to give himself some bitcoins.
+
 Again, people seemed to go along with this and the reversal of the
 invalid block and its successors was successful. The miners started
 working on a new successor to block
 https://mempool.space/block/0000000000606865e679308edf079991764d88e8122ca9250aef5386962b6e84[74637]
-and according to the block's timestamp a successor appeared at 1:53
+and according to the block's timestamp, a successor appeared at 1:53
 am, about 8 hours after the issue was detected. At 10:10 AM on August
 16 around block 74689, it seems the new chain had overtaken the old
 chain, and all non-upgraded nodes reorged to follow the new
-chain. This must be the deepest reorg, 52 blocks, in Bitcoin's
-history.
+chain. This is the deepest reorg, 52 blocks, in Bitcoin's history.
 
-Compared to the OP_RETURN issue, this issue was handled in a
+Compared to the OP_RETURN issue, this issue was handled in a somewhat
 cleaner way:
 
 * No binary-only patch release
@@ -464,12 +470,16 @@ convinced that any blocks on top of the bad block will eventually get
 wiped out in a deep reorg, why would you waste resources on mining
 doomed blocks?
 
+You might also think that it's a bit fishy to, as suggested by
+Nakamoto, download the blockchain, including the UTXO, from a random
+dude's hard drive. If so, you're right, that is fishy.
+
 Given the circumstances, this emergency response was a
 sensible one. There's an important difference between this case and
-the OP_RETURN case: This issue was exploited in the wild and thus a
-fix could be made more straight-forward. In the case of OP_RETURN,
-they had to obfuscate the fix and make public statements that didn't
-directly reveal what the issue was.
+the previous, OP_RETURN case: This issue was exploited in the wild and
+thus a fix could be made more straight-forward. In the case of
+OP_RETURN, they had to obfuscate the fix and make public statements
+that didn't directly reveal what the issue was.
 
 ////
 ==== 2013-03-25 Duplicate coinbase transactions
@@ -548,31 +558,34 @@ might need X locks while another node might need X+1 locks. The nodes
 also have a limit on how many locks Bitcoin can take. If the number of
 locks needed exceeds the limit, the block will be considered
 invalid. So if X+1 exceeds the limit but not X, then the two nodes
-will disagree on which blockchain is valid.
+will split the blockchain and disagree on which branch is valid.
 
 The solution chosen, apart from the immediate actions by two pools to
-restore consensus, was to temporarily, for a pre-determined amount of
-time
+restore consensus, was to
 
-* limit the blocks in terms of both size and locks needed
-* patch old versions, 0.7.2 and older, with same new rules and to
-  increase the lock limit.
+* limit the blocks in terms of both size and locks needed on version
+  0.8.1
+* patch old versions, 0.7.2 and some older ones, with the same new
+  rules and increase the lock limit.
+
+These rules, except the increased lock limit in the second bullet,
+were implemented temporarily for a pre-determined amount of time. The
+plan was to remove these limits once most nodes are upgraded.
 
 This soft fork reduced the risk of consensus failure dramatically, and
-on May 15 the temporary rules were deactivated in concert across the
-network. Note that this deactivation was in effect a hard fork, but it
-was not contentious. Furthermore, it was released along with the
-preceding soft fork, so people running the soft-forked software were
-well aware that it would be followed by a hard fork. Thus, the vast
-majority of nodes remained in consensus when the hard fork
-activated. Unfortunately, though, a few nodes that weren't upgraded
-were lost in the process.
+a few months later, on May 15, the temporary rules were deactivated in
+concert across the network. Note that this deactivation was in effect
+a hard fork, but it was not contentious. Furthermore, it was released
+along with the preceding soft fork, so people running the soft-forked
+software were well aware that it would be followed by a hard
+fork. Thus, the vast majority of nodes remained in consensus when the
+hard fork activated. Unfortunately, though, a few nodes that weren't
+upgraded were lost in the process.
 
 One might wonder if this would have been doable today. The mining
 landscape is more complex today and depending on the hash power on
-each side of the split, it might be hard roll out a patch such as the
-one in BIP50 quickly enough.
-
+each side of the split, it might be hard to roll out a patch such as
+the one in BIP50 quickly enough.
 
 ////
 
@@ -612,8 +625,8 @@ two temporary blockchain splits occurred shortly after it's
 activation. However, they were not caused by the BIP, but by
 _validationless mining_.
 
-BIP66 was a proposal to tighten up the rules for signature encodings in
-Bitcoin Script. The
+BIP66 was a proposal to tighten up the rules for signature encodings
+in Bitcoin Script. The
 https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki#motivation[motivation]
 was to be able to parse signatures with other software or libraries
 than OpenSSL and even recent versions of OpenSSL. OpenSSL is a library
@@ -665,9 +678,10 @@ Unknown at the time, but if deployed this would have solved the
 vulnerability.
 ____
 
-And then, OpenSSL released new versions with patches that, if used
-from the beginning, would also have solved the issue, but in this case
-would make it worse. Gregory Maxwell
+And then, OpenSSL released new versions with patches that, if they had
+been used in Bitcoin from the beginning, would also have solved the
+issue. However, using that new version of OpenSSL in a new release of
+Bitcoin Core would make matters worse. Gregory Maxwell
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-January/007097.html[explains
 this] in another email thread in January 2015:
 
@@ -694,18 +708,16 @@ systems poses serious risks, and proposes that Bitcoin implements
 strict DER encoding. This is a very clear example of the importance of
 <<_libraries,selection cryptography>>.
 
-.Author's speculation
-****
-From reading this, it gives me the impression that Gregory Maxwell
-knew about the vulnerability Pieter Wuille later published, but wanted
-to help sneak in a fix, dressed as a precaution measure, without
-drawing too much attention to the actual problem.
-****
-
 Then, as Maxwell proposed, BIP66 was created as a subset of BIP62 that
 specified only strict DER encoding. This BIP was apparently broadly
 accepted and deployed in July, albeit the above mentioned splits
 ironically occurred.
+
+These events might give you the impression that Gregory Maxwell knew
+about the vulnerability Pieter Wuille later published, but wanted to
+help sneak in a fix, dressed as a precaution measure, without drawing
+too much attention to the actual problem. It might be so, but it's
+purely speculation.
 
 The events that led up to BIP66 and its deployment is a very good case
 study for how careful Bitcoin developers have to be. A few takeaways from BIP66:
@@ -715,16 +727,17 @@ delicate one.
 * Deploying fixes for non-published vulnerabilities is a tricky game
   to play.
 * Retaining consensus is hard.
-* Software not intended for consensus systems are generally dangerous.
+* Software not intended for consensus systems are generally risky.
 
-===== The splits
+[[bip66splits]]
+===== Splits due to validationless mining
 
-When BIP66 was activated, it turned out quite messy because some
-miners apparently didn't verify the blocks they tried to extend. This
-is called validationless mining. An alert message was sent out to
-Bitcoin nodes with a link to
-https://bitcoin.org/en/alert/2015-07-04-spv-mining[a web page
-describing the issue].
+Unfortunately, the story of BIP66 doesn't end there. When BIP66 was
+activated, it turned out quite messy because some miners apparently
+didn't verify the blocks they tried to extend. This is called
+validationless mining. An alert message was sent out to Bitcoin nodes
+with a link to https://bitcoin.org/en/alert/2015-07-04-spv-mining[a
+web page describing the issue].
 
 [quote,Bitcoin Core developers,Alert information on bitcoin.org]
 ____
