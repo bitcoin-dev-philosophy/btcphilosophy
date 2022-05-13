@@ -124,7 +124,7 @@ Belcher's piece], specifically the section "Non-blockchain attacks on
 privacy".
 
 Among a plethora of attacks, Belcher mentions the possibility of
-someone snooping on your internet connection, for example your ISP:
+someone snooping on your internet connection, for example, your ISP:
 
 [quote, Chris Belcher, Bitcoin wiki]
 ____
@@ -135,9 +135,9 @@ internet connections are involved, the adversary will be able to link
 the IP address with the discovered bitcoin information.
 ____
 
-Again, protecting against this wide range of attacks is hard and you
-probably won't fully be able to, so you have to use some kind of
-trade-off between convenience and privacy that works for you.
+Again, protecting against this wide range of attacks is hard, and you
+probably won't fully be able to, so you have to use some trade-off between
+convenience and privacy that works for you.
 
 [[fungibility]]
 === Fungibility
