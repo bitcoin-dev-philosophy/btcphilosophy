@@ -18,6 +18,38 @@ parties". This is different from the trust that you inevitably have to
 put into the software or hardware you run. More on this trust further
 down this article.
 
+In centralized systems, we can rely on a central actor's reputation
+that they've taken care of security, or roll back in case of issues,
+and on the legal system to enforce violations. These trust
+requirements are problematic in pseudonymous decentralized systems. We
+can't have recourse so we really can't have trust. In
+https://bitcoin.org/bitcoin.pdf[the Bitcoin paper], Satoshi Nakamoto
+describes this problem in his introduction:
+
+[quote,Satoshi Nakamoto,The Bitcoin paper]
+____
+Commerce on the Internet has come to rely almost exclusively on
+financial institutions serving as trusted third parties to process
+electronic payments. While the system works well enough for most
+transactions, it still suffers from the inherent weaknesses of the
+trust based model.  Completely non-reversible transactions are not
+really possible, since financial institutions cannot avoid mediating
+disputes. The cost of mediation increases transaction costs, limiting
+the minimum practical transaction size and cutting off the possibility
+for small casual transactions, and there is a broader cost in the loss
+of ability to make non-reversible payments for nonreversible
+services. With the possibility of reversal, the need for trust
+spreads. Merchants must be wary of their customers, hassling them for
+more information than they would otherwise need.  A certain percentage
+of fraud is accepted as unavoidable. These costs and payment
+uncertainties can be avoided in person by using physical currency, but
+no mechanism exists to make payments over a communications channel
+without a trusted party
+____
+
+It seems we can't have a decentralized system based on trust, and
+that's why trustlessness is important in Bitcoin.
+
 To use Bitcoin in a trustless manner, you have to run a
 fully-validating Bitcoin node. Only then will you be able to verify
 that the blocks you receive from others are following the consensus
@@ -178,6 +210,16 @@ nuclear
 disarmament. https://twitter.com/Truthcoin/status/1491415722123153408?s=20&t=ZyROxZxlBppdRpuuzsiF5w[Bitcoiners
 switched it around to highlight the rejection of trust and the
 importance of running a full node].
+
+It's up to the users to decide to what degree they want to verify the
+software they use and the data they receive. As with so many other
+things in Bitcoin, there's a trade-off between convenience and
+trustlessness. It's almost always more convenient to use a custodial
+wallet compared to running Bitcoin Core on your own hardware. However,
+as Bitcoin software is maturing and user interfaces improve, over time
+it should better support users to work towards trustlessness. Also, as
+users gain more knowledge over time, they should be able to gradually
+remove trust from the equation.
 
 Some users <<adversarialthinking, think adversarially>> and verify
 many aspects of the software they run, and reduce their needed trust
