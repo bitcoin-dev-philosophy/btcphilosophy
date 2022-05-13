@@ -8,20 +8,20 @@ _decentralized_.
 === Miner decentralization
 
 There have been attempts at creating digital moneys before Bitcoin,
-but most of them failed due to lack of censonship resistance.
+but most of them failed due to lack of decentralization of governance
+and censorship resistance.
 
 Miner decentralization in Bitcoin means that the _ordering of
-transactions_ isn't carried out by a single entity, or fixed set of
+transactions_ isn't carried out by a single entity or fixed set of
 entities. It's carried out collectively by all participants who want
-to, this collective of miners is a dynamic set of users. Anyone can
-join or leave as they want. This is what makes Bitcoin censorship
-resistant.
+to; this collective of miners is a dynamic set of users. Anyone can
+join or leave as they wish. This is what makes Bitcoin censorship-resistant.
 
 If Bitcoin were centralized, it would be vulnerable to those who wish
 to censor, such as governments. It'd meet the same fate as earlier
-attempts at creating of digital money. In a paper titled "`Enabling
+attempts to create digital money. In a paper titled "`Enabling
 Blockchain Innovations with Pegged Sidechains`", the authors explained
-in their introduction how early versions of digital money wasn't
+in their introduction how early versions of digital money weren't
 equipped for an <<adversarialthinking,adversarial environment>>:
 
 [quote, various authors, Enabling Blockchain Innovations with Pegged Sidechains 2014]
@@ -43,34 +43,33 @@ since each signer can fail, or be made to fail, one by one.
 ____
 
 It became clear that using a central server to order transactions was
-not a viable route to take due to censorship. Even if you replace the
+not a viable option due to the high risk of censorship. Even if you replace the
 central server with a federation of a fixed set of stem:[n] servers,
 of which at least stem:[m, m \leq n] must all approve of an
 ordering. The problem then shifts to one where users must agree on
-this set of stem:[n] servers, and of how users replace mailcious
+this set of stem:[n] servers, and how users replace malicious
 servers with good ones without using a central authority.
 
 Let's contemplate what could happen in practice if Bitcoin were
 censorable. The censor would apply pressure on users. They could
 require identification, that users declare where their money is coming
-from, or what they're buying, before their transactions are allowed to
+from or what they're buying before their transactions are allowed to
 enter the blockchain.
 
 Also, the lack of censorship resistance would open up for the censor
-to blackmail users into adopting new rules of the system. For example,
-inflate the money supply to enrich themselves. In such an event, A
-user verifying blocks has three options for how to handle the changed
-rules:
+to blackmail users into adopting new system rules. For example,
+they can force a change where they are allowed to inflate the money
+supply to enrich themselves. In such an event, A user verifying blocks has
+three options for how to handle the changed rules:
 
 * Adopt: Accept the changes and adopt them into its full node.
 * Reject: This leaves the user with a system that doesn't process
 transactions anymore, because the censor's blocks are deemed invalid
 by the user's full node.
-* Move: Appoint a new central point of control. The users have to
-  coordinate this somehow so that they agree on what new central point
-  of control to use. If they succeed, the same issues will most likely
-  resurface sooner or later, because the system is as censorable now
-  as it was before.
+* Move: Appoint a new central point of control. The users must figure out how
+to coordinate and then agree on what new central point of control to use.
+If they succeed, the same issues will most likely resurface  because the system
+is as censorable now as it was before.
 
 None of these options are beneficial to the user. Censorship
 resistance through decentralization is what separates Bitcoin from
@@ -88,10 +87,10 @@ using a peer-to-peer distributed timestamp server to generate
 computational proof of the chronological order of transactions.
 ____
 
-He uses the weird sounding phrase _peer-to-peer distributed timestamp
-server_, but the key here is the word _distributed_, which in this
+Here he uses the peculiar-sounding phrase _peer-to-peer distributed timestamp
+server_. The key word here is _distributed_, which in this
 context means that there is no central point of control. Nakamoto then
-goes on to explain how proof-of-work is the solution, but no one
+goes on to explain how proof-of-work is the solution. Still, no one
 explains it better than
 https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/[Gregory
 Maxwell on Reddit] where he responds to someone who proposes to limit
@@ -112,7 +111,7 @@ The post explains how the decentralized Bitcoin network can come to
 agreement on a transaction ordering through the use of proof-of-work,
 then he concludes by saying that the 51% attack is not particularly
 worrisome, compared to people not caring about, or lack of
-understanding about Bitcoin's decentralization properties.
+understanding of Bitcoin's decentralization properties.
 
 [quote, Gregory Maxwell, r/Bitcoin subreddit]
 ____
