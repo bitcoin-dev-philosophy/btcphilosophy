@@ -162,9 +162,9 @@ into a centralized permissioned system where you have an “IOU” from
 the blacklist providers.
 ____
 
-He speaks here of the dangers with lack of fungibility. A UTXOs
-history can normally be traced back several hops, fanning out to
-multitudes of previous outputs, and if any of those outputs was
+He speaks here of the dangers of lack of fungibility. A UTXOs
+history can usually be traced back several hops, fanning out to
+multitudes of previous outputs. If any of those outputs were
 involved in something illegal, unwanted, or suspicious activity, then
 some potential recipients of your coin will reject it. If you think
 that your payees will verify your coins against some centralized
@@ -172,13 +172,12 @@ whitelist or blacklist service, you might start checking coins you
 receive too, just to be on the safe side. So bad fungibility will
 incentivize even worse fungibility.
 
-Privacy and fungibility go hand-in-hand. If privacy is weak,
-fungibility will become weaker, for example because coins from
-unwanted persons can become blacklisted. If fungibility is weak,
-privacy will get weaker, since you have to ask the blacklist providers
-about which coins to accept, possibly revealing your IP-address,
-email-address, and other sensitive information. They're so intertwined
-that it's hard to talk about them in isolation.
+Privacy and fungibility go hand-in-hand. Fungibility will weaken if privacy is
+weak, for example, because coins from unwanted persons can become blacklisted.
+Privacy will weaken if fungibility is weak since you have to ask the blacklist
+providers about which coins to accept, possibly revealing your IP address,
+email address, and other sensitive information. They're so intertwined that
+it's hard to talk about them in isolation.
 
 ////
 The quote is from an excellent talk by Matt Corallo and Adam Back at the Scaling Bitcoin in 2016: 
