@@ -29,7 +29,7 @@ privacy aspects you might not immediately think about. Gregory
 Maxwell,
 https://bitcointalk.org/index.php?topic=334316.msg3588908#msg3588908[on
 the Bitcoin Talk forum], walks us through a lot of good reasons why he
-thinks privacy matters. Among them is <<fungibility>>:
+thinks privacy matters. Among them is <<fungibility,fungibility>>:
 
 [quote, Gregory Maxwell, Bitcoin Talk forum]
 ____
@@ -142,7 +142,7 @@ convenience and privacy that works for you.
 [[fungibility]]
 === Fungibility
 
-Fungibility was briefly touched upon in the section
+Fungibility was briefly touched upon in
 <<whyprivacyimportant>>. Fungibility means that one coin is
 interchangeable for any other coin of the same currency. Adam Back and
 Matt Corallo
@@ -166,11 +166,11 @@ He speaks here of the dangers of lack of fungibility. A UTXOs
 history can usually be traced back several hops, fanning out to
 multitudes of previous outputs. If any of those outputs were
 involved in something illegal, unwanted, or suspicious activity, then
-some potential recipients of your coin will reject it. If you think
+some potential recipients of your coin might reject it. If you think
 that your payees will verify your coins against some centralized
 whitelist or blacklist service, you might start checking coins you
 receive too, just to be on the safe side. So bad fungibility will
-incentivize even worse fungibility.
+bolster even worse fungibility.
 
 Privacy and fungibility go hand-in-hand. Fungibility will weaken if privacy is
 weak, for example, because coins from unwanted persons can become blacklisted.
@@ -265,7 +265,7 @@ was unable to do the analysis after this, so it is possible to break
 these algorithms.
 ____
 
-He also mentioned this example on the
+He also mentioned this example, among others, on the
 https://en.bitcoin.it/Privacy[Privacy page] on the Bitcoin wiki.
 
 Note how better privacy can be achieved by building systems on top of
@@ -274,7 +274,7 @@ Bitcoin, as is the case with Lightning Network:
 .Layers on top of Bitcoin can add privacy.
 image::privacy.png[width=50%]
 
-We noted in <<trustlessness>> that trust can only increase with layers
+We noted in <<trustlessness,Trustlessness>> that trust can only increase with layers
 on top, but that doesn't
 seem to be the case for privacy, which can be improved or made worse
 arbitrarily in layers on top. Why is that?
