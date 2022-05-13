@@ -90,7 +90,7 @@ significant amount of work to transact privately. Most people aren't
 prepared to go that far for privacy. It seems there is a clear
 trade-off between privacy and usability.
 
-Another aspect of privacy is that your privacy measures affects other
+Another aspect of privacy is that your own privacy measures affect other
 users as well. If you are sloppy with your privacy, other people might
 experience reduced privacy too. Gregory Maxwell explains this in a
 simple manner on the same Bitcoin Talk discussion
