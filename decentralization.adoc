@@ -191,9 +191,8 @@ the consensus rules.
 
 === Neutrality
 
-Bitcoin is neutral, or permissionless as people like to call it. This
-means that Bitcoin doesn't care who you are or what you use
-Bitcoin for.
+Bitcoin is neutral, or permissionless, as people like to call it. This
+means that Bitcoin doesn't care who you are or what you use it for.
 
 [quote, wumpus on freenode IRC (punctuation added), #bitcoin-core-dev 2012-04-04T17:34:04 UTC]
 ____
@@ -226,13 +225,13 @@ to censor transactions according to the whims of the central
 authority, which defeats the purpose of mining in the first place.
 
 * If people *transacting* in Bitcoin would have to provide personal
-information, what their transactions are used for, or otherwise prove
+information, declare what their transactions are for, or otherwise prove
 that they are worthy of transacting, we would also need a central
-point of authority to give permission to users or transactions. Again,
+point of authority to permit users or transactions. Again,
 this would lead to censorship and exclusion.
 
 * If developers had to ask for permission to *build protocols* on top of
-Bitcoin, only protocols that the central developer granting commitee
+Bitcoin, only protocols that the central developer granting committee
 allows would be developed. This would, due to government intervention,
 inevitably exclude all privacy preserving protocols and all attempts
 at improving decentralization.
