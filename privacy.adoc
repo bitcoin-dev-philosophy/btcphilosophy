@@ -13,12 +13,12 @@ attack vectors, both on and outside the blockchain, are also discussed.
 === What does privacy mean?
 
 Privacy can mean different things in different contexts. In
-Bitcoin it generally means that users don't have to reveal their
-financial information to others, unless they voluntarily do so.
+Bitcoin, it generally means that users don't have to reveal their
+financial information to others unless they voluntarily do so.
 
-There are lots of ways in which you may leak your private information
+There are many ways in which you may leak your private information
 to others, with or without knowing it. Data can leak both from the
-public blockchain and through other means, for example by intercepting
+public blockchain and through other means, for example, by intercepting
 your internet communication.
 
 [[whyprivacyimportant]]
