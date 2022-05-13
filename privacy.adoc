@@ -247,7 +247,7 @@ one, making it harder to do address clustering.
 
 In
 https://btctranscripts.com/breaking-bitcoin/2019/breaking-bitcoin-privacy/[a
-talk] at the Breaking Bitcoin conference Chris Belcher, gave an
+talk] at the Breaking Bitcoin conference, Chris Belcher gave an
 interesting example of how privacy has been improved in practice.
 
 [quote,Chris Belcher in "Breaking Bitcoin Privacy", Breaking Bitcoin conference 2019]
