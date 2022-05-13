@@ -274,16 +274,16 @@ Bitcoin, as is the case with Lightning Network:
 .Layers on top of Bitcoin can add privacy.
 image::privacy.png[width=50%]
 
-We noted in <<trustlessness>> that trust can only decrease with layers
-on top, but that doesn't seem to be the case for privacy, which can be
-improved or made worse arbitrarily in layers on top. Why is that? In
-any case, layers on top of Bitcoin must use on-chain transactions now
-and then, otherwise, they wouldn't be "on top of Bitcoin".
+We noted in <<trustlessness>> that trust can only increase with layers
+on top, but that doesn't
+seem to be the case for privacy, which can be improved or made worse
+arbitrarily in layers on top. Why is that?
 
-Privacy-enhancing layers generally try to use the base layer as little
-as possible to leak a minimum amount of information. They don't depend
-on the trustlessness of the base layer for their privacy since all they
-reveal to the base layer will be stuff they would reveal anyway.
+Any layer on top of Bitcoin, as explained in
+<<_layered_scaling,Layered scaling>>, must use on-chain transactions
+now and then, otherwise, it wouldn't be "on top of
+Bitcoin". Privacy-enhancing layers generally try to use the base layer
+as little as possible to minimize the amount of information revealed.
 
 For more in-depth reading about countermeasures, refer to the
 previously mentioned https://en.bitcoin.it/wiki/Privacy#Methods_for_improving_privacy_.28non-blockchain.29[wiki article on privacy], starting at "Methods for improving privacy (non-blockchain)".
