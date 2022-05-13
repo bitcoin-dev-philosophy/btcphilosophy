@@ -13,7 +13,7 @@ require any trusted parties to function correctly.
 ____
 
 In short, the word _trustless_ refers to a property of the Bitcoin
-protocol, that means it can logically function without "any trusted
+protocol that means it can logically function without "any trusted
 parties". This is different from the trust that you inevitably have to
 put into the software or hardware you run. More on this trust further
 down this article.
@@ -21,9 +21,9 @@ down this article.
 To use Bitcoin in a trustless manner, you have to run a
 fully-validating Bitcoin node. Only then will you be able to verify
 that the blocks you receive from others are following the consensus
-rules, for example that the coin issuance schedule is kept and that no
+rules; for example, that the coin issuance schedule is kept and that no
 double spends occur on the blockchain. If you don't run a full node,
-you outsource verification of Bitcoin blocks to someone else, and
+you outsource verification of Bitcoin blocks to someone else and
 trust them to tell you the truth, which means you're not using Bitcoin
 trustlessly.
 
@@ -57,7 +57,7 @@ ____
 
 He says that running a full node will help you verify every aspect of
 the blockchain, without trusting anyone else, to ensure that coins you
-receive from others are real. This is great, but there's one important
+receive from others are genuine. This is great, but there's one important
 thing that a full node can't help you with: It can't prevent double
 spending through chain rewrites:
 
@@ -70,12 +70,12 @@ known decentralized defense better than that.
 ____
 
 No matter how advanced your software is, you still have to trust that
-the blocks containing your coins won't be rewritten. But as pointed
+the blocks containing your coins won't be rewritten. However, as pointed
 out by Harding, you can await a number of confirmations, after which
 you consider the probability of a chain rewrite small enough to be
 acceptable.
 
-The incentives for using Bitcoin in a trustless way aligns with the
+The incentives for using Bitcoin in a trustless way align with the
 system's need for <<_full_node_decentralization,full node
 decentralization>>. The more people who use their own full node, the
 more full node decentralization, and the stronger Bitcoin stands
@@ -96,7 +96,7 @@ example a custodial wallet, on top of a trustless system.
 image::trust.png[width=50%]
 
 This security model allows the system designer to select trade-offs
-that make sense to them, without forcing those trade-offs on others.
+that make sense to them without forcing those trade-offs on others.
 
 [[donttrustverify]]
 === Don't trust, verify
@@ -115,7 +115,7 @@ might not be programmed to do what's stated on the box. For example:
 So besides running a full node, you also need to make sure you're
 running what you intend to. Reddit user brianddk
 https://www.reddit.com/r/Bitcoin/comments/smj1ep/bitcoin_v220_and_guix_stronger_defense_against/[wrote
-an article] about the various levels of trust you can chose from when
+an article] about the various levels of trust you can choose from when
 verifying your software. In the section "Trusting the builders", he
 talks about _reproducible builds_:
 
@@ -157,9 +157,9 @@ verification and minimize trust.
 ____
 
 He then explains how Guix can let us trust only a minimal binary of
-357 bytes, that can be verified and fully understood if you know how
-to interpret the instructions. This is quite remarkable: Verify that
-the 357 byte binary does what it should do, then use that build the
+357 bytes that can be verified and fully understood if you know how
+to interpret the instructions. This is quite remarkable; Verify that
+the 357-byte binary does what it should do, then use that to build the
 full build system from source code and end up with a Bitcoin Core
 binary that should be an exact copy of anyone else's build.
 
