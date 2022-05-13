@@ -125,21 +125,26 @@ The conclusion is an important one. If people don't protect Bitcoin's
 decentralization, which is a proxy for censorship resistance, Bitcoin
 might fall victim to centralizing powers until it's so centralized
 that censorship becomes a thing. Then most, if not all, of its value
-proposition is gone. This brings us to the next section, on full node
+proposition is gone. This brings us to the next section on full node
 decentralization.
 
 === Full node decentralization
 
-We've mostly talked about miner decentralization above, and how miner
-centralization can allow for censorship. But there's also another
-aspect of decentralization, which is full node decentralization.
+We've mostly talked about miner decentralization above and how centralization
+can allow for censorship. But there's also another aspect of decentralization,
+which is full node decentralization.
 
 The importance of full node decentralization is related to
-<<trustlessness,trustlessness>>. If a user stops running his/her own
-full node, for example due to prohibitively increased cost of
-operation, they have to interact with the Bitcoin network in some
-other way, for example using web wallets, or lightweight wallets,
-which require more or less trust. Aaron Van Wirdum of Bitcoin Magazine
+<<trustlessness,trustlessness>>. Suppose a user stops running their own
+full node, for example, due to a prohibitively increased cost of
+operation. In that case, they have to interact with the Bitcoin network in some
+other way, using web wallets or lightweight wallets, which require more trust.
+The user goes from enforcing the consensus rules of the network to trusting
+someone else will. If most users are delegating consensus enforcement to a
+trusted entity, the network can quickly spiral into centralization, and the
+rules of the network can be changed by conspiring malicious actors.
+
+Aaron Van Wirdum of Bitcoin Magazine
 writes in
 https://bitcoinmagazine.com/technical/decentralist-perspective-bitcoin-might-need-small-blocks-1442090446[his
 Bitcoin Magazine article] about decentralization:
@@ -154,13 +159,13 @@ Verification (SPV) nodes are no better in this regard, as they do not
 verify the consensus rules either.
 ____
 
-In the article, Van Wirdum interviews some Bitcoin developers about
-their views on decentralization and the risks involved in increasing
-Bitcoin's maximum block size. This topic was very hot during the
-period 2014-2017, when many people argued for and against increasing
-the block size limit to allow for more transaction throughput.
+In the article, Van Wirdum interviews Bitcoin developers about their views on
+decentralization and the risks involved in increasing
+Bitcoin's maximum block size. This was a hot topic during the 2014-2017 era
+when many people argued over increasing the block size limit to
+allow for more transaction throughput.
 
-A very strong argument against increasing the block size is that it
+A powerful argument against increasing the block size is that it
 increases the cost of verification (see <<_vertical_scaling,the
 Scaling chapter>>). If verification cost increases, it will push some
 full node users to stop running their full nodes. This in turn leads
