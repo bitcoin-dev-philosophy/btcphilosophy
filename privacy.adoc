@@ -291,5 +291,5 @@ previously mentioned https://en.bitcoin.it/wiki/Privacy#Methods_for_improving_pr
 === Conclusion
 
 Privacy is very important but hard to achieve. There is no privacy
-silver bullet. To get decent privacy in Bitcoin you have to take
-active measures some of which are costly and time-consuming.
+silver bullet. To get decent privacy in Bitcoin, you have to take
+active measures, some of which are costly and time-consuming.
