@@ -68,7 +68,7 @@ transactions anymore, because the censor's blocks are deemed invalid
 by the user's full node.
 * Move: Appoint a new central point of control. The users must figure out how
 to coordinate and then agree on what new central point of control to use.
-If they succeed, the same issues will most likely resurface  because the system
+If they succeed, the same issues will most likely resurface because the system
 is as censorable now as it was before.
 
 None of these options are beneficial to the user. Censorship
