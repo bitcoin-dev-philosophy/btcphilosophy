@@ -135,6 +135,23 @@ internet connections are involved, the adversary will be able to link
 the IP address with the discovered bitcoin information.
 ____
 
+[[kycdbs]]
+However, among the most obvious privacy leaks are exchanges. Due to
+laws, usually referred to as KYC (know your customer) and AML
+(anti-money laundering), in the jurisdictions they operate in,
+exchanges and related companies often have to collect personal data
+about their users, building up big databases about what users has
+which bitcoins. These databases are great honeypots for bad
+governments and gangsters who's always on the lookout for new
+victims. There are actual markets for this kind of data, where hackers
+sell data to the highest bidder. To make things worse, the companies
+that manages these databases often have little experience with
+protecting financial data, many of them are young startups, and
+several leaks have occurred. A few examples are
+https://bitcoinmagazine.com/business/probably-the-largest-kyc-data-leak-in-history-demonstrates-the-importance-of-bitcoin-privacy[India-based
+MobiQwik] and
+https://bitcoinmagazine.com/business/hubspot-security-breach-leaks-bitcoin-users-data[HubSpot]
+
 Again, protecting against this wide range of attacks is hard, and you
 probably won't fully be able to, so you have to use some trade-off between
 convenience and privacy that works for you.
@@ -284,6 +301,36 @@ Any layer on top of Bitcoin, as explained in
 now and then, otherwise, it wouldn't be "on top of
 Bitcoin". Privacy-enhancing layers generally try to use the base layer
 as little as possible to minimize the amount of information revealed.
+
+The above are somewhat technical ways to improve your privacy. But
+there are other ways. At the beginning of this chapter, we said that
+Bitcoin is a pseudonymous system. This means that users in Bitcoin
+aren't known by their real names or other personal data, but by their
+public keys. A public key is a pseudonym for a user, and a user can
+have multiple pseudonyms. In an ideal world, your in-person identity
+is decoupled from your Bitcoin pseudonyms. Unfortunately, due to the
+privacy problems described in this chapter, this decoupling usually
+degrade over time.
+
+To mitigate the risks of having your personal data revealed is to not
+give it out in the first place or not give it to centralized services
+that <<kycdbs,build big databases>> that can leak. An article by
+Bitcoin Q+A https://bitcoiner.guide/nokyconly/[explains KYC] and the
+dangers with it. It also suggests some things you can do to improve
+your situation.
+
+[quote,"Bitcoin Q+A, noKYC only, Avoid the creep", bitcoiner.guide]
+____
+Thankfully there are some options out there to purchase Bitcoin via no
+KYC sources. These are all P2P (peer to peer) exchanges where you are
+trading directly with another individual and not a centralised third
+party. Unfortunately some sell other coins as well as bitcoin so we
+urge you to take care.
+____
+
+The article suggest you can avoid using exchanges that require KYC/AML
+and instead trade in private, or use decentralized exchanges like
+https://bisq.network/[bisq].
 
 For more in-depth reading about countermeasures, refer to the
 previously mentioned https://en.bitcoin.it/wiki/Privacy#Methods_for_improving_privacy_.28non-blockchain.29[wiki article on privacy], starting at "Methods for improving privacy (non-blockchain)".
