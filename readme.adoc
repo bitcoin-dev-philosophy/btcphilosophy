@@ -26,7 +26,7 @@ project. Sorry.
 
 === Intended reader
 
-The typical reader is a developer who just started digging into
+This guide is intended for the developer who just started digging into
 Bitcoin development or has worked in the Bitcoin space in one form or
 the other.
 
