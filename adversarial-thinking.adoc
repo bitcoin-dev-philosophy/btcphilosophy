@@ -80,8 +80,8 @@ best to use Bitcoin in a trustless manner.
 There are a lot of known weaknesses in Bitcoin, and many of them are
 actively being exploited. To get a glimpse of that, have a look at
 https://en.bitcoin.it/wiki/Weaknesses[the Weaknesses page] on the
-Bitcoin wiki. They mention a wide variety of problems, for example
-wallet theft and denial-of-service attacks. 
+Bitcoin wiki. They mention a wide variety of problems, for example,
+wallet theft and denial-of-service attacks.
 
 [quote, Various authors, The Bitcoin wiki]
 ____
@@ -93,17 +93,16 @@ the execution of other attacks.
 ____
 
 This type of attack is called a _Sybil attack_, which means that a
-single entity controls multiple nodes in a network, to make it appear
+single entity controls multiple nodes in a network to make it appear
 as multiple entities.
 
 As the quote also mentions, the Sybil attack is not effective on the
 Bitcoin network because there is no voting with nodes or entities, but
 with <<one-cpu-one-vote,with computing power>>. However, this flat
-structure leaves the system susceptible to carrying out other
-attacks. The authors then lists some possible attacks such as
-information hiding (often refered to as an eclipse attack), and how
-Bitcoin Core implements some heuristic countermeasures against such
-attacks.
+structure leaves the system susceptible to other attacks.
+The authors then lists possible attacks such as information hiding
+(often referred to as an eclipse attack) and how Bitcoin Core implements
+some heuristic countermeasures against such attacks.
 
 The above are examples of real threats that need to be taken care of.
 
@@ -114,14 +113,14 @@ The above are examples of real threats that need to be taken care of.
 image::sabotage-manual.png[role="right half-width"]
 
 [[sabotage]]
-To better understand the minds of an adversary, it might be useful to
-get a glimpse into how they might operate. A government body named
-Office of Strategic Services, that operated during World War II,
+To better understand the mind of an adversary, it might be helpful to
+get a glimpse into how they operate. A government body named
+Office of Strategic Services, which operated during World War II,
 conducted espionage, performed sabotage and propaganda, among other
 things, wrote a https://www.gutenberg.org/ebooks/26184[manual]
-for their personnel on how to sabotage. It's title was "Simple
-Sabotage Field Manual" and contained concrete tips on how to
-infiltrate the enemy to make their lives hard. They range from burning
+for their personnel on how to sabotage. Its title was "Simple
+Sabotage Field Manual" and contained concrete tips on infiltrating
+the enemy to make their lives hard. They range from burning
 down warehouses to causing wear to drills to decrease the enemy's
 efficiency.
 
@@ -130,12 +129,11 @@ infiltrator can disrupt organizations. It's not hard to see how such
 tactics could be used to target the Bitcoin development process (see
 <<opensource>>), which is open for anyone to participate in. A
 dedicated attacker can keep stalling progress by endless concerns of
-irrelevant issues, haggle over precise wordings, attempt to reiterate
-already comprehensively addressed discussions. Not only that, the
-attacker can also hire a troll army to multiply their effectiveness,
-we can call it a social Sybil attack. Using a social Sybil attack,
-they can make it look like there's more resistance against a proposed
-change than there actually is.
+irrelevant issues, haggle over precise wordings, and attempt to reiterate
+already comprehensively addressed discussions. The attacker can also hire
+a troll army to multiply their effectiveness; we can call it a social
+Sybil attack. Using a social Sybil attack, they can make it look like there's
+more resistance against a proposed change than there actually is.
 
 This highlights how a determined state can and will do everything in
 their power to destroy their enemy, including breaking it down from
@@ -168,9 +166,8 @@ contradiction leads one to make obvious errors in an attempt to
 rationalize the conflict.
 ____
 
-What he's saying is basically that only when one assumes it's possible
-to create a system that can't be controlled by states is it meaningful
-to try.
+What he's essentially saying is that only when one assumes it's possible to
+create a system that states can't control is it meaningful to try.
 
 This means that to work on Bitcoin, you should accept the Axiom of
 Resistance, otherwise you'd better spend your time on other
