@@ -4,8 +4,8 @@ When we discuss security in various systems, it's good to understand
 what the security assumptions are. A typical security assumption in
 Bitcoin is "the Discrete Logarithm problem is hard to solve", which,
 simply put, means it's practically impossible to find a private key
-that corresponds to a certain public key. Another, pretty strong,
-security assumption is that a majority of the network's hashpower are
+that corresponds to a particular public key. Another, pretty strong,
+security assumption is that a majority of the network's hashpower is
 honest, meaning that they play by the rules. If these assumptions are
 proven wrong, then Bitcoin is in trouble.
 
@@ -13,8 +13,8 @@ Andrew Poelstra
 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/[gave
 a talk] at the Scaling Bitcoin conference in Hong Kong 2015, where he
 talked about Bitcoin's security assumptions. He says that many systems
-disregard adversaries to some extent, for example it's really hard to
-protect a building against all types of adversarial events, instead we
+disregard adversaries to some extent; for example, it's really hard to
+protect a building against all types of adversarial events. Instead we
 accept that someone may burn the building down, and we prevent
 adversarial behavior to some extent through law enforcement etc.
 // See greg maxwell's analogy of the building: https://youtu.be/Gs9lJTRZCDc?t=2799
@@ -30,11 +30,11 @@ cannot assume they will be visible and that they will be caught.
 ____
 
 The consequence is that all known weaknesses in Bitcoin must be taken
-care of somehow, otherwise they will be exploited. After all, Bitcoin
+care of somehow; otherwise, they will be exploited. After all, Bitcoin
 is the greatest honey pot in the world.
 
-Poelstra goes on to mention how Bitcoin is a new kind of system, which
-is more nebulous than for example a signing protocol which has very
+Poelstra goes on to mention how Bitcoin is a new kind of system; it's
+more nebulous than, for example, a signing protocol which has very
 clear-cut security assumptions.
 
 On his personal blog, software engineer Jameson Lopp,
