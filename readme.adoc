@@ -1,6 +1,6 @@
 == About btcphilosophy
 
-This project is a guide for new developers in Bitcoin to learn about
+This project is a guide for new bitcoin developers to learn about
 the digital currency's fundamental properties and how seasoned Bitcoin
 developers think about them.
 
@@ -9,7 +9,7 @@ philosophical foundation from which to further explore this
 fascinating subject. After reading this collection of articles,
 you'll:
 
-* have cruised over a decade of Bitcoin experience
+* have cruised over a decade of Bitcoin development history
 * be able to distinguish useful Bitcoin ideas from, well, less useful ideas
 * get accustomed to some great places for Bitcoin information
 * be humbled by the vast amount of wisdom available
@@ -43,7 +43,7 @@ following should be clear to the reader beforehand:
 The project is sectioned into topics. Each topic will guide you
 through a number of links to articles or videos, that we recommend
 reading and briefly discuss each link. The material presented is
-written by individuals who have studied Bitcoin for a long time.
+written by individuals who have studied Bitcoin development for a long time.
 
 The links refer to external resources on platforms we can't
 control. We have therefore saved the linked articles locally in this
@@ -59,11 +59,11 @@ instead.
 
 === What to expect
 
-There are lots people involved in Bitcoin; some have opposing opinions and so
-certain resources may appear contradictory to one another. However, we will
+There are lots of people involved in Bitcoin; some have opposing opinions,
+there are resources that express contradictory ideas. However, we will
 attempt to stick to the facts, where opinions do not matter.
 
-Bitcoin is a huge subject. We cannot cover all aspects of it, but we
+Bitcoin is a huge subject. We cannot cover all it's aspects, but we
 hope that we've discussed enough of it to get you started, and that
 you'll be able to explore further on your own.
 
