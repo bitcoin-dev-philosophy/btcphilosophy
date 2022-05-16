@@ -58,7 +58,7 @@ The importance of adversarial thinking probably extends to the general
 public as well to some
 degree. https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking[Ragnar
 Lifthasir mentions in a tweetstorm] how simplistic narratives around
-Bitcoin, for example "just HODL", can be degrading to Bitcoin and
+Bitcoin, for example, "just HODL", can be degrading to Bitcoin and
 concludes
 
 [quote, Ragnar Lifthasir, Twitter]
@@ -71,7 +71,7 @@ conservative
 ____
 
 He refers to these simplistic narratives as monomania, meaning that by
-focusing only on a single thing, eg "just HODL", you stop thinking
+focusing only on a single thing, e.g., "just HODL", you stop thinking
 about important stuff like keeping your Bitcoin secure and doing your
 best to use Bitcoin in a trustless manner.
 
