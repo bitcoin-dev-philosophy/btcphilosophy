@@ -21,10 +21,10 @@ with a brief overview of Bitcoin's history within the context of scaling.
 
 === History
 
-Scaling has been discussed since the very beginning of Bitcoin. The
+Scaling has been a focal point of discussion since the genesis of Bitcoin. The
 very first sentence of the
 https://satoshi.nakamotoinstitute.org/emails/cryptography/threads/1/#014814[very
-first mail response] to Satoshi's announcement of the paper on the
+first mail response] to Satoshi's announcement of the bitcoin white paper on the
 Cryptography mailing list was about scaling:
 
 [quote, James A. Donald and Satoshi Nakamoto, Cryptography email list ]
@@ -43,24 +43,24 @@ ____
 The conversation itself might not be very interesting or accurate, but
 it shows that scaling has been a concern from the very beginning.
 
-Scaling discussions reached peak interest around 2015-2017 where many
+Scaling discussions reached peak interest around 2015-2017, when many
 different ideas floated around about if and how to increase the
 maximum block size limit. This is a rather uninteresting discussion
 about changing a parameter in the source code, a change that doesn't
-really solve anything fundamentally, but pushes the problem of scaling
+fundamentally solve anything, but pushes the problem of scaling
 further into the future, building technical debt.
 
 In 2015, a conference called https://scalingbitcoin.org/[Scaling
-Bitcoin] was held in Montreal, with a followup conference six months
-later in Hong Kong, and thereafter in a number of other locations, to
+Bitcoin] was held in Montreal, with a follow-up conference six months
+later in Hong Kong and thereafter in a number of other locations to
 address scaling. Many Bitcoin developers and others gathered there to
 discuss various scaling issues and proposals. Most of these
-discussions didn't revolve around block size increases but more long
-term solutions.
+discussions didn't revolve around block size increases but more long-term
+solutions.
 
 After the Hong Kong conference in December 2015, Gregory Maxwell
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-December/011865.html[summarized
-his view] on many of the discussions, and started off with
+his view] on many of the discussions and started off with
 some general scaling philosophy.
 
 [quote, Gregory Maxwell on Bitcoin-dev mailing list, Capacity increases for the Bitcoin system.]
@@ -83,7 +83,7 @@ decentralization. If you allow for bigger blocks, you will push some
 people off the network because they don't have the resources to verify
 the blocks anymore. But on the other hand, if access to block space
 becomes more expensive, fewer people will afford to use it as a
-dispute resolution mechanism. In both these cases users are pushed
+dispute resolution mechanism. In both these cases, users are pushed
 towards trusted services.
 
 He further summarizes the many approaches to scaling presented at the
