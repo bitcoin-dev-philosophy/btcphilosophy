@@ -1,11 +1,11 @@
 == Scaling
 
-Scaling has been a hot topic since the early days of Bitcoin. Also,
-different people put different meanings into the word, such as
-increasing the transaction capacity of the blockchain, use the
-blockchain more efficiently, or develop systems on top of Bitcoin.
+Scaling has been a hot topic since the early days of Bitcoin.
+Different people ascribe different definitions to the word, such as
+increasing the transaction capacity of the blockchain, using the
+blockchain more efficiently, or developing systems on top of Bitcoin.
 
-In the context of Bitcoin, it might be useful to define scaling as
+In the context of Bitcoin, and for this guide, we will define scaling as
 _increasing Bitcoin's usage capacity without compromising its
 censorship resistance_. This definition would encompass several
 different kinds of changes, for example:
@@ -17,7 +17,7 @@ different kinds of changes, for example:
 * Layered architecture
 
 We'll soon dive into different approaches for scaling, but let's start
-with a brief overview of Bitcoin's history in the context of scaling.
+with a brief overview of Bitcoin's history within the context of scaling.
 
 === History
 
