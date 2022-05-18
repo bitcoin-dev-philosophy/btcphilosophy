@@ -1,9 +1,28 @@
 == Decentralization
 
-Bitcoin has been designed to avoid having a central point of control,
-or more specifically, a _central point of censorship_. A system
-without a central point of control is often referred to as
-_decentralized_.
+In this chapter, we will discuss what decentralization is and why it's
+important. We'll distinguish between decentralization of miners and
+decentralization of full nodes and discuss what they bring to the
+table for Bitcoin's censorship resistance, one of the most central
+properties of Bitcoin. Neutrality, or permissionlessness, towards
+users, miners, and developers is then discussed, which is a neccesary
+property of a decentralized system. Lastly, we'll touch upon how hard
+it can be to grasp a decentralized system like Bitcoin, but also
+present some mental models that might help you grok it.
+
+A system without a central point of control is often referred to as
+_decentralized_. Bitcoin is decentralized to avoid having a central
+point of control, or more specifically, a _central point of
+censorship_. Decentralization in Bitcoin is a means to an end:
+_censorship resistance_.
+
+There are two major aspects of decentralization in Bitcoin: Miner
+decentarlization and full node decentralization. Miner
+decentralization means that transaction processing isn't performed or
+coordinated by a central entity. Full node decentralization means that
+verification of the blocks, the data that miners output, is done at
+the edges of the network, ultimately by its users, and not by a few
+trusted authorities.
 
 === Miner decentralization
 
@@ -19,7 +38,8 @@ join or leave as they wish. This is what makes Bitcoin censorship-resistant.
 
 If Bitcoin were centralized, it would be vulnerable to those who wish
 to censor, such as governments. It'd meet the same fate as earlier
-attempts to create digital money. In a paper titled "`Enabling
+attempts to create digital money. In
+https://www.blockstream.com/sidechains.pdf[a paper] titled "`Enabling
 Blockchain Innovations with Pegged Sidechains`", the authors explained
 in their introduction how early versions of digital money weren't
 equipped for an <<adversarialthinking,adversarial environment>>:

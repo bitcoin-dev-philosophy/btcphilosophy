@@ -7,4 +7,4 @@
 * Date copied: 2022-03-04
 ****
 
-link:sources/images/bitcoin.pdf[bitcoin.pdf]
+link:images/bitcoin.pdf[bitcoin.pdf]

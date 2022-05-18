@@ -6,11 +6,15 @@ include::../settings.adoc[]
 
 == Decentralization
 
-include::maxwelldecentralization.adoc[]
+include::sidechainspaper.adoc[]
 
 include::bitcoinpaper.adoc[]
 
-include::bitcoinmagarticle.adoc[]
+include::maxwelldecentralization.adoc[]
+
+include::bitcoinmagdecentralization.adoc[]
+
+include::irclog20120404.adoc[]
 
 include::wuillese.adoc[]
 
