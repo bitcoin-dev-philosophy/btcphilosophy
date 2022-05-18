@@ -1,5 +1,12 @@
 == Finite supply
 
+This chapter will look into Bitcoin's 21 million BTC supply limit, or
+how much is it actually? We'll talk about how this limit is enforced
+and what can you do to verify that it's being respected? We'll then
+look into the crystal ball an have a discussion about the dynamics
+that come into play in the future when the block reward shifts from
+being subsidy based to fee based.
+
 The well known finite supply of 21 million BTC is regarded as a
 fundamental property in Bitcoin. But is it really set in stone?
 
