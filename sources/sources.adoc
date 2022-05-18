@@ -28,20 +28,6 @@ include::brianddktrust.adoc[]
 
 include::cve-2018-17144.adoc[]
 
-== Adversarial thinking
-
-include::poelstrasecurityassumptions.adoc[]
-
-include::loppsecuritymodel.adoc[]
-
-include::lifthasir.adoc[]
-
-include::wikithreats.adoc[]
-
-include::sabotagemanual.adoc[]
-
-include::voskuilresistance.adoc[]
-
 == Privacy
 
 include::maxwellprivacy.adoc[]
@@ -65,3 +51,25 @@ include::feesniping.adoc[]
 include::loppsecuritymodel.adoc[]
 
 include::hasuonionmodel.adoc[]
+
+== Upgrading
+
+== Adversarial thinking
+
+include::poelstrasecurityassumptions.adoc[]
+
+include::loppsecuritymodel.adoc[]
+
+include::lifthasir.adoc[]
+
+include::wikithreats.adoc[]
+
+include::sabotagemanual.adoc[]
+
+include::voskuilresistance.adoc[]
+
+== Open source
+
+== Scaling
+
+== When shit hits the fan

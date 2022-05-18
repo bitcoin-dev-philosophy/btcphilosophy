@@ -34,8 +34,5 @@ include::scaling.adoc[]
 [[whenshithitsthefan]]
 include::when-shit-hits-the-fan.adoc[]
 
-[[casestudy]]
-include::case-study.adoc[]
-
 [[appendix]]
 include::appendix-discussion.adoc[]
