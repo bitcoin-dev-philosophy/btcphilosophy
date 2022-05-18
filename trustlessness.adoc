@@ -1,5 +1,14 @@
 == Trustlessness
 
+This chapter disects trustlessness, what it means from a computer
+science perspective, and why Bitcoin has to be trustless to retain its
+value proposition. We then talk about what it means to use Bitcoin in
+a trustless way, and what kind of guarantees a full node can and can't
+give you. In the last section, we look at the real-world interaction
+between Bitcoin and actual software or users, and the need to make
+trade-offs between convenience and trustlessness to get anything done
+at all.
+
 People often say things like "Bitcoin is great because it's
 trustless". What do they mean by trustless? Pieter Wuille explains
 this widely used term on
