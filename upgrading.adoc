@@ -1,9 +1,11 @@
 == Upgrading
 
 Upgrading Bitcoin in a safe way can be extremely difficult. Some
-changes take multiple years to roll out. In this chapter we'll explore
-some examples of historic upgrades to Bitcoin as well as discuss the
-pros and cons of various upgrade mechanisms.
+changes take multiple years to roll out. In this chapter we'll learn
+about some common vocabulary around upgrading and explore some
+examples of historic upgrades to Bitcoin, and what insights we gained
+from them. At the end we'll talk about the risks and costs of a
+lasting chain split.
 
 To get in tune for this chapter, you should read
 https://bitcointalk.org/dec/p1.html[David Harding's piece on Harmony
