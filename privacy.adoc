@@ -1,14 +1,18 @@
 == Privacy
 
+This chapter deals with how to keep your private financial information
+to yourself. We'll learn what privacy means in the context of Bitcoin,
+why it's important, and how private data can leak, both from the
+blockchain and off-chain. We then talk about how bitcoins should be
+fungibile, meaning interchangeable for other bitcoins, and how
+fungibility and privacy go hand in hand. Last, we'll go through some
+things you can do to improve your, and others' privacy.
+
 Bitcoin can be described as a pseudonymous system where users have
 multiple pseudonyms in the form of public keys. At first glance, this
 looks like a pretty good way to keep users from being identified, but
 it is in fact, really easy to leak private financial information
 unintentionally.
-
-We will look at what privacy means in the context of Bitcoin
-and why you'd want privacy in the first place. Some well-known privacy
-attack vectors, both on and outside the blockchain, are also discussed.
 
 === What does privacy mean?
 
