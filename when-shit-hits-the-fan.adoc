@@ -592,7 +592,7 @@ ____
 He points out that using code that's not intended for use in consensus
 systems poses serious risks, and proposes that Bitcoin implements
 strict DER encoding. This is a very clear example of the importance of
-<<_libraries,selection cryptography>>.
+<<selectioncryptography,selection cryptography>>.
 
 Then, as Maxwell proposed, BIP66 was created as a subset of BIP62 that
 specified only strict DER encoding. This BIP was apparently broadly

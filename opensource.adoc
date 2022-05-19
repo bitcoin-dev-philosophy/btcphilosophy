@@ -175,7 +175,8 @@ contribute to the code, re-use the code, or review the code, without
 asking for permission. Open source has become the gold standard of
 Bitcoin software licensing.
 
-=== Libraries
+[[selectioncryptography]]
+=== Selection cryptography
 
 Open source developers often use open source libraries developed by
 other people. This is a natural, and awesome part of a healthy
@@ -426,7 +427,7 @@ tactics, maybe from the https://www.gutenberg.org/ebooks/26184[Simple
 Sabotage Field Manual], to distort the decision making and development
 process.
 
-Another thing worth mentioning is that, as noted in <<_libraries>>,
+Another thing worth mentioning is that, as noted in <<selectioncryptography>>,
 since Bitcoin is money, and Bitcoin Core secures unfathomable amounts
 of money, security is not taken lightly. Seasoned Bitcoin Core
 developers might appear very hard-headed for this reason, and it's
