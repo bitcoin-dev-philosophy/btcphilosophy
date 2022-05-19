@@ -1,6 +1,6 @@
 == Trustlessness
 
-This chapter disects trustlessness, what it means from a computer
+This chapter dissects trustlessness, what it means from a computer
 science perspective, and why Bitcoin has to be trustless to retain its
 value proposition. We then talk about what it means to use Bitcoin in
 a trustless way, and what kind of guarantees a full node can and can't
@@ -102,7 +102,7 @@ receive from others are genuine. This is great, but there's one important
 thing that a full node can't help you with: It can't prevent double
 spending through chain rewrites:
 
-[quote, David Harding, bitcoin.org webside]
+[quote, David Harding, bitcoin.org website]
 ____
 Note that although all programs—including Bitcoin Core—are vulnerable
 to chain rewrites, Bitcoin provides a defense mechanism: the more

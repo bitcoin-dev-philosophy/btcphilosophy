@@ -5,7 +5,7 @@ important. We'll distinguish between decentralization of miners and
 decentralization of full nodes and discuss what they bring to the
 table for Bitcoin's censorship resistance, one of the most central
 properties of Bitcoin. Neutrality, or permissionlessness, towards
-users, miners, and developers is then discussed, which is a neccesary
+users, miners, and developers is then discussed, which is a necessary
 property of a decentralized system. Lastly, we'll touch upon how hard
 it can be to grasp a decentralized system like Bitcoin, but also
 present some mental models that might help you grok it.
@@ -17,7 +17,7 @@ censorship_. Decentralization in Bitcoin is a means to an end:
 _censorship resistance_.
 
 There are two major aspects of decentralization in Bitcoin: Miner
-decentarlization and full node decentralization. Miner
+decentralization and full node decentralization. Miner
 decentralization means that transaction processing isn't performed or
 coordinated by a central entity. Full node decentralization means that
 verification of the blocks, the data that miners output, is done at
@@ -277,7 +277,7 @@ cryptocurrency. There is probably only place in the world for one or a
 few actually used ones of these.
 ____
 
-He describes that to achieve premissionlessness, the system [most
+He describes that to achieve permissionlessness, the system [most
 likely] needs its own currency.
 
 

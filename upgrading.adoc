@@ -71,7 +71,7 @@ For a technical overview of soft forks and hard forks, please read
 https://rosenbaum.se/book/grokking-bitcoin-11.html[chapter 11 of
 Grokking Bitcoin]. It will explain these terms and also dive into
 upgrade mechanisms. It's recommended, although not strictly
-neccesary, to get a grip on this before you continue reading.
+necessary, to get a grip on this before you continue reading.
 
 [[historic-upgrades]]
 === Historic upgrades
@@ -426,7 +426,7 @@ rules. It could be especially hard to incentivize miners to switch to
 the new chain if they had already mined blocks after the split on the
 old chain, because by switching branch they would be abandoning their
 own block rewards. However, contrary to this incentive, in March 2013,
-when a <<march2013split,long-lasting split>> occured due to an
+when a <<march2013split,long-lasting split>> occurred due to an
 unintentional hard fork, two major mining pools made the decision to
 abandon their branch of the split to restore consensus.
 

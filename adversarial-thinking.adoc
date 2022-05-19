@@ -119,7 +119,7 @@ The above are examples of real threats that need to be taken care of.
 [.float-group]
 --
 [[fig-sabotage-manual]]
-.Exerpt from the Simple Sabotage Field Manual
+.Excerpt from the Simple Sabotage Field Manual
 image::sabotage-manual.png[role="right half-width"]
 
 [[sabotage]]
@@ -181,7 +181,7 @@ create a system that states can't control is it meaningful to try.
 
 This means that to work on Bitcoin, you should accept the Axiom of
 Resistance, otherwise you'd better spend your time on other
-projects. Accepting that axiom helps in focussing your development
+projects. Accepting that axiom helps in focusing your development
 efforts on the real problems at hand: coding around state-level
 adversaries. In other words, think adversarially.
 
