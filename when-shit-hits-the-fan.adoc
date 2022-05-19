@@ -1,11 +1,17 @@
 == When shit hits the fan
 
-Bitcoin is built by people. People write the software, and people
-then run this software. When a security vulnerability or a severe bug
-is discovered (is there really a distinction between the two?), it's
+Bitcoin is built by people. People write the software, and people then
+run this software. When a security vulnerability or a severe bug is
+discovered (is there really a distinction between the two?), it's
 always discovered by people, flesh and blood. This chapter will
 contemplate what people do, should, and shouldn't do when shit hits
-the fan.
+the fan. The first section explains the term _responsible disclosure_,
+how a person that discovers a vulnerability can act responsibly to
+help minimize the damage from it. The rest of the chapter will take
+you on a tour through some of the more severe vulnerabilities
+discovered through the years, and how they were handled by developers,
+miners and users. Things were not as rigorous in Bitcoin's early
+childhood as they are today.
 
 [[responsible-disclosure]]
 === Responsible disclosure
