@@ -200,47 +200,6 @@ providers about which coins to accept, possibly revealing your IP address,
 email address, and other sensitive information. They're so intertwined that
 it's hard to talk about them in isolation.
 
-////
-The quote is from an excellent talk by Matt Corallo and Adam Back at the Scaling Bitcoin in 2016: 
-https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/. Note that several of the proposal on how to improve fungibility is now implemented and applied in the Taproot update.
-
-Fungibility is closely related to <<Privacy,privacy>>, thus these two topics does overlap and should be studied together.
-
-
-One persons bad fungibility negatively impacts other's fungibility.
-
-
-https://t.co/pkqoq7TXwd
-
-* Privacy motivation
-* Privacy and fungibility go hand-in-hand
-
-
-[quote, attribution, cite title]
-____
-
-Transparent and accountable system can be built out of private and fungible ones; doing the reverse is much harder.
-____
-
-Traditional money have a naturally high fungibility and therefore it is easy to take this super important property for granted. 
-
-
-For freedom of speech, we also need freedom to spend money. An efficient way to silent voices, is to freeze their bank accounts.
-
-
-The third part ("Selection Cryptography" starts after about 38 min) of Greg Maxwells talk https://t.co/pkqoq7TXwd is really worth some of your valuable time. Philosophical thoughts are combined with concrete advise, case studies, and risk mitigation. The content is essential in the process of becoming a responsible bitcoin developer.
-
-____
-Information wants to be free...
-... Cryptography is the art and science we use to fight the fundamental nature of information, to bend it to our political and moral will, and to direct it to human ends against all chances and efforts to oppose it.
-____
-
-[quote, attribution, cite title]
-____
-Software testing is making sure your program does what it's supposed to do, security testing is making sure that's _all_ it does.
-____
-////
-
 [[privacymeasures]]
 === Privacy measures
 

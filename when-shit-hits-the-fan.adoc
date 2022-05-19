@@ -158,27 +158,6 @@ prospective attackers." This last observation of the distinction
 between disclosure and publication is an important one. The easy part
 is responsible disclosure; the hard part is to sensibly publish.
 
-////
-Bitcoin-dev "Responsible disclosure of bugs" from 2017:
-
-Key points:
-* Core releases fixes disguised as fixes for less severe issues, or optimizations.
-* Core lets experienced devs examine patches to find the actual vulnerability
-* Hard to draw the line on which altcoins to inform/help patch.
-** Bryan Bishop on not leaving scamcoins out of disclosures https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014983.html
-* Security vulns can be more severe than they first appear (See gregs mail)
-* There is a de facto plan for vulnerabilities (See A Towns email)
-* Most issues have been discovered by "insiders" due to the expertise needed https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014991.html
-** In Bitcoin the overwhelming majority of serious issues we've
-encountered have been found by people I'd consider 'inside the
-project' (frequent regular contributors who aren't seriously involved
-in other things).  That hasn't been so obviously the case for other
-open source projects that I've been involved with; but Bitcoin is
-pretty good from a basic security perspective and finding additional
-issues often requires specialized experience that few people outside
-of the project regulars have (though some, like Sergio, clearly do).
-////
-
 === Traumatic childhood
 
 Bitcoin started out as a one-man (at least that's what its creator's
@@ -194,14 +173,6 @@ that Bitcoin has gone through. This section is a little exposé of some
 of the security issues and incidents from the early years of
 Bitcoin. We won't cover them all, but we have selected a few that we
 find extra interesting.
-
-////
-==== 2010-07-28
-
-CVE-2010-5137
-
-Remote crash vulnerability OP_LSHIFT
-////
 
 ==== 2010-07-28: Spend anyone's coins (CVE-2010-5141)
 
@@ -324,42 +295,6 @@ users were asked to shut down their nodes. This wouldn't be doable
 today, but at that time, lots of users were actively following the
 forums for updates and were usually on top of things. Given that it
 was possible to do this, it might have been a sensible thing to do.
-
-////
-
-CVE-2010-5141
-"One exploited a bug in the transaction handling code and allowed an attacker to spend coins that they did not own."
-
-Asked on twitter and mastodon for pointers to the actual fix
-
-https://twitter.com/kallerosenbaum/status/1518920198904029184
-
-The fix seems to be in 0.3.6 and not 0.3.5 as stated on the wiki CVE page
-https://bitcointalk.org/index.php?topic=626.msg6451#msg6451
-There was a binary only release of 0.3.5 with the fix that wasn't committed to SVN.
-
-https://sourceforge.net/p/bitcoin/code/119/log/
-Disabled OP_RETURN to prevent the issues
-
-Jon Atack's slides about the issue and fix
-https://drive.google.com/file/d/1agAaSRbiLFR2mZuOsVcSZo3At4_NXj88/view
-
-Timeline (UTC):
-
-Discovered by ArtForz: Spend coins with Sig OP_1 OP_RETURN
-
-2010-07-29 07:13:06 "*** ALERT *** Upgrade to 0.3.6" on Bitcointalk https://bitcointalk.org/index.php?topic=626.msg6451#msg6451
-
-2010-07-29 20:27:12 Committed fix, r119: https://sourceforge.net/p/bitcoin/code/119/log/
-
-2010-07-30 06:02:38 Email "[bitcoin-list] Alert: upgrade to bitcoin 0.3.6" https://satoshi.nakamotoinstitute.org/emails/bitcoin-list/threads/13/
-////
-
-////
-==== No separation between scriptSig & scriptPubKey
-
-Fixed in 0.3.7 commit 73aa262 2010-07-31 19:15:48 (r121)
-////
 
 [[combined-output-overflow]]
 ==== 2010-08-15 Combined output overflow (CVE-2010-5139)
@@ -487,30 +422,6 @@ thus a fix could be made more straightforward. In the case of
 OP_RETURN, they had to obfuscate the fix and make public statements
 that didn't directly reveal what the issue was.
 
-////
-==== 2013-03-25 Duplicate coinbase transactions
-
-casatta: 91812 och 91842 share same coinbase tx
-
-81880
-
-BIP30
-https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki
-
-Fixed by BIP34
-
-
-https://twitter.com/pwuille/status/1412468548488728576?s=20&t=__dgKi01CZKbfR1gObBuKg
-https://twitter.com/RCasatta/status/1412698582239617025?s=20&t=__dgKi01CZKbfR1gObBuKg
-
-Russell O'Connor: Mirco… Mezzo… Macroflation—Overheated Economy
-Midas Money
-http://r6.ca/blog/20120206T005236Z.html
-
-Bitcoin Core: Comments for BIP30 and BIP34
-https://github.com/bitcoin/bitcoin/blob/ddc6979b8baab048bbf0c5c2dd23345a8eb5c60e/src/validation.cpp#L1779-L1820
-////
-
 [[march2013split]]
 ==== 2013-03-11 DB locks issue 0.7.2 - 0.8.0 (CVE-2013-3220)
 
@@ -591,36 +502,6 @@ One might wonder if this would have been doable today. The mining
 landscape is more complex today, and depending on the hash power on
 each side of the split, it might be hard to roll out a patch such as
 the one in BIP50 quickly enough.
-
-////
-
-In this situation, the damage had already been done as in the last
-issue discussed.
-
-
-Mentioned in <<upgrading-risks>>.
-
-Inconsistent BDB lock limit interactions
-
-0.7.2 Inconsistent BDB lock limit interactions (hard fork of itself)
-0.8.0 switch to leveldb (ie no lock limit issue)
-0.8.1 Limit max block size to 500,000 bytes and locks to 10,000 +
-        Patch earlier versions to be compatible with 0.8.1 +
-
-BIP50: March 2013 Chain Fork Post-Mortem:
-https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki
-
-Marek Palatinus (Slush) and Michael Marsee (Eleuthria of BTCGuild)
-quickly downgraded their nodes to restore a pre-0.8 chain as
-canonical, despite the fact that this caused them to sacrifice
-significant amounts of money.
-
-On 16 August, 2013 block 252,451 pushed the last remaining *-0.7.2
-nodes off the network.
-
-Hard fork to remove txid limit protocol rule
-
-////
 
 [[bip66-splits]]
 ==== BIP66
@@ -764,80 +645,3 @@ issue resolved at 03:50 the same day after 6 invalid blocks had been
 mined. Unfortunately the same issue happened again the day after on
 2015-07-05 21:50, but this time the invalid branch only lasted 3
 blocks.
-
-////
-2015-07-04 02:10 - 03:50 UTC (04:10-05:50 CEST) first split after height 363730
-Height confirmed by
-https://bitcointalk.org/index.php?topic=1108644.0
-https://bitcointalk.org/index.php?topic=1108304.0
-https://bitcointalk.org/index.php?topic=1108304.msg11785505#msg11785505
-
-2015-07-05 21:50 - 23:40 UTC (23:50 - 01:50 CEST) second split after height 363997 (2015-07-05 21:27:56) or height 363998 (2015-07-05 23:50:26) 
-
-Mentioned in <<upgrading-risks>>
-
-
-Ironically, the fix actually was part in a split, but not due to
-signature encodings being incompatible between nodes, but due to
-validationless mining.
-////
-
-////
-[[duplicateinputsissue]]
-==== 2018-09-17 Missing check for duplicate inputs
-
-Mentioned in <<donttrustverify>>
-
-https://bitcoincore.org/en/2018/09/20/notice/
-////
-
-////
-=== Risks going forward
-
-* Hostile takeover from governmets
-* Infighting among developers/users about upgrades
-* Some very serious issue being unresponsibly disclosed
-* Some bug manifesting itself without malintent, causing for example a chain split
-* Political FUD (climate change, terrorists, money landry, etc)
-* 
-
-
-
-
-==== Unsorted
-
-Satoshi ALERT
-https://satoshi.nakamotoinstitute.org/emails/bitcoin-list/32/
-
-
-CVE-2012-4683
-Main article: CVE-2012-4683
-Date: 2012-08-23
-Summary: Targeted DoS by CPU exhaustion using alerts
-Fix Deployment: 100%
-////
-
-
-
-
-////
-
-
-[bitcoin-dev] Vulnerability relating to 64-byte transactions in Bitcoin Core 0.13 branch
-https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2019-February/016697.html
-Also: https://bitcoinops.org/en/newsletters/2019/03/12/#bitcoin-core-vulnerability-disclosure
-
-Gregory Maxwell on infamous OP_CHECKMULTISIG bug
-
-Thoughts from Jonas (https://github.com/kallerosenbaum/btcphilosophy/issues/5):
-
-If bitcoin was broken, we would find out quickly (see 0.8 BDB to LevelDB hardfork).
-
-And if some underlying crypto was broken we'd find out as well (maybe add an aside on post-quantum).
-
-And for fun throw in the Peter Todd piñatas.
-
-Gregory Maxwell: 51% attacks and what attackers can do
-https://www.reddit.com/r/Bitcoin/comments/ddddfl/comment/f2tvbe0/?utm_source=share&utm_medium=web2x&context=3
-
-////

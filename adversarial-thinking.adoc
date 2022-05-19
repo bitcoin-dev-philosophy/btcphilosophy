@@ -184,23 +184,3 @@ Resistance, otherwise you'd better spend your time on other
 projects. Accepting that axiom helps in focusing your development
 efforts on the real problems at hand: coding around state-level
 adversaries. In other words, think adversarially.
-
-////
-=== Detecting adversarial behavior
-
-
-
-How would we know if someone 
-
-How would we know if 
-
-Peter Todd Pinatas:
-https://bitcointalk.org/index.php?topic=293382.0
-
-Good people raise red flags
-
-Not exactly related, but fun/interesting
-Canary on a server (put 1 BTC on your server. If server hacked, you'll notice when the coin moves)
-
-quantum threat? How to detect, what to expect.
-////

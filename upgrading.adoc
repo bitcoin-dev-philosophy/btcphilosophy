@@ -516,19 +516,3 @@ learn more about how the network reacts.
 To keep Bitcoin in harmony, soft forks have proven to be the way
 forward, but the big question is still not fully answered: How do we
 safely deploy soft forks without causing discord?
-
-////
-Speedy Trial email from Anthony Towns:
-https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020127.html
-https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020173.html
-
-Harding excerpt taproot activation
-https://gist.github.com/harding/4cad67840f386bfa8bca0b6f325eb6e9
-
-Harding: Harmony and Discord
-https://bitcointalk.org/dec/p1.html
-
-Antonopoulos in Let's Talk Bitocin on forks
-https://btctranscripts.com/lets-talk-bitcoin-podcast/2017-06-04-consensus-uasf-and-forks/
-////
-
