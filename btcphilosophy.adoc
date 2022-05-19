@@ -34,5 +34,8 @@ include::scaling.adoc[]
 [[whenshithitsthefan]]
 include::when-shit-hits-the-fan.adoc[]
 
-[[appendix]]
+[[appendixdiscussion]]
 include::appendix-discussion.adoc[]
+
+[[appendixbuild]]
+include::build.adoc[]

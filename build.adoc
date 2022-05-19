@@ -1,0 +1,51 @@
+[appendix]
+== Feedback and contribution
+
+The project is maintained on
+https://github.com/kallerosenbaum/btcphilosophy[Github]. If you have
+any improvements, corrections or suggestions to make, either open a
+new issue there or submit a pull request.
+
+=== Build
+
+The book is written in https://asciidoctor.org/[Asciidoctor]. The main
+file for the book is link:btcphilosophy.adoc[]. This file then
+``include::``s each chapter as a separate file.
+
+There's also a separate asciidoctor file, link:sources/sources.adoc[],
+that collects all the copied resources that the book refers to. They
+are kept separate to not make browsing the book itself too heavy.
+
+To build
+this book, clone the GitHub repository:
+
+----
+$ git clone https://github.com/kallerosenbaum/btcphilosophy.git
+$ cd btcphilosophy
+----
+
+and then build using `asciidoctor`:
+
+----
+$ asciidoctor -v btcphilosophy.adoc
+----
+
+The `-v` flag is recommended and instructs asciidoctor to be verbose,
+which means it will show invalid references and other issues. The
+above command will result in a file `btcphilosophy.html` in your
+current directory that you can view in any browser, for example:
+
+----
+$ brave-browser btcphilosophy.html
+----
+
+The source material is collected and maintained as a separate book
+under the `sources` folder. To build it:
+
+----
+$ asciidoctor -v sources/sources.adoc
+----
+
+This will result in a file `sources/sources.html` that you can open in
+a web browser in the same way as the main book.
+

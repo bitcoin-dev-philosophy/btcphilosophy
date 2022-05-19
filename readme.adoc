@@ -1,22 +1,30 @@
 == About btcphilosophy
 
-This project is a guide for new bitcoin developers to learn about
-the digital currency's fundamental properties and how seasoned Bitcoin
-developers think about them.
+This is a guide for new Bitcoin developers who already understand the
+basics of, for example proof of work, block building, and the
+transaction life cycle, who want to level-up and gain a deeper
+understanding of Bitcoin's design tradeoffs and philosophy. It should
+help new developers absorb the most important lessons of a decade of
+bitcoin development and discussion, and provide a context for
+evaluating new ideas (good ones and bad ones!).
 
-This guide should provide the reader with a solid, technical
-philosophical foundation from which to further explore this
-fascinating subject. After reading this collection of articles,
-you'll:
+Table of contents overview:
 
-* have cruised over a decade of Bitcoin development history
-* be able to distinguish useful Bitcoin ideas from, well, less useful ideas
-* get accustomed to some great places for Bitcoin information
-* be humbled by the vast amount of wisdom available
-* be humbled by the breadth of this field
+:oldstyle: {xrefstyle}
+:xrefstyle: full
+<<decentralization>>::
+<<trustlessness>>::
+<<privacy>>::
+<<finitesupply>>::
+<<upgrading>>::
+<<adversarialthinking>>::
+<<opensource>>::
+<<scaling>>::
+<<whenshithitsthefan>>::
+<<appendixdiscussion>>::
+<<appendixbuild>>:: {empty}
 
-The content can be found at
-https://github.com/kallerosenbaum/btcphilosophy/[github.com/kallerosenbaum/btcphilosophy].
+:xrefstyle: {oldstyle}
 
 image::under-construction.svg[width=20%,float="right",align="center"]
 
@@ -24,33 +32,24 @@ WARNING: This repo is heavily under construction. If this sign is
 still here on 2022-06-01 (CEST), we have abandoned this
 project. Sorry.
 
-=== Intended reader
+Your feedback and contributions are most welcome! Instructions for
+building and contributing can be found in <<appendixbuild>>.
 
-This guide is intended for the developer who just started digging into
-Bitcoin development or has worked in the Bitcoin space in one form or
-the other.
-
-The reader doesn't have to know all the ins and outs of Bitcoin, but
-should understand how it operates on a high level. For example, the
-following should be clear to the reader beforehand:
-
-* What proof-of-work is
-* How blocks are interconnected
-* Life cycle of transactions
 
 === How is this organized?
 
-The project is sectioned into topics. Each topic will guide you
-through a number of links to articles or videos, that we recommend
-reading and briefly discuss each link. The material presented is
-written by individuals who have studied Bitcoin development for a long time.
+The project is sectioned into chapters of different topics. Each
+chapter will guide you through a number of links to articles or
+videos, that we recommend reading, and will briefly discuss each
+link. The material presented is written by individuals who have
+studied Bitcoin development for a long time.
 
 The links refer to external resources on platforms we can't
 control. We have therefore saved the linked articles locally in this
 repository, along with info on where it was copied from, and when. The
-resources are collected in link:sources/sources.html[a separate document]
-(`sources/sources.adoc`) organized by the chapter they are linked
-from.
+resources are collected in link:sources/sources.html[a separate
+document] (`sources/sources.adoc`) organized by the chapter they are
+linked from.
 
 The links throughout the chapters refer to the original sources, but
 if you don't have an internet connection, the links appear dead, or
@@ -63,44 +62,9 @@ There are lots of people involved in Bitcoin; some have opposing opinions,
 there are resources that express contradictory ideas. However, we will
 attempt to stick to the facts, where opinions do not matter.
 
-Bitcoin is a huge subject. We cannot cover all it's aspects, but we
+Bitcoin is a huge subject. We cannot cover all its aspects, but we
 hope that we've discussed enough of it to get you started, and that
 you'll be able to explore further on your own.
-
-=== Build
-
-The book is written in https://asciidoctor.org/[Asciidoctor]. To build
-this book, clone the GitHub repository:
-
-----
-$ git clone https://github.com/kallerosenbaum/btcphilosophy.git
-$ cd btcphilosophy
-----
-
-and then build using `asciidoctor`:
-
-----
-$ asciidoctor -v btcphilosophy.adoc
-----
-
-The `-v` flag is recommended and instructs asciidoctor to be verbose,
-which means it will show invalid references and other issues. The
-above command will result in a file `btcphilosophy.html` in your
-current directory that you can view in any browser, for example:
-
-----
-$ brave-browser btcphilosophy.html
-----
-
-The source material is collected and maintained as a separate book
-under the `sources` folder. To build it:
-
-----
-$ asciidoctor -v sources/sources.adoc
-----
-
-This will result in a file `sources/sources.html` that you can open in
-a web browser in the same way as the main book.
 
 === Who wrote this?
 
