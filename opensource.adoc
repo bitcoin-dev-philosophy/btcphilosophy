@@ -1,5 +1,16 @@
 == Open Source
 
+Bitcoin is built using open source software. In this chapter we'll see
+what this means, how maintenance of the software works, how open
+source software in Bitcoin allows for permissionless
+development. We'll dip our toes into _selection cryptography_ that
+deals with how to select and use libraries in cryptographic
+systems. Bitcoin's review process is explored with followed by a
+section on how Bitcoin developers get funded. The last section is
+about how Bitcoin's open source culture can look really weird from the
+outside, and how this perceived weirdness is really a sign of good
+health.
+
 Most Bitcoin software, and especially Bitcoin Core, is open
 source. This means that the source code of the software is made
 available to the general public for scrutiny, tinkering, modification,
