@@ -1,5 +1,15 @@
 == Adversarial thinking
 
+This chapter addresses _adversarial thinking_, a mindset that focuses
+on what can go wrong and how adversaries might operate. We start out
+by discussing Bitcoin's security assumptions and security model, then
+about how ordinary users can think adversarially to improve their self
+sovereignty and Bitcoin's full node decentralization. We'll look into
+some actual threats to Bitcoin and into the minds of
+adversaries. Lastly, we'll talk about the _axiom of resistance_ that
+might help you to understand why people are working on Bitcoin in the
+first place.
+
 When we discuss security in various systems, it's good to understand
 what the security assumptions are. A typical security assumption in
 Bitcoin is "the Discrete Logarithm problem is hard to solve", which,
@@ -98,7 +108,7 @@ as multiple entities.
 
 As the quote also mentions, the Sybil attack is not effective on the
 Bitcoin network because there is no voting with nodes or entities, but
-with <<one-cpu-one-vote,with computing power>>. However, this flat
+<<one-cpu-one-vote,with computing power>>. However, this flat
 structure leaves the system susceptible to other attacks.
 The authors then lists possible attacks such as information hiding
 (often referred to as an eclipse attack) and how Bitcoin Core implements
