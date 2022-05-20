@@ -77,7 +77,7 @@ from or what they're buying before their transactions are allowed to
 enter the blockchain.
 
 Also, the lack of censorship resistance would open up for the censor
-to blackmail users into adopting new system rules. For example,
+to coerce users into adopting new system rules. For example,
 they can force a change where they are allowed to inflate the money
 supply to enrich themselves. In such an event, A user verifying blocks has
 three options for how to handle the changed rules:

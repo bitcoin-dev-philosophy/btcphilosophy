@@ -7,8 +7,7 @@ approaches to scaling Bitcoin. We'll talk about vertical, horizontal,
 inward, and layered scaling and discuss whether they do or don't
 interfere with Bitcoin's value proposition.
 
-Scaling has been a hot topic since the early days of Bitcoin.
-Different people ascribe different definitions to the word, such as
+Different people ascribe different definitions to the word scale, such as
 increasing the transaction capacity of the blockchain, using the
 blockchain more efficiently, or developing systems on top of Bitcoin.
 

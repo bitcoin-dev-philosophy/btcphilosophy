@@ -358,8 +358,8 @@ sublinearly with the price of bitcoin. He's not sure whether that's a
 good thing or a bad thing. On one hand we'd get even better systems
 with more funding, but on the other hand we'd get almost as good a
 system with less funding. The https://coredev.tech/[coredev.tech] he
-mentions is an initiative by developers to meet in person to write and
-review code together.
+mentions is an initiative by developers to meet in person to discuss
+proposals, review code, and meet collabortors in person.
 
 === Culture shock
 
