@@ -1,20 +1,19 @@
 == Decentralization
 
-In this chapter, we will discuss what decentralization is and why it's
-important. We'll distinguish between decentralization of miners and
-decentralization of full nodes and discuss what they bring to the
-table for Bitcoin's censorship resistance, one of the most central
-properties of Bitcoin. Neutrality, or permissionlessness, towards
-users, miners, and developers is then discussed, which is a necessary
-property of a decentralized system. Lastly, we'll touch upon how hard
-it can be to grasp a decentralized system like Bitcoin, but also
-present some mental models that might help you grok it.
+This chapter will discuss what decentralization is and why it’s
+essential. We’ll distinguish between the decentralization of miners
+and full nodes and discuss what they bring to the table for Bitcoin’s
+censorship resistance, one of the most central properties of Bitcoin.
+The discussion then shifts towards understanding neutrality, or
+permissionlessness towards users, miners, and developers, which is
+a necessary property of a decentralized system. Lastly, we’ll
+touch upon how hard it can be to grasp a decentralized system like
+Bitcoin and present some mental models that might help you grok it.
 
-A system without a central point of control is often referred to as
-_decentralized_. Bitcoin is decentralized to avoid having a central
-point of control, or more specifically, a _central point of
-censorship_. Decentralization in Bitcoin is a means to an end:
-_censorship resistance_.
+A system without a central point of control is referred to as being
+_decentralized_. Bitcoin is decentralized to avoid having a central point
+of control, or more specifically, a _central point of censorship_.
+Decentralization in Bitcoin is a means to an end: _censorship resistance_.
 
 There are two major aspects of decentralization in Bitcoin: Miner
 decentralization and full node decentralization. Miner
@@ -26,23 +25,23 @@ trusted authorities.
 
 === Miner decentralization
 
-There have been attempts at creating digital moneys before Bitcoin,
-but most of them failed due to lack of decentralization of governance
+There have been attempts at creating digital currencies before Bitcoin,
+but most of them failed due to a lack of decentralization of governance
 and censorship resistance.
 
 Miner decentralization in Bitcoin means that the _ordering of
 transactions_ isn't carried out by a single entity or fixed set of
 entities. It's carried out collectively by all participants who want
-to; this collective of miners is a dynamic set of users. Anyone can
-join or leave as they wish. This is what makes Bitcoin censorship-resistant.
+to; this miners' collective is a dynamic set of users. Anyone can
+join or leave as they wish. This property makes Bitcoin censorship-resistant.
 
 If Bitcoin were centralized, it would be vulnerable to those who wish
 to censor, such as governments. It'd meet the same fate as earlier
 attempts to create digital money. In
 https://www.blockstream.com/sidechains.pdf[a paper] titled "`Enabling
 Blockchain Innovations with Pegged Sidechains`", the authors explained
-in their introduction how early versions of digital money weren't
-equipped for an <<adversarialthinking,adversarial environment>>:
+in their introduction, how early versions of digital money weren't
+equipped for an <<adversarialthinking, adversarial environment>>:
 
 [quote, various authors, Enabling Blockchain Innovations with Pegged Sidechains 2014]
 ____
@@ -67,7 +66,7 @@ not a viable option due to the high risk of censorship. Even if you replace the
 central server with a federation of a fixed set of stem:[n] servers,
 of which at least stem:[m, m \leq n] must all approve of an
 ordering. The problem then shifts to one where users must agree on
-this set of stem:[n] servers, and how users replace malicious
+this set of stem:[n] servers and how users replace malicious
 servers with good ones without using a central authority.
 
 Let's contemplate what could happen in practice if Bitcoin were
@@ -76,7 +75,7 @@ require identification, that users declare where their money is coming
 from or what they're buying before their transactions are allowed to
 enter the blockchain.
 
-Also, the lack of censorship resistance would open up for the censor
+Also, the lack of censorship resistance would allow the censor
 to coerce users into adopting new system rules. For example,
 they can force a change where they are allowed to inflate the money
 supply to enrich themselves. In such an event, A user verifying blocks has
@@ -84,10 +83,10 @@ three options for how to handle the changed rules:
 
 * Adopt: Accept the changes and adopt them into its full node.
 * Reject: This leaves the user with a system that doesn't process
-transactions anymore, because the censor's blocks are deemed invalid
+transactions anymore because the censor's blocks are deemed invalid
 by the user's full node.
 * Move: Appoint a new central point of control. The users must figure out how
-to coordinate and then agree on what new central point of control to use.
+to coordinate and then agree on the new central control point.
 If they succeed, the same issues will most likely resurface because the system
 is as censorable now as it was before.
 
@@ -95,7 +94,7 @@ None of these options are beneficial to the user. Censorship
 resistance through decentralization is what separates Bitcoin from
 other money systems, but it's not an easy thing to accomplish due to
 the _double spending problem_. This is the problem of making sure no
-one can spend the same coin twice, a problem that many thought was
+one can spend the same coin twice, an issue that many people thought was
 impossible to solve in a decentralized fashion. Satoshi Nakamoto
 writes in his https://bitcoin.org/bitcoin.pdf[Bitcoin paper] about how
 to solve the double spending problem:
@@ -108,13 +107,13 @@ computational proof of the chronological order of transactions.
 ____
 
 Here he uses the peculiar-sounding phrase _peer-to-peer distributed timestamp
-server_. The key word here is _distributed_, which in this
+server_. The keyword here is _distributed_, which in this
 context means that there is no central point of control. Nakamoto then
 goes on to explain how proof-of-work is the solution. Still, no one
 explains it better than
 https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/[Gregory
 Maxwell on Reddit] where he responds to someone who proposes to limit
-miners' hashpower to avoid 51% attacks:
+miners' hash power to avoid 51% attacks:
 
 [[one-cpu-one-vote]]
 [quote, Gregory Maxwell, r/Bitcoin subreddit]
@@ -160,9 +159,9 @@ full node, for example, due to a prohibitively increased cost of
 operation. In that case, they have to interact with the Bitcoin network in some
 other way, using web wallets or lightweight wallets, which require more trust.
 The user goes from enforcing the consensus rules of the network to trusting
-someone else will. If most users are delegating consensus enforcement to a
-trusted entity, the network can quickly spiral into centralization, and the
-rules of the network can be changed by conspiring malicious actors.
+someone else will. Suppose most users are delegating consensus enforcement to a
+trusted entity. In that case, the network can quickly spiral into centralization, and the
+network rules can be changed by conspiring malicious actors.
 
 Aaron Van Wirdum of Bitcoin Magazine
 writes in
@@ -181,14 +180,14 @@ ____
 
 In the article, Van Wirdum interviews Bitcoin developers about their views on
 decentralization and the risks involved in increasing
-Bitcoin's maximum block size. This was a hot topic during the 2014-2017 era
+Bitcoin's maximum block size. This discussion was a hot topic during the 2014-2017 era
 when many people argued over increasing the block size limit to
 allow for more transaction throughput.
 
 A powerful argument against increasing the block size is that it
-increases the cost of verification (see <<_vertical_scaling,the
-Scaling chapter>>). If verification cost increases, it will push some
-full node users to stop running their full nodes. This in turn leads
+increases the cost of verification (see <<_vertical_scaling, the
+Scaling chapter>>). If verification cost rises, it will push some
+full node users to stop running their full nodes. This, in turn, leads
 to more people not being able to use the system in a
 trustless way. Pieter Wuille is quoted in the article, where he
 explains the risks in full node centralization.
@@ -205,7 +204,7 @@ can regulate the consensus rules, it means they can change anything
 that makes Bitcoin Bitcoin. Even the 21 million bitcoin limit.
 ____
 
-There you go. It's important that Bitcoin users run their own full
+There you go. Bitcoin users *must* run their own full
 nodes to deter regulators and big corporations from trying to change
 the consensus rules.
 
@@ -270,12 +269,12 @@ likely] needs its own currency.
 
 === Grokking decentralization
 
-An interesting aspect of Bitcoin is how hard it is to grasp the fact
+A compelling aspect of Bitcoin is how hard it is to grasp
 that no one controls it. There are no committees or executives in
 Bitcoin. Gregory Maxwell, again
 https://www.reddit.com/r/Bitcoin/comments/s82t2n/comment/htdte7w/?utm_source=share&utm_medium=web2x&context=3[on
 the Bitcoin subreddit], compares this to the English language in an
-interesting way:
+intriguing way:
 
 [quote, Gregory Maxwell, r/Bitcoin subreddit]
 ____
@@ -301,7 +300,7 @@ The way Bitcoin works through decentralization resembles the
 extraordinary collective intelligence found among many species in
 nature. Computer scientist Radhika Nagpal speaks in a
 https://www.ted.com/talks/radhika_nagpal_what_intelligent_machines_can_learn_from_a_school_of_fish[Ted
-talk] about the collective behavior of fish schools, and how they try
+talk] about the collective behavior of fish schools and how they try
 to mimic that using robots.
 
 [quote, Radhika Nagpal, What intelligent machines can learn from a school of fish]
@@ -314,11 +313,11 @@ interactions or rules of engagement between neighboring fish that make
 it all work out.
 ____
 
-She points out that many systems, in nature or man-made, can and do
-work without leaders, and they are very powerful and resilient. Each individual
+She points out that many systems, natural or artificial, can and do
+work without leaders, and they are robust and resilient. Each individual
 interacts with their immediate surroundings, but they form something
 tremendous together.
 
 No matter what you think about Bitcoin, its decentralized nature makes
-it very hard to control. Bitcoin exists, and there's nothing you can do
+it difficult to control. Bitcoin exists, and there's nothing you can do
 about it. It's a thing to be studied, not debated.
