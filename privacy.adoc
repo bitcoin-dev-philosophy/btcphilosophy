@@ -2,17 +2,18 @@
 
 This chapter deals with how to keep your private financial information
 to yourself. We'll learn what privacy means in the context of Bitcoin,
-why it's important, and how private data can leak, both from the
+why it's important, and what it means that Bitcoin is
+pseudonymous. We'll look into how private data can leak, both from the
 blockchain and off-chain. We then talk about how bitcoins should be
 fungible, meaning interchangeable for other bitcoins, and how
 fungibility and privacy go hand in hand. Last, we'll go through some
 things you can do to improve your, and others' privacy.
 
-Bitcoin can be described as a pseudonymous system where users have
-multiple pseudonyms in the form of public keys. At first glance, this
-looks like a pretty good way to keep users from being identified, but
-it is in fact, really easy to leak private financial information
-unintentionally.
+Bitcoin can be described as a pseudonymous, explained soon in
+<<pseudonymity>>, system where users have multiple pseudonyms in the
+form of public keys. At first glance, this looks like a pretty good
+way to keep users from being identified, but it is in fact, really
+easy to leak private financial information unintentionally.
 
 === What does privacy mean?
 
@@ -52,8 +53,62 @@ ____
 Maxwell also explains how privacy is important for a free market, your
 personal safety, and human dignity.
 
-Now that we've got a grip on why privacy matters, let's have a look at
-Bitcoin's privacy in practice.
+[[pseudonymity]]
+=== Pseudonymity
+
+We mentioned above that Bitcoin is pseudonymous, and that the
+pseudonyms are public keys, or addresses. In the media you often hear
+that Bitcoin is anonymous, which is not correct. There is a
+distinction between anonymity and pseudonymity.
+
+Andrew Poelstra
+https://bitcoin.stackexchange.com/questions/29471/are-there-any-true-anonymous-cryptocurrencies?rq=1[explains
+in a Bitcoin Stack Exchange post] what anonymity would look like:
+
+[quote,Andrew Poelstra on anonymity,Bitcoin Stack Exchange]
+____
+Total anonymity, in the sense that when you spend money there is no
+trace of where it came from or where it's going, is theoretically
+possible by using the cryptographic technique of zero-knowledge
+proofs.
+____
+
+It seems like the difference is that in a pseudonymous money you can
+trace payments between pseudonyms, whereas in an anonymous money you
+can't. Since bitcoin payments are tracable between pseudonyms, it's
+not anonymous.
+
+We have also said that the pseudonyms are public keys, but it's
+actually addresses derived from public keys. Why do we use addresses
+as pseudonyms and not something else, for example some descriptive
+names, like "`watchme1984`"? This is
+https://bitcoin.stackexchange.com/a/25175/69518[well explained] by
+user Tim S., also on Bitcoin Stack Exchange:
+
+[quote,Tim S. on pseudonyms,Bitcoin Stack Exchange]
+____
+In order for Bitcoin's idea to work, you must have coins that can only
+be spent by the owner of a given private key. This means that whatever
+you send to must be tied, in some way, to a public key.
+
+Using arbitrary pseudonyms (e.g. user names) would mean that you'd
+have to then somehow link the pseudonym to a public key in order to
+enable public/private key crypto. This would remove the ability to
+securely create addresses/pseudonyms offline (e.g. before someone
+could send money to the user name "tdumidu", you'd have to announce in
+the blockchain that "tdumidu" is owned by public key "a1c...", and
+include a fee so others have a reason to announce it), reduce
+anonymity (by encouraging you to reuse pseudonyms), and needlessly
+bloat the size of the blockchain. It would also create a false sense
+of security that you're sending to who you think you are (if I take
+the name "Linus Torvalds" before he does, then it's mine and people
+might send money thinking they're paying the creator of Linux, not
+me).
+____
+
+Using addresses, or public keys, removes the need to somehow register
+a pseudonym beforehand, reduces incentives for pseudonym reuse, avoids
+blockchain bloat, and makes impersonating other people hard.
 
 === Blockchain privacy
 
