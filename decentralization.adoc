@@ -41,7 +41,7 @@ attempts to create digital money. In
 https://www.blockstream.com/sidechains.pdf[a paper] titled "`Enabling
 Blockchain Innovations with Pegged Sidechains`", the authors explained
 in their introduction, how early versions of digital money weren't
-equipped for an <<adversarialthinking, adversarial environment>>:
+equipped for an <<adversarialthinking,adversarial environment>>:
 
 [quote, various authors, Enabling Blockchain Innovations with Pegged Sidechains 2014]
 ____
@@ -185,7 +185,7 @@ when many people argued over increasing the block size limit to
 allow for more transaction throughput.
 
 A powerful argument against increasing the block size is that it
-increases the cost of verification (see <<_vertical_scaling, the
+increases the cost of verification (see <<_vertical_scaling,the
 Scaling chapter>>). If verification cost rises, it will push some
 full node users to stop running their full nodes. This, in turn, leads
 to more people not being able to use the system in a
@@ -204,7 +204,7 @@ can regulate the consensus rules, it means they can change anything
 that makes Bitcoin Bitcoin. Even the 21 million bitcoin limit.
 ____
 
-There you go. Bitcoin users *must* run their own full
+There you go. Bitcoin users should run their own full
 nodes to deter regulators and big corporations from trying to change
 the consensus rules.
 
@@ -314,7 +314,7 @@ it all work out.
 ____
 
 She points out that many systems, natural or artificial, can and do
-work without leaders, and they are robust and resilient. Each individual
+work without leaders, and they are powerful and resilient. Each individual
 interacts with their immediate surroundings, but they form something
 tremendous together.
 
