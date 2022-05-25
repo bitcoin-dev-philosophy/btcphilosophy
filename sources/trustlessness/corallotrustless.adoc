@@ -5,6 +5,7 @@
 * Source: https://btctranscripts.com/baltic-honeybadger/2018/trustlessness-scalability-and-directions-in-security-models/
 * Author: Matt Corallo, transcribed by Bryan Bishop
 * Date copied: 2022-03-04
+* Video: https://youtu.be/66ZoGUAnY9s?t=3991
 ****
 
 … Is everyone awake? Sure. Jumping jacks. Wow, that’s bright. I am more idealistic than Eric. I am going to talk about utility and why people use bitcoin and let’s see how that goes.

@@ -148,7 +148,7 @@ ____
 
 Among other things, he cites Shaolinfry's email to the bitcoin-dev
 mailing list. Shaolinfry
-https://www.mail-archive.com/bitcoin-dev@lists.linuxfoundation.org/msg04703.html[argued
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-February/013643.html[argued
 against miner activated soft forks] and lists a number of problems
 with them
 

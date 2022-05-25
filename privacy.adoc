@@ -62,8 +62,8 @@ that Bitcoin is anonymous, which is not correct. There is a
 distinction between anonymity and pseudonymity.
 
 Andrew Poelstra
-https://bitcoin.stackexchange.com/questions/29471/are-there-any-true-anonymous-cryptocurrencies?rq=1[explains
-in a Bitcoin Stack Exchange post] what anonymity would look like:
+https://bitcoin.stackexchange.com/a/29473/69518[explains in a Bitcoin
+Stack Exchange post] what anonymity would look like:
 
 [quote,Andrew Poelstra on anonymity,Bitcoin Stack Exchange]
 ____

@@ -1,0 +1,303 @@
+=== Bitcoin Q+A - Privacy tips
+
+****
+* Source: https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/
+* Author: Adam Back and Matt Corallo, transcribed by Bryan Bishop
+* Date copied: 2022-05-24
+* Video: https://youtu.be/AvS3tp0qqgA?t=56
+****
+
+==== *10 Tips to Interact with Bitcoin More Privately*
+
+As incredible as Bitcoin is, it still comes with some tradeoffs that
+users need to contend with. Depending on how you interact with the
+protocol, there are many pot holes that can trip up new users which can
+result in information leaks which can, quite frankly, be dangerous. I’ve
+put together a short 10 step guide to help newcomers improve their
+privacy when interacting with Bitcoin. This isn’t designed to be a ‘must
+have’ list for everyone to live by from day 1, everyone has different
+skill levels and priorities, so understanding and implementing all of
+this from the start just isn’t going to happen.
+
+The steps list the simplest and most important first, then get more
+technical the further down you go. Obviously you don’t have to do them
+in order, but look at the later steps as something to work towards
+longer term as you look to really lock down your privacy. Listed
+underneath each step will be the tradeoffs that come with each.
+
+I am by no means a privacy expert and continue to learn from other, far
+more experienced bitcoiners than myself, so if you think I’ve missed
+anything please let me know!
+
+===== Step 1 - Don’t tell anyone
+
+I told you the steps start simple… This may seem obvious but I feel like
+it needs to be said anyway. The less people that know you have bitcoin,
+the better. There have been numerous accounts of people being either
+assaulted physically or hacked online resulting in them losing bitcoin.
+Think about it, are you really gaining anything by posting a screenshot
+on Twitter of your latest bitcoin purchase?
+
+*Tradeoffs* - You can’t flex on Twitter you may find it difficult to
+help onboard others without giving away the fact you own Bitcoin.
+
+[[step-2---control-your-own-keys--practice-coin-control]]
+===== Step 2 - Control your own keys + Practice coin control
+
+Hopefully something you learned early on in your bitcoin career, not
+your keys, not your coins. If someone else has custody of your bitcoin,
+you essentially have zero privacy. They know your complete balance, so
+look to move those coins into a wallet where you control the private
+keys as quickly as possible.
+
+When selecting a wallet look to use one that offers full coin control.
+Coin control allows you to label and manage the specific pieces of
+bitcoin (called UTXO’s) you receive. This can be very useful when you
+come to spend so that you don’t unwittingly combine UTXO’s from
+undesirable sources. If all of your bitcoin are coming from the same
+source eg a KYC exchange then you could possibly place less of an
+emphasis on this aspect but it’s a good habit to get into.
+
+link:/wallet[Here] is a website I created to help you compare the
+different types of Bitcoin wallets.
+
+*Tradeoffs* - You need to remember to label your UTXO’s so you can
+easily identify their source when you come to spend.
+
+===== Step 3 - Be anonymous online
+
+This is a trend that dates back almost to the start of the internet.
+Create an online persona and keep it completely separate from your real
+identity. You can create accounts on Twitter and Telegram etc without
+supplying any personal details. Obviously you need to ensure that when
+using your online alias you do not give away any sensitive information
+that could be linked to your real identity, which links back to step 1.
+The less people know about you, the better.
+
+*Tradeoffs* - You need to take extra care when online. Some accounts
+require a phone number so think about obtaining a separate sim.
+
+===== Step 4 - Use encryption tools
+
+You might think this is a strange one to include at step 4, but there
+are plenty of tools out there now that use encryption but still have a
+simple user interface. Scenarios such as getting a bitcoin address from
+one device to another can leak sensitive info to third parties. Using
+encryption prevents helps this.
+
+Look for encrypted alternatives to your usual apps such as…
+
+____
+*Email* - https://tutanota.com/[Tutanota] or
+https://protonmail.com/[Proton Mail]
+____
+
+____
+*Messaging* - https://signal.org/en/[Signal],
+https://keybase.io/[Keybase] or https://wire.com/en/[Wire]
+____
+
+____
+*Notes* - https://standardnotes.org/[Standard Notes]
+____
+
+*Tradeoffs* - While the UX of encrypted services like those listed above
+has improved drastically, they still have a way to go to match up with
+their less secure counterparts
+
+===== Step 5 - Use Tor/VPN Services
+
+When browsing online, your internet service provider can see all of your
+web traffic. Whether it’s searching for ‘bitcoin wallet’, querying an
+explorer like https://www.kycp.org/#/[kycp.org] or connecting to your
+hardware wallet’s online interface, they can see it all. The aim here is
+to not tie your bitcoin related information to your network IP.
+
+Now if you were to do those activities listed above via the
+https://www.torproject.org/download/[Tor] browser, your ISP would not
+see any of that traffic. The Tor network bounces your traffic off
+different ‘relays’ across its network before it reaches its final
+destination. If using a mobile wallet, you should look to use one with
+integrated Tor for additional privacy. How tor browser works A VPN acts
+slightly differently. It provides privacy by ‘tunneling’ your web
+traffic to a different server which is generally located somewhere in a
+different country. Whilst this does prevent your ISP from spying on your
+online activity, you do place some trust in the VPN server you are
+connecting to. https://mullvad.net/en/[Mullvad] is a good option that
+allows you to pay in bitcoin and does not require any personal
+information whatsoever upon signup.
+
+*Tradeoffs* - Tor can sometimes be slow and certain websites don’t work
+great. VPN’s require a level of trust in the VPN provider.
+
+===== Step 6 - Buy non-KYC
+
+To buy bitcoin from a KYC exchange, you will need to provide personal
+information. Usually this info is in the form of name, address, drivers
+license, and in some cases a selfie holding a piece of paper with the
+name of the exchange and the date. KYC information not only ties your
+personal identity to any bitcoin you purchase, but also creates a huge
+honey pot of sensitive information at risk of being stolen due to
+incompetent security practices at some of these companies.
+
+Once you purchase bitcoin via KYC, no amount of coinjoining or elaborate
+spending techniques will erase the fact that on X date and at X time,
+this person bought X amount of bitcoin from this exchange. Visit
+https://kycnot.me/[kycnot.me] for a great list of ways to purchase KYC
+free bitcoin. Buying bitcoin in person at a meet up or event is also an
+option but then you risk what we covered in Step 1. As always, there are
+tradeoffs.
+
+My personal favourite is https://bisq.network/[Bisq] and I’ve written a
+step by step
+https://www.bitcoinqna.com/post/10-steps-to-your-first-non-kyc-bitcoin[guide]
+on how to make your first purchase. Bisq trade video by KIS Bitcoin
+Those of you wanting to take it one step further and gain the ultimate
+in KYC free bitcoin, by mining. Check out
+https://twitter.com/DiverterNoKYC[@DiverterNoKYC] article
+‘https://keybase.pub/diverterbtc/Mining%20for%20the%20Streets.doc[Mining
+for the Streets]’ where he discusses how to set up your own miner at
+home.
+
+*Tradeoffs* - You generally pay a premium above the ‘spot price’ to
+purchase KYC free. (A small price to pay if you ask me). The liquidity
+is can sometimes be problematic and the UX still needs some work.
+
+===== Step 7 - Run your own node
+
+You cannot send or receive over the Bitcoin network without interacting
+with a node. If that node is not yours then you are trusting someone
+else’s. Let’s say you use the Trezor web interface to interact with your
+hardware wallet. When you send or receive using the interface, your
+transaction goes through Trezor’s node which means that they know the
+balance of all of your addresses and they also know the addresses of
+every entity you send bitcoin to via their app.
+
+link:/node[Here] is a website I created to help you understand why
+running a node is important and to also enable you to compare the
+different types of Bitcoin nodes.
+
+*Tradeoffs* - You will need to invest some time and energy into setting
+up our node and ensuring it is kept up to date with the latest software.
+
+===== Step 8 - Transact off chain
+
+Just like with physical cash, moving bitcoin off chain is much less
+traceable. There are two main options when transacting away from the
+Bitcoin base layer…
+
+. Use https://www.bitcoinqna.com/post/opendime-101[Opendime], a USB
+stick made by https://coinkite.com[Coinkite] that allows you to transact
+bitcoin in the same way you would a dollar bill, by physically handing
+it from one person to the next.
+. Use https://www.bitcoinqna.com/lightning[Lightning]. After you open a
+lightning channel you can pay as many other users on the Lightning
+network as your balance permits without creating an on-chain footprint
+like a traditional transaction would. Lightning channel open and closes
+still take place on chain and there are ways you can still leak your
+privacy so it is by no means the magic bullet.
+
+*Tradeoffs* - Both methods come with added friction and complexity.
+Particularly Lightning which requires channel management.
+
+===== Step 9 - Coinjoin
+
+The Bitcoin blockchain is completely public, so if you have bitcoin that
+is tied to your personal identity (say from a KYC exchange) you can be
+followed on chain by anyone with the right resources that is surveilling
+the blockchain. This problem gets worse if you inadvertently combine
+bitcoin from different sources when making a transaction.
+
+There are different types of Coinjoin implementations, each with their
+own take on the same basic idea. Two or more users pool their UTXO’s
+together into a collaborative transaction. The way the transaction is
+constructed makes it very difficult for surveillance firms to know
+exactly which transaction output belongs to which of the input owners.
+At best anyone looking at the transaction can come up with a number of
+possible scenarios as to who owns which piece of bitcoin, but they can
+never be 100% sure.
+
+One thing worth noting here is that Coinjoin does not erase your KYC
+purchase history, it simply stops those coins being tracked from then
+on. Providing you practice good post mix spending habits!
+
+Samourai Wallet offer, in my opinion, the best and easiest to use
+Coinjoin implementation and by far the best post mix spend toolset on
+offer today. https://samouraiwallet.com/whirlpool[Whirlpool] coinjoins
+can be done on your Android phone or via a desktop application that
+links to your phone wallet. Here is a step by step
+link:/mobilecoinjoin[guide] to your first Coinjoin using Samourai.
+
+Non Android users should look into
+https://github.com/JoinMarket-Org/joinmarket-clientserver[Joinmarket] as
+an alternative although it’s worth noting that it’s a little more
+difficult to use.
+
+*Tradeoffs* - All coinjoin implementations come with varying degrees of
+complexity and fee structures.
+
+===== Step 10 - Go Google free
+
+This one seems especially timely given the recent automatic roll out of
+the ‘contact tracing’ apps that are now baked into both Apple and
+Android phone operating systems. The issue raises some serious questions
+on how this software could be used for dragnet surveillance in the not
+too distant future.
+
+There are now teams of people such as https://grapheneos.org/[Graphene]
+and https://copperhead.co/[Copperhead] who have created stripped down
+and secured versions of the Android operating system. They come with all
+Google Play services removed which takes with it a raft of tracking and
+data collection software. Thanks to F-Droid, Aurora Store or direct APK
+downloads you can still access your favourite apps, but do so with
+caution, each extra app you install broadens the phone’s ‘attack
+surface’ slightly. Be cut throat and only install what you absolutely
+need to.
+
+https://youtu.be/oO0UFZjuotg[Here] is a guide from Matt Odell showing a
+full installation of Graphene OS in just 20 minutes.
+
+It’s also good advice to go as
+https://www.investopedia.com/terms/f/faang-stocks.asp[FAANG] free as you
+can. All of these companies profit from selling your personal data.
+Linux operating systems are free, open source and have come a long way
+recently in terms of user experience. Linux operating systems are a
+great, private alternative and can be installed on pretty much any
+laptop or desktop.
+
+There are lots to choose from but https://ubuntu.com/[Ubuntu] is one of
+the most popular and easy to use.
+
+*Tradeoffs* - Graphene/Copperhead only run on specific phones and
+require some technical skills to install safely and correctly. Getting
+to grips with Linux after years of Apple/Windows use make take a little
+perseverance.
+
+'''''
+
+The steps listed here are not gospel and can change as technology and
+Bitcoin evolve. Nor do they need to be completed in any specific order,
+carrying out any of them should help, if only a small amount. In my
+opinion, perfect privacy doesn’t exist in Bitcoin. It’s a spectrum on
+which we all move along. Hopefully this article will help you make at
+least one step in the right direction.
+
+One final thing to remember, *it only takes a split second to undo years
+of good privacy practices.* Move slow and ask questions.
+
+Want to learn more on bitcoin privacy? Check out these two podcasts…
+
+https://www.whatbitcoindid.com/podcast/the-beginners-guide-to-bitcoin-part-12-bitcoin-privacy-opsec[What
+Bitcoin Did] with Jameson Lopp
+
+https://stephanlivera.com/episode/117/[Stephan Livera] with Pura Vida
+
+* If you need help getting started with improving your privacy, I offer
+private link:/support[support calls] for those that benefit from more
+personalised tuition.
+
+'''''
+
+https://twitter.com/BitcoinQ_A[By Bitcoin Q+A] |
+https://tips.bitcoiner.guide[Support] | link:/articles[More articles] +
+ +

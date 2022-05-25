@@ -1,0 +1,679 @@
+=== Aaron van Wirdum - The Long Road To Segwit
+
+****
+* Source: https://bitcoinmagazine.com/technical/the-long-road-to-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality
+* Author: Aaron van Wirdum for Bitcoin Magazine
+* Date copied: 2022-05-25
+****
+
+Publish date: Aug 23, 2017
+
+Segregated Witness (SegWit) has
+https://btcmagwpstage.wpengine.com/articles/segregated-witness-activates-bitcoin-what-expect[activated]
+on Bitcoin. As of today, all SegWit-ready nodes on the Bitcoin network
+are enforcing the new rules, marking Bitcoin’s biggest protocol upgrade
+to date.
+
+But activation did not come easy, and it did not come fast.
+
+This is a look back at the long road to SegWit.
+
+==== The Problem
+
+Bitcoin transactions consist of two main parts. One part is “base
+transaction data.” That covers which bitcoins are being moved and where
+they are being moved to, as well as some other data. The second part is
+called the “witness.” This contains a bit of code with cryptographic
+signature data, which proves that the owner of a bitcoin really did want
+to spend the bitcoin.
+
+It’s this signature data that brings a slight complication with it. In
+what is referred to as the
+“https://btcmagwpstage.wpengine.com/articles/the-who-what-why-and-how-of-the-ongoing-transaction-malleability-attack-1444253640[malleability
+bug],” Bitcoin signatures can be slightly altered by anyone, even after
+these signatures are created and without invalidating the signatures.
+This in turn means that the appearance of the whole transaction, and
+more specifically the transaction identifier, can be altered by those
+relaying transactions over the Bitcoin network or by miners that include
+transactions in blocks.
+
+This doesn’t need to be a big problem in itself. Transactions are still
+valid and will move the bitcoins from the same place to the same place,
+under all the same conditions. However, it does complicate creating
+newer transactions depending on unconfirmed transactions: New
+transactions need to know the transaction identifier they rely on. This,
+in turn, makes it significantly harder to build certain second-layer
+protocols on top of Bitcoin, like bi-directional payment channels.
+
+==== The Idea
+
+The general idea to solve the malleability bug by “separating” signature
+data from other transaction data stems back several years.
+
+As far back as 2012, the likes of Bitcoin Core
+http://www.bitcoinstats.com/irc/bitcoin-dev/logs/2012/01/20#l1327031650.0[]contributors
+Russell O’Connor, Matt Corallo, Luke Dashjr and Gregory Maxwell, as well
+as Bitcointalk moderator “Theymos,”
+http://www.bitcoinstats.com/irc/bitcoin-dev/logs/2012/01/20#l1327031650.0[discussed]
+the issue on IRC Bitcoin development channels — but at that time they
+didn’t see a tenable way of pulling it off on the Bitcoin network.
+
+A year later, in August 2013, the issue
+https://download.wpsoftware.net/bitcoin/wizards/2013/08/13-08-29.log[resurfaced],
+as Bitcoin Core contributors Peter Todd and Gregory Maxwell were having
+similar discussions on IRC. But now, the two were making progress with
+their ideas to counter malleability. “I’m talking about making the
+[entirety] of the scriptsig largely [separate],” Maxwell wrote. “I’d
+even suggest using as [transaction ID] the transaction without the
+scriptsigs.”
+
+Another
+https://download.wpsoftware.net/bitcoin/wizards/2013/09/13-09-24.log[month
+later], Maxwell and, this time, well-known cryptographer Dr. Adam Back
+were discussing the malleability issue on IRC once again. Now, Back
+suggested computing the transaction ID by omitting the signature.
+Though, Maxwell commented, “getting the sig out of the txid could help
+but that would be a very deep hardforking change … and it’s actually
+tricky to make secure.”
+
+==== The Sidechain
+
+In August 2014, blockchain technology company
+https://blockstream.com/[Blockstream] was founded by the same Adam Back
+and Gregory Maxwell, as well as entrepreneur and investor Austin Hill
+and several Bitcoin Core developers, including Dr. Pieter Wuille. The
+company was set to focus on sidechains: alternative blockchains that can
+effectively be pegged to Bitcoin.
+
+By early 2015, Blockstream engineers decided to implement a new feature
+in the company’s prototype sidechain
+https://blockstream.com/2015/06/08/714/[Elements], which was publicly
+https://btcmagwpstage.wpengine.com/articles/blockstream-moves-ahead-sidechain-elements-first-implementation-sidechains-1433883105[announced]
+in June of that year. This feature would conclusively solve the
+malleability issue on the sidechain — by separating base transaction
+data from witness data into different data structures.
+
+The name of this new feature was, of course,
+https://elementsproject.org/elements/segregated-witness/[Segregated
+Witness].
+
+==== The Block Size Dispute
+
+It had been looming for some time, technically since
+https://bitcointalk.org/index.php?topic=1347.0[October 2010], more
+concretely since
+https://bitcointalk.org/index.php?topic=144895.0[February 2013] and
+finally
+http://gavinandresen.ninja/time-to-roll-out-bigger-blocks[publicly],
+bursting onto the
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-May/007869.html[scene]
+by the spring of 2015: the block size limit dispute.
+
+Former Bitcoin Core lead developer Gavin Andresen and
+https://bitcoinj.github.io/[Bitcoinj] lead developer Mike Hearn, in
+particular, believed that Bitcoin’s 1 megabyte block size limit should
+be increased with a hard fork, an incompatible protocol change that
+would require almost the entire Bitcoin ecosystem to upgrade. No easy
+task — even more so because there was no community-wide consensus for
+this change.
+
+Regardless, by the
+https://medium.com/faith-and-future/why-is-bitcoin-forking-d647312d22c1[summer
+of 2015], Andresen and Hearn announced that they would move forward with
+their plans, using the alternative https://bitcoinxt.software/[Bitcoin
+XT] software client. The controversial nature of the effort put the
+Bitcoin development community and industry in somewhat of a state of
+emergency.
+
+In an attempt to resolve the divide and potentially help figure out a
+resolution to the block size dispute, two conferences (or workshops)
+were quickly organized in the latter half of 2015:
+https://scalingbitcoin.org/event/montreal2015[Scaling Bitcoin Montreal]
+and https://scalingbitcoin.org/event/hongkong2015[Scaling Bitcoin Hong
+Kong].
+
+One of the most promising scaling proposals
+https://www.youtube.com/watch?v=TgjrS-BPWDQ&feature=youtu.be&t=41m54s[presented]
+in Montreal was
+https://btcmagwpstage.wpengine.com/articles/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791[the]
+https://btcmagwpstage.wpengine.com/articles/understanding-the-lightning-network-part-creating-the-network-1465326903[lightning]
+https://btcmagwpstage.wpengine.com/articles/understanding-the-lightning-network-part-completing-the-puzzle-and-closing-the-channel-1466178980[network],
+a sophisticated second-layer scaling solution that was detailed in a
+https://lightning.network/lightning-network-paper.pdf[white paper]
+published by Joseph Poon and Thaddeus Dryja only months earlier. The
+only problem: this solution would require a malleability fix.
+
+==== The Soft Fork
+
+At this point in time, developers were still not sure if and how the
+malleability bug could be fixed. Most still thought Segregated Witness
+could not be implemented on Bitcoin’s main chain without a hard fork.
+
+But not Bitcoin Core contributor (and http://bitcoinknots.org/[Bitcoin
+Knots] maintainer) Luke Dashjr.
+
+In October 2015, right between the two Scaling Bitcoin conferences,
+Bitcoin Core contributors Eric Lombrozo, Pieter Wuille, Wladimir van der
+Laan and Luke Dashjr
+https://botbot.me/freenode/bitcoin-core-dev/2015-10-09/[discussed] a
+potential new model for soft forks on IRC. During this chat, Dashjr
+pointed out that the proposed mechanism wouldn’t work for all potential
+soft forks, like a SegWit soft fork.
+
+Interestingly, what Dashjr considered obvious — the option to deploy
+SegWit as a soft fork — had not even been considered by others at all.
+And even Dashjr didn’t seem to realize the implications of this
+possibility at first.
+
+To deploy SegWit as a soft fork, witness data had to be placed in a new
+part of a Bitcoin block. And the “anchor” for all of this witness data
+(the “Merkle root”) had to be moved to a somewhat unconventional part of
+a Bitcoin block: the coinbase transaction that rewards miners new coins.
+
+While unconventional, the Bitcoin Core contributors would, over the days
+and weeks that followed, also come to realize that this method opened up
+an interesting “bonus.” By creating a new part of a Bitcoin block for
+the witness data, Bitcoin’s block size could be increased in such a way
+that non-upgraded nodes wouldn’t notice. This could actually increase
+Bitcoin’s block size without increasing Bitcoin’s existing block size
+limit.
+
+Mere weeks before the second Scaling Bitcoin workshop, several Bitcoin
+Core contributors thought they may finally have found at least a
+temporary solution for the block size limit dispute. Segregated Witness
+would effectively increase the limit in a backward-compatible manner,
+while at the same time fixing the long-standing malleability bug,
+thereby enabling more advanced scaling solutions like the lightning
+network.
+
+A win-win-win solution — or so they thought.
+
+==== The Presentation
+
+Segregated Witness — as a soft fork — was first presented by Pieter
+Wuille in
+https://www.youtube.com/watch?v=fst1IK_mrng&feature=youtu.be&t=36m[December
+2015], at the second edition of the Scaling Bitcoin workshops in Hong
+Kong. Many first heard about the proposal there, and it initially seemed
+to be welcomed with enthusiasm.
+
+Shortly after this second edition of Scaling Bitcoin had ended, Gregory
+Maxwell proposed what has become known as the
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-December/011865.html[scaling
+roadmap], which featured SegWit as a centerpiece. This roadmap was
+quickly
+https://bitcoincore.org/en/2015/12/21/capacity-increase/[endorsed] by
+the Bitcoin Core development team, as well as other developers and users
+in the broader Bitcoin ecosystem.
+
+==== The Critique
+
+But despite initial excitement, Segregated Witness had its critics, too.
+
+https://btcmagwpstage.wpengine.com/articles/on-the-detriments-of-segregated-witness-for-bitcoin-1454948591[Concerns]
+about the proposed protocol upgrade varied. Jeff Garzik, the former
+Bitcoin Core contributor — who would soon after found his own
+development company https://www.bloq.com/[Bloq] —
+https://www.mail-archive.com/bitcoin-dev@lists.linuxfoundation.org/msg03051.html[did
+not consider] SegWit a sufficient short-term scaling solution. Bitcoin
+XT lead developer Mike Hearn, meanwhile, was not convinced by the
+proposal at all: He dismissed the solution as an
+“https://blog.plan99.net/the-resolution-of-the-bitcoin-experiment-dabb30201f7[accounting
+trick]” and completely
+https://www.nytimes.com/2016/01/17/business/dealbook/the-bitcoin-believer-who-gave-up.html?mcubz=1[quit]
+Bitcoin development shortly after.
+
+Jonathan Toomim, developer for alternative software client Bitcoin
+Classic,
+https://www.coindesk.com/segregated-witness-bitcoin-block-size-debate[argued]
+that the proposal was “ugly and awkward,” suggesting it would be better
+implemented as a hard fork. Even Bitcoin Core contributor Peter Todd had
+https://petertodd.org/2016/segwit-consensus-critical-code-review#peer-to-peer-networking[his]
+https://www.mail-archive.com/bitcoin-dev@lists.linuxfoundation.org/msg03178.html[concerns],
+in particular related to mining.
+
+Most of these issues were deemed either solvable, unconvincing or worth
+the trade-off by the Bitcoin Core development team at large, however.
+Development of the soft-fork upgrade commenced.
+
+==== The Development
+
+Even though a version of Segregated Witness was already implemented on
+Elements, the code for the Bitcoin main chain version mostly had yet to
+be written, not only because it needed to be implemented as a soft fork,
+but also because SegWit for Bitcoin would enjoy a range of new features
+not present in Elements: for example, the “witness discount” necessary
+to increase the block size, new compatibility for the peer-to-peer
+network and more.
+
+The concrete Bitcoin Improvement Proposal for SegWit,
+https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki[BIP141],
+was authored by Pieter Wuille, https://ciphrex.com/[Ciphrex] CEO Eric
+Lombrozo and independent Bitcoin Core contributor Dr. Johnson Lau. By
+early January 2016, in the midst of a heated scaling debate, these and
+other Bitcoin Core contributors launched an initial dedicated test
+network for the protocol upgrade, which was dubbed
+https://btcmagwpstage.wpengine.com/articles/segregated-witness-deployed-on-new-bitcoin-testnet-segnet-1452277172[SegNet].
+Another two weeks later, this testnet was taken
+https://btcmagwpstage.wpengine.com/articles/amid-bitcoin-scaling-debate-segregated-witness-testnet-enters-public-stage[public]
+for the wider Bitcoin development community to experiment with. And by
+March, SegNet was upgraded to support test versions of
+https://btcmagwpstage.wpengine.com/articles/segregated-witness-enters-final-testnet-stage-includes-lightning-network-support-1459357231[the
+lightning network].
+
+Development continued for the months to come, taking in feedback from
+Bitcoin’s development community, fixing bugs, improving the codebase
+accordingly and launching several more iterations of SegNet(s).
+
+Meanwhile, Bitcoin Core contributors also reached out to the broader
+Bitcoin industry, which over time led to
+https://web.archive.org/web/20160201190125/https://bitcoincore.org/en/segwit_adoption/[a]
+https://web.archive.org/web/20160420185520/https://bitcoincore.org/en/segwit_adoption/[consistently]
+https://web.archive.org/web/20161108091658/https://bitcoincore.org/en/segwit_adoption/[growing]
+https://web.archive.org/web/20170727105631/https://bitcoincore.org/en/segwit_adoption/[list]
+of companies and projects committing to supporting Segregated Witness.
+
+By June, the Segregated Witness code counted 4,743 lines of code
+(including test code) and proposed removing or modifying 554 existing
+lines of Bitcoin Core code. After more review from several contributors,
+Bitcoin Core lead maintainer, Wladimir van der Laan,
+https://btcmagwpstage.wpengine.com/articles/segregated-witness-will-be-merged-into-bitcoin-core-release-soon-1466787770[merged]
+it into Bitcoin Core’s “master branch” by the end of that month.
+
+==== The Meetings
+
+At the same time that SegWit was being developed, block size tensions in
+the Bitcoin community were once again heating up. This time spearheaded
+by Bitcoin Classic, a number of Bitcoin companies and miners appeared
+https://web.archive.org/web/20160129090054/https://bitcoinclassic.com/[determined]
+to hard fork in order to increase the block size limit to 2 megabytes.
+
+In what is perhaps best described as an
+https://btcmagwpstage.wpengine.com/articles/bitcoin-miners-and-core-developers-release-segwit-hard-fork-agreement-1457018394[emergency
+meeting], once again in Hong Kong, several Bitcoin Core contributors,
+mining pool operators and other Bitcoin industry members met to discuss
+the scaling issue.
+
+The meeting led to an agreement that came to be known as the
+“https://medium.com/@bitcoinroundtable/bitcoin-roundtable-consensus-266d475a61ff[Bitcoin
+Roundtable Consensus]” (or the “Hong Kong Agreement”). The Bitcoin Core
+contributors present at the meeting agreed to work on a block size limit
+increase hard fork to be proposed to the Bitcoin Core development team
+and the wider Bitcoin community. The miners, in turn, agreed to run a
+SegWit release in production by the time such a hard fork would be
+released in a version of Bitcoin Core. The crisis seemed to have been
+https://btcmagwpstage.wpengine.com/articles/bitcoin-roundtable-announcement-thwarts-bitcoin-classic-launch-1455412826[averted]
+— even though it quickly became clear that
+https://bitcointalk.org/index.php?topic=1330553.msg14835202#msg14835202[not
+everyone] was happy about the agreement.
+
+Several months later, an even bigger group of Bitcoin Core contributors
+and mining pool operators
+https://btcmagwpstage.wpengine.com/articles/bitcoin-miners-and-developers-meet-in-california-to-improve-communications-1470158657[met
+in California]. The Bitcoin Core contributors present at this meeting
+left convinced that Segregated Witness would be activated by the miners.
+
+==== The Release
+
+About six months behind on the initial schedule — the release was
+originally set for April — Segregated Witness was
+https://btcmagwpstage.wpengine.com/articles/segregated-witness-officially-introduced-with-release-of-bitcoin-core-1477611260[officially
+introduced] October of 2016, in Bitcoin Core version 0.13.1. The
+protocol upgrade was also implemented in several other Bitcoin
+implementations, like Bitcoin Knots and
+https://github.com/bcoin-org/bcoin[Bcoin].
+
+Using an activation method called “VersionBits”
+(https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki[BIP9]),
+designed to minimize network disruption, 95 percent of miners (by hash
+power) had to signal support for SegWit to activate on the Bitcoin
+network. This miner signaling was to start on November 15th. Meanwhile,
+users were encouraged to upgrade their clients, which over time, it
+seemed,
+http://luke.dashjr.org/programs/bitcoin/files/charts/software.html[many]
+did.
+
+Based on the meetings with mining pool operators, as well as a general
+conviction that SegWit would be a boon for Bitcoin, many expected that
+the soft fork would be activated rather quickly.
+
+==== The Politics
+
+But that’s not what happened. As it turned out, several attendees of the
+Hong Kong Roundtable Consensus
+https://btcmagwpstage.wpengine.com/articles/the-status-of-the-hong-kong-hard-fork-an-update-1479843521[disagreed]
+over what they had actually signed onto.
+
+Bitmain co-CEO Jihan Wu, in particular,
+https://btcmagwpstage.wpengine.com/articles/antpool-will-not-run-segwit-without-block-size-increase-hard-fork-1464028753[indicated]
+he would only be willing to activate SegWit if the Bitcoin Core
+development team also implemented a hard fork to increase the block size
+limit in their codebase. Other
+https://btcmagwpstage.wpengine.com/bitcoin-mining/what-are-bitcoin-mining-pools[mining
+pools], including F2Pool, HaoBTC and bitcoin.com
+https://btcmagwpstage.wpengine.com/articles/where-bitcoin-mining-pools-stand-on-segregated-witness-1480086424[didn’t
+signal support] for the soft fork either.
+
+Moreover, a new Chinese mining pool emerged: ViaBTC. With close ties to
+Bitmain, ViaBTC alone garnered enough hash power to single-handedly
+block SegWit activation. And its operator, Haipo Yang, positioned
+himself as a
+https://btcmagwpstage.wpengine.com/articles/why-viabtc-rejects-segwit-soft-fork-in-favor-of-block-size-hard-fork-interview-with-haipo-yang-1479409475[staunch
+critic] of the proposed protocol upgrade.
+
+SegWit activation seemed far away.
+
+==== The UASF
+
+In February 2017, a little over three months after the official release
+of SegWit, a new opportunity presented itself.
+
+The pseudonymous developer “Shaolinfry,” who had previously contributed
+to Litecoin, dropped a new proposal in the
+https://www.mail-archive.com/bitcoin-dev@lists.linuxfoundation.org/msg04703.html[Bitcoin
+development mailing list] and the popular
+https://bitcointalk.org/index.php?topic=1805060.0[bitcointalk.org]
+forum: a “user activated soft fork” or
+“https://btcmagwpstage.wpengine.com/articles/latest-twist-block-size-debate-called-uasf[UASF].”
+
+Shaolinfry argued in his email that the hash power activation mechanism
+that had become the standard for soft forks was never intended to be a
+“vote.” “[T]he signaling methodology is widely misinterpreted to mean
+the hash power is voting on a proposal and it seems difficult to correct
+this misunderstanding in the wider community,” he wrote.
+
+Shaolinfry proposed an alternative: a user activated soft fork (UASF).
+Instead of hash power activation, a user activated soft fork would have
+a “‘flag day activation’ where nodes begin enforcement at a
+predetermined time in the future.” As long as such a UASF is enforced by
+an economic majority, this should compel a majority of miners to follow
+(or activate) the soft fork.
+
+The idea immediately generated buzz throughout Bitcoin forums and social
+media. And when former https://www.btcc.com/en-US/[BTCC] COO and
+https://btcmagwpstage.wpengine.com/articles/btcc-s-sampson-mow-on-block-size-the-bitcoin-community-must-see-through-manipulation-keep-calm-and-write-code-1458061357[outspoken]
+SegWit proponent Samson Mow
+https://twitter.com/excellion/status/844349077638676480[set up] a bounty
+fund for the development of a UASF software implementation, it seemed
+like the proposal could become a reality.
+
+==== The Patented Technology
+
+In the first week of April 2017, Gregory Maxwell
+https://www.mail-archive.com/bitcoin-dev@lists.linuxfoundation.org/msg05055.html[dropped]
+what was widely
+https://btcmagwpstage.wpengine.com/articles/breaking-down-bitcoins-asicboost-scandal[considered]
+a bombshell revelation on the Bitcoin development mailing list.
+
+Maxwell claimed to have reverse-engineered a specialized ASIC-mining
+chip and found that it included patented AsicBoost technology. What’s
+more, Maxwell revealed that covert use of the technology would be
+incompatible with a soft-forked version of SegWit. “An incompatibility
+would go a long way to explain some of the more inexplicable behavior
+from some parties in the mining ecosystem,” he noted.
+
+While no specific ASIC-manufacturer was mentioned in Maxwell’s email,
+Bitmain
+https://blog.bitmain.com/en/regarding-recent-allegations-smear-campaigns/[acknowledged]
+that it had implemented the patented technology in their mining chips —
+though it denied having used it on Bitcoin’s mainnet.
+
+Either way, for some users the revelation added to the desire to have
+the Segregated Witness soft fork activated on the Bitcoin network. And,
+as hash power activation seemed even less likely now, a user activated
+soft fork was increasingly looking like the solution to accomplish that.
+
+==== The BIP148 Proposal
+
+Shortly after proposing the general idea of a UASF, Shaolinfry and about
+a dozen other members of the Bitcoin community opened a UASF channel on
+the http://bitcoincore.slack.com/[Bitcoin Core Community Slack].
+
+The channel became a central point of discussion and organization for
+the initiative. A flag date was picked, initially for
+https://github.com/bitcoin/bips/commit/ccef12cc4226edda0222d98861f2296f6cb9e26d[October
+1], then later moved to August 1 to better account for potentially low
+hash power support. Shaolinfry authored a concrete Bitcoin Improvement
+Proposal:
+https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki[BIP148].
+https://opendime.com/[Open Dime] founder Rodolfo Novak also established
+an
+https://sedo.com/us/services/broker-service/?tracked=&partnerid=&language=us[informational
+website] to promote the idea.
+
+The initial plan was to get exchanges and other businesses on board with
+the UASF. If these companies would support the proposal and enforce the
+soft fork, it would go a long way in realizing a desired economic
+majority.
+
+But the UASF did not gain the level of traction some of its proponents
+hoped for. While a number of
+http://www.uasf.co/#what-are-companies-saying-about-bip148[companies]
+and some
+https://medium.com/@rusty_lightning/i-support-uasf-for-segregated-witness-75d9ef286fe5[developers]
+seemed onboard with BIP148, no major exchanges or other businesses
+declared support and some even
+https://twitter.com/spair/status/852160130296762369[spoke out against]
+the initiative.
+
+And, by mid-April, Gregory Maxwell on the Bitcoin development mailing
+list
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-April/014152.html[stated]
+that he believed BIP148 to be a bad idea as well. Coming from one of the
+most respected and influential Bitcoin Core contributors, his rejection
+of the initiative had an impact: This version of a UASF appeared to be
+losing all momentum.
+
+Instead, some began to work on an alternative UASF:
+https://github.com/bitcoin/bips/blob/master/bip-0149.mediawiki[BIP149].
+
+==== The Altcoins
+
+Many altcoins are based on Bitcoin’s codebase. This means that the
+SegWit code, while developed for Bitcoin, is largely compatible with
+these alternative cryptocurrencies. Unsurprisingly, therefore,
+https://btcmagwpstage.wpengine.com/articles/which-altcoins-are-implementing-segwit-1481577969[several
+altcoins] decided to implement SegWit. The first to activate Segregated
+Witness was Groestlcoin as early as
+https://bitcointalk.org/index.php?topic=1764430.0[January 2017].
+
+But other coins were struggling. Litecoin, Vertcoin and Viacoin all
+seemed to have been caught in Bitcoin’s
+https://btcmagwpstage.wpengine.com/articles/bitcoin-politics-seep-altcoins-segwit-adoption-slow-across-board[political
+game]. These coins relied on the same miners as Bitcoin, to a large
+extent, and most were not signaling support for the upgrade.
+
+This was allegedly due to technical issues or other stated reasons, but,
+as Viacoin lead developer Romano noted, “It seems more likely they want
+to refrain from activating Segregated Witness on altcoins because that
+would give them even less reason to hold off activation on Bitcoin.”
+
+By April of 2017, this attitude led Litecoin creator Charlie Lee to
+https://twitter.com/SatoshiLite/status/851135138876473344[advocate] for
+a user activated soft fork on “his” coin. His initiative was eagerly
+https://www.reddit.com/r/litecoin/search?q=UASF&restrict_sr=on&sort=relevance&t=all[picked
+up] among Litecoin users; it didn’t take long for Litecoin miners, Lee,
+and other members of the Litecoin ecosystem to arrange an online
+meeting, the result of which was the
+https://medium.com/@Litecoinchina/litecoin-global-roundtable-resolution-001-2017-c67b729bc06d[Litecoin
+Global Roundtable Resolution]. In exchange for some commitments by Lee,
+miners agreed to
+https://btcmagwpstage.wpengine.com/articles/litecoin-has-now-deployed-segregated-witness[activate]
+SegWit. ShaolinFry and others considered the UASF effort a
+https://medium.com/@shaolinfry/litecoin-china-roundtable-and-uasf-40b2cdd18611[success].
+
+Within a week after SegWit activation on Litecoin, an unknown person
+made a bold move. He (or she) sent $1 million worth of the
+cryptocurrency to a
+https://live.blockcypher.com/ltc/address/3MidrAnQ9w1YK6pBqMv7cw5bGLDvPRznph/[SegWit-protected
+address], challenging anyone to steal the funds if they could. To this
+date, the
+https://www.reddit.com/r/litecoin/comments/6azeu1/1mm_segwit_bounty/[bounty]
+remains untouched, further strengthening confidence in the technology.
+
+==== The New York Agreement
+
+Meanwhile, the block size debate raged on. Another software client to
+increase Bitcoin’s block size limit per hard fork, Bitcoin Unlimited
+gained traction among Bitcoin’s mining community. Endorsed by Bitmain’s
+Wu in particular, the project appeared to be heading toward a potential
+(and controversial) hard fork.
+
+This looming threat, and the possibility of a “split” in Bitcoin’s
+blockchain, was reason for https://dcg.co/[DCG] founder and CEO Barry
+Silbert to organize a meeting ahead of the
+https://www.coindesk.com/events/consensus-2017[Consensus 2017]
+conference in New York. Initially announced on a private email list for
+Bitcoin entrepreneurs and other prominent industry members, the meeting
+would bring together a significant chunk of the Bitcoin industry,
+including miners — though, notably, no Bitcoin Core contributors.
+
+The
+https://btcmagwpstage.wpengine.com/articles/dcgs-scaling-proposal-and-what-it-needs-succeed[outcome]
+of that meeting is typically referred to as the
+“https://medium.com/@DCGco/bitcoin-scaling-agreement-at-consensus-2017-133521fe9a77[New
+York Agreement].” Participants agreed on what they deemed to be a
+compromise between those who wanted to increase Bitcoin’s block size
+with a hard fork and those who preferred SegWit. Based on an idea
+originally proposed by https://www.rsk.co/[RSK] founder Sergio Demian
+Lerner, SegWit would be activated under specific conditions, while there
+would also be a hard fork to double Bitcoin’s “base block size limit.”
+
+But while it sufficed to say
+https://en.bitcoin.it/wiki/Segwit_support[not]
+http://nob2x.org/[everyone] in the Bitcoin ecosystem supported the
+agreement, one specific problem stood out in particular. The conditions
+for SegWit activation were largely incompatible with those proposed by
+the Bitcoin Core development team, for which the code was already widely
+adopted by Bitcoin users.
+
+==== The Intolerant Minority
+
+While the BIP148 UASF seemed to have lost a lot of steam in favor of
+BIP149, not everyone had given up on this first UASF proposal
+completely.
+
+Shaolinfry had proposed the concept under the assumption that it would
+be backed by an economic majority and thought it should be aborted
+before the flag day otherwise. But a group of users on the UASF Slack
+channel had a different idea. Some of them — including Bitcoin Core and
+Bitcoin Knots developer
+https://www.reddit.com/r/Bitcoin/comments/6c55t4/lukejr_miners_can_do_bip148_masf_or_users_will_do/[Luke
+Dashjr] — were contemplating activating the soft fork regardless of what
+the rest of the Bitcoin ecosystem would do. Even if they were a
+minority, and even if they’d effectively spin themselves off into a new
+altcoin, they would move forward with the upgrade.
+
+Around mid-May, Alphonse Pace
+https://btcmagwpstage.wpengine.com/articles/op-ed-user-activated-soft-forks-and-intolerant-minority[linked]
+this determination to a game-theoretical concept described by
+statistician and author Nassim Nicholas Taleb: the “intolerant
+minority.” In short, this idea presupposes that even an economic
+minority should be able to compel miners to activate the Segregated
+Witness soft fork. They would unnecessarily lose a chunk of their
+“customer base” (Bitcoin users) otherwise.
+
+Seemingly fuelled by the AsicBoost scandal, the SegWit activation on
+Litecoin and discontent regarding the New York Agreement — and this time
+backed by game theory — BIP148 support started to snowball into somewhat
+of a viral phenomenon on social media and message boards once again.
+
+https://cryptoinsider.com/split-thoughts-bip148-uasf-segwit-bitcoin-life-universe-everything/[Several]
+https://btcmagwpstage.wpengine.com/articles/op-ed-heres-why-all-rational-miners-will-activate-segwit-though-bip148[more]
+https://medium.com/@jimmysong/uasf-bip148-scenarios-and-game-theory-9530336d953e[articles]
+discussed the growing potential of the UASF and much debate on social
+media, YouTube channels other discussion platforms followed. Meanwhile,
+Eric Lombrozo also
+https://medium.com/@elombrozo/why-i-support-bip148-4b4c0a9feb4d[threw
+his weight] behind the effort, and
+https://denarium.com/wp-content/uploads/2017/04/UASF1a.jpg[UASF hats]
+distributed by Samson Mow became the rage. Inspired by the codename for
+an https://twitter.com/electrumwallet/status/868845430947401729[upcoming
+Electrum Wallet release], August 1 was dubbed
+“https://twitter.com/excellion/status/869106641290973184?lang=en[Bitcoin
+Independence Day].”
+
+The only problem: activation methods for BIP148 and the New York
+Agreement were as incompatible as the New York Agreement was with the
+activation methods proposed by the Bitcoin Core development team.
+
+==== The Kludge
+
+It was https://bitmainwarranty.com/[Bitmain Warranty] engineer James
+Hilliard who
+https://btcmagwpstage.wpengine.com/articles/bip91-segwit-activation-kludge-should-keep-bitcoin-whole[came
+to the rescue]. Hilliard proposed a slightly complex but clever solution
+that would make everything compatible: Segregated Witness activation as
+proposed by the Bitcoin Core development team, the BIP148 UASF and the
+New York Agreement activation mechanism. His
+https://btcmagwpstage.wpengine.com/articles/bip91-segwit-activation-kludge-should-keep-bitcoin-whole[BIP91]
+could keep Bitcoin whole — at least throughout SegWit activation.
+
+As long as a majority of miners would activate BIP91 before August 1,
+all Bitcoin nodes should remain part of the same network. It was a
+relatively small time window, since the solution was only proposed by
+late May, but Jeff Garzik, the main developer attached to the New York
+Agreement, adopted the proposal and planned to release the software
+client resulting from that agreement weeks before August 1. It was
+doable.
+
+==== The Activation
+
+By mid-July, Bitcoin miners had missed their window to activate SegWit
+through the method proposed by the Bitcoin Core development team in time
+to be compatible with BIP148. As a result, markets seemed to get nervous
+about a potential “split” between a BIP148 chain and a non-BIP148 chain.
+In the span of only a week, bitcoin’s exchange rate tumbled from around
+$2500 to $1900: the lowest it had been in well over a month.
+
+Possibly startled by these market movements, Bitcoin’s mining community
+started to rapidly signal support for BIP91, even ahead of the schedule
+set forth by the New York Agreement. And on July 20, ten days before
+BIP148’s August 1 flag day for activation,
+https://btcmagwpstage.wpengine.com/articles/bip-91-has-activated-heres-what-means-and-what-it-does-not[BIP91
+locked in]. It activated a little over two days later.
+
+With BIP91 locked in, it was only a matter of time before Segregated
+Witness itself would lock in. This ultimately happened on August 9 — the
+https://btcmagwpstage.wpengine.com/articles/point-no-return-segregated-witness-will-lock-bitcoin[point
+of no return] having been reached on August 8.
+
+Bitcoin would “officially” get SegWit after another two-week grace
+period.
+
+==== The Adoption
+
+The final step for Segregated Witness is, of course, actual user
+adoption. Since SegWit has only just activated at the time of
+publication of this article, it’s impossible to know how quickly and how
+much the upgrade will actually be used. Some critics, perhaps most
+notably Garzik, predict that widespread adoption could take
+https://twitter.com/jgarzik/status/842723335914110976[up to a year] or
+even longer. Others,
+https://btcmagwpstage.wpengine.com/articles/blocktrail-cto-and-bitcoinjs-co-maintainer-ruben-de-vries-segregated-witness-not-very-complicated-1453757293[including]
+https://btcmagwpstage.wpengine.com/articles/lawrence-nahum-bitcoin-wallet-greenaddress-already-integrating-segregated-witness-1453824522[a]
+https://btcmagwpstage.wpengine.com/articles/breadwallet-ceo-aaron-voisine-segwit-soft-fork-first-then-block-size-hard-fork-1453914051[number]
+https://btcmagwpstage.wpengine.com/articles/mycelium-s-leo-wandersleb-segregated-witness-a-technical-necessity-1454089393[of]
+https://btcmagwpstage.wpengine.com/articles/electrum-developer-thomas-voegtlin-soft-fork-preferable-for-political-reasons-1454349544[wallet]
+https://btcmagwpstage.wpengine.com/articles/core-developer-jonas-schnelli-segregated-witness-improves-and-optimizes-bitcoin-protocol-1454517960[and]
+https://btcmagwpstage.wpengine.com/articles/bitcoinj-maintainer-andreas-schildbach-segregated-witness-worth-the-effort-1454614732[library]
+https://btcmagwpstage.wpengine.com/articles/nbitcoin-s-nicolas-dorier-segregated-witness-fastest-way-to-bump-block-size-1454695788[developers],
+think they can utilize the feature
+https://btcmagwpstage.wpengine.com/articles/bitcoin-wallet-developers-prepare-for-segregated-witness-1477937548[within]
+https://btcmagwpstage.wpengine.com/articles/bitcoins-capacity-increase-segregated-witness-could-kick-fast[weeks],
+or they are https://bitcoincore.org/en/segwit_adoption/[prepared
+already]. And other technologies that depend on the upgrade, such as
+https://btcmagwpstage.wpengine.com/articles/after-scaling-bitcoin-a-lightning-winter-release-is-now-within-reach-1476814566[the
+Lightning Network], but also Merkelized Abstract Syntax Trees
+(https://btcmagwpstage.wpengine.com/articles/the-next-step-to-improve-bitcoin-s-flexibility-scalability-and-privacy-is-called-mast-1476388597[MAST]),
+https://btcmagwpstage.wpengine.com/articles/atomic-swaps-how-the-lightning-network-extends-to-altcoins-1484157052[atomic
+swaps],
+https://btcmagwpstage.wpengine.com/articles/how-segregated-witness-is-about-to-fix-hardware-wallets-1478110057[faster
+transaction signing] for hardware wallets, the more efficient
+https://btcmagwpstage.wpengine.com/articles/the-power-of-schnorr-the-signature-algorithm-to-increase-bitcoin-s-scale-and-privacy-1460642496[Schnorr
+signature algorithm], and
+https://btcmagwpstage.wpengine.com/articles/with-tumblebit-bitcoin-mixing-may-have-found-its-winning-answer-1477423607[TumbleBit]
+in payment processor mode, are in various stages of development as well.
+
+It’s been a long road, but anyone who wants to use Segregated Witness
+should now be able to do so, starting today.

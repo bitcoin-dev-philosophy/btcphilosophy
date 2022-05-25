@@ -1,0 +1,48 @@
+=== Shaolinfry - Moving towards user activated soft fork activation
+
+****
+* Source: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-February/013643.html
+* Author: Shaolinfry
+* Date copied: 2022-05-25
+****
+
+Some thoughts about the activation mechanism for soft forks. In the past we used IsSuperMajority and currently use BIP9 as soft fork activation methods, where a supermajority of hashrate triggers nodes to begin enforcing new rules. Hashrate based activation is convenient because it is the simplest and most straightforward process. While convenient there are a number limitations with this method.
+
+Firstly, it requires trusting the hash power will validate after activation. The BIP66 soft fork was a case where 95% of the hashrate was signaling readiness but in reality about half was not actually validating the upgraded rules and mined upon an invalid block by mistake[1].
+
+Secondly, miner signalling has a natural veto which allows a small percentage of hashrate to veto node activation of the upgrade for everyone. To date, soft forks have taken advantage of the relatively centralised mining landscape where there are relatively few mining pools building valid blocks; as we move towards more hashrate decentralization, it's likely that we will suffer more and more from "upgrade inertia" which will veto most upgrades.
+
+Upgrade inertia in inevitable for widely deployed software and can be seen for example, with Microsoft Windows. At the time of writing 5.72% of all Microsoft Windows installations are still running Windows XP, despite mainstream support ending in 2009 and being superseded by 4 software generations, Vista, 7, 8 and 10.
+
+Thirdly, the signaling methodology is widely misinterpreted to mean the hash power is voting on a proposal and it seems difficult to correct this misunderstanding in the wider community. The hash powers' role is to select valid transactions, and to extend the blockchain with valid blocks. Fully validating economic nodes ensure that blocks are valid. Nodes therefore define validity according to the software they run, but miners decide what already valid transactions gets included in the block chain.
+
+As such, soft forks rules are actually always enforced by the nodes, not the miners. Miners of course can opt-out by simply not including transactions that use the new soft fork feature, but they cannot produce blocks that are invalid to the soft fork. The P2SH soft fork is a good example of this, where non-upgraded miners would see P2SH as spendable without a signature and consider them valid. If such an transaction were to be included in a block, the block would be invalid and the miner would lose the block reward and fees.
+
+So-called "censorship" soft forks do not require nodes to opt in, because >51% of the hash power already have the ability to orphan blocks that contain transactions they have blacklisted. Since this is not a change in validity, nodes will accept the censored block chain automatically.
+
+The fourth problem with supermajority hash power signaling is it draws unnecessary attention to miners which can become unnecessarily political. Already misunderstood as a vote, miners may feel pressure to "make a decision" on behalf of the community: who is and isn't signalling becomes a huge public focus and may put pressures onto miners they are unprepared for. Some miners may not be in a position to upgrade, or may prefer not to participate in the soft fork which is their right. However, that miner may now become a lone reason that vetoes activation for everyone, where the soft fork is an opt-in feature! This situation seems to be against the voluntary nature of the Bitcoin system where participation at all levels is voluntary and kept honest by well balanced incentives.
+
+Since miners already have the protocol level right to select whatever transaction they prefer (and not mine those they don't), it would be better if a miner could chose to not participate in triggering activation of something they won't use, but, without being a veto to the process (and all the ire they may have to experience as a consequence).
+
+The alternative discussed here is "flag day activation" where nodes begin enforcement at a predetermined time in the future. This method needs a longer lead time than a hash power based activation trigger, but offers a number of advantages and perhaps provides a better tradeoff.
+
+Soft forks are still entirely optional to use post activation. For example, with P2SH, many participants in the Bitcoin ecosystem still do not use P2SH. Only 11% of bitcoins[2] are stored in P2SH addresses at the time of writing. Miners are free to not mine P2SH transactions, however, the incentives are such that miners should still validate transactions so they don't accidentally include invalid transactions and cause their block to be rejected. As an additional safety measure for well designed soft forks, relay policy rules prevent non-standard and invalid transactions from being relayed and mined by default; a miner would have to purposefully mine an invalid transaction, which is against their own economic interest.
+
+Since the incentives of the Bitcoin system rely on self validation, economic nodes (miners and users) should always remain safe by ensuring their nodes either validate the current rules, or, they can place their network behind a full node that will filter out invalid transactions and blocks at the edge of their network (so called firewall or border nodes).
+
+A user activated soft fork is permissive. Miners do not have to produce new version blocks and non-upgraded miners' blocks will not be orphaned as was the case with IsSuperMajority soft forks (e.g. BIP34, BIP66, BIP65-CLTV) which made it a compulsory upgrade for miners.
+
+BIP9 "versionbits" soft fork activation method is also permissive in so far as non-upgraded miners are not forced to upgrade after activation because their blocks wont be orphaned. A recent case was the "CSV" soft fork that activated BIP68, BIP112 and BIP113. As such, the CSV soft fork allows non-upgraded miners to continue mining so long as they didn't produce invalid blocks.
+
+Miners always retain discretion on which transactions to mine. However, regardless of whether they actively include transactions using the new soft fork feature, or not, the incentive for hash power to upgrade in order to validate is strong: if they do not, they could be vulnerable to a rogue miner willing to waste 12.5BTC to create an invalid block, which may cause non-validating miners to build on an invalid chain similar to the BIP66 incident. Validation has always had a strong requirement.
+
+A user activated soft fork is win-win because it adds an option that some people want that does not detract from other peoples' enjoyment. Even if only 10% of users ever wanted a feature, so long as the benefit outweighed the technical risks, it would not be rational to deny others the ability to opt-in.
+
+My suggestion is to have the best of both worlds. Since a user activated soft fork needs a relatively long lead time before activation, we can combine with BIP9 to give the option of a faster hash power coordinated activation or activation by flag day, whichever is the sooner. In both cases, we can leverage the warning systems in BIP9. The change is relatively simple, adding an activation-time parameter which will transition the BIP9 state to LOCKED_IN before the end of the BIP9 deployment timeout.
+
+You can find the proposal here https://gist.github.com/shaolinfry/0f7d1fd22743bb966da0c0b1682ea2ab
+
+References:
+
+[1]: https://bitcoin.org/en/alert/2015-07-04-spv-mining +
+[2]: http://p2sh.info/dashboard/db/p2sh-statistics?from=1472043312917&to=1488030912918

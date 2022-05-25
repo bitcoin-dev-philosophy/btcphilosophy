@@ -4,73 +4,119 @@ include::../settings.adoc[]
 :sectnumlevels: 2
 :toclevels: 2
 
+:c: common
+
 == Decentralization
 
-include::sidechainspaper.adoc[]
+:d: decentralization
 
-include::bitcoinpaper.adoc[]
+include::{d}/sidechainspaper.adoc[]
 
-include::maxwelldecentralization.adoc[]
+include::{c}/bitcoinpaper.adoc[]
 
-include::bitcoinmagdecentralization.adoc[]
+include::{d}/maxwelldecentralization.adoc[]
 
-include::irclog20120404.adoc[]
+include::{d}/bitcoinmagdecentralization.adoc[]
 
-include::wuillese.adoc[]
+include::{d}/irclog20120404.adoc[]
 
-include::maxwellautonomous.adoc[]
+include::{d}/wuillese.adoc[]
 
-include::ted.adoc[]
+include::{d}/maxwellautonomous.adoc[]
+
+include::{d}/ted.adoc[]
 
 == Trustlessness
 
-include::wuilletrustless.adoc[]
+:d: trustlessness
 
-include::corallotrustless.adoc[]
+include::{d}/wuilletrustless.adoc[]
 
-include::brianddktrust.adoc[]
+include::{c}/bitcoinpaper.adoc[]
 
-include::cve-2018-17144.adoc[]
+include::{d}/hardingvalidation.adoc[]
+
+include::{d}/corallotrustless.adoc[]
+
+include::{d}/brianddktrust.adoc[]
+
+include::{d}/cve-2018-17144.adoc[]
 
 == Privacy
 
-include::maxwellprivacy.adoc[]
+:d: privacy
 
-include::bitcoinpaper.adoc[]
+include::{d}/maxwellprivacy.adoc[]
 
-include::belcherprivacy.adoc[]
+include::{d}/poelstraanonymity.adoc[]
 
-include::maxwellwhitehat.adoc[]
+include::{d}/timspseudonyms.adoc[]
+
+include::{c}/bitcoinpaper.adoc[]
+
+include::{d}/maxwellwhitehat.adoc[]
+
+include::{d}/belcherprivacy.adoc[]
+
+include::{d}/backfungibility.adoc[]
+
+include::{d}/bitcoinqaprivacytips.adoc[]
+
+include::{d}/belcherprivacypractice.adoc[]
+
+include::{d}/bitcoinqakyc.adoc[]
 
 == Finite supply
 
-include::wuillesupply.adoc[]
+:d: finitesupply
 
-include::chytriktrustsupply.adoc[]
+include::{d}/wuillesupply.adoc[]
 
-include::truthcoin.adoc[]
+include::{d}/nakamotolostcoins.adoc[]
 
-include::feesniping.adoc[]
+include::{d}/chytriktrustsupply.adoc[]
 
-include::loppsecuritymodel.adoc[]
+include::{d}/truthcoin.adoc[]
 
-include::hasuonionmodel.adoc[]
+include::{d}/feesniping.adoc[]
+
+include::{d}/toddessenceofbitcoin.adoc[]
 
 == Upgrading
 
+:d: upgrading
+
+include::{d}/hardingharmony.adoc[]
+
+include::{d}/lombrozoconsensus.adoc[]
+
+include::{d}/bitcoinmagsegwit.adoc[]
+
+include::{d}/shaolinfryuasf.adoc[]
+
+include::{d}/coralloactivation.adoc[]
+
+include::{d}/hardingactivation.adoc[]
+
+include::{d}/hardingspeedytrial.adoc[]
+
+include::{d}/songcostsplit.adoc[]
+
 == Adversarial thinking
 
-include::poelstrasecurityassumptions.adoc[]
+:d: adversarialthinking
 
-include::loppsecuritymodel.adoc[]
+include::{d}/poelstrasecurityassumptions.adoc[]
 
-include::lifthasir.adoc[]
+include::{d}/loppsecuritymodel.adoc[]
 
-include::wikithreats.adoc[]
+include::{d}/lifthasir.adoc[]
 
-include::sabotagemanual.adoc[]
+include::{d}/wikithreats.adoc[]
 
-include::voskuilresistance.adoc[]
+include::{d}/sabotagemanual.adoc[]
+
+include::{d}/voskuilresistance.adoc[]
 
 == Open source
 
