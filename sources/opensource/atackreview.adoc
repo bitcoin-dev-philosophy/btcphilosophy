@@ -1,0 +1,556 @@
+=== Jon Atack - How to Review Pull Requests in Bitcoin Core
+
+****
+* Source: https://jonatack.github.io/articles/how-to-review-pull-requests-in-bitcoin-core
+* Author: Jon Atack
+* Date copied: 2022-05-25
+****
+
+==== BEFORE YOU BEGIN
+
+This guide builds on the foundation laid by these presentations:
+
+. https://bitcointechtalk.com/a-gentle-introduction-to-bitcoin-core-development-fdc95eaee6b8[A
+Gentle Introduction to Bitcoin Core Development] by
+https://twitter.com/jimmysong[Jimmy Song] (2017)
+. https://bitcointechtalk.com/contributing-to-bitcoin-core-a-personal-account-35f3a594340b[Contributing
+to Bitcoin Core, a personal account] by
+https://twitter.com/jfnewbery[John Newbery] (2017)
+. https://medium.com/@pierre_rochard/understanding-the-technical-side-of-bitcoin-2c212dd65c09[Understanding
+the Technical Side of Bitcoin] by
+https://twitter.com/pierre_rochard[Pierre Rochard] (2018)
+. https://www.youtube.com/watch?v=MJBhZg0ytiw[A hardCORE workout] /
+https://diyhpl.us/wiki/transcripts/sf-bitcoin-meetup/2018-04-23-jeremy-rubin-bitcoin-core/[transcript]
+/
+https://drive.google.com/file/d/149Ta1WRXL5WEvnBdlL-HxmsFDXUbvFDy/view[slides]
+by https://twitter.com/JeremyRubin[Jeremy Rubin] (2018)
+
+==== INTRODUCTION
+
+Reviewing and testing can be the best ways to begin contributing to
+Bitcoin Core.
+
+Experienced review and testing are regularly cited by long-term Bitcoin
+Core developers as both
+
+* resource bottlenecks, and
+* the best and most helpful way to learn and begin contributing and
+earning reputation in the community.
+
+==== TERMINOLOGY
+
+https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review[ACK,
+NACK]: Definitions and origins
+https://searchnetworking.techtarget.com/definition/ACK[here] and
+https://www.freecodecamp.org/news/what-do-cryptic-github-comments-mean-9c1912bcc0a4/[here].
+
+Nit: A trivial, often non-blocking issue.
+
+https://help.github.com/en/articles/about-pull-requests[PR]: An acronym
+for _pull request_, sometimes called a merge request. A proposed change
+to the code or documentation in the source code repository.
+
+https://en.wikipedia.org/wiki/Work_in_process[WIP]: An acronym for _work
+in progress_.
+
+==== GENERAL
+
+As a newcomer, the goal is to try to add value, with friendliness and
+humility, while learning as much as possible.
+
+A good approach is to make it not about you, but rather "How can I best
+serve?"
+
+One of the most challenging aspects facing new contributors is the
+breadth of the codebase and the complexity of the technologies
+surrounding it.
+
+Be aware of what you don’t know; long-term contributors have years of
+experience and context. The community has built up a deep collective
+wealth of knowledge and experience. Keep in mind that your new ideas may
+have already been proposed or considered several times in the past.
+
+Remember that contributor and maintainer resources are limited — ask for
+them carefully and respectfully. The goal is to try to give more than
+you take, to help more than hinder, while getting up to speed.
+
+Try to figure things out on your own, at least sufficiently to respect
+others' time.
+
+Follow the
+https://kiwiirc.com/nextclient/irc.libera.chat[#bitcoin-core-dev] IRC
+channel and the
+https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev[bitcoin-dev]
+mailing list.
+
+More IRC channels to follow
+https://github.com/jonatack/bitcoin-development/blob/master/irc-channels.txt[can
+be found here].
+
+Before jumping in, take plenty of time to:
+
+* understand the contribution process and guidelines, not only by
+reading the documentation in the
+https://github.com/bitcoin/bitcoin[repository], notably
+https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md[Contributing
+to Bitcoin Core] and everything in the
+https://github.com/bitcoin/bitcoin/tree/master/doc[doc] and
+https://github.com/bitcoin/bitcoin/tree/master/test[test]
+https://github.com/bitcoin/bitcoin/tree/master/src/test[directories],
+but also by observing interactions on the
+https://kiwiirc.com/nextclient/irc.libera.chat[#bitcoin-core-dev] IRC
+channel and the ongoing https://github.com/bitcoin/bitcoin/pulls[code
+review in the repository]
+* get to know the maintainers and regular contributors: what they do,
+what they like and want, how they give feedback
+
+Many newcomers begin by opening pull requests that add to the hundreds
+already awaiting valuable review. It's much better to begin by reviewing
+the existing pull requests and starting to understand what kind of pull
+requests and review are most helpful, while slowly gaining the big
+picture.
+
+A good rule of thumb is to review 5-15 PRs for each PR you open.
+
+===== The big picture
+
+The big picture is more important than nits, spelling, or code style.
+
+There are different levels of big picture review: "does this change
+affect behavior?" or "is this safe?" are different from "is this a good
+idea?" The latter may require more context, which you will slowly gain
+with time. Don't let that stop you from thinking about these questions
+and striving to review on that level.
+
+Steps to improve understanding of the big picture:
+
+* do the https://github.com/chaincodelabs/study-groups[Chaincode Labs
+study guide]
+* study the https://github.com/bitcoin/bips/[Bitcoin Improvement
+Proposals] (often referred to in singular form by the acronym "BIP"),
+and return to them frequently
+* subscribe to the https://bitcoinops.org/[Bitcoin Optech newsletters]
+and use their https://bitcoinops.org/en/topics/[topics page] as a go-to
+resource.
+* do
+https://github.com/ChristopherA/Learning-Bitcoin-from-the-Command-Line[Learning
+Bitcoin from the Command Line]
+
+Aim for quality over quantity and a balance between deep work and quick
+wins.
+
+Documentation is important, e.g. high-level documentation of how things
+work and interact, clear and accurate code docs, whether a function has
+a good description and
+https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md#coding-style-doxygen-compatible-comments[Doxygen
+documentation], test logging (both `+info+` and `+debug+`), and so on.
+
+Test coverage is important; don't hesitate to improve or write any
+missing https://github.com/bitcoin/bitcoin/blob/master/src/test/[unit],
+https://github.com/bitcoin/bitcoin/tree/master/test/functional/[functional],
+or https://github.com/bitcoin/bitcoin/blob/master/doc/fuzzing.md[fuzz]
+tests.
+
+Be a contributor. Help PRs move forward by reviewing,
+https://github.com/bitcoin/bitcoin/pull/15996#issuecomment-491740946[proposing
+tests] or fixes in a helpful way, proposing to rebase, or even offering
+to take over the PR after months of silence. In short, help each other!
+
+===== Nits
+
+Try to avoid overly commenting in PRs about nits, minutiae and code
+style, particularly with PRs labeled as WIP, or when a PR has just been
+filed and the PR author is mainly looking for Concept ACKs and Approach
+ACKs, e.g. general consensus, not nitpicking.
+
+Long-term contributors report that activity like this repels them, and
+it can diminish your social capital on the project. Try to understand
+what kind of review is needed and when to do what.
+
+The best time for any nit comments is after the Concept/Approach ACKs
+and consensus on the PR, and before the PR is finalised and has tested
+ACKs. As Pieter Wuille
+http://www.erisian.com.au/bitcoin-core-dev/log-2020-05-17.html#l-307[wrote
+on IRC]: "I think the most disrupting thing to a PR is getting a
+multitude of low level/nits/code style comments, while it's very unclear
+if a PR is desirable as a concept."
+
+Give nits and style advice in a friendly, light, enabling way — as in,
+feel free to ignore, feel free to adjust if you happen to rebase, etc.
+
+Keep in mind that no one is forced to take your review comments into
+account; it's perfectly fine for the author to reply that they don't
+want to do something if they feel it is outside the scope of the change,
+especially if your comment is nitpicky.
+
+===== Scale up
+
+When you can, scale up the difficulty and priority of the PRs you
+review.
+
+Quality of review is much more important than quantity. You can
+link:on-reviewing-and-helping-those-who-do-it[add more value] and learn
+more by taking the time to do deep, quality review of the
+https://github.com/bitcoin/bitcoin/projects/8[high-priority PRs] and the
+more difficult PRs. These PRs tend to intimidate people and can stagnate
+for months, killing their author's motivation with death by a thousand
+cuts from lack of quality review, nitpicking/code style bikeshedding,
+and rebase hell. Reviewing them well provides a true service to Bitcoin.
+
+The process of ramping up takes time; nothing can substitute for months
+and years invested in gathering context and understanding from following
+the https://github.com/bitcoin/bitcoin[code],
+https://github.com/bitcoin/bitcoin/issues[issues],
+https://github.com/bitcoin/bitcoin/pulls[pull requests],
+https://kiwiirc.com/nextclient/irc.libera.chat[#bitcoin-core-dev] IRC
+channel, and the
+https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev[bitcoin-dev]
+mailing list.
+
+A useful first question when beginning a review can be, "What is most
+needed here at this time?" Answering this question requires experience
+and accumulated context, but it is a useful question in deciding how you
+can add the most value in the least time. Depending on how complex or
+critical the changes are and how far along the PR is in the review
+process, a helpful experienced review may entail skimming the code and
+applying a wealth of context to a pertinent code comment in a critical
+place rather than doing a full review involving debug-building, testing,
+and reviewing each commit. However, in most cases it's best and adds the
+most value to do a proper full review.
+
+===== Step by step
+
+Keep ego and hopes out of the process. Don't take things personally and
+keep moving forward.
+
+When in doubt, assume good intentions.
+
+Be patient with people and outcomes.
+
+Praise publicly; criticize privately and in an encouraging way.
+
+Persistence helps. Work on it every day.
+
+These are all much easier said than done. Be forgiving with yourself and
+others.
+
+Remember to review 5-15 PRs (or handle or test 5-15 issues), for every
+PR you open.
+
+Finally, be sure to review contributions from a wide range of people and
+experience levels and not just those in your group of colleagues or
+acquaintances. Reach out to new and different people (direct IRC
+messages work well) to ask how you can help them. You can occasionally
+request help too, but don't be entitled. Give (much) more than you take.
+
+==== TECHNICAL SPECIFICS
+
+_Don't trust, verify._ Minimise dependance on GitHub in your review
+process. Use the GitHub website only for the GitHub metadata, e.g.
+reading comments and adding your own comments — not for reviewing the
+commits and code, which you should do in your local environment.
+
+===== Pull down the code locally
+
+Therefore, a review begins by pulling the PR branch down to your
+computer to build and review locally. There are different ways to do it
+depending on what you want, your needs, disk space, internet bandwidth,
+etc. Here are a few:
+
+. Pulling down remote PRs with
+`+git checkout                     pr/<number>+`
+https://gist.github.com/piscisaureus/3342247[as described in this nice
+little gist] which can be modified to suit your needs.
+. My gitconfig `+[remote "origin"]+` section:
+`+fetch = +refs/pull/*/head:refs/remotes/origin/pr/*+`
+. Bitcoin Core contributor Luke Dashjr's version: "To avoid all the
+merge branches, configure the origin-pull remote as":
+`+fetch = +refs/pull/*/head:refs/remotes/origin-pull/*/head+`
+. Bitcoin Core documentation for
+https://github.com/bitcoin/bitcoin/blob/master/doc/productivity.md#reference-prs-easily-with-refspecs[referencing
+PRs easily with refspecs].
+. GitHub
+https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/checking-out-pull-requests-locally[exposes
+PRs] as branches on the upstream repository with `+pull/<number>/head+`
+(contributor branch) and `+pull/<number>/merge+` (merged into master),
+e.g.
+`+git fetch origin pull/17283/head && git                   checkout FETCH_HEAD+`.
+That said, I prefer to depend as little as possible on GitHub.
+
+You can test a PR either on the contributor's branch or with the changes
+merged on top of master. Testing the latter can be useful to see if
+anything merged into master since the last PR commit breaks the changes.
+
+Next, launch the build and tests while you begin reading the code
+locally. You'll need to become comfortable with
+link:how-to-compile-bitcoin-core-and-run-the-tests[compiling Bitcoin
+Core from source] and running the
+https://github.com/bitcoin/bitcoin/tree/master/src/test/README.md[unit
+tests] and
+https://github.com/bitcoin/bitcoin/blob/master/test/README.md[functional
+tests] since you will need to do it for many of the PRs you test. For
+this, the Bitcoin Core
+https://github.com/bitcoin/bitcoin/blob/master/doc/productivity.md[productivity
+notes] are indispensable.
+
+Read and know the Bitcoin Core
+https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md[developer
+notes].
+
+===== Diff tools
+
+While the build and tests are running, begin reviewing each commit
+separately in your local environment using a diff tool like
+https://git-scm.com/docs/gitk[gitk], https://meldmerge.org/[meld],
+https://yousseb.github.io/meld/[meld for macOS],
+https://www.gnu.org/software/emacs/manual/html_node/ediff/index.html[GNU]
+https://www.emacswiki.org/emacs/EdiffMode[ediff] for Emacs,
+https://vim.fandom.com/wiki/A_better_Vimdiff_Git_mergetool[vimdiff] or
+https://github.com/whiteinge/diffconflicts[vim-diffconflicts] for Vim,
+opendiff on macOS, or https://diffoscope.org[diffoscope] (here are some
+https://github.com/fanquake/core-review/blob/master/diffoscope.md[diffoscope
+usage tips]).
+
+If you use gitk and like dark mode, I recommend
+https://github.com/dracula/gitk[Dracula for gitk].
+
+===== Git grepping
+
+Become adept at searching the repository with `+git grep+`. You'll use
+it constantly to find stuff in the codebase. Run `+git grep --help+` on
+the command line for help or information.
+
+===== If you're not sure where to start
+
+Read the code, read the PR comments, then re-read both. Find something
+that doesn't make sense and try to figure it out. Repeat.
+
+Once it all starts to make sense, run bitcoind on regtest, testnet (or
+on mainnet with very small amounts), and tail or search through the
+relevant logs (run `+bitcoin-cli help logging+` for the various bitcoind
+logging categories and how to toggle them on/off).
+
+Maybe add some custom logging, LogPrintfs, or asserts; it's always a
+privilege to add these into other people's code (to see how, run
+`+git grep -ni logprintf+` or `+git grep                   assert+` in
+the repository).
+
+Run the relevant functional tests and look through the debug logs.
+Verify that they fail in the expected way on master. Back in the PR
+branch, inverse or change the new tests to make them break and
+understand why.
+
+Maybe add C++ https://www.gnu.org/software/gdb/documentation/[gdb] or
+Python https://docs.python.org/3/library/pdb.html[pdb] breakpoints (or
+add `+import pdb; pdb.set_trace()+` anywhere in the functional test
+code). Examine values. Run RPC commands.
+
+Check if any call sites, headers or declarations have been overlooked in
+the PR.
+
+Try refactoring the code to be better or prettier, and discover why that
+doesn't work. Expect it to take twice as long as you planned it to. Yes,
+it's work.
+
+Maybe run strace (`+man page strace+`) to trace system calls and
+signals.
+
+Depending on the changes, contributing benchmarks, memory
+profiling/valgrind or flame graphs to a PR review can sometimes be very
+useful, and even decisive.
+
+===== Technical resources
+
+I maintain a document of various technical notes for myself, that I
+refer to often when working on Bitcoin Core, here:
+https://github.com/jonatack/bitcoin-development/blob/master/notes.txt[jonatack/bitcoin-development/notes.txt].
+There is also useful stuff in the repository where those notes are
+located. Another great repository of resources is
+https://github.com/fanquake/core-review[fanquake/core-review].
+
+===== Debugging
+
+Two good gists about debugging Bitcoin Core:
+
+* https://github.com/fjahr/debugging_bitcoin[Debugging Bitcoin Core] by
+https://twitter.com/fjahr[Fabian Jahr]
+* https://gist.github.com/gubatron/36784ee38e45cb4bf4c7a82ecc87b6a8[Hack
+and Debug Bitcoin Core with GDB or LLDB] by
+https://www.gubatron.com/blog/[Angel Leon]
+
+===== Add missing tests
+
+While you're reviewing, writing tests yourself can help you understand
+the behaviour and verify the changes, and if they add useful coverage
+you can propose them to the author for inclusion in the PR. Proposing
+automated tests is a really helpful way to start contributing. Authors
+appreciate it when someone reviews their PR and provides additional
+tests.
+https://github.com/bitcoin/bitcoin/pull/15996#issuecomment-491740946[Here's
+an example].
+
+[[big-picture-more-important-than-nits]]
+===== Big picture > nits
+
+Remember, the big picture is much more important than nits, spelling, or
+code style. Re-read the link:#nits[Nits] section above. Try to avoid
+commenting on these while reviewing, even if you have no other comments
+to make. I know, it's hard — I've done it too many times — but there's a
+better alternative:
+
+===== Ask questions
+
+A good thing you can do as a reviewer without specialised knowledge of
+the code is _ask questions_. A PR author is usually happy to discuss
+their work or see interest in it. So, spend 20 minutes or so looking at
+a change, find the thing that seems most confusing or surprising, and
+ask about it politely in the PR comments or on the
+https://kiwiirc.com/nextclient/irc.libera.chat[#bitcoin-core-dev] IRC
+channel. Chances are other people wonder about the same thing and it
+could be clarified or documented better. In this way you can learn and
+help make the project more accessible, too. (Credit for this paragraph:
+https://github.com/bitcoin/bitcoin/pull/15934#issuecomment-547095024[Russ
+Yanofsky]).
+
+===== Peer review
+
+Be sure to learn and understand the Bitcoin Core
+https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#peer-review[peer
+review process]. The process is
+https://github.com/bitcoin/bitcoin/pull/15626[often]
+https://github.com/bitcoin/bitcoin/pull/16149[updated], so refer back to
+it frequently.
+
+An
+https://www.freecodecamp.org/news/what-do-cryptic-github-comments-mean-9c1912bcc0a4/[ACK]
+(https://searchnetworking.techtarget.com/definition/ACK[origin]) is
+generally followed by a description of how the reviewer did the review
+and any manual testing. As a new contributor, it's advisable to be even
+more verbose in review comments to provide context on what you did and
+thought through during the review and show that you understood the
+change.
+
+Concept ACK means the reviewer acknowledges and agrees with the goal of
+the change, but is not (yet) confirming they've looked at the code or
+tested it. This can be a valuable signal to a PR author to let them know
+that the PR has merit and is headed in the right direction. As a
+corollary, a Concept NACK would indicate disagreement with the goal.
+
+Approach ACK is a step further than Concept ACK and means agreement with
+both the goal and the approach used in implementing the change. Approach
+NACK would therefore indicate agreement with the goal but not the
+approach.
+
+Reviewers sometimes comment "Code review ACK" to communicate that the
+code looks good but they haven't tested the changes or don't have an
+opinion on the concept yet. It's good to add more context to clarify:
+"Code review ACK `+HEAD+`, unsure about the concept, I'd like to verify
+x, y, z, etc."
+
+Other ACK variants that are sometimes used are "tACK" or "tested ACK",
+and "utACK" or "untested ACK".
+
+Manual testing of new features and reported issues is always welcome. A
+comment that is really helpful in review: "Here's what I tested and my
+methodology", particularly to back up an ACK.
+
+Some PRs can be difficult to test or ACK due to complexity, context, or
+possibly a lack of tests or simulation framework. That shouldn't
+discourage you from reviewing. For example, if you've reviewed the code
+thoroughly, a comment like "the code looks correct to me, but I don't
+feel confident enough about behaviour to give an ACK" is a perfectly
+helpful contribution.
+
+Examples of other useful comments could be "verified move-only" if the
+PR includes move-only commits, or "thought hard about how change X could
+break Y but didn't find any (or could this scenario happen?)", etc.
+
+When giving an ACK, specify the commits reviewed by appending the commit
+hash of the `+HEAD+` commit. The trustless way to do this is to use the
+hash from your _local_ checkout of the branch and not from the GitHub
+web page. That way, unless your local tools are compromised, you ensure
+you are ACKing the exact changes. This is also useful when a force push
+happens and links to old commits are lost on GitHub.
+
+A full ACK could look like: "ACK `+fa2f991+`, I built, ran tests, tested
+manually by doing X/Y/Z and reviewed the code and it looks OK, I agree
+it can be merged."
+
+The Bitcoin Core merge script currently copies into the merge commit the
+first paragraph of each ACK review pertaining to the `+HEAD+` commit at
+the time of merge. Keep in mind that anything you write there that is
+copied by the merge script will be in git history forever.
+
+A complex PR usually requires at least 3-4 experienced ACKs before
+merging.
+
+===== Apache voting system
+
+Bitcoin Core reviewers frequently use the
+https://www.apache.org/foundation/voting.html#expressing-votes-1-0-1-and-fractions[Apache
+voting system] in their comments. Here is an
+https://github.com/bitcoin/bitcoin/pull/11426#issuecomment-334091207[example].
+
+===== Go easy on the people
+
+Review the code, not the contributor or their comments.
+
+When you disagree, state your point of view once and move on.
+https://github.com/bitcoin/bitcoin/pull/22245#issuecomment-862044403[Here's
+an example]. Don't flood the comments section, browbeat others or
+overreact. Be patient, never aggressive, pushy or bullying. Remember
+that the most important thing is probably not the issue being discussed,
+but your relationship with the other contributors.
+
+As a new contributor, be cautious with giving a NACK. Assume by default
+that you might lack understanding or context. If you do NACK, provide
+good reasoning.
+https://github.com/bitcoin/bitcoin/pull/12360#issuecomment-383342462[Here's
+one example].
+
+[[signing-commits]]
+===== Signing commits with Opentimestamps
+
+Some Bitcoin Core contributors sign and OpenTimestamp their ACKs. While
+that is beyond the scope of this document, it is surprisingly trivial to
+sign your commits using the
+https://github.com/opentimestamps/opentimestamps-client/blob/master/doc/git-integration.md[OpenTimestamps
+Git Integration].
+
+===== Collapsible comments
+
+After a while you'll notice that contributors sometimes review using
+https://github.com/bitcoin/bitcoin/pull/15600#issuecomment-604144041[collapsible
+comments]. _Cool,_ you may think, _how do I do that?_ It's done using
+HTML `+details+` tags.
+https://gist.github.com/joyrexus/16041f2426450e73f5df9391f7f7ae5f[Here's
+how].
+
+==== CREDITS
+
+Thanks to https://twitter.com/moneyball[Steve Lee] (moneyball) and
+https://twitter.com/michaelfolkson[Michael Folkson] for reviewing this
+write-up and their suggestions.
+
+This article includes observed comments on GitHub and IRC by the
+following Bitcoin Core contributors/maintainers who deserve to be
+credited: Wladimir van der Laan, Marco Falke, Pieter Wuille, Gregory
+Maxwell, Anthony Towns, and Russ Yanofsky.
+
+Over the years I had become disillusioned by the central influence of
+BDFLs in programming languages and open source projects. Wladimir van
+der Laan's
+https://twitter.com/orionwl/status/1131564038444453889[long-standing]
+https://twitter.com/orionwl/status/1131827793908645888[humble]
+https://twitter.com/orionwl/status/1131924832071880705[service] to
+Bitcoin sparked the possibility to me of perhaps doing the same.
+
+Finally, a big thank you to the Bitcoin Core contributors for their
+patience with my review attempts so far, notably John Newbery, Marco
+Falke, João Barbosa, practicalswift, Gregory Sanders, Jonas Schnelli,
+Pieter Wuille and Wladimir van der Laan, and to Adam Jonas and John
+Newbery for their guidance and advice from the start.
+
+Cheers,
+
+Jon Atack

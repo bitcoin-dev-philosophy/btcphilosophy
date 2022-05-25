@@ -1,0 +1,119 @@
+=== Michael Folkson - Taproot activation meeting 2
+
+****
+* Source: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-February/018380.html
+* Author: Michael Folkson
+* Date copied: 2022-05-25
+****
+
+A summary of the first Taproot activation meeting (February 3rd) is here:
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-February/018379.html
+
+
+It appears there is one (hopefully) last stumbling block before we are
+ready to propose Taproot activation parameters to the mailing list.
+
+
+Hence we are organizing a follow up meeting on IRC on the
+##taproot-activation channel on Tuesday 16th February at 19:00 UTC.
+
+
+As I said in the summary of the first Taproot activation meeting whether
+lockinontimeout (LOT) is set to true or false in a Bitcoin Core release
+attracted discussion during the meeting and has continued to attract
+discussion afterwards.
+
+
+I will weigh up the arguments I have seen for both true and false here. I
+won’t comment on the strength of the arguments, merely attempt to summarize
+them. Any errors are my own.
+
+
+Arguments for setting lockinontimeout (LOT) to true in a Core release
+
+T1) This entirely eradicates the possibility (however unlikely) that
+Taproot fails to activate within a year. Although approximately 90 percent
+of mining pools have already pledged to activate Taproot there is no reason
+to open the door to possible delays and political shenanigans for no
+reason, however unlikely.
+
+T2) Given users can change LOT=true at any point (and some have declared
+they will be setting LOT=true regardless), setting LOT=false in Core opens
+up edge case scenarios where different proportions of users on the network
+change to LOT=true at different points in time in an uncoordinated fashion.
+Given the end state we all want is Taproot activated it doesn’t make sense
+to open the door to these edge cases. Setting LOT=true in Core would mean
+there is no motivation for users to change LOT in the software they are
+running.
+
+T3) We should not be putting users in a place where they feel they need to
+change LOT. The urge to change LOT will be strong if miners delay for an
+unreasonable period. We are then in a situation where a decision has to be
+made on whether Core releases a new version with LOT=true and this whole
+discussion kicks off again. We should definitely seek to avoid the need to
+rehash this discussion later in the year.
+
+T4) LOT is only relevant if miners fail to activate. It doesn’t make sense
+to set it to false as that is essentially saying if miners fail to activate
+early, LOT should also let them not activate.
+
+T5) Activation should only be attempted once community consensus for the
+soft fork has been reached. Miner signaling is not voting for the changes,
+it is signaling readiness. There is no reasonable rationale for not being
+ready within a year.
+
+T6) An argument belcher outlined on IRC. If LOT was set to true and a chain
+split happened then the Taproot chain doesn’t have wipeout risk so there’s
+a really strong incentive to be on the Taproot activating LOT=true chain
+and therefore using LOT=true means the risk of a chain split is actually
+lower.
+
+
+
+Arguments for setting lockinontimeout (LOT) to false in a Core release
+
+F1) The probability of Taproot not being activated by miners is small. This
+is not 2017, this is not SegWit, there is no need to worry.
+
+F2) The worst case scenario is we have to wait over a year for Taproot to
+be activated. Even the worst case scenario is not a disaster.
+
+F3) If in the unlikely scenario miners did not activate Taproot for a year
+for no apparent reason we would never set LOT to false again for any
+potential future soft fork. If miners fail to activate Taproot despite
+pledging support and there being overwhelming community consensus for it,
+it would set a precedent that miners cannot be relied upon *at all* to
+activate soft forks.
+
+F4) If in the highly unlikely scenario that a bug or some problem with the
+Taproot implementation was found during the signaling period miners could
+choose not to activate it which is cleaner than needing an emergency Core
+release.
+
+
+Then some additional arguments nullc posted on Reddit
+
+https://old.reddit.com/r/Bitcoin/comments/lcjhl6/taproot_activation_pools_will_be_able_to_veto/gm2l02w/
+
+F5) LOT = false is more similar to what was done previously (unless you go
+way back to the earliest soft forks which were more similar to LOT = true)
+
+F6) It is more important that no rules that harm users are deployed than it
+is that new useful rules are deployed quickly. If there is a choice between
+“faster” and “more clear that this isn’t a mechanism to force bad things on
+users” we should prefer the latter. Plenty of people just don’t like
+LOT=true very much absent evidence that miners are blocking deployment. To
+some it just feels needlessly antagonistic and distrusting towards part of
+our community.
+
+
+There are some additional parameters other than LOT we will discuss in this
+meeting such as activation threshold, start time etc but personally I don’t
+think they will attract the same discussion as LOT.
+
+
+As I’ve stated before please continue to engage productively and in good
+faith. I can see arguments with merit on both sides of the LOT discussion
+but there appears to be overwhelming consensus that Taproot is activated
+this year and there appears to be no reason it shouldn’t be. This
+discussion on LOT really should not derail that.

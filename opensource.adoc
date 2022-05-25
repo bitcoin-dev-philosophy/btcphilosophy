@@ -187,10 +187,11 @@ should depend on.
 In a
 https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cryptography/[philosophical
 talk about cryptography] (search for the part that starts with "`The
-art of selection cryptography`"), Gregory Maxwell wants to redefine
-the term cryptography which he believes is too narrow. He speaks about
-how, fundamentally, _information wants to be free_, and makes his
-definition of cryptography based on that:
+art of selection cryptography`" or watch the
+https://youtu.be/Gs9lJTRZCDc?t=2236[video]), Gregory Maxwell wants to
+redefine the term cryptography which he believes is too narrow. He
+speaks about how, fundamentally, _information wants to be free_, and
+makes his definition of cryptography based on that:
 
 [quote, Gregory Maxwell, The Art Of Selection Cryptography]
 ____
@@ -379,13 +380,13 @@ email to the bitcoin-dev mailing list].
 The discussions went on seemingly forever, and it was really hard to
 see any consensus on this forming any time soon. This got people
 frustrated and as a result the heat intensified. Gregory Maxwell
-https://btctranscripts.com/greg-maxwell/2020-07-20-greg-maxwell-taproot-pace/[worried
-on Reddit] that the lengthy discussions would make the upgrade less
-safe.
+https://www.reddit.com/r/Bitcoin/comments/hrlpnc/technical_taproot_why_activate/fyqbn8s/?utm_source=share&utm_medium=web2x&context=3[worried
+on Reddit] (as user nullc) that the lengthy discussions would make the
+upgrade less safe.
 
 [quote, Gregory Maxwell on Reddit, Is Taproot development moving too fast or too slow?]
 ____
-At this juncture, additional waiting isn’t adding more review and
+At this juncture, additional waiting isn't adding more review and
 certainty. Instead, additional delay is sapping inertia and
 potentially increasing risk somewhat as people start forgetting
 details, delaying work on downstream usage (like wallet support), and

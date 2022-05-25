@@ -120,6 +120,26 @@ include::{d}/voskuilresistance.adoc[]
 
 == Open source
 
+:d: opensource
+
+include::{d}/osd.adoc[]
+
+include::{d}/loppwhocontrols.adoc[]
+
+include::{d}/lombrozomerge.adoc[]
+
+include::{d}/maxwellselection.adoc[]
+
+include::{d}/atackreview.adoc[]
+
+include::{d}/zhaoreview.adoc[]
+
+include::{d}/dryjafunding.adoc[]
+
+include::{d}/folksonactivation.adoc[]
+
+include::{d}/maxwellactivation.adoc[]
+
 == Scaling
 
 == When shit hits the fan
