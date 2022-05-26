@@ -55,8 +55,8 @@ Lost coins only make everyone else's coins worth slightly more.  Think
 of it as a donation to everyone.
 ____
 
-The finite supply will shrink which, at least in theory, should cause
-price deflation.
+The finite supply will shrink which, at least in theory, which should
+cause price deflation.
 
 What's more important than the exact number of coins in circulation is
 how the consensus rule of limited supply is enforced without a central
@@ -153,10 +153,10 @@ appear.
 
 So, given that the consensus on finite supply remains, the block
 subsidy will, thanks to
-https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki[BIP42
-;)], be zero from around year 2140. Will the transaction fees after
-that be enough to secure the network? It's impossible to say, but we
-do know some things:
+https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki[BIP42]
+that fixed a very-long-term inflation bug ;), be zero from around year
+2140. Will the transaction fees after that be enough to secure the
+network? It's impossible to say, but we do know some things:
 
 * A century is a _long_ time from the Bitcoin perspective. If it is
   still around, it has probably evolved enormously.
