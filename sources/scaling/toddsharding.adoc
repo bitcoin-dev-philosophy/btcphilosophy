@@ -1,0 +1,260 @@
+=== Peter Todd - Why Scaling Bitcoin With Sharding Is Very Hard
+
+****
+* Source: https://petertodd.org/2015/why-scaling-bitcoin-with-sharding-is-very-hard
+* Author: Peter Todd
+* Date copied: 2022-05-25
+****
+
+Nov 24, 2015
+
+_https://www.reddit.com/r/Bitcoin/comments/3u1m36/why_arent_we_as_a_community_talking_about/cxbamhn[Previously
+published as a reply on Reddit.]_
+
+____
+Why aren’t we as a community talking about Sharding as a scaling
+solution?
+
+It seems to me that sharding would be the ideal solution for scaling
+bitcoin up indefinitely, but all I keep hearing about is lightning and
+sidechains, which are sort of bolt-on afterthoughts operating a level
+above bitcoin. Will existing wallets work smoothly with lightning?
+dunno, but I doubt it. And anyway, they do nothing to help bitcoin
+itself scale up, or to reduce disk/bandwidth requirements of individual
+nodes.
+____
+
+In a system where everyone mostly trusts each other, sharding works
+great! You just split up the blockchain the same way you’d shard a
+database, assigning miners/validators a subset of the txid space.
+Transaction validation would assume that if you don’t have the history
+for an input yourself, you assume that history is valid. In a
+banking-like environment where there’s a way to conduct audits and
+punish those who lie, this could certainly be made to work. (I myself
+have worked on and off on a scheme to do exactly that for a few
+different clients: https://github.com/proofchains[Proofchains])
+
+But in a decentralized environment sharding is far, far, harder to
+accomplish… There’s an old idea we’ve been calling “fraud proofs”, where
+you design a system where for every way validation can fail, you can
+create a short proof that part of the blockchain was invalid. Upon
+receiving that proof your node would reject the invalid part of the
+chain and roll back the chain. In fact, the original Satoshi whitepaper
+refers to fraud proofs, using the term “alerts”, and assumed SPV nodes
+would use them to get better guarantees they’re using a valid chain.
+(SPV as implemented by bitcoinj is sometimes referred to as
+“non-validating SPV”) The problem is, how do you guarantee that the
+fraud will get detected? And How do you guarantee that fraud that is
+detected actually gets propagated around the network? And if all that
+fails… then what?
+
+The nightmare scenario in that kind of system is some miner successfully
+gets away with fraud for awhile, possibly creating hundreds of millions
+of dollars worth of bitcoins out of thin air. Those fake coins could
+easily “taint” a significant fraction of the economy, making rollback
+impossible and shaking faith in the value of the currency. Right now in
+Bitcoin this is pretty much impossible because everyone can run a full
+node to validate the chain for themselves, but in a sharded system
+that’s far harder to guarantee.
+
+Now, suppose we _can_ guarantee validity. zk-SNARKS are basically a way
+of mathematically proving that you ran a certain computer program on
+some data, and that program returned true. _Recursive_ zk-SNARKS are
+simply zk-SNARKS where the program can also recursively evaluate that
+another zk-SNARK is true. With this technology a miner could _prove_
+that the shard they’re working on is valid, solving the problem of fake
+coins. Unfortunately, zk-SNARKS are bleeding edge crypto, (if zerocoin
+had been deployed the entire system would have been destroyed by a
+recently found bug that allowed fake proofs to be created) and recursive
+zk-SNARKS don’t exist yet.
+
+The closest thing I know of to recrusive zk-SNARKS that actually does
+work without “moon-math” is an idea I came up with for treechains called
+coin history linearization. Basically, if you allow transactions to have
+multiple inputs and outputs, proving that a given coin is valid requires
+the entire coin history, which has quasi-exponential scaling - in the
+Bitcoin economy coins are very quickly mixed such that all coins have
+pretty much all other coins in their history.
+
+Now suppose that rather than proving that all inputs are valid for a
+transaction, what if you only had to prove that _one_ was valid? This
+would linearize the coin history as you only have to prove a single
+branch of the transaction DAG, resulting in O(n) scaling. (with n <=
+total length of the blockchain chain)
+
+Let’s assume Alice is trying to pay Bob with a transaction with two
+inputs each of equal value. For each input she irrevocable records it as
+spent, permanently committing that input’s funds to Bob. (e.g. in an
+irrevocable ledger!) Next she makes use of a random beacon - a source of
+publicly known random numbers that no-one can influence - to choose
+which of the two inputs’ coin history’s she’ll give to Bob as proof that
+the transaction is real. (both the irrevocable ledger and random beacon
+can be implemented with treechains, for example)
+
+If Alice is being honest and both inputs are real, there’s a 100% chance
+that she’ll be able to successfully convince Bob that the funds are
+real. Similarly, if Alice is dishonest and neither input is real, it’ll
+be impossible for her convince prove to Bob that the funds are real.
+
+But what if one of the two inputs is real and the other is actually
+fake? Half the time the transaction will succeed - the random beacon
+will select the real input and Bob won’t know that the other input is
+fake. However, half the time the _fake_ input will be selected, and
+Alice won’t be able to prove anything. Yet, the real input has
+irrevocably been spent anyway, destroying the funds! If the process by
+which funds are spent really is irrevocable, and Alice has absolutely no
+way to influence the random beacon, the two cases cancel out. While she
+can get away with fraud, there’s no economic benefit for her to do so.
+On a macro level, this means that fraud won’t result in inflation of the
+currency. (in fact, we want a system that institutionalizes this
+so-called “fraud” - creating false proofs is a great way to make your
+coins more private) (FWIW the way zk-SNARKS actually work is similar to
+this simple linearization scheme, but with a lot of very clever error
+correction math, and the hash of the data itself as the random beacon)
+
+An actual implementation would be extended to handle multiple
+transaction inputs of different sizes by weighing the probability that
+an input will be selected by it’s value - merkle-sum-trees work well for
+this. We still have the problem that O(n) scaling kinda sucks; can we do
+better?
+
+Yes! Remember that a genesis transaction output has no history - the
+coins are created out of thin air and its validity is proven by the
+proof of work itself. So every time you make a transaction that spends a
+genesis output you have a chance of reducing the length of the coin
+validity proof back to zero. Better yet, we can design a system where
+every transaction is associated with a bit of proof-of-work, and thus
+every transaction has a chance of resetting the length of the validity
+proof back to zero. In such a system you might do the PoW on a
+per-transaction basis; you could outsource the task to miners with a
+special output that only the miner can spend. Now we have O(1) scaling,
+with a k that depends on the inflation rate. I’d have to dig up the
+calculations again, but IIRC I sketched out a design for the above that
+resulted in something like 10MB or 100MB coin validity proofs, assuming
+1% inflation a year. (equally you can describe that 1% inflation as a
+coin security tax) Certainly not small, but compared to running a full
+node right now that’s still a _huge_ reduction in storage space.
+(recursive zk-SNARKS might reduce that proof to something like 1kB of
+data)
+
+Regardless of whether you have lightweight zk-SNARKS, heavyweight
+linearized coin history proofs, or something else entirely, the key
+advantage is that validation can become entirely client side. Miners
+don’t even need to care whether or not their _own_ blocks are “valid”,
+let alone other miners’ blocks. Invalid transactions in the chain are
+just garbage data, which gets rejected by wallet software as invalid. So
+long as the protocol itself works and is implemented correctly it’s
+impossible for fraud to go undetected and destroy the economy the way it
+can in a sharded system.
+
+However we still have a problem: censorship. This one is pretty subtle,
+and gets to the heart of how these systems actually work. How do you
+prove that a coin has validly been spent? First, prove that it hasn’t
+already been spent! How do you do that if you don’t have the blockchain
+data? You can’t, and no amount of fancy math can change that.
+
+In Bitcoin if everyone runs full nodes censorship can’t happen: you
+either have the full blockchain and thus can spend your money and help
+mine new blocks, or that alternate fork might as well not exist. SPV
+breaks this as it allows funds to be spent without also having the
+ability to mine - with SPV a cartel of miners can prevent anyone else
+from getting access to the blockchain data required to mine, while still
+allowing commerce to happen. In reality, this type of cartel would be
+more subtle, and can even happen by accident; just delaying other miners
+getting blockchain data by a few seconds harms those non-cartel miners’
+profitability, without being obvious censorship. Equally, so long as the
+cartel has
+http://www.mail-archive.com/bitcoin-development@lists.sourceforge.net/msg03200.html[>30%
+of hashing power it’s profitable in the long run for the cartel if this
+happens].
+
+In sharded systems the “full node defense” doesn’t work, at least
+directly. The whole point is that not everyone has all the data, so you
+have to decide what happens when it’s not available.
+
+Altcoins provide one model, albeit a pretty terrible one: taken as a
+whole you can imagine the entire space of altcoins as a series of
+cryptocurrency shards for moving funds around. The problem is each
+individual shard - each altcoin - is weak and can be 51% attacked. Since
+they can be attacked so easily, if you designed a system where funds
+could be moved from one shard to another through coin history proofs
+every time a chain was 51% attacked and reorged you’d be creating coins
+out of thin air, destroying digital scarcity and risking the whole
+economy with uncontrolled inflation. You can instead design a system
+where coins can’t move between shards - basically what the altcoin space
+looks like now - but that means actually paying someone on another
+“shard” requires you to sell your coins and buy their coins - a
+inefficient and expensive logistical headache. (there’s a reason the
+Eurozone was created!)
+
+If you want to transfer value between shards with coin history proofs,
+without risking inflation, you need all the shards to share some type of
+global consensus. This is the idea behind treechains: every part of the
+tree is linked to a top-level timestamp chain, which means we have
+global consensus on the contents of all chains, and thus spending a coin
+really is an immutable one-time act.
+
+Let’s go into a bit more detail. So what is a coin in a treechains
+system? First and foremost it’s a _starting point_ in some part of the
+tree, a specific subchain. When Alice wants to prove to Bob that she
+spent a coin, giving it to Bob, she inserts into that subchain the data
+that proves that someone _could have_ spent that coin - a valid
+signature and the hash of the transaction output it was spending. But
+the actual proof that she gives to Bob isn’t just that spend data, but
+rather proof that all the blocks in that chain between the starting
+point and the spend did _not_ have a valid spend in them. (easiest way
+to do that? give Bob those blocks) That proof must link back to the
+top-level chain; if it doesn’t the proof is simply not valid.
+
+Now suppose Alice can’t get that part of the subchain, perhaps because a
+cartel of miners is mining it and won’t give anyone else the data, or
+perhaps because everyone with the data suffered a simultaneous harddrive
+crash. We’ll also say that higher up in the tree the data is available,
+at minimum the top-level chain. As with Bitcoin, as long as that cartel
+has 51% of the hashing power, Alice is screwed and can’t spend her
+money.
+
+What’s interesting is what happens after that cartel disbands: how does
+mining restart? It’s easy to design a system where the creation of a
+block doesn’t require the knowledge of previous blocks, so new blocks
+can be added to extend the subchain. But Alice is still screwed: she
+can’t prove to Bob that the missing blocks in the subchain didn’t
+contain a valid spend of her coin. This is pretty bad, on the other hand
+the damage is limited to just that one subchain, and the system as a
+whole is unaffected.
+
+There’s a tricky incentives problem here though: if a miner can extend a
+subchain without actually having previous blocks in that chain, where’s
+the incentive for that miner to give anyone else the blocks they create?
+Remember that exclusive knowledge of a block is potentially valuable if
+you can extort coin owners for it. (Bitcoin suffers from this problem
+right now with validationless “SPV” mining, though the fact that a block
+can be invalid in Bitcoin helps limit its effects)
+
+Part of the solution could be mining reward; in Bitcoin, coinbase
+outputs can’t be spent for 100 blocks. A similar scheme could require
+that a spend of a coinbase output in a subchain include proof that the
+next X blocks in that subchain were in fact linked together. Secondly
+make block creation dependent on actually having that data to ensure the
+linkage actually means something, e.g. by introducing some validity
+rules so blocks can be invalid, and/or using a PoW function that
+requires hashers to have a copy of that data.
+
+Ultimately though this isn’t magic: like it or not lower subchains in
+such a system are inherently weaker and more dangerous than higher ones,
+and this is equally true of any sharded system. However a hierarchically
+sharded system like treechains can give users options: higher subchains
+are safer, but transactions will expensive. The hierarchy does combine
+the PoW security of all subchains together for the thing you can easily
+combine: timestamping security.
+
+There’s a big problem though: holy !@#$ is the above complex compared to
+Bitcoin! Even the “kiddy” version of sharding - my linearization scheme
+rather than zk-SNARKS - is probably one or two orders of magnitude more
+complex than using the Bitcoin protocol is right now, yet right now a
+huge % of the companies in this space seem to have thrown their hands up
+and used centralized API providers instead. Actually implementing the
+above and getting it into the hands of end-users won’t be easy.
+
+On the other hand, decentralization isn’t cheap: using PayPal is one or
+two orders of magnitude simpler than the Bitcoin protocol.

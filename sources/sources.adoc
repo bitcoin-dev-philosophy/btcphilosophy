@@ -142,4 +142,21 @@ include::{d}/maxwellactivation.adoc[]
 
 == Scaling
 
+:d: scaling
+
+include::{d}/donaldscaling.adoc[]
+
+include::{d}/maxwellscaling.adoc[]
+
+include::{d}/toddsharding.adoc[]
+
+include::{d}/loppperformance.adoc[]
+
+include::{d}/wuillelibsecp256k1.adoc[]
+
+include::{d}/murchsavings.adoc[]
+
+include::{d}/maxwelllayering.adoc[]
+
 == When shit hits the fan
+

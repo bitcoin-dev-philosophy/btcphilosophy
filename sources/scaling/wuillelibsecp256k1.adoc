@@ -1,0 +1,99 @@
+=== Pieter Wuille - Twitter thread on improvements in libsecp256k1
+
+****
+* Source: https://twitter.com/pwuille/status/1450471673321381896
+* Author: Pieter Wuille
+* Date copied: 2022-05-25
+****
+
+1/ To put the recent performance improvements in https://github.com/bitcoin-core/secp256k1 into perspective, I made this graph of the library's performance over time on ARM64 and x86_64.
+
+image::FCEWx-aXoAsbMZB.png[]
+
+'''''
+
+2/ On the X axis a number of PR numbers are listed which had some noticeable effect on performance. In particular 830 (enabling the GLV endomorphism by default) and 831 (safegcd based modular inverses) had a huge impact.
+
+About GLV endomorphism:
+
+____
+About 25% speedup of signature validation. To how much that translates to IBD depends on the situation.
+
+The GLV optimization has been integrated in libsecp256k1 since day 1, in 2013. It has just been default off.
+____
+
+'''''
+
+3/ About the safegcd based modular inverses I've tweeted several times, amongst others here: [link to <<othertwitterthread,other twitter thread>> by Wuille]
+
+'''''
+
+4/ The graph was created by running the "bench_verify" tool at every merge commit in the repository, with libgmp disabled (for commits which had it as optional dependency) to match how Bitcoin Core uses it.
+
+In total, 387 merges, so 387 data points.
+
+'''''
+
+5/ The vast majority of these don't have any impact on performance at all, and a few only do so randomly (e.g. by adding a new function, some alignment in the binary is different, or inlining decisions are slightly different, while not having any algorithmic impact).
+
+'''''
+
+6/ libsecp256k1 certainly has had a period where activity wasn't that high, and the recent improvements are a sign this has improved (amongst others, thanks to the new maintainers 
+@n1ckler and @real_or_random, who are far more active than I was).
+
+'''''
+
+fin/ Still, the library had hundreds of merged changes that didn't impact performance. Many of those are maintenance, documentation, keeping CI up to date, tests; I'd like to use that as an example to show there is plenty of work for non-experts, and we welcome contributions!
+
+[[othertwitterthread]]
+==== Other twitter thread by Wuille
+
+Copied from https://twitter.com/pwuille/status/1309722142607515648
+
+How randomly changing 1 character in an algorithm accidentally made it 18% faster. https://github.com/sipa/safegcd-bounds
+
+'''''
+
+Greg Maxwell and I were working on tests for the safegcd-based modular inverse implementation in libsecp256k1: https://github.com/bitcoin-core/secp256k1/pull/831
+
+'''''
+
+In order to build interesting test cases, Greg tried mutation testing: introduce intentional bugs in the code to see if our tests would catch it.
+
+He noticed that changing a "<" into "\<=" didn't break any tests.
+
+'''''
+
+Looking into it in more detail, I didn't expect this would actually break anything, but just make it slower to finish.
+
+So with that, he started looking for cases that were specifically slow under this mutation, to add those as a test. He couldn't find any...
+
+'''''
+
+Now, I had just come up with a technique to generally find upper bounds on how many iterations this algorithm needs (see link in top tweet). It was easy to adapt it to this mutated version... and found it only needed 590 iterations (where the original may need 723).
+
+'''''
+
+For context, this is an unusual algorithm that can be made constant-time (a requirement in cryptographic applications for side-channel resistance) by simply always running the maximum number of iterations rather than stopping when done.
+
+'''''
+
+This means this mutated variant actually always runs faster, rather than just on average.
+
+@hashbreaker and @bo_yin have recently used this variant to break their own modular inversion speed record: https://twitter.com/hashbreaker/status/1348247397843968000
+
+'''''
+
+I should clarify that the final version wasn't actually what he randomly stumbled upon. Once we learned that small tweaks existed that had better bounds, we started looking for more, and found even better.
+
+Original: ~2.8 steps/bit
+Mutation: ~2.5 steps/bit
+Final: ~2.3 steps/bit
+
+'''''
+
+As for why it converges so much faster... I don't have any great insight.
+
+But the diagram below (left=original, right=mutated) looks a lot prettier, right?
+
+image:ErgMdkbU0AEIgeh.png[{half-width}]image:ErgMglFVQAEekab.png[{half-width}] 

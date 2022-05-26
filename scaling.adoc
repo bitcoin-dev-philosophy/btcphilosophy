@@ -29,7 +29,7 @@ with a brief overview of Bitcoin's history within the context of scaling.
 
 Scaling has been a focal point of discussion since the genesis of Bitcoin. The
 very first sentence of the
-https://satoshi.nakamotoinstitute.org/emails/cryptography/threads/1/#014814[very
+https://www.metzdowd.com/pipermail/cryptography/2008-November/014814.html[very
 first mail response] to Satoshi's announcement of the bitcoin white paper on the
 Cryptography mailing list was about scaling:
 
