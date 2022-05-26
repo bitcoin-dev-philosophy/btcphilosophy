@@ -1,0 +1,153 @@
+=== Jeff Garzik - Strange block 74638
+
+****
+* Source: https://bitcointalk.org/index.php?topic=822.msg9474#msg9474
+* Author: Jeff Garzik
+* Date copied: 2022-05-26
+****
+
+++++
+		<table width="90%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Strange block 74638</b><br />
+					Post by: <b>jgarzik</b> on <b>August 15, 2010, 06:08:49 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;"><br />The &quot;value out&quot; in this block #74638 is quite strange:<br /><br /><div class="codeheader">Code:</div><div class="code">{<br />&nbsp; &nbsp; &quot;hash&quot; : &quot;0000000000790ab3f22ec756ad43b6ab569abf0bddeb97c67a6f7b1470a7ec1c&quot;,<br />&nbsp; &nbsp; &quot;ver&quot; : 1,<br />&nbsp; &nbsp; &quot;prev_block&quot; : &quot;0000000000606865e679308edf079991764d88e8122ca9250aef5386962b6e84&quot;,<br />&nbsp; &nbsp; &quot;mrkl_root&quot; : &quot;618eba14419e13c8d08d38c346da7cd1c7c66fd8831421056ae56d8d80b6ec5e&quot;,<br />&nbsp; &nbsp; &quot;time&quot; : 1281891957,<br />&nbsp; &nbsp; &quot;bits&quot; : 469794830,<br />&nbsp; &nbsp; &quot;nonce&quot; : 28192719,<br />&nbsp; &nbsp; &quot;n_tx&quot; : 2,<br />&nbsp; &nbsp; &quot;tx&quot; : [<br />&nbsp; &nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;hash&quot; : &quot;012cd8f8910355da9dd214627a31acfeb61ac66e13560255bfd87d3e9c50e1ca&quot;,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;ver&quot; : 1,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;vin_sz&quot; : 1,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;vout_sz&quot; : 1,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;lock_time&quot; : 0,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;in&quot; : [<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;prev_out&quot; : {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;hash&quot; : &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;n&quot; : 4294967295<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;coinbase&quot; : &quot;040e80001c028f00&quot;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ],<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;out&quot; : [<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;value&quot; : 50.51000000,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;scriptPubKey&quot; : &quot;0x4F4BA55D1580F8C3A8A2C78E8B7963837C7EA2BD8654B9D96C51994E6FCF6E65E1CF9A844B044EEA125F26C26DBB1B207E4C3F2A098989DA9BA5BA455E830F7504 OP_CHECKSIG&quot;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]<br />&nbsp; &nbsp; &nbsp; &nbsp; },<br />&nbsp; &nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;hash&quot; : &quot;1d5e512a9723cbef373b970eb52f1e9598ad67e7408077a82fdac194b65333c9&quot;,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;ver&quot; : 1,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;vin_sz&quot; : 1,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;vout_sz&quot; : 2,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;lock_time&quot; : 0,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;in&quot; : [<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;prev_out&quot; : {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;hash&quot; : &quot;237fe8348fc77ace11049931058abb034c99698c7fe99b1cc022b1365a705d39&quot;,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;n&quot; : 0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;scriptSig&quot; : &quot;0xA87C02384E1F184B79C6ACF070BEA45D5B6A4739DBFF776A5D8CE11B23532DD05A20029387F6E4E77360692BB624EEC1664A21A42AA8FC16AEB9BD807A4698D0CA8CDB0021024530 0x965D33950A28B84C9C19AB64BAE9410875C537F0EB29D1D21A60DA7BAD2706FBADA7DF5E84F645063715B7D0472ABB9EBFDE5CE7D9A74C7F207929EDAE975D6B04&quot;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ],<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;out&quot; : [<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;value&quot; : 92233720368.54277039,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;scriptPubKey&quot; : &quot;OP_DUP OP_HASH160 0xB7A73EB128D7EA3D388DB12418302A1CBAD5E890 OP_EQUALVERIFY OP_CHECKSIG&quot;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;value&quot; : 92233720368.54277039,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;scriptPubKey&quot; : &quot;OP_DUP OP_HASH160 0x151275508C66F89DEC2C5F43B6F9CBE0B5C4722C OP_EQUALVERIFY OP_CHECKSIG&quot;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]<br />&nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; ],<br />&nbsp; &nbsp; &quot;mrkl_tree&quot; : [<br />&nbsp; &nbsp; &nbsp; &nbsp; &quot;012cd8f8910355da9dd214627a31acfeb61ac66e13560255bfd87d3e9c50e1ca&quot;,<br />&nbsp; &nbsp; &nbsp; &nbsp; &quot;1d5e512a9723cbef373b970eb52f1e9598ad67e7408077a82fdac194b65333c9&quot;,<br />&nbsp; &nbsp; &nbsp; &nbsp; &quot;618eba14419e13c8d08d38c346da7cd1c7c66fd8831421056ae56d8d80b6ec5e&quot;<br />&nbsp; &nbsp; ]<br />}<br /></div><br />92233720368.54277039 BTC?&nbsp; Is that UINT64_MAX, I wonder?<br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>lachesis</b> on <b>August 15, 2010, 06:17:35 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=822.msg9474#msg9474">Quote from: jgarzik on August 15, 2010, 06:08:49 PM</a></div><div class="quote">The &quot;value out&quot; in this block #74638 is quite strange:<br /></div>That is strange. What does the TxIn look like?<br /><br /><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=822.msg9474#msg9474">Quote from: jgarzik on August 15, 2010, 06:08:49 PM</a></div><div class="quote">92233720368.54277039 BTC?&nbsp; Is that UINT64_MAX, I wonder?<br /></div>It&#039;s 2^63/10^8, so it looks like it&#039;s INT64_MAX, not UINT64_MAX</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>theymos</b> on <b>August 15, 2010, 06:28:56 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;">This could be a serious problem. Bitcoin&#039;s printblock also shows it:<br /><br /><div class="codeheader">Code:</div><div class="code">CBlock(hash=0000000000790ab3, ver=1, hashPrevBlock=0000000000606865, hashMerkleR<br />oot=618eba, nTime=1281891957, nBits=1c00800e, nNonce=28192719, vtx=2)<br />&nbsp; CTransaction(hash=012cd8, ver=1, vin.size=1, vout.size=1, nLockTime=0)<br />&nbsp; &nbsp; CTxIn(COutPoint(000000, -1), coinbase 040e80001c028f00)<br />&nbsp; &nbsp; CTxOut(nValue=50.51000000, scriptPubKey=0x4F4BA55D1580F8C3A8A2C7)<br />&nbsp; CTransaction(hash=1d5e51, ver=1, vin.size=1, vout.size=2, nLockTime=0)<br />&nbsp; &nbsp; CTxIn(COutPoint(237fe8, 0), scriptSig=0xA87C02384E1F184B79C6AC)<br />&nbsp; &nbsp; CTxOut(nValue=92233720368.54275808, scriptPubKey=OP_DUP OP_HASH160 0xB7A7)<br />&nbsp; &nbsp; CTxOut(nValue=92233720368.54275808, scriptPubKey=OP_DUP OP_HASH160 0x1512)<br />&nbsp; vMerkleTree: 012cd8 1d5e51 618eba</div></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>lfm</b> on <b>August 15, 2010, 06:55:34 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=822.msg9481#msg9481">Quote from: theymos on August 15, 2010, 06:28:56 PM</a></div><div class="quote">This could be a serious problem. Bitcoin&#039;s printblock also shows it:<br /><br /><div class="codeheader">Code:</div><div class="code">CBlock(hash=0000000000790ab3, ver=1, hashPrevBlock=0000000000606865, hashMerkleR<br />oot=618eba, nTime=1281891957, nBits=1c00800e, nNonce=28192719, vtx=2)<br />&nbsp; CTransaction(hash=012cd8, ver=1, vin.size=1, vout.size=1, nLockTime=0)<br />&nbsp; &nbsp; CTxIn(COutPoint(000000, -1), coinbase 040e80001c028f00)<br />&nbsp; &nbsp; CTxOut(nValue=50.51000000, scriptPubKey=0x4F4BA55D1580F8C3A8A2C7)<br />&nbsp; CTransaction(hash=1d5e51, ver=1, vin.size=1, vout.size=2, nLockTime=0)<br />&nbsp; &nbsp; CTxIn(COutPoint(237fe8, 0), scriptSig=0xA87C02384E1F184B79C6AC)<br />&nbsp; &nbsp; CTxOut(nValue=92233720368.54275808, scriptPubKey=OP_DUP OP_HASH160 0xB7A7)<br />&nbsp; &nbsp; CTxOut(nValue=92233720368.54275808, scriptPubKey=OP_DUP OP_HASH160 0x1512)<br />&nbsp; vMerkleTree: 012cd8 1d5e51 618eba</div></div><br /><br />The sum of the two outputs overflows to a negative. Its a bug in the transaction checks which did not reject it, then someone noticed and exploited it. Presumably a new version will be able to reject it and start a new valid fork. meanwhile should probablt shut down whatever you can and by no means make nor accept any transactions.<br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>kencausey</b> on <b>August 15, 2010, 07:30:30 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;">Related thread: http://bitcointalk.org/index.php?topic=823.0</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>lfm</b> on <b>August 15, 2010, 07:34:18 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;">Im speculating here somewhat but from what I can see someone has generated a transaction, probably using a custom modification of the software to generate a transaction which exploits a weakness in the code. The code check each transaction output for negative numbers individually (up to ver 0.3.8 at least) but forgot to check that the sum of two outputs (where you have the normal output of a transaction and the &quot;change&quot; leftover amount returned to the sender) is negative. So if you put two large but positive values in the transaction the overflow is then only checked that it is less than or equal to the inputs.<br /><br />Normally the inputs are equal to the outputs of a transaction. The exception is when there is a &quot;fee&quot; charged for the transaction. The net allows anyone to voluntarily pay any amout for a fee. SO when the sum was negative the difference from the input looked like a fee. It slipped thru all the checks. Her is some of the details:<br />&nbsp;out Value 1:92233720368.54(7ffffffffff85ee0)<br />&nbsp;out Value 2:92233720368.54(7ffffffffff85ee0)<br /><br />the sum would make -0.01 BTC<br /><br />generated transaction &quot;reward&quot; including 51 bitcent &quot;fee&quot;<br />&nbsp;out Value:50.51(000000012d1024c0)<br /><br />that implies the input value was 0.50 BTC<br /><br /></div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>aceat64</b> on <b>August 15, 2010, 07:50:00 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;">For now I have stopped generating on my nodes.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>NewLibertyStandard</b> on <b>August 15, 2010, 08:29:32 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;">Let&#039;s not keep two different threads open on this subject. Let&#039;s move our conversation over to the thread in the dev forum (http://bitcointalk.org/index.php?topic=823.0). Moderators, please lock this thread if you agree.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>Insti</b> on <b>August 15, 2010, 08:38:16 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=822.msg9519#msg9519">Quote from: NewLibertyStandard on August 15, 2010, 08:29:32 PM</a></div><div class="quote">Let&#039;s not keep two different threads open on this subject. Let&#039;s move our conversation over to the thread in the dev forum (http://bitcointalk.org/index.php?topic=823.0). Moderators, please lock this thread if you agree.<br /></div>This thread currently has more useful information in it.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>NewLibertyStandard</b> on <b>August 15, 2010, 08:42:17 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=822.msg9523#msg9523">Quote from: Insti on August 15, 2010, 08:38:16 PM</a></div><div class="quote"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=822.msg9519#msg9519">Quote from: NewLibertyStandard on August 15, 2010, 08:29:32 PM</a></div><div class="quote">Let&#039;s not keep two different threads open on this subject. Let&#039;s move our conversation over to the thread in the dev forum (http://bitcointalk.org/index.php?topic=823.0). Moderators, please lock this thread if you agree.<br /></div>This thread currently has more useful information in it.<br /></div>Both threads have a link to the other, so usefulness of information doesn&#039;t matter. I think the other thread is more appropriate which is why I suggested this one be locked. If a moderator thinks this one is more appropriate, then they should lock the other. Of course if the moderators want both threads going at the same time, that&#039;s their prerogative. It&#039;s just a suggestion and not really a big deal either way.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>mizerydearia</b> on <b>August 20, 2010, 12:57:53 AM</b>
+					<hr />
+					<div style="margin: 0 5ex;">Here is some information related to the incident that may be used by anyone else if they would dislike. &nbsp;If you would like to use it then you may not.<br /><br />In old/corrupt chain:<br /><br />Block 74637 has timestamp of 1281891763 (Sun Aug 15 11:34:43 CDT 2010)<br />Block 74638 had timestamp of 1281891957 (Sun Aug 15 12:05:57 CDT 2010)<br />Block 74639 had timestamp of 1281892233 (Sun Aug 15 12:10:33 CDT 2010)<br /><br /><br />This means the malicious event occurred between 11:34:43 CDT and 12:10:33 CDT on August 15th.<br /><br />http://bitcointalk.org/index.php?topic=822.0<br />August 15, 2010, 01:08:49 PM CDT<br /><br />This means the malicious event was discovered up to about 1.5hrs after it occurred.<br /><br />http://bitcointalk.org/index.php?topic=823.msg9524#msg9524<br />August 15, 2010, 03:39:42 PM CDT<br /><br />This means about 4hrs after it occurred a first patch was made available.<br /><br />http://bitcointalk.org/index.php?topic=823.msg9548#msg9548<br />August 15, 2010, 04:40:19 PM CDT<br /><br />This means about just over 5hrs after it occurred a path was pushed to svn by satoshi.<br /><br />5 hours is much more impressive than &quot;within a day.&quot; even though the official release of 0.3.10 didn&#039;t occur until the next day. =/<br /><br />I first posted this as a comment to http://www.bitcoinblogger.com/2010/08/bitcoin-issues-security-update-faster.html<br /><br />Other threads related to the issue:<br />http://bitcointalk.org/index.php?topic=823.0<br />http://bitcointalk.org/index.php?topic=827.0<br />http://bitcointalk.org/index.php?topic=832.0</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>FreeMoney</b> on <b>August 20, 2010, 02:04:47 AM</b>
+					<hr />
+					<div style="margin: 0 5ex;">Did we get luck or is there a secret pager number that alerts Satoshi to emergencies :)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>mizerydearia</b> on <b>August 20, 2010, 03:02:27 AM</b>
+					<hr />
+					<div style="margin: 0 5ex;">I heard that the patch was available before Satoshi awakened.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>FreeMoney</b> on <b>August 20, 2010, 03:41:54 AM</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=822.msg10348#msg10348">Quote from: mizerydearia on August 20, 2010, 03:02:27 AM</a></div><div class="quote">I heard that the patch was available before Satoshi awakened.<br /></div><br />Nice. I shouldn&#039;t even have assumed he did it. I know there are lots of people here with skills.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>sgk</b> on <b>July 23, 2014, 09:07:53 AM</b>
+					<hr />
+					<div style="margin: 0 5ex;">Well... this issue made it to &quot;The 9 Biggest Screwups in Bitcoin History&quot;<br /><br />http://www.coindesk.com/9-biggest-screwups-bitcoin-history/</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>Justin00</b> on <b>July 23, 2014, 09:10:18 AM</b>
+					<hr />
+					<div style="margin: 0 5ex;">Thanks for reporting news from 2010 :)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>Justin00</b> on <b>July 23, 2014, 09:27:20 AM</b>
+					<hr />
+					<div style="margin: 0 5ex;">heh I was being sarcastic at first but that link you provided is actually pretty cool... Thanks :)</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>sgk</b> on <b>July 23, 2014, 12:14:59 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=822.msg7983240#msg7983240">Quote from: Justin00 on July 23, 2014, 09:27:20 AM</a></div><div class="quote">heh I was being sarcastic at first but that link you provided is actually pretty cool... Thanks :)<br /></div><br />Thank you.<br /><br />Although the one I&#039;ll always remember is the guy who threw the hard drive with 7500 BTC into a dump yard.</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>BowieMan</b> on <b>July 23, 2014, 12:19:23 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;"><div class="quoteheader"><a href="https://bitcointalk.org/index.php?topic=822.msg7983036#msg7983036">Quote from: sgk on July 23, 2014, 09:07:53 AM</a></div><div class="quote">Well... this issue made it to &quot;The 9 Biggest Screwups in Bitcoin History&quot;<br /><br />http://www.coindesk.com/9-biggest-screwups-bitcoin-history/<br /></div><br />Wow, do they link the thread? I almost got a heart attack while reading that &#039;a fork will probably fix it&#039; But the block number is quite low, so I maybe should have noticed my mistake earlier. Good thing most of those quirks are now fixed!</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>Justin00</b> on <b>July 23, 2014, 01:19:16 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;">Post #1 from 2010 has several threads on the issue... </div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>Taras</b> on <b>July 24, 2014, 07:51:15 AM</b>
+					<hr />
+					<div style="margin: 0 5ex;">I just looked at this thread before it was super-bumped...<br /><br />Must be a sign, HL3 confirmed</div>
+					<br />
+					<hr size="2" width="100%" />
+					Title: <b>Re: Strange block 74638</b><br />
+					Post by: <b>allyouracid</b> on <b>November 28, 2015, 01:36:50 PM</b>
+					<hr />
+					<div style="margin: 0 5ex;">Hey guys,<br /><br />first off: I&#039;m very sorry to be a grave digger. But I have this (already solved) incident in my mind since I read about it, which was quite a while after it occurred.<br /><br />Now, I thought about what would happen if the one who generated that transaction had malicious intents. Let&#039;s make a thought play:<br />Transaction was made and someone - let&#039;s call him Bob - now holds more than 184bn BTC in his wallet. Knowing the transaction will be detected soon, Bob is in a hurry.<br /><br />He moves his coins over to an Altcoin exchange and sells whatever he can for Altcoins, crashing the price of e.g. Litecoin, DASH and what not else.<br /><br />Now, Bob moves his fraudulently generated DASH, Litecoin etc. to his wallets. He has made one hell of a gain, waiting for things to calm, so he can sell his Altcoins back for Bitcoin.<br /><br />Meanwhile, the incident was detected and five hours later, a &quot;rollback&quot; - the hardfork - was decided upon and done.<br /><br />What happens now? The Altcoin exchange has some serious trouble: many, many users now have sold Litecoin and DASH for Bitcoins which don&#039;t exist, anymore. As the exchange isn&#039;t able to pay (let users withdraw their non existing BTC), but the Altcoins are already withdrawn by Bob, what would happen next?<br /><br />Would that just be a &quot;shit happens&quot; situation, or would the Altcoins which are affected also be forced to do a hardfork?<br /><br /><br />Anyone who is interested in continuing this thought is welcome to do so! :)</div>
+					<br /><br />
+					<div align="center" class="smalltext">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">Powered by SMF 1.1.19</a> | 
+<a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">SMF &copy; 2006-2009, Simple Machines</a>
+		</span></div>
+				</td>
+			</tr>
+		</table>
+++++

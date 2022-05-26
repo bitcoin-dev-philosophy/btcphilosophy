@@ -162,4 +162,26 @@ include::{d}/maxwelllayering.adoc[]
 
 :d: when-shit-hits-the-fan
 
-//include::{d}/townsdisclosure.adoc[]
+include::{d}/townsdisclosure.adoc[]
+
+include::{d}/bishopdisclosure.adoc[]
+
+include::{d}/maxwelldisclosure.adoc[]
+
+include::{d}/wikivulns.adoc[]
+
+include::{d}/nakamotovuln1.adoc[]
+
+include::{d}/garzikvuln2.adoc[]
+
+include::{d}/nakamotovuln2.adoc[]
+
+include::{d}/andresenbip50.adoc[]
+
+include::{d}/wuillebip66.adoc[]
+
+include::{d}/wuillevuln3.adoc[]
+
+include::{d}/maxwellvuln3.adoc[]
+
+include::{d}/bitcoinorgsplit.adoc[]

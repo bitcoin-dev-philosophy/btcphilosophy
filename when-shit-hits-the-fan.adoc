@@ -111,8 +111,10 @@ The thread that led up to this email were discussing if, when, and how
 to disclose vulnerabilities to alt-coins and other implementations of
 Bitcoin. There are no clear answers here. "Helping the good guys"
 seems like a sensible thing to do, but who decides who they are and
-where do you draw the line? Bryan Bishop argued that helping altcoins
-and even scamcoins defend against security exploits is a moral duty.
+where do you draw the line? Bryan Bishop
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014983.html[argued
+that] helping altcoins and even scamcoins defend against security
+exploits is a moral duty.
 
 [quote, Bryan Bishop in thread "Responsible disclosure of bugs", Bitcoin-dev email list]
 ____
@@ -126,9 +128,10 @@ receiving knowledge with more serious direct or indirect impact than
 originally described.
 ____
 
-Also leading up to Town's email above was a post from Gregory Maxwell,
-where he argued that security vulnerabilities could be more severe than
-they appear.
+Also leading up to Town's email above was
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014977.html[a
+post from Gregory Maxwell], where he argued that security
+vulnerabilities could be more severe than they appear.
 
 [quote, Gregory Maxwell in thread "Responsible disclosure of bugs", Bitcoin-dev email list]
 ____
@@ -168,7 +171,7 @@ they are today.
 The Bitcoin wiki has
 https://en.bitcoin.it/wiki/Common_Vulnerabilities_and_Exposures[a list
 of common vulnerabilities and exposures]
-(https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures[CVEs])
+(CVEs)
 that Bitcoin has gone through. This section is a little exposé of some
 of the security issues and incidents from the early years of
 Bitcoin. We won't cover them all, but we have selected a few that we

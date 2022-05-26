@@ -6,10 +6,11 @@
 * Date copied: 2022-05-25
 ****
 ////
-This resource was created by going to the linked source, chose the
+This resource was created by going to the linked source, choose the
 "print" option, copy the source from the "print page", paste the
 content <table> element into a passthrough block using ++++, add
-the .quote style which is also copied from the print page source.
+the .quote style, which is also copied from the print page source, to
+btcphilosophy.css file.
 
 I don't know how to make a style element "local" so that it doesn't
 interfere with other contents styling. But if it should interfere, we
@@ -18,15 +19,6 @@ should rename the quote class used here to eg bitcointalkquote.
 Converting this to asciidoctor would be too much hassle
 ////
 ++++
-<style type="text/css">
-			.quote
-			{
-				font-size: x-small;
-				border: 1px solid black;
-				margin: 1px;
-				padding: 1px;
-			}
-		</style>
 		<table width="90%" cellpadding="0" cellspacing="0" border="0">
 			<tr>
 				<td>

@@ -1,0 +1,76 @@
+=== Bryan Bishop - Responsible disclosure of bugs
+
+****
+* Source: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014983.html
+* Author: Bryan Bishop
+* Date copied: 2022-05-26
+****
+
+[subs=macros]
+....
+On Mon, Sep 11, 2017 at 10:37 PM, Anthony Towns via bitcoin-dev
+<bitcoin-dev at lists.linuxfoundation.org> wrote:
+> All of those things seem like they'd help not just altcoins but bitcoin
+> investors/traders too, so it's not even a trade-off between classes of
+> bitcoin core users.  And if in the end various altcoins aren't able to
+> keep up with security fixes, that's probably valuable information to
+> provide to the market...
+
+I have a reply to your point, but I want to clarify first that I am
+not trying to provide any sort of criticism of your character, and to
+any extent that my text is misinterpreted that way, that's entirely my
+fault here. Anyway, here goes.
+
+It's not enough to defend bitcoin and its users from active threats,
+there is a more general responsibility to defend all kinds of users
+and different software from many kinds of threats in whatever forms,
+even if folks are using stupid and insecure software that you
+personally don't maintain or contribute to or advocate for. Handling
+knowledge of a vulnerability is a delicate matter and you might be
+receiving knowledge with more serious direct or indirect impact than
+originally described.
+
+Besides the moral and ethical reasons to not unduly accelerate the
+exploitation of a vulnerability, there is also a reputational
+standpoint to consider, in that your position that your own (security)
+work is credible is actually harmed by showing negative care for other
+works by being first to publish either insecure software or knowledge
+of a vulnerability. And sometimes the opposite is true: by not
+disclosing knowledge of how a design is broken to someone inviting its
+review, you're showing negative care in that way too, such as by
+unintentionally encouraging the implementation of really bad ideas or
+entirely novel misunderstandings of what you once thought were clear
+concepts. So there is a difficult path to walk and especially in
+security not all may be as it seems; caution is highly recommended.
+
+Yes it would be good for "the market" to "get the signal" that
+altcoins are insecure, and that some altcoin vendors are literally and
+actively malicious entities, but I think everyone needs to take a step
+back here and very carefully consider the color of their hats,
+including those who advocate in the name of insecure downstream/forked
+software.
+
+The downside of the approach I've advocated for is that it requires
+knowledge, thinking and outsmarting the red teams; I am certainly
+aware of the allure of the approaches that involve absolutist
+statements like "anything weak [including bitcoin if it does have
+weaknesses] deserves to die and be actively exploited" but it's not
+something I am interested in espousing...nor do I think it would be
+healthy for this community to internalize that perspective. Instead we
+should continue to work on highly defensible software, and keep
+vigilant in regards to security. In "the [civilized] garden" I would
+expect there to be a general understanding that people collaborate and
+work together to build highly defensible evolving systems even if
+there exists knowledge of vulnerabilities. But we shouldn't be
+surprised when we don't go out of our way to contribute to
+alternative/parasitic systems... and we shouldn't be encouraging each
+other to actively bring about the eschaton by way of mishandling
+knowledge of vulnerabilities...
+
+I know these issues are difficult to get a handle on. Hopefully I've
+provided some useful perspective.
+
+- Bryan
+http://heybryan.org/
+1 512 203 0507
+....
