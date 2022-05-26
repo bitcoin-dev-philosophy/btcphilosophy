@@ -68,7 +68,7 @@ include::{d}/bitcoinqakyc.adoc[]
 
 == Finite supply
 
-:d: finitesupply
+:d: finite-supply
 
 include::{d}/wuillesupply.adoc[]
 
@@ -104,7 +104,7 @@ include::{d}/songcostsplit.adoc[]
 
 == Adversarial thinking
 
-:d: adversarialthinking
+:d: adversarial-thinking
 
 include::{d}/poelstrasecurityassumptions.adoc[]
 
@@ -120,7 +120,7 @@ include::{d}/voskuilresistance.adoc[]
 
 == Open source
 
-:d: opensource
+:d: open-source
 
 include::{d}/osd.adoc[]
 
@@ -160,3 +160,6 @@ include::{d}/maxwelllayering.adoc[]
 
 == When shit hits the fan
 
+:d: when-shit-hits-the-fan
+
+//include::{d}/townsdisclosure.adoc[]
