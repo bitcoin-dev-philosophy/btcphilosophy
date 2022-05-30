@@ -226,9 +226,4 @@ information sharing agreements (the EU for example).
 [[no-kyc-only]]
 ===== no-KYC only.
 
-image:https://raw.githubusercontent.com/BitcoinQnA/noKYConly/master/images/logo%20dark.png[image,width=250,height=250]
-
-https://twitter.com/BitcoinQ_A[By Bitcoin Q+A] |
-http://stacking.tips[Support] | https://bitcoiner.guide[More
-resources] +
- +
+image:logo%20dark.png[width=250,height=250]

@@ -144,7 +144,7 @@ which are nearly indistinguishable until SegWit activates, at which
 point you can see v0.12 suddenly syncing much faster since it's
 performing fewer computations.
 
-image:https://blog.lopp.net/content/images/2022/02/v12-v-13-performance.png[image,width=1284,height=795]
+image:v12-v-13-performance.png[image,width=1284,height=795]
 
 ==== A Streak of Performance Gains
 
