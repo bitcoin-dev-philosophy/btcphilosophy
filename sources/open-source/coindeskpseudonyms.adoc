@@ -1,0 +1,179 @@
+=== CoinDesk - Many Bitcoin Developers Are Choosing to Use Pseudonyms – For Good Reason
+
+****
+* Source: https://www.coindesk.com/markets/2020/06/29/many-bitcoin-developers-are-choosing-to-use-pseudonyms-for-good-reason/
+* Author: Alyssa Hertig
+* Date copied: 2022-06-08
+****
+
+
+==== Whether out of concern for personal security or a desire to preserve privacy, many Bitcoin developers are known to the world only by their pseudonyms.
+
+By Alyssa Hertig
+
+Jun 29, 2020 at 9:01 a.m. UTC
+
+Updated Sep 14, 2021 at 8:57 a.m. UTC
+
+_"Here lies the_ huge _irony in this discussion. Persistent pseudonyms
+aren't ways to hide who you are. They provide a way to be who you are.
+You can finally talk about what you really believe; your real politics,
+your real problems, your real sexuality, your real family, your real
+self."_ +
+_— Engineer_
+https://web.archive.org/web/20111123160600/http://www.marrowbones.com/commons/technosocial/2011/07/on_pseudonymity_privacy_and_re.html[_Kee
+Hinckley_]__ __
+
+Fiatjaf is a pseudonymous Bitcoin developer in the Lightning community
+where he contributes to LNURL. He’s also working on Etleneum, his
+"link:/tech/2020/06/12/why-this-dev-built-a-centralized-ethereum-on-top-of-bitcoins-lightning-network/[centralized
+Ethereum]" app that uses the Lightning Network for faster and more
+scalable link:/about/bitcoin/[bitcoin] payments. Like many other bitcoin
+users, Fiatjaf doesn't want to expose his real name to the whole world.
+He worries his bitcoin software projects could make him and his family a
+target for criminals. 
+
+As a resident of Brazil, where the crime rate is
+https://en.wikipedia.org/wiki/Crime_in_Brazil[unusually high], Fiatjaf
+is particularly concerned for his safety. "I think in Brazil criminals
+are greater than in other places," he said. 
+
+He also worries that if the price of bitcoin skyrockets, or "goes to the
+moon," he could be painting a target on his back as a public figure in
+the Bitcoin space.
+
+"Local criminals might want to take my bitcoin. They'd see my name and
+think, 'Oh this guy is a local guy, not using any special precautions.
+He may be very rich because he's using bitcoins.'" he said.
+
+Though Fiatjaf doesn’t want to overreact to his safety concerns, he sees
+the threat of criminal activity in Brazil as enough of a potential peril
+to adopt a pseudonym as he carries out his work as a bitcoin developer. 
+
+Fiatjaf is part of a larger trend that isn't openly talked about much.
+He's one of dozens of developers working in the Bitcoin sphere choosing
+to conceal their real names. 
+
+==== Cypherpunk roots and pseudonyms
+
+This widespread pseudonymity makes sense seeing as Bitcoin's culture
+puts so much emphasis on privacy. 
+
+The great mystery of Bitcoin is no one knows the real identity of its
+creator, who went by the moniker link:/people/satoshi-nakamoto/[Satoshi
+Nakamoto]. He, she or they released the Bitcoin software in 2010, posted
+on the Bitcoin forums regularly until 2011 and then disappeared.
+
+Nakamoto's pseudonym set the tone for other Bitcoin developers to use
+fake names. 
+
+Also, privacy is a prevalent theme in Bitcoinland. The digital currency
+was born out of the
+link:/markets/2016/04/09/bitcoin-and-the-rise-of-the-cypherpunks/[cypherpunk
+movement], in which a loose worldwide group of cryptographers have
+promoted digital privacy and security technologies since the 1990s in
+hopes of bringing about positive social change.
+
+"Being able to minimize what other people know about you is literally
+the theme of the first paragraph of the Bitcoin white paper,"
+pseudonymous bitcoin researcher 0xB10C noted.
+
+To try to meet that very goal, many bitcoin developers have devoted
+their research to improving Bitcoin's privacy.
+
+"Privacy should be a basic human right. As I am, in fact, a basic human
+of indeterminate detail, I would like to exercise that right," said
+pseudonymous Lightning developer ZmnSCPxj, who receives funding from
+link:/markets/2019/12/11/square-crypto-bankrolls-star-lightning-developer-known-as-zmnscpxj/[Square
+Crypto] to work on Bitcoin development. On his
+https://zmnscpxj.github.io/about.html[website], ZmnSCPxj describes
+himself as a "randomly-generated Internet person."
+
+ZmnSCPxj is one of the most frequent posters to the Lightning mailing
+list, making several proposals (often related to improving privacy) and
+responding to others' posts with criticism and other feedback.
+
+==== Personal protection
+
+Similar to Fiatjaf, many developers choose to use pseudonyms out of an
+abundance of caution.
+
+Samourai Wallet, founded in 2015, allows users to make more private
+bitcoin transactions. The two co-founders of the wallet chose pseudonyms
+when they launched the wallet partly for "personal protection" reasons.
+
+"What we're doing is going to offend *someone*," SW told CoinDesk. "That
+could be from competitors or angry people online who feel that we're a
+threat, to — whoever." 
+
+Other developers worry that governments won't like what they're up to,
+fearing persecution or retribution for their involvement in an
+independent monetary system that challenges the status quo. While many
+governments have welcomed Bitcoin and blockchain technology as
+innovations,
+https://www.visualcapitalist.com/mapped-cryptocurrency-regulations-around-the-world[others]
+have taken a critical view of the new technology.
+
+"There is always a possibility of Bitcoin becoming unpopular with some
+government, thus it is always safer to simply avoid possible conflicts
+with local governments by making it unclear who exactly I am," ZmnSCPxj
+told CoinDesk.
+
+"Alternately, it may become _too_ popular, and the government might want
+to acquire more of it by other means," he added.
+
+Not everyone sees the government as a threat, however.
+
+"I'm not paranoid enough to be afraid of the government. Google and
+Facebook already know my name and they can easily link my name with my
+pseudonym. So I'm not targeting them," Fiatjaf said.
+
+==== Building a standalone pseudonymous reputation
+
+Developers gave other reasons beyond feeling threatened. For some, it’s
+a simple matter of keeping their private lives private.
+
+"When I started working on Bitcoin I didn't see the need for having my
+'real name' attached to my work. I was working for a company totally
+unrelated to Bitcoin. They didn't really need to know what I do in my
+free time. But it wouldn't have been a problem if they knew," 0xB10C
+told CoinDesk.
+
+Now a
+https://twitter.com/bergealex4/status/1271832445747433472[well-respected
+developer] in the space, ZmnSCPxj was initially worried about
+embarrassing himself when he started submitting his ideas.
+
+"My initial reason [for using a pseudonym] was simply that I was
+concerned [about] making a massive mistake; thus ZmnSCPxj was originally
+intended to be a disposable pseudonym that could be abandoned in such a
+case. However it seems to have garnered a mostly positive reputation, so
+I have retained it," he told CoinDesk.
+
+Conversely, SW and TDevD wanted to use pseudonyms as they launched
+Samourai Wallet because the duo was already known in the Bitcoin world
+by their real names before they created their privacy-focused bitcoin
+wallet. 
+
+"We didn't want it to be about personalities or anything. A lot of us
+are known inside of the space, outside of the Samourai project. And we
+didn't want it to be about our personal reputation. We wanted the
+project to stand on its own merits," SW said.
+
+==== Freedom to be who you are
+
+For others, anonymity provides a sort of end run around exclusion in an
+industry that tends to be dominated by a typical demographic. In such
+cases, pseudonyms truly do provide a way to “be who you are.”
+
+"[M]inorities of all kinds (economic, racial, communal, gender, etc) may
+not be confident in exposing identities easily traceable to their
+person, especially in contributing to communities where that minority is
+underrepresented,"  ZmnSCPxj said. 
+
+"It is important to realize that the Earth is large and conditions in
+various points on it can vary tremendously, even in local social,
+governmental, or economic states, and habits and attitudes developed as
+protection against prejudices of local communities may prevent
+participation with the real identity even in online communities. But
+participation in online communities may be enabled by pseudonyms.”

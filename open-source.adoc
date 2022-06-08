@@ -175,6 +175,73 @@ contribute to the code, re-use the code, or review the code, without
 asking for permission. Open source has become the gold standard of
 Bitcoin software licensing.
 
+Not having to ask for permission to develop Bitcoin software brings an
+interesting and important option to the table. You can write and
+publish code, in Bitcoin Core or any other open source projects,
+without revealing your identity.
+
+Many developers employ this option by operating under a pseudonym
+which they try to keep detached from their true identity. The reasons
+for doing this can vary from developer to developer. One pseudonymous
+user is ZmnSCPxj. He contributes to, among other projects, Bitcoin
+Core and Core Lightning, one of several implementations of Lightning
+Network. https://zmnscpxj.github.io/about.html[He writes] on his web page:
+
+[quote,ZmnSCPxj on his GitHub page]
+____
+I am ZmnSCPxj, a randomly-generated Internet person. My pronouns are
+he/him/his.
+
+I understand that humans instinctively desire to know my
+identity. However, I think my identity is largely immaterial, and
+prefer to be judged by my work.
+
+If you are wondering whether to donate or not, and wondering what my
+cost of living or my income is, please understand that properly
+speaking, you should donate to me based on the utility you find my
+articles and my work on Bitcoin and the Lightning Network.
+____
+
+In his case, the reason for using the pseudonym is to be judged by his
+merits, not by the person or persons behind the
+pseudonym. Interestingly, he
+https://www.coindesk.com/markets/2020/06/29/many-bitcoin-developers-are-choosing-to-use-pseudonyms-for-good-reason/[told
+CoinDesk] who wrote an article about pseudonymous developers, that
+the pseudonym was created for a different reason.
+
+[quote,ZmnSCPxj quote from "Many Bitcoin Developers Are Choosing to Use Pseudonyms – For Good Reason",CoinDesk]
+____
+My initial reason [for using a pseudonym] was simply that I was
+concerned [about] making a massive mistake; thus ZmnSCPxj was
+originally intended to be a disposable pseudonym that could be
+abandoned in such a case. However it seems to have garnered a mostly
+positive reputation, so I have retained it,
+____
+
+Using a pseudonym thus allows you to speak more freely without putting
+your personal reputation at risk should you say something stupid or
+make some big mistake. As it turned out, his pseudonym got very
+reputable and
+https://twitter.com/spiralbtc/status/1204815615678177280[he even got a
+development grant], which in itself is a testament to Bitcoin's
+permissionless nature.
+
+Arguably, the most well-known pseudonym in Bitcoin is Satoshi
+Nakamoto. It's unclear what his reasons for using a pseudonym was, but
+in hindsight, it was probably a good decision for multiple reasons:
+
+* As many people speculate that Nakamoto has a lot of bitcoin, it's
+imperative for his financial and personal safety to keep his identity
+unknown.
+* Since his identity is unknown, there is no person to prosecute,
+  giving various government authorities a hard time.
+* There is no authoritative person to look up to, making Bitcoin more
+  meritocratic and resilient against blackmailing.
+
+Notice how these points don't just hold for Satoshi Nakamoto, but for
+anyone who works in Bitcoin or holds significant amounts of the
+currency, to varying degrees.
+
 [[selectioncryptography]]
 === Selection cryptography
 
