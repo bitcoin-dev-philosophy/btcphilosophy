@@ -128,6 +128,10 @@ include::{d}/loppwhocontrols.adoc[]
 
 include::{d}/lombrozomerge.adoc[]
 
+include::{d}/zmnscpxjabout.adoc[]
+
+include::{d}/coindeskpseudonyms.adoc[]
+
 include::{d}/maxwellselection.adoc[]
 
 include::{d}/atackreview.adoc[]
