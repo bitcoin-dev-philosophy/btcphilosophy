@@ -1,7 +1,6 @@
 === Chris Belcher - Bitcoin wiki page on Privacy
 
 ****
-
 * Source: https://en.bitcoin.it/Privacy
 * Author: Chris Belcher (and others)
 * Date copied: 2022-03-07

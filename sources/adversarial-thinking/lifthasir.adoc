@@ -1,6 +1,6 @@
 === Ragnar Lifthrasir - Twitter thread on Adversarial thinking
-****
 
+****
 * Source: https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking
 * Author: Ragnar Lifthrasir
 * Date copied: 2022-03-07

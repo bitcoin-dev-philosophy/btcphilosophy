@@ -1,12 +1,10 @@
 === chytrik - How can we trust supply won't be increased in 2140 by just a few lines of code?
-****
 
+****
 * Source: https://bitcoin.stackexchange.com/a/106830/69518
 * Author: User chytrik on Bitcoin Stack Exchange
 * Date copied: 2022-03-07
 ****
-
-
 
 The bitcoin network is composed of 'bitcoin full nodes', which are computers located all around the world, each one running independently to verify the state of the network.
 

@@ -1,7 +1,6 @@
 === Corallo on trustlessness
 
 ****
-
 * Source: https://btctranscripts.com/baltic-honeybadger/2018/trustlessness-scalability-and-directions-in-security-models/
 * Author: Matt Corallo, transcribed by Bryan Bishop
 * Date copied: 2022-03-04

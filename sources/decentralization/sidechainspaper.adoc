@@ -1,7 +1,6 @@
 === Paper: Enabling Blockchain Innovations with Pegged Sidechains
 
 ****
-
 * Source: https://www.blockstream.com/sidechains.pdf
 * Author: Adam Back, Matt Corallo, Luke Dashjr, Mark Friedenbach, Gregory Maxwell, Andrew Miller, Andrew Poelstra, Jorge Timón, and Pieter Wuille
 * Date copied: 2022-05-18

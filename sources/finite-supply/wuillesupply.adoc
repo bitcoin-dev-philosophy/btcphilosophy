@@ -1,6 +1,6 @@
 === Pieter Wuille - Will there be 21 million bitcoins eventually?
-****
 
+****
 * Source: https://bitcoin.stackexchange.com/a/38998/69518
 * Author: Pieter Wuille
 * Date copied: 2022-03-07

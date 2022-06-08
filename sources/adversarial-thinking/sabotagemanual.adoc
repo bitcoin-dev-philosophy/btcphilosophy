@@ -1,7 +1,6 @@
 === Simple Sabotage Field Manual
 
 ****
-
 * Source: https://archive.org/details/SimpleSabotageFieldManualStrategicServicesProvisional
 * Author: Office of Strategic Services, United States
 * Date copied: 2022-03-07

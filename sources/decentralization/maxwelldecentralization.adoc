@@ -1,7 +1,6 @@
 === Gregory Maxwell On decetralization
 
 ****
-
 * Source: https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/
 * Author: Gregory Maxwell (nullc)
 * Date copied: 2022-03-04

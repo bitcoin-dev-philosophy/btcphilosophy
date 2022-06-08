@@ -1,7 +1,6 @@
 === Pieter Wuille on trustlessness
 
 ****
-
 * Source: https://bitcoin.stackexchange.com/questions/45670/can-a-closed-source-wallet-ever-be-completely-trust-less/45674#45674
 * Author: Pieter Wuille
 * Date copied: 2022-03-04

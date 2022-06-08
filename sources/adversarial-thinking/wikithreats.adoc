@@ -1,6 +1,6 @@
 === Bitcoin Wiki - Weaknesses
-****
 
+****
 * Source: https://en.bitcoin.it/wiki/Weaknesses
 * Author: Various
 * Date copied: 2022-03-07
