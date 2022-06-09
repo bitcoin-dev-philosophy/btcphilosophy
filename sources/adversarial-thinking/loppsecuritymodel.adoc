@@ -1,6 +1,6 @@
 === Jameson Lopp - Bitcoin’s Security Model: A Deep Dive
-****
 
+****
 * Source: https://blog.lopp.net/bitcoins-security-model-a-deep-dive/
 * Author: Jameson Lopp
 * Date copied: 2022-03-07

@@ -1,7 +1,6 @@
 === Gregory Maxwell - on privacy
 
 ****
-
 * Source: https://bitcointalk.org/index.php?topic=334316.msg3588908#msg3588908
 * Author: Gregory Maxwell
 * Date copied: 2022-03-07

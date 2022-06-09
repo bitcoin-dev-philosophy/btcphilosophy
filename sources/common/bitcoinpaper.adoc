@@ -1,7 +1,6 @@
 === Bitcoin paper
 
 ****
-
 * Source: https://bitcoin.org/bitcoin.pdf
 * Author: Satoshi Nakamoto
 * Date copied: 2022-03-04

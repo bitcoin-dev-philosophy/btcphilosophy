@@ -1,7 +1,6 @@
 === Pieter Wuille On neutrality
 
 ****
-
 * Source: https://bitcoin.stackexchange.com/a/92055/69518
 * Author: Pieter Wuille
 * Date copied: 2022-03-04

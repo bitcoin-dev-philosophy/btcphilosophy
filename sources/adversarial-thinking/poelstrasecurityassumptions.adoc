@@ -1,7 +1,6 @@
 === Andrew Poelstra on security assumptions
 
 ****
-
 * Source: https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/
 * Author: Andrew Poelstra, transcribed by Bryan Bishop
 * Date copied: 2022-03-04

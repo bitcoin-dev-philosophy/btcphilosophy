@@ -1,4 +1,5 @@
 === The decentralist perspective, or why Bitcoin might need small blocks
+
 ****
 * Source: https://bitcoinmagazine.com/technical/decentralist-perspective-bitcoin-might-need-small-blocks-1442090446
 * Author: Aaron Van Wirdum
