@@ -175,6 +175,8 @@ contribute to the code, re-use the code, or review the code, without
 asking for permission. Open source has become the gold standard of
 Bitcoin software licensing.
 
+=== Pseudonymous development
+
 Not having to ask for permission to develop Bitcoin software brings an
 interesting and important option to the table. You can write and
 publish code, in Bitcoin Core or any other open source projects,
