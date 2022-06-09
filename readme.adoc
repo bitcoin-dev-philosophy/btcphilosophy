@@ -1,7 +1,7 @@
 == About this book
 
 _Bitcoin Development Philosophy_ is a guide for new Bitcoin developers
-who already understand the basics of, for example proof of work, block
+who already understand the basics of, for example, proof of work, block
 building, and the transaction life cycle, who want to level-up and
 gain a deeper understanding of Bitcoin's design tradeoffs and
 philosophy. It should help new developers absorb the most important
