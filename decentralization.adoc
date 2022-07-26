@@ -78,7 +78,7 @@ enter the blockchain.
 Also, the lack of censorship resistance would allow the censor
 to coerce users into adopting new system rules. For example,
 they can force a change where they are allowed to inflate the money
-supply to enrich themselves. In such an event, A user verifying blocks has
+supply to enrich themselves. In such an event, a user verifying blocks has
 three options for how to handle the changed rules:
 
 * Adopt: Accept the changes and adopt them into its full node.

@@ -16,7 +16,7 @@ These discussion questions are not just a recap of the content in "Bitcoin devel
 
 * Trustlessness is often a spectrum, not binary. Which aspects of Bitcoin are rather trustless, and which typically involve a higher level of trust? Can they be mitigated?
 * You want to run a full node to be able to fully validate all transactions. You download Bitcoin Core from https://bitcoin.org/en/download. Where did you place trust, and where are you fully trustless?
-* Why can't you build a trustless system on top of a trusted system?
+* Can you build a trustless system on top of a trusted system?
 
 
 === Adversarial thinking
