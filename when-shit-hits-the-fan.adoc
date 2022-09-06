@@ -218,7 +218,7 @@ immediately fails.
 ----
 
 Satoshi made this change locally and built an executable binary with
-version 0.3.5 from it and posted on Bitcointalk forum "`*** ALERT ***
+version 0.3.5 from it and posted on Bitcointalk forum "`\\*** ALERT \***
 Upgrade to 0.3.5 ASAP`", urging users to install this binary version
 of his, without presenting the source code for it.
 
@@ -290,7 +290,7 @@ multiple reasons:
 
 * Satoshi made a binary-only release of 0.3.5 containing the fix. No
 patch or code was provided, maybe as a measure to obfuscate the issue.
-* 0.3.5 didn't even work.
+* 0.3.5 https://bitcointalk.org/index.php?topic=626.msg6455#msg6455[didn't even work].
 * The fix in 0.3.6 was actually a <<historic-upgrades, hard fork>>.
 
 Another debatable thing is whether it's good or bad that
@@ -380,7 +380,7 @@ ____
 
 He wanted people to download block data from a specific user,
 knightmb, who had published his blockchain as it appeared on his disk,
-in blkXXXX.dat and blkindex.dat files. The reason for downloading the
+the files blkXXXX.dat and blkindex.dat. The reason for downloading the
 blockchain data this way, as opposed to synchronizing from scratch, was
 said to reduce network bandwidth bottlenecks.
 
@@ -395,8 +395,8 @@ Again, people seemed to go along with this, and the reversal of the
 invalid block and its successors was successful. The miners started
 working on a new successor to block
 https://mempool.space/block/0000000000606865e679308edf079991764d88e8122ca9250aef5386962b6e84[74637]
-and according to the block's timestamp, a successor appeared at 1:53
-am, about 8 hours after the issue was detected. At 10:10 AM on August
+and according to the block's timestamp, a successor appeared at 23:53
+UTC, about 6 hours after the issue was discovered. At 08:10 on August
 16 around block 74689, it seems the new chain had overtaken the old
 chain, and all non-upgraded nodes reorged to follow the new
 chain. This is the deepest reorg, 52 blocks, in Bitcoin's history.
@@ -415,8 +415,8 @@ wiped out in a deep reorg, why would you waste resources on mining
 doomed blocks?
 
 You might also think that it's a bit fishy to, as suggested by
-Nakamoto, download the blockchain, including the UTXO, from a random
-dude's hard drive. If so, you're right; that is fishy.
+Nakamoto, download the blockchain, including the UTXO set, from a
+random dude's hard drive. If so, you're right; that is fishy.
 
 Given the circumstances, this emergency response was a
 sensible one. There's an important difference between this case and
