@@ -19,12 +19,6 @@ These discussion questions are not just a recap of the content in "Bitcoin devel
 * Can you build a trustless system on top of a trusted system?
 
 
-=== Adversarial thinking
-
-* What is a sybil attack, and what makes a decentralized network so prone to it?
-* Why is it important that all players in the Bitcoin network - and not just developers - think adversarially?
-
-
 === Privacy
 
 * What are some important benefits a user gains when he maintains good privacy when interacting with Bitcoin? What are some altruistic benefits for the network?
@@ -38,10 +32,20 @@ These discussion questions are not just a recap of the content in "Bitcoin devel
 * What parameters could Satoshi have tweaked to change Bitcoin's supply cap? What would change if he had decided to cap the supply to 1 million? What about 1 trillion?
 * Why are some people advocating for an increase in Bitcoin supply? Do you think this will happen?
 
+=== Upgrading
+* What is Speedy Trial and why was it necessary to activate Taproot?
+* Why do we need such a high percentage of miners to upgrade in a softfork? Why is the threshold not just 51%?
+
+
+=== Adversarial thinking
+
+* What is a sybil attack, and what makes a decentralized network so prone to it?
+* Why is it important that all players in the Bitcoin network - and not just developers - think adversarially?
+
 
 === Open source
 
-* Only a handful of maintainers have the necessary GitHub permissions to merge code into into the https://github.com/bitcoin/bitcoin repository. Isn't that at odds with a permissionless network?
+* Only a handful of maintainers have the necessary GitHub permissions to merge code into into the https://github.com/bitcoin/bitcoin[Bitcoin Core] repository. Isn't that at odds with a permissionless network?
 * Is the open source development process prone to a sybil attack? If so, how would you counter that?
 * What are the benefits and downsides of relying on third party open source libraries, and what is the approach taken with Bitcoin Core?
 * In which ways do we need review beyond just code review? How to determine how much review is enough?
