@@ -2,7 +2,7 @@
 == Feedback and contribution
 
 The project is maintained on
-https://github.com/kallerosenbaum/btcphilosophy[Github]. If you have
+https://github.com/bitcoin-dev-philosophy/btcphilosophy[GitHub]. If you have
 any improvements, corrections or suggestions to make, either open a
 new issue there or submit a pull request.
 
@@ -20,7 +20,7 @@ To build
 this book, clone the GitHub repository:
 
 ----
-$ git clone https://github.com/kallerosenbaum/btcphilosophy.git
+$ git clone https://github.com/bitcoin-dev-philosophy/btcphilosophy.git
 $ cd btcphilosophy
 ----
 
