@@ -1,19 +1,20 @@
 == Decentralization
 
 This chapter will discuss what decentralization is and why it’s
-essential. We’ll distinguish between the decentralization of miners
-and full nodes and discuss what they bring to the table for Bitcoin’s
-censorship resistance, one of the most central properties of Bitcoin.
-The discussion then shifts towards understanding neutrality, or
-permissionlessness towards users, miners, and developers, which is
-a necessary property of a decentralized system. Lastly, we’ll
-touch upon how hard it can be to grasp a decentralized system like
-Bitcoin and present some mental models that might help you grok it.
+essential for Bitcoin to function. We’ll distinguish between the
+decentralization of miners and that of full nodes and discuss what
+they bring to the table for Bitcoin’s censorship resistance, one of
+the most central properties of Bitcoin.  The discussion then shifts
+towards understanding neutrality, or permissionlessness towards users,
+miners, and developers, which is a necessary property of a
+decentralized system. Lastly, we’ll touch upon how hard it can be to
+grasp a decentralized system like Bitcoin and present some mental
+models that might help you grok it.
 
 A system without a central point of control is referred to as being
-_decentralized_. Bitcoin is decentralized to avoid having a central point
+_decentralized_. Bitcoin is designed to avoid having a central point
 of control, or more specifically, a _central point of censorship_.
-Decentralization in Bitcoin is a means to an end: _censorship resistance_.
+Decentralization is a means to achieve _censorship resistance_.
 
 There are two major aspects of decentralization in Bitcoin: Miner
 decentralization and full node decentralization. Miner
@@ -62,26 +63,26 @@ since each signer can fail, or be made to fail, one by one.
 ____
 
 It became clear that using a central server to order transactions was
-not a viable option due to the high risk of censorship. Even if you replace the
-central server with a federation of a fixed set of stem:[n] servers,
-of which at least stem:[m, m \leq n] must all approve of an
-ordering. The problem then shifts to one where users must agree on
-this set of stem:[n] servers and how users replace malicious
-servers with good ones without using a central authority.
+not a viable option due to the high risk of censorship. Even if you
+replace the central server with a federation of a fixed set of
+stem:[n] servers, of which at least stem:[m, m \leq n] must all
+approve of an ordering, you also run into problems. The problem then
+shifts to one where users must agree on this set of stem:[n] servers
+and how users replace malicious servers with good ones without using a
+central authority.
 
-Let's contemplate what could happen in practice if Bitcoin were
-censorable. The censor would apply pressure on users. They could
-require identification, that users declare where their money is coming
-from or what they're buying before their transactions are allowed to
-enter the blockchain.
+Let's contemplate what could happen if Bitcoin were censorable. The
+censor could pressure users to require identification, that users
+declare where their money is coming from, or what they're buying
+before their transactions are allowed to enter the blockchain.
 
-Also, the lack of censorship resistance would allow the censor
-to coerce users into adopting new system rules. For example,
-they can force a change where they are allowed to inflate the money
-supply to enrich themselves. In such an event, a user verifying blocks has
-three options for how to handle the changed rules:
+Also, the lack of censorship resistance would allow the censor to
+coerce users into adopting new system rules. For example, they can
+force a change that allows them to inflate the money supply to enrich
+themselves. In such an event, a user verifying blocks has three
+options for how to handle the changed rules:
 
-* Adopt: Accept the changes and adopt them into its full node.
+* Adopt: Accept the changes and adopt them into their full node.
 * Reject: This leaves the user with a system that doesn't process
 transactions anymore because the censor's blocks are deemed invalid
 by the user's full node.
@@ -149,9 +150,9 @@ decentralization.
 
 === Full node decentralization
 
-We've mostly talked about miner decentralization above and how centralization
-can allow for censorship. But there's also another aspect of decentralization,
-which is full node decentralization.
+We've mostly talked about miner decentralization above and how that
+centralization can allow for censorship. But there's also another
+aspect of decentralization, which is _full node decentralization_.
 
 The importance of full node decentralization is related to
 <<trustlessness,trustlessness>>. Suppose a user stops running their own
@@ -163,34 +164,22 @@ someone else will. Suppose most users are delegating consensus enforcement to a
 trusted entity. In that case, the network can quickly spiral into centralization, and the
 network rules can be changed by conspiring malicious actors.
 
-Aaron Van Wirdum of Bitcoin Magazine
-writes in
-https://bitcoinmagazine.com/technical/decentralist-perspective-bitcoin-might-need-small-blocks-1442090446[his
-Bitcoin Magazine article] about decentralization:
-
-[quote, Aaron Van Wirdum, Bitcoin Magazine]
-____
-An obvious consequence would be that it injects trust in the
-system. Instead of using trustless full nodes, users would, for
-instance, use web-wallets – which obviously require a lot of trust in
-the service. But even solutions such as Simplified Payments
-Verification (SPV) nodes are no better in this regard, as they do not
-verify the consensus rules either.
-____
-
-In the article, Van Wirdum interviews Bitcoin developers about their views on
-decentralization and the risks involved in increasing
-Bitcoin's maximum block size. This discussion was a hot topic during the 2014-2017 era
-when many people argued over increasing the block size limit to
-allow for more transaction throughput.
+In
+https://bitcoinmagazine.com/technical/decentralist-perspective-bitcoin-might-need-small-blocks-1442090446[a
+Bitcoin Magazine article], Aaron Van Wirdum interviews Bitcoin
+developers about their views on decentralization and the risks
+involved in increasing Bitcoin's maximum block size. This discussion
+was a hot topic during the 2014-2017 era when many people argued over
+increasing the block size limit to allow for more transaction
+throughput.
 
 A powerful argument against increasing the block size is that it
 increases the cost of verification (see <<_vertical_scaling,the
-Scaling chapter>>). If verification cost rises, it will push some
-full node users to stop running their full nodes. This, in turn, leads
-to more people not being able to use the system in a
+Scaling chapter>>). If verification cost rises, it will push some full
+node users to stop running their full nodes. This, in turn, leads to
+more people not being able to use the system in a
 trustless way. Pieter Wuille is quoted in the article, where he
-explains the risks in full node centralization.
+explains the risks of full node centralization.
 
 [quote, Pieter Wuille, Bitcoin Magazine]
 ____
@@ -225,7 +214,7 @@ as you please, without asking anyone for permission. This includes
 _mining_, _transacting_ in, and _building protocols and services_ on top of
 Bitcoin.
 
-* If *mining* would have been a permissioned process, you'd need a
+* If *mining* had been a permissioned process, you'd need a
 central authority to select who's allowed to mine. This would most
 likely lead to miners having to sign legal contracts where they agree
 to censor transactions according to the whims of the central
@@ -265,7 +254,10 @@ few actually used ones of these.
 ____
 
 He describes that to achieve permissionlessness, the system [most
-likely] needs its own currency.
+likely] needs its own currency, "`limiting the use cases to
+effectively just cryptocurrencies`". This is because permissionless
+participation, or mining, requires economic incentives built into the
+system itself.
 
 === Grokking decentralization
 
