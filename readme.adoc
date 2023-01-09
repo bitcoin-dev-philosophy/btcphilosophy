@@ -43,12 +43,10 @@ control. We have therefore saved the linked articles locally in this
 repository, along with info on where it was copied from, and when. The
 resources are collected in link:sources/sources.html[a separate
 document] (`sources/sources.adoc`) organized by the chapter they are
-linked from.
-
-The links throughout the chapters refer to the original sources, but
-if you don't have an internet connection, the links appear dead, or
-the content seems severely changed, you can read the content locally
-instead.
+linked from. The links found in the chapters refer to the original
+sources, but if you don't have an internet connection, the links
+appear dead, or the content seems severely changed, you can read the
+content locally instead.
 
 === What to expect
 
