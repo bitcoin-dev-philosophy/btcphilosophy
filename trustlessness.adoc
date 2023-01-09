@@ -25,9 +25,9 @@ In short, the word _trustless_ refers to a property of the Bitcoin
 protocol that means it can logically function without "any trusted
 parties". This is different from the trust that you inevitably have to
 put into the software or hardware you run. More on this trust further
-down this article.
+down this chapter.
 
-In centralized systems, we can rely on a central actor's reputation
+In centralized systems, we rely on a central actor's reputation
 that they've taken care of security, or roll back in case of issues,
 and on the legal system to enforce violations. These trust
 requirements are problematic in pseudonymous decentralized systems. We
@@ -146,7 +146,7 @@ Bitcoin is trustless, but you still have to trust your software and
 hardware to some degree. That's because your software or hardware
 might not be programmed to do what's stated on the box. For example:
 
-* The CPU might be maliciously programmed to detect private key
+* The CPU might be maliciously designed to detect private key
   cryptographic operations and leak the private key data.
 * The operating system's random number generator might not be as
   random as it claims.
@@ -180,7 +180,7 @@ a presentation about Guix]
 (https://www.youtube.com/watch?v=I2iShmUTEl8[video]) that explains why
 trusting the operating system, libraries, and compilers can be
 problematic and how to fix that with a system called Guix, which is
-used by Bitcoin today.
+used by Bitcoin Core today.
 
 [quote, Carl Dong on Guix, Breaking Bitcoin conference 2019]
 ____
@@ -221,14 +221,14 @@ switched it around to highlight the rejection of trust and the
 importance of running a full node].
 
 It's up to the users to decide to what degree they want to verify the
-software they use and the data they receive. As with so many other
-things in Bitcoin, there's a trade-off between convenience and
-trustlessness. It's almost always more convenient to use a custodial
-wallet compared to running Bitcoin Core on your own hardware. However,
-as Bitcoin software is maturing and user interfaces improve, over time
-it should better support users to work towards trustlessness. Also, as
-users gain more knowledge over time, they should be able to gradually
-remove trust from the equation.
+software they use and the blockchain data they receive. As with so
+many other things in Bitcoin, there's a trade-off between convenience
+and trustlessness. It's almost always more convenient to use a
+custodial wallet compared to running Bitcoin Core on your own
+hardware. However, as Bitcoin software is maturing and user interfaces
+improve, over time it should better support users wanting to work
+towards trustlessness. Also, as users gain more knowledge over time,
+they should be able to gradually remove trust from the equation.
 
 Some users <<adversarialthinking, think adversarially>> and verify
 many aspects of the software they run, and reduce their needed trust
@@ -252,10 +252,12 @@ we quickly determined that the issue was also an inflation
 vulnerability with the same root cause and fix.
 ____
 
-Here an anonymous person reported an issue that turned out much worse than the
-reporter realized. This highlights that people who verify the code often report
-security flaws instead of exploiting them. This is beneficial to those who
-aren't able to verify everything themselves. However, users should not trust 
-others to keep them safe but should verify when and what they can; that's how
-you remain as sovereign as possible and how Bitcoin prospers. The more eye-balls
-on the software the less likely it is that security flaws slip through.
+Here an anonymous person reported an issue that turned out much worse
+than the reporter realized. This highlights that people who verify the
+code often report security flaws instead of exploiting them. This is
+beneficial to those who aren't able to verify everything
+themselves. However, users should not trust others to keep them safe
+but should verify when and what they can; that's how you remain as
+sovereign as possible and how Bitcoin prospers. The more eye-balls on
+the software the less likely it is that malicious code and security
+flaws slip through.
