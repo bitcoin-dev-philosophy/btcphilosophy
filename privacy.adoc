@@ -12,7 +12,7 @@ things you can do to improve your, and others' privacy.
 Bitcoin can be described as a pseudonymous, explained soon in
 <<pseudonymity>>, system where users have multiple pseudonyms in the
 form of public keys. At first glance, this looks like a pretty good
-way to keep users from being identified, but it is in fact, really
+way to keep users from being identified, but it is in fact really
 easy to leak private financial information unintentionally.
 
 === What does privacy mean?
@@ -34,24 +34,42 @@ privacy aspects you might not immediately think about. Gregory
 Maxwell,
 https://bitcointalk.org/index.php?topic=334316.msg3588908#msg3588908[on
 the Bitcoin Talk forum], walks us through a lot of good reasons why he
-thinks privacy matters. Among them is <<fungibility,fungibility>>:
+thinks privacy matters. Among them are free market, safety, and human
+dignity:
 
 [quote, Gregory Maxwell, Bitcoin Talk forum]
 ____
-Financial privacy is an essential element to fungibility in Bitcoin:
-if you can meaningfully distinguish one coin from another, then their
-fungibility is weak. If our fungibility is too weak in practice, then
-we cannot be decentralized: if someone important announces a list of
-stolen coins they won't accept coins derived from, you must carefully
-check coins you accept against that list and return the ones that
-fail.  Everyone gets stuck checking blacklists issued by various
-authorities because in that world we'd all not like to get stuck with
-bad coins. This adds friction and transactional costs and makes
-Bitcoin less valuable as a money.
+Financial privacy is an essential criteria for the efficient operation
+of a free market: if you run a business, you cannot effectively set
+prices if your suppliers and customers can see all your transactions
+against your will. You cannot compete effectively if your competition
+is tracking your sales.  Individually your informational leverage is
+lost in your private dealings if you don't have privacy over your
+accounts: if you pay your landlord in Bitcoin without enough privacy
+in place, your landlord will see when you've received a pay raise and
+can hit you up for more rent.
+
+Financial privacy is essential for personal safety: if thieves can see
+your spending, income, and holdings, they can use that information to
+target and exploit you. Without privacy malicious parties have more
+ability to steal your identity, snatch your large purchases off your
+doorstep, or impersonate businesses you transact with towards
+you... they can tell exactly how much to try to scam you for.
+
+Financial privacy is essential for human dignity: no one wants the
+snotty barista at the coffee shop or their nosy neighbors commenting
+on their income or spending habits. No one wants their baby-crazy
+in-laws asking why they're buying contraception (or sex toys). Your
+employer has no business knowing what church you donate to. Only in a
+perfectly enlightened discrimination free world where no one has undue
+authority over anyone else could we retain our dignity and make our
+lawful transactions freely without self-censorship if we don't have
+privacy.
 ____
 
-Maxwell also explains how privacy is important for a free market, your
-personal safety, and human dignity.
+Maxwell also touches on fungibility, discussed <<fungibility,later in
+this chapter>>, and how privacy and law enforcement are not
+contradictory.
 
 [[pseudonymity]]
 === Pseudonymity
@@ -218,13 +236,39 @@ convenience and privacy that works for you.
 [[fungibility]]
 === Fungibility
 
-Fungibility was briefly touched upon in
-<<whyprivacyimportant>>. Fungibility means that one coin is
-interchangeable for any other coin of the same currency. Adam Back and
-Matt Corallo
+Fungibility, in the context of currencies, means that one coin is
+interchangeable for any other coin of the same currency. This funny
+word was briefly touched upon in <<whyprivacyimportant>>. In the
+article discussed there, Gregory Maxwell https://bitcointalk.org/index.php?topic=334316.msg3588908#msg3588908[stated]
+
+[quote, Gregory Maxwell, Bitcoin Talk forum]
+____
+Financial privacy is an essential element to fungibility in Bitcoin:
+if you can meaningfully distinguish one coin from another, then their
+fungibility is weak. If our fungibility is too weak in practice, then
+we cannot be decentralized: if someone important announces a list of
+stolen coins they won't accept coins derived from, you must carefully
+check coins you accept against that list and return the ones that
+fail.  Everyone gets stuck checking blacklists issued by various
+authorities because in that world we'd all not like to get stuck with
+bad coins. This adds friction and transactional costs and makes
+Bitcoin less valuable as a money.
+____
+
+He speaks here of the dangers of lack of fungibility. Suppose that you
+have a UTXO. That UTXO's history can usually be traced back several
+hops, fanning out to multitudes of previous outputs. If any of those
+outputs were involved in something illegal, unwanted, or suspicious
+activity, then some potential recipients of your coin might
+reject it. If you think that your payees will verify your coins
+against some centralized whitelist or blacklist service, you might
+start checking coins you receive too, just to be on the safe side. So
+bad fungibility will bolster even worse fungibility.
+
+Adam Back and Matt Corallo
 https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/[gave
 a presentation about fungibility] at Scaling Bitcoin in Milan
-2016. Back remarked
+2016. They were thinking along the same lines:
 
 [quote, Matt Corallo and Adam Back, Fungibility Overview]
 ____
@@ -238,22 +282,13 @@ into a centralized permissioned system where you have an “IOU” from
 the blacklist providers.
 ____
 
-He speaks here of the dangers of lack of fungibility. A UTXOs
-history can usually be traced back several hops, fanning out to
-multitudes of previous outputs. If any of those outputs were
-involved in something illegal, unwanted, or suspicious activity, then
-some potential recipients of your coin might reject it. If you think
-that your payees will verify your coins against some centralized
-whitelist or blacklist service, you might start checking coins you
-receive too, just to be on the safe side. So bad fungibility will
-bolster even worse fungibility.
-
-Privacy and fungibility go hand-in-hand. Fungibility will weaken if privacy is
-weak, for example, because coins from unwanted persons can become blacklisted.
-Privacy will weaken if fungibility is weak since you have to ask the blacklist
-providers about which coins to accept, possibly revealing your IP address,
-email address, and other sensitive information. They're so intertwined that
-it's hard to talk about them in isolation.
+It seems privacy and fungibility go hand-in-hand. Fungibility will
+weaken if privacy is weak, for example, because coins from unwanted
+persons can become blacklisted.  Privacy will weaken if fungibility is
+weak since you have to ask the blacklist providers about which coins
+to accept, possibly revealing your IP address, email address, and
+other sensitive information. They're so intertwined that it's hard to
+talk about them in isolation.
 
 [[privacymeasures]]
 === Privacy measures
@@ -270,14 +305,14 @@ that Bitcoin privacy often has to do with stuff outside of Bitcoin;
 for example: don't brag about your bitcoins, and use Tor and VPN. The
 post also lists some things directly related to Bitcoin:
 
-Full node:: if you don't use your own full node, you will leak lots of
+Full node:: If you don't use your own full node, you will leak lots of
 information about your wallet to servers on the internet. Running a
 full node is a great first step.
 
 Lightning Network:: Several protocols exist on top of Bitcoin, for
 example, the Lightning Network and Blockstream's Liquid sidechain.
 
-CoinJoin:: a way for multiple people to merge their transactions into
+CoinJoin:: A way for multiple people to merge their transactions into
 one, making it harder to do address clustering.
 
 In
@@ -309,14 +344,12 @@ Bitcoin, as is the case with Lightning Network:
 .Layers on top of Bitcoin can add privacy.
 image::privacy.png[width=50%]
 
-We noted in <<trustlessness,Trustlessness>> that trust can only increase with layers
-on top, but that doesn't
-seem to be the case for privacy, which can be improved or made worse
-arbitrarily in layers on top. Why is that?
-
-Any layer on top of Bitcoin, as explained in
-<<_layered_scaling,Layered scaling>>, must use on-chain transactions
-now and then, otherwise, it wouldn't be "on top of
+We noted in <<trustlessness,Trustlessness>> that the need for trust
+can only increase with layers on top, but that doesn't seem to be the
+case for privacy, which can be improved or made worse arbitrarily in
+layers on top. Why is that? Any layer on top of Bitcoin, as explained
+in <<_layered_scaling,Layered scaling>>, must use on-chain
+transactions now and then, otherwise, it wouldn't be "on top of
 Bitcoin". Privacy-enhancing layers generally try to use the base layer
 as little as possible to minimize the amount of information revealed.
 
