@@ -2,8 +2,8 @@
 
 This chapter will look into Bitcoin's 21 million BTC supply limit, or
 how much is it actually? We'll talk about how this limit is enforced
-and what can you do to verify that it's being respected? We'll then
-look into the crystal ball an have a discussion about the dynamics
+and what can you do to verify that it's being respected. We'll then
+look into the crystal ball and have a discussion about the dynamics
 that come into play in the future when the block reward shifts from
 being subsidy based to fee based.
 
@@ -71,9 +71,9 @@ haven't.
 ____
 
 Even if some full nodes give themselves to the dark side and decide to
-accept blocks with larger coinbase transactions, all other full nodes
-will simply neglect them and continue as usual. Full nodes may
-intentionally or unintentionally (see the
+accept blocks with higher-value coinbase transactions, all other full
+nodes will simply neglect them and continue as usual. Some full nodes
+may intentionally or unintentionally (see the
 <<combined-output-overflow,When shit hits the fan>> chapter) run bad
 software, yet the collective robustly secures the blockchain
 together. Thus you can choose to trust the system without having to
@@ -90,10 +90,10 @@ secure monetary system.
 
 What happens when the block subsidy is zero, or very close to zero
 (but for simplicity assume zero)? At that point, the system's security
-budget will be paid for only through transaction fees. What the future
-holds for us when this happens, we cannot know. The uncertainty
-factors are numerous and we are left to speculations. For example Paul
-Sztorc's contribution to the subject
+will be paid for only through transaction fees. What the future holds
+for us when this happens, we cannot know. The uncertainty factors are
+numerous and we are left to speculations. For example Paul Sztorc's
+contribution to the subject
 https://www.truthcoin.info/blog/security-budget/[in his Truthcoin
 blog] is mostly speculations, but he has at least one solid point (M2,
 as Sztorc refers to, is a measurement of a fiat money supply):
@@ -117,8 +117,9 @@ When transaction fees are the main motivation for mining, the
 incentives shift. For example, if the mempool of a miner doesn't
 contain enough transaction fees, it might become more profitable for
 that miner to rewrite Bitcoin's history rather than to
-extend it. Bitcoin Optech has an explainer on this behavior, called
-_fee sniping_, written by David Harding:
+extend it. Bitcoin Optech has an
+https://bitcoinops.org/en/topics/fee-sniping/[explainer on this
+behavior], called _fee sniping_, written by David Harding:
 
 [quote,"David Harding, fee sniping", Bitcoin Optech website]
 ____
@@ -162,8 +163,7 @@ network? It's impossible to say, but we do know some things:
   still around, it has probably evolved enormously.
 * If an overwhelming economic majority finds it attractive to change
   the rules and introduce for example a perpetual annual 0.1% or 1%
-  monetary inflation, to ensure that the chain keeps marching forward,
-  the supply of bitcoin will no longer be finite.
+  monetary inflation, the supply of bitcoin will no longer be finite.
 * With zero block subsidy and an empty or almost empty mempool, things
   can become shaky due to fee sniping.
 
