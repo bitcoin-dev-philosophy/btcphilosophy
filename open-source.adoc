@@ -1,5 +1,7 @@
 == Open Source
 
+image::opensource-banner.jpg[]
+
 Bitcoin is built using open source software. In this chapter we'll see
 what this means, how maintenance of the software works, how open
 source software in Bitcoin allows for permissionless

@@ -1,5 +1,7 @@
 == Decentralization
 
+image::decentralization-banner.jpg[]
+
 This chapter will discuss what decentralization is and why it’s
 essential for Bitcoin to function. We’ll distinguish between the
 decentralization of miners and that of full nodes and discuss what

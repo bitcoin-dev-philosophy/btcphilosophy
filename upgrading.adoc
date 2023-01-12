@@ -1,5 +1,7 @@
 == Upgrading
 
+image::upgrading-banner.jpg[]
+
 Upgrading Bitcoin in a safe way can be extremely difficult. Some
 changes take multiple years to roll out. In this chapter we'll learn
 about some common vocabulary around upgrading and explore some

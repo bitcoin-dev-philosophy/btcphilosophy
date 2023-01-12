@@ -1,5 +1,7 @@
 == Trustlessness
 
+image::trustlessness-banner.jpg[]
+
 This chapter dissects trustlessness, what it means from a computer
 science perspective, and why Bitcoin has to be trustless to retain its
 value proposition. We then talk about what it means to use Bitcoin in
@@ -73,7 +75,7 @@ https://bitcoin.org/en/bitcoin-core/features/validation[an article on
 the bitcoin.org website] which explains what running a full node, or
 using Bitcoin trustlessly, actually helps you with.
 
-[quote, David Harding, bitcoin.org website] 
+[quote, David Harding, bitcoin.org website]
 ____
 The bitcoin currency only works when people accept bitcoins in
 exchange for other valuable things. That means it’s the people

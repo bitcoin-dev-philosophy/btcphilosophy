@@ -1,5 +1,7 @@
 == When shit hits the fan
 
+image::shtf-banner.jpg[]
+
 Bitcoin is built by people. People write the software, and people then
 run this software. When a security vulnerability or a severe bug is
 discovered (is there really a distinction between the two?), it's

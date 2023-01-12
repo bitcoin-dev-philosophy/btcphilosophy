@@ -1,5 +1,7 @@
 == Scaling
 
+image::scaling-banner.jpg[]
+
 In this chapter, we'll explore how Bitcoin scales, and doesn't
 scale. We'll look a bit into the past to see how people have reasoned
 about scaling in the past. The bulk of this chapter explains various
