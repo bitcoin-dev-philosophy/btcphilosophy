@@ -177,6 +177,7 @@ of the security issues and incidents from the early years of
 Bitcoin. We won't cover them all, but we have selected a few that we
 find extra interesting.
 
+[[cve-2010-5141]]
 ==== 2010-07-28: Spend anyone's coins (CVE-2010-5141)
 
 On July 28 2010, a pseudonymous person by the name ArtForz discovered a
