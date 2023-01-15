@@ -3,9 +3,9 @@
 This chapter addresses _adversarial thinking_, a mindset that focuses
 on what can go wrong and how adversaries might operate. We start out
 by discussing Bitcoin's security assumptions and security model, then
-about how ordinary users can think adversarially to improve their self
-sovereignty and Bitcoin's full node decentralization. We'll look into
-some actual threats to Bitcoin and into the minds of
+we talk about how ordinary users can think adversarially to improve
+their self sovereignty and Bitcoin's full node decentralization. We'll
+look into some actual threats to Bitcoin and into the minds of
 adversaries. Lastly, we'll talk about the _axiom of resistance_ that
 might help you to understand why people are working on Bitcoin in the
 first place.
@@ -82,7 +82,7 @@ ____
 
 He refers to these simplistic narratives as monomania, meaning that by
 focusing only on a single thing, e.g., "just HODL", you stop thinking
-about important stuff like keeping your Bitcoin secure and doing your
+about important stuff like keeping your Bitcoin secure or doing your
 best to use Bitcoin in a trustless manner.
 
 === Threats
@@ -147,10 +147,9 @@ more resistance against a proposed change than there actually is.
 
 This highlights how a determined state can and will do everything in
 their power to destroy their enemy, including breaking it down from
-the inside.
-
-Since Bitcoin is a form of money that competes with established fiat
-currencies, chances are that states will regard Bitcoin as an enemy.
+the inside. Since Bitcoin is a form of money that competes with
+established fiat currencies, chances are that states will regard
+Bitcoin as an enemy.
 --
 
 [[axiomofresistance]]
