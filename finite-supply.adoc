@@ -1,5 +1,7 @@
 == Finite supply
 
+image::finitesupply-banner.jpg[]
+
 This chapter will look into Bitcoin's 21 million BTC supply limit, or
 how much is it actually? We'll talk about how this limit is enforced
 and what can you do to verify that it's being respected. We'll then

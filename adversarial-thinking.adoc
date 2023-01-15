@@ -1,5 +1,7 @@
 == Adversarial thinking
 
+image::adversarialthinking-banner.jpg[]
+
 This chapter addresses _adversarial thinking_, a mindset that focuses
 on what can go wrong and how adversaries might operate. We start out
 by discussing Bitcoin's security assumptions and security model, then

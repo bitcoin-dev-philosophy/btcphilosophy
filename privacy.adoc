@@ -1,5 +1,7 @@
 == Privacy
 
+image::privacy-banner.jpg[]
+
 This chapter deals with how to keep your private financial information
 to yourself. We'll learn what privacy means in the context of Bitcoin,
 why it's important, and what it means that Bitcoin is
