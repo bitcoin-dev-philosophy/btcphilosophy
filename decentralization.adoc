@@ -166,7 +166,7 @@ network rules can be changed by conspiring malicious actors.
 
 In
 https://bitcoinmagazine.com/technical/decentralist-perspective-bitcoin-might-need-small-blocks-1442090446[a
-Bitcoin Magazine article], Aaron Van Wirdum interviews Bitcoin
+Bitcoin Magazine article], Aaron van Wirdum interviews Bitcoin
 developers about their views on decentralization and the risks
 involved in increasing Bitcoin's maximum block size. This discussion
 was a hot topic during the 2014-2017 era when many people argued over

@@ -38,7 +38,7 @@ discord. Staying in harmony (consensus) is one of the biggest
 challenges in Bitcoin development. There are lots of nuances to
 upgrade mechanisms and they might be best understood by studying
 previous upgrades, so this chapter will put much focus on that, but
-We'll start by setting the stage with some vocabulary.
+we'll start by setting the stage with some vocabulary.
 
 === Vocabulary
 
@@ -86,7 +86,7 @@ about Bitcoin's different upgrades and points out how the upgrade
 mechanisms have evolved over time. He explained how Satoshi Nakamoto
 once upgraded Bitcoin through a hard fork.
 
-[quote, Eric Lombrozo: Consensus Rules - Changing them without changing, Breaking Bitcoin conference 2017]
+[quote, Eric Lombrozo: Consensus Rules - Changing them without breaking Bitcoin, Breaking Bitcoin conference 2017]
 ____
 There was actually a hard-fork in bitcoin that Satoshi did that we
 would never do it this way- it’s a pretty bad way to do it. If you
@@ -108,7 +108,9 @@ ____
 
 He points out that this hard fork, intentionally or not, adds
 opportunities for future soft forks, namely the Script operators
-OP_NOP1-OP_NOP10. These have been used for two soft forks so far:
+(opcodes) OP_NOP1-OP_NOP10. We'll look more into <<cve-2010-5141,this
+code change>> in chapter 9. These opcodes have been used for two soft
+forks so far:
 https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki[BIP65]
 (OP_CHECKLOCKTIMEVERIFY), and
 https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki[BIP113]
@@ -333,7 +335,9 @@ ____
 
 From this point forward the discussions were very heated, especially
 around whether `lockinontimeout` should be `true` (as in a user
-activated soft fork) or `false` (as in a miner activated soft fork).
+activated soft fork, refered to as "`BIP8 with forced activation`" by
+Harding) or `false` (as in a miner activated soft fork, refered to as
+"`BIP8 without forced activation`" by Harding).
 
 Among the proposals listed, one of them was titled "`Let’s see what
 happens`". This proposal didn't get much traction for some reason
@@ -355,8 +359,7 @@ something changed:
 ____
 ....
 06:42 < harding> roconnor: is somebody proposing BIP8(3m, false)?  I mentioned that the other day but I didn't see any responses.
-06:43 <@michaelfolkson> If you weren't following everything you'd be running an old version or whatever Core put out
-06:43 < roconnor> I have had shower thoughts of core releasing a point relase who's only different is a relase note item that reads "Do not upgrade to this version if you don't want taproot". :D
+ [...]
 06:43 < willcl_ark_> Amusingly, I was just thinking to myself that, vs this, the SegWit activation was actually pretty straightforward: simply a LOT=false and if it fails a UASF.
 06:43 < maybehuman> it's funny, "let's see what happens" (i.e. false, 3m) was a poular choice right at the beginning of this channel iirc
 06:44 < roconnor> harding: I think I am.  I don't know how much that is worth.  Mostly I think it would be a widely acceptable configuration based on my understanding of everyone's concerns.
