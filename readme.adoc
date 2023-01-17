@@ -1,66 +1,63 @@
 == About this book
 
 _Bitcoin Development Philosophy_ is a guide for new Bitcoin developers
-who already understand the basics of, for example, proof of work, block
-building, and the transaction life cycle, who want to level-up and
-gain a deeper understanding of Bitcoin's design tradeoffs and
+who already understand the basics of concepts and processes such as Proof-of-Work, block
+building, and the transaction life cycle, and who want to level up by
+gaining a deeper understanding of Bitcoin's design trade-offs and
 philosophy. It should help new developers absorb the most important
-lessons of a decade of bitcoin development and discussion, and provide
+lessons of over a decade of Bitcoin development and discussion, and provide
 a context for evaluating new ideas (good ones and bad ones!).
 
 Table of contents overview:
 
 :oldstyle: {xrefstyle}
 :xrefstyle: full
-<<decentralization>>::
-<<trustlessness>>::
-<<privacy>>::
-<<finitesupply>>::
-<<upgrading>>::
-<<adversarialthinking>>::
-<<opensource>>::
-<<scaling>>::
-<<whenshithitsthefan>>::
-<<appendixdiscussion>>::
-<<appendixbuild>>:: {empty}
+<<Decentralization>>::
+<<Trustlessness>>::
+<<Privacy>>::
+<<Finitesupply>>::
+<<Upgrading>>::
+<<Adversarial thinking>>::
+<<Open source>>::
+<<Scaling>>::
+<<When shit hits the fan>>::
+<<Appendix discussion>>::
+<<Appendix build>>:: {empty}
 
 :xrefstyle: {oldstyle}
 
 Your feedback and contributions are most welcome! Instructions for
-building and contributing can be found in <<appendixbuild>>.
+building and contributing can be found in <<Appendix build>>.
 
+=== What to expect?
 
-=== How is this organized?
+Bitcoin is a huge subject and we couldn't possibly cover all of its aspects here. Nevertheless, we
+hope to discuss the necessary features to get you started as well as to enable you to further explore it on your own.
 
-The project is sectioned into chapters of different topics. Each
-chapter will guide you through a number of links to articles or
-videos, that we recommend reading, and will briefly discuss each
-link. The material presented is written by individuals who have
-studied Bitcoin development for a long time.
-
-The links refer to external resources on platforms we can't
-control. We have therefore saved the linked articles locally in this
-repository, along with info on where it was copied from, and when. The
-resources are collected in link:sources/sources.html[a separate
-document] (`sources/sources.adoc`) organized by the chapter they are
-linked from. The links found in the chapters refer to the original
-sources, but if you don't have an internet connection, the links
-appear dead, or the content seems severely changed, you can read the
-content locally instead.
-
-=== What to expect
-
-There are lots of people involved in Bitcoin; some have opposing opinions,
-there are resources that express contradictory ideas. However, we will
+There are lots of people involved in Bitcoin; as some of them have opposing opinions,
+there are resources that express contradictory ideas. However, we always
 attempt to stick to the facts, where opinions do not matter.
-
-Bitcoin is a huge subject. We cannot cover all its aspects, but we
-hope that we've discussed enough of it to get you started, and that
-you'll be able to explore further on your own.
 
 === Who wrote this?
 
-The main authors are Kalle Rosenbaum and Linnéa Rosenbaum. This work
-is commissioned and funded by Chaincode Labs who runs education
-programs for developers to https://learning.chaincode.com/[learn]
-about Bitcoin development.
+The main authors of this book are Kalle Rosenbaum and Linnéa Rosenbaum. This work
+was commissioned and funded by Chaincode Labs, a development centre that runs educational
+programs about Bitcoin development at https://learning.chaincode.com/[learn].
+
+=== How is this organized?
+
+The project is sectioned into chapters concerning different topics. Each
+chapter will guide you through a number of links to articles or
+videos that we recommend reading, and will briefly discuss each
+link. The reported material was written by individuals who have
+studied Bitcoin development for a long time.
+
+The links refer to external resources on platforms we cannot
+control. We have therefore saved the linked articles locally in this
+repository, along with info on where it was copied from, and when. The
+resources are collected in link:sources/sources.html[a separate
+document] (`sources/sources.adoc`) and organized by the chapter they are
+linked from. The links found within chapters refer to the original
+sources, but if you don't have an internet connection, the links will
+appear dead or the content severely changed. We thus advise you to read the
+content locally instead.
