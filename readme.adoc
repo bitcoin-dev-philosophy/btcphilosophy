@@ -12,22 +12,22 @@ Table of contents overview:
 
 :oldstyle: {xrefstyle}
 :xrefstyle: full
-<<Decentralization>>::
-<<Trustlessness>>::
-<<Privacy>>::
-<<Finitesupply>>::
-<<Upgrading>>::
-<<Adversarial thinking>>::
-<<Open source>>::
-<<Scaling>>::
-<<When shit hits the fan>>::
-<<Appendix discussion>>::
-<<Appendix build>>:: {empty}
+<<decentralization>>::
+<<trustlessness>>::
+<<privacy>>::
+<<finitesupply>>::
+<<upgrading>>::
+<<adversarialthinking>>::
+<<opensource>>::
+<<scaling>>::
+<<whenshithitsthefan>>::
+<<appendixdiscussion>>::
+<<appendixbuild>>:: {empty}
 
 :xrefstyle: {oldstyle}
 
 Your feedback and contributions are most welcome! Instructions for
-building and contributing can be found in <<Appendix build>>.
+building and contributing can be found in <<appendixbuild>>.
 
 === What to expect?
 
@@ -46,7 +46,7 @@ programs about Bitcoin development at https://learning.chaincode.com/[learn].
 
 === How is this organized?
 
-The project is sectioned into chapters concerning different topics. Each
+The project is sectioned into chapters covering different topics. Each
 chapter will guide you through a number of links to articles or
 videos that we recommend reading, and will briefly discuss each
 link. The reported material was written by individuals who have
