@@ -9,11 +9,11 @@ approaches to scaling Bitcoin. We'll talk about vertical, horizontal,
 inward, and layered scaling and discuss whether they do or don't
 interfere with Bitcoin's value proposition.
 
-Different people ascribe different definitions to the word scale, such as
+Different people ascribe different definitions to the word scaling, such as
 increasing the transaction capacity of the blockchain, using the
 blockchain more efficiently, or developing systems on top of Bitcoin.
 
-In the context of Bitcoin, and for this guide, we will define scaling as
+In the context of Bitcoin, and of this book, we will define scaling as
 _increasing Bitcoin's usage capacity without compromising its
 censorship resistance_. This definition would encompass several
 different kinds of changes, for example:
@@ -120,7 +120,7 @@ Typically, vertical scaling in Bitcoin would be an increase of the
 block size limit. This would require some full nodes to upgrade their
 hardware to keep up with the increasing computational
 demands. The downside is that it happens at the cost of
-centralization, as was discussed in the previous section and more
+decentralization, as was discussed in the previous section and more
 in-depth in <<_full_node_decentralization>>.
 
 Besides the negative effects on full node decentralization, vertical
@@ -242,10 +242,12 @@ different versions of Bitcoin Core going back to version 0.8.
 .Initial block download performance of various versions of Bitcoin Core. On the Y-axis is the block height synced and on the X-axis is the time it took to sync to that height. Source: https://blog.lopp.net/bitcoin-core-performance-evolution/
 image::Bitcoin-Core-Sync-Performance-1.png[{big-width}]
 
-The different lines represent different versions of Bitcoin Core. The leftmost
-line is the latest; version 22.0, released in September 2021, took 396 minutes
-to fully sync. The rightmost one is version 0.8 from November 2013, which took
-3452 minutes. All of this, roughly 10x, improvement is due to inward scaling.
+The different lines represent different versions of Bitcoin Core. The
+leftmost line is the latest one used in this test; version 22.0,
+released in September 2021, which took 396 minutes to fully sync. The
+rightmost one is version 0.8 from November 2013, which took 3452
+minutes. All of this, roughly 10x, improvement is due to inward
+scaling.
 
 The improvements could be categorized as either space (RAM, disk,
 bandwidth, etc.) savings or computational savings. Both categories
@@ -323,7 +325,7 @@ be bad for your own or your payees' privacy. In the batching case, a
 payee will know that all these outputs are from you to other payees
 (except possibly the change). In the UTXO consolidation case, you
 reveal that the outputs you consolidate belong to the same wallet. So
-you have to make a trade-off between cost efficiency and privacy.
+you may have to make a trade-off between cost efficiency and privacy.
 
 ==== Layered scaling
 
@@ -341,14 +343,15 @@ on a start transaction that's put on the blockchain, as illustrated in
 .A typical layer 2 protocol on top of Bitcoin, layer 1.
 image::scaling-layer.png[]
 
-How this start transaction is created varies widely, but a common
-theme is that the participants create a number of semi-signed
-transactions that spend the output of the start transaction in
-different ways prior to publishing the start transaction. A
-semi-signed transaction can be made fully signed and put on the
-blockchain if someone misbehaves to punish them. This keeps the
-participants' incentives aligned so that the protocol can work in a
-trustless way.
+How this start transaction is created varies between protocols, but a
+common theme is that the participants create an unsigned start
+transaction. Then they create a number of pre-signed punishment
+transactions that spend the output of the start transaction in various
+ways. Then the start transaction is fully signed and published to the
+blockchain. The punishment transactions can then be fully signed and
+published to the blockchain to punish a misbehaving party. This
+incentivizes the participants to keep their promises so that the
+protocol can work in a trustless way.
 
 After the start transaction is on the blockchain, the protocol can do
 what it's supposed to do, for example, super-fast payment between
