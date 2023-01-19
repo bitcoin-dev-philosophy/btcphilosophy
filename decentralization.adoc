@@ -6,7 +6,7 @@ This chapter analyzes what decentralization is and why it is
 essential for Bitcoin to function. We distinguish between the
 decentralization of miners and that of full nodes, and discuss what
 they bring to the table for censorship resistance, one of Bitcoin's most central properties. The discussion then shifts
-towards understanding neutrality - or permissionlessness with regard to users,
+to understanding neutrality - or permissionlessness towards users,
 miners, and developers - which is a necessary property of any
 decentralized system. Lastly, we touch upon how hard it can be to
 grasp a decentralized system like Bitcoin, and present some mental
@@ -28,7 +28,7 @@ trusted authorities.
 === Miner decentralization
 
 There had been attempts at creating digital currencies before Bitcoin,
-but most of them failed due to a lack of governance decentralization
+but most of them failed, due to a lack of governance decentralization
 and censorship resistance.
 
 Miner decentralization in Bitcoin means that the _ordering of
@@ -61,6 +61,7 @@ signers, it is important for auditability that the signers be distinct
 and identifiable. This still leaves the system vulnerable to failure,
 since each signer can fail, or be made to fail, one by one.
 ____
+
 
 It became clear that using a central server to order transactions was
 not a viable option due to the high risk of censorship. Even if you
