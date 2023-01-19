@@ -44,7 +44,8 @@ https://www.blockstream.com/sidechains.pdf[a paper] titled "`Enabling
 Blockchain Innovations with Pegged Sidechains`", the authors explain how early versions of digital money were not
 equipped for an <<adversarialthinking,adversarial environment>>:
 
-[quote, various authors, Enabling Blockchain Innovations with Pegged Sidechains 2014]
+[quote, various authors, Enabling Blockchain Innovations with Pegged Sidechains (2014)]
+
 ____
 David Chaum introduced digital cash as a research topic in 1983, in a
 setting with a central server that is trusted to prevent
@@ -62,15 +63,10 @@ and identifiable. This still leaves the system vulnerable to failure,
 since each signer can fail, or be made to fail, one by one.
 ____
 
-
 It became clear that using a central server to order transactions was
-not a viable option due to the high risk of censorship. Even if you
-replace the central server with a federation of a fixed set of
-stem:[n] servers, of which at least stem:[m, m \leq n] must all
-approve of an ordering, you also run into problems. The problem then
-shifts to one where users must agree on this set of stem:[n] servers
-and how users replace malicious servers with good ones without using a
-central authority.
+not a viable option due to the high risk of censorship. Even if one
+replaced the central server with a federation of a fixed set of n servers, of which at least m must
+approve of an ordering, there would still be difficulties. The problem would indeed shifts to one where users must agree on this set of n servers as well as on how to replace malicious servers with good ones without relying on a central authority.
 
 Let's contemplate what could happen if Bitcoin were censorable. The
 censor could pressure users to require identification, that users
