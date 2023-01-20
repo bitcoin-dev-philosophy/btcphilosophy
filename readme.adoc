@@ -41,7 +41,7 @@ attempt to stick to the facts, where opinions do not matter.
 === Who wrote this?
 
 The main authors of this book are Kalle Rosenbaum and Linnéa Rosenbaum. This work
-was commissioned and funded by Chaincode Labs, a development centre that runs educational
+was commissioned and funded by Chaincode Labs, a development center that runs educational
 programs for developers who want to https://learning.chaincode.com/[learn] about Bitcoin development.
 
 === How is this organized?
