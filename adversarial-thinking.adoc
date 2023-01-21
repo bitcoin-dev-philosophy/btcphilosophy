@@ -1,4 +1,4 @@
-== Adversarial thinking
+== Adversarial 
 
 image::adversarialthinking-banner.jpg[]
 
