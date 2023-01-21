@@ -15,30 +15,30 @@ models that might help you grok it.
 
 A system without any central point of control is referred to as being
 _decentralized_. Bitcoin is designed to avoid having a central point
-of control, or more specifically a _central point of censorship_.
+of control, or more precisely a _central point of censorship_.
 Decentralization is a means to achieve _censorship resistance_.
 
 There are two major aspects of decentralization in Bitcoin: miner
 decentralization and full node decentralization. Miner
 decentralization refers to the fact that transaction processing is not performed nor
 coordinated by any central entity. Full node decentralization refers to the fact that
-verification of the blocks, i.e. the data that miners output, gets done at
+validation of the blocks, i.e. the data that miners output, gets done at
 the edge of the network, ultimately by its users, and not by a few
 trusted authorities.
 
 === Miner decentralization
 
 There had been attempts at creating digital currencies before Bitcoin,
-but most of them failed, due to a lack of governance decentralization
+but most of them failed due to a lack of governance decentralization
 and censorship resistance.
 
 Miner decentralization in Bitcoin means that the _ordering of
 transactions_ is not carried out by any single entity or fixed set of
 entities. It is carried out collectively by all the actors who want
-to participate; this miners' collective is a dynamic set of users. Anyone can
+to participate in it; this miners' collective is a dynamic set of users. Anyone can
 join or leave as they wish. This property makes Bitcoin censorship-resistant.
 
-If Bitcoin were centralized, it would be vulnerable to those who wish
+If Bitcoin were centralized, it would be vulnerable to those who wished
 to censor it, such as governments. It would meet the same fate as earlier
 attempts to create digital money. In the introduction of
 https://www.blockstream.com/sidechains.pdf[a paper] titled "`Enabling
@@ -47,7 +47,6 @@ explain how early versions of digital money were not
 equipped for an <<adversarialthinking,adversarial environment>>:
 
 [quote, various authors, Enabling Blockchain Innovations with Pegged Sidechains (2014)]
-
 ____
 David Chaum introduced digital cash as a research topic in 1983, in a
 setting with a central server that is trusted to prevent
@@ -90,36 +89,37 @@ transactions anymore, as the censor's blocks are now deemed invalid
 by the user's full node.
 * Move: Appoint a new central point of control; all of the users must figure out how
 to coordinate and then agree on the new central control point.
-If they succeed, the same issues will most likely resurface at some point in the future because the system
-remained as censorable as it was before.
+If they succeed, the same issues will most likely resurface at some point in the future, considering that the system
+remained just as censorable as it was before.
 
-None of these options are beneficial to the user. Censorship
-resistance through decentralization is what separates Bitcoin from
+None of these options are beneficial to the user.
+
+Censorship resistance through decentralization is what separates Bitcoin from
 other money systems, but it is not an easy thing to accomplish due to
-the _double spending problem_. This is the problem of making sure no
+the _double-spending problem_. This is the problem of making sure no
 one can spend the same coin twice, an issue that many people thought was
 impossible to solve in a decentralized fashion. Satoshi Nakamoto
-writes in his https://bitcoin.org/bitcoin.pdf[Bitcoin paper] about how
-to solve the double spending problem:
+writes in their https://bitcoin.org/bitcoin.pdf[Bitcoin whitepaper] about how
+to solve the double-spending problem:
 
-[quote, Satoshi Nakamoto, The Bitcoin paper]
+[quote, Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System (2008)]
 ____
 In this paper, we propose a solution to the double-spending problem
 using a peer-to-peer distributed timestamp server to generate
 computational proof of the chronological order of transactions.
 ____
 
-Here he uses the peculiar-sounding phrase _peer-to-peer distributed timestamp
-server_. The keyword here is _distributed_, which in this
+Here they use the peculiar-sounding phrase "peer-to-peer distributed timestamp
+server". The keyword here is _distributed_, which in this
 context means that there is no central point of control. Nakamoto then
-goes on to explain how proof-of-work is the solution. Still, no one
+go on to explain how proof-of-work is the solution. Still, no one
 explains it better than
 https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/[Gregory
 Maxwell on Reddit], where he responds to someone who proposes to limit
-miners' hash power to avoid any 51% attacks:
+miners' hash power to avoid a potential 51% attacks:
 
 [[one-cpu-one-vote]]
-[quote, Gregory Maxwell, r/Bitcoin subreddit]
+[quote, Gregory Maxwell, r/Bitcoin subreddit (2019)]
 ____
 A decentralized system like Bitcoin uses a public election. But you
 can't just have a vote of 'people' in a decentralized system because
@@ -129,13 +129,13 @@ possible to verify computing power without the help of any centralized
 third party.
 ____
 
-The post explains how the decentralized Bitcoin network can come to
-agreement on a transaction ordering through the use of proof-of-work.
+The post explains how the decentralized Bitcoin network can come to an
+agreement on transaction ordering through the use of proof-of-work.
 He then concludes by saying that the 51% attack is not particularly
 worrisome, compared to people not caring about or not
 understanding Bitcoin's decentralization properties.
 
-[quote, Gregory Maxwell, r/Bitcoin subreddit]
+[quote, Gregory Maxwell, r/Bitcoin subreddit (2019)]
 ____
 A far bigger risk to Bitcoin is that the public using it won't
 understand, won't care, and won't protect the decentralization
@@ -144,7 +144,7 @@ first place.
 ____
 
 The conclusion is an important one. If people don't protect Bitcoin's
-decentralization, which is a proxy for censorship resistance, Bitcoin
+decentralization, which is a proxy for its censorship resistance, Bitcoin
 might fall victim to centralizing powers, until it's so centralized
 that censorship becomes a thing. Then most, if not all, of its value
 proposition is gone. This brings us to the next section on full node
@@ -152,17 +152,17 @@ decentralization.
 
 === Full node decentralization
 
-In the paragrahs above, we've mostly talked about miner decentralization and how
+In the paragraphs above, we've mostly talked about miner decentralization and how
 centralizating miners can allow for censorship. But there's also another
 aspect of decentralization, namely _full node decentralization_.
 
 The importance of full node decentralization is related to
 <<trustlessness,trustlessness>>. Suppose a user stops running their own
-full node, for example, due to a prohibitively increased cost of
+full node due to, for example, a prohibitive increase in the cost of
 operation. In that case, they have to interact with the Bitcoin network in some
 other way, possibly by using web wallets or lightweight wallets, which requires a certain level of trust in the wallets' firms.
 The user goes from directly enforcing the network consensus rules to trusting that
-someone else will. Now suppose that most users are delegating consensus enforcement to a
+someone else will. Now suppose that most users delegate consensus enforcement to a
 trusted entity. In that case, the network can quickly spiral into centralization, and the
 network rules can be changed by conspiring malicious actors.
 
@@ -177,13 +177,13 @@ throughput.
 
 A powerful argument against increasing the block size is that it
 increases the cost of verification (see <<_vertical_scaling,the
-Scaling chapter>>). If verification cost rises, it will push some full
-node users to stop running their full nodes. This, in turn, leads to
+Scaling chapter>>). If verification cost rises, it will push some 
+users to stop running their full nodes. This, in turn, will lead to
 more people not being able to use the system in a
 trustless way. Pieter Wuille is quoted in the article, where he
 explains the risks of full node centralization.
 
-[quote, Pieter Wuille, Bitcoin Magazine]
+[quote, Pieter Wuille, The Decentralist Perspective or Why Bitcoin Might Need Small Blocks (2015)]
 ____
 If lots companies run a full node, it means they all need to be
 convinced to implement a different rule set. In other words: the
@@ -218,7 +218,7 @@ Bitcoin.
 
 * If *mining* were a permissioned process, we would need a
 central authority to select who's allowed to mine. This would most
-likely lead to miners having to sign legal contracts in which they agree
+likely lead to miners having to sign legal contracts in which they would agree
 to censor transactions according to the whims of the central
 authority, which defeats the purpose of mining in the first place.
 
@@ -244,7 +244,7 @@ normal databases. He explains how permissionlessness is achievable
 through the use of proof-of-work in combination with economic
 incentives. He concludes:
 
-[quote, Pieter Wuille, Stack Exchange]
+[quote, Pieter Wuille, Stack Exchange (2019)]
 ____
 Using trustless consensus algorithms like PoW does add something no
 other construction gives you (permissionless participation, meaning
@@ -255,8 +255,8 @@ cryptocurrency. There is probably only place in the world for one or a
 few actually used ones of these.
 ____
 
-He explains that, in order to achieve permissionlessness, the system [most
-likely] needs its own currency, "`limiting the use cases to
+He explains that, in order to achieve permissionlessness, the system most
+likely needs its own currency, thereby "`limiting the use cases to
 effectively just cryptocurrencies`". This is because permissionless
 participation, or mining, requires economic incentives built into the
 system itself.
@@ -270,7 +270,7 @@ https://www.reddit.com/r/Bitcoin/comments/s82t2n/comment/htdte7w/?utm_source=sha
 the Bitcoin subreddit], compares this to the English language in an
 intriguing way:
 
-[quote, Gregory Maxwell, r/Bitcoin subreddit]
+[quote, Gregory Maxwell, r/Bitcoin subreddit (2022)]
 ____
 Many people have a hard time understanding autonomous systems, there
 are many in their lives, things like the english language-- but people
@@ -294,10 +294,10 @@ The way Bitcoin works through decentralization resembles the
 extraordinary collective intelligence found among many species in
 nature. Computer scientist Radhika Nagpal speaks in a
 https://www.ted.com/talks/radhika_nagpal_what_intelligent_machines_can_learn_from_a_school_of_fish[Ted
-talk] about the collective behavior of fish schools and how they try
+talk] about the collective behavior of fish schools and how scientists are trying
 to mimic it using robots.
 
-[quote, Radhika Nagpal, What intelligent machines can learn from a school of fish]
+[quote, Radhika Nagpal, What intelligent machines can learn from a school of fish (2017)]
 ____
 Secondly, and the thing that I still find most remarkable, is that we
 know that there are no leaders supervising this fish school. Instead,
@@ -307,7 +307,7 @@ interactions or rules of engagement between neighboring fish that make
 it all work out.
 ____
 
-She points out that many systems, natural or artificial, can and do
+She points out that many systems, either natural or artificial, can and do
 work without leaders, and they are powerful and resilient. Each individual only
 interacts with their immediate surroundings, but together they form something
 tremendous.
