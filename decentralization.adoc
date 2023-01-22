@@ -99,7 +99,7 @@ other money systems, but it is not an easy thing to accomplish due to
 the _double-spending problem_. This is the problem of making sure no
 one can spend the same coin twice, an issue that many people thought was
 impossible to solve in a decentralized fashion. Satoshi Nakamoto
-writes in their https://bitcoin.org/bitcoin.pdf[Bitcoin whitepaper] about how
+write in their https://bitcoin.org/bitcoin.pdf[Bitcoin whitepaper] about how
 to solve the double-spending problem:
 
 [quote, Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System (2008)]
