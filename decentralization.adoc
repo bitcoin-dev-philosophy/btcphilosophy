@@ -2,7 +2,7 @@
 
 image::decentralization-banner.jpg[]
 
-This chapter analyzes what decentralization is and why it is
+This chapter analyzes what decentralization is and why it's
 essential for Bitcoin to function. We distinguish between the
 decentralization of miners and that of full nodes, and discuss what
 they bring to the table for censorship resistance, one of Bitcoin's
