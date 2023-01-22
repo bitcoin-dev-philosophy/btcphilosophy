@@ -226,4 +226,4 @@ information sharing agreements (the EU for example).
 [[no-kyc-only]]
 ===== no-KYC only.
 
-image:logo%20dark.png[width=250,height=250]
+image:logodark.png[width=250,height=250]
