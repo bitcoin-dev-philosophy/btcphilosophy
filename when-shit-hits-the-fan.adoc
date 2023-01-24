@@ -558,22 +558,22 @@ ____
 
 The email further lays out the details for how the issue got
 discovered and more exactly what caused it. At the end he submitted a
-timeline of the events. We will replay some of the more important
-events here. We've just described a few of the events on this
-timeline, as illustrated by <<fig-bip66-timeline-1>>.
+timeline of the events, and we will replay some of the more important
+ones here. Some of them have, as illustrated by
+<<fig-bip66-timeline-1>>, already been described.
 
 [[fig-bip66-timeline-1]]
-.Timeline of events surrounding BIP66. Grey items haven't been covered yet.
+.Timeline of events surrounding BIP66. Items in black have been explained above.
 image::bip66-timeline-1.png[{big-width}]
 
 ===== Before discovery
 
 Without anyone knowing about the issue, it could have been resolved by
-BIP62, which was a proposal to reduce the possibilities of transaction
-malleability. Among the proposed changes in BIP62 were tightening of
-the consensus rules for the encoding of signatures, or "strict DER
-encoding". Pieter Wuille proposed some tweaks to the BIP in July 2014,
-that would have solved the issue:
+the now widthdrawn BIP62, which was a proposal to reduce the
+possibilities of transaction malleability. Among the proposed changes
+in BIP62 were tightening of the consensus rules for the encoding of
+signatures, or "strict DER encoding". Pieter Wuille proposed some
+tweaks to the BIP in July 2014, that would have solved the issue:
 
 [quote,Pieter Wuille on Bitcoin-dev mailing list,Disclosure: consensus bug indirectly solved by BIP66]
 ____
