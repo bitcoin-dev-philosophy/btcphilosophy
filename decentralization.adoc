@@ -20,7 +20,7 @@ Decentralization is a means to achieve _censorship resistance_.
 
 There are two major aspects of decentralization in Bitcoin: miner
 decentralization and full node decentralization. Miner
-decentralization refers to the fact that transaction processing is not performed nor
+decentralization refers to the fact that transaction processing isn't performed nor
 coordinated by any central entity. Full node decentralization refers to the fact that
 validation of the blocks, i.e. the data that miners output, gets done at
 the edge of the network, ultimately by its users, and not by a few
@@ -33,8 +33,8 @@ but most of them failed due to a lack of governance decentralization
 and censorship resistance.
 
 Miner decentralization in Bitcoin means that the _ordering of
-transactions_ is not carried out by any single entity or fixed set of
-entities. It is carried out collectively by all the actors who want
+transactions_ isn't carried out by any single entity or fixed set of
+entities. It's carried out collectively by all the actors who want
 to participate in it; this miners' collective is a dynamic set of users. Anyone can
 join or leave as they wish. This property makes Bitcoin censorship-resistant.
 
@@ -43,7 +43,7 @@ to censor it, such as governments. It would meet the same fate as earlier
 attempts to create digital money. In the introduction of
 https://www.blockstream.com/sidechains.pdf[a paper] titled "`Enabling
 Blockchain Innovations with Pegged Sidechains`", the authors
-explain how early versions of digital money were not
+explain how early versions of digital money weren't
 equipped for an <<adversarialthinking,adversarial environment>>:
 
 [quote, various authors, Enabling Blockchain Innovations with Pegged Sidechains (2014)]
@@ -74,7 +74,7 @@ as well as on how to replace malicious servers with good ones without relying on
 
 Let's contemplate what could happen if Bitcoin were censorable. The
 censor could pressure users to identify themselves, to
-declare where their money is coming from or what they are buying with it
+declare where their money is coming from or what they're buying with it
 before allowing their transactions to enter the blockchain.
 
 Also, the lack of censorship resistance would allow the censor to
@@ -84,7 +84,7 @@ themselves. In such an event, a user verifying blocks would have three
 options to handle the new rules:
 
 * Adopt: Accept the changes and adopt them into their full node.
-* Reject: Refuse to adopt the changes; this leaves the user with a system that does not process
+* Reject: Refuse to adopt the changes; this leaves the user with a system that doesn't process
 transactions anymore, as the censor's blocks are now deemed invalid
 by the user's full node.
 * Move: Appoint a new central point of control; all of the users must figure out how
@@ -99,7 +99,7 @@ other money systems, but it is not an easy thing to accomplish due to
 the _double-spending problem_. This is the problem of making sure no
 one can spend the same coin twice, an issue that many people thought was
 impossible to solve in a decentralized fashion. Satoshi Nakamoto
-write in their https://bitcoin.org/bitcoin.pdf[Bitcoin whitepaper] about how
+write in his https://bitcoin.org/bitcoin.pdf[Bitcoin whitepaper] about how
 to solve the double-spending problem:
 
 [quote, Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System (2008)]
@@ -109,14 +109,14 @@ using a peer-to-peer distributed timestamp server to generate
 computational proof of the chronological order of transactions.
 ____
 
-Here they use the peculiar-sounding phrase "peer-to-peer distributed timestamp
-server". The keyword here is _distributed_, which in this
+Here he uses the peculiar-sounding phrase "`peer-to-peer distributed timestamp
+server`". The keyword here is _distributed_, which in this
 context means that there is no central point of control. Nakamoto then
-go on to explain how proof-of-work is the solution. Still, no one
+goes on to explain how proof-of-work is the solution. Still, no one
 explains it better than
 https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/[Gregory
 Maxwell on Reddit], where he responds to someone who proposes to limit
-miners' hash power to avoid a potential 51% attacks:
+miners' hash power to avoid potential 51% attacks:
 
 [[one-cpu-one-vote]]
 [quote, Gregory Maxwell, r/Bitcoin subreddit (2019)]
@@ -160,7 +160,7 @@ The importance of full node decentralization is related to
 <<trustlessness,trustlessness>>. Suppose a user stops running their own
 full node due to, for example, a prohibitive increase in the cost of
 operation. In that case, they have to interact with the Bitcoin network in some
-other way, possibly by using web wallets or lightweight wallets, which requires a certain level of trust in the wallets' firms.
+other way, possibly by using web wallets or lightweight wallets, which requires a certain level of trust in the providers of these services.
 The user goes from directly enforcing the network consensus rules to trusting that
 someone else will. Now suppose that most users delegate consensus enforcement to a
 trusted entity. In that case, the network can quickly spiral into centralization, and the
@@ -206,9 +206,9 @@ means that Bitcoin doesn't care who you are or what you use it for.
 
 [quote, wumpus on freenode IRC (punctuation added), #bitcoin-core-dev 2012-04-04T17:34:04 UTC]
 ____
-Bitcoin is neutral, which is a good thing, and the only way it can
-work. If it was controlled by an organisation it'd just be another
-virtual object type and I would have zero interest in it.
+bitcoin is neutral, which is a good thing, and the only way it can
+work. if it was controlled by an organisation it'd just be another
+virtual object type and I would have zero interest in it
 ____
 
 As long as you play by the rules, you're free to use it
@@ -273,7 +273,7 @@ intriguing way:
 [quote, Gregory Maxwell, r/Bitcoin subreddit (2022)]
 ____
 Many people have a hard time understanding autonomous systems, there
-are many in their lives, things like the english language-- but people
+are many in their lives things like the english language-- but people
 just take them for granted and don't even think of them as
 systems. They're stuck in a centralized way of thinking where
 everything they think of as a 'thing' has an authority that
