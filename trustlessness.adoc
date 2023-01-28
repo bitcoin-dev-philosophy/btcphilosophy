@@ -25,17 +25,17 @@ ____
 
 In short, the word _trustless_ refers to a property of the Bitcoin
 protocol whereby it can logically function without "any trusted
-parties". This is different from the trust that you inevitably have to
-put into the software or hardware you run. More on this aspect of trust will be discussed further
+parties". This is different from the trust you inevitably have to
+put into the software or hardware you run. More on this latter aspect of trust will be discussed further
 in this chapter.
 
 In centralized systems, we rely on a central actor's reputation in order to make sure
 that they will take care of security or roll back in case of issues,
 as well as on the legal system to sanction any violations. These trust
 requirements are problematic in pseudonymous decentralized systems - there is
-no possibility of recourse so there really can't be any trust. In
+no possibility of recourse so there really can't be any trust. In the introduction to
 https://bitcoin.org/bitcoin.pdf[the Bitcoin whitepaper], Satoshi Nakamoto
-describe this problem in their introduction:
+describes this problem:
 
 [quote,Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System (2008)]
 ____
@@ -72,8 +72,8 @@ trustlessly.
 
 David Harding has authored
 https://bitcoin.org/en/bitcoin-core/features/validation[an article on
-the bitcoin.org website] explaining how running a full node, or
-using Bitcoin trustlessly, actually helps you.
+the bitcoin.org website] explaining how running a full node - or
+using Bitcoin trustlessly - actually helps you.
 
 [quote, David Harding, Full Validation on bitcoin.org]
 ____
@@ -121,10 +121,10 @@ acceptable.
 The incentives for using Bitcoin in a trustless way align with the
 system's need for <<_full_node_decentralization,full node
 decentralization>>. The more people who use their own full nodes, the
-more full node decentralization, thus the stronger Bitcoin stands
+more full node decentralization, and thus the stronger Bitcoin stands
 against malicious changes to the protocol. But unfortunately, as
 explained in the full node decentralization section, users often opt
-for trusted services as a trade-off for convenience.
+for trusted services as consequence of the inevitable trade-off between privacy and convenience.
 
 Bitcoin's trustlessness is absolutely imperative from a system
 perspective. In 2018, Matt Corallo,
@@ -133,7 +133,7 @@ about trustlessness] at the Baltic Honeybadger conference in Riga.
 // Video: https://youtu.be/66ZoGUAnY9s?t=4019
 The essence of that talk is that you can't build trustless systems on
 top of a trusted system, but you can build trusted systems - for
-example a custodial wallet - on top of a trustless system.
+example, a custodial wallet - on top of a trustless system.
 
 .A trustless base layer allows for various trade-offs on higher levels.
 image::trust.png[width=50%]
@@ -158,7 +158,7 @@ might not be programmed to do what's stated on the box. For example:
 So, besides running a full node, you also need to make sure you're
 running what you intend to. Reddit user brianddk
 https://www.reddit.com/r/Bitcoin/comments/smj1ep/bitcoin_v220_and_guix_stronger_defense_against/[wrote
-an article] about the various levels of trust you can choose from when
+an article] about the various levels of trust you can choose from, when
 verifying your software. In the section "Trusting the builders", he
 talks about _reproducible builds_:
 
@@ -202,7 +202,7 @@ ____
 He then explains how Guix allows us to only trust a minimal binary of
 357 bytes that can be verified and fully understood if you know how
 to interpret the instructions. This is quite remarkable: one verifies that
-the 357-byte binary does what it should do, then uses that to build the
+the 357-byte binary does what it should, then uses it to build the
 full build system from source code, and ends up with a Bitcoin Core
 binary that should be an exact copy of anyone else's build.
 
@@ -228,13 +228,13 @@ many other things in Bitcoin, there's a trade-off between convenience
 and trustlessness. It's almost always more convenient to use a
 custodial wallet compared to running Bitcoin Core on your own
 hardware. However, as Bitcoin software is maturing and user interfaces are
-improving, over time it should get better at supporting users wanting to work
+improving, over time it should get better at supporting users willing to work
 towards trustlessness. Also, as users gain more knowledge over time,
 they should be able to gradually remove trust from the equation.
 
 Some users <<adversarialthinking, think adversarially>> and verify
-many aspects of the software they run. As a consequence, they reduce their needed trust
-to just trusting their computer hardware and operating system. In
+most aspects of the software they run. As a consequence, they reduce the need for trust to the bare minimum,
+as they only need to trust their computer hardware and operating system. In
 doing so, they also help people who don't verify their hardware as thoroughly by
 raising their voices in public to warn about any issues they might find. One
 good example of this is an
@@ -254,12 +254,12 @@ we quickly determined that the issue was also an inflation
 vulnerability with the same root cause and fix.
 ____
 
-Here an anonymous person reported an issue that turned out much worse
-than the reporter realized. This highlights that people who verify the
+Here, an anonymous person reported an issue that turned out much worse
+than the reporter realized. This highlights the fact that people who verify the
 code often report security flaws instead of exploiting them. This is
 beneficial to those who aren't able to verify everything
-themselves. However, users should not trust others to keep them safe
-but should verify for themselves wheneverr and whatever they can; that's how one remains as
+themselves. However, users should not trust others to keep them safe,
+but should rather verify for themselves whenever and whatever they can; that's how one remains as
 sovereign as possible, and how Bitcoin prospers. The more eyes on
 the software, the less likely it is that malicious code and security
 flaws slip through.
