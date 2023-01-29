@@ -7,7 +7,7 @@
 :linkcss:
 :docinfo: shared
 :docinfodir: {stylesdir}
-:xrefstyle: full
+:xrefstyle: short
 :stem:
 :big-width: width=75%
 :half-width: width=50%
