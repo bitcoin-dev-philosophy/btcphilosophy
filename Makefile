@@ -6,6 +6,7 @@ B=build
 ALLPNGS := $(patsubst %,$(B)/%,$(wildcard images/*.png))
 ALLJPGS := $(patsubst %,$(B)/%,$(wildcard images/*.jpg))
 ALLIMGS := $(ALLPNGS) $(ALLJPGS)
+STYLE := $(patsubst %,$(B)/%,$(wildcard style/*))
 BOOKHTML=$(B)/$(BASE_NAME).html
 SOURCES := sources
 SOURCESIMAGES := $(patsubst %,$(B)/%,$(wildcard $(SOURCES)/images/*))
@@ -17,7 +18,7 @@ IMEXISTS := $(shell convert -version 2> /dev/null)
 .PHONY: all
 all: full
 
-full: $(B) $(BOOKHTML) $(SOURCESHTML)
+full: $(B) $(STYLE) $(BOOKHTML) $(SOURCESHTML)
 
 $(BOOKHTML): $(ALLADOC) $(ALLPNGS) $(ALLJPGS)
 	$(AD) $(MAINADOC) -o $@
@@ -42,14 +43,16 @@ else
 	convert $< -resize 1024x1024\> $@
 endif
 
+$(STYLE): $(B)/%: %
+	cp $< $@
 
 $(B):
-	@mkdir -p $(B)
-	@mkdir -p $(B)/images
-	cp -fr style $(B)
-	@mkdir -p $(B)/$(SOURCES)
-	@mkdir -p $(B)/$(SOURCES)/images
-	cp -fr $(SOURCES)/style $(B)/$(SOURCES)
+	@mkdir $(B)
+	@mkdir $(B)/images
+	@mkdir $(B)/style
+	@mkdir $(B)/$(SOURCES)
+	@mkdir $(B)/$(SOURCES)/images
+	@mkdir $(B)/$(SOURCES)/style
 
 clean:
 	rm -rf $(B)
