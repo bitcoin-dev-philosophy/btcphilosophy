@@ -287,7 +287,7 @@ authority, but no such authority exists.
 ____
 
 .Fish schools have no leaders.
-[.right.half-width.thumb]
+[.right.half-width.thumb,pdfwidth=300px,float=right]
 image::fishschool.jpg[]
 
 The way Bitcoin works through decentralization resembles the
