@@ -6,24 +6,25 @@ B=build
 ALLPNGS := $(patsubst %,$(B)/%,$(wildcard images/*.png))
 ALLJPGS := $(patsubst %,$(B)/%,$(wildcard images/*.jpg))
 ALLIMGS := $(ALLPNGS) $(ALLJPGS)
-STYLE := $(patsubst %,$(B)/%,$(wildcard style/*))
+CSS := $(B)/style/btcphilosophy.css
 BOOKHTML=$(B)/$(BASE_NAME).html
 SOURCES := sources
 SOURCESIMAGES := $(patsubst %,$(B)/%,$(wildcard $(SOURCES)/images/*))
 MAINSOURCESADOC := $(SOURCES)/sources.adoc
 ALLSOURCESADOC := $(MAINSOURCESADOC) $(wildcard $(SOURCES)/**/*.adoc)
+SOURCESCSS := $(B)/sources/style/btcphilosophy.css
 SOURCESHTML=$(B)/$(SOURCES)/sources.html
 IMEXISTS := $(shell convert -version 2> /dev/null)
 
 .PHONY: all
 all: full
 
-full: $(B) $(STYLE) $(BOOKHTML) $(SOURCESHTML)
+full: $(B) $(BOOKHTML) $(SOURCESHTML)
 
-$(BOOKHTML): $(ALLADOC) $(ALLPNGS) $(ALLJPGS)
+$(BOOKHTML): $(CSS) $(ALLADOC) $(ALLPNGS) $(ALLJPGS)
 	$(AD) $(MAINADOC) -o $@
 
-$(SOURCESHTML): $(ALLSOURCESADOC) $(SOURCESIMAGES)
+$(SOURCESHTML): $(SOURCESCSS) $(ALLSOURCESADOC) $(SOURCESIMAGES)
 	mkdir -p $(B)/sources
 	$(AD) $(MAINSOURCESADOC) -o $@
 
@@ -43,13 +44,13 @@ else
 	convert $< -resize 1024x1024\> $@
 endif
 
-$(STYLE): $(B)/%: %
+$(CSS) $(SOURCESCSS): $(B)/%: %
+	@mkdir -p $(dir $@)
 	cp $< $@
 
 $(B):
 	@mkdir $(B)
 	@mkdir $(B)/images
-	@mkdir $(B)/style
 	@mkdir $(B)/$(SOURCES)
 	@mkdir $(B)/$(SOURCES)/images
 	@mkdir $(B)/$(SOURCES)/style
