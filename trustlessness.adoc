@@ -124,7 +124,7 @@ decentralization>>. The more people who use their own full nodes, the
 more full node decentralization, and thus the stronger Bitcoin stands
 against malicious changes to the protocol. But unfortunately, as
 explained in the full node decentralization section, users often opt
-for trusted services as consequence of the inevitable trade-off between privacy and convenience.
+for trusted services as consequence of the inevitable trade-off between trustlessness and convenience.
 
 Bitcoin's trustlessness is absolutely imperative from a system
 perspective. In 2018, Matt Corallo,
