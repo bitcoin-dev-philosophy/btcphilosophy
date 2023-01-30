@@ -3,43 +3,43 @@
 image::privacy-banner.jpg[]
 
 This chapter deals with how to keep your private financial information
-to yourself. We'll learn what privacy means in the context of Bitcoin,
-why it's important, and what it means that Bitcoin is
-pseudonymous. We'll look into how private data can leak, both from the
-blockchain and off-chain. We then talk about how bitcoins should be
-fungible, meaning interchangeable for other bitcoins, and how
-fungibility and privacy go hand in hand. Last, we'll go through some
-things you can do to improve your, and others' privacy.
+to yourself. It explains what privacy stands for in the context of Bitcoin,
+why it's important, and what it means to say that Bitcoin is
+pseudonymous. It also looks into how private data can leak, both on-chain
+and off-chain. Then, it talks about the fact that bitcoins should be
+fungible, meaning interchangeable for any other bitcoins, and how
+fungibility and privacy go hand in hand. Lastly, the chapter introduces some
+measures you can take to improve your privacy and that of others.
 
-Bitcoin can be described as a pseudonymous, explained soon in
-<<pseudonymity>>, system where users have multiple pseudonyms in the
+Bitcoin can be described as a pseudonymous system (see
+<<pseudonymity>> for further details on this), where users have multiple pseudonyms in the
 form of public keys. At first glance, this looks like a pretty good
-way to keep users from being identified, but it is in fact really
+way to protect users from being identified, but it is in fact really
 easy to leak private financial information unintentionally.
 
 === What does privacy mean?
 
 Privacy can mean different things in different contexts. In
 Bitcoin, it generally means that users don't have to reveal their
-financial information to others unless they voluntarily do so.
+financial information to others, unless they voluntarily do so.
 
 There are many ways in which you may leak your private information
-to others, with or without knowing it. Data can leak both from the
-public blockchain and through other means, for example, by intercepting
-your internet communication.
+to others, with or without knowing it. Data can either leak from the
+public blockchain or through other means, for example when malicious users intercept
+your internet communications.
 
 [[whyprivacyimportant]]
 === Why is privacy important?
 
 It may seem obvious why privacy is important in Bitcoin, but there are
-privacy aspects you might not immediately think about. Gregory
-Maxwell,
-https://bitcointalk.org/index.php?topic=334316.msg3588908#msg3588908[on
-the Bitcoin Talk forum], walks us through a lot of good reasons why he
+some aspects of it that one might not immediately think about.
+https://bitcointalk.org/index.php?topic=334316.msg3588908#msg3588908[On
+the Bitcoin Talk forum], Gregory
+Maxwell walks us through a lot of good reasons why he
 thinks privacy matters. Among them are free market, safety, and human
 dignity:
 
-[quote, Gregory Maxwell, Bitcoin Talk forum]
+[quote, Gregory Maxwell, Bitcoin Talk forum (2013)]
 ____
 Financial privacy is an essential criteria for the efficient operation
 of a free market: if you run a business, you cannot effectively set
@@ -69,23 +69,23 @@ lawful transactions freely without self-censorship if we don't have
 privacy.
 ____
 
-Maxwell also touches on fungibility, discussed <<fungibility,later in
-this chapter>>, and how privacy and law enforcement are not
+Maxwell also touches on fungibility, which will be discussed <<fungibility,later in
+this chapter>>, as well as on how privacy and law enforcement are not
 contradictory.
 
 [[pseudonymity]]
 === Pseudonymity
 
 We mentioned above that Bitcoin is pseudonymous, and that the
-pseudonyms are public keys, or addresses. In the media you often hear
+pseudonyms are public keys, or addresses [comm: written like this, it sounds like public keys and addresses are the same thing; I would not mention addresses at this stage or explain briefly that they are not the same as public keys]. In the media you often hear
 that Bitcoin is anonymous, which is not correct. There is a
 distinction between anonymity and pseudonymity.
 
 Andrew Poelstra
 https://bitcoin.stackexchange.com/a/29473/69518[explains in a Bitcoin
-Stack Exchange post] what anonymity would look like:
+Stack Exchange post] what anonymity would look like in transactions:
 
-[quote,Andrew Poelstra on anonymity,Bitcoin Stack Exchange]
+[quote,Andrew Poelstra on anonymity,Bitcoin Stack Exchange (2016)]
 ____
 Total anonymity, in the sense that when you spend money there is no
 trace of where it came from or where it's going, is theoretically
@@ -93,19 +93,19 @@ possible by using the cryptographic technique of zero-knowledge
 proofs.
 ____
 
-It seems like the difference is that in a pseudonymous money you can
-trace payments between pseudonyms, whereas in an anonymous money you
-can't. Since bitcoin payments are tracable between pseudonyms, it's
-not anonymous.
+The difference seems to be that in a pseudonymous form of money you can
+trace payments between pseudonyms, whereas in an anonymous form of money you
+can't. Since bitcoin payments are traceable between pseudonyms, it's
+not an anonymous system.
 
 We have also said that the pseudonyms are public keys, but it's
 actually addresses derived from public keys. Why do we use addresses
 as pseudonyms and not something else, for example some descriptive
-names, like "`watchme1984`"? This is
-https://bitcoin.stackexchange.com/a/25175/69518[well explained] by
+names, like "`watchme1984`"? This has been
+https://bitcoin.stackexchange.com/a/25175/69518[explained well] by
 user Tim S., also on Bitcoin Stack Exchange:
 
-[quote,Tim S. on pseudonyms,Bitcoin Stack Exchange]
+[quote,Tim S. on pseudonyms,Bitcoin Stack Exchange (2014)]
 ____
 In order for Bitcoin's idea to work, you must have coins that can only
 be spent by the owner of a given private key. This means that whatever
@@ -126,21 +126,21 @@ might send money thinking they're paying the creator of Linux, not
 me).
 ____
 
-Using addresses, or public keys, removes the need to somehow register
-a pseudonym beforehand, reduces incentives for pseudonym reuse, avoids
-blockchain bloat, and makes impersonating other people hard.
+By using addresses, or public keys, we achieve important goals, such as removing the need to somehow register
+a pseudonym beforehand, reducing the incentives for pseudonym reuse, avoiding
+blockchain bloat, and making it harder to impersonate other people.
 
 === Blockchain privacy
 
-Blockchain privacy refers to the information you disclose in
-transactions on the blockchain. It can be transactions you make or
+Blockchain privacy refers to the information you disclose by
+transacting on the blockchain. It applies to both transactions you make in favor of someone and
 transactions other people make to send you money.
 
-Satoshi Nakamoto ponders around on-chain privacy in section 7 of his
-https://bitcoin.org/bitcoin.pdf[Bitcoin paper]:
+Satoshi Nakamoto ponders over on-chain privacy in section 7 of his
+https://bitcoin.org/bitcoin.pdf[Bitcoin whitepaper]:
 
 [[satoshi-unique-addresses]]
-[quote, Satoshi Nakamoto, the Bitcoin paper]
+[quote, Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System (2008)]
 ____
 As an additional firewall, a new key pair should be used for each
 transaction to keep them from being linked to a common owner. Some
@@ -150,9 +150,9 @@ risk is that if the owner of a key is revealed, linking could reveal
 other transactions that belonged to the same owner.
 ____
 
-The paper summarizes the main problems of blockchain privacy: Address
-reuse and address clustering. The latter is the ability to decide,
-with some level of certainty, that a set of different addresses belong
+The paper summarizes the main problems of blockchain privacy, namely address
+reuse and address clustering. The first is self-explaining, the latter refers to the ability to decide,
+with some level of certainty, that a set of different addresses belongs
 to the same user.
 
 .Typical privacy leaks on the blockchain.
@@ -161,22 +161,22 @@ image::address-reuse-clustering.png[]
 Chris Belcher
 https://en.bitcoin.it/Privacy#Blockchain_attacks_on_privacy[wrote in
 great detail] about the different kinds of privacy leaks that can
-happen on the Bitcoin blockchain. We recommend you to read at least
+happen on the Bitcoin blockchain. We recommend you read at least
 the first few subsections under "Blockchain attacks on privacy."
 
 The takeaway is that privacy in Bitcoin isn't perfect. It requires a
 significant amount of work to transact privately. Most people aren't
-prepared to go that far for privacy. It seems there is a clear
+prepared to go that far for privacy. There seems to be a clear
 trade-off between privacy and usability.
 
-Another aspect of privacy is that your own privacy measures affect other
-users as well. If you are sloppy with your privacy, other people might
-experience reduced privacy too. Gregory Maxwell explains this in a
-simple manner on the same Bitcoin Talk discussion
+Another important aspect of privacy is that the measures you take to protect your own privacy affect other
+users as well. If you are sloppy with your own privacy, other people might
+experience reduced privacy, too. Gregory Maxwell explains this very
+plainly on the same Bitcoin Talk discussion
 https://bitcointalk.org/index.php?topic=334316.msg3589252#msg3589252[that
 we linked above], and concludes with an example:
 
-[quote, Gregory Maxwell, Bitcoin Talk forum]
+[quote, Gregory Maxwell, Bitcoin Talk forum (2013)]
 ____
 This actually works in practice, too... A nice whitehat hacker on IRC
 was playing around with brainwallet cracking and hit a phrase with
@@ -189,7 +189,7 @@ ending there. (This isn't the only example of it, by far ... but its
 one of the more fun ones).
 ____
 
-In this case, all went well thanks to the philanthropically minded
+In this case, it all went well thanks to the philanthropically-minded
 hacker, but don't count on that next time.
 
 === Non-blockchain privacy
@@ -216,24 +216,24 @@ ____
 
 [[kycdbs]]
 However, among the most obvious privacy leaks are exchanges. Due to
-laws, usually referred to as KYC (know your customer) and AML
-(anti-money laundering), in the jurisdictions they operate in,
+laws, usually referred to as KYC (Know Your Customer) and AML
+(Anti-Money Laundering), that are valid in the jurisdictions they operate in,
 exchanges and related companies often have to collect personal data
-about their users, building up big databases about what users has
-which bitcoins. These databases are great honeypots for bad
-governments and gangsters who's always on the lookout for new
+about their users, building up big databases about which users own
+which bitcoins. These databases are great honeypots for evil
+governments and criminals who are always on the lookout for new
 victims. There are actual markets for this kind of data, where hackers
 sell data to the highest bidder. To make things worse, the companies
-that manages these databases often have little experience with
-protecting financial data, many of them are young startups, and
-several leaks have occurred. A few examples are
+that manage these databases often have little experience with
+protecting financial data, in fact many of them are young start-ups, and we know for a fact that
+several leaks have already occurred. A few examples are
 https://bitcoinmagazine.com/business/probably-the-largest-kyc-data-leak-in-history-demonstrates-the-importance-of-bitcoin-privacy[India-based
 MobiQwik] and
 https://bitcoinmagazine.com/business/hubspot-security-breach-leaks-bitcoin-users-data[HubSpot]
 
-Again, protecting against this wide range of attacks is hard, and you
-probably won't fully be able to, so you have to use some trade-off between
-convenience and privacy that works for you.
+Again, protecting data against this wide range of attacks is hard, and it is likely that you
+won't be fully able to do so on your own. You'll have to opt for the trade-off between
+convenience and privacy that works best for you.
 
 [[fungibility]]
 === Fungibility
@@ -243,7 +243,7 @@ interchangeable for any other coin of the same currency. This funny
 word was briefly touched upon in <<whyprivacyimportant>>. In the
 article discussed there, Gregory Maxwell https://bitcointalk.org/index.php?topic=334316.msg3588908#msg3588908[stated]
 
-[quote, Gregory Maxwell, Bitcoin Talk forum]
+[quote, Gregory Maxwell, Bitcoin Talk forum (2013)]
 ____
 Financial privacy is an essential element to fungibility in Bitcoin:
 if you can meaningfully distinguish one coin from another, then their
@@ -257,22 +257,22 @@ bad coins. This adds friction and transactional costs and makes
 Bitcoin less valuable as a money.
 ____
 
-He speaks here of the dangers of lack of fungibility. Suppose that you
-have a UTXO. That UTXO's history can usually be traced back several
+Here, he speaks about the dangers derived from a lack of fungibility. Suppose that you
+have a UTXO. That UTXO's history can normally be traced back several
 hops, fanning out to multitudes of previous outputs. If any of those
-outputs were involved in something illegal, unwanted, or suspicious
+outputs were involved in any illegal, unwanted, or suspicious
 activity, then some potential recipients of your coin might
 reject it. If you think that your payees will verify your coins
 against some centralized whitelist or blacklist service, you might
-start checking coins you receive too, just to be on the safe side. So
+start checking the coins you receive too, just to be on the safe side. The result is that
 bad fungibility will bolster even worse fungibility.
 
 Adam Back and Matt Corallo
 https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/[gave
-a presentation about fungibility] at Scaling Bitcoin in Milan
+a presentation about fungibility] at Scaling Bitcoin in Milan in
 2016. They were thinking along the same lines:
 
-[quote, Matt Corallo and Adam Back, Fungibility Overview]
+[quote, Matt Corallo and Adam Back, Fungibility Overview (2016)]
 ____
 You need fungibility for bitcoin to function. If you receive coins and
 can’t spend them, then you start to doubt whether you can spend
@@ -284,45 +284,45 @@ into a centralized permissioned system where you have an “IOU” from
 the blacklist providers.
 ____
 
-It seems privacy and fungibility go hand-in-hand. Fungibility will
-weaken if privacy is weak, for example, because coins from unwanted
-persons can become blacklisted.  Privacy will weaken if fungibility is
-weak since you have to ask the blacklist providers about which coins
-to accept, possibly revealing your IP address, email address, and
-other sensitive information. They're so intertwined that it's hard to
-talk about them in isolation.
+It seems that privacy and fungibility go hand-in-hand. Fungibility will
+weaken if privacy is weak, for example as coins from unwanted
+people may become blacklisted. In the same way, privacy will weaken if fungibility is
+weak: if there is a blacklist, you will have to ask the blacklist providers about which coins
+to accept, thereby possibly revealing your IP address, email address, and
+other sensitive information. These two features are so intertwined that it's hard to
+talk about either of them in isolation.
 
 [[privacymeasures]]
 === Privacy measures
 
-Several techniques have been developed that help protect from privacy
-leaks. Among the most obvious ones are, as
+Several techniques have been developed to help people protecting themselves from privacy
+leaks. Among the most obvious ones is, as
 <<satoshi-unique-addresses,noted by Nakamoto>> above, using unique
-addresses for all transactions, but several others exist. We're not
+addresses for every transaction, but several others exist. We're not
 going to teach you how to become a privacy ninja. However, Bitcoin Q+A has
-a quick summary of privacy-enhancing technology, somewhat ordered by
+a quick summary of privacy-enhancing technologies, somewhat ordered by
 how hard they are to implement, at
-https://bitcoiner.guide/privacytips/. You'll notice when you read this
-that Bitcoin privacy often has to do with stuff outside of Bitcoin;
-for example: don't brag about your bitcoins, and use Tor and VPN. The
-post also lists some things directly related to Bitcoin:
+https://bitcoiner.guide/privacytips/. When you read it, you'll notice
+that Bitcoin privacy often has to do with stuff outside of Bitcoin.
+For example, you shouldn't brag about your bitcoins, and you should always use Tor and VPN. The
+post also lists some measures directly related to Bitcoin:
 
 Full node:: If you don't use your own full node, you will leak lots of
 information about your wallet to servers on the internet. Running a
 full node is a great first step.
 
 Lightning Network:: Several protocols exist on top of Bitcoin, for
-example, the Lightning Network and Blockstream's Liquid sidechain.
+example the Lightning Network and Blockstream's Liquid sidechain.
 
 CoinJoin:: A way for multiple people to merge their transactions into
-one, making it harder to do address clustering.
+one, making it harder to do address clustering [comm: not chain analysis?].
 
 In
 https://btctranscripts.com/breaking-bitcoin/2019/breaking-bitcoin-privacy/[a
 talk] at the Breaking Bitcoin conference, Chris Belcher gave an
-interesting example of how privacy has been improved in practice.
+interesting practical example of how privacy has been improved.
 
-[quote,Chris Belcher in "Breaking Bitcoin Privacy", Breaking Bitcoin conference 2019]
+[quote,Chris Belcher in "Breaking Bitcoin Privacy", Breaking Bitcoin conference (2019)]
 ____
 They were a bitcoin casino. Online gambling is not allowed in
 the US. Any customers of Coinbase that deposited straight to Bustabit
@@ -351,7 +351,7 @@ can only increase with layers on top, but that doesn't seem to be the
 case for privacy, which can be improved or made worse arbitrarily in
 layers on top. Why is that? Any layer on top of Bitcoin, as explained
 in <<_layered_scaling,Layered scaling>>, must use on-chain
-transactions now and then, otherwise, it wouldn't be "on top of
+transactions evrey now and then, otherwise it wouldn't be "on top of
 Bitcoin". Privacy-enhancing layers generally try to use the base layer
 as little as possible to minimize the amount of information revealed.
 
@@ -363,13 +363,13 @@ public keys. A public key is a pseudonym for a user, and a user can
 have multiple pseudonyms. In an ideal world, your in-person identity
 is decoupled from your Bitcoin pseudonyms. Unfortunately, due to the
 privacy problems described in this chapter, this decoupling usually
-degrade over time.
+degrades over time.
 
 To mitigate the risks of having your personal data revealed is to not
-give it out in the first place or not give it to centralized services
-that <<kycdbs,build big databases>> that can leak. An article by
+give it out in the first place nor to give it to centralized services,
+which <<kycdbs,build big databases>> that can leak. An article by
 Bitcoin Q+A https://bitcoiner.guide/nokyconly/[explains KYC] and the
-dangers with it. It also suggests some things you can do to improve
+dangers derived from it. It also suggests some steps you can take to improve
 your situation.
 
 [quote,"Bitcoin Q+A, noKYC only, Avoid the creep", bitcoiner.guide]
@@ -381,7 +381,7 @@ party. Unfortunately some sell other coins as well as bitcoin so we
 urge you to take care.
 ____
 
-The article suggest you can avoid using exchanges that require KYC/AML
+The article suggests you avoid using exchanges that require KYC/AML
 and instead trade in private, or use decentralized exchanges like
 https://bisq.network/[bisq].
 
