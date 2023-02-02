@@ -1,0 +1,26 @@
+name: build adocs
+
+on:
+  push:
+    branches:
+    - master
+jobs:
+  adoc_build:
+    runs-on: ubuntu-22.04
+    name: make; mv ./build/btcphilosophy.html ./build/index.html
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Get build container
+      id: adocbuild
+      uses: tonynv/asciidoctor-action@master
+      with:
+          program: "make; mv ./build/btcphilosophy.html ./build/index.html"
+    - name: Print execution time
+      run: echo "Time ${{ steps.adocbuild.outputs.time }}"
+    - name: Deploy build to ghpages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_branch: gh-pages
+        publish_dir: ./build
