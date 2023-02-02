@@ -2,21 +2,21 @@
 
 image::finitesupply-banner.jpg[]
 
-This chapter looks into Bitcoin supply limit of 21 million BTC, or
+This chapter looks into bitcoin supply limit of 21 million BTC, or
 how much is it actually? We talk about how this limit is enforced
 and what one can do to verify that it's being respected. Moreover, we
 take a peek into the crystal ball and discuss the dynamics
 that will come into play when the block reward shifts from
-being subsidy-based to fee-based.
+subsidy-based to fee-based.
 
 The well-known finite supply of 21 million BTC is regarded as a
 fundamental property of Bitcoin. But is it really set in stone?
 
 Let's start by looking at what the current consensus rules say about
-the supply of Bitcoin, and how much of it will actually be
+the supply of bitcoin, and how much of it will actually be
 usable. Pieter Wuille wrote a piece about this
 https://bitcoin.stackexchange.com/a/38998/69518[on Stack Exchange],
-where he counted how many bitcoins there would be once all coins are
+in which he counted how many bitcoins there would be once all coins are
 mined:
 
 [quote, Pieter Wuille, Stack Exchange (2015)]
@@ -43,9 +43,9 @@ https://bitcointalk.org/index.php?topic=7253.0[here].
 This leaves us with: *???* BTC.
 ____
 
-We can thus be sure that the BTC supply is at most
-20999817.31308491 BTC. Any lost or unverifiably burnt coins will make
-this number lower, but we don't know how much lower. The interesting
+We can thus be sure that the bitcoin supply will be
+20999817.31308491 BTC at most. Any lost or unverifiably burnt coins will make
+this number lower, but we don't know by how much. The interesting
 thing is that it doesn't really matter, or better yet it does matter in a
 positive way for bitcoin holders,
 https://bitcointalk.org/index.php?topic=198.msg1647#msg1647[as
@@ -57,11 +57,11 @@ Lost coins only make everyone else's coins worth slightly more.  Think
 of it as a donation to everyone.
 ____
 
-The finite supply will shrink which, at least in theory, should
+The finite supply will shrink and this should, at least in theory,
 cause price deflation.
 
 More important than the exact number of coins in circulation is
-how the supply limit is enforced without any central
+the way the supply limit is enforced without any central
 authority. Alias chytrik puts it well on
 https://bitcoin.stackexchange.com/a/106830/69518[Stack Exchange].
 
@@ -75,17 +75,17 @@ ____
 Even if some full nodes turn to the dark side and decide to
 accept blocks with higher-value coinbase transactions, all the remaining full
 nodes will simply neglect them and continue doing business as usual. Some full nodes
-may, intentionally or unintentionally (see the
-<<combined-output-overflow,When shit hits the fan>> chapter), run evil
+may, intentionally or unintentionally (see
+<<combined-output-overflow,When shit hits the fan>>), run evil
 softwares, yet the collective will robustly secure the blockchain.
-Thus, you can choose to trust the system without having to
+In conclusion, you can choose to trust the system without having to
 trust anyone.
 
 === Block subsidy and transaction fees
 
 A block reward is composed of the block subsidy plus transaction
 fees. The block reward needs to cover Bitcoin's security costs. We can
-say for sure that with today's conditions with regard to block subsidy, transaction fees,
+say for sure that under today's conditions with regard to block subsidy, transaction fees,
 bitcoin price, mempool size, hash power, degree of decentralization
 etc., the incentives for every player to play by the rules are high enough to preserve a
 secure monetary system.
@@ -118,9 +118,9 @@ image::finitesupply.png[width=60%]
 When transaction fees are the main motivation for mining, the
 incentives shift. Most notably, if the mempool of a miner doesn't
 contain enough transaction fees, it might become more profitable for
-that miner to rewrite Bitcoin's history rather than to
-extend it. Bitcoin Optech has an
-https://bitcoinops.org/en/topics/fee-sniping/[explainer on this
+that miner to rewrite Bitcoin's history rather than
+extending it. Bitcoin Optech has a specific
+https://bitcoinops.org/en/topics/fee-sniping/[section on this
 behavior], called _fee sniping_, written by David Harding:
 
 [quote,"David Harding, fee sniping", Bitcoin Optech website]
@@ -150,14 +150,14 @@ Throwing a wet blanket over our hopes for the future is the fact that if miners 
 conducting fee sniping, this will incentivize others to do the same,
 leaving even fewer honest miners. This could severely impair the
 overall security of Bitcoin. Harding goes on to list a few
-countermeasures that have been taken, such as relying on transaction
+countermeasures that can be taken, such as relying on transaction
 time locks to restrict where in the blockchain the transaction may
 appear.
 
 So, given that the consensus on finite supply remains, the block
 subsidy will - thanks to
 https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki[BIP42]
-which fixed a very-long-term inflation bug - be zero from around year
+which fixed a very-long-term inflation bug - get to zero around year
 2140. Will the transaction fees thereafter be enough to secure the
 network? It's impossible to say, but we do know a few things:
 
@@ -172,7 +172,7 @@ network? It's impossible to say, but we do know a few things:
 Since the transition to a fee-only block reward is so far in the future, it
 might be wise not to jump to conclusions and try to fix the potential
 issues while we can. For example, Peter Todd thinks there's an actual risk that Bitcoin's
-security budget won't be enough in the future and consequently argues for a small
+security budget won't be enough in the future, and consequently argues for a small
 perpetual inflation in Bitcoin. However, he also thinks it's not a
 good idea to discuss such an issue at this time, as
 https://www.whatbitcoindid.com/podcast/peter-todd-on-the-essence-of-bitcoin[he said on the What
@@ -195,4 +195,4 @@ should be allowed to evolve and grow?
 Whether the bitcoin supply will grow past 21 million we cannot say
 today, and that is probably not so bad. Ensuring that the security
 budget remains high enough is crucial but not urgent. Let's have this
-discussion in 10-50 years, when we'll know more. If it will still be relevant.
+discussion in 10-50 years, when we'll know more. If it will still be relevant then.
