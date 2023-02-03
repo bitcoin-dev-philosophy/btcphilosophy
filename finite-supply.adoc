@@ -195,4 +195,4 @@ should be allowed to evolve and grow?
 Whether the bitcoin supply will grow past 21 million we cannot say
 today, and that is probably not so bad. Ensuring that the security
 budget remains high enough is crucial but not urgent. Let's have this
-discussion in 10-50 years, when we'll know more. If it will still be relevant then.
+discussion in 10-50 years, when we know more. If it's still relevant.
