@@ -133,8 +133,8 @@ blockchain bloat, and making it harder to impersonate other people.
 === Blockchain privacy
 
 Blockchain privacy refers to the information you disclose by
-transacting on the blockchain. It applies to both transactions you make in favor of someone and
-transactions other people make to send you money.
+transacting on the blockchain. It applies to all transactions,
+the ones you send as well as the ones you receive.
 
 Satoshi Nakamoto ponders over on-chain privacy in section 7 of his
 https://bitcoin.org/bitcoin.pdf[Bitcoin whitepaper]:
@@ -315,7 +315,7 @@ Lightning Network:: Several protocols exist on top of Bitcoin, for
 example the Lightning Network and Blockstream's Liquid sidechain.
 
 CoinJoin:: A way for multiple people to merge their transactions into
-one, making it harder to do address clustering [comm: not chain analysis?].
+one, making it harder to do chain analysis.
 
 In
 https://btctranscripts.com/breaking-bitcoin/2019/breaking-bitcoin-privacy/[a
