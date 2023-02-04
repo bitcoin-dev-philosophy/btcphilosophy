@@ -3,11 +3,11 @@
 image::upgrading-banner.jpg[]
 
 Upgrading Bitcoin in a safe way can be extremely difficult. Some
-changes take multiple years to roll out. In this chapter we'll learn
-about some common vocabulary around upgrading and explore some
-examples of historic upgrades to Bitcoin, and what insights we gained
-from them. At the end we'll talk about the risks and costs of a
-lasting chain split.
+changes take several years to roll out. In this chapter, we learn
+about the common vocabulary around upgrading Bitcoin, and explore some
+examples of historic upgrades to its protocol as well as the insights that we gained
+from them. Finally, we talk about chain splits and the risks and costs 
+related to them.
 
 To get in tune for this chapter, you should read
 https://bitcointalk.org/dec/p1.html[David Harding's piece on Harmony
@@ -35,19 +35,19 @@ from endless inflation, mass or targeted confiscation, or simply the
 bureaucratic morass that is the legacy financial system.
 ____
 
-This chapter will discuss how Bitcoin can be upgraded without causing
-discord. Staying in harmony (consensus) is one of the biggest
+This chapter discusses how Bitcoin can be upgraded without causing
+discord. Staying in harmony, i.e. maintaining consensus, is indeed one of the biggest
 challenges in Bitcoin development. There are lots of nuances to
-upgrade mechanisms and they might be best understood by studying
-previous upgrades, so this chapter will put much focus on that, but
-we'll start by setting the stage with some vocabulary.
+upgrade mechanisms, which might be best understood by studying actual cases of
+previous upgrades. For this reason, the chapter puts much focus on historic examples, and
+it starts by setting the stage with some useful vocabulary.
 
 === Vocabulary
 
-According to
-https://en.wikipedia.org/wiki/Forward_compatibility[Wikipedia],
-*forward compatibility* means that old software can process data
-created by newer software, ignoring the parts it doesn't understand.
+According to Wikipedia,
+https://en.wikipedia.org/wiki/Forward_compatibility[*forward compatibility*]
+refers to the condition in which an old software can process data
+created by newer softwares, ignoring the parts it doesn't understand.
 
 [quote, Forward compatibility, Wikipedia]
 ____
@@ -57,38 +57,38 @@ later versions of the standard, ignoring new parts which it does not
 understand.
 ____
 
-And vice versa,
+Vice versa,
 https://en.wikipedia.org/wiki/Backward_compatibility[*backward
-compatibility*] means that data from old software is usable on new
-software. A change is said to be fully compatible if it's both forward
+compatibility*] refers to when data from an old software is usable on newer
+softwares. A change is said to be fully compatible if it's both forward
 and backward compatible.
 
 A change to the Bitcoin consensus rules is said to be a *soft fork* if
-the change is fully compatible. This is the most common way to upgrade
-Bitcoin, for many reasons that we'll discuss further in this
+it is fully compatible. This is the most common way to upgrade
+Bitcoin, for a number of reasons that we'll discuss further in this
 chapter. If a change to the Bitcoin consensus rules is backward
-compatible, but not forward compatible, it is called a *hard fork*.
+compatible but not forward compatible, it is called a *hard fork*.
 
 For a technical overview of soft forks and hard forks, please read
 https://rosenbaum.se/book/grokking-bitcoin-11.html[chapter 11 of
-Grokking Bitcoin]. It will explain these terms and also dive into
+Grokking Bitcoin]. It explains these terms and also dives into the
 upgrade mechanisms. It's recommended, although not strictly
 necessary, to get a grip on this before you continue reading.
 
 [[historic-upgrades]]
 === Historic upgrades
 
-Bitcoin is not the same today as it was when the Genesis block was
-created. Several upgrades have been made throughout the years. Eric
+Bitcoin is not the same today as it was when the genesis block was
+created. Several upgrades have been made throughout the years. In 2017 Eric
 Lombrozo
 https://btctranscripts.com/breaking-bitcoin/2017/changing-consensus-rules-without-breaking-bitcoin/[spoke
 at the Breaking Bitcoin conference]
-(https://www.youtube.com/watch?v=0WCaoGiAOHE&t=1926s[video]) in 2017
-about Bitcoin's different upgrades and points out how the upgrade
-mechanisms have evolved over time. He explained how Satoshi Nakamoto
+(https://www.youtube.com/watch?v=0WCaoGiAOHE&t=1926s[video])
+about Bitcoin's different upgrading mechanisms, pointing out how much they
+have evolved over time. He even explained how Satoshi Nakamoto
 once upgraded Bitcoin through a hard fork.
 
-[quote, Eric Lombrozo: Consensus Rules - Changing them without breaking Bitcoin, Breaking Bitcoin conference 2017]
+[quote, Eric Lombrozo: Consensus Rules - Changing them without breaking Bitcoin, Breaking Bitcoin conference (2017)]
 ____
 There was actually a hard-fork in bitcoin that Satoshi did that we
 would never do it this way- it’s a pretty bad way to do it. If you
@@ -108,7 +108,7 @@ add some optimizations in the same code. Fix a bug and add some
 optimizations.
 ____
 
-He points out that this hard fork, intentionally or not, adds
+He points out that, be it intentionally or not, this hard fork created
 opportunities for future soft forks, namely the Script operators
 (opcodes) OP_NOP1-OP_NOP10. We'll look more into <<cve-2010-5141,this
 code change>> in chapter 9. These opcodes have been used for two soft
@@ -118,29 +118,29 @@ https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki[BIP65]
 https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki[BIP113]
 (OP_SEQUENCEVERIFY).
 
-He provides an overview of how upgrade mechanisms have evolved
-throughout the years, up until 2017. After that, as of this writing,
-only one upgrade of the consensus rules has been deployed: Taproot,
-which was deployed in a somewhat different, and chaotic, manner.
+Lombrozo also provides an overview of the way upgrade mechanisms have evolved
+throughout the years, up until 2017. After that and as of the time of writing,
+only one upgrade of the consensus rules has been implemented: Taproot,
+which was deployed in a somewhat different, and rather chaotic, manner. [comm: written like this, the text seems to suggest that there is a logical connection between Taproot and Segwit; I would add a sentece at the end of this paragraph explaining briefly what Segwit is and why we are going to analyze it in the next sections]
 
 ==== Segwit upgrade
 
-While all upgrades preceding the segwit upgrade was more or less
-painless, this one was different. There seemed to be overwhelming
+While all the upgrades preceding segwit had been more or less
+painless, this one was different. [comm: when?] There seemed to be overwhelming
 support for segwit among Bitcoin users, but for some reason miners
 didn't signal support for this upgrade, which stalled the activation
 with no resolution in sight.
 
-Aaron van Wirdum explains this winding road in his Bitcoin Magazine
+Aaron van Wirdum describes this winding road in his Bitcoin Magazine
 article
 https://bitcoinmagazine.com/technical/the-long-road-to-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality[The
-Long Road To Segwit]. It starts with explaining what segwit is and how
-that taps into the block size debate. van Wirdum then explains the
+Long Road To Segwit]. He starts by explaining what segwit is and how
+that taps into the block size debate. Van Wirdum then outlines the
 turn of events that led up to its final activation. At the center of
 this process was an upgrade mechanism called _user activated soft
 fork_, or UASF for short, that was proposed by user Shaolinfry.
 
-[quote, Aaron van Wirdum - The Long Road To Segwit, Bitcoin Magazine]
+[quote, Aaron van Wirdum - The Long Road To Segwit, Bitcoin Magazine (2017)]
 ____
 Shaolinfry proposed an alternative: a user activated soft fork
 (UASF). Instead of hash power activation, a user activated soft fork
