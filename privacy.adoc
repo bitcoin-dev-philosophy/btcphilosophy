@@ -192,6 +192,7 @@ ____
 In this case, it all went well thanks to the philanthropically-minded
 hacker, but don't count on that next time.
 
+[[nonblockchainprivacy]]
 === Non-blockchain privacy
 
 While the blockchain proves to be a notorious source of privacy leaks,
