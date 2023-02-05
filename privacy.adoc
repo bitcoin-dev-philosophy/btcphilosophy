@@ -351,7 +351,7 @@ We noted in <<trustlessness,Trustlessness>> that the need for trust
 can only increase with layers on top, but that doesn't seem to be the
 case for privacy, which can be improved or made worse arbitrarily in
 layers on top. Why is that? Any layer on top of Bitcoin, as explained
-in <<_layered_scaling,Layered scaling>>, must use on-chain
+in <<_layered_scaling>>, must use on-chain
 transactions occasionally, otherwise it wouldn't be "on top of
 Bitcoin". Privacy-enhancing layers generally try to use the base layer
 as little as possible to minimize the amount of information revealed.
