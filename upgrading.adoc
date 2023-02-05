@@ -10,8 +10,8 @@ from them. Finally, we talk about chain splits and the risks and costs
 related to them.
 
 To get in tune for this chapter, you should read
-https://bitcointalk.org/dec/p1.html[David Harding's piece on Harmony
-and Discord].
+https://bitcointalk.org/dec/p1.html[David Harding's piece on harmony
+and discord].
 
 [quote, David Harding, Harmony and Discord]
 ____
@@ -88,7 +88,7 @@ about Bitcoin's different upgrading mechanisms, pointing out how much they
 have evolved over time. He even explained how Satoshi Nakamoto
 once upgraded Bitcoin through a hard fork.
 
-[quote, Eric Lombrozo: Consensus Rules - Changing them without breaking Bitcoin, Breaking Bitcoin conference (2017)]
+[quote, Eric Lombrozo, Changing Consensus Rules Without Breaking Bitcoin at Breaking Bitcoin conference (2017)]
 ____
 There was actually a hard-fork in bitcoin that Satoshi did that we
 would never do it this way- it’s a pretty bad way to do it. If you
@@ -109,7 +109,7 @@ optimizations.
 ____
 
 He points out that, be it intentionally or not, this hard fork created
-opportunities for future soft forks, namely the Script operators
+opportunities for future soft forks, namely the script operators
 (opcodes) OP_NOP1-OP_NOP10. We'll look more into <<cve-2010-5141,this
 code change>> in chapter 9. These opcodes have been used for two soft
 forks so far:
@@ -119,15 +119,15 @@ https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki[BIP113]
 (OP_SEQUENCEVERIFY).
 
 Lombrozo also provides an overview of the way upgrade mechanisms have evolved
-throughout the years, up until 2017. After that and as of the time of writing,
+throughout the years, up until 2017. After that year and as of the time of writing,
 only one upgrade of the consensus rules has been implemented: Taproot,
-which was deployed in a somewhat different, and rather chaotic, manner. [comm: written like this, the text seems to suggest that there is a logical connection between Taproot and Segwit; I would add a sentece at the end of this paragraph explaining briefly what Segwit is and why we are going to analyze it in the next sections]
+which was deployed in a somewhat different, and rather chaotic, manner. [comm: written like this, the text seems to suggest that there is a logical connection between Taproot and Segwit; I would either not mention Taproot at this stage or add a sentece at the end of this paragraph explaining briefly what Segwit is and why we are going to analyze it in the next sections]
 
 [[segwit-upgrade]]
 ==== Segwit upgrade
 
 While all the upgrades preceding Segwit had been more or less
-painless, this one was different. [comm: when?] There seemed to be overwhelming
+painless, this one was different. [comm: add time coordinates] There seemed to be overwhelming
 support for Segwit among Bitcoin users, but for some reason miners
 didn't signal support for this upgrade, which stalled the activation
 with no resolution in sight.
@@ -141,7 +141,7 @@ turn of events that led to its final activation. At the center of
 this process was an upgrade mechanism called _user activated soft
 fork_, or UASF for short, that was proposed by user Shaolinfry.
 
-[quote, Aaron van Wirdum - The Long Road To Segwit, Bitcoin Magazine (2017)]
+[quote, Aaron van Wirdum, The Long Road To Segwit on Bitcoin Magazine (2017)]
 ____
 Shaolinfry proposed an alternative: a user activated soft fork
 (UASF). Instead of hash power activation, a user activated soft fork
@@ -202,7 +202,7 @@ resolved thanks to
 https://github.com/bitcoin/bips/blob/master/bip-0091.mediawiki[BIP91],
 authored by James Hilliard.
 
-[quote, Aaron van Wirdum - The Long Road To Segwit, Bitcoin Magazine (2017)]
+[quote, Aaron van Wirdum, The Long Road To Segwit on Bitcoin Magazine (2017)]
 ____
 Hilliard proposed a slightly complex but clever solution that would
 make everything compatible: Segregated Witness activation as proposed
@@ -226,7 +226,7 @@ talk at the Breaking Bitcoin conference]
 Shaolinfry (see <<segwit-upgrade>> above), a miner activated soft fork isn't the ideal upgrade
 mechanism.
 
-[quote, Eric Lombrozo: Consensus Rules - Changing them without changing, Breaking Bitcoin conference (2017)]
+[quote, Eric Lombrozo, Changing Consensus Rules Without Breaking Bitcoin at Breaking Bitcoin conference (2017)]
 ____
 At some point we’re probably going to want to add more features to the
 bitcoin protocol. This is a big philosophical question we’re asking
@@ -262,7 +262,7 @@ ____
 What Corallo proposes is a combination of a miner activated soft fork
 and a user activated soft fork:
 
-[quote, Matt Corallo - Modern Soft Fork Activation, Bitcoin-dev mailing list (2020)]
+[quote, Matt Corallo, Modern Soft Fork Activation on Bitcoin-dev mailing list (2020)]
 ____
 Thus, as something a bit more concrete, I think an activation method
 which sets the right precedent and appropriately considers the above
@@ -288,9 +288,9 @@ as Bitcoin continues to grow.
 ____
 
 [[taproot-deployment]]
-==== Taproot upgrade - Speedy trial
+==== Taproot upgrade - Speedy Trial
 
-When Taproot was ready for deployment [comm: when?], meaning all the technical details
+When Taproot was ready for deployment [comm: add time coordinates], meaning all the technical details
 around its consensus rules had been implemented and had reached broad
 approval within the community, discussions on how to actually deploy it
 started to heat up. These discussions had been pretty low key up until
@@ -381,7 +381,7 @@ to the broader community in an
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-March/018583.html[email
 to the Bitcoin-dev mailing list].
 
-[quote, David Harding email on 2021-03-06, Bitcoin-dev mailing list]
+[quote, David Harding on Bitcoin-dev mailing list]
 ____
 The earlier version of this proposal was documented over 200 days ago[3]
 and taproot's underlying code was merged into Bitcoin Core over 140 days
@@ -426,15 +426,15 @@ chain or that chain?
 
 The risk with a user activated soft fork is that the new rules get
 activated even if the majority of the hash power doesn't support
-them. This scenario would result in a long-lasting chain split, that
+them. This scenario would result in a long-lasting chain split, which
 would persist until the majority of the hash power adopts the new
 rules. It could be especially hard to incentivize miners to switch to
 the new chain if they had already mined blocks after the split on the
 old chain, because by switching branch they would be abandoning their
-own block rewards. However, contrary to this incentive, in March 2013,
-when a <<march2013split,long-lasting split>> occurred due to an
-unintentional hard fork, two major mining pools made the decision to
-abandon their branch of the split to restore consensus.
+own block rewards. However, it's worth mentioning a remarkable episode: in March 2013
+a <<march2013split,long-lasting split>> occurred due to an
+unintentional hard fork and, contrary to this incentive, two major mining pools made the decision to
+abandon their branch of the split in order to restore consensus.
 
 On the other hand, the risk with a miner activated soft fork is a consequence of the fact that miners can engage
 in false signaling, which means that the actual share of the hash
@@ -452,9 +452,9 @@ https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/
 about the costs associated with hard forks] at Breaking Bitcoin in
 Paris, but much of what he said applies to a chain split due to a failed soft
 fork as well. He spoke about _negative externalities_, and defined them as the
-prices someone else has to pay for your own actions.
+price someone else has to pay for your own actions.
 
-[quote, Jimmy Song on Socialized Costs Of Hard Forks, Breaking Bitcoin conference (2017)]
+[quote, Jimmy Song, Socialized Costs Of Hard Forks at Breaking Bitcoin conference (2017)]
 ____
 The classic example of a negative externality is a factory. Maybe they
 are producing– maybe it’s an oil refinery and they produce a good that
@@ -477,7 +477,7 @@ a hard fork into one-time costs and permanent costs.
 
 Among the many examples of one-time costs, he mentions the ones incurred by exchanges.
 
-[quote, Jimmy Song on Socialized Costs Of Hard Forks, Breaking Bitcoin conference (2017)]
+[quote, Jimmy Song, Socialized Costs Of Hard Forks at Breaking Bitcoin conference (2017)]
 ____
 So we have a bunch of exchanges and they had a lot of one-time costs
 that they had to pay. The first thing that happened is that deposits
@@ -514,11 +514,11 @@ to try avoiding chain splits at all times.
 
 === Conclusion
 
-Bitcoin grows and evolves over time. Different upgrade mechanisms
+Bitcoin grows and evolves with time. Different upgrade mechanisms
 have been used over the years and the learning curve is steep. More
-and more sophisticated and robust methods keep been invented as we
+and more sophisticated and robust methods keep been invented, as we
 learn more about how the network reacts.
 
 To keep Bitcoin in harmony, soft forks have proven to be the way
-forward, but the big question is still not fully answered: How do we
+forward, but the big question is still not fully answered: how do we
 safely deploy soft forks without causing discord?
