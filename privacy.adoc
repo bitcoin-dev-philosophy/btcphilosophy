@@ -368,7 +368,7 @@ degrades over time.
 
 To mitigate the risks of having your personal data revealed is to not
 give it out in the first place nor to give it to centralized services,
-which <<kycdbs,build big databases>> that can leak. An article by
+which build big databases that can leak (see <<nonblockchainprivacy>>). An article by
 Bitcoin Q+A https://bitcoiner.guide/nokyconly/[explains KYC] and the
 dangers derived from it. It also suggests some steps you can take to improve
 your situation.
