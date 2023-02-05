@@ -79,7 +79,7 @@ necessary, to get a grip on this before you continue reading.
 === Historic upgrades
 
 Bitcoin is not the same today as it was when the genesis block was
-created. Several upgrades have been made throughout the years. In 2017 Eric
+created. Several upgrades have been made throughout the years. In 2017, Eric
 Lombrozo
 https://btctranscripts.com/breaking-bitcoin/2017/changing-consensus-rules-without-breaking-bitcoin/[spoke
 at the Breaking Bitcoin conference]
@@ -123,20 +123,21 @@ throughout the years, up until 2017. After that and as of the time of writing,
 only one upgrade of the consensus rules has been implemented: Taproot,
 which was deployed in a somewhat different, and rather chaotic, manner. [comm: written like this, the text seems to suggest that there is a logical connection between Taproot and Segwit; I would add a sentece at the end of this paragraph explaining briefly what Segwit is and why we are going to analyze it in the next sections]
 
+[[segwit-upgrade]]
 ==== Segwit upgrade
 
-While all the upgrades preceding segwit had been more or less
+While all the upgrades preceding Segwit had been more or less
 painless, this one was different. [comm: when?] There seemed to be overwhelming
-support for segwit among Bitcoin users, but for some reason miners
+support for Segwit among Bitcoin users, but for some reason miners
 didn't signal support for this upgrade, which stalled the activation
 with no resolution in sight.
 
 Aaron van Wirdum describes this winding road in his Bitcoin Magazine
 article
 https://bitcoinmagazine.com/technical/the-long-road-to-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality[The
-Long Road To Segwit]. He starts by explaining what segwit is and how
+Long Road To Segwit]. He starts by explaining what Segwit is and how
 that taps into the block size debate. Van Wirdum then outlines the
-turn of events that led up to its final activation. At the center of
+turn of events that led to its final activation. At the center of
 this process was an upgrade mechanism called _user activated soft
 fork_, or UASF for short, that was proposed by user Shaolinfry.
 
@@ -150,13 +151,13 @@ by an economic majority, this should compel a majority of miners to
 follow (or activate) the soft fork.
 ____
 
-Among other things, he cites Shaolinfry's email to the bitcoin-dev
-mailing list. Shaolinfry
+Among other things, he cites Shaolinfry's email to the Bitcoin-dev
+mailing list. In that occasion Shaolinfry
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-February/013643.html[argued
-against miner activated soft forks] and lists a number of problems
-with them
+against miner activated soft forks], listing a number of problems
+with them.
 
-[quote, Shaolinfry, Bitcoin-dev mailing list February 2017]
+[quote, Shaolinfry, Bitcoin-dev mailing list (2017)]
 ____
 Firstly, it requires trusting the hash power will validate after activation. 
 The BIP66 soft fork was a case where 95% of the hashrate was signaling 
@@ -171,18 +172,18 @@ more hashrate decentralization, it's likely that we will suffer more and more
 from "upgrade inertia" which will veto most upgrades.
 ____
 
-He also point to a misinterpretation of miner signaling, that people
-think miners decide on protocol upgrades, rather than help
-coordinating them. Due to this misunderstanding, miners may also feel
-obliged to proclaim in public their views on a soft fork, as if that
-gives weight to the proposal.
+Shaolinfry also drew attention to a common misinterpretation of miner signaling: people generally
+thought that it was a means by which miners could decide upon protocol upgrades, rather than an action that helped them
+coordinate with each other. Due to this misunderstanding, miners might have also felt
+obliged to proclaim in public their views on a certain soft fork, as if that
+gave weight to the proposal.
 
 The UASF proposal is, in a nutshell, a "flag day" on which nodes
-starts enforcing the new rules. That way miners don't have to
-participate in coordinating the upgrade, but can trigger activation
+start enforcing specific new rules. That way, miners don't have to
+make a collective effort to coordinate the upgrade, and can even trigger activation
 earlier than the flag day if enough blocks signal support.
 
-[quote, Shaolinfry, Bitcoin-dev mailing list February 2017]
+[quote, Shaolinfry, Bitcoin-dev mailing list (2017)]
 ____
 My suggestion is to have the best of both worlds. Since a user
 activated soft fork needs a relatively long lead time before
@@ -195,13 +196,13 @@ end of the BIP9 deployment timeout.
 ____
 
 This idea caught a lot of interest, but didn't seem to reach near
-unanimous support, which caused concern of a potential chain
+unanimous support, which caused concern for a potential chain
 split. The article by Aaron van Wirdum explains how this finally got
-resolved by
+resolved thanks to
 https://github.com/bitcoin/bips/blob/master/bip-0091.mediawiki[BIP91],
 authored by James Hilliard.
 
-[quote, Aaron van Wirdum - The Long Road To Segwit, Bitcoin Magazine]
+[quote, Aaron van Wirdum - The Long Road To Segwit, Bitcoin Magazine (2017)]
 ____
 Hilliard proposed a slightly complex but clever solution that would
 make everything compatible: Segregated Witness activation as proposed
@@ -211,21 +212,21 @@ at least throughout SegWit activation.
 ____
 
 There were some more complicating factors involved (e.g. the so-called
-"New York Agreement"), that this BIP had to take into consideration,
-and we encourage you to read Van Wirdum's article in full, because
-there are many interesting details in this story.
+"New York Agreement"), that this BIP had to take into consideration.
+We encourage you to read Van Wirdum's article in full to learn about
+the many interesting details in this story.
 
-==== Post-segwit discussion
+==== Post-Segwit discussion
 
-After the segwit deployment, a discussion about deployment mechanisms
+After the Segwit deployment, a discussion about deployment mechanisms
 emerged. As noted by Eric Lombrozo in
 https://btctranscripts.com/breaking-bitcoin/2017/changing-consensus-rules-without-breaking-bitcoin/[his
 talk at the Breaking Bitcoin conference]
 (https://www.youtube.com/watch?v=0WCaoGiAOHE&t=1926s[video]) and by
-Shaolinfry above, a miner activated soft fork isn't the ideal upgrade
+Shaolinfry (see <<segwit-upgrade>> above), a miner activated soft fork isn't the ideal upgrade
 mechanism.
 
-[quote, Eric Lombrozo: Consensus Rules - Changing them without changing, Breaking Bitcoin conference 2017]
+[quote, Eric Lombrozo: Consensus Rules - Changing them without changing, Breaking Bitcoin conference (2017)]
 ____
 At some point we’re probably going to want to add more features to the
 bitcoin protocol. This is a big philosophical question we’re asking
@@ -236,13 +237,13 @@ ____
 
 In January 2020, Matt Corallo
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-January/017547.html[sent
-an email] to the Bitcoin-Dev mailing list that started a discussion on
-future soft fork deployment mechanisms. He lists five goals that he
-thinks are important in an upgrade. David Harding
+an email] to the Bitcoin-dev mailing list that started a discussion on
+future soft fork deployment mechanisms. He listed five goals that he
+thought were essential in an upgrade. David Harding
 https://bitcoinops.org/en/newsletters/2020/01/15/#discussion-of-soft-fork-activation-mechanisms[summarizes
-them in a Bitcoin Optech newsletter] as
+them in a Bitcoin Optech newsletter] as:
 
-[quote, David Harding, Bitcoin Optech newsletter #80]
+[quote, David Harding, Bitcoin Optech newsletter #80 (2020)]
 ____
 . The ability to abort if a serious objection to the proposed
 consensus rules changes is encountered
@@ -261,7 +262,7 @@ ____
 What Corallo proposes is a combination of a miner activated soft fork
 and a user activated soft fork:
 
-[quote, Matt Corallo - Modern Soft Fork Activation, Bitcoin-dev mailing list January 2020]
+[quote, Matt Corallo - Modern Soft Fork Activation, Bitcoin-dev mailing list (2020)]
 ____
 Thus, as something a bit more concrete, I think an activation method
 which sets the right precedent and appropriately considers the above
@@ -289,17 +290,17 @@ ____
 [[taproot-deployment]]
 ==== Taproot upgrade - Speedy trial
 
-When Taproot was ready for deployment, meaning all technical details
-around its consensus rules were implemented and had reached broad
-approval from the community, discussions on how to actually deploy it
+When Taproot was ready for deployment [comm: when?], meaning all the technical details
+around its consensus rules had been implemented and had reached broad
+approval within the community, discussions on how to actually deploy it
 started to heat up. These discussions had been pretty low key up until
-this point.
+that point.
 
-Lot's of activation mechanism proposals started floating around and
+Lots of proposals for activation mechanisms started floating around, and
 David Harding
 https://en.bitcoin.it/wiki/Taproot_activation_proposals[summarized
-them on the Bitcoin Wiki]. In that article he explains some properties
-of BIP8 which at that time had some recent changes made to make it
+them on the Bitcoin Wiki]. In his article he explained some properties
+of BIP8, which at that time had some recent changes made in order to make it
 more flexible.
 
 ____
@@ -335,26 +336,26 @@ BIP8. This provides a common factor to use for categorizing many
 different proposals.
 ____
 
-From this point forward the discussions were very heated, especially
+From this point forward the discussions became very heated, especially
 around whether `lockinontimeout` should be `true` (as in a user
-activated soft fork, refered to as "`BIP8 with forced activation`" by
-Harding) or `false` (as in a miner activated soft fork, refered to as
+activated soft fork, referred to as "`BIP8 with forced activation`" by
+Harding) or `false` (as in a miner activated soft fork, referred to as
 "`BIP8 without forced activation`" by Harding).
 
 Among the proposals listed, one of them was titled "`Let’s see what
-happens`". This proposal didn't get much traction for some reason
+happens`". For some reason, this proposal didn't get much traction
 until seven months later.
 
-During these seven months, the discussion went on and it seemed like
-there was no way to reach broad consensus on which deployment
-mechanism to use. There were mainly two camps, one that preferred
-`lockinontimeout=true` (the UASF crowd) and one that preferred
-`lockinontimeout=false` (the try and if it fails rethink crowd). Since
-there were no overwhelming support for any of these options, the
-discussions went in circles with seemingly no way forward. Some of
+During those seven months, the discussion went on and it seemed like
+there was no way to reach broad consensus over which deployment
+mechanism to use. There were mainly two camps: one that preferred
+`lockinontimeout=true` (the UASF crowd) and the other one that preferred
+`lockinontimeout=false` (the "`try and if it fails rethink`" crowd). Since
+there was no overwhelming support for any of these options, the
+debate went in circles with seemingly no way forward. Some of
 these discussions were held on IRC, in a channel called
 ##taproot-activation, but
-https://gnusha.org/taproot-activation/2021-03-05.log[on March 5 2021],
+https://gnusha.org/taproot-activation/2021-03-05.log[on March 5th 2021],
 something changed:
 
 [quote, #taproot-activation IRC log]
@@ -373,14 +374,14 @@ ____
 ....
 ____
 
-It seems the "`let's see what happens`" approach finally clicked in
-peoples' minds. This idea would later be labeled as "`Speedy Trial`"
-due to it's short signaling period. David Harding explains this idea
+The "`let's see what happens`" approach finally seemed to click in
+peoples' minds. This process would later be labeled as "`Speedy Trial`"
+due to its short signaling period. David Harding explains this idea
 to the broader community in an
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-March/018583.html[email
-to the Bitcoin-Dev mailing list].
+to the Bitcoin-dev mailing list].
 
-[quote, David Harding email on 2021-03-06, Bitcoin-Dev mailing list]
+[quote, David Harding email on 2021-03-06, Bitcoin-dev mailing list]
 ____
 The earlier version of this proposal was documented over 200 days ago[3]
 and taproot's underlying code was merged into Bitcoin Core over 140 days
@@ -391,7 +392,7 @@ next activation attempt over a month ago.
 
 Instead, we've debated at length and don't appear to be any closer to
 what I think is a widely acceptable solution than when the mailing list
-began discussing post-segwit activation schemes over a year ago.[5]  I
+began discussing post-Segwit activation schemes over a year ago.[5]  I
 think Speedy Trial is a way to generate fast progress that will either
 end the debate (for now, if activation is successful) or give us some
 actual data upon which to base future taproot activation proposals.
@@ -402,7 +403,7 @@ and then released in
 https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.1.md#taproot-soft-fork[Bitcoin
 Core version 0.21.1]. The miners quickly started signaling for this
 upgrade moving the deployment state to `LOCKED_IN`, and after a grace
-period the Taproot rules activated mid-November in block
+period the Taproot rules were activated mid-November 2021 in block
 https://mempool.space/block/0000000000000000000687bca986194dc2c1f949318629b44bb54ec0a94d8244[709632].
 
 ==== Future deployment mechanisms
@@ -416,17 +417,17 @@ known deployment mechanism.
 [[upgrading-risks]]
 === Risks
 
-During activation of any fork, hard or soft, miner activated or user
-activated, there's a risk of a long-lasting chain split. A split that
+During the activation of any fork, be it hard or soft, miner activated or user
+activated, there's the risk of a long-lasting chain split. A split that
 lingers for more than a few blocks can cause severe damage to the
-sentiment around Bitcoin and also to it's price. But above all, it
+sentiment around Bitcoin as well as to its price. But above all, it
 would cause great confusion over what Bitcoin is. Is Bitcoin this
 chain or that chain?
 
-The risk with a user activated soft fork is that the new rules
-activate even if the majority of the hash power doesn't support
-them. This scenario would result in a long lasting chain split that
-would remain until the majority of the hash power adopts the new
+The risk with a user activated soft fork is that the new rules get
+activated even if the majority of the hash power doesn't support
+them. This scenario would result in a long-lasting chain split, that
+would persist until the majority of the hash power adopts the new
 rules. It could be especially hard to incentivize miners to switch to
 the new chain if they had already mined blocks after the split on the
 old chain, because by switching branch they would be abandoning their
@@ -435,11 +436,11 @@ when a <<march2013split,long-lasting split>> occurred due to an
 unintentional hard fork, two major mining pools made the decision to
 abandon their branch of the split to restore consensus.
 
-The risk with a miner activated soft fork is that miners could engage
+On the other hand, the risk with a miner activated soft fork is a consequence of the fact that miners can engage
 in false signaling, which means that the actual share of the hash
-power that support the change is smaller than it looks. If the actual
+power that supports the change could be smaller than it looks. If the actual
 support doesn't comprise a majority of the hash power, we'd probably
-see a long lasting chain split similar with the one described in the
+see a long-lasting chain split similar to the one described in the
 previous paragraph. This, or at least a similar issue, has happened in
 reality when <<bip66-splits,BIP66 was deployed>>, but it got resolved
 within 6 blocks or so.
@@ -447,13 +448,13 @@ within 6 blocks or so.
 ==== Costs of a split
 
 Jimmy Song
-https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/[speaks
+https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/[spoke
 about the costs associated with hard forks] at Breaking Bitcoin in
-Paris, but much of it applies to a chain split due to a failed soft
-fork as well. He speaks about _negative externalities_, and refers to
+Paris, but much of what he said applies to a chain split due to a failed soft
+fork as well. He spoke about _negative externalities_, and defined them as the
 prices someone else has to pay for your own actions.
 
-[quote, Jimmy Song on Socialized Costs Of Hard Forks, Breaking Bitcoin conference 2017]
+[quote, Jimmy Song on Socialized Costs Of Hard Forks, Breaking Bitcoin conference (2017)]
 ____
 The classic example of a negative externality is a factory. Maybe they
 are producing– maybe it’s an oil refinery and they produce a good that
@@ -471,12 +472,12 @@ ____
 
 In the context of Bitcoin, he exemplifies negative externalities using
 Bitcoin Cash (bcash), which is a hard fork of Bitcoin created shortly
-prior to this conference. He categorizes the negative externalities of
+prior to that conference in 2017. He categorizes the negative externalities of
 a hard fork into one-time costs and permanent costs.
 
-Among the many examples of one-time costs he mentions those of exchanges.
+Among the many examples of one-time costs, he mentions the ones incurred by exchanges.
 
-[quote, Jimmy Song on Socialized Costs Of Hard Forks, Breaking Bitcoin conference 2017]
+[quote, Jimmy Song on Socialized Costs Of Hard Forks, Breaking Bitcoin conference (2017)]
 ____
 So we have a bunch of exchanges and they had a lot of one-time costs
 that they had to pay. The first thing that happened is that deposits
@@ -501,21 +502,21 @@ way to give these tokens to your users. Again, short-notice. Right? No
 time to do this, has to be done quickly.
 ____
 
-He also lists one-time costs for merchants, payment processors,
-wallets, miners, and users. Then he talks about some permanent costs,
-for example higher risk of reorgs, privacy loss, etc.
+He also lists the one-time costs incurred by merchants, payment processors,
+wallets, miners, and users, as well as some of the permanent costs,
+for example privacy loss and a higher risk of reorgs.
 
-Also, when a split has happened, and the chain with the most general
+Indeed, when a split happens and the chain with the most general
 rules becomes stronger than the chain with the stricter rules, a reorg
 will occur. This will have a severe impact on all transactions carried
 out in the wiped-out branch. For these reasons it's really important
-to try to avoid splits at all times.
+to try avoiding chain splits at all times.
 
 === Conclusion
 
-Bitcoin grows and evolves over time, and different upgrade mechanisms
+Bitcoin grows and evolves over time. Different upgrade mechanisms
 have been used over the years and the learning curve is steep. More
-and more sophisticated and robust methods have been invented as we
+and more sophisticated and robust methods keep been invented as we
 learn more about how the network reacts.
 
 To keep Bitcoin in harmony, soft forks have proven to be the way
