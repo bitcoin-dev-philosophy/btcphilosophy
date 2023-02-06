@@ -21,19 +21,19 @@ security assumption is that a majority of the network's hashpower is
 honest, meaning that they play by the rules. If these assumptions are
 proven wrong, then Bitcoin is in trouble.
 
-Andrew Poelstra
+In 2015 Andrew Poelstra
 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/[gave
-a talk] at the Scaling Bitcoin conference in Hong Kong 2015, where he
-talked about Bitcoin's security assumptions. He says that many systems
+a talk] at the Scaling Bitcoin conference in Hong Kong, during which he
+analyzed Bitcoin's security assumptions. He starts by noticing that many systems
 disregard adversaries to some extent; for example, it's really hard to
-protect a building against all types of adversarial events. Instead we
-accept that someone may burn the building down, and we prevent
-adversarial behavior to some extent through law enforcement etc.
+protect a building against all types of adversarial events. Instead, we generally
+accept the possibility that someone may burn the building down, and to some extent prevent
+this and other adversarial behaviors through law enforcement etc.
 // See greg maxwell's analogy of the building: https://youtu.be/Gs9lJTRZCDc?t=2799
 
 But online things are different:
 
-[quote, Andrew Poelstra, Scaling Bitcoin, Hong Kong 2015]
+[quote, Andrew Poelstra, Security Assumptions at Scaling Bitcoin Hong Kong (2015)]
 ____
 However, online we don’t have this. We have pseudonymous and anonymous
 behavior, anyone can connect to everyone and hurt the system. If it’s
@@ -41,8 +41,8 @@ possible to adversarially hurt the system, then they will do it. We
 cannot assume they will be visible and that they will be caught.
 ____
 
-The consequence is that all known weaknesses in Bitcoin must be taken
-care of somehow; otherwise, they will be exploited. After all, Bitcoin
+The consequence is that all known weaknesses in Bitcoin must somehow be taken
+care of, otherwise they will be exploited. After all, Bitcoin
 is the greatest honey pot in the world.
 
 Poelstra goes on to mention how Bitcoin is a new kind of system; it's
@@ -52,7 +52,7 @@ clear-cut security assumptions.
 On his personal blog, software engineer Jameson Lopp,
 https://blog.lopp.net/bitcoins-security-model-a-deep-dive/[dives into this]:
 
-[quote, Jameson Lopp, Bitcoin’s Security Model: A Deep Dive]
+[quote, Jameson Lopp, Bitcoin’s Security Model: A Deep Dive (2016)]
 ____
 In reality, the bitcoin protocol was and is being built without a
 formally defined specification or security model. The best that we can
@@ -60,20 +60,21 @@ do is to study the incentives and behavior of actors within the system
 in order to better understand and attempt to describe it.
 ____
 
-So we have a system that seems to be working in practice, but we can't
-formally prove it's secure. A proof is probably not possible due to
-the complexity of the system.
+So, we have a system that seems to be working in practice, but that we can't
+formally prove to be secure. A proof is probably not possible due to
+the complexity of the system itself.
 
-=== Not just for experts
+=== Not only for experts
 
+[comm: this paragraph is a bit obscure to me. I undestand everything that is said but I don't quite get the logic behind it: what does the title refer to? And if we open by saying that adversarial thinking is relevant not only to bitcoiners, why do we only talk about Bitcoin then? And what is the logical connection between the over-simplistic narratives and thinking adversarially? I imagine the answers to all these questions but I feel like they should be more explicitly outlined in the text]
 The importance of adversarial thinking probably extends to the general
-public as well to some
-degree. https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking[Ragnar
-Lifthasir mentions in a tweetstorm] how simplistic narratives around
-Bitcoin, for example, "just HODL", can be degrading to Bitcoin and
-concludes
+public to some
+degree. Ragnar Lifthasir mentions
+in a https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking[tweetstorm] how simplistic narratives around
+Bitcoin - for example, "just HODL" - can be degrading to Bitcoin itself, and
+concludes by saying
 
-[quote, Ragnar Lifthasir, Twitter]
+[quote, Ragnar Lifthasir, Twitter (2020)]
 ____
 To make Bitcoin and ourselves stronger we need to think like the
 software engineers who contribute to Bitcoin. They peer review,
@@ -83,7 +84,7 @@ conservative
 ____
 
 He refers to these simplistic narratives as monomania, meaning that by
-focusing only on a single thing, e.g., "just HODL", you stop thinking
+focusing only on a single thing, e.g. "just HODL", you stop thinking
 about important stuff like keeping your Bitcoin secure or doing your
 best to use Bitcoin in a trustless manner.
 
@@ -91,11 +92,11 @@ best to use Bitcoin in a trustless manner.
 
 There are a lot of known weaknesses in Bitcoin, and many of them are
 actively being exploited. To get a glimpse of that, have a look at
-https://en.bitcoin.it/wiki/Weaknesses[the Weaknesses page] on the
-Bitcoin wiki. They mention a wide variety of problems, for example,
+https://en.bitcoin.it/wiki/Weaknesses[the Weaknesses page] on
+Bitcoin wiki. Here are mentioned a wide variety of problems, such as
 wallet theft and denial-of-service attacks.
 
-[quote, Various authors, The Bitcoin wiki]
+[quote, Various authors, Bitcoin wiki]
 ____
 If an attacker attempts to fill the network with clients that they
 control, you would then be very likely to connect only to attacker
@@ -104,16 +105,16 @@ completely isolating a node from the honest network can be helpful in
 the execution of other attacks.
 ____
 
-This type of attack is called a _Sybil attack_, which means that a
-single entity controls multiple nodes in a network to make it appear
+This type of attack is called a _Sybil attack_, and it occurs whenever a
+single entity controls multiple nodes in a network and uses them to appear
 as multiple entities.
 
 As the quote also mentions, the Sybil attack is not effective on the
-Bitcoin network because there is no voting with nodes or entities, but
-<<one-cpu-one-vote,with computing power>>. However, this flat
+Bitcoin network because there is no voting through nodes or other numerable entities, but
+<<one-cpu-one-vote,through computing power>>. However, this flat
 structure leaves the system susceptible to other attacks.
-The authors then lists possible attacks such as information hiding
-(often referred to as an eclipse attack) and how Bitcoin Core implements
+The authors then outline other possible attacks, such as information hiding
+(often referred to as an _eclipse attack_), and the way Bitcoin Core implements
 some heuristic countermeasures against such attacks.
 
 The above are examples of real threats that need to be taken care of.
@@ -125,15 +126,15 @@ The above are examples of real threats that need to be taken care of.
 image::sabotage-manual.png[role="right half-width"]
 
 [[sabotage]]
-To better understand the mind of an adversary, it might be helpful to
-get a glimpse into how they operate. A government body named
-Office of Strategic Services, which operated during World War II,
-conducted espionage, performed sabotage and propaganda, among other
-things, wrote a https://www.gutenberg.org/ebooks/26184[manual]
+To better understand the adversary's mind, it might be helpful to
+get a glimpse into how they operate. A government [comm: governmentof which nation?] body named
+Office of Strategic Services, which operated during World War II and had among its purposes to
+conduct espionage, perform sabotage and spread propaganda,
+produced a https://www.gutenberg.org/ebooks/26184[manual]
 for their personnel on how to sabotage. Its title was "Simple
 Sabotage Field Manual" and contained concrete tips on infiltrating
-the enemy to make their lives hard. They range from burning
-down warehouses to causing wear to drills to decrease the enemy's
+the enemy to make their lives hard. The tips range from burning
+down warehouses to causing wear to drills in order to decrease the enemy's
 efficiency.
 
 For example, there is a section (<<fig-sabotage-manual>>) about how an
@@ -141,8 +142,8 @@ infiltrator can disrupt organizations. It's not hard to see how such
 tactics could be used to target the Bitcoin development process (see
 <<opensource>>), which is open for anyone to participate in. A
 dedicated attacker can keep stalling progress by endless concerns of
-irrelevant issues, haggle over precise wordings, and attempt to reiterate
-already comprehensively addressed discussions. The attacker can also hire
+irrelevant issues, haggle over precise wordings, and attempt to reiterate discussions
+that have already been comprehensively addressed. The attacker can also hire
 a troll army to multiply their effectiveness; we can call it a social
 Sybil attack. Using a social Sybil attack, they can make it look like there's
 more resistance against a proposed change than there actually is.
@@ -157,7 +158,7 @@ Bitcoin as an enemy.
 [[axiomofresistance]]
 Eric Voskuil
 https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance[writes
-on his Cryptoeconomics wiki page] about what he calls "Axiom of
+on his Cryptoeconomics wiki page] about what he calls the "Axiom of
 Resistance":
 
 [quote, Eric Voskuil, Cryptoeconomics wiki]
@@ -182,6 +183,6 @@ create a system that states can't control is it meaningful to try.
 
 This means that to work on Bitcoin, you should accept the Axiom of
 Resistance, otherwise you'd better spend your time on other
-projects. Accepting that axiom helps in focusing your development
+projects. Accepting that axiom helps you focusing your development
 efforts on the real problems at hand: coding around state-level
 adversaries. In other words, think adversarially.
