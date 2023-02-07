@@ -9,7 +9,7 @@ we explain how ordinary users can improve
 their self-sovereignty and Bitcoin's full node decentralization by thinking adversarially. Then, we
 look into some actual threats to Bitcoin as well as into the adversary's mind.
 Lastly, we talk about the _axiom of resistance_ which
-might help you understand why people are working on Bitcoin in the
+can help you understand why people are working on Bitcoin in the
 first place.
 
 When discussing security within various systems, it's important to understand
@@ -66,7 +66,6 @@ the complexity of the system itself.
 
 === Not only for experts
 
-[comm: this paragraph is a bit obscure to me. I undestand everything that is said but I don't quite get the logic behind it: what does the title refer to? And if we open by saying that adversarial thinking is relevant not only to bitcoiners, why do we only talk about Bitcoin then? And what is the logical connection between the over-simplistic narratives and thinking adversarially? I imagine the answers to all these questions but I feel like they should be more explicitly outlined in the text]
 The importance of adversarial thinking probably extends to the general
 public to some
 degree. Ragnar Lifthasir mentions
@@ -86,14 +85,14 @@ ____
 He refers to these simplistic narratives as monomania, meaning that by
 focusing only on a single thing, e.g. "just HODL", you stop thinking
 about important stuff like keeping your Bitcoin secure or doing your
-best to use Bitcoin in a trustless manner.
+best to use Bitcoin in a trustless manner.[comm: this section is a bit obscure to me. I undestand everything that is said but I don't quite get the logic behind it: what does the title refer to? And if we open by saying that adversarial thinking is relevant not only to bitcoiners, why do we only talk about Bitcoin then? And what is the logical connection between the over-simplistic narratives and thinking adversarially? I imagine the answers to all these questions but I feel like they should be more explicitly outlined in the text]
 
 === Threats
 
 There are a lot of known weaknesses in Bitcoin, and many of them are
-actively being exploited. To get a glimpse of that, have a look at
-https://en.bitcoin.it/wiki/Weaknesses[the Weaknesses page] on
-Bitcoin wiki. Here are mentioned a wide variety of problems, such as
+actively being exploited. To get a glimpse of that, have a look at the
+https://en.bitcoin.it/wiki/Weaknesses[Weaknesses page] on
+Bitcoin wiki. There are mentioned a wide variety of problems, such as
 wallet theft and denial-of-service attacks.
 
 [quote, Various authors, Bitcoin wiki]
@@ -105,16 +104,16 @@ completely isolating a node from the honest network can be helpful in
 the execution of other attacks.
 ____
 
-This type of attack is called a _Sybil attack_, and it occurs whenever a
+This type of attack is called _Sybil attack_, and it occurs whenever a
 single entity controls multiple nodes in a network and uses them to appear
 as multiple entities.
 
 As the quote also mentions, the Sybil attack is not effective on the
-Bitcoin network because there is no voting through nodes or other numerable entities, but
-<<one-cpu-one-vote,through computing power>>. However, this flat
+Bitcoin network because there is no voting through nodes or other numerable entities, but rather
+<<one-cpu-one-vote,through computing power>>. Nonetheless, this flat
 structure leaves the system susceptible to other attacks.
-The authors then outline other possible attacks, such as information hiding
-(often referred to as an _eclipse attack_), and the way Bitcoin Core implements
+The Bitcoin wiki page also outlines other possible attacks, such as information hiding
+(often referred to as _eclipse attack_), and the way Bitcoin Core implements
 some heuristic countermeasures against such attacks.
 
 The above are examples of real threats that need to be taken care of.
@@ -127,11 +126,11 @@ image::sabotage-manual.png[role="right half-width"]
 
 [[sabotage]]
 To better understand the adversary's mind, it might be helpful to
-get a glimpse into how they operate. A government [comm: governmentof which nation?] body named
+get a glimpse into how they operate. A government [comm: of which nation?] body named
 Office of Strategic Services, which operated during World War II and had among its purposes to
 conduct espionage, perform sabotage and spread propaganda,
 produced a https://www.gutenberg.org/ebooks/26184[manual]
-for their personnel on how to sabotage. Its title was "Simple
+for their personnel on how to properly sabotage the enemy. Its title was "Simple
 Sabotage Field Manual" and contained concrete tips on infiltrating
 the enemy to make their lives hard. The tips range from burning
 down warehouses to causing wear to drills in order to decrease the enemy's
@@ -144,12 +143,12 @@ tactics could be used to target the Bitcoin development process (see
 dedicated attacker can keep stalling progress by endless concerns of
 irrelevant issues, haggle over precise wordings, and attempt to reiterate discussions
 that have already been comprehensively addressed. The attacker can also hire
-a troll army to multiply their effectiveness; we can call it a social
+a troll army to multiply their own effectiveness; we can call this a social
 Sybil attack. Using a social Sybil attack, they can make it look like there's
 more resistance against a proposed change than there actually is.
 
 This highlights how a determined state can and will do everything in
-their power to destroy their enemy, including breaking it down from
+its power to destroy the enemy, including breaking it down from
 the inside. Since Bitcoin is a form of money that competes with
 established fiat currencies, chances are that states will regard
 Bitcoin as an enemy.
@@ -158,8 +157,8 @@ Bitcoin as an enemy.
 [[axiomofresistance]]
 Eric Voskuil
 https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance[writes
-on his Cryptoeconomics wiki page] about what he calls the "Axiom of
-Resistance":
+on his Cryptoeconomics wiki page] about what he calls the "axiom of
+resistance":
 
 [quote, Eric Voskuil, Cryptoeconomics wiki]
 ____
@@ -179,10 +178,10 @@ rationalize the conflict.
 ____
 
 What he's essentially saying is that only when one assumes it's possible to
-create a system that states can't control is it meaningful to try.
+create a system that states can't control, is it meaningful to try.
 
-This means that to work on Bitcoin, you should accept the Axiom of
-Resistance, otherwise you'd better spend your time on other
-projects. Accepting that axiom helps you focusing your development
+This means that to work on Bitcoin you should accept the axiom of
+resistance, otherwise you'd better spend your time on other
+projects. Acknowledging that axiom helps you focusing your development
 efforts on the real problems at hand: coding around state-level
 adversaries. In other words, think adversarially.
