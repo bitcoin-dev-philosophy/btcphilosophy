@@ -76,7 +76,7 @@ Even if some full nodes turn to the dark side and decide to
 accept blocks with higher-value coinbase transactions, all the remaining full
 nodes will simply neglect them and continue doing business as usual. Some full nodes
 may, intentionally or unintentionally (see
-<<combined-output-overflow,When shit hits the fan>>), run evil
+<<combined-output-overflow>>), run evil
 softwares, yet the collective will robustly secure the blockchain.
 In conclusion, you can choose to trust the system without having to
 trust anyone.
@@ -163,7 +163,7 @@ network? It's impossible to say, but we do know a few things:
 
 * A century is a _long_ time from the Bitcoin perspective. If it is
   still around, it will have probably evolved enormously.
-* If an overwhelming economic majority finds it convenient to change
+* If an overwhelming economic majority finds it necessary to change
   the rules and introduce for example a perpetual annual 0.1% or 1%
   monetary inflation, the supply of bitcoin will no longer be finite.
 * With zero block subsidy and an empty or nearly empty mempool, things
