@@ -43,7 +43,7 @@ Commerce on the Internet has come to rely almost exclusively on
 financial institutions serving as trusted third parties to process
 electronic payments. While the system works well enough for most
 transactions, it still suffers from the inherent weaknesses of the
-trust based model. Completely non-reversible transactions are not
+trust based model.  Completely non-reversible transactions are not
 really possible, since financial institutions cannot avoid mediating
 disputes. The cost of mediation increases transaction costs, limiting
 the minimum practical transaction size and cutting off the possibility
@@ -75,7 +75,7 @@ https://bitcoin.org/en/bitcoin-core/features/validation[an article on
 the bitcoin.org website] explaining how running a full node - or
 using Bitcoin trustlessly - actually helps you.
 
-[quote, David Harding, Full Validation on bitcoin.org]
+[quote, David Harding, Full Validation on bitcoin.org (2015)]
 ____
 The bitcoin currency only works when people accept bitcoins in
 exchange for other valuable things. That means it’s the people
@@ -104,7 +104,7 @@ receive from others are genuine. This is great, but there's one important
 thing that a full node can't help you with: it can't prevent double-
 spending through chain rewrites:
 
-[quote, David Harding, Full Validation on bitcoin.org]
+[quote, David Harding, Full Validation on bitcoin.org (2015)]
 ____
 Note that although all programs—including Bitcoin Core—are vulnerable
 to chain rewrites, Bitcoin provides a defense mechanism: the more
@@ -222,7 +222,7 @@ disarmament. https://twitter.com/Truthcoin/status/1491415722123153408?s=20&t=ZyR
 switched it around to highlight the rejection of trust and the
 importance of running a full node].
 
-It's up to the users deciding to what degree they want to verify the
+It's up to the users to decide to what degree they want to verify the
 software they use and the blockchain data they receive. As with so
 many other things in Bitcoin, there's a trade-off between convenience
 and trustlessness. It's almost always more convenient to use a
@@ -244,7 +244,7 @@ output twice in the same transaction:
 
 [quote, CVE-2018-17144 Full Disclosure on bitcoincore.org (2018)]
 ____
-CVE-2018-17144, a fix that was released on September 18th in
+CVE-2018-17144, a fix for which was released on September 18th in
 Bitcoin Core versions 0.16.3 and 0.17.0rc4, includes both a Denial of
 Service component and a critical inflation vulnerability. It was
 originally reported to several developers working on Bitcoin Core, as
