@@ -4,7 +4,7 @@ image::adversarialthinking-banner.jpg[]
 
 This chapter addresses _adversarial thinking_, a mindset that focuses
 on what could go wrong and how adversaries might act. We start out
-by discussing Bitcoin's security assumptions and model, after which
+by discussing Bitcoin's security assumptions and security model, after which
 we explain how ordinary users can improve
 their self-sovereignty and Bitcoin's full node decentralization by thinking adversarially. Then, we
 look into some actual threats to Bitcoin as well as into the adversary's mind.
@@ -14,7 +14,7 @@ first place.
 
 When discussing security within various systems, it's important to understand
 what the security assumptions are. A typical security assumption in
-Bitcoin is "the discrete logarithm problem is hard to solve", which,
+Bitcoin is "`the discrete logarithm problem is hard to solve`", which,
 simply put, means it's practically impossible to find a private key
 that corresponds to a particular public key. Another pretty strong
 security assumption is that a majority of the network's hashpower is
@@ -64,13 +64,13 @@ So, we have a system that seems to be working in practice, but that we can't
 formally prove to be secure. A proof is probably not possible due to
 the complexity of the system itself.
 
-=== Not only for experts
+=== Not only for Bitcoin experts
 
-The importance of adversarial thinking probably extends to the general
-public to some
-degree. Ragnar Lifthasir mentions
-in a https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking[tweetstorm] how simplistic narratives around
-Bitcoin - for example, "just HODL" - can be degrading to Bitcoin itself, and
+The importance of adversarial thinking also extends to everyday
+Bitcoin users to some degree, not only to hardcore Bitcoin developers and experts. 
+Ragnar Lifthasir mentions in a
+https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking[tweetstorm] how simplistic narratives around
+Bitcoin - for example, "`just HODL`" - can be degrading to Bitcoin itself, and
 concludes by saying
 
 [quote, Ragnar Lifthasir, Twitter (2020)]
@@ -82,10 +82,10 @@ which way a proposal can fail. They think adversarially. They’re
 conservative
 ____
 
-He refers to these simplistic narratives as monomania, meaning that by
-focusing only on a single thing, e.g. "just HODL", you stop thinking
-about important stuff like keeping your Bitcoin secure or doing your
-best to use Bitcoin in a trustless manner.[comm: this section is a bit obscure to me. I undestand everything that is said but I don't quite get the logic behind it: what does the title refer to? And if we open by saying that adversarial thinking is relevant not only to bitcoiners, why do we only talk about Bitcoin then? And what is the logical connection between the over-simplistic narratives and thinking adversarially? I imagine the answers to all these questions but I feel like they should be more explicitly outlined in the text]
+He refers to these simplistic narratives as monomanias. Through this definition he's saying that by
+focusing on a single thing - for example, "`just HODL`"- you risk to overlook 
+the arguably more important stuff, such as keeping your Bitcoin secure or doing your
+best to use Bitcoin in a trustless manner.
 
 === Threats
 
@@ -126,12 +126,12 @@ image::sabotage-manual.png[role="right half-width"]
 
 [[sabotage]]
 To better understand the adversary's mind, it might be helpful to
-get a glimpse into how they operate. A government [comm: of which nation?] body named
+get a glimpse into how they operate. A US government body named
 Office of Strategic Services, which operated during World War II and had among its purposes to
 conduct espionage, perform sabotage and spread propaganda,
 produced a https://www.gutenberg.org/ebooks/26184[manual]
-for their personnel on how to properly sabotage the enemy. Its title was "Simple
-Sabotage Field Manual" and contained concrete tips on infiltrating
+for their personnel on how to properly sabotage the enemy. Its title was "`Simple
+Sabotage Field Manual`" and contained concrete tips on infiltrating
 the enemy to make their lives hard. The tips range from burning
 down warehouses to causing wear to drills in order to decrease the enemy's
 efficiency.
@@ -157,10 +157,10 @@ Bitcoin as an enemy.
 [[axiomofresistance]]
 Eric Voskuil
 https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance[writes
-on his Cryptoeconomics wiki page] about what he calls the "axiom of
-resistance":
+on his Cryptoeconomics wiki page] about what he calls the "`axiom of
+resistance`":
 
-[quote, Eric Voskuil, Cryptoeconomics wiki]
+[quote, Eric Voskuil, Cryptoeconomics wiki (2017)]
 ____
 In other words there is an assumption that it is _possible_ for a
 system to resist state control. This is not accepted as a fact but
