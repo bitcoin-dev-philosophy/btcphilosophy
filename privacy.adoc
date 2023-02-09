@@ -305,7 +305,7 @@ a quick summary of privacy-enhancing technologies, somewhat ordered by
 how hard they are to implement, at
 https://bitcoiner.guide/privacytips/. When you read it, you'll notice
 that Bitcoin privacy often has to do with stuff outside of Bitcoin.
-For example, you shouldn't brag about your bitcoins, and you should always use Tor and VPN. The
+For example, you shouldn't brag about your bitcoins, and you should use Tor and VPN. The
 post also lists some measures directly related to Bitcoin:
 
 Full node:: If you don't use your own full node, you will leak lots of
