@@ -8,9 +8,9 @@ source software in Bitcoin allows for permissionless
 development. We dip our toes into _selection cryptography_, which
 deals with the selection and use of libraries in cryptographic
 systems. The chapter includes a section about Bitcoin's review process, followed by another
-one on how Bitcoin developers get funded. The last section talks
-about the fact that Bitcoin's open source culture can look really weird from the
-outside, and how this perceived weirdness is really a sign of good
+one on the ways Bitcoin developers get funded. The last section talks
+about how Bitcoin's open source culture can look really weird from the
+outside, and why this perceived weirdness is really a sign of good
 health.
 
 Most of Bitcoin software, and especially Bitcoin Core, is open
@@ -82,8 +82,8 @@ Bitcoin Core repository so special? Technically it's not special at all,
 but socially it has become the focal point of Bitcoin development.
 
 Bitcoin and security expert Jameson Lopp
-https://blog.lopp.net/who-controls-bitcoin-core-/[explains this] very
-well in a blog post titled "`Who Controls Bitcoin Core?`":
+explains this very
+well in a https://blog.lopp.net/who-controls-bitcoin-core-/[blog post] titled "`Who Controls Bitcoin Core?`":
 
 [quote, Jameson Lopp, Who Controls Bitcoin Core? (2018)]
 ____
@@ -137,8 +137,8 @@ bit beyond the scope of this chapter. See <<upgrading>> for more information on 
 
 We've established that anyone can write code for Bitcoin Core
 without asking for any permission, but not necessarily have it merged to the main
-git repository. This includes changing color schemes of the graphical
-user interface, the way peer-to-peer messages are formatted, and the
+Git repository. This affects any modification, from changing color schemes of the graphical
+user interface, to the way peer-to-peer messages are formatted, and even
 consensus rules, i.e. the set of rules that define a valid
 blockchain.
 
@@ -186,8 +186,8 @@ interesting and important option to the table: you can write and
 publish code, in Bitcoin Core or any other open source project,
 without revealing your identity.
 
-Many developers employ this option by operating under a pseudonym
-which they try to keep detached from their true identity. The reasons
+Many developers choose this option by operating under a pseudonym
+and trying to keep it detached from their true identity. The reasons
 for doing this can vary from developer to developer. One pseudonymous
 user is ZmnSCPxj. Among other projects, he contributes to Bitcoin
 Core and Core Lightning, one of several implementations of Lightning
@@ -208,8 +208,8 @@ speaking, you should donate to me based on the utility you find my
 articles and my work on Bitcoin and the Lightning Network.
 ____
 
-In his case, the reason for using a pseudonym is to be judged by his
-merits and not by who the person or persons behind the
+In his case, the reason for using a pseudonym is to be judged on his
+merits and not on who the person or persons behind the
 pseudonym is or are. Interestingly, he revealed in an
 https://www.coindesk.com/markets/2020/06/29/many-bitcoin-developers-are-choosing-to-use-pseudonyms-for-good-reason/[article on
 CoinDesk] that
@@ -233,8 +233,8 @@ development grant], which is in itself a testament to Bitcoin's
 permissionless nature.
 
 Arguably, the most well-known pseudonym in Bitcoin is Satoshi
-Nakamoto. It's unclear what his reasons for using a pseudonym were, but
-with hindsight, it was probably a good decision for multiple reasons:
+Nakamoto. It's unclear why he chose to do so, but
+with hindsight it was probably a good decision for multiple reasons:
 
 * As many people speculate that Nakamoto owns a lot of bitcoin, it's
 imperative for his financial and personal safety to keep his identity
@@ -261,8 +261,8 @@ In a philosophical
 https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cryptography/[talk
 about cryptography] (you may find the video
 https://youtu.be/Gs9lJTRZCDc?t=2236[here]), Gregory Maxwell wants to
-redefine the term cryptography which he believes to be too narrow. He
-speaks about how, fundamentally, _information wants to be free_, and
+redefine the term "`cryptography`" which he believes to be too narrow. He
+explains that fundamentally _information wants to be free_, and
 makes his definition of cryptography based on that:
 
 [quote, Gregory Maxwell, Bitcoin Selection Cryptography (2015)]
@@ -274,14 +274,14 @@ oppose it.
 ____
 
 He then introduces the term _selection cryptography_, referred to as the art
-of selecting cryptographic tools, and explains why that is an
+of selecting cryptographic tools, and explains why it is an
 important part of cryptography. It revolves around how to select
 cryptographic libraries, tools, and practices, or as he says "`the
 cryptosystem of picking cryptosystems`".
 
 Using concrete examples, he shows how selection cryptography can
 easily go horribly wrong, and also proposes a list of questions
-one should always ask when resorting to it.
+you should always ask yourself when resorting to it.
 Below is a distilled version of that list:
 
 [start=1]
@@ -325,12 +325,12 @@ requests to Bitcoin Core
 . Pull requests are merged to the master branch
 . Users choose whether to use the software or not
 
-In each of these phases people with different points of view and
+At each of these phases people with different points of view and
 backgrounds review the available information, be it the source code, a
 BIP, or just a loosely described idea. The phases are usually not performed
 in any strict top-down manner, indeed multiple phases can happen
 simultaneously, and sometimes you go back and forth between
-them. Different people may also provide feedback in different phases.
+them. Different people may also provide feedback during different phases.
 
 One of the most prolific code reviewers on Bitcoin Core is Jon
 Atack. He wrote
@@ -350,10 +350,10 @@ ____
 He highlights the fact that review is a truly limiting factor in Bitcoin
 Core. Lots of good ideas get stuck in a limbo where no review occurs, pending. Notice that
 reviewing is not only beneficial to Bitcoin, but also a great way to learn about the software while providing
-value at the same time. Atack's rule of thumb is to review 5-15 PRs before
+value to it, at the same time. Atack's rule of thumb is to review 5-15 PRs before
 making any PR of your own. Again, your focus should be on how to best serve the community,
 not on how to get your own code merged. On top of this, he stresses the
-importance of giving review at the right level: is this the time for
+importance of doing review at the right level: is this the time for
 nits and typos, or does the developer need more of a conceptually-oriented 
 review?
 
@@ -387,7 +387,7 @@ and would feel rude going back to "does this make sense" after the
 author has addressed 20+ of my code organization suggestions.
 ____
 
-Her view that a good review should focus on what's most needed at
+Her idea that a good review should focus on what's most needed at
 a specific point in time aligns well with Jon Atack's advice. She
 proposes a list of questions that you may ask yourself at various levels of the review process, but stresses
 that this list is not in any way exhaustive nor
@@ -448,8 +448,8 @@ wanted to "`fail`" the upgrade if miners hadn't overwhelmingly
 voted for the new rules after a certain moment, while the other
 wanted to enforce the rules after that moment no matter what. Michael Folkson
 summarizes the arguments from the two camps in an
-https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-February/018380.html[email
-to the Bitcoin-dev mailing list].
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-February/018380.html[email]
+to the Bitcoin-dev mailing list.
 
 The debate went on seemingly forever, and it was really hard to
 see any consensus on this forming any time soon. This got people
@@ -497,7 +497,7 @@ healthy environment, and even that it is necessary for producing the best
 outcome.
 
 As hinted in <<sabotage,the Adversarial thinking chapter>>, the second
-bullet above comes with a downside. An attacker could use stalling
+bullet above can be very beneficial but comes with a downside. An attacker could use stalling
 tactics, like the ones outlined in the https://www.gutenberg.org/ebooks/26184[Simple
 Sabotage Field Manual], to distort the decision making and development
 process.
@@ -513,6 +513,6 @@ if the code didn't follow Bitcoin's
 https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md[best
 practices].
 
-New (and old) developers can get frustrated by this. But, as is usual in
+New (and old) developers can get frustrated by this. But, as is customary in
 open source software, you can always fork the repository, merge
 whatever you want to your own fork, and build and run your own binary.
