@@ -1,0 +1,32 @@
+@import url("asciidoctor.css");
+
+body {
+    font-family: serif, sans, sans-serif;
+}
+
+.half-width {
+    width: 50%
+}
+
+.quoteblock {
+    margin-bottom: 2em;
+}
+
+/* .quote and .code are to make quotes in passthrough html from bitcointalk.org 
+   look ok. See comment in sources/finite-supply/nakamotolostcoins.adoc   
+ */
+.quote
+{
+    font-size: x-small;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+}
+.code
+{
+    font-size: x-small;
+    font-family: monospace;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+}
