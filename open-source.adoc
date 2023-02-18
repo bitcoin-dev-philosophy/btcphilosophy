@@ -7,8 +7,7 @@ what this means, how maintenance of the software works, and how open
 source software in Bitcoin allows for permissionless
 development. We dip our toes into _selection cryptography_, which
 deals with the selection and use of libraries in cryptographic
-systems. The chapter includes a section about Bitcoin's review process, followed by another
-one on the ways Bitcoin developers get funded. The last section talks
+systems. The chapter includes a section about Bitcoin's review process, followed by another one on the ways Bitcoin developers get funded. The last section talks
 about how Bitcoin's open source culture can look really weird from the
 outside, and why this perceived weirdness is really a sign of good
 health.
@@ -150,7 +149,7 @@ built on top of Bitcoin, such as:
 Lightning Network:: A payment network that allows for fast payment of
 very small amounts. It requires very few on-chain Bitcoin
 transactions. Various inter-operable implementations exist, such as
-https://github.com/ElementsProject/lightning[c-lightning],
+https://github.com/ElementsProject/lightning[Core Lightning],
 https://github.com/lightningnetwork/lnd[LND],
 https://github.com/ACINQ/eclair[Eclair], and
 https://github.com/lightningdevkit[Lightning Dev Kit].
@@ -164,8 +163,7 @@ on that sidechain. Examples include
 https://github.com/ElementsProject/elements[Blockstream's Elements].
 OpenTimestamps:: It allows you to https://opentimestamps.org/[timestamp a
 document] on Bitcoin's blockchain in a private way. You can then use
-that timestamp to prove that a document must have existed prior to
-a certain time.
+that timestamp to prove that a document must have existed prior to a certain time.
 
 Without permissionless development, many of these projects would
 not have been possible. As stated in <<_neutrality>>,
@@ -253,9 +251,7 @@ currency, to varying degrees.
 
 Open source developers often make use of open source libraries developed by
 other people. This is a natural and awesome part of any healthy
-ecosystem. But Bitcoin software deals with real money, and as such it
-needs to be extra careful when choosing which third party libraries it
-should depend on.
+ecosystem. But Bitcoin software deals with real money, and as such it needs to be extra careful when choosing which third party libraries it should depend on.
 
 In a philosophical
 https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cryptography/[talk
@@ -299,8 +295,7 @@ to go through these points when doing selection cryptography.
 
 Due to the issues mentioned above by Maxwell, Bitcoin Core tries
 really hard to
-https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md[minimize
-its exposure to third party libraries]. Of course, you can't
+https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md[minimize its exposure to third party libraries]. Of course, you can't
 eradicate all external dependencies, otherwise you'd have to write everything by yourself,
 from font rendering to implementation of system calls.
 
@@ -469,13 +464,10 @@ investing if they felt confident about the activation timeframe.
 ____
 
 Eventually, this dispute got resolved thanks to a new proposal by
-David Harding and Russel O'Connor called Speedy Trial, which
-entailed a comparatively shorter signaling period for miners to
+David Harding and Russel O'Connor called Speedy Trial, which entailed a comparatively shorter signaling period for miners to
 lock in activation of Taproot, or fail fast. If they activated it
 during that window of time, then Taproot would be deployed approximately 6 months
-later. If they didn't, then the community would have gained some new knowledge
-about miners' intentions, and would thus make a new proposal for
-deployment. This upgrade is covered in more detail in <<upgrading>>.
+later. This upgrade is covered in more detail in <<upgrading>>.
 
 Someone who's not used to Bitcoin's development process would probably think that
 these heated debates look awfully bad and even toxic. There are at

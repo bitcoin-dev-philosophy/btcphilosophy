@@ -8,6 +8,10 @@ body {
     width: 50%
 }
 
+.quoteblock {
+    margin-bottom: 2em;
+}
+
 /* .quote and .code are to make quotes in passthrough html from bitcointalk.org 
    look ok. See comment in sources/finite-supply/nakamotolostcoins.adoc   
  */
