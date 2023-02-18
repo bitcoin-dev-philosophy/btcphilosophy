@@ -119,7 +119,7 @@ https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki[BIP113]
 (OP_SEQUENCEVERIFY).
 
 Lombrozo also provides an overview of the way upgrade mechanisms have evolved
-throughout the years, up until 2017. Since then, only one other major upgrade, which we analyze in <<taproot-deployment>>, has been deployed. The long and somewhat chaotic process that led to its activation has helped us gaining further insights on upgrading mechanisms in Bitcoin. 
+throughout the years, up until 2017. Since then, only one other major upgrade, which we analyze in <<taproot-deployment>>, has been deployed. The long and somewhat chaotic process that led to its activation has helped us gain further insights on upgrading mechanisms in Bitcoin. 
 
 [[segwit-upgrade]]
 ==== Segwit upgrade
