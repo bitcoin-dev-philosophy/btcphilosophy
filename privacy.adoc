@@ -215,6 +215,7 @@ internet connections are involved, the adversary will be able to link
 the IP address with the discovered bitcoin information.
 ____
 
+//noqr
 [[kycdbs]]
 However, among the most obvious privacy leaks are exchanges. Due to
 laws, usually referred to as KYC (Know Your Customer) and AML
