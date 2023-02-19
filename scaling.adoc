@@ -242,7 +242,7 @@ https://blog.lopp.net/bitcoin-core-performance-evolution/[has run
 benchmark tests] on blockchain synchronization, comparing many
 different versions of Bitcoin Core going back to version 0.8.
 
-.Initial block download performance of various versions of Bitcoin Core. On the Y-axis is the block height synced and on the X-axis is the time it took to sync to that height. Source: https://blog.lopp.net/bitcoin-core-performance-evolution/
+.Initial block download performance of various versions of Bitcoin Core. On the Y-axis is the block height synced and on the X-axis is the time it took to sync to that height.
 image::Bitcoin-Core-Sync-Performance-1.png[{big-width}]
 
 The different lines represent different versions of Bitcoin Core. The
@@ -265,7 +265,7 @@ https://twitter.com/pwuille/status/1450471673321381896[Twitter
 thread] showcasing the performance improvements achieved through various pull
 requests.
 
-.Performance of signature verification over time, with significant pull requests marked on the timeline. Source: https://twitter.com/pwuille/status/1450471673321381896
+.Performance of signature verification over time, with significant pull requests marked on the timeline.
 image::libsecp256k1speedups.png[{half-width}]
 
 The graph shows the trend for two different 64-bit CPU types, namely ARM and x86.

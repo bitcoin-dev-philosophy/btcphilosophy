@@ -16,7 +16,7 @@ Most Bitcoin softwares, and especially Bitcoin Core, is open
 source. This means that the source code of the software is made
 available to the general public for scrutiny, tinkering, modification,
 and redistribution. The definition of open source at
-https://opensource.org/osd includes, among others, the following
+https://opensource.org/osd[] includes, among others, the following
 important points:
 
 [quote, The Open Source Definition, Open Source Initiative website]
@@ -147,6 +147,7 @@ to develop systems on top of Bitcoin, without asking for any
 permission. We've seen countless successful software projects that were
 built on top of Bitcoin, such as:
 
+//noqr
 Lightning Network:: A payment network that allows for fast payment of
 very small amounts. It requires very few on-chain Bitcoin
 transactions. Various inter-operable implementations exist, such as

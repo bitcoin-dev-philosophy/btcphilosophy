@@ -18,7 +18,7 @@ ____
 Bitcoin experts talk often of consensus, whose meaning is abstract and
 hard to pin down. But the word consensus evolved from the Latin word
 concentus, "a singing together,
-harmony,"[https://bitcointalk.org/dec/p1.html#ftnt1[1]] so let us talk
+harmony,"[1] so let us talk
 not of Bitcoin consensus but of Bitcoin harmony.
 
 Harmony is what makes Bitcoin work. Thousands of full nodes each work
@@ -88,6 +88,7 @@ about Bitcoin's different upgrading mechanisms, pointing out how much they
 have evolved over time. He even explained how Satoshi Nakamoto
 once upgraded Bitcoin through a hard fork.
 
+//noqr
 [quote, Eric Lombrozo, Changing Consensus Rules Without Breaking Bitcoin at Breaking Bitcoin conference (2017)]
 ____
 There was actually a hard-fork in bitcoin that Satoshi did that we

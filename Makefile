@@ -1,13 +1,14 @@
-AD=asciidoctor -b html5 -v
-ADPDF=asciidoctor-pdf
+AD=asciidoctor -b html5 -v -r asciidoctor-diagram
+ADPDF=asciidoctor-pdf -r asciidoctor-diagram
 BASE_NAME=btcphilosophy
-MAINADOC=$(BASE_NAME).adoc
 B=build
+MAINADOC=$(B)/$(BASE_NAME).adoc
 ALLADOC := $(patsubst %,$(B)/%,$(wildcard *.adoc))
 ALLPNGS := $(patsubst %,$(B)/%,$(wildcard images/*.png))
 ALLJPGS := $(patsubst %,$(B)/%,$(wildcard images/*.jpg))
 ALLIMGS := $(ALLPNGS) $(ALLJPGS)
 CSS := $(B)/style/btcphilosophy.css
+DOCINFO := $(B)/style/docinfo.html
 BOOKHTML=$(B)/$(BASE_NAME).html
 BOOKPDF=$(B)/$(BASE_NAME).pdf
 SOURCES := sources
@@ -15,7 +16,9 @@ SOURCESIMAGES := $(patsubst %,$(B)/%,$(wildcard $(SOURCES)/images/*))
 MAINSOURCESADOC := $(SOURCES)/sources.adoc
 ALLSOURCESADOC := $(MAINSOURCESADOC) $(wildcard $(SOURCES)/**/*.adoc)
 SOURCESCSS := $(B)/sources/style/btcphilosophy.css
+SOURCESDOCINFO := $(B)/sources/style/docinfo.html
 SOURCESHTML=$(B)/$(SOURCES)/sources.html
+
 IMEXISTS := $(shell command -v convert 2> /dev/null)
 ADPDFEXISTS := $(shell $(ADPDF) --version 2> /dev/null)
 
@@ -33,11 +36,10 @@ endif
 
 full: $(B) $(BOOKHTML) $(SOURCESHTML)
 
-$(BOOKHTML): $(CSS) $(ALLADOC) $(ALLPNGS) $(ALLJPGS)
+$(BOOKHTML): $(CSS) $(DOCINFO) $(ALLADOC) $(ALLPNGS) $(ALLJPGS)
 	$(AD) $(MAINADOC) -o $@
 
-$(SOURCESHTML): $(SOURCESCSS) $(ALLSOURCESADOC) $(SOURCESIMAGES)
-	mkdir -p $(B)/sources
+$(SOURCESHTML): $(SOURCESCSS) $(SOURCESDOCINFO) $(ALLSOURCESADOC) $(SOURCESIMAGES)
 	$(AD) $(MAINSOURCESADOC) -o $@
 
 $(SOURCESIMAGES): $(B)/%: %
@@ -46,6 +48,9 @@ $(SOURCESIMAGES): $(B)/%: %
 # and there are many formats to make special cases for (mp4, pdf)
 # Maybe we'll change this at some point.
 	cp $< $@
+
+$(ALLADOC): $(B)/%: %
+	cat $< | notes/qrcodes.sh > $@
 
 $(ALLIMGS): $(B)/%: %
 	mkdir -p $(dir $@)
@@ -56,7 +61,7 @@ else
 	convert $< -resize 1024x1024\> $@
 endif
 
-$(CSS) $(SOURCESCSS) $(ALLADOC): $(B)/%: %
+$(CSS) $(SOURCESCSS) $(DOCINFO) $(SOURCESDOCINFO) $(ALLADOC): $(B)/%: %
 	@mkdir -p $(dir $@)
 	cp $< $@
 

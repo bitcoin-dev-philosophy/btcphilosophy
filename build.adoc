@@ -16,6 +16,16 @@ There's also a separate asciidoctor file, link:sources/sources.adoc[],
 that collects all the copied resources that the book refers to. They
 are kept separate to not make browsing the book itself too heavy.
 
+Before you build, you need to install some dependencies:
+
+* `asciidoctor`, See
+  https://docs.asciidoctor.org/asciidoctor/latest/install/[installation
+  instructions]
+* The `asciidoctor-diagram` extension to `asciidoctor`. See
+  https://docs.asciidoctor.org/diagram-extension/latest/#installation[installation
+  instructions]
+* Gnu `make`
+
 To build this book, clone the GitHub repository:
 
 ----
@@ -25,11 +35,12 @@ $ cd btcphilosophy
 
 and then build using any of the two methods below
 
-==== Using `asciidoctor`
+==== Manually using `asciidoctor`
 
 Use this option if you just want to casually build the book and read
 the end result locally. It requires only `asciidoctor` to be present
-on your computer.
+on your computer. This method won't give you QR codes to links in the
+margin.
 
 ----
 $ asciidoctor -v btcphilosophy.adoc
@@ -71,9 +82,9 @@ images for faster download over the web. Otherwise it'll write a
 warning message saying that the images will not be resized.
 
 This method of building is usually preferred as it keeps the source
-tree separate from ascriidoctor output files, and it will reduce the
+tree separate from ascriidoctor output files, reduces the
 size of pictures to make it more appropriate for serving the book
-on the web.
+on the web, and produces QR codes in the margin for the links.
 
 ==== Build a PDF
 
