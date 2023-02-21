@@ -75,7 +75,7 @@ Bitcoin Core's source code is maintained in a Git repository hosted on
 https://github.com/bitcoin/bitcoin[GitHub]. Anyone can clone that very
 repository without asking for any permission, and then inspect, build, or make
 changes to it locally. This means that there are many thousands of
-copies of the repository spread out throughout the globe. These are
+copies of the repository spread throughout the globe. These are
 all copies of the same repository, so what makes this specific GitHub
 Bitcoin Core repository so special? Technically it's not special at all,
 but socially it has become the focal point of Bitcoin development.
@@ -156,7 +156,7 @@ https://github.com/lightningdevkit[Lightning Dev Kit].
 CoinJoin:: Multiple parties collaborate to combine their payments into
 a single transaction to make <<_blockchain_privacy,address
 clustering>> harder. Various implementations exist.
-Sidechains:: This systme can lock a coin on Bitcoin's blockchain in order to
+Sidechains:: This system can lock a coin on Bitcoin's blockchain in order to
 unlock it on some other blockchain. This allows for bitcoins to be
 moved to some other blockchain, namely a sidechain, so as to use the features available
 on that sidechain. Examples include
@@ -231,13 +231,13 @@ development grant], which is in itself a testament to Bitcoin's
 permissionless nature.
 
 Arguably, the most well-known pseudonym in Bitcoin is Satoshi
-Nakamoto. It's unclear why he chose to do so, but
+Nakamoto. It's unclear why he chose to be pseudonymous, but
 with hindsight it was probably a good decision for multiple reasons:
 
 * As many people speculate that Nakamoto owns a lot of bitcoin, it's
 imperative for his financial and personal safety to keep his identity
 unknown.
-* Since his identity is unknown, there is no possibility of persecuting anyone, which
+* Since his identity is unknown, there is no possibility of prosecuting anyone, which
   gives various government authorities a hard time.
 * There is no authoritative person to look up to, making Bitcoin more
   meritocratic and resilient against blackmailing.
@@ -333,7 +333,7 @@ https://jonatack.github.io/articles/how-to-review-pull-requests-in-bitcoin-core[
 blog post] about how to review pull requests in Bitcoin Core. He
 emphasizes that a good code reviewer focuses on how to best add value.
 
-[quote, Jon Atack, How to Review Pull Requests in Bitcoin Core (2022)]
+[quote, Jon Atack, How to Review Pull Requests in Bitcoin Core (2020)]
 ____
 As a newcomer, the goal is to try to add value, with friendliness and
 humility, while learning as much as possible.
@@ -352,7 +352,7 @@ importance of doing review at the right level: is this the time for
 nits and typos, or does the developer need more of a conceptually-oriented 
 review?
 
-[quote, Jon Atack, How to Review Pull Requests in Bitcoin Core (2022)]
+[quote, Jon Atack, How to Review Pull Requests in Bitcoin Core (2020)]
 ____
 A useful first question when beginning a review can be, "What is most
 needed here at this time?" Answering this question requires experience
@@ -369,7 +369,7 @@ https://github.com/glozow/bitcoin-notes/blob/master/review-checklist.md[an
 article] containing questions she usually asks herself during a
 review. She also states what she considers to be a good review.
 
-[quote, Gloria Zhao, Common PR Review Questions on GitHub]
+[quote, Gloria Zhao, Common PR Review Questions on GitHub (2022)]
 ____
 I personally think a good review is one where I've asked myself a lot
 of pointed questions about the PR and been satisfied with the answers
@@ -393,7 +393,7 @@ examples from GitHub.
 
 Lots of people work with Bitcoin open source development, either for Bitcoin
 Core or for other projects. Some do it in their spare time without
-getting any compensation, but many developers are also getting paid to
+getting any compensation, but some developers are also getting paid to
 do it.
 
 Companies, individuals, and organizations who have an interest in
