@@ -4,16 +4,16 @@ image::scaling-banner.jpg[]
 
 In this chapter, we explore how Bitcoin does and does not
 scale. We start by looking at how people have reasoned
-about scaling in the past. The bulk of this chapter explains various
+about scaling in the past. Then, the bulk of this chapter explains various
 approaches to scaling Bitcoin, specifically vertical, horizontal,
-inward, and layered scaling. Each description is followed by considerations over whether it does or doesn't
-interfere with Bitcoin's value proposition.
+inward, and layered scaling. Each description is followed by considerations over whether the approach
+interferes with Bitcoin's value proposition.
 
-Different people ascribe different definitions to the word "`scale`". Some conceive it as the
-increase of the the blockchain transaction capacity, others believe it is using the
+In the Bitcoin space, different people ascribe different definitions to the word "`scale`". Some conceive it as the
+increase of the blockchain transaction capacity, others believe it is using the
 blockchain more efficiently, and others see it as the development of systems on top of Bitcoin.
 
-In the context of Bitcoin, and for this guide's purposes, we define scaling as
+In the context of Bitcoin, and for this book's purposes, we define scaling as
 _increasing Bitcoin's usage capacity without compromising its
 censorship resistance_. This definition encompasses several
 kinds of changes, for example:
@@ -24,7 +24,7 @@ kinds of changes, for example:
 * Transaction batching
 * Layered architecture
 
-We'll soon dive into different approaches for scaling, but let's start
+We'll soon dive into different approaches to scaling, but let's start
 with a brief overview of Bitcoin's history within the context of scaling.
 
 === History
@@ -51,7 +51,7 @@ ____
 The conversation in itself might not be very interesting nor accurate, but
 it shows that scaling has been a concern from the very beginning.
 
-Scaling discussions reached their peak interest around 2015-2017, when there were many
+Discussions over scaling reached their peak interest around 2015-2017, when there were many
 different ideas circulating about whether and how to increase the
 maximum block size limit. That was a rather uninteresting discussion
 about changing a parameter in the source code, a change that didn't
@@ -119,7 +119,7 @@ their users.
 Typically [comm: what do you mean by "typically"? To me it suggests the idea that vertical scaling usually occurs with an increase in the block size, but I don't think this is what you mean], vertical scaling in Bitcoin would be an increase of the
 block size limit. This would require some full nodes to upgrade their
 hardware to keep up with the increasing computational
-demands [comm: I'm not entirely convinced by this line of reasoning; if you increase the block size limit thus the computational demand, you can either have full nodes upgrading their hardware or simply use many more of them, can't you?]. The downside is that it happens at the cost of
+demands [comm: I'm not entirely convinced by this line of reasoning; if you increase the block size limit thus the computational demand, you can either have full nodes upgrading their hardwares or just use many more of them, can't you?]. The downside is that it happens at the cost of
 centralization, as was discussed in the previous section and more
 in depth in <<_full_node_decentralization>>.
 
@@ -152,7 +152,7 @@ network due to bandwidth limitations and verification time. An increase in propa
 will also increase the chances of stale blocks.
 
 Miners don't like to have their blocks staled because they'll lose
-their block reward, so they will do whatever they can in order to avoid this
+their block reward, so they will do whatever they can to avoid this
 scenario. The measures they can take include:
 
 * Postponing the validation of an incoming block, also known as
@@ -161,17 +161,17 @@ scenario. The measures they can take include:
   full block and validate it.
 * Connecting to a mining pool with greater bandwidth and connectivity.
 
-Validationless mining further undermines the
-<<_full_node_decentralization, full node decentralization>> of the
-system, as the miner defers trusting
+Validationless mining further undermines
+<<_full_node_decentralization, full node decentralization>>,
+as the miner defers trusting
 incoming blocks, at least temporarily. It also hurts security to some degree because a
 portion of the network's computing power is potentially building on an
 invalid blockchain, instead of building on the strongest and valid chain.
 
 The second bullet point has a negative effect on
-<<_miner_decentralization,miner decentralization>>, because the larger
-pools usually are the ones with the best network connectivity and
-bandwidth.
+<<_miner_decentralization,miner decentralization>>, because usually
+the pools with the best network connectivity and
+bandwidth are also the largest and thus most centralized.
 
 ==== Horizontal scaling
 
@@ -223,7 +223,7 @@ something even more complex.
 
 While horizontal and vertical scaling have historically worked out well
 in centralized systems like databases and web servers, they don't seem
-to be suitable for a decentralized network like Bitcoin, due to their
+to be suitable for a decentralized network like Bitcoin due to their
 centralizing effects.
 
 An approach that gets far too little appreciation is what we call
@@ -243,7 +243,7 @@ different versions of Bitcoin Core going back to version 0.8.
 image::Bitcoin-Core-Sync-Performance-1.png[{big-width}]
 
 The different lines represent different versions of Bitcoin Core. The leftmost
-line is the latest; version 22.0, released in September 2021, took 396 minutes
+line is the latest, i.e. version 0.22, which was released in September 2021 and took 396 minutes
 to fully sync. The rightmost one is version 0.8 from November 2013, which took
 3452 minutes. All of this - roughly 10x - improvement is due to inward scaling.
 
@@ -270,7 +270,7 @@ more generic instructions. However, the general trend is the same for both
 architectures. Note that the Y-axis is logarithmic, which makes the
 improvements look less impressive than they actually are.
 
-There are also several good examples of space saving improvements that contributed to
+There are also several good examples of space-saving improvements that contributed to
 performance enhancement. In a
 https://murchandamus.medium.com/2-of-3-multisig-inputs-using-pay-to-taproot-d5faf2312ba3[Medium
 blog post] about Taproot's contribution to saving space, user Murch
@@ -305,8 +305,8 @@ image::tx-batching.png[{big-width}]
 
 Output consolidation refers to taking advantage of periods of low demand for
 block space to combine multiple outputs into a single output. This
-can reduce your fee cost later, when you need to make a payment during
-high block space demand.
+can reduce your fee cost later, when you'll need to make a payment while the
+demand for block space is high.
 
 .Output consolidation. Melt your coins into one big coin when fees are low to save fees later.
 image::utxo-consolidation.png[{big-width}]
@@ -359,12 +359,12 @@ if done right, but it can also be an advantage for scalability.
 In a https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/[Reddit post] titled "`A trip to the moon requires a rocket with
 multiple stages or otherwise the rocket equation will eat your
 lunch... packing everyone in clown-car style into a trebuchet and
-hoping for success is right out.`", Gregory Maxwell explains how
+hoping for success is right out.`", Gregory Maxwell explains why
 layering is our best shot at getting Bitcoin to scale by orders of
 magnitudes.
 
 He starts by emphasizing the fallacy in viewing Visa or Mastercard as
-Bitcoin's main competitors and highlightinh how increasing the maximum block size
+Bitcoin's main competitors and highlighting how increasing the maximum block size
 is a bad approach to meet said competition. Then he talks about
 how to make some real difference by using layers.
 
