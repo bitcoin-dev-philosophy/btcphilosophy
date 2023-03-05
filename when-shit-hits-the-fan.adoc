@@ -4,26 +4,26 @@ image::shtf-banner.jpg[]
 
 Bitcoin is built by people. People write the software, and people then
 run this software. When a security vulnerability or a severe bug is
-discovered (is there really a distinction between the two?), it's
-always discovered by people, flesh and blood. This chapter will
-contemplate what people do, should, and shouldn't do when shit hits
-the fan. The first section explains the term _responsible disclosure_,
-how a person that discovers a vulnerability can act responsibly to
-help minimize the damage from it. The rest of the chapter will take
+discovered - is there really a distinction between the two? - it's
+always discovered by people, flesh and blood. This chapter 
+contemplates what people do, should, and shouldn't do when shit hits
+the fan. The first section explains the term _responsible disclosure_, which refers to
+how someone who discovers a vulnerability can act responsibly to
+help minimize the damage from it. The rest of the chapter takes
 you on a tour through some of the more severe vulnerabilities
-discovered through the years, and how they were handled by developers,
-miners and users. Things were not as rigorous in Bitcoin's early
+discovered over the years, and how they were handled by developers,
+miners, and users. Things were not as rigorous in Bitcoin's early
 childhood as they are today.
 
 [[responsible-disclosure]]
 === Responsible disclosure
 
-Imagine that you discover a bug in Bitcoin Core that lets anyone
-remotely shut down a Bitcoin Core node using some specially crafted
-network messages. Imagine also that you are not malicious and
+Imagine you discover a bug in Bitcoin Core, a bug that allows anyone to
+remotely shut down a Bitcoin Core node by using some specially crafted
+network messages. Imagine also you are not malicious and
 would like this issue to remain unexploited. What do you do? If you
-remain silent about it, someone else will probably discover this issue,
-and you can't be sure that person isn't malicious.
+remain silent about it, someone else will probably discover the issue,
+and you can't be sure that person won't be malicious.
 
 When a security issue is discovered, the person discovering it should
 employ _responsible disclosure_ which is a term often used among
@@ -48,22 +48,22 @@ ____
 
 This means that if you find a security issue, you should
 report this to the team responsible for the system. But what does this
-look like in the context of Bitcoin? As noted in <<_software_maintenance,
-the Open source chapter>>, no one controls Bitcoin, but there's a
-focal point for Bitcoin development, currently the
+mean in the context of Bitcoin? As noted in <<_software_maintenance,
+the Open source chapter>>, no one controls Bitcoin, but there's currently a
+focal point for Bitcoin development, namely the
 https://github.com/bitcoin/bitcoin[Bitcoin Core Github
-repository]. The maintainers of this repository are responsible for
+repository]. The maintainers of said repository are responsible for
 the code in it, but they're not responsible for the system as a
-whole-- no one is. Nevertheless, the general best practice is to send
+whole - no one is. Nevertheless, the general best practice is to send
 an email to security@bitcoincore.org.
 
-In
-https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/015002.html[an
-email thread] titled "Responsible disclosure of bugs", Anthony Towns
-tries to summarize what he perceived to be current best practices. He
-had collected input from several sources and different people.
+In an
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/015002.html[email
+thread] titled "`Responsible disclosure of bugs`" from 2017, Anthony Towns
+tried to summarize what he perceived to be the current best practices. He
+had collected inputs from several sources and different people to inform his view on the subject.
 
-[quote, Anthony Towns in thread "Responsible disclosure of bugs",Bitcoin-dev email list]
+[quote, Anthony Towns in thread "`Responsible disclosure of bugs`",Bitcoin-dev email list (2017)]
 ____
 
 * Vulnerabilities should be reported via security at bitcoincore.org
@@ -102,23 +102,23 @@ ____
 ____
 
 This list displays how careful one must be when publishing patches for
-Bitcoin, because the patch itself might give away the
-vulnerability. The fourth bullet is particularly interesting and
-explains how to test if a patch is disguised well enough. If a few
-really experienced developers can't spot the vulnerability, even
+Bitcoin, since the patch itself might give away the
+vulnerability. The fourth bullet is particularly interesting as it
+explains how to test whether a patch has been disguised well enough. Indeed, if a few
+really experienced developers can't spot the vulnerability even
 knowing that the patch fixes one, it will probably be hard for
 others to discover it.
 
-The thread that led up to this email were discussing if, when, and how
-to disclose vulnerabilities to alt-coins and other implementations of
-Bitcoin. There are no clear answers here. "Helping the good guys"
-seems like a sensible thing to do, but who decides who they are and
-where do you draw the line? Bryan Bishop
-https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014983.html[argued
-that] helping altcoins and even scamcoins defend against security
-exploits is a moral duty.
+The thread that led to this email was discussing whether, when, and how
+to disclose vulnerabilities to altcoins and other implementations of
+Bitcoin. There are no clear answers here. "`Helping the good guys`"
+seems like the sensible thing to do, but who decides who they are and
+where does one draw the line? Bryan Bishop
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014983.html[argued]
+that helping altcoins and even scamcoins defend themselves against security
+exploits was a moral duty.
 
-[quote, Bryan Bishop in thread "Responsible disclosure of bugs", Bitcoin-dev email list]
+[quote, Bryan Bishop in thread "`Responsible disclosure of bugs`", Bitcoin-dev email list (2017)]
 ____
 It's not enough to defend bitcoin and its users from active threats,
 there is a more general responsibility to defend all kinds of users
@@ -130,12 +130,12 @@ receiving knowledge with more serious direct or indirect impact than
 originally described.
 ____
 
-Also leading up to Town's email above was
-https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014977.html[a
-post from Gregory Maxwell], where he argued that security
+Also leading up to Town's email above was a
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014977.html[post
+by Gregory Maxwell], in which he argued that security
 vulnerabilities could be more severe than they appear.
 
-[quote, Gregory Maxwell in thread "Responsible disclosure of bugs", Bitcoin-dev email list]
+[quote, Gregory Maxwell in thread "`Responsible disclosure of bugs`", Bitcoin-dev email list]
 ____
 I've multiple time seen a hard to exploit issue turn out to be trivial
 when you find the right trick, or a minor dos issue turn our to far
@@ -150,16 +150,16 @@ should and can be handled differently, it is not always so clear cut.
 It's prudent to treat things as more severe than you know them to be.
 ____
 
-So even if a vulnerability seems hard to exploit, it might be best to
-assume it's easily exploited and that you just haven't figured out
+So, even if a vulnerability seems hard to exploit, it might be best to
+assume it's easily exploitable and that you just haven't figured out
 how yet.
 
-He also mentions how "it's somewhat incorrect to call this thread
+He also mentions how "`it's somewhat incorrect to call this thread
 anything about disclosure, this thread is not about
 disclosure. Disclosure is when you tell the vendor.  This thread is
 about publication and that has very different
 implications. Publication is when you're sure you've told the
-prospective attackers." This last observation of the distinction
+prospective attackers`". This last observation concerning the distinction
 between disclosure and publication is an important one. The easy part
 is responsible disclosure; the hard part is to sensibly publish.
 
@@ -273,8 +273,8 @@ Windows and Linux users: if you got 0.3.5 you still need to upgrade to 0.3.6.
 ____
 
 Note the difference in the characterization of the problem from the
-first message: "could be displayed as accepted" vs "could be
-accepted". Maybe Satoshi downplayed the severity in his communication
+first message: "`could be displayed as accepted`" vs "`could be
+accepted`". Maybe Satoshi downplayed the severity in his communication
 to not draw too much attention to the actual issue. Anyhow, people
 upgraded, and it seemed to be working as expected. This particular
 issue was resolved, amazingly, with no bitcoin losses.
@@ -334,7 +334,7 @@ ____
 
 Apparently, the two int64 (not uint64 as Garzik pondered) outputs' sum
 would overflow to a negative value -0.00997538 BTC. Whatever the sum
-of the inputs, the "sum" of the outputs will be smaller, making
+of the inputs, the "`sum`" of the outputs will be smaller, making
 this transaction OK according to the code at the time.
 
 An unfortunate outcome of this was that about 2x92 billion bitcoin
@@ -583,7 +583,7 @@ While for most applications it is generally acceptable to eagerly
 reject some signatures, Bitcoin is a consensus system where all
 participants must generally agree on the exact validity or
 invalidity of the input data.  In a sense, consistency is more
-important than "correctness".
+important than "`correctness`".
 
 ...
 
