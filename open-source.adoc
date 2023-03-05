@@ -12,7 +12,7 @@ about how Bitcoin's open source culture can look really weird from the
 outside, and why this perceived weirdness is really a sign of good
 health.
 
-Most of Bitcoin software, and especially Bitcoin Core, is open
+Most Bitcoin softwares, and especially Bitcoin Core, is open
 source. This means that the source code of the software is made
 available to the general public for scrutiny, tinkering, modification,
 and redistribution. The definition of open source at
@@ -277,7 +277,7 @@ cryptosystem of picking cryptosystems`".
 
 Using concrete examples, he shows how selection cryptography can
 easily go horribly wrong, and also proposes a list of questions
-you should always ask yourself when resorting to it.
+you could ask yourself when practicing it.
 Below is a distilled version of that list:
 
 [start=1]
@@ -392,7 +392,7 @@ examples from GitHub.
 === Funding
 
 Lots of people work with Bitcoin open source development, either for Bitcoin
-Core or for other projects. Some do it in their spare time without
+Core or for other projects. Many do it in their spare time without
 getting any compensation, but some developers are also getting paid to
 do it.
 
