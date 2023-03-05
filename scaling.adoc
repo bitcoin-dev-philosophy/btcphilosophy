@@ -2,6 +2,7 @@
 
 image::scaling-banner.jpg[]
 
+
 In this chapter, we explore how Bitcoin does and does not
 scale. We start by looking at how people have reasoned
 about scaling in the past. Then, the bulk of this chapter explains various
@@ -10,7 +11,7 @@ inward, and layered scaling. Each description is followed by considerations over
 interferes with Bitcoin's value proposition.
 
 In the Bitcoin space, different people ascribe different definitions to the word "`scale`". Some conceive it as the
-increase of the blockchain transaction capacity, others believe it is using the
+increase of the blockchain transaction capacity, others believe it equals to using the
 blockchain more efficiently, and others see it as the development of systems on top of Bitcoin.
 
 In the context of Bitcoin, and for this book's purposes, we define scaling as
@@ -119,6 +120,7 @@ their users.
 Typically [comm: what do you mean by "typically"? To me it suggests the idea that vertical scaling usually occurs with an increase in the block size, but I don't think this is what you mean], vertical scaling in Bitcoin would be an increase of the
 block size limit. This would require some full nodes to upgrade their
 hardware to keep up with the increasing computational
+
 demands [comm: I'm not entirely convinced by this line of reasoning; if you increase the block size limit thus the computational demand, you can either have full nodes upgrading their hardwares or just use many more of them, can't you?]. The downside is that it happens at the cost of
 centralization, as was discussed in the previous section and more
 in depth in <<_full_node_decentralization>>.
@@ -242,10 +244,12 @@ different versions of Bitcoin Core going back to version 0.8.
 .Initial block download performance of various versions of Bitcoin Core. On the Y-axis is the block height synced and on the X-axis is the time it took to sync to that height. Source: https://blog.lopp.net/bitcoin-core-performance-evolution/
 image::Bitcoin-Core-Sync-Performance-1.png[{big-width}]
 
-The different lines represent different versions of Bitcoin Core. The leftmost
-line is the latest, i.e. version 0.22, which was released in September 2021 and took 396 minutes
-to fully sync. The rightmost one is version 0.8 from November 2013, which took
-3452 minutes. All of this - roughly 10x - improvement is due to inward scaling.
+The different lines represent different versions of Bitcoin Core. The
+leftmost line is the latest, i.e. version 0.22, which was 
+released in September 2021 and took 396 minutes to fully sync. The 
+rightmost one is version 0.8 from November 2013, which took 3452 
+minutes. All of this - roughly 10x - improvement is due to inward 
+scaling.
 
 The improvements could be categorized as either saving space (RAM, disk,
 bandwidth, etc.) or saving computational power. Both categories
@@ -323,7 +327,7 @@ be bad for your own or your payees' privacy. In the batching case, each
 payee will know that all the batched outputs are from you to other payees
 (except possibly the change). In the UTXO consolidation case, you will
 reveal that the outputs you consolidate belong to the same wallet. So
-you have to make a trade-off between cost efficiency and privacy.
+you may have to make a trade-off between cost efficiency and privacy.
 
 ==== Layered scaling
 
@@ -341,9 +345,15 @@ on a start transaction that's put on the blockchain, as illustrated in
 .A typical layer 2 protocol on top of Bitcoin, layer 1.
 image::scaling-layer.png[]
 
-How this start transaction is created varies between protocols, but a common theme is that the participants create an unsigned start transaction and a number of pre-signed punishment
-transactions, that spend the output of the start transaction in
-various ways. Subsequently, the start transaction is fully signed and published to the blockchain, while the punishment transactions can be fully signed and published to punish a misbehaving party. This incentivizes the participants to keep their promises so that the protocol can work in a trustless way.
+How this start transaction is created varies between protocols, but a 
+common theme is that the participants create an unsigned start 
+transaction and a number of pre-signed punishment
+transactions, that spend the output of the start transaction in various 
+ways. Subsequently, the start transaction is fully signed and published to the 
+blockchain, and the punishment transactions can be fully signed and 
+published to punish a misbehaving party. This 
+incentivizes the participants to keep their promises so that the 
+protocol can work in a trustless way.
 
 Once the start transaction is on the blockchain, the protocol can do
 what it's supposed to do. For instance, it could do super fast payments between

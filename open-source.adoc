@@ -7,7 +7,7 @@ what this means, how maintenance of the software works, how open
 source software in Bitcoin allows for permissionless
 development. We'll dip our toes into _selection cryptography_ that
 deals with how to select and use libraries in cryptographic
-systems. Bitcoin's review process is explored with followed by a
+systems. Bitcoin's review process is explored, followed by a
 section on how Bitcoin developers get funded. The last section is
 about how Bitcoin's open source culture can look really weird from the
 outside, and how this perceived weirdness is really a sign of good
@@ -148,7 +148,7 @@ build on top of Bitcoin, among them are:
 Lightning Network:: A payment network that allows for fast payment of
 very small amounts. Requires very few on-chain Bitcoin
 transactions. Various inter-operable implementations exist, such as
-https://github.com/ElementsProject/lightning[c-lightning],
+https://github.com/ElementsProject/lightning[Core Lightning],
 https://github.com/lightningnetwork/lnd[LND],
 https://github.com/ACINQ/eclair[Eclair], and
 https://github.com/lightningdevkit[Lightning Dev Kit].
@@ -162,7 +162,7 @@ on that sidechain. Examples include
 https://github.com/ElementsProject/elements[Blockstream's Elements].
 OpenTimestamps:: Allows you to https://opentimestamps.org/[timestamp a
 document] on Bitcoin's blockchain in a private way. You can then use
-that timestamp to prove that a document must have existed prior to
+that timestamp to prove that the document must have existed prior to
 that time.
 
 Without permissionless development, many of these projects would
@@ -251,9 +251,9 @@ currency, to varying degrees.
 
 Open source developers often use open source libraries developed by
 other people. This is a natural, and awesome part of a healthy
-ecosystem. But Bitcoin software deals with real money, and as such it
-needs to be extra careful when choosing which third party libraries it
-should depend on.
+ecosystem. But Bitcoin software deals with real money, and as such,
+developers need to be extra careful when choosing which third party
+libraries the software should depend on.
 
 In a
 https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cryptography/[philosophical
@@ -300,7 +300,7 @@ really hard to
 https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md[minimize
 it's exposure to third party libraries]. Of course, you can't
 eradicate all external dependencies, or you'd have to write everything
-from font rendering to implementation of system calls yourself.
+from font rendering to implementation of system libraries yourself.
 
 === Review
 
@@ -394,8 +394,8 @@ examples from GitHub.
 === Funding
 
 Lots of people work with Bitcoin open source development, for Bitcoin
-Core or for other projects. Some do it on their spare time without
-getting any compensation, but many developers are also getting paid to
+Core or for other projects. Many do it on their spare time without
+getting any compensation, but some developers are also getting paid to
 do it.
 
 Companies, individuals, and organizations who have an interest in
@@ -431,7 +431,7 @@ good thing or a bad thing. On one hand we'd get even better systems
 with more funding, but on the other hand we'd get almost as good a
 system with less funding. The https://coredev.tech/[coredev.tech] he
 mentions is an initiative by developers to meet in person to discuss
-proposals, review code, and meet collabortors in person.
+proposals, review code, and meet collaborators in person.
 
 === Culture shock
 
@@ -467,12 +467,9 @@ ____
 
 Eventually, this dispute got resolved through a new proposal from
 David Harding and Russel O'Connor called _Speedy Trial_, which would
-be a comparatively short signaling period to give miners a chance to
-lock in activation of Taproot, or fail fast. If they do activate
-within that window, then Taproot activates approximately 6 months
-later. If they don't, then the community has gained some new knowledge
-about the miners' intentions, and can make a new proposal for
-deployment. This upgrade is covered in more detail in <<upgrading>>.
+set a comparatively short signaling period to give miners a chance to
+lock in activation of Taproot, or fail fast. This upgrade is covered
+in more detail in <<upgrading>>.
 
 Someone not used to Bitcoin's development process would probably think
 these heated debates look awfully bad and even toxic. There are at

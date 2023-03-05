@@ -7,8 +7,9 @@
 :linkcss:
 :docinfo: shared
 :docinfodir: {stylesdir}
-:xrefstyle: full
+:xrefstyle: short
 :stem:
 :big-width: width=75%
 :half-width: width=50%
 :icons: font
+:pdf-theme: style/pdf-theme.yml
