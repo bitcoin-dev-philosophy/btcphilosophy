@@ -405,32 +405,6 @@ grants] given out by a broad range of individuals, organizations, and
 companies. There are also a number of Bitcoin-focused companies that
 hire skilled developers to let them work full-time on Bitcoin.
 
-In a talk about open source development funding, Tadge Dryja
-https://btctranscripts.com/cryptoeconomic-systems/2019/funding/[summarizes
-a number of funding models]
-(https://www.youtube.com/watch?v=IPtWegnXhJQ&list=PLaXwSyee0z4zWO0JLgcwhnjKqNBNJhBXY&index=32[video])
-used for open source projects, not only Bitcoin. To the question about
-how Bitcoin is funded, he answers:
-
-[quote, Tadge Dryja, Funding bitcoin development at Cryptoeconomic Systems Summit (2019)]
-____
-Bitcoin seems to have sublinear development costs. When bitcoin was
-$20, there was a bunch of people working on it. Then we had these
-coredev.tech meetings, and as bitcoin is worth 100s of times worth
-more now, there’s not even 2x as many people working on it. There’s
-more people working on it, as the price has gone up, but it’s
-definitely sublinear.
-____
-
-The 2x figure should be taken with a grain of salt (it's probably
-more), but his point is that the amount of development labor has scaled
-sublinearly with the price of bitcoin. He's not sure whether that's a
-good or a bad thing. On the one hand we'd get even better systems
-with more funding, but on the other hand we'd get almost as good a
-system with less funding [comm: then more funding would only be a good thing, wouldn't it?]. The https://coredev.tech/[coredev.tech] he
-mentions is an initiative for developers to meet in person and discuss
-proposals or review code.
-
 === Culture shock
 
 People sometimes get the impression that there's a lot of infighting
