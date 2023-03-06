@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v3
     - name: Get build container
       id: adocbuild
-      uses: tonynv/asciidoctor-action@master
+      uses: ./.github/actions/adoc-build
       with:
           program: "make; mv ./build/btcphilosophy.html ./build/index.html"
     - name: Print execution time

@@ -16,7 +16,7 @@ MAINSOURCESADOC := $(SOURCES)/sources.adoc
 ALLSOURCESADOC := $(MAINSOURCESADOC) $(wildcard $(SOURCES)/**/*.adoc)
 SOURCESCSS := $(B)/sources/style/btcphilosophy.css
 SOURCESHTML=$(B)/$(SOURCES)/sources.html
-IMEXISTS := $(shell convert -version 2> /dev/null)
+IMEXISTS := $(shell command -v convert 2> /dev/null)
 ADPDFEXISTS := $(shell $(ADPDF) --version 2> /dev/null)
 
 .PHONY: all
