@@ -117,11 +117,11 @@ of the machines processing data. In the context of Bitcoin, these latter would b
 the full nodes, namely the machines that validate the blockchain on behalf of
 their users.
 
-Typically [comm: what do you mean by "typically"? To me it suggests the idea that vertical scaling usually occurs with an increase in the block size, but I don't think this is what you mean], vertical scaling in Bitcoin would be an increase of the
+The most commonly discussed technique for vertical scaling 
+in Bitcoin is the increase in the
 block size limit. This would require some full nodes to upgrade their
 hardware to keep up with the increasing computational
-
-demands [comm: I'm not entirely convinced by this line of reasoning; if you increase the block size limit thus the computational demand, you can either have full nodes upgrading their hardwares or just use many more of them, can't you?]. The downside is that it happens at the cost of
+demands. The downside is that it happens at the cost of
 centralization, as was discussed in the previous section and more
 in depth in <<_full_node_decentralization>>.
 
@@ -186,9 +186,9 @@ Many people refer to this Bitcoin scaling approach as _sharding_. Basically, it 
 each full node verify just a portion of the blockchain. Peter Todd
 has put a lot of thought into the concept of sharding. He wrote a
 https://petertodd.org/2015/why-scaling-bitcoin-with-sharding-is-very-hard[blog
-post] explaining sharding from a high level [comm: do you mean to say that he explained it roughly? I'm not sure of what "from a high level" means], and also presenting
+post] explaining sharding in general terms, and also presenting
 his own idea called _treechains_. The article is a difficult read,
-but Todd makes some general points that are quite digestible.
+but Todd makes some points that are quite digestible.
 
 [quote, Peter Todd, Why Scaling Bitcoin With Sharding Is Very Hard (2015)]
 ____
@@ -228,7 +228,7 @@ in centralized systems like databases and web servers, they don't seem
 to be suitable for a decentralized network like Bitcoin due to their
 centralizing effects.
 
-An approach that gets far too little appreciation is what we call
+An approach that gets far too little appreciation is what we can call
 _inward scaling_, which translates into "`do more with less`". It refers
 to the ongoing work constantly done by many developers to optimize the
 algorithms already in place, so that we can do more within the existing
@@ -281,7 +281,7 @@ blog post] about Taproot's contribution to saving space, user Murch
 compares how much block space a 2-of-3 threshold signature would
 require, using Taproot in various ways as well as not using it at all.
 
-.Space savings for different spending types, Taproot and Legacy versions.
+.Space savings for different spending types, Taproot and legacy versions.
 image::murch-taproot.png[{half-width}]
 
 A 2-of-3 multisig using native Segwit would require a total of
@@ -293,7 +293,7 @@ to understand all the details, but this should give you an idea
 of how developers think about saving space - every little byte counts.
 
 Apart from inward scaling in Bitcoin software, there are
-some ways in which users can contribute to inward scaling, too. One is that they can
+some ways in which users can contribute to inward scaling, too. They can
 make their transactions more intelligently to save on
 transaction fees while simultaneously decreasing their footprints on
 full node requirements. Two commonly used techniques toward such goal are called
