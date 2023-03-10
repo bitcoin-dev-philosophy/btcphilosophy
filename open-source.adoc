@@ -251,7 +251,7 @@ currency, to varying degrees.
 
 Open source developers often make use of open source libraries developed by
 other people. This is a natural and awesome part of any healthy
-ecosystem. But Bitcoin software deals with real money, and as such it needs to be extra careful when choosing which third party libraries it should depend on.
+ecosystem. But Bitcoin software deals with real money and, in light of this, developers need to be extra careful when choosing which third party libraries it should depend on.
 
 In a philosophical
 https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cryptography/[talk
