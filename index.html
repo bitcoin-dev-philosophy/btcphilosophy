@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.17">
+<meta name="generator" content="Asciidoctor 2.0.18">
 <meta name="author" content="Kalle Rosenbaum, Linnéa Rosenbaum">
 <title>Bitcoin development philosophy</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -83,9 +83,9 @@ MathJax.Hub.Config({
 <li><a href="#_vocabulary">5.1. Vocabulary</a></li>
 <li><a href="#historic-upgrades">5.2. Historic upgrades</a>
 <ul class="sectlevel3">
-<li><a href="#_segwit_upgrade">5.2.1. Segwit upgrade</a></li>
-<li><a href="#_post_segwit_discussion">5.2.2. Post-segwit discussion</a></li>
-<li><a href="#taproot-deployment">5.2.3. Taproot upgrade - Speedy trial</a></li>
+<li><a href="#segwit-upgrade">5.2.1. Segwit upgrade</a></li>
+<li><a href="#_post_segwit_discussion">5.2.2. Post-Segwit discussion</a></li>
+<li><a href="#taproot-deployment">5.2.3. Taproot upgrade - Speedy Trial</a></li>
 <li><a href="#_future_deployment_mechanisms">5.2.4. Future deployment mechanisms</a></li>
 </ul>
 </li>
@@ -99,7 +99,7 @@ MathJax.Hub.Config({
 </li>
 <li><a href="#adversarialthinking">6. Adversarial thinking</a>
 <ul class="sectlevel2">
-<li><a href="#_not_just_for_experts">6.1. Not just for experts</a></li>
+<li><a href="#_not_only_for_bitcoin_experts">6.1. Not only for Bitcoin experts</a></li>
 <li><a href="#_threats">6.2. Threats</a></li>
 </ul>
 </li>
@@ -1847,16 +1847,16 @@ discussion in 10-50 years, when we know more. If it&#8217;s still relevant.</p>
 </div>
 <div class="paragraph">
 <p>Upgrading Bitcoin in a safe way can be extremely difficult. Some
-changes take multiple years to roll out. In this chapter we&#8217;ll learn
-about some common vocabulary around upgrading and explore some
-examples of historic upgrades to Bitcoin, and what insights we gained
-from them. At the end we&#8217;ll talk about the risks and costs of a
-lasting chain split.</p>
+changes take several years to roll out. In this chapter, we learn
+about the common vocabulary around upgrading Bitcoin, and explore some
+examples of historic upgrades to its protocol as well as the insights that we gained
+from them. Finally, we talk about chain splits and the risks and costs
+related to them.</p>
 </div>
 <div class="paragraph">
 <p>To get in tune for this chapter, you should read
-<a href="https://bitcointalk.org/dec/p1.html">David Harding&#8217;s piece on Harmony
-and Discord</a>.</p>
+<a href="https://bitcointalk.org/dec/p1.html">David Harding&#8217;s piece on harmony
+and discord</a>.</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -1889,20 +1889,20 @@ bureaucratic morass that is the legacy financial system.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This chapter will discuss how Bitcoin can be upgraded without causing
-discord. Staying in harmony (consensus) is one of the biggest
+<p>This chapter discusses how Bitcoin can be upgraded without causing
+discord. Staying in harmony, i.e. maintaining consensus, is indeed one of the biggest
 challenges in Bitcoin development. There are lots of nuances to
-upgrade mechanisms and they might be best understood by studying
-previous upgrades, so this chapter will put much focus on that, but
-we&#8217;ll start by setting the stage with some vocabulary.</p>
+upgrade mechanisms, which might be best understood by studying actual cases of
+previous upgrades. For this reason, the chapter puts much focus on historic examples, and
+it starts by setting the stage with some useful vocabulary.</p>
 </div>
 <div class="sect2">
 <h3 id="_vocabulary"><a class="anchor" href="#_vocabulary"></a>5.1. Vocabulary</h3>
 <div class="paragraph">
-<p>According to
-<a href="https://en.wikipedia.org/wiki/Forward_compatibility">Wikipedia</a>,
-<strong>forward compatibility</strong> means that old software can process data
-created by newer software, ignoring the parts it doesn&#8217;t understand.</p>
+<p>According to Wikipedia,
+<a href="https://en.wikipedia.org/wiki/Forward_compatibility"><strong>forward compatibility</strong></a>
+refers to the condition in which an old software can process data
+created by newer softwares, ignoring the parts it doesn&#8217;t understand.</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -1919,23 +1919,23 @@ understand.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And vice versa,
+<p>Vice versa,
 <a href="https://en.wikipedia.org/wiki/Backward_compatibility"><strong>backward
-compatibility</strong></a> means that data from old software is usable on new
-software. A change is said to be fully compatible if it&#8217;s both forward
+compatibility</strong></a> refers to when data from an old software is usable on newer
+softwares. A change is said to be fully compatible if it&#8217;s both forward
 and backward compatible.</p>
 </div>
 <div class="paragraph">
 <p>A change to the Bitcoin consensus rules is said to be a <strong>soft fork</strong> if
-the change is fully compatible. This is the most common way to upgrade
-Bitcoin, for many reasons that we&#8217;ll discuss further in this
+it is fully compatible. This is the most common way to upgrade
+Bitcoin, for a number of reasons that we&#8217;ll discuss further in this
 chapter. If a change to the Bitcoin consensus rules is backward
-compatible, but not forward compatible, it is called a <strong>hard fork</strong>.</p>
+compatible but not forward compatible, it is called a <strong>hard fork</strong>.</p>
 </div>
 <div class="paragraph">
 <p>For a technical overview of soft forks and hard forks, please read
 <a href="https://rosenbaum.se/book/grokking-bitcoin-11.html">chapter 11 of
-Grokking Bitcoin</a>. It will explain these terms and also dive into
+Grokking Bitcoin</a>. It explains these terms and also dives into the
 upgrade mechanisms. It&#8217;s recommended, although not strictly
 necessary, to get a grip on this before you continue reading.</p>
 </div>
@@ -1943,14 +1943,14 @@ necessary, to get a grip on this before you continue reading.</p>
 <div class="sect2">
 <h3 id="historic-upgrades"><a class="anchor" href="#historic-upgrades"></a>5.2. Historic upgrades</h3>
 <div class="paragraph">
-<p>Bitcoin is not the same today as it was when the Genesis block was
-created. Several upgrades have been made throughout the years. Eric
+<p>Bitcoin is not the same today as it was when the genesis block was
+created. Several upgrades have been made throughout the years. In 2017, Eric
 Lombrozo
 <a href="https://btctranscripts.com/breaking-bitcoin/2017/changing-consensus-rules-without-breaking-bitcoin/">spoke
 at the Breaking Bitcoin conference</a>
-(<a href="https://www.youtube.com/watch?v=0WCaoGiAOHE&amp;t=1926s">video</a>) in 2017
-about Bitcoin&#8217;s different upgrades and points out how the upgrade
-mechanisms have evolved over time. He explained how Satoshi Nakamoto
+(<a href="https://www.youtube.com/watch?v=0WCaoGiAOHE&amp;t=1926s">video</a>)
+about Bitcoin&#8217;s different upgrading mechanisms, pointing out how much they
+have evolved over time. He even explained how Satoshi Nakamoto
 once upgraded Bitcoin through a hard fork.</p>
 </div>
 <div class="quoteblock">
@@ -1975,12 +1975,12 @@ optimizations.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Eric Lombrozo: Consensus Rules - Changing them without breaking Bitcoin<br>
-<cite>Breaking Bitcoin conference 2017</cite>
+&#8212; Eric Lombrozo<br>
+<cite>Changing Consensus Rules Without Breaking Bitcoin at Breaking Bitcoin conference (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>He points out that this hard fork, intentionally or not, adds
+<p>He points out that, be it intentionally or not, this hard fork created
 opportunities for future soft forks, namely the Script operators
 (opcodes) OP_NOP1-OP_NOP10. We&#8217;ll look more into <a href="#cve-2010-5141">this
 code change</a> in chapter 9. These opcodes have been used for two soft
@@ -1991,27 +1991,25 @@ forks so far:
 (OP_SEQUENCEVERIFY).</p>
 </div>
 <div class="paragraph">
-<p>He provides an overview of how upgrade mechanisms have evolved
-throughout the years, up until 2017. After that, as of this writing,
-only one upgrade of the consensus rules has been deployed: Taproot,
-which was deployed in a somewhat different, and chaotic, manner.</p>
+<p>Lombrozo also provides an overview of the way upgrade mechanisms have evolved
+throughout the years, up until 2017. Since then, only one other major upgrade, which we analyze in <a href="#taproot-deployment">Section 5.2.3</a>, has been deployed. The long and somewhat chaotic process that led to its activation has helped us gain further insights on upgrading mechanisms in Bitcoin.</p>
 </div>
 <div class="sect3">
-<h4 id="_segwit_upgrade"><a class="anchor" href="#_segwit_upgrade"></a>5.2.1. Segwit upgrade</h4>
+<h4 id="segwit-upgrade"><a class="anchor" href="#segwit-upgrade"></a>5.2.1. Segwit upgrade</h4>
 <div class="paragraph">
-<p>While all upgrades preceding the segwit upgrade was more or less
-painless, this one was different. There seemed to be overwhelming
-support for segwit among Bitcoin users, but for some reason miners
+<p>While all the upgrades preceding Segwit had been more or less
+painless, this one was different. When Segwit activation code was released, in October 2016, there seemed to be overwhelming
+support for it among Bitcoin users, but for some reason miners
 didn&#8217;t signal support for this upgrade, which stalled the activation
 with no resolution in sight.</p>
 </div>
 <div class="paragraph">
-<p>Aaron van Wirdum explains this winding road in his Bitcoin Magazine
+<p>Aaron van Wirdum describes this winding road in his Bitcoin Magazine
 article
 <a href="https://bitcoinmagazine.com/technical/the-long-road-to-segwit-how-bitcoins-biggest-protocol-upgrade-became-reality">The
-Long Road To Segwit</a>. It starts with explaining what segwit is and how
-that taps into the block size debate. van Wirdum then explains the
-turn of events that led up to its final activation. At the center of
+Long Road To Segwit</a>. He starts by explaining what Segwit is and how
+that taps into the block size debate. Van Wirdum then outlines the
+turn of events that led to its final activation. At the center of
 this process was an upgrade mechanism called <em>user activated soft
 fork</em>, or UASF for short, that was proposed by user Shaolinfry.</p>
 </div>
@@ -2027,16 +2025,16 @@ follow (or activate) the soft fork.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Aaron van Wirdum - The Long Road To Segwit<br>
-<cite>Bitcoin Magazine</cite>
+&#8212; Aaron van Wirdum<br>
+<cite>The Long Road To Segwit on Bitcoin Magazine (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>Among other things, he cites Shaolinfry&#8217;s email to the bitcoin-dev
-mailing list. Shaolinfry
+<p>Among other things, he cites Shaolinfry&#8217;s email to the Bitcoin-dev
+mailing list. In that occasion Shaolinfry
 <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-February/013643.html">argued
-against miner activated soft forks</a> and lists a number of problems
-with them</p>
+against miner activated soft forks</a>, listing a number of problems
+with them.</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -2057,20 +2055,20 @@ from "upgrade inertia" which will veto most upgrades.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Shaolinfry<br>
-<cite>Bitcoin-dev mailing list February 2017</cite>
+<cite>Bitcoin-dev mailing list (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>He also point to a misinterpretation of miner signaling, that people
-think miners decide on protocol upgrades, rather than help
-coordinating them. Due to this misunderstanding, miners may also feel
-obliged to proclaim in public their views on a soft fork, as if that
-gives weight to the proposal.</p>
+<p>Shaolinfry also drew attention to a common misinterpretation of miner signaling: people generally
+thought that it was a means by which miners could decide upon protocol upgrades, rather than an action that helped
+coordinate upgrades. Due to this misunderstanding, miners might have also felt
+obliged to proclaim in public their views on a certain soft fork, as if that
+gave weight to the proposal.</p>
 </div>
 <div class="paragraph">
 <p>The UASF proposal is, in a nutshell, a "flag day" on which nodes
-starts enforcing the new rules. That way miners don&#8217;t have to
-participate in coordinating the upgrade, but can trigger activation
+start enforcing specific new rules. That way, miners don&#8217;t have to
+make a collective effort to coordinate the upgrade, and can even trigger activation
 earlier than the flag day if enough blocks signal support.</p>
 </div>
 <div class="quoteblock">
@@ -2088,14 +2086,14 @@ end of the BIP9 deployment timeout.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Shaolinfry<br>
-<cite>Bitcoin-dev mailing list February 2017</cite>
+<cite>Bitcoin-dev mailing list (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>This idea caught a lot of interest, but didn&#8217;t seem to reach near
-unanimous support, which caused concern of a potential chain
+unanimous support, which caused concern for a potential chain
 split. The article by Aaron van Wirdum explains how this finally got
-resolved by
+resolved thanks to
 <a href="https://github.com/bitcoin/bips/blob/master/bip-0091.mediawiki">BIP91</a>,
 authored by James Hilliard.</p>
 </div>
@@ -2110,26 +2108,26 @@ at least throughout SegWit activation.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Aaron van Wirdum - The Long Road To Segwit<br>
-<cite>Bitcoin Magazine</cite>
+&#8212; Aaron van Wirdum<br>
+<cite>The Long Road To Segwit on Bitcoin Magazine (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>There were some more complicating factors involved (e.g. the so-called
-"New York Agreement"), that this BIP had to take into consideration,
-and we encourage you to read Van Wirdum&#8217;s article in full, because
-there are many interesting details in this story.</p>
+"New York Agreement"), that this BIP had to take into consideration.
+We encourage you to read Van Wirdum&#8217;s article in full to learn about
+the many interesting details in this story.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_post_segwit_discussion"><a class="anchor" href="#_post_segwit_discussion"></a>5.2.2. Post-segwit discussion</h4>
+<h4 id="_post_segwit_discussion"><a class="anchor" href="#_post_segwit_discussion"></a>5.2.2. Post-Segwit discussion</h4>
 <div class="paragraph">
-<p>After the segwit deployment, a discussion about deployment mechanisms
+<p>After the Segwit deployment, a discussion about deployment mechanisms
 emerged. As noted by Eric Lombrozo in
 <a href="https://btctranscripts.com/breaking-bitcoin/2017/changing-consensus-rules-without-breaking-bitcoin/">his
 talk at the Breaking Bitcoin conference</a>
 (<a href="https://www.youtube.com/watch?v=0WCaoGiAOHE&amp;t=1926s">video</a>) and by
-Shaolinfry above, a miner activated soft fork isn&#8217;t the ideal upgrade
+Shaolinfry (see <a href="#segwit-upgrade">Section 5.2.1</a> above), a miner activated soft fork isn&#8217;t the ideal upgrade
 mechanism.</p>
 </div>
 <div class="quoteblock">
@@ -2143,18 +2141,18 @@ going to use again.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Eric Lombrozo: Consensus Rules - Changing them without changing<br>
-<cite>Breaking Bitcoin conference 2017</cite>
+&#8212; Eric Lombrozo<br>
+<cite>Changing Consensus Rules Without Breaking Bitcoin at Breaking Bitcoin conference (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>In January 2020, Matt Corallo
 <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-January/017547.html">sent
-an email</a> to the Bitcoin-Dev mailing list that started a discussion on
-future soft fork deployment mechanisms. He lists five goals that he
-thinks are important in an upgrade. David Harding
+an email</a> to the Bitcoin-dev mailing list that started a discussion on
+future soft fork deployment mechanisms. He listed five goals that he
+thought were essential in an upgrade. David Harding
 <a href="https://bitcoinops.org/en/newsletters/2020/01/15/#discussion-of-soft-fork-activation-mechanisms">summarizes
-them in a Bitcoin Optech newsletter</a> as</p>
+them in a Bitcoin Optech newsletter</a> as:</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -2187,7 +2185,7 @@ problems</p>
 </blockquote>
 <div class="attribution">
 &#8212; David Harding<br>
-<cite>Bitcoin Optech newsletter #80</cite>
+<cite>Bitcoin Optech newsletter #80 (2020)</cite>
 </div>
 </div>
 <div class="paragraph">
@@ -2223,26 +2221,26 @@ as Bitcoin continues to grow.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Matt Corallo - Modern Soft Fork Activation<br>
-<cite>Bitcoin-dev mailing list January 2020</cite>
+&#8212; Matt Corallo<br>
+<cite>Modern Soft Fork Activation on Bitcoin-dev mailing list (2020)</cite>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="taproot-deployment"><a class="anchor" href="#taproot-deployment"></a>5.2.3. Taproot upgrade - Speedy trial</h4>
+<h4 id="taproot-deployment"><a class="anchor" href="#taproot-deployment"></a>5.2.3. Taproot upgrade - Speedy Trial</h4>
 <div class="paragraph">
-<p>When Taproot was ready for deployment, meaning all technical details
-around its consensus rules were implemented and had reached broad
-approval from the community, discussions on how to actually deploy it
+<p>When Taproot was ready for deployment [comm: add time coordinates], meaning all the technical details
+around its consensus rules had been implemented and had reached broad
+approval within the community, discussions on how to actually deploy it
 started to heat up. These discussions had been pretty low key up until
-this point.</p>
+that point.</p>
 </div>
 <div class="paragraph">
-<p>Lot&#8217;s of activation mechanism proposals started floating around and
+<p>Lots of proposals for activation mechanisms started floating around, and
 David Harding
 <a href="https://en.bitcoin.it/wiki/Taproot_activation_proposals">summarized
-them on the Bitcoin Wiki</a>. In that article he explains some properties
-of BIP8 which at that time had some recent changes made to make it
+them on the Bitcoin Wiki</a>. In his article he explained some properties
+of BIP8, which at that time had some recent changes made in order to make it
 more flexible.</p>
 </div>
 <div class="quoteblock">
@@ -2285,28 +2283,28 @@ different proposals.</p>
 </blockquote>
 </div>
 <div class="paragraph">
-<p>From this point forward the discussions were very heated, especially
+<p>From this point forward the discussions became very heated, especially
 around whether <code>lockinontimeout</code> should be <code>true</code> (as in a user
-activated soft fork, refered to as &#8220;BIP8 with forced activation&#8221; by
-Harding) or <code>false</code> (as in a miner activated soft fork, refered to as
+activated soft fork, referred to as &#8220;BIP8 with forced activation&#8221; by
+Harding) or <code>false</code> (as in a miner activated soft fork, referred to as
 &#8220;BIP8 without forced activation&#8221; by Harding).</p>
 </div>
 <div class="paragraph">
 <p>Among the proposals listed, one of them was titled &#8220;Let’s see what
-happens&#8221;. This proposal didn&#8217;t get much traction for some reason
+happens&#8221;. For some reason, this proposal didn&#8217;t get much traction
 until seven months later.</p>
 </div>
 <div class="paragraph">
-<p>During these seven months, the discussion went on and it seemed like
-there was no way to reach broad consensus on which deployment
-mechanism to use. There were mainly two camps, one that preferred
-<code>lockinontimeout=true</code> (the UASF crowd) and one that preferred
-<code>lockinontimeout=false</code> (the try and if it fails rethink crowd). Since
-there were no overwhelming support for any of these options, the
-discussions went in circles with seemingly no way forward. Some of
+<p>During those seven months, the discussion went on and it seemed like
+there was no way to reach broad consensus over which deployment
+mechanism to use. There were mainly two camps: one that preferred
+<code>lockinontimeout=true</code> (the UASF crowd) and the other one that preferred
+<code>lockinontimeout=false</code> (the &#8220;try and if it fails rethink&#8221; crowd). Since
+there was no overwhelming support for any of these options, the
+debate went in circles with seemingly no way forward. Some of
 these discussions were held on IRC, in a channel called
 ##taproot-activation, but
-<a href="https://gnusha.org/taproot-activation/2021-03-05.log">on March 5 2021</a>,
+<a href="https://gnusha.org/taproot-activation/2021-03-05.log">on March 5th 2021</a>,
 something changed:</p>
 </div>
 <div class="quoteblock">
@@ -2331,12 +2329,12 @@ something changed:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>It seems the &#8220;let&#8217;s see what happens&#8221; approach finally clicked in
-peoples' minds. This idea would later be labeled as &#8220;Speedy Trial&#8221;
-due to it&#8217;s short signaling period. David Harding explains this idea
+<p>The &#8220;let&#8217;s see what happens&#8221; approach finally seemed to click in
+peoples' minds. This process would later be labeled as &#8220;Speedy Trial&#8221;
+due to its short signaling period. David Harding explains this idea
 to the broader community in an
 <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-March/018583.html">email
-to the Bitcoin-Dev mailing list</a>.</p>
+to the Bitcoin-dev mailing list</a>.</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -2358,8 +2356,7 @@ actual data upon which to base future taproot activation proposals.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; David Harding email on 2021-03-06<br>
-<cite>Bitcoin-Dev mailing list</cite>
+&#8212; David Harding on Bitcoin-dev mailing list
 </div>
 </div>
 <div class="paragraph">
@@ -2368,7 +2365,7 @@ and then released in
 <a href="https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.1.md#taproot-soft-fork">Bitcoin
 Core version 0.21.1</a>. The miners quickly started signaling for this
 upgrade moving the deployment state to <code>LOCKED_IN</code>, and after a grace
-period the Taproot rules activated mid-November in block
+period the Taproot rules were activated mid-November 2021 in block
 <a href="https://mempool.space/block/0000000000000000000687bca986194dc2c1f949318629b44bb54ec0a94d8244">709632</a>.</p>
 </div>
 </div>
@@ -2386,45 +2383,45 @@ known deployment mechanism.</p>
 <div class="sect2">
 <h3 id="upgrading-risks"><a class="anchor" href="#upgrading-risks"></a>5.3. Risks</h3>
 <div class="paragraph">
-<p>During activation of any fork, hard or soft, miner activated or user
-activated, there&#8217;s a risk of a long-lasting chain split. A split that
+<p>During the activation of any fork, be it hard or soft, miner activated or user
+activated, there&#8217;s the risk of a long-lasting chain split. A split that
 lingers for more than a few blocks can cause severe damage to the
-sentiment around Bitcoin and also to it&#8217;s price. But above all, it
+sentiment around Bitcoin as well as to its price. But above all, it
 would cause great confusion over what Bitcoin is. Is Bitcoin this
 chain or that chain?</p>
 </div>
 <div class="paragraph">
-<p>The risk with a user activated soft fork is that the new rules
-activate even if the majority of the hash power doesn&#8217;t support
-them. This scenario would result in a long lasting chain split that
-would remain until the majority of the hash power adopts the new
+<p>The risk with a user activated soft fork is that the new rules get
+activated even if the majority of the hash power doesn&#8217;t support
+them. This scenario would result in a long-lasting chain split, which
+would persist until the majority of the hash power adopts the new
 rules. It could be especially hard to incentivize miners to switch to
 the new chain if they had already mined blocks after the split on the
 old chain, because by switching branch they would be abandoning their
-own block rewards. However, contrary to this incentive, in March 2013,
-when a <a href="#march2013split">long-lasting split</a> occurred due to an
-unintentional hard fork, two major mining pools made the decision to
-abandon their branch of the split to restore consensus.</p>
+own block rewards. However, it&#8217;s worth mentioning a remarkable episode: in March 2013
+a long-lasting split, explained in <a href="#march2013split">Section 9.2.3</a>, occurred due to an
+unintentional hard fork and, contrary to this incentive, two major mining pools made the decision to
+abandon their branch of the split in order to restore consensus.</p>
 </div>
 <div class="paragraph">
-<p>The risk with a miner activated soft fork is that miners could engage
+<p>On the other hand, the risk with a miner activated soft fork is a consequence of the fact that miners can engage
 in false signaling, which means that the actual share of the hash
-power that support the change is smaller than it looks. If the actual
+power that supports the change could be smaller than it looks. If the actual
 support doesn&#8217;t comprise a majority of the hash power, we&#8217;d probably
-see a long lasting chain split similar with the one described in the
+see a long-lasting chain split similar to the one described in the
 previous paragraph. This, or at least a similar issue, has happened in
-reality when <a href="#bip66-splits">BIP66 was deployed</a>, but it got resolved
+reality when BIP66 was deployed (see <a href="#bip66-splits">Section 9.2.4</a>), but it got resolved
 within 6 blocks or so.</p>
 </div>
 <div class="sect3">
 <h4 id="_costs_of_a_split"><a class="anchor" href="#_costs_of_a_split"></a>5.3.1. Costs of a split</h4>
 <div class="paragraph">
 <p>Jimmy Song
-<a href="https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/">speaks
+<a href="https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/">spoke
 about the costs associated with hard forks</a> at Breaking Bitcoin in
-Paris, but much of it applies to a chain split due to a failed soft
-fork as well. He speaks about <em>negative externalities</em>, and refers to
-prices someone else has to pay for your own actions.</p>
+Paris, but much of what he said applies to a chain split due to a failed soft
+fork as well. He spoke about <em>negative externalities</em>, and defined them as the
+price someone else has to pay for your own actions.</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -2444,18 +2441,18 @@ cost of that factory.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Jimmy Song on Socialized Costs Of Hard Forks<br>
-<cite>Breaking Bitcoin conference 2017</cite>
+&#8212; Jimmy Song<br>
+<cite>Socialized Costs Of Hard Forks at Breaking Bitcoin conference (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>In the context of Bitcoin, he exemplifies negative externalities using
 Bitcoin Cash (bcash), which is a hard fork of Bitcoin created shortly
-prior to this conference. He categorizes the negative externalities of
+prior to that conference in 2017. He categorizes the negative externalities of
 a hard fork into one-time costs and permanent costs.</p>
 </div>
 <div class="paragraph">
-<p>Among the many examples of one-time costs he mentions those of exchanges.</p>
+<p>Among the many examples of one-time costs, he mentions the ones incurred by exchanges.</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -2484,35 +2481,35 @@ time to do this, has to be done quickly.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Jimmy Song on Socialized Costs Of Hard Forks<br>
-<cite>Breaking Bitcoin conference 2017</cite>
+&#8212; Jimmy Song<br>
+<cite>Socialized Costs Of Hard Forks at Breaking Bitcoin conference (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>He also lists one-time costs for merchants, payment processors,
-wallets, miners, and users. Then he talks about some permanent costs,
-for example higher risk of reorgs, privacy loss, etc.</p>
+<p>He also lists the one-time costs incurred by merchants, payment processors,
+wallets, miners, and users, as well as some of the permanent costs,
+for example privacy loss and a higher risk of reorgs.</p>
 </div>
 <div class="paragraph">
-<p>Also, when a split has happened, and the chain with the most general
+<p>Indeed, when a split happens and the chain with the most general
 rules becomes stronger than the chain with the stricter rules, a reorg
 will occur. This will have a severe impact on all transactions carried
 out in the wiped-out branch. For these reasons it&#8217;s really important
-to try to avoid splits at all times.</p>
+to try avoiding chain splits at all times.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_conclusion_3"><a class="anchor" href="#_conclusion_3"></a>5.4. Conclusion</h3>
 <div class="paragraph">
-<p>Bitcoin grows and evolves over time, and different upgrade mechanisms
+<p>Bitcoin grows and evolves with time. Different upgrade mechanisms
 have been used over the years and the learning curve is steep. More
-and more sophisticated and robust methods have been invented as we
+and more sophisticated and robust methods keep being invented, as we
 learn more about how the network reacts.</p>
 </div>
 <div class="paragraph">
 <p>To keep Bitcoin in harmony, soft forks have proven to be the way
-forward, but the big question is still not fully answered: How do we
+forward, but the big question is still not fully answered: how do we
 safely deploy soft forks without causing discord?</p>
 </div>
 </div>
@@ -2528,34 +2525,34 @@ safely deploy soft forks without causing discord?</p>
 </div>
 <div class="paragraph">
 <p>This chapter addresses <em>adversarial thinking</em>, a mindset that focuses
-on what can go wrong and how adversaries might operate. We start out
-by discussing Bitcoin&#8217;s security assumptions and security model, then
-we talk about how ordinary users can think adversarially to improve
-their self sovereignty and Bitcoin&#8217;s full node decentralization. We&#8217;ll
-look into some actual threats to Bitcoin and into the minds of
-adversaries. Lastly, we&#8217;ll talk about the <em>axiom of resistance</em> that
-might help you to understand why people are working on Bitcoin in the
+on what could go wrong and how adversaries might act. We start out
+by discussing Bitcoin&#8217;s security assumptions and security model, after which
+we explain how ordinary users can improve
+their self-sovereignty and Bitcoin&#8217;s full node decentralization by thinking adversarially. Then, we
+look into some actual threats to Bitcoin as well as into the adversary&#8217;s mind.
+Lastly, we talk about the <em>axiom of resistance</em> which
+can help you understand why people are working on Bitcoin in the
 first place.</p>
 </div>
 <div class="paragraph">
-<p>When we discuss security in various systems, it&#8217;s good to understand
+<p>When discussing security within various systems, it&#8217;s important to understand
 what the security assumptions are. A typical security assumption in
-Bitcoin is "the Discrete Logarithm problem is hard to solve", which,
+Bitcoin is &#8220;the discrete logarithm problem is hard to solve&#8221;, which,
 simply put, means it&#8217;s practically impossible to find a private key
-that corresponds to a particular public key. Another, pretty strong,
+that corresponds to a particular public key. Another pretty strong
 security assumption is that a majority of the network&#8217;s hashpower is
 honest, meaning that they play by the rules. If these assumptions are
 proven wrong, then Bitcoin is in trouble.</p>
 </div>
 <div class="paragraph">
-<p>Andrew Poelstra
+<p>In 2015 Andrew Poelstra
 <a href="https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/">gave
-a talk</a> at the Scaling Bitcoin conference in Hong Kong 2015, where he
-talked about Bitcoin&#8217;s security assumptions. He says that many systems
+a talk</a> at the Scaling Bitcoin conference in Hong Kong, during which he
+analyzed Bitcoin&#8217;s security assumptions. He starts by noticing that many systems
 disregard adversaries to some extent; for example, it&#8217;s really hard to
-protect a building against all types of adversarial events. Instead we
-accept that someone may burn the building down, and we prevent
-adversarial behavior to some extent through law enforcement etc.</p>
+protect a building against all types of adversarial events. Instead, we generally
+accept the possibility that someone may burn the building down, and to some extent prevent
+this and other adversarial behaviors through law enforcement etc.</p>
 </div>
 <div class="paragraph">
 <p>But online things are different:</p>
@@ -2571,12 +2568,12 @@ cannot assume they will be visible and that they will be caught.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Andrew Poelstra<br>
-<cite>Scaling Bitcoin</cite>
+<cite>Security Assumptions at Scaling Bitcoin Hong Kong (2015)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>The consequence is that all known weaknesses in Bitcoin must be taken
-care of somehow; otherwise, they will be exploited. After all, Bitcoin
+<p>The consequence is that all known weaknesses in Bitcoin must somehow be taken
+care of, otherwise they will be exploited. After all, Bitcoin
 is the greatest honey pot in the world.</p>
 </div>
 <div class="paragraph">
@@ -2599,23 +2596,23 @@ in order to better understand and attempt to describe it.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Jameson Lopp<br>
-<cite>Bitcoin’s Security Model: A Deep Dive</cite>
+<cite>Bitcoin’s Security Model: A Deep Dive (2016)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>So we have a system that seems to be working in practice, but we can&#8217;t
-formally prove it&#8217;s secure. A proof is probably not possible due to
-the complexity of the system.</p>
+<p>So, we have a system that seems to be working in practice, but that we can&#8217;t
+formally prove to be secure. A proof is probably not possible due to
+the complexity of the system itself.</p>
 </div>
 <div class="sect2">
-<h3 id="_not_just_for_experts"><a class="anchor" href="#_not_just_for_experts"></a>6.1. Not just for experts</h3>
+<h3 id="_not_only_for_bitcoin_experts"><a class="anchor" href="#_not_only_for_bitcoin_experts"></a>6.1. Not only for Bitcoin experts</h3>
 <div class="paragraph">
-<p>The importance of adversarial thinking probably extends to the general
-public as well to some
-degree. <a href="https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking">Ragnar
-Lifthasir mentions in a tweetstorm</a> how simplistic narratives around
-Bitcoin, for example, "just HODL", can be degrading to Bitcoin and
-concludes</p>
+<p>The importance of adversarial thinking also extends to everyday
+Bitcoin users to some degree, not only to hardcore Bitcoin developers and experts.
+Ragnar Lifthasir mentions in a
+<a href="https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking">tweetstorm</a> how simplistic narratives around
+Bitcoin - for example, &#8220;just HODL&#8221; - can be degrading to Bitcoin itself, and
+concludes by saying</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -2629,13 +2626,13 @@ conservative</p>
 </blockquote>
 <div class="attribution">
 &#8212; Ragnar Lifthasir<br>
-<cite>Twitter</cite>
+<cite>Twitter (2020)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>He refers to these simplistic narratives as monomania, meaning that by
-focusing only on a single thing, e.g., "just HODL", you stop thinking
-about important stuff like keeping your Bitcoin secure or doing your
+<p>He refers to these simplistic narratives as monomanias. Through this definition he&#8217;s saying that by
+focusing on a single thing - for example, &#8220;just HODL&#8221;- you risk to overlook
+the arguably more important stuff, such as keeping your Bitcoin secure or doing your
 best to use Bitcoin in a trustless manner.</p>
 </div>
 </div>
@@ -2643,9 +2640,9 @@ best to use Bitcoin in a trustless manner.</p>
 <h3 id="_threats"><a class="anchor" href="#_threats"></a>6.2. Threats</h3>
 <div class="paragraph">
 <p>There are a lot of known weaknesses in Bitcoin, and many of them are
-actively being exploited. To get a glimpse of that, have a look at
-<a href="https://en.bitcoin.it/wiki/Weaknesses">the Weaknesses page</a> on the
-Bitcoin wiki. They mention a wide variety of problems, for example,
+actively being exploited. To get a glimpse of that, have a look at the
+<a href="https://en.bitcoin.it/wiki/Weaknesses">Weaknesses page</a> on
+Bitcoin wiki. There are mentioned a wide variety of problems, such as
 wallet theft and denial-of-service attacks.</p>
 </div>
 <div class="quoteblock">
@@ -2660,21 +2657,21 @@ the execution of other attacks.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Various authors<br>
-<cite>The Bitcoin wiki</cite>
+<cite>Bitcoin wiki</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>This type of attack is called a <em>Sybil attack</em>, which means that a
-single entity controls multiple nodes in a network to make it appear
+<p>This type of attack is called <em>Sybil attack</em>, and it occurs whenever a
+single entity controls multiple nodes in a network and uses them to appear
 as multiple entities.</p>
 </div>
 <div class="paragraph">
 <p>As the quote also mentions, the Sybil attack is not effective on the
-Bitcoin network because there is no voting with nodes or entities, but
-<a href="#one-cpu-one-vote">with computing power</a>. However, this flat
+Bitcoin network because there is no voting through nodes or other numerable entities, but rather
+<a href="#one-cpu-one-vote">through computing power</a>. Nonetheless, this flat
 structure leaves the system susceptible to other attacks.
-The authors then lists possible attacks such as information hiding
-(often referred to as an eclipse attack) and how Bitcoin Core implements
+The Bitcoin wiki page also outlines other possible attacks, such as information hiding
+(often referred to as <em>eclipse attack</em>), and the way Bitcoin Core implements
 some heuristic countermeasures against such attacks.</p>
 </div>
 <div class="paragraph">
@@ -2689,15 +2686,15 @@ some heuristic countermeasures against such attacks.</p>
 <div class="title">Figure 6. Excerpt from the Simple Sabotage Field Manual</div>
 </div>
 <div id="sabotage" class="paragraph">
-<p>To better understand the mind of an adversary, it might be helpful to
-get a glimpse into how they operate. A government body named
-Office of Strategic Services, which operated during World War II,
-conducted espionage, performed sabotage and propaganda, among other
-things, wrote a <a href="https://www.gutenberg.org/ebooks/26184">manual</a>
-for their personnel on how to sabotage. Its title was "Simple
-Sabotage Field Manual" and contained concrete tips on infiltrating
-the enemy to make their lives hard. They range from burning
-down warehouses to causing wear to drills to decrease the enemy&#8217;s
+<p>To better understand the adversary&#8217;s mind, it might be helpful to
+get a glimpse into how they operate. A US government body named
+Office of Strategic Services, which operated during World War II and had among its purposes to
+conduct espionage, perform sabotage and spread propaganda,
+produced a <a href="https://www.gutenberg.org/ebooks/26184">manual</a>
+for their personnel on how to properly sabotage the enemy. Its title was &#8220;Simple
+Sabotage Field Manual&#8221; and contained concrete tips on infiltrating
+the enemy to make their lives hard. The tips range from burning
+down warehouses to causing wear to drills in order to decrease the enemy&#8217;s
 efficiency.</p>
 </div>
 <div class="paragraph">
@@ -2706,15 +2703,15 @@ infiltrator can disrupt organizations. It&#8217;s not hard to see how such
 tactics could be used to target the Bitcoin development process (see
 <a href="#opensource">Chapter 7</a>), which is open for anyone to participate in. A
 dedicated attacker can keep stalling progress by endless concerns of
-irrelevant issues, haggle over precise wordings, and attempt to reiterate
-already comprehensively addressed discussions. The attacker can also hire
-a troll army to multiply their effectiveness; we can call it a social
+irrelevant issues, haggle over precise wordings, and attempt to reiterate discussions
+that have already been comprehensively addressed. The attacker can also hire
+a troll army to multiply their own effectiveness; we can call this a social
 Sybil attack. Using a social Sybil attack, they can make it look like there&#8217;s
 more resistance against a proposed change than there actually is.</p>
 </div>
 <div class="paragraph">
 <p>This highlights how a determined state can and will do everything in
-their power to destroy their enemy, including breaking it down from
+its power to destroy the enemy, including breaking it down from
 the inside. Since Bitcoin is a form of money that competes with
 established fiat currencies, chances are that states will regard
 Bitcoin as an enemy.</p>
@@ -2724,8 +2721,8 @@ Bitcoin as an enemy.</p>
 <div id="axiomofresistance" class="paragraph">
 <p>Eric Voskuil
 <a href="https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance">writes
-on his Cryptoeconomics wiki page</a> about what he calls "Axiom of
-Resistance":</p>
+on his Cryptoeconomics wiki page</a> about what he calls the &#8220;axiom of
+resistance&#8221;:</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -2748,17 +2745,17 @@ rationalize the conflict.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Eric Voskuil<br>
-<cite>Cryptoeconomics wiki</cite>
+<cite>Cryptoeconomics wiki (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>What he&#8217;s essentially saying is that only when one assumes it&#8217;s possible to
-create a system that states can&#8217;t control is it meaningful to try.</p>
+create a system that states can&#8217;t control, is it meaningful to try.</p>
 </div>
 <div class="paragraph">
-<p>This means that to work on Bitcoin, you should accept the Axiom of
-Resistance, otherwise you&#8217;d better spend your time on other
-projects. Accepting that axiom helps in focusing your development
+<p>This means that to work on Bitcoin you should accept the axiom of
+resistance, otherwise you&#8217;d better spend your time on other
+projects. Acknowledging that axiom helps you focusing your development
 efforts on the real problems at hand: coding around state-level
 adversaries. In other words, think adversarially.</p>
 </div>
@@ -5038,7 +5035,7 @@ to play.</p>
 <h2 id="appendixdiscussion"><a class="anchor" href="#appendixdiscussion"></a>Appendix A: Discussion Questions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>These discussion questions are not just a recap of the content in "Bitcoin development philosophy", they are meant to encourage you to research further and to explore.</p>
+<p>These discussion questions are not just a recap of the content in "Bitcoin development philosophy", they are meant to encourage you to research further so make sure to go out and explore.</p>
 </div>
 <div class="sect2">
 <h3 id="_decentralization"><a class="anchor" href="#_decentralization"></a>A.1. Decentralization</h3>
@@ -5308,7 +5305,7 @@ command manually:</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-16 20:28:17 -0500
+Last updated 2023-03-11 00:43:37 UTC
 </div>
 </div>
 <script type="text/x-mathjax-config">
