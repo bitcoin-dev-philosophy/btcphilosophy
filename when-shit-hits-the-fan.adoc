@@ -491,7 +491,7 @@ restore consensus, was to
 * patch old versions (0.7.2 and some older ones) with the same new
   rules, and increase the lock limit.
 
-Except for the increased lock limit in the second bullet, these rules were
+Except for the increased global lock limit in the second bullet, these rules were
 implemented temporarily for a pre-determined amount of time. The plan was to
 remove these limits once most nodes had upgraded.
 
@@ -507,7 +507,8 @@ Unfortunately, though, a few nodes that didn't upgrade were lost in the process.
 One might wonder if this would be doable today. The mining
 landscape is more complex today, and, depending on the hash power on
 each side of the split, it might be hard to roll out a patch such as
-the one in BIP50 quickly enough.
+the one in BIP50 quickly enough. It'd probably be hard to convince
+miners on the "`wrong`" branch to let go of their block rewards.
 
 [[bip66-splits]]
 ==== BIP66

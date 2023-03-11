@@ -1,5 +1,6 @@
-**.html
+docinfo.html
 *~
 style/asciidoctor.css
 notes/local
 sources/tmp
+build
