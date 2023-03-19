@@ -3461,23 +3461,23 @@ whatever you want to your own fork, and build and run your own binary.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In this chapter, we&#8217;ll explore how Bitcoin scales, and doesn&#8217;t
-scale. We&#8217;ll look a bit into the past to see how people have reasoned
-about scaling in the past. The bulk of this chapter explains various
-approaches to scaling Bitcoin. We&#8217;ll talk about vertical, horizontal,
-inward, and layered scaling and discuss whether they do or don&#8217;t
-interfere with Bitcoin&#8217;s value proposition.</p>
+<p>In this chapter, we explore how Bitcoin does and does not
+scale. We start by looking at how people have reasoned
+about scaling in the past. Then, the bulk of this chapter explains various
+approaches to scaling Bitcoin, specifically vertical, horizontal,
+inward, and layered scaling. Each description is followed by considerations over whether the approach
+interferes with Bitcoin&#8217;s value proposition.</p>
 </div>
 <div class="paragraph">
-<p>Different people ascribe different definitions to the word scaling, such as
-increasing the transaction capacity of the blockchain, using the
-blockchain more efficiently, or developing systems on top of Bitcoin.</p>
+<p>In the Bitcoin space, different people ascribe different definitions to the word &#8220;scale&#8221;. Some conceive it as the
+increase of the blockchain transaction capacity, others believe it equals to using the
+blockchain more efficiently, and others see it as the development of systems on top of Bitcoin.</p>
 </div>
 <div class="paragraph">
-<p>In the context of Bitcoin, and of this book, we will define scaling as
+<p>In the context of Bitcoin, and for this book&#8217;s purposes, we define scaling as
 <em>increasing Bitcoin&#8217;s usage capacity without compromising its
-censorship resistance</em>. This definition would encompass several
-different kinds of changes, for example:</p>
+censorship resistance</em>. This definition encompasses several
+kinds of changes, for example:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3488,7 +3488,7 @@ different kinds of changes, for example:</p>
 <p>Improving signature verification performance</p>
 </li>
 <li>
-<p>Make the peer-to-peer network use less bandwidth</p>
+<p>Making the peer-to-peer network use less bandwidth</p>
 </li>
 <li>
 <p>Transaction batching</p>
@@ -3499,7 +3499,7 @@ different kinds of changes, for example:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>We&#8217;ll soon dive into different approaches for scaling, but let&#8217;s start
+<p>We&#8217;ll soon dive into different approaches to scaling, but let&#8217;s start
 with a brief overview of Bitcoin&#8217;s history within the context of scaling.</p>
 </div>
 <div class="sect2">
@@ -3508,8 +3508,8 @@ with a brief overview of Bitcoin&#8217;s history within the context of scaling.<
 <p>Scaling has been a focal point of discussion since the genesis of Bitcoin. The
 very first sentence of the
 <a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014814.html">very
-first mail response</a> to Satoshi&#8217;s announcement of the bitcoin white paper on the
-Cryptography mailing list was about scaling:</p>
+first email</a> in response to Satoshi&#8217;s announcement of the Bitcoin whitepaper on the
+Cryptography mailing list was indeed about scaling:</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -3528,34 +3528,34 @@ proposal, it does not seem to scale to the required size.</p>
 </blockquote>
 <div class="attribution">
 &#8212; James A. Donald and Satoshi Nakamoto<br>
-<cite>Cryptography email list</cite>
+<cite>Cryptography mailing list (2008)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>The conversation itself might not be very interesting or accurate, but
+<p>The conversation in itself might not be very interesting nor accurate, but
 it shows that scaling has been a concern from the very beginning.</p>
 </div>
 <div class="paragraph">
-<p>Scaling discussions reached peak interest around 2015-2017, when many
-different ideas floated around about if and how to increase the
-maximum block size limit. This is a rather uninteresting discussion
-about changing a parameter in the source code, a change that doesn&#8217;t
-fundamentally solve anything, but pushes the problem of scaling
+<p>Discussions over scaling reached their peak interest around 2015-2017, when there were many
+different ideas circulating about whether and how to increase the
+maximum block size limit. That was a rather uninteresting discussion
+about changing a parameter in the source code, a change that didn&#8217;t
+fundamentally solve anything but pushed the problem of scaling
 further into the future, building technical debt.</p>
 </div>
 <div class="paragraph">
 <p>In 2015, a conference called <a href="https://scalingbitcoin.org/">Scaling
 Bitcoin</a> was held in Montreal, with a follow-up conference six months
-later in Hong Kong and thereafter in a number of other locations to
-address scaling. Many Bitcoin developers and others gathered there to
+later in Hong Kong and thereafter in a number of other locations around the world. The focus was precisely on how to
+address scaling. Many Bitcoin developers and other enthusiasts gathered at these conferences to
 discuss various scaling issues and proposals. Most of these
-discussions didn&#8217;t revolve around block size increases but more long-term
+discussions didn&#8217;t revolve around block size increases but on more long-term
 solutions.</p>
 </div>
 <div class="paragraph">
 <p>After the Hong Kong conference in December 2015, Gregory Maxwell
 <a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-December/011865.html">summarized
-his view</a> on many of the discussions and started off with
+his view</a> on many of the issues that had been debated, starting off with
 some general scaling philosophy.</p>
 </div>
 <div class="quoteblock">
@@ -3575,21 +3575,21 @@ system.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Gregory Maxwell on Bitcoin-dev mailing list<br>
-<cite>Capacity increases for the Bitcoin system.</cite>
+&#8212; Gregory Maxwell<br>
+<cite>Capacity increases for the Bitcoin system (2015)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>He speaks about the trade-off between throughput and
 decentralization. If you allow for bigger blocks, you will push some
-people off the network because they don&#8217;t have the resources to verify
+people off the network because they won&#8217;t have the resources to validate
 the blocks anymore. But on the other hand, if access to block space
-becomes more expensive, fewer people will afford to use it as a
-dispute resolution mechanism. In both these cases, users are pushed
+becomes more expensive, fewer people will be able to afford using it as a
+dispute resolution mechanism. In both cases, users are pushed
 towards trusted services.</p>
 </div>
 <div class="paragraph">
-<p>He further summarizes the many approaches to scaling presented at the
+<p>He continues by summarizing the many approaches to scaling presented at the
 conference. Among them are more computationally efficient signature
 verifications, <em>segregated witness</em> including a block size limit
 change, a more space-efficient block propagation mechanism, and
@@ -3601,8 +3601,8 @@ approaches have since been implemented.</p>
 <h3 id="_scaling_approaches"><a class="anchor" href="#_scaling_approaches"></a>8.2. Scaling approaches</h3>
 <div class="paragraph">
 <p>As hinted above, scaling Bitcoin doesn&#8217;t necessarily have to be about
-increasing the block size limit or other limits. We&#8217;ll go through some
-general scaling approaches, of which some don&#8217;t suffer from the
+increasing the block size limit or other limits. We now go through some
+general approaches to scaling, some of which don&#8217;t suffer from the
 throughput-decentralization trade-off mentioned in the previous
 section.</p>
 </div>
@@ -3610,26 +3610,27 @@ section.</p>
 <h4 id="_vertical_scaling"><a class="anchor" href="#_vertical_scaling"></a>8.2.1. Vertical scaling</h4>
 <div class="paragraph">
 <p>Vertical scaling is the process of increasing the computing resources
-of the machines processing data. With Bitcoin, this would be
-the full node, the machine that verifies the blockchain on behalf of
-its user.</p>
+of the machines processing data. In the context of Bitcoin, these latter would be
+the full nodes, namely the machines that validate the blockchain on behalf of
+their users.</p>
 </div>
 <div class="paragraph">
-<p>Typically, vertical scaling in Bitcoin would be an increase of the
+<p>The most commonly discussed technique for vertical scaling
+in Bitcoin is the increase in the
 block size limit. This would require some full nodes to upgrade their
 hardware to keep up with the increasing computational
 demands. The downside is that it happens at the cost of
-decentralization, as was discussed in the previous section and more
-in-depth in <a href="#_full_node_decentralization">Section 1.2</a>.</p>
+centralization, as was discussed in the previous section and more
+in depth in <a href="#_full_node_decentralization">Section 1.2</a>.</p>
 </div>
 <div class="paragraph">
 <p>Besides the negative effects on full node decentralization, vertical
-scaling also potentially negatively impacts Bitcoin&#8217;s
+scaling might also negatively impact Bitcoin&#8217;s
 <a href="#_miner_decentralization">mining decentralization</a> and security in
-non-obvious ways. Let&#8217;s have a look at how miners &#8220;should&#8221;
+less obvious ways. Let&#8217;s have a look at how miners &#8220;should&#8221;
 operate. Say a miner mines a block at height 7 and publishes that
-block to the Bitcoin network. It will take some time for this block to
-reach broad acceptance mainly due to two factors:</p>
+block on the Bitcoin network. It will take some time for this block to
+reach broad acceptance, which is mainly due to two factors:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3638,60 +3639,60 @@ reach broad acceptance mainly due to two factors:</p>
 limitations.</p>
 </li>
 <li>
-<p>Verification of the block takes time.</p>
+<p>Validation of the block takes time.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>During the time it takes for block 7 to propagate, many miners still
-mine on top of block 6 because they haven&#8217;t received and validated
-block 7 yet. During this time, if any of these miners find a new
-block at height 7, we&#8217;re going to have two competing blocks at that height.
-There can only be one block at height 7, which means one of the two candidates
+<p>While block 7 is being propagated through the network, many miners are still
+mining on top of block 6 because they haven&#8217;t received and validated
+block 7 yet. During this time, if any of these miners finds a new
+block at height 7, there will be two competing blocks at that height.
+There can only be one block at height 7 (or any other height), which means one of the two candidates
 must become stale.</p>
 </div>
 <div class="paragraph">
-<p>In short, stale blocks happen because it takes time for blocks to
-propagate, and the more time propagation takes, the higher the
+<p>In short, stale blocks happen because it takes time for each block to
+propagate, and the longer propagation takes, the higher the
 probability of stale blocks.</p>
 </div>
 <div class="paragraph">
 <p>Suppose that the block size limit is lifted and that the average block
 size increases substantially. Blocks would then propagate slower across the
-network due to bandwidth limitations and verification time. An increased time
-for propagation will also increase the chance of stale blocks.</p>
+network due to bandwidth limitations and verification time. An increase in propagation time
+will also increase the chances of stale blocks.</p>
 </div>
 <div class="paragraph">
 <p>Miners don&#8217;t like to have their blocks staled because they&#8217;ll lose
-their block reward, so they will do what they can to avoid this
-scenario. Among the things they can do are:</p>
+their block reward, so they will do whatever they can to avoid this
+scenario. The measures they can take include:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Postpone validation of an incoming block, also known as
-<a href="#bip66splits"><em>validationless mining</em></a>. Just check the block
-header&#8217;s proof-of-work and mine on top of it while you download the
+<p>Postponing the validation of an incoming block, also known as
+<a href="#bip66splits"><em>validationless mining</em></a>. Miners can just check the block
+header&#8217;s proof-of-work and mine on top of it, while in the meantime they download the
 full block and validate it.</p>
 </li>
 <li>
-<p>Connect to a mining pool with greater bandwidth and connectivity.</p>
+<p>Connecting to a mining pool with greater bandwidth and connectivity.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Validationless mining further undermines the
-<a href="#_full_node_decentralization">full node decentralization</a> of the
-system since the miner, at least temporarily, defers to trusting
-incoming blocks. It also hurts security to some degree because a
+<p>Validationless mining further undermines
+<a href="#_full_node_decentralization">full node decentralization</a>,
+as the miner defers trusting
+incoming blocks, at least temporarily. It also hurts security to some degree because a
 portion of the network&#8217;s computing power is potentially building on an
-invalid blockchain, instead of building on the strongest valid chain.</p>
+invalid blockchain, instead of building on the strongest and valid chain.</p>
 </div>
 <div class="paragraph">
 <p>The second bullet point has a negative effect on
-<a href="#_miner_decentralization">miner decentralization</a>, because the larger
-pools usually are the ones with the best network connectivity and
-bandwidth.</p>
+<a href="#_miner_decentralization">miner decentralization</a>, because usually
+the pools with the best network connectivity and
+bandwidth are also the largest and thus most centralized.</p>
 </div>
 </div>
 <div class="sect3">
@@ -3703,13 +3704,13 @@ among popular websites and databases, it&#8217;s not easily done in
 Bitcoin.</p>
 </div>
 <div class="paragraph">
-<p>Many people refer to this Bitcoin scaling approach as <em>sharding</em>. You
-let each full node verify just a part of the blockchain. Peter Todd
-has put a lot of thought into the concept of sharding. He
-<a href="https://petertodd.org/2015/why-scaling-bitcoin-with-sharding-is-very-hard">wrote
-a blog post</a> explaining sharding from a high level, and also presented
+<p>Many people refer to this Bitcoin scaling approach as <em>sharding</em>. Basically, it consists in letting
+each full node verify just a portion of the blockchain. Peter Todd
+has put a lot of thought into the concept of sharding. He wrote a
+<a href="https://petertodd.org/2015/why-scaling-bitcoin-with-sharding-is-very-hard">blog
+post</a> explaining sharding in general terms, and also presenting
 his own idea called <em>treechains</em>. The article is a difficult read,
-but he makes some general points that are more digestible.</p>
+but Todd makes some points that are quite digestible.</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -3720,13 +3721,13 @@ you have to decide what happens when it’s not available.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Peter Todd on his blog<br>
-<cite>Why Scaling Bitcoin With Sharding Is Very Hard</cite>
+&#8212; Peter Todd<br>
+<cite>Why Scaling Bitcoin With Sharding Is Very Hard (2015)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>Then he explains various ideas on how to tackle sharding, or
-horizontal scaling. Towards the end he concludes:</p>
+<p>Then he presents various ideas on how to tackle sharding, or
+horizontal scaling. Towards the end of the post he concludes:</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -3746,36 +3747,36 @@ or two orders of magnitude simpler than the Bitcoin protocol.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Peter Todd on his blog<br>
-<cite>Why Scaling Bitcoin With Sharding Is Very Hard</cite>
+&#8212; Peter Todd<br>
+<cite>Why Scaling Bitcoin With Sharding Is Very Hard (2015)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>The conclusion he makes is that sharding <em>might</em> be technically
-possible, but it comes at the cost of tremendous complexity. Given
-that many users already find Bitcoin too complex and instead use
-centralized services, it&#8217;s going to be hard to convince them to use
+possible, but it would come at the cost of tremendous complexity. Given
+that many users already find Bitcoin too complex and prefer to use
+centralized services instead, it&#8217;s going to be hard to convince them to use
 something even more complex.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_inward_scaling"><a class="anchor" href="#_inward_scaling"></a>8.2.3. Inward scaling</h4>
 <div class="paragraph">
-<p>While horizontal and vertical scaling has worked out well historically
+<p>While horizontal and vertical scaling have historically worked out well
 in centralized systems like databases and web servers, they don&#8217;t seem
 to be suitable for a decentralized network like Bitcoin due to their
 centralizing effects.</p>
 </div>
 <div class="paragraph">
 <p>An approach that gets far too little appreciation is what we can call
-<em>inward scaling</em>, which translates to "do more with less". It refers
-to the constantly ongoing work by many developers to optimize the
-algorithms already in place so that we can do more within the existing
+<em>inward scaling</em>, which translates into &#8220;do more with less&#8221;. It refers
+to the ongoing work constantly done by many developers to optimize the
+algorithms already in place, so that we can do more within the existing
 limits of the system.</p>
 </div>
 <div class="paragraph">
-<p>The amount of improvement that&#8217;s been done through inward scaling is
-impressive, to say the least. To give you a high-level view of the
+<p>The improvements that have been achieved through inward scaling are
+impressive, to say the least. To give you a general idea of the
 improvements over the years, Jameson Lopp
 <a href="https://blog.lopp.net/bitcoin-core-performance-evolution/">has run
 benchmark tests</a> on blockchain synchronization, comparing many
@@ -3789,25 +3790,25 @@ different versions of Bitcoin Core going back to version 0.8.</p>
 </div>
 <div class="paragraph">
 <p>The different lines represent different versions of Bitcoin Core. The
-leftmost line is the latest one used in this test; version 22.0,
-released in September 2021, which took 396 minutes to fully sync. The
+leftmost line is the latest, i.e. version 0.22, which was
+released in September 2021 and took 396 minutes to fully sync. The
 rightmost one is version 0.8 from November 2013, which took 3452
-minutes. All of this, roughly 10x, improvement is due to inward
+minutes. All of this - roughly 10x - improvement is due to inward
 scaling.</p>
 </div>
 <div class="paragraph">
-<p>The improvements could be categorized as either space (RAM, disk,
-bandwidth, etc.) savings or computational savings. Both categories
+<p>The improvements could be categorized as either saving space (RAM, disk,
+bandwidth, etc.) or saving computational power. Both categories
 contribute to the improvements in the diagram above.</p>
 </div>
 <div class="paragraph">
-<p>A good example of computational improvements can be found in the
-<a href="https://github.com/bitcoin-core/secp256k1">libsecp256k1</a> library, which
+<p>A good example of computational improvement can be found in the
+<a href="https://github.com/bitcoin-core/secp256k1">libsecp256k1</a> library, which,
 among other things, implements the cryptographic primitives needed to
 make and verify digital signatures. Pieter Wuille is one of the
-contributors to this library, and he
-<a href="https://twitter.com/pwuille/status/1450471673321381896">wrote a twitter
-thread</a> showcasing the performance improvements made by various pull
+contributors to this library, and he wrote a
+<a href="https://twitter.com/pwuille/status/1450471673321381896">Twitter
+thread</a> showcasing the performance improvements achieved through various pull
 requests.</p>
 </div>
 <div class="imageblock">
@@ -3817,48 +3818,48 @@ requests.</p>
 <div class="title">Figure 8. Performance of signature verification over time, with significant pull requests marked on the timeline. Source: <a href="https://twitter.com/pwuille/status/1450471673321381896" class="bare">https://twitter.com/pwuille/status/1450471673321381896</a></div>
 </div>
 <div class="paragraph">
-<p>The graph shows the trend for two different 64-bit CPU types, ARM and x86.
+<p>The graph shows the trend for two different 64-bit CPU types, namely ARM and x86.
 The difference in performance is due to the more specialized instructions
-available on x86 compared to the ARM architecture, which has fewer,
-more generic instructions. But the general trend is the same for both
+available on x86 compared to the ARM architecture, which has fewer and
+more generic instructions. However, the general trend is the same for both
 architectures. Note that the Y-axis is logarithmic, which makes the
 improvements look less impressive than they actually are.</p>
 </div>
 <div class="paragraph">
-<p>There are also several good examples of space savings contributing to
-performance improvements. In a
+<p>There are also several good examples of space-saving improvements that contributed to
+performance enhancement. In a
 <a href="https://murchandamus.medium.com/2-of-3-multisig-inputs-using-pay-to-taproot-d5faf2312ba3">Medium
-blog post</a> about Taproot&#8217;s contribution to space savings, user Murch
-compared how much block space a 2-of-3 threshold signature would
-require, both without using Taproot and using Taproot in various ways.</p>
+blog post</a> about Taproot&#8217;s contribution to saving space, user Murch
+compares how much block space a 2-of-3 threshold signature would
+require, using Taproot in various ways as well as not using it at all.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/murch-taproot.png" alt="murch taproot" width="50%">
 </div>
-<div class="title">Figure 9. Space savings for different spending types Taproot and legacy versions.</div>
+<div class="title">Figure 9. Space savings for different spending types, Taproot and legacy versions.</div>
 </div>
 <div class="paragraph">
-<p>A 2-of-3 multisig using native segwit would require a total of
-104.5+43 vB = 147.5 vB, while the most space conservative Taproot
-usage would in the standard use case require only 57.5+43 vB = 100.5
-vB. At worst, in rare cases, like when a standard signer is
-not available for some reason, 107.5+43 vB = 150.5 vB. You don&#8217;t have
-to understand all the details, but it should give you an idea
-of how developers think about space savings. Every little byte counts.</p>
+<p>A 2-of-3 multisig using native Segwit would require a total of
+104.5+43 vB = 147.5 vB, whereas the most space-conservative use of Taproot
+would require only 57.5+43 vB = 100.5
+vB in the standard use case. At worst and in rare cases, like when a standard signer is
+not available for some reason, Taproot would use 107.5+43 vB = 150.5 vB. You don&#8217;t have
+to understand all the details, but this should give you an idea
+of how developers think about saving space - every little byte counts.</p>
 </div>
 <div class="paragraph">
-<p>Apart from the inward scaling going on in Bitcoin software, there are
-also some ways that users can contribute to inward scaling. They can
-make their transactions in more intelligent ways to save on
+<p>Apart from inward scaling in Bitcoin software, there are
+some ways in which users can contribute to inward scaling, too. They can
+make their transactions more intelligently to save on
 transaction fees while simultaneously decreasing their footprints on
-full node requirements. Two commonly used techniques are called
+full node requirements. Two commonly used techniques toward such goal are called
 transaction batching and output consolidation.</p>
 </div>
 <div class="paragraph">
 <p>The idea with transaction batching is to combine multiple payments
-into one single transaction, instead of using one transaction per
-payment. This can save you a lot of fees, and at the same time, reduce
+into one single transaction, instead of making one transaction per
+payment. This can save you a lot of fees, and at the same time reduce
 the block space load.</p>
 </div>
 <div class="imageblock">
@@ -3868,10 +3869,10 @@ the block space load.</p>
 <div class="title">Figure 10. Transaction batching combines multiple payments into a single transaction to save on fees.</div>
 </div>
 <div class="paragraph">
-<p>Output consolidation means that you take advantage of periods of low
-block space demand to combine your outputs into a single output. This
-can reduce your fee cost later, when you need to make a payment during
-high block space demand.</p>
+<p>Output consolidation refers to taking advantage of periods of low demand for
+block space to combine multiple outputs into a single output. This
+can reduce your fee cost later, when you&#8217;ll need to make a payment while the
+demand for block space is high.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -3881,17 +3882,17 @@ high block space demand.</p>
 </div>
 <div class="paragraph">
 <p>It may not be obvious how output consolidation contributes to inward
-scaling. After all, the total amount of blockchain data even slightly
-increases with this method, but the UTXO set, the database that keeps
-track of who owns which coins, decreases because you spend more UTXOs
+scaling. After all, the total amount of blockchain data is even slightly
+increased with this method. Nonetheless, the UTXO set, i.e. the database that keeps
+track of who owns which coins, shrinks because you spend more UTXOs
 than you create. This alleviates the burden for full nodes to maintain
 their UTXO sets.</p>
 </div>
 <div class="paragraph">
 <p>Unfortunately, however, these two techniques of <em>UTXO management</em> could
-be bad for your own or your payees' privacy. In the batching case, a
-payee will know that all these outputs are from you to other payees
-(except possibly the change). In the UTXO consolidation case, you
+be bad for your own or your payees' privacy. In the batching case, each
+payee will know that all the batched outputs are from you to other payees
+(except possibly the change). In the UTXO consolidation case, you will
 reveal that the outputs you consolidate belong to the same wallet. So
 you may have to make a trade-off between cost efficiency and privacy.</p>
 </div>
@@ -3900,7 +3901,7 @@ you may have to make a trade-off between cost efficiency and privacy.</p>
 <h4 id="_layered_scaling"><a class="anchor" href="#_layered_scaling"></a>8.2.4. Layered scaling</h4>
 <div class="paragraph">
 <p>The most impactful approach to scaling is probably layering. The
-general idea of layering is that a protocol can settle payments
+general idea behind layering is that a protocol can settle payments
 between users without adding transactions to the blockchain.
 This was already discussed briefly in <a href="#trustlessness">Chapter 2</a> and
 <a href="#privacymeasures">Section 3.7</a>.</p>
@@ -3919,40 +3920,40 @@ on a start transaction that&#8217;s put on the blockchain, as illustrated in
 <div class="paragraph">
 <p>How this start transaction is created varies between protocols, but a
 common theme is that the participants create an unsigned start
-transaction. Then they create a number of pre-signed punishment
-transactions that spend the output of the start transaction in various
-ways. Then the start transaction is fully signed and published to the
-blockchain. The punishment transactions can then be fully signed and
-published to the blockchain to punish a misbehaving party. This
+transaction and a number of pre-signed punishment
+transactions, that spend the output of the start transaction in various
+ways. Subsequently, the start transaction is fully signed and published to the
+blockchain, and the punishment transactions can be fully signed and
+published to punish a misbehaving party. This
 incentivizes the participants to keep their promises so that the
 protocol can work in a trustless way.</p>
 </div>
 <div class="paragraph">
-<p>After the start transaction is on the blockchain, the protocol can do
-what it&#8217;s supposed to do, for example, super-fast payment between
-participants, or some privacy enhancing techniques, or to do more
-advanced scripting not supported on Bitcoin&#8217;s blockchain.</p>
+<p>Once the start transaction is on the blockchain, the protocol can do
+what it&#8217;s supposed to do. For instance, it could do super fast payments between
+participants, implement some privacy-enhancing techniques, or do more
+advanced scripting that would not be supported by the Bitcoin blockchain.</p>
 </div>
 <div class="paragraph">
 <p>We won&#8217;t detail how specific protocols work, but as
 you can see in <a href="#fig-scaling-layer">Figure 12</a>, the blockchain is rarely used
 during the protocol&#8217;s life cycle. All the juicy action happens
 <em>off-chain</em>. We&#8217;ve seen how this can be a win for <a href="#privacy">privacy</a>
-if done right, but it can also be a big win for scalability.</p>
+if done right, but it can also be an advantage for scalability.</p>
 </div>
 <div class="paragraph">
 <p>In a <a href="https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/">Reddit post</a> titled &#8220;A trip to the moon requires a rocket with
 multiple stages or otherwise the rocket equation will eat your
 lunch&#8230;&#8203; packing everyone in clown-car style into a trebuchet and
-hoping for success is right out.&#8221;, Gregory Maxwell explains how
+hoping for success is right out.&#8221;, Gregory Maxwell explains why
 layering is our best shot at getting Bitcoin to scale by orders of
 magnitudes.</p>
 </div>
 <div class="paragraph">
 <p>He starts by emphasizing the fallacy in viewing Visa or Mastercard as
-Bitcoin&#8217;s main competitors and how increasing the maximum block size
-is a bad approach to meet said competition. Then he&#8217;s talking about
-how to make some real difference using layers.</p>
+Bitcoin&#8217;s main competitors and highlighting how increasing the maximum block size
+is a bad approach to meet said competition. Then he talks about
+how to make some real difference by using layers.</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -3983,19 +3984,19 @@ transacting with it at all.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Gregory Maxwell<br>
-<cite>r/Bitcoin on Reddit</cite>
+<cite>r/Bitcoin on Reddit (2016)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>The analogy with the judge is quite illustrative of how layering
-works. This judge must be incorruptible, and never change her
-mind; otherwise, the layers above Bitcoin&#8217;s base layer will not work
+works: this judge must be incorruptible and never change her
+mind, otherwise the layers above Bitcoin&#8217;s base layer will not work
 reliably.</p>
 </div>
 <div class="paragraph">
-<p>He later makes a point about centralized services. There&#8217;s usually no
+<p>He continues by making a point about centralized services. There&#8217;s usually no
 problem with trusting a central server with trivial amounts of Bitcoin
-to get things done. That&#8217;s also layered scaling.</p>
+to get things done: that&#8217;s also layered scaling.</p>
 </div>
 <div class="paragraph">
 <p>Many years have passed since Maxwell wrote the piece above, and his
@@ -5269,7 +5270,7 @@ command manually:</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-03-19 10:42:48 UTC
+Last updated 2023-03-19 10:52:02 UTC
 </div>
 </div>
 <script type="text/x-mathjax-config">
