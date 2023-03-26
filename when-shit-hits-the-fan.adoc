@@ -177,7 +177,7 @@ of common vulnerabilities and exposures]
 that Bitcoin has gone through. This section constitutes a little exposé of some
 of the security issues and incidents from the early years of
 Bitcoin. We won't cover them all, but we selected a few that we
-find extremely interesting.
+find especially interesting.
 
 [[cve-2010-5141]]
 ==== 2010-07-28: Spend anyone's coins (CVE-2010-5141)
@@ -387,7 +387,7 @@ the files blkXXXX.dat and blkindex.dat. The reason for downloading the
 blockchain data this way, as opposed to synchronizing from scratch, was
 to reduce network bandwidth bottlenecks.
 
-There was a big caveat with this: all the data users would download from
+There was a big caveat with this: the data users would download from
 knightmb https://bitcoin.stackexchange.com/a/113682/69518[weren't
 verified by the Bitcoin software] at startup. The blkindex.dat file
 contained the UTXO set, and the software would accept any data therein
@@ -399,8 +399,8 @@ invalid block and its successors was successful. Miners started
 working on a new successor to block
 https://mempool.space/block/0000000000606865e679308edf079991764d88e8122ca9250aef5386962b6e84[74637]
 and, according to the block's timestamp, a successor appeared at 23:53
-UTC, about 6 hours after the issue was discovered. At 08:10 on August
-16 around block 74689, the new chain had overtaken the old
+UTC, about 6 hours after the issue was discovered. At 08:10 the following day, on August
+16, around block 74689, the new chain had overtaken the old
 chain, therefore all non-upgraded nodes reorged to follow the new
 chain. This is the deepest reorg - 52 blocks - in Bitcoin's history.
 
@@ -423,8 +423,8 @@ random dude's hard drive. If so, you're right: that is fishy. But, given the cir
 sensible one.
 
 There's an important difference between this case and
-the previous OP_RETURN case: this issue was exploited [comm: do you mean "exposed"? If someone had the chance to exploit the bug, it isn't clear from the text] in the wild, and
-thus a fix had to be made more quickly. In the case of
+the previous OP_RETURN case: this issue was exploited in the wild, and
+thus a fix could be made more straightforward. In the case of
 OP_RETURN, they had to obfuscate the fix and make public statements
 that didn't directly reveal what the issue was.
 
@@ -489,7 +489,7 @@ restore consensus, was to
 * limit the blocks in terms of both size and locks needed on version
   0.8.1
 * patch old versions (0.7.2 and some older ones) with the same new
-  rules, and increase the lock limit.
+  rules, and increase the global lock limit.
 
 Except for the increased global lock limit in the second bullet, these rules were
 implemented temporarily for a pre-determined amount of time. The plan was to
@@ -608,7 +608,7 @@ While for most applications it is generally acceptable to eagerly
 reject some signatures, Bitcoin is a consensus system where all
 participants must generally agree on the exact validity or
 invalidity of the input data.  In a sense, consistency is more
-important than "`correctness`".
+important than "correctness".
 
 ...
 
@@ -640,7 +640,7 @@ the next section.
 image::bip66-timeline-2.png[{big-width}]
 
 A key takeaway from this is that BIPs should be made more or less
-_atomically_, meaning that they should be complete enough to provide something useful or solve a
+_atomic_, meaning that they should be complete enough to provide something useful or solve a
 specific problem, but small enough to allow for broad support among
 users. The more stuff you put into a BIP, the smaller the chance of
 acceptance.
