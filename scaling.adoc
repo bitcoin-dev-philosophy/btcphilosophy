@@ -324,7 +324,7 @@ than you create. This alleviates the burden for full nodes to maintain
 their UTXO sets.
 
 Unfortunately, however, these two techniques of _UTXO management_ could
-be bad for your own or your payees' privacy. In the batching case, each
+be bad for your own or your payees`' privacy. In the batching case, each
 payee will know that all the batched outputs are from you to other payees
 (except possibly the change). In the UTXO consolidation case, you will
 reveal that the outputs you consolidate belong to the same wallet. So

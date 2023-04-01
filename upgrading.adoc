@@ -374,7 +374,7 @@ ____
 ____
 
 The "`let's see what happens`" approach finally seemed to click in
-peoples' minds. This process would later be labeled as "`Speedy Trial`"
+peoples`' minds. This process would later be labeled as "`Speedy Trial`"
 due to its short signaling period. David Harding explains this idea
 to the broader community in an
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-March/018583.html[email

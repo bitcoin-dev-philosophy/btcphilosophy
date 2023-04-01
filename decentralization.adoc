@@ -36,7 +36,7 @@ and censorship resistance.
 Miner decentralization in Bitcoin means that the _ordering of
 transactions_ isn't carried out by any single entity or fixed set of
 entities. It's carried out collectively by all the actors who want
-to participate in it; this miners' collective is a dynamic set of users. Anyone can
+to participate in it; this miners`' collective is a dynamic set of users. Anyone can
 join or leave as they wish. This property makes Bitcoin censorship-resistant.
 
 If Bitcoin were centralized, it would be vulnerable to those who
@@ -117,7 +117,7 @@ goes on to explain how proof-of-work is the solution. Still, no one
 explains it better than
 https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/[Gregory
 Maxwell on Reddit], where he responds to someone who proposes to limit
-miners' hash power to avoid potential 51% attacks:
+miners`' hash power to avoid potential 51% attacks:
 
 [[one-cpu-one-vote]]
 [quote, Gregory Maxwell, r/Bitcoin subreddit (2019)]
