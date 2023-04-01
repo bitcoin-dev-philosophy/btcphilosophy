@@ -232,7 +232,7 @@ improving, over time it should get better at supporting users willing to work
 towards trustlessness. Also, as users gain more knowledge over time,
 they should be able to gradually remove trust from the equation.
 
-Some users <<adversarialthinking, think adversarially>> and verify
+Some users think adversarially (see <<adversarialthinking>>) and verify
 most aspects of the software they run. As a consequence, they reduce the need for trust to the bare minimum,
 as they only need to trust their computer hardware and operating system. In
 doing so, they also help people who don't verify their hardware as thoroughly by

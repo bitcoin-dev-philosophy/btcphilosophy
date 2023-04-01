@@ -87,6 +87,7 @@ focusing on a single thing - for example, "`just HODL`"- you risk to overlook
 the arguably more important stuff, such as keeping your Bitcoin secure or doing your
 best to use Bitcoin in a trustless manner.
 
+[[threats]]
 === Threats
 
 There are a lot of known weaknesses in Bitcoin, and many of them are
@@ -110,7 +111,7 @@ as multiple entities.
 
 As the quote also mentions, the Sybil attack is not effective on the
 Bitcoin network because there is no voting through nodes or other numerable entities, but rather
-<<one-cpu-one-vote,through computing power>>. Nonetheless, this flat
+through computing power (see <<minerdecentralization>>). Nonetheless, this flat
 structure leaves the system susceptible to other attacks.
 The Bitcoin wiki page also outlines other possible attacks, such as information hiding
 (often referred to as _eclipse attack_), and the way Bitcoin Core implements

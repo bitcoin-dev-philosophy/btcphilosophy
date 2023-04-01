@@ -39,13 +39,13 @@ entities. It's carried out collectively by all the actors who want
 to participate in it; this miners' collective is a dynamic set of users. Anyone can
 join or leave as they wish. This property makes Bitcoin censorship-resistant.
 
-If Bitcoin were centralized, it would be vulnerable to those who wished
-to censor it, such as governments. It would meet the same fate as earlier
-attempts to create digital money. In the introduction of
+If Bitcoin were centralized, it would be vulnerable to those who
+wished to censor it, such as governments. It would meet the same fate
+as earlier attempts to create digital money. In the introduction of
 https://www.blockstream.com/sidechains.pdf[a paper] titled "`Enabling
-Blockchain Innovations with Pegged Sidechains`", the authors
-explain how early versions of digital money weren't
-equipped for an <<adversarialthinking,adversarial environment>>:
+Blockchain Innovations with Pegged Sidechains`", the authors explain
+how early versions of digital money weren't equipped for an
+adversarial environment (see also <<adversarialthinking>>):
 
 [quote, various authors, Enabling Blockchain Innovations with Pegged Sidechains (2014)]
 ____
@@ -159,7 +159,7 @@ centralizating miners can allow for censorship. But there's also another
 aspect of decentralization, namely _full node decentralization_.
 
 The importance of full node decentralization is related to
-<<trustlessness,trustlessness>>. Suppose a user stops running their own
+trustlessness (see <<trustlessness>>). Suppose a user stops running their own
 full node due to, for example, a prohibitive increase in the cost of
 operation. In that case, they have to interact with the Bitcoin network in some
 other way, possibly by using web wallets or lightweight wallets, which requires a certain level of trust in the providers of these services.

@@ -140,7 +140,6 @@ the ones you send as well as the ones you receive.
 Satoshi Nakamoto ponders over on-chain privacy in section 7 of his
 https://bitcoin.org/bitcoin.pdf[Bitcoin whitepaper]:
 
-[[satoshi-unique-addresses]]
 [quote, Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System (2008)]
 ____
 As an additional firewall, a new key pair should be used for each
@@ -299,7 +298,7 @@ talk about either of them in isolation.
 
 Several techniques have been developed to help people protecting themselves from privacy
 leaks. Among the most obvious ones is, as
-<<satoshi-unique-addresses,noted by Nakamoto>> above, using unique
+noted by Nakamoto>> in <<blockchainprivacy>>, using unique
 addresses for every transaction, but several others exist. We're not
 going to teach you how to become a privacy ninja. However, Bitcoin Q+A has
 a quick summary of privacy-enhancing technologies, somewhat ordered by
@@ -348,7 +347,7 @@ Bitcoin, as is the case with Lightning Network:
 .Layers on top of Bitcoin can add privacy.
 image::privacy.png[width=50%]
 
-We noted in <<trustlessness,Trustlessness>> that the need for trust
+We noted in <<trustlessness>> that the need for trust
 can only increase with layers on top, but that doesn't seem to be the
 case for privacy, which can be improved or made worse arbitrarily in
 layers on top. Why is that? Any layer on top of Bitcoin, as explained

@@ -128,7 +128,7 @@ in depth in <<fullnodedecentralization>>.
 
 Besides the negative effects on full node decentralization, vertical
 scaling might also negatively impact Bitcoin's
-<<minerdecentralization,mining decentralization>> and security in
+mining decentralization (explained in <<minerdecentralization>>) and security in
 less obvious ways. Let's have a look at how miners "`should`"
 operate. Say a miner mines a block at height 7 and publishes that
 block on the Bitcoin network. It will take some time for this block to
@@ -159,22 +159,22 @@ their block reward, so they will do whatever they can to avoid this
 scenario. The measures they can take include:
 
 * Postponing the validation of an incoming block, also known as
-  <<bip66splits,_validationless mining_>>. Miners can just check the block
+  _validationless mining_, further discussed in <<bip66splits>>. Miners can just check the block
   header's proof-of-work and mine on top of it, while in the meantime they download the
   full block and validate it.
 * Connecting to a mining pool with greater bandwidth and connectivity.
 
 Validationless mining further undermines
-<<fullnodedecentralization, full node decentralization>>,
-as the miner defers trusting
+full node decentralization,
+as the miner resorts to trusting
 incoming blocks, at least temporarily. It also hurts security to some degree because a
 portion of the network's computing power is potentially building on an
 invalid blockchain, instead of building on the strongest and valid chain.
 
 The second bullet point has a negative effect on
-<<minerdecentralization,miner decentralization>>, because usually
+miner decentralization, see <<minerdecentralization>>, because usually
 the pools with the best network connectivity and
-bandwidth are also the largest and thus most centralized.
+bandwidth are also the largest, causing miners to gravitate towards a few big pools.
 
 ==== Horizontal scaling
 
@@ -365,7 +365,7 @@ advanced scripting that would not be supported by the Bitcoin blockchain.
 We won't detail how specific protocols work, but as
 you can see in <<fig-scaling-layer>>, the blockchain is rarely used
 during the protocol's life cycle. All the juicy action happens
-_off-chain_. We've seen how this can be a win for <<privacy,privacy>>
+_off-chain_. We've seen how this can be a win for privacy
 if done right, but it can also be an advantage for scalability.
 
 In a https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/[Reddit post] titled "`A trip to the moon requires a rocket with

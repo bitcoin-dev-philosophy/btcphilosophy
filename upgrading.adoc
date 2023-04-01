@@ -178,7 +178,7 @@ gave weight to the proposal.
 
 The UASF proposal is, in a nutshell, a "flag day" on which nodes
 start enforcing specific new rules. That way, miners don't have to
-make a collective effort to coordinate the upgrade, and can even trigger activation
+make a collective effort to coordinate the upgrade, but _can_ trigger activation
 earlier than the flag day if enough blocks signal support.
 
 [quote, Shaolinfry, Bitcoin-dev mailing list (2017)]
@@ -288,7 +288,7 @@ ____
 [[taproot-deployment]]
 ==== Taproot upgrade - Speedy Trial
 
-When Taproot was ready for deployment [comm: add time coordinates], meaning all the technical details
+When Taproot was ready for deployment in October 2020, meaning all the technical details
 around its consensus rules had been implemented and had reached broad
 approval within the community, discussions on how to actually deploy it
 started to heat up. These discussions had been pretty low key up until
@@ -301,6 +301,7 @@ them on the Bitcoin Wiki]. In his article he explained some properties
 of BIP8, which at that time had some recent changes made in order to make it
 more flexible.
 
+[quote, David Harding, Taproot Activation Proposals on the Bitcoin Wiki (2020)]
 ____
 At the time this document is being written,
 https://github.com/bitcoin/bips/blob/master/bip-0008.mediawiki[BIP8]
