@@ -110,6 +110,7 @@ general approaches to scaling, some of which don't suffer from the
 throughput-decentralization trade-off mentioned in the previous
 section.
 
+[[verticalscaling]]
 ==== Vertical scaling
 
 Vertical scaling is the process of increasing the computing resources
@@ -123,11 +124,11 @@ block size limit. This would require some full nodes to upgrade their
 hardware to keep up with the increasing computational
 demands. The downside is that it happens at the cost of
 centralization, as was discussed in the previous section and more
-in depth in <<_full_node_decentralization>>.
+in depth in <<fullnodedecentralization>>.
 
 Besides the negative effects on full node decentralization, vertical
 scaling might also negatively impact Bitcoin's
-<<_miner_decentralization,mining decentralization>> and security in
+<<minerdecentralization,mining decentralization>> and security in
 less obvious ways. Let's have a look at how miners "`should`"
 operate. Say a miner mines a block at height 7 and publishes that
 block on the Bitcoin network. It will take some time for this block to
@@ -164,14 +165,14 @@ scenario. The measures they can take include:
 * Connecting to a mining pool with greater bandwidth and connectivity.
 
 Validationless mining further undermines
-<<_full_node_decentralization, full node decentralization>>,
+<<fullnodedecentralization, full node decentralization>>,
 as the miner defers trusting
 incoming blocks, at least temporarily. It also hurts security to some degree because a
 portion of the network's computing power is potentially building on an
 invalid blockchain, instead of building on the strongest and valid chain.
 
 The second bullet point has a negative effect on
-<<_miner_decentralization,miner decentralization>>, because usually
+<<minerdecentralization,miner decentralization>>, because usually
 the pools with the best network connectivity and
 bandwidth are also the largest and thus most centralized.
 
@@ -329,6 +330,7 @@ payee will know that all the batched outputs are from you to other payees
 reveal that the outputs you consolidate belong to the same wallet. So
 you may have to make a trade-off between cost efficiency and privacy.
 
+[[layeredscaling]]
 ==== Layered scaling
 
 The most impactful approach to scaling is probably layering. The

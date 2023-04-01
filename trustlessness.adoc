@@ -119,7 +119,7 @@ you consider the probability of a chain rewrite small enough to be
 acceptable.
 
 The incentives for using Bitcoin in a trustless way align with the
-system's need for <<_full_node_decentralization,full node
+system's need for <<fullnodedecentralization,full node
 decentralization>>. The more people who use their own full nodes, the
 more full node decentralization, and thus the stronger Bitcoin stands
 against malicious changes to the protocol. But unfortunately, as

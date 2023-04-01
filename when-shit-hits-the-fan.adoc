@@ -48,7 +48,7 @@ ____
 
 This means that if you find a security issue, you should
 report this to the team responsible for the system. But what does this
-mean in the context of Bitcoin? As noted in <<_software_maintenance,
+mean in the context of Bitcoin? As noted in <<softwaremaintenance,
 the Open source chapter>>, no one controls Bitcoin, but there's currently a
 focal point for Bitcoin development, namely the
 https://github.com/bitcoin/bitcoin[Bitcoin Core Github

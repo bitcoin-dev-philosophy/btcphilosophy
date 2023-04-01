@@ -2,8 +2,8 @@ AD=asciidoctor -b html5 -v
 ADPDF=asciidoctor-pdf
 BASE_NAME=btcphilosophy
 MAINADOC=$(BASE_NAME).adoc
-ALLADOC := $(wildcard *.adoc)
 B=build
+ALLADOC := $(patsubst %,$(B)/%,$(wildcard *.adoc))
 ALLPNGS := $(patsubst %,$(B)/%,$(wildcard images/*.png))
 ALLJPGS := $(patsubst %,$(B)/%,$(wildcard images/*.jpg))
 ALLIMGS := $(ALLPNGS) $(ALLJPGS)
@@ -56,7 +56,7 @@ else
 	convert $< -resize 1024x1024\> $@
 endif
 
-$(CSS) $(SOURCESCSS): $(B)/%: %
+$(CSS) $(SOURCESCSS) $(ALLADOC): $(B)/%: %
 	@mkdir -p $(dir $@)
 	cp $< $@
 
