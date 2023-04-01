@@ -111,7 +111,7 @@ others to discover it.
 
 The thread that led to this email was discussing whether, when, and how
 to disclose vulnerabilities to altcoins and other implementations of
-Bitcoin. There is no clear answer here. "`Helping the good guys`"
+Bitcoin. There is no clear answers here. "`Helping the good guys`"
 seems like the sensible thing to do, but who decides who they are and
 where does one draw the line? Bryan Bishop
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014983.html[argued]
@@ -571,7 +571,7 @@ Without anyone knowing about the issue, it could have been resolved by
 the now widthdrawn BIP62, which was a proposal to reduce the
 possibilities of transaction malleability. Among the proposed changes
 in BIP62 were tightening of the consensus rules for the encoding of
-signatures, or "strict DER encoding". Pieter Wuille proposed some
+signatures, or "`strict DER encoding`". Pieter Wuille proposed some
 tweaks to the BIP in July 2014, that would have solved the issue:
 
 [quote, Pieter Wuille on Bitcoin-dev mailing list, Disclosure: consensus bug indirectly solved by BIP66 (2015)]
@@ -608,7 +608,7 @@ While for most applications it is generally acceptable to eagerly
 reject some signatures, Bitcoin is a consensus system where all
 participants must generally agree on the exact validity or
 invalidity of the input data.  In a sense, consistency is more
-important than "correctness".
+important than "`correctness`".
 
 ...
 
