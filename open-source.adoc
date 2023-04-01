@@ -69,6 +69,7 @@ In the upcoming sections we dive into
 some other interesting aspects of open source software in
 Bitcoin.
 
+[[softwaremaintenance]]
 === Software maintenance
 
 Bitcoin Core's source code is maintained in a Git repository hosted on
@@ -127,7 +128,7 @@ ____
 
 It should be noted that pull requests can take a very long time
 before being merged to the repository by maintainers, and that's usually due to a lack
-of review, which is often due to a <<_review,lack of _reviewers_>>.
+of review, which is often due to a <<review,lack of _reviewers_>>.
 
 Lombrozo also talks about the process that surrounds consensus changes, but that's a
 bit beyond the scope of this chapter. See <<upgrading>> for more information on how the Bitcoin protocol gets upgraded.
@@ -154,7 +155,7 @@ https://github.com/lightningnetwork/lnd[LND],
 https://github.com/ACINQ/eclair[Eclair], and
 https://github.com/lightningdevkit[Lightning Dev Kit].
 CoinJoin:: Multiple parties collaborate to combine their payments into
-a single transaction to make <<_blockchain_privacy,address
+a single transaction to make <<blockchainprivacy,address
 clustering>> harder. Various implementations exist.
 Sidechains:: This system can lock a coin on Bitcoin's blockchain in order to
 unlock it on some other blockchain. This allows for bitcoins to be
@@ -166,7 +167,7 @@ document] on Bitcoin's blockchain in a private way. You can then use
 that timestamp to prove that a document must have existed prior to a certain time.
 
 Without permissionless development, many of these projects would
-not have been possible. As stated in <<_neutrality>>,
+not have been possible. As stated in <<neutrality>>,
 if developers had to ask for permission to build protocols on top of
 Bitcoin, only the protocols allowed by the central developer granting committee 
 would be developed.
@@ -299,6 +300,7 @@ https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md[minimize its 
 eradicate all external dependencies, otherwise you'd have to write everything by yourself,
 from font rendering to implementation of system calls.
 
+[[review]]
 === Review
 
 This section is named "`Review`", rather than "`Code review`", because

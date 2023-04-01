@@ -26,6 +26,7 @@ validation of the blocks, i.e. the data that miners output, gets done at
 the edge of the network, ultimately by its users, and not by a few
 trusted authorities.
 
+[[minerdecentralization]]
 === Miner decentralization
 
 There had been attempts at creating digital currencies before Bitcoin,
@@ -150,6 +151,7 @@ that censorship becomes a thing. Then most, if not all, of its value
 proposition is gone. This brings us to the next section on full node
 decentralization.
 
+[[fullnodedecentralization]]
 === Full node decentralization
 
 In the paragraphs above, we've mostly talked about miner decentralization and how
@@ -176,7 +178,7 @@ increasing the block size limit to allow for more transaction
 throughput.
 
 A powerful argument against increasing the block size is that it
-increases the cost of verification (see <<_vertical_scaling,the
+increases the cost of verification (see <<verticalscaling,the
 Scaling chapter>>). If verification cost rises, it will push some 
 users to stop running their full nodes. This, in turn, will lead to
 more people not being able to use the system in a
@@ -199,6 +201,7 @@ There you go. Bitcoin users should run their own full
 nodes to deter regulators and big corporations from trying to change
 the consensus rules.
 
+[[neutrality]]
 === Neutrality
 
 Bitcoin is neutral, or permissionless, as people like to call it. This
