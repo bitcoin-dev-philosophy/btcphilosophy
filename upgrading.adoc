@@ -176,7 +176,7 @@ coordinate upgrades. Due to this misunderstanding, miners might have also felt
 obliged to proclaim in public their views on a certain soft fork, as if that
 gave weight to the proposal.
 
-The UASF proposal is, in a nutshell, a "flag day" on which nodes
+The UASF proposal is, in a nutshell, a "`flag day`" on which nodes
 start enforcing specific new rules. That way, miners don't have to
 make a collective effort to coordinate the upgrade, but _can_ trigger activation
 earlier than the flag day if enough blocks signal support.
