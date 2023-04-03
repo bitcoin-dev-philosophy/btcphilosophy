@@ -4019,26 +4019,26 @@ Bitcoin.</p>
 <div class="paragraph">
 <p>Bitcoin is built by people. People write the software, and people then
 run this software. When a security vulnerability or a severe bug is
-discovered (is there really a distinction between the two?), it&#8217;s
-always discovered by people, flesh and blood. This chapter will
-contemplate what people do, should, and shouldn&#8217;t do when shit hits
-the fan. The first section explains the term <em>responsible disclosure</em>,
-how a person that discovers a vulnerability can act responsibly to
-help minimize the damage from it. The rest of the chapter will take
-you on a tour through some of the more severe vulnerabilities
-discovered through the years, and how they were handled by developers,
-miners and users. Things were not as rigorous in Bitcoin&#8217;s early
+discovered - is there really a distinction between the two? - it&#8217;s
+always discovered by people, flesh and blood. This chapter
+contemplates what people do, should, and shouldn&#8217;t do when shit hits
+the fan. The first section explains the term <em>responsible disclosure</em>, which refers to
+how someone who discovers a vulnerability can act responsibly to
+help minimize the damage from it. The rest of the chapter takes
+you on a tour through some of the most severe vulnerabilities
+discovered over the years, and how they were handled by developers,
+miners, and users. Things were not as rigorous in Bitcoin&#8217;s early
 childhood as they are today.</p>
 </div>
 <div class="sect2">
 <h3 id="responsible-disclosure"><a class="anchor" href="#responsible-disclosure"></a>9.1. Responsible disclosure</h3>
 <div class="paragraph">
-<p>Imagine that you discover a bug in Bitcoin Core that lets anyone
-remotely shut down a Bitcoin Core node using some specially crafted
-network messages. Imagine also that you are not malicious and would
-like this issue to remain unexploited. What do you do? If you remain
-silent about it, sooner or later someone else will probably discover
-this issue, and you can&#8217;t be sure that person isn&#8217;t malicious.</p>
+<p>Imagine you discover a bug in Bitcoin Core, a bug that allows anyone to
+remotely shut down a Bitcoin Core node by using some specially crafted
+network messages. Imagine also you are not malicious and
+would like this issue to remain unexploited. What do you do? If you
+remain silent about it, someone else will probably discover the issue,
+and you can&#8217;t be sure that person won&#8217;t be malicious.</p>
 </div>
 <div class="paragraph">
 <p>When a security issue is discovered, the person discovering it should
@@ -4071,20 +4071,20 @@ a few days and several months.</p>
 <div class="paragraph">
 <p>This means that if you find a security issue, you should
 report this to the team responsible for the system. But what does this
-look like in the context of Bitcoin? As noted in <a href="#_software_maintenance">the Open source chapter</a>, no one controls Bitcoin, but there&#8217;s a
-focal point for Bitcoin development, currently the
+mean in the context of Bitcoin? As noted in <a href="#_software_maintenance">the Open source chapter</a>, no one controls Bitcoin, but there&#8217;s currently a
+focal point for Bitcoin development, namely the
 <a href="https://github.com/bitcoin/bitcoin">Bitcoin Core Github
-repository</a>. The maintainers of this repository are responsible for
+repository</a>. The maintainers of said repository are responsible for
 the code in it, but they&#8217;re not responsible for the system as a
-whole-- no one is. Nevertheless, the general best practice is to send
+whole - no one is. Nevertheless, the general best practice is to send
 an email to <a href="mailto:security@bitcoincore.org">security@bitcoincore.org</a>.</p>
 </div>
 <div class="paragraph">
-<p>In
-<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/015002.html">an
-email thread</a> titled "Responsible disclosure of bugs", Anthony Towns
-tries to summarize what he perceived to be current best practices. He
-had collected input from several sources and different people.</p>
+<p>In an
+<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/015002.html">email
+thread</a> titled &#8220;Responsible disclosure of bugs&#8221; from 2017, Anthony Towns
+tried to summarize what he perceived to be the current best practices. He
+had collected inputs from several sources and different people to inform his view on the subject.</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -4161,28 +4161,28 @@ encouraged and requested to follow the same policy. [1] [6]</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Anthony Towns in thread "Responsible disclosure of bugs"<br>
-<cite>Bitcoin-dev email list</cite>
+&#8212; Anthony Towns in thread "`Responsible disclosure of bugs`"<br>
+<cite>Bitcoin-dev email list (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>This list displays how careful one must be when publishing patches for
-Bitcoin, because the patch itself might give away the
-vulnerability. The fourth bullet is particularly interesting and
-explains how to test if a patch is disguised well enough. If a few
-really experienced developers can&#8217;t spot the vulnerability, even
-knowing that the patch fixes one, it will probably be hard for
+Bitcoin, since the patch itself might give away the
+vulnerability. The fourth bullet is particularly interesting as it
+explains how to test whether a patch has been disguised well enough. Indeed, if a few
+really experienced developers can&#8217;t spot the vulnerability even
+knowing that the patch fixes one, it will probably be really hard for
 others to discover it.</p>
 </div>
 <div class="paragraph">
-<p>The thread that led up to this email were discussing if, when, and how
-to disclose vulnerabilities to alt-coins and other implementations of
-Bitcoin. There are no clear answers here. "Helping the good guys"
-seems like a sensible thing to do, but who decides who they are and
-where do you draw the line? Bryan Bishop
-<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014983.html">argued
-that</a> helping altcoins and even scamcoins defend against security
-exploits is a moral duty.</p>
+<p>The thread that led to this email was discussing whether, when, and how
+to disclose vulnerabilities to altcoins and other implementations of
+Bitcoin. There is no clear answer here. &#8220;Helping the good guys&#8221;
+seems like the sensible thing to do, but who decides who they are and
+where does one draw the line? Bryan Bishop
+<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014983.html">argued</a>
+that helping altcoins and even scamcoins defend themselves against security
+exploits was a moral duty.</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -4198,14 +4198,14 @@ originally described.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Bryan Bishop in thread "Responsible disclosure of bugs"<br>
-<cite>Bitcoin-dev email list</cite>
+&#8212; Bryan Bishop in thread "`Responsible disclosure of bugs`"<br>
+<cite>Bitcoin-dev email list (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>Also leading up to Town&#8217;s email above was
-<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014977.html">a
-post from Gregory Maxwell</a>, where he argued that security
+<p>Also leading up to Town&#8217;s email above was a
+<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014977.html">post</a>
+by Gregory Maxwell, in which he argued that security
 vulnerabilities could be more severe than they appear.</p>
 </div>
 <div class="quoteblock">
@@ -4227,50 +4227,50 @@ It&#8217;s prudent to treat things as more severe than you know them to be.</p>
 </div>
 </blockquote>
 <div class="attribution">
-&#8212; Gregory Maxwell in thread "Responsible disclosure of bugs"<br>
-<cite>Bitcoin-dev email list</cite>
+&#8212; Gregory Maxwell in thread "`Responsible disclosure of bugs`"<br>
+<cite>Bitcoin-dev email list (2017)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>So even if a vulnerability seems hard to exploit, it might be best to
-assume it&#8217;s easily exploited and that you just haven&#8217;t figured out
+<p>So, even if a vulnerability seems hard to exploit, it might be best to
+assume that it&#8217;s easily exploitable and you just haven&#8217;t figured out
 how yet.</p>
 </div>
 <div class="paragraph">
-<p>He also mentions how "it&#8217;s somewhat incorrect to call this thread
+<p>He also mentions how &#8220;it&#8217;s somewhat incorrect to call this thread
 anything about disclosure, this thread is not about
 disclosure. Disclosure is when you tell the vendor.  This thread is
 about publication and that has very different
 implications. Publication is when you&#8217;re sure you&#8217;ve told the
-prospective attackers." This last observation of the distinction
+prospective attackers&#8221;. This last observation concerning the distinction
 between disclosure and publication is an important one. The easy part
-is responsible disclosure; the hard part is to sensibly publish.</p>
+is responsible disclosure; the hard part is sensible publishing.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_traumatic_childhood"><a class="anchor" href="#_traumatic_childhood"></a>9.2. Traumatic childhood</h3>
 <div class="paragraph">
 <p>Bitcoin started out as a one-man (at least that&#8217;s what its creator&#8217;s
-pseudonym suggests) project, and bitcoin had little to no value. As
+pseudonym suggests) project, and bitcoin had initially little to no value. As
 such, vulnerabilities and bug fixes were not as rigorously handled as
 they are today.</p>
 </div>
 <div class="paragraph">
-<p>The Bitcoin wiki has
-<a href="https://en.bitcoin.it/wiki/Common_Vulnerabilities_and_Exposures">a list
+<p>The Bitcoin wiki has a
+<a href="https://en.bitcoin.it/wiki/Common_Vulnerabilities_and_Exposures">list
 of common vulnerabilities and exposures</a>
 (CVEs)
-that Bitcoin has gone through. This section is a little exposé of some
+that Bitcoin has gone through. This section constitutes a little exposé of some
 of the security issues and incidents from the early years of
-Bitcoin. We won&#8217;t cover them all, but we have selected a few that we
-find extra interesting.</p>
+Bitcoin. We won&#8217;t cover them all, but we selected a few that we
+find especially interesting.</p>
 </div>
 <div class="sect3">
 <h4 id="cve-2010-5141"><a class="anchor" href="#cve-2010-5141"></a>9.2.1. 2010-07-28: Spend anyone&#8217;s coins (CVE-2010-5141)</h4>
 <div class="paragraph">
-<p>On July 28 2010, a pseudonymous person by the name ArtForz discovered a
-bug in version 0.3.4 that would let anyone take the coins from
-anyone. ArtForz <em>responsibly</em> reported this to Satoshi Nakamoto and to
+<p>On July 28, 2010, a pseudonymous person by the name ArtForz discovered a
+bug in version 0.3.4 that would let anyone take coins from
+anyone else. ArtForz <em>responsibly</em> reported this to Satoshi Nakamoto and to
 another Bitcoin developer named Gavin Andresen.</p>
 </div>
 <div class="paragraph">
@@ -4278,11 +4278,11 @@ another Bitcoin developer named Gavin Andresen.</p>
 the program execution, so if the scriptPubKey was <code>&lt;pubkey&gt;
 OP_CHECKSIG</code> and scriptSig was <code>OP_1 OP_RETURN</code>, the part of the
 program in the scriptPubKey would never execute. The only thing that
-would happen is that <code>1</code> is put on the stack and then <code>OP_RETURN</code>
+would happen would be for <code>1</code> to be put on the stack and then <code>OP_RETURN</code>
 would cause the program to exit. Any non-zero value on top of the
 stack after the program has executed means that the spending condition
-is fulfilled. And since the top stack element <code>1</code> is non-zero, the
-spending is OK.</p>
+is fulfilled. Since the top stack element <code>1</code> is non-zero, the
+spending would be OK.</p>
 </div>
 <div class="paragraph">
 <p>This was the code for handling of <code>OP_RETURN</code>:</p>
@@ -4297,10 +4297,10 @@ spending is OK.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The effect of <code>pc = pend;</code> is that the rest of the program is skipped,
-which means that any locking script in scriptPubKey was ignored. The
-fix was to change the meaning of <code>OP_RETURN</code> so that it instead
-immediately fails.</p>
+<p>The effect of <code>pc = pend;</code> was for the rest of the program to get skipped,
+meaning that any locking script in scriptPubKey would be ignored. The
+fix consisted in changing the meaning of <code>OP_RETURN</code> so that it
+immediately failed, instead.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4313,7 +4313,7 @@ immediately fails.</p>
 </div>
 <div class="paragraph">
 <p>Satoshi made this change locally and built an executable binary with
-version 0.3.5 from it and posted on Bitcointalk forum &#8220;*** ALERT ***
+version 0.3.5 from it. Then he posted on Bitcointalk forum &#8220;*** ALERT ***
 Upgrade to 0.3.5 ASAP&#8221;, urging users to install this binary version
 of his, without presenting the source code for it.</p>
 </div>
@@ -4325,15 +4325,15 @@ of his, without presenting the source code for it.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Satoshi Nakamoto<br>
-<cite>Bitcointalk forum</cite>
+<cite>Bitcointalk forum (2010)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>This message was later edited, and is no longer available in its full
+<p>The original message was later edited and is no longer available in its full
 form. The above snippet is from a
 <a href="https://bitcointalk.org/index.php?topic=626.msg6458#msg6458">quoting
-answer</a>. Some users tried the binary, but ran into issues with it. And
-soon <a href="https://bitcointalk.org/index.php?topic=626.msg6469#msg6469">Satoshi wrote</a>:</p>
+answer</a>. Some users tried Satoshi&#8217;s binary, but ran into issues with it. Shortly
+after, <a href="https://bitcointalk.org/index.php?topic=626.msg6469#msg6469">Satoshi wrote</a>:</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -4344,7 +4344,7 @@ it now.  You can shut down your node in the meantime.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Satoshi Nakamoto<br>
-<cite>Bitcointalk forum</cite>
+<cite>Bitcointalk forum (2010)</cite>
 </div>
 </div>
 <div class="paragraph">
@@ -4362,11 +4362,11 @@ linux.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Satoshi Nakamoto<br>
-<cite>Bitcointalk forum</cite>
+<cite>Bitcointalk forum (2010)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>At this point he also seem to have updated the original post to
+<p>At this point he also seemed to have updated the original post to
 mention 0.3.6 instead of 0.3.5:</p>
 </div>
 <div class="quoteblock">
@@ -4393,29 +4393,29 @@ Total generating speedup 2.4x faster.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Satoshi Nakamoto<br>
-<cite>Bitcointalk forum</cite>
+<cite>Bitcointalk forum (2010)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>Note the difference in the characterization of the problem from the
-first message: "could be displayed as accepted" vs "could be
-accepted". Maybe Satoshi downplayed the severity in his communication
-to not draw too much attention to the actual issue. Anyhow, people
-upgraded, and it seemed to be working as expected. This particular
+first message: &#8220;could be displayed as accepted&#8221; vs &#8220;could be
+accepted&#8221;. Maybe Satoshi downplayed the severity of the bug in his communication
+so as not to draw too much attention to the actual issue. Anyhow, people
+upgraded to 0.3.6 and it worked as expected. This particular
 issue was resolved, amazingly, with no bitcoin losses.</p>
 </div>
 <div class="paragraph">
-<p>The message also describes some performance optimization for
+<p>Satoshi&#8217;s message also described some performance optimization for
 mining. It&#8217;s unclear why that was included in a critical security fix,
-but it might have been included to obfuscate the issue. However, it
+it&#8217;s possible that the purpose was to obfuscate the real issue. However, it
 seems more likely that he just released whatever was on the head of
 the development branch of the Subversion repository, with the security fix
-added.</p>
+added to it.</p>
 </div>
 <div class="paragraph">
 <p>At that time, there weren&#8217;t nearly as many users as there are today,
-and bitcoin&#8217;s value was close to zero. If this bug response would
-have played out today, it would be considered a complete shit-show for
+and bitcoin&#8217;s value was close to zero. If this bug response was
+played out today, it would be considered a complete shit-show for
 multiple reasons:</p>
 </div>
 <div class="ulist">
@@ -4435,7 +4435,7 @@ patch or code was provided, maybe as a measure to obfuscate the issue.</p>
 <div class="paragraph">
 <p>Another debatable thing is whether it&#8217;s good or bad that
 users were asked to shut down their nodes. This wouldn&#8217;t be doable
-today, but at that time, lots of users were actively following the
+today, but at that time lots of users were actively following the
 forums for updates and were usually on top of things. Given that it
 was possible to do this, it might have been a sensible thing to do.</p>
 </div>
@@ -4443,7 +4443,7 @@ was possible to do this, it might have been a sensible thing to do.</p>
 <div class="sect3">
 <h4 id="combined-output-overflow"><a class="anchor" href="#combined-output-overflow"></a>9.2.2. 2010-08-15 Combined output overflow (CVE-2010-5139)</h4>
 <div class="paragraph">
-<p>Mid August 2010, Bitcointalk forum user jgarzik, Jeff Garzik,
+<p>In mid-August 2010, Bitcointalk forum user jgarzik, a.k.a. Jeff Garzik,
 <a href="https://bitcointalk.org/index.php?topic=822.msg9474#msg9474">discovered
 that</a> a certain transaction at block height 74638 had two outputs of
 unusually high value:</p>
@@ -4475,24 +4475,24 @@ unusually high value:</p>
 </blockquote>
 <div class="attribution">
 &#8212; Jeff Garzik<br>
-<cite>Bitcointalk forum</cite>
+<cite>Bitcointalk forum (2010)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>Apparently, the two int64 (not uint64 as Garzik pondered) outputs' sum
-would overflow to a negative value -0.00997538 BTC. Whatever the sum
-of the inputs, the "sum" of the outputs will be smaller, making
+<p>Presumably, there was a bug causing two int64 (not uint64, as Garzik supposed) outputs' sum
+to overflow to a negative value -0.00997538 BTC. Whatever the sum
+of the inputs, the &#8220;sum&#8221; of the outputs would be smaller, making
 this transaction OK according to the code at the time.</p>
 </div>
 <div class="paragraph">
-<p>An unfortunate outcome of this was that about 2x92 billion bitcoin
-were created, which severely diluted the money supply of about 3.7
+<p>In this case, the bug had been disclosed and published through an actual exploit. An unfortunate outcome of this was that about 2x92 billion bitcoin
+had been created, which severely diluted the money supply of around 3.7
 million coins that existed at that time.</p>
 </div>
 <div class="paragraph">
 <p>In a related thread,
 <a href="https://bitcointalk.org/index.php?topic=823.msg9531#msg9531">Satoshi
-posted</a> that he&#8217;d appreciate it if people stopped mining (or <em>generating</em>
+posted</a> that he&#8217;d appreciate it if people stopped mining (or <em>generating</em>,
 as they called it back then).</p>
 </div>
 <div class="quoteblock">
@@ -4510,14 +4510,14 @@ the patch for this.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Satoshi Nakamoto<br>
-<cite>Bitcointalk forum</cite>
+<cite>Bitcointalk forum (2010)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>His plan was to make a soft fork to make transactions like the one
-discussed here invalid, and thus invalidate blocks (especially block
-74638) that contain such transactions. Less than an hour later, he had
-committed <a href="https://sourceforge.net/p/bitcoin/code/132/">a patch in
+discussed here invalid, thus invalidating the blocks (especially block
+74638) that contained such transactions. Less than an hour later, he
+committed a <a href="https://sourceforge.net/p/bitcoin/code/132/">patch in
 revision 132</a> of the Subversion repository and
 <a href="https://bitcointalk.org/index.php?topic=823.msg9548#msg9548">posted to
 the forum</a> describing what he thought users should do:</p>
@@ -4545,31 +4545,30 @@ everyone is downloading the whole block index at once.</p>
 </blockquote>
 </div>
 <div class="paragraph">
-<p>He wanted people to download block data from a specific user,
+<p>He wanted people to download block data from a specific user, namely
 knightmb, who had published his blockchain as it appeared on his disk,
 the files blkXXXX.dat and blkindex.dat. The reason for downloading the
 blockchain data this way, as opposed to synchronizing from scratch, was
-said to reduce network bandwidth bottlenecks.</p>
+to reduce network bandwidth bottlenecks.</p>
 </div>
 <div class="paragraph">
-<p>There was a big caveat with this: The data users would download from
-knightmb <a href="https://bitcoin.stackexchange.com/a/113682/69518">wasn&#8217;t
+<p>There was a big caveat with this: the data users would download from
+knightmb <a href="https://bitcoin.stackexchange.com/a/113682/69518">weren&#8217;t
 verified by the Bitcoin software</a> at startup. The blkindex.dat file
 contained the UTXO set, and the software would accept any data therein
 as if it had already verified it. knightmb could have manipulated the
-data to give himself some bitcoins.</p>
+data to give himself or anyone else some bitcoins.</p>
 </div>
 <div class="paragraph">
 <p>Again, people seemed to go along with this, and the reversal of the
-invalid block and its successors was successful. The miners started
+invalid block and its successors was successful. Miners started
 working on a new successor to block
 <a href="https://mempool.space/block/0000000000606865e679308edf079991764d88e8122ca9250aef5386962b6e84">74637</a>
-and according to the block&#8217;s timestamp, a successor appeared on August
-15 at 23:53 UTC, about 6 hours after the issue was discovered. At
-08:10 on August 16 around block 74689, it seems the new chain had
-overtaken the old chain, and all non-upgraded nodes reorged to follow
-the new chain. This is the deepest reorg, 52 blocks, in Bitcoin&#8217;s
-history.</p>
+and, according to the block&#8217;s timestamp, a successor appeared at 23:53
+UTC, about 6 hours after the issue was discovered. At 08:10 the following day, on August
+16, around block 74689, the new chain had overtaken the old
+chain, therefore all non-upgraded nodes reorged to follow the new
+chain. This is the deepest reorg - 52 blocks - in Bitcoin&#8217;s history.</p>
 </div>
 <div class="paragraph">
 <p>Compared to the OP_RETURN issue, this issue was handled in a somewhat
@@ -4589,21 +4588,21 @@ cleaner way:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Users were asked to stop mining during this issue too. You could argue
-if this is a good idea or not, but imagine you&#8217;re a miner and you&#8217;re
+<p>Users were asked to stop mining during this issue as well. We can discuss whether
+this is a good idea or not, but imagine you&#8217;re a miner and you&#8217;re
 convinced that any blocks on top of the bad block will eventually get
-wiped out in a deep reorg, why would you waste resources on mining
+wiped out in a deep reorg: why would you waste resources on mining
 doomed blocks?</p>
 </div>
 <div class="paragraph">
-<p>You might also think that it&#8217;s a bit fishy to, as suggested by
-Nakamoto, download the blockchain, including the UTXO set, from a
-random dude&#8217;s hard drive. If so, you&#8217;re right; that is fishy.</p>
+<p>You might also think that it&#8217;s a bit fishy to do as suggested by
+Nakamoto and download the blockchain, including the UTXO set, from a
+random dude&#8217;s hard drive. If so, you&#8217;re right: that is fishy. But, given the circumstances, this emergency response was a
+sensible one.</p>
 </div>
 <div class="paragraph">
-<p>Given the circumstances, this emergency response was a
-sensible one. There&#8217;s an important difference between this case and
-the previous OP_RETURN case: This issue was exploited in the wild, and
+<p>There&#8217;s an important difference between this case and
+the previous OP_RETURN case: this issue was exploited in the wild, and
 thus a fix could be made more straightforward. In the case of
 OP_RETURN, they had to obfuscate the fix and make public statements
 that didn&#8217;t directly reveal what the issue was.</p>
@@ -4615,7 +4614,7 @@ that didn&#8217;t directly reveal what the issue was.</p>
 <p>A very interesting an educationally valuable issue surfaced in March
 2013. It appeared that the blockchain had split (although the word
 &#8220;fork&#8221; is used in the quote below) after block 225429. The details
-of this incident was
+of this incident were
 <a href="https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki">reported
 in BIP50</a>. The summary says:</p>
 </div>
@@ -4641,14 +4640,14 @@ nodes to reorganise to the pre-0.8 chain.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Various Bitcoin Core developers<br>
-<cite>BIP50</cite>
+<cite>BIP50 (2013)</cite>
 </div>
 </div>
 <div class="paragraph">
 <p>The quick action that the mining pools BTCGuild and Slush took was
-imperative in this emergency. They could tip the majority hash power
-over to the pre-0.8 branch of the split and thus help restore
-consensus. This gave developers time to figure out a sustainable fix.</p>
+imperative in this emergency. They were ablt to tip the majority of the hash power
+over to the pre-0.8 branch of the split, and thus help restore
+consensus. This gave developers the time to figure out a sustainable fix.</p>
 </div>
 <div class="paragraph">
 <p>What&#8217;s also very interesting in this issue is that version 0.7.2 was
@@ -4668,7 +4667,7 @@ node to node).</p>
 </blockquote>
 <div class="attribution">
 &#8212; Various Bitcoin Core developers<br>
-<cite>BIP50</cite>
+<cite>BIP50 (2013)</cite>
 </div>
 </div>
 <div class="paragraph">
@@ -4681,7 +4680,7 @@ invalid. So if X+1 exceeds the limit but not X, then the two nodes
 will split the blockchain and disagree on which branch is valid.</p>
 </div>
 <div class="paragraph">
-<p>The solution chosen, apart from the immediate actions by two pools to
+<p>The solution chosen, apart from the immediate actions taken by the two pools to
 restore consensus, was to</p>
 </div>
 <div class="ulist">
@@ -4691,29 +4690,29 @@ restore consensus, was to</p>
 0.8.1</p>
 </li>
 <li>
-<p>patch old versions, 0.7.2 and some older ones, with the same new
-rules and increase the global lock limit.</p>
+<p>patch old versions (0.7.2 and some older ones) with the same new
+rules, and increase the global lock limit.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>Except for the increased global lock limit in the second bullet, these rules were
 implemented temporarily for a pre-determined amount of time. The plan was to
-remove these limits once most nodes upgraded.</p>
+remove these limits once most nodes had upgraded.</p>
 </div>
 <div class="paragraph">
 <p>This soft fork dramatically reduced the risk of consensus failure, and
 a few months later, on May 15, the temporary rules were deactivated in
-concert across the network. Note that this deactivation was, in effect,
+concert across the network. Note that this deactivation was in effect
 a hard fork, but it was not contentious. Furthermore, it was released
 along with the preceding soft fork, so people running the soft-forked
-software were well aware that a hard fork would follow it. Thus, the vast
-majority of nodes remained in consensus when the hard fork activated.
+software were well aware that a hard fork would follow it. Therefore, the vast
+majority of nodes remained in consensus when the hard fork got activated.
 Unfortunately, though, a few nodes that didn&#8217;t upgrade were lost in the process.</p>
 </div>
 <div class="paragraph">
-<p>One might wonder if this would have been doable today. The mining
-landscape is more complex today, and depending on the hash power on
+<p>One might wonder if this would be doable today. The mining
+landscape is more complex today, and, depending on the hash power on
 each side of the split, it might be hard to roll out a patch such as
 the one in BIP50 quickly enough. It&#8217;d probably be hard to convince
 miners on the &#8220;wrong&#8221; branch to let go of their block rewards.</p>
@@ -4744,7 +4743,7 @@ miners on the &#8220;wrong&#8221; branch to let go of their block rewards.</p>
 <p>BIP66 was a proposal to tighten up the rules for signature encodings
 in Bitcoin Script. The
 <a href="https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki#motivation">motivation</a>
-was to be able to parse signatures with other software or libraries
+was to be able to parse signatures with software or libraries other
 than OpenSSL and even recent versions of OpenSSL. OpenSSL is a library
 for general purpose cryptography that Bitcoin Core used at that time.</p>
 </div>
@@ -4756,9 +4755,9 @@ BIP66 also fixes a much more severe issue not mentioned in the BIP.</p>
 <h5 id="_the_vulnerability"><a class="anchor" href="#_the_vulnerability"></a>The vulnerability</h5>
 <div class="paragraph">
 <p>The full disclosure of this issue was published on July 28 2015 by
-Pieter Wuille in
-<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-July/009697.html">an
-email to the Bitcoin-dev mailing list</a>:</p>
+Pieter Wuille in an
+<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-July/009697.html">email
+to the Bitcoin-dev mailing list</a>:</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -4793,13 +4792,13 @@ between nodes:</p>
 </blockquote>
 <div class="attribution">
 &#8212; Pieter Wuille on Bitcoin-dev mailing list<br>
-<cite>Disclosure: consensus bug indirectly solved by BIP66</cite>
+<cite>Disclosure: consensus bug indirectly solved by BIP66 (2015)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>The email further lays out the details for how the issue got
-discovered and more exactly what caused it. At the end he submitted a
-timeline of the events, and we will replay some of the more important
+<p>The email further lays out the details about how the issue got
+discovered and more exactly what caused it. At the end, he submits a
+timeline of the events, and we will replay some of the most important
 ones here. Some of them have, as illustrated by
 <a href="#fig-bip66-timeline-1">Figure 13</a>, already been described.</p>
 </div>
@@ -4840,7 +4839,7 @@ vulnerability.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Pieter Wuille on Bitcoin-dev mailing list<br>
-<cite>Disclosure: consensus bug indirectly solved by BIP66</cite>
+<cite>Disclosure: consensus bug indirectly solved by BIP66 (2015)</cite>
 </div>
 </div>
 <div class="paragraph">
@@ -4855,11 +4854,11 @@ more complete way.</p>
 <h5 id="_after_discovery"><a class="anchor" href="#_after_discovery"></a>After discovery</h5>
 <div class="paragraph">
 <p>OpenSSL released new versions of their software with patches that, if
-they had been used in Bitcoin from the beginning, would also have
-solved the issue. However, using that new version of OpenSSL only in a
+used in Bitcoin since the beginning, would have solved the
+issue. However, using any new version of OpenSSL only in a
 new release of Bitcoin Core would make matters worse. Gregory Maxwell
-<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-January/007097.html">explains
-this</a> in another email thread in January 2015:</p>
+explains this in another
+<a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-January/007097.html">email thread</a> in January 2015:</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -4896,12 +4895,12 @@ strict DER encoding. This is a very clear example of the importance of
 <div class="paragraph">
 <p>These events might give you the impression that Gregory Maxwell knew
 about the vulnerability Pieter Wuille later published, but wanted to
-help sneak in a fix, dressed as a precaution measure, without drawing
+help sneak in a fix disguised as a precaution measure, without drawing
 too much attention to the actual problem. It might be so, but it&#8217;s
 purely speculation.</p>
 </div>
 <div class="paragraph">
-<p>Then, as Maxwell proposed, BIP66 was created as a subset of BIP62 that
+<p>Then, as proposed by Maxwell, BIP66 was created as a subset of BIP62 that
 specified only strict DER encoding. This BIP was apparently broadly
 accepted and deployed in July, albeit two blockchain splits ironically
 occurred due to <em>validationless mining</em>. These splits are discussed in
@@ -4913,8 +4912,8 @@ the next section.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>A key takeaway from this is that BIPs should be made more or less
-<em>atomic</em>; complete enough to provide something useful or solve a
+<p>A key takeaway from this is that BIPs should be more or less
+<em>atomic</em>, meaning that they should be complete enough to provide something useful or solve a
 specific problem, but small enough to allow for broad support among
 users. The more stuff you put into a BIP, the smaller the chance of
 acceptance.</p>
@@ -4923,9 +4922,9 @@ acceptance.</p>
 <div class="sect4">
 <h5 id="bip66splits"><a class="anchor" href="#bip66splits"></a>Splits due to validationless mining</h5>
 <div class="paragraph">
-<p>Unfortunately, the story of BIP66 didn&#8217;t end here. When BIP66 was
+<p>Unfortunately, the story of BIP66 didn&#8217;t end there. When BIP66 was
 activated, it turned out quite messy because some miners didn&#8217;t verify
-the blocks they tried to extend. This is called validationless mining,
+the blocks they were trying to extend. This is called validationless mining,
 or SPV-mining (as in Simplified Payment Verification). An alert
 message was sent out to Bitcoin nodes with a link to
 <a href="https://bitcoin.org/en/alert/2015-07-04-spv-mining">a web page
@@ -4944,20 +4943,20 @@ mining), and built new blocks on top of that invalid block.</p>
 </blockquote>
 <div class="attribution">
 &#8212; Bitcoin Core developers<br>
-<cite>Alert information on bitcoin.org</cite>
+<cite>Alert information on bitcoin.org (2015)</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>The alert page instructed people to wait for 30 more confirmations
-than they normally would if they used older versions of Bitcoin Core.</p>
+<p>The alert page instructed people to wait for 30 additional confirmations
+than they normally would in case they were using older versions of Bitcoin Core.</p>
 </div>
 <div class="paragraph">
-<p>The split mentioned above occurred on 2015-07-04 02:10 UTC after block
+<p>The split mentioned above occurred on 2015-07-04 at 02:10 UTC after block
 height
 <a href="https://mempool.space/block/000000000000000006a320d752b46b532ec0f3f815c5dae467aff5715a6e579e">363730</a>. This
-issue resolved at 03:50 the same day after 6 invalid blocks had been
-mined. Unfortunately the same issue happened again the day after on
-2015-07-05 21:50, but this time the invalid branch only lasted 3
+issue got resolved at 03:50 the same day, after 6 invalid blocks had been
+mined. Unfortunately, the same issue happened again the next day, i.e. on
+2015-07-05 at 21:50, but this time the invalid branch only lasted 3
 blocks.</p>
 </div>
 <div class="imageblock">
@@ -4966,7 +4965,7 @@ blocks.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The events that led up to BIP66, its deployment, and the aftermath is
+<p>The events that led up to BIP66, its deployment, and the aftermath are
 a very good case study for how careful Bitcoin developers have
 to be. A few key takeaways from BIP66:</p>
 </div>
@@ -5270,7 +5269,7 @@ command manually:</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-03-24 09:32:44 UTC
+Last updated 2023-04-03 06:20:26 UTC
 </div>
 </div>
 <script type="text/x-mathjax-config">
