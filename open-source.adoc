@@ -128,7 +128,7 @@ ____
 
 It should be noted that pull requests can take a very long time
 before being merged to the repository by maintainers, and that's usually due to a lack
-of review, which is often due to a <<review,lack of _reviewers_>>.
+of review, see <<review>>, which is often due to a lack of _reviewers_.
 
 Lombrozo also talks about the process that surrounds consensus changes, but that's a
 bit beyond the scope of this chapter. See <<upgrading>> for more information on how the Bitcoin protocol gets upgraded.
@@ -155,8 +155,8 @@ https://github.com/lightningnetwork/lnd[LND],
 https://github.com/ACINQ/eclair[Eclair], and
 https://github.com/lightningdevkit[Lightning Dev Kit].
 CoinJoin:: Multiple parties collaborate to combine their payments into
-a single transaction to make <<blockchainprivacy,address
-clustering>> harder. Various implementations exist.
+a single transaction to make address clustering
+(explained in <<blockchainprivacy>>) harder. Various implementations exist.
 Sidechains:: This system can lock a coin on Bitcoin's blockchain in order to
 unlock it on some other blockchain. This allows for bitcoins to be
 moved to some other blockchain, namely a sidechain, so as to use the features available
@@ -413,7 +413,7 @@ People sometimes get the impression that there's a lot of infighting
 and endless heated debates among Bitcoin developers, and that they are
 incapable of making decisions.
 
-For example, the <<taproot-deployment,Taproot deployment mechanism>>
+For example, the Taproot deployment mechanism, described in <<taproot-deployment>>,
 was discussed over a long period of time during which two "`camps`" formed. One
 wanted to "`fail`" the upgrade if miners hadn't overwhelmingly
 voted for the new rules after a certain moment, while the other
@@ -464,7 +464,7 @@ Most Bitcoin developers would argue that this openness brings about a good and
 healthy environment, and even that it is necessary for producing the best
 outcome.
 
-As hinted in <<sabotage,the Adversarial thinking chapter>>, the second
+As hinted in <<threats>>, the second
 bullet above can be very beneficial but comes with a downside. An attacker could use stalling
 tactics, like the ones outlined in the https://www.gutenberg.org/ebooks/26184[Simple
 Sabotage Field Manual], to distort the decision making and development
@@ -476,7 +476,7 @@ of money, security in this context is not taken lightly. This is why seasoned Bi
 developers might appear very hard-headed, which attitude is
 usually warranted. Indeed, a feature with a weak rationale behind it is not going to be
 accepted. The same would happen if it broke the
-<<donttrustverify,reproducible builds>>, added new dependencies, or
+reproducible builds (described in <<donttrustverify>>), added new dependencies, or
 if the code didn't follow Bitcoin's
 https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md[best
 practices].

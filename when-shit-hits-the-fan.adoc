@@ -294,7 +294,7 @@ multiple reasons:
 * Satoshi made a binary-only release of 0.3.5 containing the fix. No
 patch or code was provided, maybe as a measure to obfuscate the issue.
 * 0.3.5 https://bitcointalk.org/index.php?topic=626.msg6455#msg6455[didn't even work].
-* The fix in 0.3.6 was actually a <<historic-upgrades, hard fork>>.
+* The fix in 0.3.6 was actually a hard fork, as explained in <<historic-upgrades>>.
 
 Another debatable thing is whether it's good or bad that
 users were asked to shut down their nodes. This wouldn't be doable
@@ -623,7 +623,7 @@ ____
 He points out that using code that's not intended for use in consensus
 systems poses serious risks, and proposes that Bitcoin implements
 strict DER encoding. This is a very clear example of the importance of
-<<selectioncryptography,selection cryptography>>.
+good selection cryptography, a term we discussed in <<selectioncryptography>>.
 
 These events might give you the impression that Gregory Maxwell knew
 about the vulnerability Pieter Wuille later published, but wanted to

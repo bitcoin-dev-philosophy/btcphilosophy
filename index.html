@@ -100,7 +100,7 @@ MathJax.Hub.Config({
 <li><a href="#adversarialthinking">6. Adversarial thinking</a>
 <ul class="sectlevel2">
 <li><a href="#_not_only_for_bitcoin_experts">6.1. Not only for Bitcoin experts</a></li>
-<li><a href="#_threats">6.2. Threats</a></li>
+<li><a href="#threats">6.2. Threats</a></li>
 </ul>
 </li>
 <li><a href="#opensource">7. Open Source</a>
@@ -305,13 +305,13 @@ to participate in it; this miners' collective is a dynamic set of users. Anyone 
 join or leave as they wish. This property makes Bitcoin censorship-resistant.</p>
 </div>
 <div class="paragraph">
-<p>If Bitcoin were centralized, it would be vulnerable to those who wished
-to censor it, such as governments. It would meet the same fate as earlier
-attempts to create digital money. In the introduction of
+<p>If Bitcoin were centralized, it would be vulnerable to those who
+wished to censor it, such as governments. It would meet the same fate
+as earlier attempts to create digital money. In the introduction of
 <a href="https://www.blockstream.com/sidechains.pdf">a paper</a> titled &#8220;Enabling
-Blockchain Innovations with Pegged Sidechains&#8221;, the authors
-explain how early versions of digital money weren&#8217;t
-equipped for an <a href="#adversarialthinking">adversarial environment</a>:</p>
+Blockchain Innovations with Pegged Sidechains&#8221;, the authors explain
+how early versions of digital money weren&#8217;t equipped for an
+adversarial environment (see also <a href="#adversarialthinking">Chapter 6</a>):</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -467,7 +467,7 @@ aspect of decentralization, namely <em>full node decentralization</em>.</p>
 </div>
 <div class="paragraph">
 <p>The importance of full node decentralization is related to
-<a href="#trustlessness">trustlessness</a>. Suppose a user stops running their own
+trustlessness (see <a href="#trustlessness">Chapter 2</a>). Suppose a user stops running their own
 full node due to, for example, a prohibitive increase in the cost of
 operation. In that case, they have to interact with the Bitcoin network in some
 other way, possibly by using web wallets or lightweight wallets, which requires a certain level of trust in the providers of these services.
@@ -996,7 +996,7 @@ towards trustlessness. Also, as users gain more knowledge over time,
 they should be able to gradually remove trust from the equation.</p>
 </div>
 <div class="paragraph">
-<p>Some users <a href="#adversarialthinking">think adversarially</a> and verify
+<p>Some users think adversarially (see <a href="#adversarialthinking">Chapter 6</a>) and verify
 most aspects of the software they run. As a consequence, they reduce the need for trust to the bare minimum,
 as they only need to trust their computer hardware and operating system. In
 doing so, they also help people who don&#8217;t verify their hardware as thoroughly by
@@ -1217,7 +1217,7 @@ the ones you send as well as the ones you receive.</p>
 <p>Satoshi Nakamoto ponders over on-chain privacy in section 7 of his
 <a href="https://bitcoin.org/bitcoin.pdf">Bitcoin whitepaper</a>:</p>
 </div>
-<div id="satoshi-unique-addresses" class="quoteblock">
+<div class="quoteblock">
 <blockquote>
 <div class="paragraph">
 <p>As an additional firewall, a new key pair should be used for each
@@ -1421,7 +1421,7 @@ talk about either of them in isolation.</p>
 <div class="paragraph">
 <p>Several techniques have been developed to help people protecting themselves from privacy
 leaks. Among the most obvious ones is, as
-<a href="#satoshi-unique-addresses">noted by Nakamoto</a> above, using unique
+noted by Nakamoto&gt;&gt; in <a href="#blockchainprivacy">Section 3.4</a>, using unique
 addresses for every transaction, but several others exist. We&#8217;re not
 going to teach you how to become a privacy ninja. However, Bitcoin Q+A has
 a quick summary of privacy-enhancing technologies, somewhat ordered by
@@ -1493,7 +1493,7 @@ Bitcoin, as is the case with Lightning Network:</p>
 <div class="title">Figure 4. Layers on top of Bitcoin can add privacy.</div>
 </div>
 <div class="paragraph">
-<p>We noted in <a href="#trustlessness">Trustlessness</a> that the need for trust
+<p>We noted in <a href="#trustlessness">Chapter 2</a> that the need for trust
 can only increase with layers on top, but that doesn&#8217;t seem to be the
 case for privacy, which can be improved or made worse arbitrarily in
 layers on top. Why is that? Any layer on top of Bitcoin, as explained
@@ -2068,7 +2068,7 @@ gave weight to the proposal.</p>
 <div class="paragraph">
 <p>The UASF proposal is, in a nutshell, a "flag day" on which nodes
 start enforcing specific new rules. That way, miners don&#8217;t have to
-make a collective effort to coordinate the upgrade, and can even trigger activation
+make a collective effort to coordinate the upgrade, but <em>can</em> trigger activation
 earlier than the flag day if enough blocks signal support.</p>
 </div>
 <div class="quoteblock">
@@ -2229,7 +2229,7 @@ as Bitcoin continues to grow.</p>
 <div class="sect3">
 <h4 id="taproot-deployment"><a class="anchor" href="#taproot-deployment"></a>5.2.3. Taproot upgrade - Speedy Trial</h4>
 <div class="paragraph">
-<p>When Taproot was ready for deployment [comm: add time coordinates], meaning all the technical details
+<p>When Taproot was ready for deployment in October 2020, meaning all the technical details
 around its consensus rules had been implemented and had reached broad
 approval within the community, discussions on how to actually deploy it
 started to heat up. These discussions had been pretty low key up until
@@ -2281,6 +2281,10 @@ BIP8. This provides a common factor to use for categorizing many
 different proposals.</p>
 </div>
 </blockquote>
+<div class="attribution">
+&#8212; David Harding<br>
+<cite>Taproot Activation Proposals on the Bitcoin Wiki (2020)</cite>
+</div>
 </div>
 <div class="paragraph">
 <p>From this point forward the discussions became very heated, especially
@@ -2637,7 +2641,7 @@ best to use Bitcoin in a trustless manner.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_threats"><a class="anchor" href="#_threats"></a>6.2. Threats</h3>
+<h3 id="threats"><a class="anchor" href="#threats"></a>6.2. Threats</h3>
 <div class="paragraph">
 <p>There are a lot of known weaknesses in Bitcoin, and many of them are
 actively being exploited. To get a glimpse of that, have a look at the
@@ -2668,7 +2672,7 @@ as multiple entities.</p>
 <div class="paragraph">
 <p>As the quote also mentions, the Sybil attack is not effective on the
 Bitcoin network because there is no voting through nodes or other numerable entities, but rather
-<a href="#one-cpu-one-vote">through computing power</a>. Nonetheless, this flat
+through computing power (see <a href="#minerdecentralization">Section 1.1</a>). Nonetheless, this flat
 structure leaves the system susceptible to other attacks.
 The Bitcoin wiki page also outlines other possible attacks, such as information hiding
 (often referred to as <em>eclipse attack</em>), and the way Bitcoin Core implements
@@ -2943,7 +2947,7 @@ itself.</p>
 <div class="paragraph">
 <p>It should be noted that pull requests can take a very long time
 before being merged to the repository by maintainers, and that&#8217;s usually due to a lack
-of review, which is often due to a <a href="#review">lack of <em>reviewers</em></a>.</p>
+of review, see <a href="#review">Section 7.5</a>, which is often due to a lack of <em>reviewers</em>.</p>
 </div>
 <div class="paragraph">
 <p>Lombrozo also talks about the process that surrounds consensus changes, but that&#8217;s a
@@ -2981,8 +2985,8 @@ transactions. Various inter-operable implementations exist, such as
 <dt class="hdlist1">CoinJoin</dt>
 <dd>
 <p>Multiple parties collaborate to combine their payments into
-a single transaction to make <a href="#blockchainprivacy">address
-clustering</a> harder. Various implementations exist.</p>
+a single transaction to make address clustering
+(explained in <a href="#blockchainprivacy">Section 3.4</a>) harder. Various implementations exist.</p>
 </dd>
 <dt class="hdlist1">Sidechains</dt>
 <dd>
@@ -3357,7 +3361,7 @@ and endless heated debates among Bitcoin developers, and that they are
 incapable of making decisions.</p>
 </div>
 <div class="paragraph">
-<p>For example, the <a href="#taproot-deployment">Taproot deployment mechanism</a>
+<p>For example, the Taproot deployment mechanism, described in <a href="#taproot-deployment">Section 5.2.3</a>,
 was discussed over a long period of time during which two &#8220;camps&#8221; formed. One
 wanted to &#8220;fail&#8221; the upgrade if miners hadn&#8217;t overwhelmingly
 voted for the new rules after a certain moment, while the other
@@ -3426,7 +3430,7 @@ healthy environment, and even that it is necessary for producing the best
 outcome.</p>
 </div>
 <div class="paragraph">
-<p>As hinted in <a href="#sabotage">the Adversarial thinking chapter</a>, the second
+<p>As hinted in <a href="#threats">Section 6.2</a>, the second
 bullet above can be very beneficial but comes with a downside. An attacker could use stalling
 tactics, like the ones outlined in the <a href="https://www.gutenberg.org/ebooks/26184">Simple
 Sabotage Field Manual</a>, to distort the decision making and development
@@ -3439,7 +3443,7 @@ of money, security in this context is not taken lightly. This is why seasoned Bi
 developers might appear very hard-headed, which attitude is
 usually warranted. Indeed, a feature with a weak rationale behind it is not going to be
 accepted. The same would happen if it broke the
-<a href="#donttrustverify">reproducible builds</a>, added new dependencies, or
+reproducible builds (described in <a href="#donttrustverify">Section 2.1</a>), added new dependencies, or
 if the code didn&#8217;t follow Bitcoin&#8217;s
 <a href="https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md">best
 practices</a>.</p>
@@ -3626,7 +3630,7 @@ in depth in <a href="#fullnodedecentralization">Section 1.2</a>.</p>
 <div class="paragraph">
 <p>Besides the negative effects on full node decentralization, vertical
 scaling might also negatively impact Bitcoin&#8217;s
-<a href="#minerdecentralization">mining decentralization</a> and security in
+mining decentralization (explained in <a href="#minerdecentralization">Section 1.1</a>) and security in
 less obvious ways. Let&#8217;s have a look at how miners &#8220;should&#8221;
 operate. Say a miner mines a block at height 7 and publishes that
 block on the Bitcoin network. It will take some time for this block to
@@ -3671,7 +3675,7 @@ scenario. The measures they can take include:</p>
 <ul>
 <li>
 <p>Postponing the validation of an incoming block, also known as
-<a href="#bip66splits"><em>validationless mining</em></a>. Miners can just check the block
+<em>validationless mining</em>, further discussed in <a href="#bip66splits">Section 9.2.4.4</a>. Miners can just check the block
 header&#8217;s proof-of-work and mine on top of it, while in the meantime they download the
 full block and validate it.</p>
 </li>
@@ -3682,17 +3686,17 @@ full block and validate it.</p>
 </div>
 <div class="paragraph">
 <p>Validationless mining further undermines
-<a href="#fullnodedecentralization">full node decentralization</a>,
-as the miner defers trusting
+full node decentralization,
+as the miner resorts to trusting
 incoming blocks, at least temporarily. It also hurts security to some degree because a
 portion of the network&#8217;s computing power is potentially building on an
 invalid blockchain, instead of building on the strongest and valid chain.</p>
 </div>
 <div class="paragraph">
 <p>The second bullet point has a negative effect on
-<a href="#minerdecentralization">miner decentralization</a>, because usually
+miner decentralization, see <a href="#minerdecentralization">Section 1.1</a>, because usually
 the pools with the best network connectivity and
-bandwidth are also the largest and thus most centralized.</p>
+bandwidth are also the largest, causing miners to gravitate towards a few big pools.</p>
 </div>
 </div>
 <div class="sect3">
@@ -3938,7 +3942,7 @@ advanced scripting that would not be supported by the Bitcoin blockchain.</p>
 <p>We won&#8217;t detail how specific protocols work, but as
 you can see in <a href="#fig-scaling-layer">Figure 12</a>, the blockchain is rarely used
 during the protocol&#8217;s life cycle. All the juicy action happens
-<em>off-chain</em>. We&#8217;ve seen how this can be a win for <a href="#privacy">privacy</a>
+<em>off-chain</em>. We&#8217;ve seen how this can be a win for privacy
 if done right, but it can also be an advantage for scalability.</p>
 </div>
 <div class="paragraph">
@@ -4428,7 +4432,7 @@ patch or code was provided, maybe as a measure to obfuscate the issue.</p>
 <p>0.3.5 <a href="https://bitcointalk.org/index.php?topic=626.msg6455#msg6455">didn&#8217;t even work</a>.</p>
 </li>
 <li>
-<p>The fix in 0.3.6 was actually a <a href="#historic-upgrades">hard fork</a>.</p>
+<p>The fix in 0.3.6 was actually a hard fork, as explained in <a href="#historic-upgrades">Section 5.2</a>.</p>
 </li>
 </ul>
 </div>
@@ -4890,7 +4894,7 @@ utilizing a subset of BIP62.</p>
 <p>He points out that using code that&#8217;s not intended for use in consensus
 systems poses serious risks, and proposes that Bitcoin implements
 strict DER encoding. This is a very clear example of the importance of
-<a href="#selectioncryptography">selection cryptography</a>.</p>
+good selection cryptography, a term we discussed in <a href="#selectioncryptography">Section 7.4</a>.</p>
 </div>
 <div class="paragraph">
 <p>These events might give you the impression that Gregory Maxwell knew
@@ -5269,7 +5273,7 @@ command manually:</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-04-03 07:03:41 UTC
+Last updated 2023-04-03 07:15:46 UTC
 </div>
 </div>
 <script type="text/x-mathjax-config">
