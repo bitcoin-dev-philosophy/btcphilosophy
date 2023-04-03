@@ -1,0 +1,486 @@
+== Open Source
+
+image::opensource-banner.jpg[]
+
+Bitcoin is built using open source software. In this chapter we analyze
+what this means, how maintenance of the software works, and how open
+source software in Bitcoin allows for permissionless
+development. We dip our toes into _selection cryptography_, which
+deals with the selection and use of libraries in cryptographic
+systems. The chapter includes a section about Bitcoin's review process, followed by another one on the ways Bitcoin developers get funded. The last section talks
+about how Bitcoin's open source culture can look really weird from the
+outside, and why this perceived weirdness is really a sign of good
+health.
+
+Most Bitcoin softwares, and especially Bitcoin Core, is open
+source. This means that the source code of the software is made
+available to the general public for scrutiny, tinkering, modification,
+and redistribution. The definition of open source at
+https://opensource.org/osd includes, among others, the following
+important points:
+
+[quote, The Open Source Definition, Open Source Initiative website]
+____
+Free Redistribution:: The license shall not restrict any party from
+selling or giving away the software as a component of an aggregate
+software distribution containing programs from several different
+sources. The license shall not require a royalty or other fee for such
+sale.
+Source Code:: The program must include source code, and must allow
+distribution in source code as well as compiled form. Where some form
+of a product is not distributed with source code, there must be a
+well-publicized means of obtaining the source code for no more than a
+reasonable reproduction cost, preferably downloading via the Internet
+without charge. The source code must be the preferred form in which a
+programmer would modify the program. Deliberately obfuscated source
+code is not allowed. Intermediate forms such as the output of a
+preprocessor or translator are not allowed.
+Derived Works:: The license must allow modifications and derived
+works, and must allow them to be distributed under the same terms as
+the license of the original software.
+____
+
+Bitcoin Core adheres to this definition by being distributed under the
+https://github.com/bitcoin/bitcoin/blob/master/COPYING[MIT License]:
+
+----
+The MIT License (MIT)
+
+Copyright (c) 2009-2022 The Bitcoin Core developers
+Copyright (c) 2009-2022 Bitcoin Developers
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+----
+
+As noted in <<donttrustverify>>, it's important for users to be able
+to verify that the Bitcoin software they run "`works as
+advertised`". To do that, they must have unrestricted access to
+the source code of the software they wish to verify.
+
+In the upcoming sections we dive into
+some other interesting aspects of open source software in
+Bitcoin.
+
+[[softwaremaintenance]]
+=== Software maintenance
+
+Bitcoin Core's source code is maintained in a Git repository hosted on
+https://github.com/bitcoin/bitcoin[GitHub]. Anyone can clone that very
+repository without asking for any permission, and then inspect, build, or make
+changes to it locally. This means that there are many thousands of
+copies of the repository spread throughout the globe. These are
+all copies of the same repository, so what makes this specific GitHub
+Bitcoin Core repository so special? Technically it's not special at all,
+but socially it has become the focal point of Bitcoin development.
+
+Bitcoin and security expert Jameson Lopp
+explains this very
+well in a https://blog.lopp.net/who-controls-bitcoin-core-/[blog post] titled "`Who Controls Bitcoin Core?`":
+
+[quote, Jameson Lopp, Who Controls Bitcoin Core? (2018)]
+____
+Bitcoin Core is a focal point for development of the Bitcoin protocol
+rather than a point of command and control. If it ceased to exist for
+any reason, a new focal point would emerge — the technical
+communications platform upon which it’s based (currently the GitHub
+repository) is a matter of convenience rather than one of definition /
+project integrity. In fact, we have already seen Bitcoin’s focal point
+for development change platforms and even names!
+____
+
+He goes on to explain how Bitcoin Core's software is maintained and
+secured against malicious code changes. The general takeaway from this
+full article is summarized at its very end:
+
+[quote, Jameson Lopp, Who Controls Bitcoin Core? (2018)]
+____
+No one controls Bitcoin.
+
+No one controls the focal point for Bitcoin development.
+____
+
+Bitcoin Core developer Eric Lombrozo talks further about the
+development process in his
+https://medium.com/@elombrozo/the-bitcoin-core-merge-process-74687a09d81d[Medium
+post] titled "`The Bitcoin Core Merge Process`".
+
+[quote, Eric Lombrozo on Medium.com, The Bitcoin Core Merge Process (2017)]
+____
+Anyone can fork the code base repository and make arbitrary changes to
+their own repository. They can build a client from their own
+repository and run that instead if they want. They can also make
+binary builds for other people to run.
+
+If someone wants to merge a change they’ve made in their own
+repository into Bitcoin Core, they can submit a pull request. Once
+submitted, anyone can review the changes and comment on them
+regardless of whether or not they have commit access to Bitcoin Core
+itself.
+____
+
+It should be noted that pull requests can take a very long time
+before being merged to the repository by maintainers, and that's usually due to a lack
+of review, which is often due to a <<review,lack of _reviewers_>>.
+
+Lombrozo also talks about the process that surrounds consensus changes, but that's a
+bit beyond the scope of this chapter. See <<upgrading>> for more information on how the Bitcoin protocol gets upgraded.
+
+=== Permissionless development
+
+We've established that anyone can write code for Bitcoin Core
+without asking for any permission, but not necessarily have it merged to the main
+Git repository. This affects any modification, from changing color schemes of the graphical
+user interface, to the way peer-to-peer messages are formatted, and even
+consensus rules, i.e. the set of rules that define a valid
+blockchain.
+
+Probably equally important is that users are free
+to develop systems on top of Bitcoin, without asking for any
+permission. We've seen countless successful software projects that were
+built on top of Bitcoin, such as:
+
+Lightning Network:: A payment network that allows for fast payment of
+very small amounts. It requires very few on-chain Bitcoin
+transactions. Various inter-operable implementations exist, such as
+https://github.com/ElementsProject/lightning[Core Lightning],
+https://github.com/lightningnetwork/lnd[LND],
+https://github.com/ACINQ/eclair[Eclair], and
+https://github.com/lightningdevkit[Lightning Dev Kit].
+CoinJoin:: Multiple parties collaborate to combine their payments into
+a single transaction to make <<blockchainprivacy,address
+clustering>> harder. Various implementations exist.
+Sidechains:: This system can lock a coin on Bitcoin's blockchain in order to
+unlock it on some other blockchain. This allows for bitcoins to be
+moved to some other blockchain, namely a sidechain, so as to use the features available
+on that sidechain. Examples include
+https://github.com/ElementsProject/elements[Blockstream's Elements].
+OpenTimestamps:: It allows you to https://opentimestamps.org/[timestamp a
+document] on Bitcoin's blockchain in a private way. You can then use
+that timestamp to prove that a document must have existed prior to a certain time.
+
+Without permissionless development, many of these projects would
+not have been possible. As stated in <<neutrality>>,
+if developers had to ask for permission to build protocols on top of
+Bitcoin, only the protocols allowed by the central developer granting committee 
+would be developed.
+
+It is common for systems like the ones listed above to be themselves
+licensed as open source software, which in turn allows for people to
+contribute, re-use, or review their code without
+asking for any permission. Open source has become the gold standard of
+Bitcoin software licensing.
+
+=== Pseudonymous development
+
+Not having to ask for permission to develop Bitcoin software brings an
+interesting and important option to the table: you can write and
+publish code, in Bitcoin Core or any other open source project,
+without revealing your identity.
+
+Many developers choose this option by operating under a pseudonym
+and trying to keep it detached from their true identity. The reasons
+for doing this can vary from developer to developer. One pseudonymous
+user is ZmnSCPxj. Among other projects, he contributes to Bitcoin
+Core and Core Lightning, one of several implementations of Lightning
+Network. https://zmnscpxj.github.io/about.html[He writes] on his web page:
+
+[quote,ZmnSCPxj on his GitHub page]
+____
+I am ZmnSCPxj, a randomly-generated Internet person. My pronouns are
+he/him/his.
+
+I understand that humans instinctively desire to know my
+identity. However, I think my identity is largely immaterial, and
+prefer to be judged by my work.
+
+If you are wondering whether to donate or not, and wondering what my
+cost of living or my income is, please understand that properly
+speaking, you should donate to me based on the utility you find my
+articles and my work on Bitcoin and the Lightning Network.
+____
+
+In his case, the reason for using a pseudonym is to be judged on his
+merits and not on who the person or persons behind the
+pseudonym is or are. Interestingly, he revealed in an
+https://www.coindesk.com/markets/2020/06/29/many-bitcoin-developers-are-choosing-to-use-pseudonyms-for-good-reason/[article on
+CoinDesk] that
+the pseudonym was created for a different reason.
+
+[quote, Many Bitcoin Developers Are Choosing to Use Pseudonyms – For Good Reason on CoinDesk (2021)]
+____
+My initial reason [for using a pseudonym] was simply that I was
+concerned [about] making a massive mistake; thus ZmnSCPxj was
+originally intended to be a disposable pseudonym that could be
+abandoned in such a case. However it seems to have garnered a mostly
+positive reputation, so I have retained it
+____
+
+Using a pseudonym indeed allows you to speak more freely without putting
+your personal reputation at risk should you say something stupid or
+make some big mistake. As it turned out, his pseudonym got very
+reputable and in 2019
+https://twitter.com/spiralbtc/status/1204815615678177280[he even got a
+development grant], which is in itself a testament to Bitcoin's
+permissionless nature.
+
+Arguably, the most well-known pseudonym in Bitcoin is Satoshi
+Nakamoto. It's unclear why he chose to be pseudonymous, but
+with hindsight it was probably a good decision for multiple reasons:
+
+* As many people speculate that Nakamoto owns a lot of bitcoin, it's
+imperative for his financial and personal safety to keep his identity
+unknown.
+* Since his identity is unknown, there is no possibility of prosecuting anyone, which
+  gives various government authorities a hard time.
+* There is no authoritative person to look up to, making Bitcoin more
+  meritocratic and resilient against blackmailing.
+
+Notice that these points don't just hold true for Satoshi Nakamoto, but for
+anyone working in Bitcoin or holding significant amounts of the
+currency, to varying degrees.
+
+[[selectioncryptography]]
+=== Selection cryptography
+
+Open source developers often make use of open source libraries developed by
+other people. This is a natural and awesome part of any healthy
+ecosystem. But Bitcoin software deals with real money and, in light of this, developers need to be extra careful when choosing which third party libraries it should depend on.
+
+In a philosophical
+https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cryptography/[talk
+about cryptography] (you may find the video
+https://youtu.be/Gs9lJTRZCDc?t=2236[here]), Gregory Maxwell wants to
+redefine the term "`cryptography`" which he believes to be too narrow. He
+explains that fundamentally _information wants to be free_, and
+makes his definition of cryptography based on that:
+
+[quote, Gregory Maxwell, Bitcoin Selection Cryptography (2015)]
+____
+*Cryptography* is the art and science we use to fight the fundamental
+nature of information, to bend it to our political and moral will, and
+to direct it to human ends against all chance and efforts to
+oppose it.
+____
+
+He then introduces the term _selection cryptography_, referred to as the art
+of selecting cryptographic tools, and explains why it is an
+important part of cryptography. It revolves around how to select
+cryptographic libraries, tools, and practices, or as he says "`the
+cryptosystem of picking cryptosystems`".
+
+Using concrete examples, he shows how selection cryptography can
+easily go horribly wrong, and also proposes a list of questions
+you could ask yourself when practicing it.
+Below is a distilled version of that list:
+
+[start=1]
+. Is the software intended for your purposes?
+. Are the cryptographic considerations being taken seriously?
+. The review process... is there one?
+. What is the experience of the authors?
+. Is the software documented?
+. Is the software portable?
+. Is the software tested?
+. Does the software adopt best practices?
+
+While this is not the ultimate guide to success, it can be very helpful
+to go through these points when doing selection cryptography.
+
+Due to the issues mentioned above by Maxwell, Bitcoin Core tries
+really hard to
+https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md[minimize its exposure to third party libraries]. Of course, you can't
+eradicate all external dependencies, otherwise you'd have to write everything by yourself,
+from font rendering to implementation of system calls.
+
+[[review]]
+=== Review
+
+This section is named "`Review`", rather than "`Code review`", because
+Bitcoin's security relies heavily on review at multiple levels, not
+just source code. Moreover, different ideas require review at different
+levels: a consensus rule change would require a deeper review
+at more levels compared to a color scheme change or a typo fix.
+
+On its way to final adoption, an idea usually flows through 
+several phases of discussion and review. 
+Some of these phases are listed below:
+
+. An idea is posted on the Bitcoin-dev mailing list
+. The idea is formalized into a Bitcoin Improvement Proposal (BIP)
+. The BIP is implemented in a pull request (PR) to Bitcoin Core
+. Deployment mechanisms are discussed
+. Some competing deployment mechanisms are implemented in pull
+requests to Bitcoin Core
+. Pull requests are merged to the master branch
+. Users choose whether to use the software or not
+
+At each of these phases people with different points of view and
+backgrounds review the available information, be it the source code, a
+BIP, or just a loosely described idea. The phases are usually not performed
+in any strict top-down manner, indeed multiple phases can happen
+simultaneously, and sometimes you go back and forth between
+them. Different people may also provide feedback during different phases.
+
+One of the most prolific code reviewers on Bitcoin Core is Jon
+Atack. He wrote
+https://jonatack.github.io/articles/how-to-review-pull-requests-in-bitcoin-core[a
+blog post] about how to review pull requests in Bitcoin Core. He
+emphasizes that a good code reviewer focuses on how to best add value.
+
+[quote, Jon Atack, How to Review Pull Requests in Bitcoin Core (2020)]
+____
+As a newcomer, the goal is to try to add value, with friendliness and
+humility, while learning as much as possible.
+
+A good approach is to make it not about you, but rather "How can I
+best serve?"
+____
+
+He highlights the fact that review is a truly limiting factor in Bitcoin
+Core. Lots of good ideas get stuck in a limbo where no review occurs, pending. Notice that
+reviewing is not only beneficial to Bitcoin, but also a great way to learn about the software while providing
+value to it, at the same time. Atack's rule of thumb is to review 5-15 PRs before
+making any PR of your own. Again, your focus should be on how to best serve the community,
+not on how to get your own code merged. On top of this, he stresses the
+importance of doing review at the right level: is this the time for
+nits and typos, or does the developer need more of a conceptually-oriented 
+review?
+
+[quote, Jon Atack, How to Review Pull Requests in Bitcoin Core (2020)]
+____
+A useful first question when beginning a review can be, "What is most
+needed here at this time?" Answering this question requires experience
+and accumulated context, but it is a useful question in deciding how
+you can add the most value in the least time.
+____
+
+The second half of the post consists of some useful hands-on technical
+guidance on how to actually do the reviewing, and provides links to
+important documentation for further reading.
+
+Bitcoin Core developer and code reviewer Gloria Zhao has written
+https://github.com/glozow/bitcoin-notes/blob/master/review-checklist.md[an
+article] containing questions she usually asks herself during a
+review. She also states what she considers to be a good review.
+
+[quote, Gloria Zhao, Common PR Review Questions on GitHub (2022)]
+____
+I personally think a good review is one where I've asked myself a lot
+of pointed questions about the PR and been satisfied with the answers
+to them. +
+...[snip]... +
+Naturally, I start with conceptual questions, then approach-related
+questions, and then implementation questions. Generally, I personally
+think it's useless to leave C++ syntax-related comments on a draft PR,
+and would feel rude going back to "does this make sense" after the
+author has addressed 20+ of my code organization suggestions.
+____
+
+Her idea that a good review should focus on what's most needed at
+a specific point in time aligns well with Jon Atack's advice. She
+proposes a list of questions that you may ask yourself at various levels of the review process, but stresses
+that this list is not in any way exhaustive nor
+a straight-out recipe. The list is illustrated with real-life
+examples from GitHub.
+
+=== Funding
+
+Lots of people work with Bitcoin open source development, either for Bitcoin
+Core or for other projects. Many do it in their spare time without
+getting any compensation, but some developers are also getting paid to
+do it.
+
+Companies, individuals, and organizations who have an interest in
+Bitcoin's continued success can donate funds to developers, either
+directly or through organizations that in turn distribute the funds to
+individual developers. The website polylunar.com has compiled a
+https://polylunar.com/bitcoin-grants-tracker/[list of
+grants] given out by a broad range of individuals, organizations, and
+companies. There are also a number of Bitcoin-focused companies that
+hire skilled developers to let them work full-time on Bitcoin.
+
+=== Culture shock
+
+People sometimes get the impression that there's a lot of infighting
+and endless heated debates among Bitcoin developers, and that they are
+incapable of making decisions.
+
+For example, the <<taproot-deployment,Taproot deployment mechanism>>
+was discussed over a long period of time during which two "`camps`" formed. One
+wanted to "`fail`" the upgrade if miners hadn't overwhelmingly
+voted for the new rules after a certain moment, while the other
+wanted to enforce the rules after that moment no matter what. Michael Folkson
+summarizes the arguments from the two camps in an
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-February/018380.html[email]
+to the Bitcoin-dev mailing list.
+
+The debate went on seemingly forever, and it was really hard to
+see any consensus on this forming any time soon. This got people
+frustrated and as a result the heat intensified. Gregory Maxwell (as user nullc) worried
+https://www.reddit.com/r/Bitcoin/comments/hrlpnc/technical_taproot_why_activate/fyqbn8s/?utm_source=share&utm_medium=web2x&context=3[on
+Reddit] that the lengthy discussions would make the
+upgrade less safe.
+
+[quote, Gregory Maxwell on Reddit, Is Taproot development moving too fast or too slow?]
+____
+At this juncture, additional waiting isn't adding more review and
+certainty. Instead, additional delay is sapping inertia and
+potentially increasing risk somewhat as people start forgetting
+details, delaying work on downstream usage (like wallet support), and
+not investing as much additional review effort as they would be
+investing if they felt confident about the activation timeframe.
+____
+
+Eventually, this dispute got resolved thanks to a new proposal by
+David Harding and Russel O'Connor called Speedy Trial, which entailed a comparatively shorter signaling period for miners to
+lock in activation of Taproot, or fail fast. If they activated it
+during that window of time, then Taproot would be deployed approximately 6 months
+later. This upgrade is covered in more detail in <<upgrading>>.
+
+Someone who's not used to Bitcoin's development process would probably think that
+these heated debates look awfully bad and even toxic. There are at
+least two factors that make them look bad, in some people's eyes:
+
+* Compared to closed source companies, all debates happen in the open,
+  unedited. A software company like Google would never let its employees
+  debate proposed features in the open, indeed it would at most publish a
+  statement about the company's stance on the subject. This makes
+  companies look more harmonic compared to Bitcoin.
+* Since Bitcoin is permissionless, anyone is allowed to voice
+  their opinions. This is fundamentally different from a closed source
+  company that has a handful of people with an opinion, usually
+  like-minded people. The plethora of opinions expressed within Bitcoin is simply
+  staggering compared to, for example, PayPal.
+
+Most Bitcoin developers would argue that this openness brings about a good and
+healthy environment, and even that it is necessary for producing the best
+outcome.
+
+As hinted in <<sabotage,the Adversarial thinking chapter>>, the second
+bullet above can be very beneficial but comes with a downside. An attacker could use stalling
+tactics, like the ones outlined in the https://www.gutenberg.org/ebooks/26184[Simple
+Sabotage Field Manual], to distort the decision making and development
+process.
+
+Another thing worth mentioning is that, as noted in <<selectioncryptography>>,
+since Bitcoin is money and Bitcoin Core secures unfathomable amounts
+of money, security in this context is not taken lightly. This is why seasoned Bitcoin Core
+developers might appear very hard-headed, which attitude is
+usually warranted. Indeed, a feature with a weak rationale behind it is not going to be
+accepted. The same would happen if it broke the
+<<donttrustverify,reproducible builds>>, added new dependencies, or
+if the code didn't follow Bitcoin's
+https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md[best
+practices].
+
+New (and old) developers can get frustrated by this. But, as is customary in
+open source software, you can always fork the repository, merge
+whatever you want to your own fork, and build and run your own binary.

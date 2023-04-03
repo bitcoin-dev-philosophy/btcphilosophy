@@ -1,0 +1,72 @@
+== About this book
+
+_Bitcoin Development Philosophy_ is a guide for new Bitcoin developers
+who already understand the basics of concepts and processes such as Proof-of-Work, block
+building, and the transaction life cycle, and who want to level up by
+gaining a deeper understanding of Bitcoin's design trade-offs and
+philosophy. It should help new developers absorb the most important
+lessons of over a decade of Bitcoin development and discussion, and provide
+a context for evaluating new ideas (good ones and bad ones!).
+
+Table of contents overview:
+
+:oldstyle: {xrefstyle}
+:xrefstyle: full
+<<decentralization>>::
+<<trustlessness>>::
+<<privacy>>::
+<<finitesupply>>::
+<<upgrading>>::
+<<adversarialthinking>>::
+<<opensource>>::
+<<scaling>>::
+<<whenshithitsthefan>>::
+<<appendixdiscussion>>::
+<<appendixbuild>>:: {empty}
+
+:xrefstyle: {oldstyle}
+
+Your feedback and contributions are most welcome! Instructions for
+building and contributing can be found in <<appendixbuild>>.
+
+=== What to expect?
+
+Bitcoin is a huge subject and we couldn't possibly cover all of its aspects here. Nevertheless, we
+hope to discuss the necessary features to get you started as well as to enable you to further explore it on your own.
+
+There are lots of people involved in Bitcoin; as some of them have opposing opinions,
+there are resources that express contradictory ideas. However, we always
+attempt to stick to the facts, where opinions do not matter.
+
+=== Who wrote this?
+
+The main author of this book is Kalle Rosenbaum, and Linnéa Rosenbaum contributed as a co-author. This work
+was commissioned and funded by Chaincode Labs, a development center that runs educational
+programs for developers who want to https://learning.chaincode.com/[learn] about Bitcoin development.
+
+Kalle is the author of https://rosenbaum.se/book/["`Grokking Bitcoin`"] (Manning Publications) and is a 
+seasoned software developer. He's been working professionally with Bitcoin-related development since 
+2015.
+
+Linnéa has a Ph.D. in Electronic Systems. She is the Swedish translator of https://konsensus.network/product/lilla-boken-om-bitcoin/["`The Little Bitcoin Book`"] and co-translator of https://konsensus.network/product/sverige-bitcoinstandarden/["`The Bitcoin Standard`"].  She is  also on the board of the Swedish Bitcoin Association. Her background is in firmware development with a recent shift towards software development.
+
+
+
+=== How is this organized?
+
+The book is sectioned into chapters covering different topics. Each
+chapter will guide you through a number of links to articles or
+videos that we recommend reading, and will briefly discuss each
+link. The reported material was written by individuals who have
+studied Bitcoin development for a long time.
+
+The links refer to external resources on platforms we cannot
+control. We have therefore saved the linked articles locally in this
+repository, along with info on where it was copied from, and when. The
+resources are collected in link:sources/sources.html[a separate
+document] (`sources/sources.adoc`) and organized by the chapter they are
+linked from. The links found in the chapters refer to the original
+sources, but if you don't have an internet connection, the links
+appear dead, or the content seems severely changed, you can read the
+content locally instead.
+

@@ -1,0 +1,187 @@
+== Adversarial thinking
+
+image::adversarialthinking-banner.jpg[]
+
+This chapter addresses _adversarial thinking_, a mindset that focuses
+on what could go wrong and how adversaries might act. We start out
+by discussing Bitcoin's security assumptions and security model, after which
+we explain how ordinary users can improve
+their self-sovereignty and Bitcoin's full node decentralization by thinking adversarially. Then, we
+look into some actual threats to Bitcoin as well as into the adversary's mind.
+Lastly, we talk about the _axiom of resistance_ which
+can help you understand why people are working on Bitcoin in the
+first place.
+
+When discussing security within various systems, it's important to understand
+what the security assumptions are. A typical security assumption in
+Bitcoin is "`the discrete logarithm problem is hard to solve`", which,
+simply put, means it's practically impossible to find a private key
+that corresponds to a particular public key. Another pretty strong
+security assumption is that a majority of the network's hashpower is
+honest, meaning that they play by the rules. If these assumptions are
+proven wrong, then Bitcoin is in trouble.
+
+In 2015 Andrew Poelstra
+https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/[gave
+a talk] at the Scaling Bitcoin conference in Hong Kong, during which he
+analyzed Bitcoin's security assumptions. He starts by noticing that many systems
+disregard adversaries to some extent; for example, it's really hard to
+protect a building against all types of adversarial events. Instead, we generally
+accept the possibility that someone may burn the building down, and to some extent prevent
+this and other adversarial behaviors through law enforcement etc.
+// See greg maxwell's analogy of the building: https://youtu.be/Gs9lJTRZCDc?t=2799
+
+But online things are different:
+
+[quote, Andrew Poelstra, Security Assumptions at Scaling Bitcoin Hong Kong (2015)]
+____
+However, online we don’t have this. We have pseudonymous and anonymous
+behavior, anyone can connect to everyone and hurt the system. If it’s
+possible to adversarially hurt the system, then they will do it. We
+cannot assume they will be visible and that they will be caught.
+____
+
+The consequence is that all known weaknesses in Bitcoin must somehow be taken
+care of, otherwise they will be exploited. After all, Bitcoin
+is the greatest honey pot in the world.
+
+Poelstra goes on to mention how Bitcoin is a new kind of system; it's
+more nebulous than, for example, a signing protocol which has very
+clear-cut security assumptions.
+
+On his personal blog, software engineer Jameson Lopp,
+https://blog.lopp.net/bitcoins-security-model-a-deep-dive/[dives into this]:
+
+[quote, Jameson Lopp, Bitcoin’s Security Model: A Deep Dive (2016)]
+____
+In reality, the bitcoin protocol was and is being built without a
+formally defined specification or security model. The best that we can
+do is to study the incentives and behavior of actors within the system
+in order to better understand and attempt to describe it.
+____
+
+So, we have a system that seems to be working in practice, but that we can't
+formally prove to be secure. A proof is probably not possible due to
+the complexity of the system itself.
+
+=== Not only for Bitcoin experts
+
+The importance of adversarial thinking also extends to everyday
+Bitcoin users to some degree, not only to hardcore Bitcoin developers and experts. 
+Ragnar Lifthasir mentions in a
+https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking[tweetstorm] how simplistic narratives around
+Bitcoin - for example, "`just HODL`" - can be degrading to Bitcoin itself, and
+concludes by saying
+
+[quote, Ragnar Lifthasir, Twitter (2020)]
+____
+To make Bitcoin and ourselves stronger we need to think like the
+software engineers who contribute to Bitcoin. They peer review,
+mercilessly seeking flaws. At their tech events they talk about every
+which way a proposal can fail. They think adversarially. They’re
+conservative
+____
+
+He refers to these simplistic narratives as monomanias. Through this definition he's saying that by
+focusing on a single thing - for example, "`just HODL`"- you risk to overlook 
+the arguably more important stuff, such as keeping your Bitcoin secure or doing your
+best to use Bitcoin in a trustless manner.
+
+=== Threats
+
+There are a lot of known weaknesses in Bitcoin, and many of them are
+actively being exploited. To get a glimpse of that, have a look at the
+https://en.bitcoin.it/wiki/Weaknesses[Weaknesses page] on
+Bitcoin wiki. There are mentioned a wide variety of problems, such as
+wallet theft and denial-of-service attacks.
+
+[quote, Various authors, Bitcoin wiki]
+____
+If an attacker attempts to fill the network with clients that they
+control, you would then be very likely to connect only to attacker
+nodes. Although Bitcoin never uses a count of nodes for anything,
+completely isolating a node from the honest network can be helpful in
+the execution of other attacks.
+____
+
+This type of attack is called _Sybil attack_, and it occurs whenever a
+single entity controls multiple nodes in a network and uses them to appear
+as multiple entities.
+
+As the quote also mentions, the Sybil attack is not effective on the
+Bitcoin network because there is no voting through nodes or other numerable entities, but rather
+<<one-cpu-one-vote,through computing power>>. Nonetheless, this flat
+structure leaves the system susceptible to other attacks.
+The Bitcoin wiki page also outlines other possible attacks, such as information hiding
+(often referred to as _eclipse attack_), and the way Bitcoin Core implements
+some heuristic countermeasures against such attacks.
+
+The above are examples of real threats that need to be taken care of.
+
+[.float-group]
+--
+[[fig-sabotage-manual]]
+.Excerpt from the Simple Sabotage Field Manual
+image::sabotage-manual.png[role="right half-width"]
+
+[[sabotage]]
+To better understand the adversary's mind, it might be helpful to
+get a glimpse into how they operate. A US government body named
+Office of Strategic Services, which operated during World War II and had among its purposes to
+conduct espionage, perform sabotage and spread propaganda,
+produced a https://www.gutenberg.org/ebooks/26184[manual]
+for their personnel on how to properly sabotage the enemy. Its title was "`Simple
+Sabotage Field Manual`" and contained concrete tips on infiltrating
+the enemy to make their lives hard. The tips range from burning
+down warehouses to causing wear to drills in order to decrease the enemy's
+efficiency.
+
+For example, there is a section (<<fig-sabotage-manual>>) about how an
+infiltrator can disrupt organizations. It's not hard to see how such
+tactics could be used to target the Bitcoin development process (see
+<<opensource>>), which is open for anyone to participate in. A
+dedicated attacker can keep stalling progress by endless concerns of
+irrelevant issues, haggle over precise wordings, and attempt to reiterate discussions
+that have already been comprehensively addressed. The attacker can also hire
+a troll army to multiply their own effectiveness; we can call this a social
+Sybil attack. Using a social Sybil attack, they can make it look like there's
+more resistance against a proposed change than there actually is.
+
+This highlights how a determined state can and will do everything in
+its power to destroy the enemy, including breaking it down from
+the inside. Since Bitcoin is a form of money that competes with
+established fiat currencies, chances are that states will regard
+Bitcoin as an enemy.
+--
+
+[[axiomofresistance]]
+Eric Voskuil
+https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance[writes
+on his Cryptoeconomics wiki page] about what he calls the "`axiom of
+resistance`":
+
+[quote, Eric Voskuil, Cryptoeconomics wiki (2017)]
+____
+In other words there is an assumption that it is _possible_ for a
+system to resist state control. This is not accepted as a fact but
+deemed to be a reasonable assumption, due to empirical study of
+behavior of similar systems, on which to base the system.
+
+*One who does not accept the axiom of resistance is contemplating an
+entirely different system than Bitcoin.* If one assumes it is _not
+possible_ for a system to resist state controls, conclusions do not
+make sense in the context of Bitcoin - just as conclusions in
+spherical geometry contradict Euclidean. How can Bitcoin be
+permissionless or censorship-resistant without the axiom? The
+contradiction leads one to make obvious errors in an attempt to
+rationalize the conflict.
+____
+
+What he's essentially saying is that only when one assumes it's possible to
+create a system that states can't control, is it meaningful to try.
+
+This means that to work on Bitcoin you should accept the axiom of
+resistance, otherwise you'd better spend your time on other
+projects. Acknowledging that axiom helps you focusing your development
+efforts on the real problems at hand: coding around state-level
+adversaries. In other words, think adversarially.

@@ -1,0 +1,198 @@
+== Finite supply
+
+image::finitesupply-banner.jpg[]
+
+This chapter looks into the bitcoin supply limit of 21 million BTC, or
+how much is it actually? We talk about how this limit is enforced
+and what one can do to verify that it's being respected. Moreover, we
+take a peek into the crystal ball and discuss the dynamics
+that will come into play when the block reward shifts from
+subsidy-based to fee-based.
+
+The well-known finite supply of 21 million BTC is regarded as a
+fundamental property of Bitcoin. But is it really set in stone?
+
+Let's start by looking at what the current consensus rules say about
+the supply of bitcoin, and how much of it will actually be
+usable. Pieter Wuille wrote a piece about this
+https://bitcoin.stackexchange.com/a/38998/69518[on Stack Exchange],
+in which he counted how many bitcoins there would be once all coins are
+mined:
+
+[quote, Pieter Wuille, Stack Exchange (2015)]
+____
+If you sum all these numbers together, you get *20999999.9769* BTC.
+____
+
+But due to a number of reasons -- such as early problems with coinbase
+transactions, miners who unintentionally claim less than allowed, and
+loss of private keys -- that upper limit will never be reached. Wuille
+concludes:
+
+[quote, Pieter Wuille, Stack Exchange (2015)]
+____
+This leaves us with *20999817.31308491* BTC (taking everything up to
+block 528333 into account)
+
+\... However, various wallets have been lost or stolen, transactions
+have been sent to the wrong address, people forgot they owned
+bitcoin. The totals of this may well be millions. People have tried to
+tally known losses up
+https://bitcointalk.org/index.php?topic=7253.0[here].
+
+This leaves us with: *???* BTC.
+____
+
+We can thus be sure that the bitcoin supply will be
+20999817.31308491 BTC at most. Any lost or unverifiably burnt coins will make
+this number lower, but we don't know by how much. The interesting
+thing is that it doesn't really matter, or better yet it does matter in a
+positive way for bitcoin holders,
+https://bitcointalk.org/index.php?topic=198.msg1647#msg1647[as
+explained] by Satoshi Nakamoto:
+
+[quote,Satoshi Nakamoto on lost bitcoins, Bitcointalk forum (2010)]
+____
+Lost coins only make everyone else's coins worth slightly more.  Think
+of it as a donation to everyone.
+____
+
+The finite supply will shrink and this should, at least in theory,
+cause price deflation.
+
+More important than the exact number of coins in circulation is
+the way the supply limit is enforced without any central
+authority. Alias chytrik puts it well on
+https://bitcoin.stackexchange.com/a/106830/69518[Stack Exchange].
+
+[quote, chytrik, Stack Exchange (2021)]
+____
+So the answer is that you don't have to trust someone to not increase
+the supply. You just have to run some code that will verify that they
+haven't.
+____
+
+Even if some full nodes turn to the dark side and decide to
+accept blocks with higher-value coinbase transactions, all the remaining full
+nodes will simply neglect them and continue doing business as usual. Some full nodes
+may, intentionally or unintentionally (see
+<<combined-output-overflow>>), run evil
+softwares, yet the collective will robustly secure the blockchain.
+In conclusion, you can choose to trust the system without having to
+trust anyone.
+
+=== Block subsidy and transaction fees
+
+A block reward is composed of the block subsidy plus transaction
+fees. The block reward needs to cover Bitcoin's security costs. We can
+say for sure that under today's conditions with regard to block subsidy, transaction fees,
+bitcoin price, mempool size, hash power, degree of decentralization
+etc., the incentives for every player to play by the rules are high enough to preserve a
+secure monetary system.
+
+What happens when the block subsidy approaches zero? To keep things simple, let's
+assume it actually equals zero. At this point, the system's security cost
+is covered through transaction fees only. What the future holds
+for us when this happens, we cannot know. The uncertainty factors are
+numerous and we are left to speculations. For example, Paul Sztorc's
+contribution to the subject
+https://www.truthcoin.info/blog/security-budget/[in his Truthcoin
+blog] is mostly speculations, but he has at least one solid point (please note that M2,
+as referred to by Sztorc, is a measurement of a fiat money supply):
+
+[quote, 'Paul Sztorc, Security Budget in the Long Run', Truthcoin blog (2019)]
+____
+While the two are mixed into the same “security budget”, the block
+subsidy and txn-fees are utterly and completely different. They are as
+different from each other, as “VISA’s total profits in 2017” are from
+the “total increase in M2 in 2017”.
+____
+
+Today, it is holders who pay for security (via monetary inflation). Tomorrow
+it will be the spenders' turn to somehow shoulder this burden, as
+illustrated below.
+
+.As time goes by, the bearing of security costs will shift from holders to spenders.
+image::finitesupply.png[width=60%]
+
+When transaction fees are the main motivation for mining, the
+incentives shift. Most notably, if the mempool of a miner doesn't
+contain enough transaction fees, it might become more profitable for
+that miner to rewrite Bitcoin's history rather than
+extending it. Bitcoin Optech has a specific
+https://bitcoinops.org/en/topics/fee-sniping/[section on this
+behavior], called _fee sniping_, written by David Harding:
+
+[quote,"David Harding, fee sniping", Bitcoin Optech website]
+____
+Fee sniping is a problem that may occur as Bitcoin’s subsidy continues
+to diminish and transaction fees begin to dominate Bitcoin’s block
+rewards. If transaction fees are all that matter, then a miner with
+`x` percent of the hash rate has a `x` percent chance of mining the
+next block, so the expected value to them of honestly mining is `x`
+percent of the
+https://bitcoinops.org/en/newsletters/2021/06/02/#candidate-set-based-csb-block-template-construction[best
+feerate set of transactions] in their mempool.
+
+Alternatively, a miner could dishonestly attempt to re-mine the
+previous block plus a wholly new block to extend the chain. This
+behavior is referred to as fee sniping, and the dishonest miner’s
+chance of succeeding at it if every other miner is honest is
+`(x/(1-x))^2`. Even though fee sniping has an overall lower probability
+of success than honest mining, attempting dishonest mining could be
+the more profitable choice if transactions in the previous block paid
+significantly higher feerates than the transactions currently in the
+mempool—a small chance at a large amount can be worth more than a
+large chance at a small amount.
+____
+
+Throwing a wet blanket over our hopes for the future is the fact that if miners start
+conducting fee sniping, this will incentivize others to do the same,
+leaving even fewer honest miners. This could severely impair the
+overall security of Bitcoin. Harding goes on to list a few
+countermeasures that can be taken, such as relying on transaction
+time locks to restrict where in the blockchain the transaction may
+appear.
+
+So, given that the consensus on finite supply remains, the block
+subsidy will - thanks to
+https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki[BIP42]
+which fixed a very-long-term inflation bug - get to zero around year
+2140. Will the transaction fees thereafter be enough to secure the
+network? It's impossible to say, but we do know a few things:
+
+* A century is a _long_ time from the Bitcoin perspective. If it is
+  still around, it will have probably evolved enormously.
+* If an overwhelming economic majority finds it necessary to change
+  the rules and introduce for example a perpetual annual 0.1% or 1%
+  monetary inflation, the supply of bitcoin will no longer be finite.
+* With zero block subsidy and an empty or nearly empty mempool, things
+  can become shaky due to fee sniping.
+
+Since the transition to a fee-only block reward is so far in the future, it
+might be wise not to jump to conclusions and try to fix the potential
+issues while we can. For example, Peter Todd thinks there's an actual risk that Bitcoin's
+security budget won't be enough in the future, and consequently argues for a small
+perpetual inflation in Bitcoin. However, he also thinks it's not a
+good idea to discuss such an issue at this time, as
+https://www.whatbitcoindid.com/podcast/peter-todd-on-the-essence-of-bitcoin[he said on the What
+Bitcoin Did podcast]:
+
+[quote,Peter Todd on security budget, What Bitcoin Did podcast (2019)]
+____
+But, that’s a risk like 10, 20 years in the future. That is a very
+long time. And, by then, who the hell knows what the risks are?
+____
+
+Perhaps we could think of Bitcoin as something organic. Imagine a
+small, slowly-growing oak plant. Imagine also that you have never seen a fully
+grown tree in your life. Wouldn't it be wise then to restrain your
+control issues instead of setting in advance all the rules on how this plant
+should be allowed to evolve and grow?
+
+=== Conclusion
+
+Whether the bitcoin supply will grow past 21 million we cannot say
+today, and that is probably not so bad. Ensuring that the security
+budget remains high enough is crucial but not urgent. Let's have this
+discussion in 10-50 years, when we know more. If it's still relevant.

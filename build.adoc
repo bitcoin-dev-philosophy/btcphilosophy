@@ -1,0 +1,96 @@
+[appendix]
+== Feedback and contribution
+
+The project is maintained on
+https://github.com/bitcoin-dev-philosophy/btcphilosophy[GitHub]. If you have
+any improvements, corrections or suggestions to make, either open a
+new issue there or submit a pull request.
+
+=== Build
+
+The book is written in https://asciidoctor.org/[Asciidoctor]. The main
+file for the book is link:btcphilosophy.adoc[]. This file then
+``include::``s each chapter as a separate file.
+
+There's also a separate asciidoctor file, link:sources/sources.adoc[],
+that collects all the copied resources that the book refers to. They
+are kept separate to not make browsing the book itself too heavy.
+
+To build this book, clone the GitHub repository:
+
+----
+$ git clone https://github.com/bitcoin-dev-philosophy/btcphilosophy.git
+$ cd btcphilosophy
+----
+
+and then build using any of the two methods below
+
+==== Using `asciidoctor`
+
+Use this option if you just want to casually build the book and read
+the end result locally. It requires only `asciidoctor` to be present
+on your computer.
+
+----
+$ asciidoctor -v btcphilosophy.adoc
+----
+
+The `-v` flag is recommended and instructs asciidoctor to be verbose,
+which means it will show invalid references and other issues. The
+above command will result in a file `btcphilosophy.html` in your
+current directory that you can view in any browser, for example:
+
+----
+$ brave-browser btcphilosophy.html
+----
+
+The source material is collected and maintained as a separate book
+under the `sources` folder. To build it:
+
+----
+$ asciidoctor -v sources/sources.adoc
+----
+
+This will result in a file `sources/sources.html` that you can open in
+a web browser in the same way as the main book.
+
+==== Using Gnu `make`
+
+If you have access to the `make` command on a linux machine you can build using
+
+----
+$ make
+----
+
+This will create a `build` directory and build both the main book
+(lands in `build/btcphilosophy.html`) and the sources book (lands in
+`build/sources/sources.html`). 
+
+If you have ImageMagick installed, `make` will reduce the size of some
+images for faster download over the web. Otherwise it'll write a
+warning message saying that the images will not be resized.
+
+This method of building is usually preferred as it keeps the source
+tree separate from ascriidoctor output files, and it will reduce the
+size of pictures to make it more appropriate for serving the book
+on the web.
+
+==== Build a PDF
+
+If you have `asciidoctor-pdf` installed, you can create a PDF that
+gives a better looking result than first generating html and then
+"`Print To PDF`" from that. Create the PDF by issuing
+`asciidoctor-pdf` manually, or by using `make pdf`. To issue the
+command manually:
+
+----
+$ asciidoctor-pdf btcphilosophy.adoc
+----
+
+The result will be written to `btcphilosophy.pdf`. To use `make`:
+
+----
+$ make pdf
+----
+
+The result will be written to `build/btcphilosophy.pdf`.

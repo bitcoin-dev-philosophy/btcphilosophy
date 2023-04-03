@@ -49,9 +49,9 @@ MathJax.Hub.Config({
 </li>
 <li><a href="#decentralization">1. Decentralization</a>
 <ul class="sectlevel2">
-<li><a href="#_miner_decentralization">1.1. Miner decentralization</a></li>
-<li><a href="#_full_node_decentralization">1.2. Full node decentralization</a></li>
-<li><a href="#_neutrality">1.3. Neutrality</a></li>
+<li><a href="#minerdecentralization">1.1. Miner decentralization</a></li>
+<li><a href="#fullnodedecentralization">1.2. Full node decentralization</a></li>
+<li><a href="#neutrality">1.3. Neutrality</a></li>
 <li><a href="#_grokking_decentralization">1.4. Grokking decentralization</a></li>
 </ul>
 </li>
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
 <li><a href="#_what_does_privacy_mean">3.1. What does privacy mean?</a></li>
 <li><a href="#whyprivacyimportant">3.2. Why is privacy important?</a></li>
 <li><a href="#pseudonymity">3.3. Pseudonymity</a></li>
-<li><a href="#_blockchain_privacy">3.4. Blockchain privacy</a></li>
+<li><a href="#blockchainprivacy">3.4. Blockchain privacy</a></li>
 <li><a href="#nonblockchainprivacy">3.5. Non-blockchain privacy</a></li>
 <li><a href="#fungibility">3.6. Fungibility</a></li>
 <li><a href="#privacymeasures">3.7. Privacy measures</a></li>
@@ -105,11 +105,11 @@ MathJax.Hub.Config({
 </li>
 <li><a href="#opensource">7. Open Source</a>
 <ul class="sectlevel2">
-<li><a href="#_software_maintenance">7.1. Software maintenance</a></li>
+<li><a href="#softwaremaintenance">7.1. Software maintenance</a></li>
 <li><a href="#_permissionless_development">7.2. Permissionless development</a></li>
 <li><a href="#_pseudonymous_development">7.3. Pseudonymous development</a></li>
 <li><a href="#selectioncryptography">7.4. Selection cryptography</a></li>
-<li><a href="#_review">7.5. Review</a></li>
+<li><a href="#review">7.5. Review</a></li>
 <li><a href="#_funding">7.6. Funding</a></li>
 <li><a href="#_culture_shock">7.7. Culture shock</a></li>
 </ul>
@@ -119,10 +119,10 @@ MathJax.Hub.Config({
 <li><a href="#_history">8.1. History</a></li>
 <li><a href="#_scaling_approaches">8.2. Scaling approaches</a>
 <ul class="sectlevel3">
-<li><a href="#_vertical_scaling">8.2.1. Vertical scaling</a></li>
+<li><a href="#verticalscaling">8.2.1. Vertical scaling</a></li>
 <li><a href="#_horizontal_scaling">8.2.2. Horizontal scaling</a></li>
 <li><a href="#_inward_scaling">8.2.3. Inward scaling</a></li>
-<li><a href="#_layered_scaling">8.2.4. Layered scaling</a></li>
+<li><a href="#layeredscaling">8.2.4. Layered scaling</a></li>
 </ul>
 </li>
 </ul>
@@ -291,7 +291,7 @@ the edge of the network, ultimately by its users, and not by a few
 trusted authorities.</p>
 </div>
 <div class="sect2">
-<h3 id="_miner_decentralization"><a class="anchor" href="#_miner_decentralization"></a>1.1. Miner decentralization</h3>
+<h3 id="minerdecentralization"><a class="anchor" href="#minerdecentralization"></a>1.1. Miner decentralization</h3>
 <div class="paragraph">
 <p>There had been attempts at creating digital currencies before Bitcoin,
 but most of them failed due to a lack of governance decentralization
@@ -459,7 +459,7 @@ decentralization.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_full_node_decentralization"><a class="anchor" href="#_full_node_decentralization"></a>1.2. Full node decentralization</h3>
+<h3 id="fullnodedecentralization"><a class="anchor" href="#fullnodedecentralization"></a>1.2. Full node decentralization</h3>
 <div class="paragraph">
 <p>In the paragraphs above, we&#8217;ve mostly talked about miner decentralization and how
 centralizating miners can allow for censorship. But there&#8217;s also another
@@ -488,7 +488,7 @@ throughput.</p>
 </div>
 <div class="paragraph">
 <p>A powerful argument against increasing the block size is that it
-increases the cost of verification (see <a href="#_vertical_scaling">the
+increases the cost of verification (see <a href="#verticalscaling">the
 Scaling chapter</a>). If verification cost rises, it will push some
 users to stop running their full nodes. This, in turn, will lead to
 more people not being able to use the system in a
@@ -520,7 +520,7 @@ the consensus rules.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_neutrality"><a class="anchor" href="#_neutrality"></a>1.3. Neutrality</h3>
+<h3 id="neutrality"><a class="anchor" href="#neutrality"></a>1.3. Neutrality</h3>
 <div class="paragraph">
 <p>Bitcoin is neutral, or permissionless, as people like to call it. This
 means that Bitcoin doesn&#8217;t care who you are or what you use it for.</p>
@@ -845,7 +845,7 @@ acceptable.</p>
 </div>
 <div class="paragraph">
 <p>The incentives for using Bitcoin in a trustless way align with the
-system&#8217;s need for <a href="#_full_node_decentralization">full node
+system&#8217;s need for <a href="#fullnodedecentralization">full node
 decentralization</a>. The more people who use their own full nodes, the
 more full node decentralization, and thus the stronger Bitcoin stands
 against malicious changes to the protocol. But unfortunately, as
@@ -1207,7 +1207,7 @@ blockchain bloat, and making it harder to impersonate other people.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_blockchain_privacy"><a class="anchor" href="#_blockchain_privacy"></a>3.4. Blockchain privacy</h3>
+<h3 id="blockchainprivacy"><a class="anchor" href="#blockchainprivacy"></a>3.4. Blockchain privacy</h3>
 <div class="paragraph">
 <p>Blockchain privacy refers to the information you disclose by
 transacting on the blockchain. It applies to all transactions,
@@ -1497,7 +1497,7 @@ Bitcoin, as is the case with Lightning Network:</p>
 can only increase with layers on top, but that doesn&#8217;t seem to be the
 case for privacy, which can be improved or made worse arbitrarily in
 layers on top. Why is that? Any layer on top of Bitcoin, as explained
-in <a href="#_layered_scaling">Section 8.2.4</a>, must use on-chain
+in <a href="#layeredscaling">Section 8.2.4</a>, must use on-chain
 transactions occasionally, otherwise it wouldn&#8217;t be "on top of
 Bitcoin". Privacy-enhancing layers generally try to use the base layer
 as little as possible to minimize the amount of information revealed.</p>
@@ -2861,7 +2861,7 @@ some other interesting aspects of open source software in
 Bitcoin.</p>
 </div>
 <div class="sect2">
-<h3 id="_software_maintenance"><a class="anchor" href="#_software_maintenance"></a>7.1. Software maintenance</h3>
+<h3 id="softwaremaintenance"><a class="anchor" href="#softwaremaintenance"></a>7.1. Software maintenance</h3>
 <div class="paragraph">
 <p>Bitcoin Core&#8217;s source code is maintained in a Git repository hosted on
 <a href="https://github.com/bitcoin/bitcoin">GitHub</a>. Anyone can clone that very
@@ -2943,7 +2943,7 @@ itself.</p>
 <div class="paragraph">
 <p>It should be noted that pull requests can take a very long time
 before being merged to the repository by maintainers, and that&#8217;s usually due to a lack
-of review, which is often due to a <a href="#_review">lack of <em>reviewers</em></a>.</p>
+of review, which is often due to a <a href="#review">lack of <em>reviewers</em></a>.</p>
 </div>
 <div class="paragraph">
 <p>Lombrozo also talks about the process that surrounds consensus changes, but that&#8217;s a
@@ -2981,7 +2981,7 @@ transactions. Various inter-operable implementations exist, such as
 <dt class="hdlist1">CoinJoin</dt>
 <dd>
 <p>Multiple parties collaborate to combine their payments into
-a single transaction to make <a href="#_blockchain_privacy">address
+a single transaction to make <a href="#blockchainprivacy">address
 clustering</a> harder. Various implementations exist.</p>
 </dd>
 <dt class="hdlist1">Sidechains</dt>
@@ -3002,7 +3002,7 @@ that timestamp to prove that a document must have existed prior to a certain tim
 </div>
 <div class="paragraph">
 <p>Without permissionless development, many of these projects would
-not have been possible. As stated in <a href="#_neutrality">Section 1.3</a>,
+not have been possible. As stated in <a href="#neutrality">Section 1.3</a>,
 if developers had to ask for permission to build protocols on top of
 Bitcoin, only the protocols allowed by the central developer granting committee
 would be developed.</p>
@@ -3196,7 +3196,7 @@ from font rendering to implementation of system calls.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_review"><a class="anchor" href="#_review"></a>7.5. Review</h3>
+<h3 id="review"><a class="anchor" href="#review"></a>7.5. Review</h3>
 <div class="paragraph">
 <p>This section is named &#8220;Review&#8221;, rather than &#8220;Code review&#8221;, because
 Bitcoin&#8217;s security relies heavily on review at multiple levels, not
@@ -3607,7 +3607,7 @@ throughput-decentralization trade-off mentioned in the previous
 section.</p>
 </div>
 <div class="sect3">
-<h4 id="_vertical_scaling"><a class="anchor" href="#_vertical_scaling"></a>8.2.1. Vertical scaling</h4>
+<h4 id="verticalscaling"><a class="anchor" href="#verticalscaling"></a>8.2.1. Vertical scaling</h4>
 <div class="paragraph">
 <p>Vertical scaling is the process of increasing the computing resources
 of the machines processing data. In the context of Bitcoin, these latter would be
@@ -3621,12 +3621,12 @@ block size limit. This would require some full nodes to upgrade their
 hardware to keep up with the increasing computational
 demands. The downside is that it happens at the cost of
 centralization, as was discussed in the previous section and more
-in depth in <a href="#_full_node_decentralization">Section 1.2</a>.</p>
+in depth in <a href="#fullnodedecentralization">Section 1.2</a>.</p>
 </div>
 <div class="paragraph">
 <p>Besides the negative effects on full node decentralization, vertical
 scaling might also negatively impact Bitcoin&#8217;s
-<a href="#_miner_decentralization">mining decentralization</a> and security in
+<a href="#minerdecentralization">mining decentralization</a> and security in
 less obvious ways. Let&#8217;s have a look at how miners &#8220;should&#8221;
 operate. Say a miner mines a block at height 7 and publishes that
 block on the Bitcoin network. It will take some time for this block to
@@ -3682,7 +3682,7 @@ full block and validate it.</p>
 </div>
 <div class="paragraph">
 <p>Validationless mining further undermines
-<a href="#_full_node_decentralization">full node decentralization</a>,
+<a href="#fullnodedecentralization">full node decentralization</a>,
 as the miner defers trusting
 incoming blocks, at least temporarily. It also hurts security to some degree because a
 portion of the network&#8217;s computing power is potentially building on an
@@ -3690,7 +3690,7 @@ invalid blockchain, instead of building on the strongest and valid chain.</p>
 </div>
 <div class="paragraph">
 <p>The second bullet point has a negative effect on
-<a href="#_miner_decentralization">miner decentralization</a>, because usually
+<a href="#minerdecentralization">miner decentralization</a>, because usually
 the pools with the best network connectivity and
 bandwidth are also the largest and thus most centralized.</p>
 </div>
@@ -3898,7 +3898,7 @@ you may have to make a trade-off between cost efficiency and privacy.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_layered_scaling"><a class="anchor" href="#_layered_scaling"></a>8.2.4. Layered scaling</h4>
+<h4 id="layeredscaling"><a class="anchor" href="#layeredscaling"></a>8.2.4. Layered scaling</h4>
 <div class="paragraph">
 <p>The most impactful approach to scaling is probably layering. The
 general idea behind layering is that a protocol can settle payments
@@ -4071,7 +4071,7 @@ a few days and several months.</p>
 <div class="paragraph">
 <p>This means that if you find a security issue, you should
 report this to the team responsible for the system. But what does this
-mean in the context of Bitcoin? As noted in <a href="#_software_maintenance">the Open source chapter</a>, no one controls Bitcoin, but there&#8217;s currently a
+mean in the context of Bitcoin? As noted in <a href="#softwaremaintenance">the Open source chapter</a>, no one controls Bitcoin, but there&#8217;s currently a
 focal point for Bitcoin development, namely the
 <a href="https://github.com/bitcoin/bitcoin">Bitcoin Core Github
 repository</a>. The maintainers of said repository are responsible for
@@ -5269,7 +5269,7 @@ command manually:</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-04-03 06:20:26 UTC
+Last updated 2023-04-03 07:03:41 UTC
 </div>
 </div>
 <script type="text/x-mathjax-config">
