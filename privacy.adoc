@@ -162,7 +162,7 @@ Chris Belcher
 https://en.bitcoin.it/Privacy#Blockchain_attacks_on_privacy[wrote in
 great detail] about the different kinds of privacy leaks that can
 happen on the Bitcoin blockchain. We recommend you read at least
-the first few subsections under "Blockchain attacks on privacy."
+the first few subsections under "`Blockchain attacks on privacy.`"
 
 The takeaway is that privacy in Bitcoin isn't perfect. It requires a
 significant amount of work to transact privately. Most people aren't
@@ -200,8 +200,8 @@ there are plenty of other leaks that don't use the blockchain, some
 sneakier than others. These range from key-loggers to network traffic
 analysis. To read up on some of these methods, please refer again to
 https://en.bitcoin.it/Privacy#Non-blockchain_attacks_on_privacy[Chris
-Belcher's piece], specifically the section "Non-blockchain attacks on
-privacy".
+Belcher's piece], specifically the section "`Non-blockchain attacks on
+privacy`".
 
 Among a plethora of attacks, Belcher mentions the possibility of
 someone snooping on your internet connection, for example, your ISP:
@@ -352,8 +352,8 @@ can only increase with layers on top, but that doesn't seem to be the
 case for privacy, which can be improved or made worse arbitrarily in
 layers on top. Why is that? Any layer on top of Bitcoin, as explained
 in <<layeredscaling>>, must use on-chain
-transactions occasionally, otherwise it wouldn't be "on top of
-Bitcoin". Privacy-enhancing layers generally try to use the base layer
+transactions occasionally, otherwise it wouldn't be "`on top of
+Bitcoin`". Privacy-enhancing layers generally try to use the base layer
 as little as possible to minimize the amount of information revealed.
 
 The above are somewhat technical ways to improve your privacy. But
@@ -387,7 +387,7 @@ and instead trade in private, or use decentralized exchanges like
 https://bisq.network/[bisq].
 
 For more in-depth reading about countermeasures, refer to the
-previously mentioned https://en.bitcoin.it/wiki/Privacy#Methods_for_improving_privacy_.28non-blockchain.29[wiki article on privacy], starting at "Methods for improving privacy (non-blockchain)".
+previously mentioned https://en.bitcoin.it/wiki/Privacy#Methods_for_improving_privacy_.28non-blockchain.29[wiki article on privacy], starting at "`Methods for improving privacy (non-blockchain)`".
 
 === Conclusion
 

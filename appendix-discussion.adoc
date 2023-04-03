@@ -1,7 +1,7 @@
 [appendix]
 == Discussion Questions
 
-These discussion questions are not just a recap of the content in "Bitcoin development philosophy", they are meant to encourage you to research further so make sure to go out and explore.
+These discussion questions are not just a recap of the content in "`Bitcoin development philosophy`", they are meant to encourage you to research further so make sure to go out and explore.
 
 
 === Decentralization

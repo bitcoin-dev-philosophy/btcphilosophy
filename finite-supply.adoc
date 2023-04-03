@@ -109,7 +109,7 @@ the “total increase in M2 in 2017”.
 ____
 
 Today, it is holders who pay for security (via monetary inflation). Tomorrow
-it will be the spenders' turn to somehow shoulder this burden, as
+it will be the spenders`' turn to somehow shoulder this burden, as
 illustrated below.
 
 .As time goes by, the bearing of security costs will shift from holders to spenders.

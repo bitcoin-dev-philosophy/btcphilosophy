@@ -176,7 +176,7 @@ coordinate upgrades. Due to this misunderstanding, miners might have also felt
 obliged to proclaim in public their views on a certain soft fork, as if that
 gave weight to the proposal.
 
-The UASF proposal is, in a nutshell, a "flag day" on which nodes
+The UASF proposal is, in a nutshell, a "`flag day`" on which nodes
 start enforcing specific new rules. That way, miners don't have to
 make a collective effort to coordinate the upgrade, but _can_ trigger activation
 earlier than the flag day if enough blocks signal support.
@@ -374,7 +374,7 @@ ____
 ____
 
 The "`let's see what happens`" approach finally seemed to click in
-peoples' minds. This process would later be labeled as "`Speedy Trial`"
+peoples`' minds. This process would later be labeled as "`Speedy Trial`"
 due to its short signaling period. David Harding explains this idea
 to the broader community in an
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-March/018583.html[email

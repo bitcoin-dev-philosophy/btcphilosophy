@@ -11,8 +11,8 @@ between Bitcoin and actual softwares or users, and the need to make
 trade-offs between convenience and trustlessness to get anything done
 at all.
 
-People often say things like "Bitcoin is great because it's
-trustless". What do they mean by trustless? Pieter Wuille explains
+People often say things like "`Bitcoin is great because it's
+trustless`". What do they mean by trustless? Pieter Wuille explains
 this widely used term on
 https://bitcoin.stackexchange.com/a/45674/69518[Stack Exchange]:
 
@@ -24,8 +24,8 @@ require any trusted parties to function correctly.
 ____
 
 In short, the word _trustless_ refers to a property of the Bitcoin
-protocol whereby it can logically function without "any trusted
-parties". This is different from the trust you inevitably have to
+protocol whereby it can logically function without "`any trusted
+parties`". This is different from the trust you inevitably have to
 put into the software or hardware you run. More on this latter aspect of trust will be discussed further
 in this chapter.
 
@@ -159,7 +159,7 @@ So, besides running a full node, you also need to make sure you're
 running what you intend to. Reddit user brianddk
 https://www.reddit.com/r/Bitcoin/comments/smj1ep/bitcoin_v220_and_guix_stronger_defense_against/[wrote
 an article] about the various levels of trust you can choose from, when
-verifying your software. In the section "Trusting the builders", he
+verifying your software. In the section "`Trusting the builders`", he
 talks about _reproducible builds_:
 
 [quote, brianddk on Reddit, Bitcoin v22.0 and Guix; Stronger defense against the "Trusting Trust Attack" (2022)]

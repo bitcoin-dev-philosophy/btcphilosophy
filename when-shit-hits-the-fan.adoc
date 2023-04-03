@@ -5,7 +5,7 @@ image::shtf-banner.jpg[]
 Bitcoin is built by people. People write the software, and people then
 run this software. When a security vulnerability or a severe bug is
 discovered - is there really a distinction between the two? - it's
-always discovered by people, flesh and blood. This chapter 
+always discovered by people, flesh and blood. This chapter
 contemplates what people do, should, and shouldn't do when shit hits
 the fan. The first section explains the term _responsible disclosure_, which refers to
 how someone who discovers a vulnerability can act responsibly to
@@ -170,7 +170,7 @@ pseudonym suggests) project, and bitcoin had initially little to no value. As
 such, vulnerabilities and bug fixes were not as rigorously handled as
 they are today.
 
-The Bitcoin wiki has a 
+The Bitcoin wiki has a
 https://en.bitcoin.it/wiki/Common_Vulnerabilities_and_Exposures[list
 of common vulnerabilities and exposures]
 (CVEs)
@@ -280,7 +280,7 @@ upgraded to 0.3.6 and it worked as expected. This particular
 issue was resolved, amazingly, with no bitcoin losses.
 
 Satoshi's message also described some performance optimization for
-mining. It's unclear why that was included in a critical security fix, 
+mining. It's unclear why that was included in a critical security fix,
 it's possible that the purpose was to obfuscate the real issue. However, it
 seems more likely that he just released whatever was on the head of
 the development branch of the Subversion repository, with the security fix
@@ -332,7 +332,7 @@ The "value out" in this block #74638 is quite strange:
 92233720368.54277039 BTC?  Is that UINT64_MAX, I wonder?
 ____
 
-Presumably, there was a bug causing two int64 (not uint64, as Garzik supposed) outputs' sum
+Presumably, there was a bug causing two int64 (not uint64, as Garzik supposed) outputs`' sum
 to overflow to a negative value -0.00997538 BTC. Whatever the sum
 of the inputs, the "`sum`" of the outputs would be smaller, making
 this transaction OK according to the code at the time.
@@ -534,7 +534,7 @@ BIP66 also fixes a much more severe issue not mentioned in the BIP.
 
 The full disclosure of this issue was published on July 28 2015 by
 Pieter Wuille in an
-https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-July/009697.html[email 
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-July/009697.html[email
 to the Bitcoin-dev mailing list]:
 
 [quote, Pieter Wuille on Bitcoin-dev mailing list, Disclosure: consensus bug indirectly solved by BIP66 (2015)]
@@ -571,7 +571,7 @@ Without anyone knowing about the issue, it could have been resolved by
 the now widthdrawn BIP62, which was a proposal to reduce the
 possibilities of transaction malleability. Among the proposed changes
 in BIP62 were tightening of the consensus rules for the encoding of
-signatures, or "strict DER encoding". Pieter Wuille proposed some
+signatures, or "`strict DER encoding`". Pieter Wuille proposed some
 tweaks to the BIP in July 2014, that would have solved the issue:
 
 [quote, Pieter Wuille on Bitcoin-dev mailing list, Disclosure: consensus bug indirectly solved by BIP66 (2015)]
@@ -608,7 +608,7 @@ While for most applications it is generally acceptable to eagerly
 reject some signatures, Bitcoin is a consensus system where all
 participants must generally agree on the exact validity or
 invalidity of the input data.  In a sense, consistency is more
-important than "correctness".
+important than "`correctness`".
 
 ...
 
