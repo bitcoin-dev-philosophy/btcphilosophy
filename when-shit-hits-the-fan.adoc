@@ -111,7 +111,7 @@ others to discover it.
 
 The thread that led to this email was discussing whether, when, and how
 to disclose vulnerabilities to altcoins and other implementations of
-Bitcoin. There is no clear answers here. "`Helping the good guys`"
+Bitcoin. There is no clear answer here. "`Helping the good guys`"
 seems like the sensible thing to do, but who decides who they are and
 where does one draw the line? Bryan Bishop
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014983.html[argued]
