@@ -1,12 +1,12 @@
 == About this book
 
-_Bitcoin Development Philosophy_ is a guide for new Bitcoin developers
+_Bitcoin Development Philosophy_ is a guide for Bitcoin developers
 who already understand the basics of concepts and processes such as Proof-of-Work, block
 building, and the transaction life cycle, and who want to level up by
 gaining a deeper understanding of Bitcoin's design trade-offs and
 philosophy. It should help new developers absorb the most important
-lessons of over a decade of Bitcoin development and discussion, and provide
-a context for evaluating new ideas (good ones and bad ones!).
+lessons of over a decade of Bitcoin development and public debate, while providing them with
+a useful context for evaluating new ideas (good ones and bad ones!).
 
 Table of contents overview:
 
@@ -31,42 +31,41 @@ building and contributing can be found in <<appendixbuild>>.
 
 === What to expect?
 
-Bitcoin is a huge subject and we couldn't possibly cover all of its aspects here. Nevertheless, we
-hope to discuss the necessary features to get you started as well as to enable you to further explore it on your own.
+As stated above, this is a practical guide for Bitcoin developers. However, Bitcoin is a broad and complex subject and we couldn't possibly cover all of its aspects here. With this book, we
+hope to discuss the necessary features to get your development activity started as well as to enable you to further explore it on your own.
 
-There are lots of people involved in Bitcoin; as some of them have opposing opinions,
-there are resources that express contradictory ideas. However, we always
-attempt to stick to the facts, where opinions do not matter.
+There are lots of people involved in Bitcoin; as some of them have opposing opinions, here you may find
+resources that express contradictory ideas. However, we always
+attempt to stick to the domain of facts, where opinions do not matter.
 
 === Who wrote this?
 
 The main author of this book is Kalle Rosenbaum, and Linnéa Rosenbaum contributed as a co-author. This work
-was commissioned and funded by Chaincode Labs, a development center that runs educational
-programs for developers who want to https://learning.chaincode.com/[learn] about Bitcoin development.
+was commissioned and funded by https://learning.chaincode.com/[Chaincode Labs], a development center that runs educational
+programs for developers who want to learn about Bitcoin development.
 
-Kalle is the author of https://rosenbaum.se/book/["`Grokking Bitcoin`"] (Manning Publications) and is a 
+Kalle is the author of https://rosenbaum.se/book/[_Grokking Bitcoin_] (Manning Publications) and is a 
 seasoned software developer. He's been working professionally with Bitcoin-related development since 
 2015.
 
-Linnéa has a Ph.D. in Electronic Systems. She is the Swedish translator of https://konsensus.network/product/lilla-boken-om-bitcoin/["`The Little Bitcoin Book`"] and co-translator of https://konsensus.network/product/sverige-bitcoinstandarden/["`The Bitcoin Standard`"].  She is  also on the board of the Swedish Bitcoin Association. Her background is in firmware development with a recent shift towards software development.
+Linnéa has a Ph.D. in Electronic Systems. She is the Swedish translator of https://konsensus.network/product/lilla-boken-om-bitcoin/[_The Little Bitcoin Book_] and co-translator of https://konsensus.network/product/sverige-bitcoinstandarden/[_The Bitcoin Standard_].  She is also on the board of the Swedish Bitcoin Association. Her background is in firmware development with a recent shift towards software development.
 
 
 
 === How is this organized?
 
-The book is sectioned into chapters covering different topics. Each
-chapter will guide you through a number of links to articles or
-videos that we recommend reading, and will briefly discuss each
-link. The reported material was written by individuals who have
+The book is sectioned into chapters, each covering a pivotal topic within Bitcoin. Every
+chapter guides you through the relevant information related to the chapter's focus, with the addition of links and QR codes that will take you to articles or
+videos that we recommend reading or watching. The reported material was written by individuals who have
 studied Bitcoin development for a long time.
 
 The links refer to external resources on platforms we cannot
 control. We have therefore saved the linked articles locally in this
-repository, along with info on where it was copied from, and when. The
+repository, along with the information on where it was copied from and when. The
 resources are collected in link:sources/sources.html[a separate
 document] (`sources/sources.adoc`) and organized by the chapter they are
-linked from. The links found in the chapters refer to the original
-sources, but if you don't have an internet connection, the links
-appear dead, or the content seems severely changed, you can read the
+linked to. The links found in the chapters refer to the original
+sources, which should be found online, but in case you don't have an internet connection, the links
+appear dead, or the information seems severely changed, you can read the
 content locally instead.
 
