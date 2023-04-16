@@ -257,8 +257,7 @@ ecosystem. But Bitcoin software deals with real money and, in light of this, dev
 
 In a philosophical
 https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cryptography/[talk
-about cryptography] (you may find the video
-https://youtu.be/Gs9lJTRZCDc?t=2236[here]), Gregory Maxwell wants to
+about cryptography], Gregory Maxwell wants to
 redefine the term "`cryptography`" which he believes to be too narrow. He
 explains that fundamentally _information wants to be free_, and
 makes his definition of cryptography based on that:
@@ -403,10 +402,8 @@ do it.
 Companies, individuals, and organizations who have an interest in
 Bitcoin's continued success can donate funds to developers, either
 directly or through organizations that in turn distribute the funds to
-individual developers. The website polylunar.com has compiled a
-https://polylunar.com/bitcoin-grants-tracker/[list of
-grants] given out by a broad range of individuals, organizations, and
-companies. There are also a number of Bitcoin-focused companies that
+individual developers.
+There are also a number of Bitcoin-focused companies that
 hire skilled developers to let them work full-time on Bitcoin.
 
 === Culture shock

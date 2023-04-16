@@ -1,10 +1,9 @@
 === Bitcoin Q+A - Privacy tips
 
 ****
-* Source: https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/
-* Author: Adam Back and Matt Corallo, transcribed by Bryan Bishop
+* Source: https://bitcoiner.guide/privacytips/
+* Author: BitcoinQ+A
 * Date copied: 2022-05-24
-* Video: https://youtu.be/AvS3tp0qqgA?t=56
 ****
 
 ==== *10 Tips to Interact with Bitcoin More Privately*
