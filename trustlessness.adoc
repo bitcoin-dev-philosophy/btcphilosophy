@@ -179,7 +179,7 @@ builders, the compiler, the kernel, and the hardware.
 To further deepen the topic of reproducible builds, Carl Dong
 https://btctranscripts.com/breaking-bitcoin/2019/bitcoin-build-system/[made
 a presentation about Guix]
-(https://www.youtube.com/watch?v=I2iShmUTEl8[video]) explaining why
+explaining why
 trusting the operating system, libraries, and compilers can be
 problematic, and how to fix that with a system called Guix, which is
 used by Bitcoin Core today.

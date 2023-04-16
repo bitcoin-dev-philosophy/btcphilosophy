@@ -299,7 +299,7 @@ talk about either of them in isolation.
 
 Several techniques have been developed to help people protecting themselves from privacy
 leaks. Among the most obvious ones is, as
-noted by Nakamoto>> in <<blockchainprivacy>>, using unique
+noted by Nakamoto in <<blockchainprivacy>>, using unique
 addresses for every transaction, but several others exist. We're not
 going to teach you how to become a privacy ninja. However, Bitcoin Q+A has
 a https://bitcoiner.guide/privacytips/[quick summary of

@@ -45,7 +45,8 @@ it starts by setting the stage with some useful vocabulary.
 === Vocabulary
 
 According to Wikipedia,
-https://en.wikipedia.org/wiki/Forward_compatibility[*forward compatibility*]
+https://en.wikipedia.org/wiki/Forward_compatibility[_forward
+compatibility_]
 refers to the condition in which an old software can process data
 created by newer softwares, ignoring the parts it doesn't understand.
 
@@ -58,8 +59,9 @@ understand.
 ____
 
 Vice versa,
-https://en.wikipedia.org/wiki/Backward_compatibility[*backward
-compatibility*] refers to when data from an old software is usable on newer
+https://en.wikipedia.org/wiki/Backward_compatibility[_backward
+compatibility_] refers to when data from an old software is usable
+on newer
 softwares. A change is said to be fully compatible if it's both forward
 and backward compatible.
 
@@ -83,7 +85,6 @@ created. Several upgrades have been made throughout the years. In 2017, Eric
 Lombrozo
 https://btctranscripts.com/breaking-bitcoin/2017/changing-consensus-rules-without-breaking-bitcoin/[spoke
 at the Breaking Bitcoin conference]
-(https://www.youtube.com/watch?v=0WCaoGiAOHE&t=1926s[video])
 about Bitcoin's different upgrading mechanisms, pointing out how much they
 have evolved over time. He even explained how Satoshi Nakamoto
 once upgraded Bitcoin through a hard fork.
@@ -111,8 +112,9 @@ ____
 
 He points out that, be it intentionally or not, this hard fork created
 opportunities for future soft forks, namely the Script operators
-(opcodes) OP_NOP1-OP_NOP10. We'll look more into <<cve-2010-5141,this
-code change>> in chapter 9. These opcodes have been used for two soft
+(opcodes) OP_NOP1-OP_NOP10. We'll look more into this
+code change in <<cve-2010-5141>>. These opcodes have
+been used for two soft
 forks so far:
 https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki[BIP65]
 (OP_CHECKLOCKTIMEVERIFY), and
@@ -120,7 +122,9 @@ https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki[BIP113]
 (OP_SEQUENCEVERIFY).
 
 Lombrozo also provides an overview of the way upgrade mechanisms have evolved
-throughout the years, up until 2017. Since then, only one other major upgrade, which we analyze in <<taproot-deployment>>, has been deployed. The long and somewhat chaotic process that led to its activation has helped us gain further insights on upgrading mechanisms in Bitcoin. 
+throughout the years, up until 2017. Since then, only one other
+major upgrade, Taproot (analyzed in <<taproot-deployment>>),
+has been deployed. The long and somewhat chaotic process that led to its activation has helped us gain further insights on upgrading mechanisms in Bitcoin.
 
 [[segwit-upgrade]]
 ==== Segwit upgrade
@@ -221,7 +225,7 @@ After the Segwit deployment, a discussion about deployment mechanisms
 emerged. As noted by Eric Lombrozo in
 https://btctranscripts.com/breaking-bitcoin/2017/changing-consensus-rules-without-breaking-bitcoin/[his
 talk at the Breaking Bitcoin conference]
-(https://www.youtube.com/watch?v=0WCaoGiAOHE&t=1926s[video]) and by
+and by
 Shaolinfry (see <<segwit-upgrade>> above), a miner activated soft fork isn't the ideal upgrade
 mechanism.
 
