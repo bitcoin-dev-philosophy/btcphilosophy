@@ -387,6 +387,7 @@ the files blkXXXX.dat and blkindex.dat. The reason for downloading the
 blockchain data this way, as opposed to synchronizing from scratch, was
 to reduce network bandwidth bottlenecks.
 
+//noqr
 There was a big caveat with this: the data users would download from
 knightmb https://bitcoin.stackexchange.com/a/113682/69518[weren't
 verified by the Bitcoin software] at startup. The blkindex.dat file
@@ -394,6 +395,7 @@ contained the UTXO set, and the software would accept any data therein
 as if it had already verified it. knightmb could have manipulated the
 data to give himself or anyone else some bitcoins.
 
+//noqr
 Again, people seemed to go along with this, and the reversal of the
 invalid block and its successors was successful. Miners started
 working on a new successor to block
@@ -669,6 +671,7 @@ ____
 The alert page instructed people to wait for 30 additional confirmations
 than they normally would in case they were using older versions of Bitcoin Core.
 
+//noqr
 The split mentioned above occurred on 2015-07-04 at 02:10 UTC after block
 height
 https://mempool.space/block/000000000000000006a320d752b46b532ec0f3f815c5dae467aff5715a6e579e[363730]. This
