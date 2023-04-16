@@ -302,6 +302,7 @@ them on the Bitcoin Wiki]. In his article he explained some properties
 of BIP8, which at that time had some recent changes made in order to make it
 more flexible.
 
+//noqr
 [quote, David Harding, Taproot Activation Proposals on the Bitcoin Wiki (2020)]
 ____
 At the time this document is being written,
@@ -313,6 +314,7 @@ forced activation is a boolean parameter chosen when a soft fork’s
 activation parameters are set either for the initial deployment or
 updated in a later deployment.
 
+//noqr
 BIP8 without forced activation is very similar to
 https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki[BIP9]
 version bits with timeout and delay, with the only significant
@@ -398,6 +400,7 @@ end the debate (for now, if activation is successful) or give us some
 actual data upon which to base future taproot activation proposals.
 ____
 
+//noqr
 This deployment mechanism was refined over the course of two months
 and then released in
 https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.1.md#taproot-soft-fork[Bitcoin

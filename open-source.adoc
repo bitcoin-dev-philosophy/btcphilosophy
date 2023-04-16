@@ -295,6 +295,7 @@ Below is a distilled version of that list:
 While this is not the ultimate guide to success, it can be very helpful
 to go through these points when doing selection cryptography.
 
+//noqr
 Due to the issues mentioned above by Maxwell, Bitcoin Core tries
 really hard to
 https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md[minimize its exposure to third party libraries]. Of course, you can't

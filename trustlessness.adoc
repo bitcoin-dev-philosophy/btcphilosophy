@@ -214,6 +214,7 @@ ____
 Don't trust, verify.
 ____
 
+//noqr
 This alludes to the phrase
 "https://en.wikipedia.org/wiki/Trust,_but_verify[trust, but verify]"
 that former U.S. president Ronald Reagan used in the context of

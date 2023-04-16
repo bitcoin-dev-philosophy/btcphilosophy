@@ -61,7 +61,7 @@ else
 	convert $< -resize 1024x1024\> $@
 endif
 
-$(CSS) $(SOURCESCSS) $(DOCINFO) $(SOURCESDOCINFO) $(ALLADOC): $(B)/%: %
+$(CSS) $(SOURCESCSS) $(DOCINFO) $(SOURCESDOCINFO): $(B)/%: %
 	@mkdir -p $(dir $@)
 	cp $< $@
 

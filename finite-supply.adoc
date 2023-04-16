@@ -34,6 +34,7 @@ ____
 This leaves us with *20999817.31308491* BTC (taking everything up to
 block 528333 into account)
 
+//noqr
 \... However, various wallets have been lost or stolen, transactions
 have been sent to the wrong address, people forgot they owned
 bitcoin. The totals of this may well be millions. People have tried to
@@ -123,6 +124,7 @@ extending it. Bitcoin Optech has a specific
 https://bitcoinops.org/en/topics/fee-sniping/[section on this
 behavior], called _fee sniping_, written by David Harding:
 
+//noqr
 [quote,"David Harding, fee sniping", Bitcoin Optech website]
 ____
 Fee sniping is a problem that may occur as Bitcoin’s subsidy continues
