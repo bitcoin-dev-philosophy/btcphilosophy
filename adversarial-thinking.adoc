@@ -186,3 +186,16 @@ resistance, otherwise you'd better spend your time on other
 projects. Acknowledging that axiom helps you focusing your development
 efforts on the real problems at hand: coding around state-level
 adversaries. In other words, think adversarially.
+
+=== Conclusion
+
+A decentralized system can't have accountability outside the system
+itself, therefore Bitcoin must prevent malicious behavior more
+rigorously than traditional systems. Adversarial thinking is
+imperative in such a system.
+
+To keep Bitcoin safe you need to know its enemies and their
+incentives. Most of the threats seem to boil down to nation states,
+who have enourmous economic power, through taxation and money
+printing. They probably won't give up their money printing privileges
+easily.

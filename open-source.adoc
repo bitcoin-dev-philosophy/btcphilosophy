@@ -483,3 +483,19 @@ practices].
 New (and old) developers can get frustrated by this. But, as is customary in
 open source software, you can always fork the repository, merge
 whatever you want to your own fork, and build and run your own binary.
+
+=== Conclusion
+
+Bitcoin Core and most other Bitcoin software is open source, which
+means that anyone is free to distribute, modify, and use the software
+as they please. The Bitcoin Core repository on GitHub is currently the
+focal point of Bitcoin development, but that status can change if
+people start to distrust its maintainers, or the website itself.
+
+Open source allows for permissionless development in, and on top of
+Bitcoin. Whether you write code, review code or protocols; open source
+is what enables you to do it, pseudonomously or not.
+
+The development process around Bitcoin is radically open, which can
+make Bitcoin look like a toxic and inefficient place, but that's what
+keeps Bitcoin resilient against malicious actors.

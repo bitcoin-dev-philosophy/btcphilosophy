@@ -318,3 +318,19 @@ tremendous.
 No matter what you think about Bitcoin, its decentralized nature makes
 it difficult to control. Bitcoin exists, and there's nothing you can do
 about it. It's something to be studied, not debated.
+
+=== Conclusion
+
+We distinguish between full node decentralization and mining
+decentralization. Mining decentralization is a means to achieve
+censonship resistance, while full node decentralization is what keeps
+the consensus rules of the network hard to change without broad
+support among users.
+
+The decentralized nature of Bitcoin allows for neutrality towards
+developers, users, and miners. Anyone is free to participate without
+asking for permission.
+
+Decentralized systems can be hard to wrap your head around, but there
+are some mental models that may help, for example the English
+language, or fish schools.

@@ -417,3 +417,15 @@ Many years have passed since Maxwell wrote the piece above, and his
 words still stand correct. The success of the Lightning Network proves
 that layering is indeed a way forward to increase the utility of
 Bitcoin.
+
+
+=== Conclusion
+
+We've discussed various ways through which one might want to scale
+Bitcoin, increase Bitcoin's usage capacity. Scaling has been a concern
+in Bitcoin since its very early days.
+
+We know today that Bitcoin doesn't scale well vertically ("`buy bigger
+hardware`") or horizontally ("`verify only parts of the data`"), but
+rather inward ("`do more with less`") and in layers ("`build protocols
+on top of Bitcoin`").
