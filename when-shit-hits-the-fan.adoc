@@ -457,7 +457,7 @@ nodes to reorganise to the pre-0.8 chain.
 ____
 
 The quick action that the mining pools BTCGuild and Slush took was
-imperative in this emergency. They were ablt to tip the majority of the hash power
+imperative in this emergency. They were able to tip the majority of the hash power
 over to the pre-0.8 branch of the split, and thus help restore
 consensus. This gave developers the time to figure out a sustainable fix.
 
