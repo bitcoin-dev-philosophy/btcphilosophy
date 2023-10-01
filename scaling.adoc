@@ -30,6 +30,11 @@ with a brief overview of Bitcoin's history within the context of scaling.
 
 === History
 
+[qrcode,role=qrcode]
+----
+https://example.com/d8388cea
+----
+
 Scaling has been a focal point of discussion since the genesis of Bitcoin. The
 very first sentence of the
 https://www.metzdowd.com/pipermail/cryptography/2008-November/014814.html[very
@@ -59,6 +64,11 @@ about changing a parameter in the source code, a change that didn't
 fundamentally solve anything but pushed the problem of scaling
 further into the future, building technical debt.
 
+[qrcode,role=qrcode]
+----
+https://example.com/b110e5c8
+----
+
 In 2015, a conference called https://scalingbitcoin.org/[Scaling
 Bitcoin] was held in Montreal, with a follow-up conference six months
 later in Hong Kong and thereafter in a number of other locations around the world. The focus was precisely on how to
@@ -66,6 +76,11 @@ address scaling. Many Bitcoin developers and other enthusiasts gathered at these
 discuss various scaling issues and proposals. Most of these
 discussions didn't revolve around block size increases but on more long-term
 solutions.
+
+[qrcode,role=qrcode]
+----
+https://example.com/b535df1b
+----
 
 After the Hong Kong conference in December 2015, Gregory Maxwell
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-December/011865.html[summarized
@@ -183,6 +198,11 @@ across multiple machines. While this is a prevalent scaling approach
 among popular websites and databases, it's not easily done in
 Bitcoin.
 
+[qrcode,role=qrcode]
+----
+https://example.com/d04edd45
+----
+
 Many people refer to this Bitcoin scaling approach as _sharding_. Basically, it consists in letting
 each full node verify just a portion of the blockchain. Peter Todd
 has put a lot of thought into the concept of sharding. He wrote a
@@ -235,6 +255,11 @@ to the ongoing work constantly done by many developers to optimize the
 algorithms already in place, so that we can do more within the existing
 limits of the system.
 
+[qrcode,role=qrcode]
+----
+https://example.com/d854a7e9
+----
+
 The improvements that have been achieved through inward scaling are
 impressive, to say the least. To give you a general idea of the
 improvements over the years, Jameson Lopp
@@ -242,7 +267,7 @@ https://blog.lopp.net/bitcoin-core-performance-evolution/[has run
 benchmark tests] on blockchain synchronization, comparing many
 different versions of Bitcoin Core going back to version 0.8.
 
-.Initial block download performance of various versions of Bitcoin Core. On the Y-axis is the block height synced and on the X-axis is the time it took to sync to that height. Source: https://blog.lopp.net/bitcoin-core-performance-evolution/
+.Initial block download performance of various versions of Bitcoin Core. On the Y-axis is the block height synced and on the X-axis is the time it took to sync to that height.
 image::Bitcoin-Core-Sync-Performance-1.png[{big-width}]
 
 The different lines represent different versions of Bitcoin Core. The
@@ -256,6 +281,16 @@ The improvements could be categorized as either saving space (RAM, disk,
 bandwidth, etc.) or saving computational power. Both categories
 contribute to the improvements in the diagram above.
 
+[qrcode,role=qrcode]
+----
+https://example.com/dc5d9f77
+----
+
+[qrcode,role=qrcode]
+----
+https://example.com/4be3b7ac
+----
+
 A good example of computational improvement can be found in the
 https://github.com/bitcoin-core/secp256k1[libsecp256k1] library, which,
 among other things, implements the cryptographic primitives needed to
@@ -265,7 +300,7 @@ https://twitter.com/pwuille/status/1450471673321381896[Twitter
 thread] showcasing the performance improvements achieved through various pull
 requests.
 
-.Performance of signature verification over time, with significant pull requests marked on the timeline. Source: https://twitter.com/pwuille/status/1450471673321381896
+.Performance of signature verification over time, with significant pull requests marked on the timeline.
 image::libsecp256k1speedups.png[{half-width}]
 
 The graph shows the trend for two different 64-bit CPU types, namely ARM and x86.
@@ -274,6 +309,11 @@ available on x86 compared to the ARM architecture, which has fewer and
 more generic instructions. However, the general trend is the same for both
 architectures. Note that the Y-axis is logarithmic, which makes the
 improvements look less impressive than they actually are.
+
+[qrcode,role=qrcode]
+----
+https://example.com/9985829a
+----
 
 There are also several good examples of space-saving improvements that contributed to
 performance enhancement. In a
@@ -368,6 +408,11 @@ during the protocol's life cycle. All the juicy action happens
 _off-chain_. We've seen how this can be a win for privacy
 if done right, but it can also be an advantage for scalability.
 
+[qrcode,role=qrcode]
+----
+https://example.com/5a4403c3
+----
+
 In a https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/[Reddit post] titled "`A trip to the moon requires a rocket with
 multiple stages or otherwise the rocket equation will eat your
 lunch... packing everyone in clown-car style into a trebuchet and
@@ -417,3 +462,4 @@ Many years have passed since Maxwell wrote the piece above, and his
 words still stand correct. The success of the Lightning Network proves
 that layering is indeed a way forward to increase the utility of
 Bitcoin.
+

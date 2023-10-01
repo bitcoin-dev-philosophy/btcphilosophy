@@ -39,6 +39,11 @@ entities. It's carried out collectively by all the actors who want
 to participate in it; this miners`' collective is a dynamic set of users. Anyone can
 join or leave as they wish. This property makes Bitcoin censorship-resistant.
 
+[qrcode,role=qrcode]
+----
+https://example.com/99c6d0c0
+----
+
 If Bitcoin were centralized, it would be vulnerable to those who
 wished to censor it, such as governments. It would meet the same fate
 as earlier attempts to create digital money. In the introduction of
@@ -95,6 +100,11 @@ remained just as censorable as it was before.
 
 None of these options are beneficial to the user.
 
+[qrcode,role=qrcode]
+----
+https://example.com/6fac08a1
+----
+
 Censorship resistance through decentralization is what separates Bitcoin from
 other money systems, but it is not an easy thing to accomplish due to
 the _double-spending problem_. This is the problem of making sure no
@@ -109,6 +119,11 @@ In this paper, we propose a solution to the double-spending problem
 using a peer-to-peer distributed timestamp server to generate
 computational proof of the chronological order of transactions.
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/f09c6f7d
+----
 
 Here he uses the peculiar-sounding phrase "`peer-to-peer distributed timestamp
 server`". The keyword here is _distributed_, which in this
@@ -167,6 +182,11 @@ The user goes from directly enforcing the network consensus rules to trusting th
 someone else will. Now suppose that most users delegate consensus enforcement to a
 trusted entity. In that case, the network can quickly spiral into centralization, and the
 network rules can be changed by conspiring malicious actors.
+
+[qrcode,role=qrcode]
+----
+https://example.com/2860324b
+----
 
 In
 https://bitcoinmagazine.com/technical/decentralist-perspective-bitcoin-might-need-small-blocks-1442090446[a
@@ -241,6 +261,11 @@ At all levels, trying to impose restrictions on who gets to use
 Bitcoin for what will hurt Bitcoin to the point where it's no longer
 living up to its value proposition.
 
+[qrcode,role=qrcode]
+----
+https://example.com/64827538
+----
+
 Pieter Wuille https://bitcoin.stackexchange.com/a/92055/69518[answers
 a question on Stack Exchange] about how the blockchain relates to
 normal databases. He explains how permissionlessness is achievable
@@ -265,6 +290,11 @@ participation, or mining, requires economic incentives built into the
 system itself.
 
 === Grokking decentralization
+
+[qrcode,role=qrcode]
+----
+https://example.com/8bd44e20
+----
 
 A compelling aspect of Bitcoin is how hard it is to grasp
 that no one controls it. There are no committees or executives in
@@ -293,6 +323,11 @@ ____
 [.right.half-width.thumb,pdfwidth=300px,float=right]
 image::fishschool.jpg[]
 
+[qrcode,role=qrcode]
+----
+https://example.com/00d7c12f
+----
+
 The way Bitcoin works through decentralization resembles the
 extraordinary collective intelligence found among many species in
 nature. Computer scientist Radhika Nagpal speaks in a
@@ -318,3 +353,4 @@ tremendous.
 No matter what you think about Bitcoin, its decentralized nature makes
 it difficult to control. Bitcoin exists, and there's nothing you can do
 about it. It's something to be studied, not debated.
+

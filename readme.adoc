@@ -40,13 +40,33 @@ attempt to stick to the domain of facts, where opinions do not matter.
 
 === Who wrote this?
 
+[qrcode,role=qrcode]
+----
+https://example.com/748e4109
+----
+
 The main author of this book is Kalle Rosenbaum, and Linnéa Rosenbaum contributed as a co-author. This work
 was commissioned and funded by https://learning.chaincode.com/[Chaincode Labs], a development center that runs educational
 programs for developers who want to learn about Bitcoin development.
 
+[qrcode,role=qrcode]
+----
+https://example.com/7543f04c
+----
+
 Kalle is the author of https://rosenbaum.se/book/[_Grokking Bitcoin_] (Manning Publications) and is a 
 seasoned software developer. He's been working professionally with Bitcoin-related development since 
 2015.
+
+[qrcode,role=qrcode]
+----
+https://example.com/30d8a7b4
+----
+
+[qrcode,role=qrcode]
+----
+https://example.com/f3d3ce0a
+----
 
 Linnéa has a Ph.D. in Electronic Systems. She is the Swedish translator of https://konsensus.network/product/lilla-boken-om-bitcoin/[_The Little Bitcoin Book_] and co-translator of https://konsensus.network/product/sverige-bitcoinstandarden/[_The Bitcoin Standard_].  She is also on the board of the Swedish Bitcoin Association. Her background is in firmware development with a recent shift towards software development.
 
@@ -68,4 +88,5 @@ linked to. The links found in the chapters refer to the original
 sources, which should be found online, but in case you don't have an internet connection, the links
 appear dead, or the information seems severely changed, you can read the
 content locally instead.
+
 

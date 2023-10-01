@@ -12,11 +12,16 @@ about how Bitcoin's open source culture can look really weird from the
 outside, and why this perceived weirdness is really a sign of good
 health.
 
+[qrcode,role=qrcode]
+----
+https://example.com/4ac12271
+----
+
 Most Bitcoin softwares, and especially Bitcoin Core, is open
 source. This means that the source code of the software is made
 available to the general public for scrutiny, tinkering, modification,
 and redistribution. The definition of open source at
-https://opensource.org/osd includes, among others, the following
+https://opensource.org/osd[] includes, among others, the following
 important points:
 
 [quote, The Open Source Definition, Open Source Initiative website]
@@ -39,6 +44,11 @@ Derived Works:: The license must allow modifications and derived
 works, and must allow them to be distributed under the same terms as
 the license of the original software.
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/2810d4a8
+----
 
 Bitcoin Core adheres to this definition by being distributed under the
 https://github.com/bitcoin/bitcoin/blob/master/COPYING[MIT License]:
@@ -72,6 +82,11 @@ Bitcoin.
 [[softwaremaintenance]]
 === Software maintenance
 
+[qrcode,role=qrcode]
+----
+https://example.com/381eaff1
+----
+
 Bitcoin Core's source code is maintained in a Git repository hosted on
 https://github.com/bitcoin/bitcoin[GitHub]. Anyone can clone that very
 repository without asking for any permission, and then inspect, build, or make
@@ -80,6 +95,11 @@ copies of the repository spread throughout the globe. These are
 all copies of the same repository, so what makes this specific GitHub
 Bitcoin Core repository so special? Technically it's not special at all,
 but socially it has become the focal point of Bitcoin development.
+
+[qrcode,role=qrcode]
+----
+https://example.com/5ab278ac
+----
 
 Bitcoin and security expert Jameson Lopp
 explains this very
@@ -106,6 +126,11 @@ No one controls Bitcoin.
 
 No one controls the focal point for Bitcoin development.
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/63f1756b
+----
 
 Bitcoin Core developer Eric Lombrozo talks further about the
 development process in his
@@ -147,6 +172,7 @@ to develop systems on top of Bitcoin, without asking for any
 permission. We've seen countless successful software projects that were
 built on top of Bitcoin, such as:
 
+//noqr
 Lightning Network:: A payment network that allows for fast payment of
 very small amounts. It requires very few on-chain Bitcoin
 transactions. Various inter-operable implementations exist, such as
@@ -185,6 +211,11 @@ interesting and important option to the table: you can write and
 publish code, in Bitcoin Core or any other open source project,
 without revealing your identity.
 
+[qrcode,role=qrcode]
+----
+https://example.com/6ceeb78f
+----
+
 Many developers choose this option by operating under a pseudonym
 and trying to keep it detached from their true identity. The reasons
 for doing this can vary from developer to developer. One pseudonymous
@@ -207,6 +238,11 @@ speaking, you should donate to me based on the utility you find my
 articles and my work on Bitcoin and the Lightning Network.
 ____
 
+[qrcode,role=qrcode]
+----
+https://example.com/6bf93700
+----
+
 In his case, the reason for using a pseudonym is to be judged on his
 merits and not on who the person or persons behind the
 pseudonym is or are. Interestingly, he revealed in an
@@ -222,6 +258,11 @@ originally intended to be a disposable pseudonym that could be
 abandoned in such a case. However it seems to have garnered a mostly
 positive reputation, so I have retained it
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/aba12943
+----
 
 Using a pseudonym indeed allows you to speak more freely without putting
 your personal reputation at risk should you say something stupid or
@@ -254,10 +295,14 @@ Open source developers often make use of open source libraries developed by
 other people. This is a natural and awesome part of any healthy
 ecosystem. But Bitcoin software deals with real money and, in light of this, developers need to be extra careful when choosing which third party libraries it should depend on.
 
+[qrcode,role=qrcode]
+----
+https://example.com/926e5d32
+----
+
 In a philosophical
 https://btctranscripts.com/greg-maxwell/2015-04-29-gmaxwell-bitcoin-selection-cryptography/[talk
-about cryptography] (you may find the video
-https://youtu.be/Gs9lJTRZCDc?t=2236[here]), Gregory Maxwell wants to
+about cryptography], Gregory Maxwell wants to
 redefine the term "`cryptography`" which he believes to be too narrow. He
 explains that fundamentally _information wants to be free_, and
 makes his definition of cryptography based on that:
@@ -294,6 +339,7 @@ Below is a distilled version of that list:
 While this is not the ultimate guide to success, it can be very helpful
 to go through these points when doing selection cryptography.
 
+//noqr
 Due to the issues mentioned above by Maxwell, Bitcoin Core tries
 really hard to
 https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md[minimize its exposure to third party libraries]. Of course, you can't
@@ -328,6 +374,11 @@ BIP, or just a loosely described idea. The phases are usually not performed
 in any strict top-down manner, indeed multiple phases can happen
 simultaneously, and sometimes you go back and forth between
 them. Different people may also provide feedback during different phases.
+
+[qrcode,role=qrcode]
+----
+https://example.com/da4deccf
+----
 
 One of the most prolific code reviewers on Bitcoin Core is Jon
 Atack. He wrote
@@ -366,6 +417,11 @@ The second half of the post consists of some useful hands-on technical
 guidance on how to actually do the reviewing, and provides links to
 important documentation for further reading.
 
+[qrcode,role=qrcode]
+----
+https://example.com/fddeea26
+----
+
 Bitcoin Core developer and code reviewer Gloria Zhao has written
 https://github.com/glozow/bitcoin-notes/blob/master/review-checklist.md[an
 article] containing questions she usually asks herself during a
@@ -401,10 +457,8 @@ do it.
 Companies, individuals, and organizations who have an interest in
 Bitcoin's continued success can donate funds to developers, either
 directly or through organizations that in turn distribute the funds to
-individual developers. The website polylunar.com has compiled a
-https://polylunar.com/bitcoin-grants-tracker/[list of
-grants] given out by a broad range of individuals, organizations, and
-companies. There are also a number of Bitcoin-focused companies that
+individual developers.
+There are also a number of Bitcoin-focused companies that
 hire skilled developers to let them work full-time on Bitcoin.
 
 === Culture shock
@@ -412,6 +466,11 @@ hire skilled developers to let them work full-time on Bitcoin.
 People sometimes get the impression that there's a lot of infighting
 and endless heated debates among Bitcoin developers, and that they are
 incapable of making decisions.
+
+[qrcode,role=qrcode]
+----
+https://example.com/920bfe3b
+----
 
 For example, the Taproot deployment mechanism, described in <<taproot-deployment>>,
 was discussed over a long period of time during which two "`camps`" formed. One
@@ -421,6 +480,11 @@ wanted to enforce the rules after that moment no matter what. Michael Folkson
 summarizes the arguments from the two camps in an
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-February/018380.html[email]
 to the Bitcoin-dev mailing list.
+
+[qrcode,role=qrcode]
+----
+https://example.com/0da07144
+----
 
 The debate went on seemingly forever, and it was really hard to
 see any consensus on this forming any time soon. This got people
@@ -464,11 +528,21 @@ Most Bitcoin developers would argue that this openness brings about a good and
 healthy environment, and even that it is necessary for producing the best
 outcome.
 
+[qrcode,role=qrcode]
+----
+https://example.com/5dce8791
+----
+
 As hinted in <<threats>>, the second
 bullet above can be very beneficial but comes with a downside. An attacker could use stalling
 tactics, like the ones outlined in the https://www.gutenberg.org/ebooks/26184[Simple
 Sabotage Field Manual], to distort the decision making and development
 process.
+
+[qrcode,role=qrcode]
+----
+https://example.com/71246804
+----
 
 Another thing worth mentioning is that, as noted in <<selectioncryptography>>,
 since Bitcoin is money and Bitcoin Core secures unfathomable amounts
@@ -484,3 +558,4 @@ practices].
 New (and old) developers can get frustrated by this. But, as is customary in
 open source software, you can always fork the repository, merge
 whatever you want to your own fork, and build and run your own binary.
+

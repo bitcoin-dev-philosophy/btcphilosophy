@@ -45,6 +45,11 @@ These discussion questions are not just a recap of the content in "`Bitcoin deve
 
 === Open source
 
+[qrcode,role=qrcode]
+----
+https://example.com/381eaff1
+----
+
 * Only a handful of maintainers have the necessary GitHub permissions to merge code into into the https://github.com/bitcoin/bitcoin[Bitcoin Core] repository. Isn't that at odds with a permissionless network?
 * Is the open source development process prone to a sybil attack? If so, how would you counter that?
 * What are the benefits and downsides of relying on third party open source libraries, and what is the approach taken with Bitcoin Core?
@@ -59,3 +64,4 @@ These discussion questions are not just a recap of the content in "`Bitcoin deve
 * Why is vertical scaling much more difficult in a decentralized system? What about horizontal scaling?
 * We don't seem to be anywhere near having consensus on how we could onboard the entire world onto Bitcoin. Shouldn't Satoshi have at least thought of a path of getting there, before mining the first block in 2009?
 * How would you classify (vertical, horizontal, inward, or not a scaling technique) each of the following: sharding, blocksize increase, SegWit, SPV nodes, centralized exchanges, Lightning Network, block interval decrease, Taproot, sidechains
+

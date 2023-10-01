@@ -21,6 +21,11 @@ security assumption is that a majority of the network's hashpower is
 honest, meaning that they play by the rules. If these assumptions are
 proven wrong, then Bitcoin is in trouble.
 
+[qrcode,role=qrcode]
+----
+https://example.com/2bfbf27c
+----
+
 In 2015 Andrew Poelstra
 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/[gave
 a talk] at the Scaling Bitcoin conference in Hong Kong, during which he
@@ -49,6 +54,11 @@ Poelstra goes on to mention how Bitcoin is a new kind of system; it's
 more nebulous than, for example, a signing protocol which has very
 clear-cut security assumptions.
 
+[qrcode,role=qrcode]
+----
+https://example.com/22805261
+----
+
 On his personal blog, software engineer Jameson Lopp,
 https://blog.lopp.net/bitcoins-security-model-a-deep-dive/[dives into this]:
 
@@ -65,6 +75,11 @@ formally prove to be secure. A proof is probably not possible due to
 the complexity of the system itself.
 
 === Not only for Bitcoin experts
+
+[qrcode,role=qrcode]
+----
+https://example.com/01787f23
+----
 
 The importance of adversarial thinking also extends to everyday
 Bitcoin users to some degree, not only to hardcore Bitcoin developers and experts. 
@@ -89,6 +104,11 @@ best to use Bitcoin in a trustless manner.
 
 [[threats]]
 === Threats
+
+[qrcode,role=qrcode]
+----
+https://example.com/7bd74eba
+----
 
 There are a lot of known weaknesses in Bitcoin, and many of them are
 actively being exploited. To get a glimpse of that, have a look at the
@@ -125,6 +145,11 @@ The above are examples of real threats that need to be taken care of.
 .Excerpt from the Simple Sabotage Field Manual
 image::sabotage-manual.png[role="right half-width"]
 
+[qrcode,role=qrcode]
+----
+https://example.com/5dce8791
+----
+
 [[sabotage]]
 To better understand the adversary's mind, it might be helpful to
 get a glimpse into how they operate. A US government body named
@@ -154,6 +179,11 @@ the inside. Since Bitcoin is a form of money that competes with
 established fiat currencies, chances are that states will regard
 Bitcoin as an enemy.
 --
+
+[qrcode,role=qrcode]
+----
+https://example.com/ebb0e327
+----
 
 [[axiomofresistance]]
 Eric Voskuil
@@ -186,3 +216,4 @@ resistance, otherwise you'd better spend your time on other
 projects. Acknowledging that axiom helps you focusing your development
 efforts on the real problems at hand: coding around state-level
 adversaries. In other words, think adversarially.
+

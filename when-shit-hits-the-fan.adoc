@@ -25,6 +25,11 @@ would like this issue to remain unexploited. What do you do? If you
 remain silent about it, someone else will probably discover the issue,
 and you can't be sure that person won't be malicious.
 
+[qrcode,role=qrcode]
+----
+https://example.com/d818b994
+----
+
 When a security issue is discovered, the person discovering it should
 employ _responsible disclosure_ which is a term often used among
 Bitcoin developers. The term is
@@ -46,16 +51,26 @@ developed and applied and other factors, this period may vary between
 a few days and several months.
 ____
 
+[qrcode,role=qrcode]
+----
+https://example.com/381eaff1
+----
+
 This means that if you find a security issue, you should
 report this to the team responsible for the system. But what does this
-mean in the context of Bitcoin? As noted in <<softwaremaintenance,
-the Open source chapter>>, no one controls Bitcoin, but there's currently a
+mean in the context of Bitcoin? As noted in <<softwaremaintenance>>,
+no one controls Bitcoin, but there's currently a
 focal point for Bitcoin development, namely the
 https://github.com/bitcoin/bitcoin[Bitcoin Core Github
 repository]. The maintainers of said repository are responsible for
 the code in it, but they're not responsible for the system as a
 whole - no one is. Nevertheless, the general best practice is to send
 an email to security@bitcoincore.org.
+
+[qrcode,role=qrcode]
+----
+https://example.com/0fdc10d1
+----
 
 In an
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/015002.html[email
@@ -109,6 +124,11 @@ really experienced developers can't spot the vulnerability even
 knowing that the patch fixes one, it will probably be really hard for
 others to discover it.
 
+[qrcode,role=qrcode]
+----
+https://example.com/9f7392b0
+----
+
 The thread that led to this email was discussing whether, when, and how
 to disclose vulnerabilities to altcoins and other implementations of
 Bitcoin. There is no clear answer here. "`Helping the good guys`"
@@ -129,6 +149,11 @@ knowledge of a vulnerability is a delicate matter and you might be
 receiving knowledge with more serious direct or indirect impact than
 originally described.
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/9a4c0cba
+----
 
 Also leading up to Town's email above was a
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/014977.html[post]
@@ -169,6 +194,11 @@ Bitcoin started out as a one-man (at least that's what its creator's
 pseudonym suggests) project, and bitcoin had initially little to no value. As
 such, vulnerabilities and bug fixes were not as rigorously handled as
 they are today.
+
+[qrcode,role=qrcode]
+----
+https://example.com/a07154e0
+----
 
 The Bitcoin wiki has a
 https://en.bitcoin.it/wiki/Common_Vulnerabilities_and_Exposures[list
@@ -221,7 +251,7 @@ immediately failed, instead.
 ----
 
 Satoshi made this change locally and built an executable binary with
-version 0.3.5 from it. Then he posted on Bitcointalk forum "`\\*** ALERT \***
+version 0.3.5 from it. Then he posted on Bitcointalk forum "`\*** ALERT \***
 Upgrade to 0.3.5 ASAP`", urging users to install this binary version
 of his, without presenting the source code for it.
 
@@ -229,6 +259,16 @@ of his, without presenting the source code for it.
 ____
 Please upgrade to 0.3.5 ASAP!  We fixed an implementation bug where it was possible that bogus transactions could be accepted.  Do not accept Bitcoin transactions as payment until you upgrade to version 0.3.5!
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/aff07473
+----
+
+[qrcode,role=qrcode]
+----
+https://example.com/4929309d
+----
 
 The original message was later edited and is no longer available in its full
 form. The above snippet is from a
@@ -241,6 +281,11 @@ ____
 Haven't had time to update the SVN yet.  Wait for 0.3.6, I'm building
 it now.  You can shut down your node in the meantime.
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/e99e44bf
+----
 
 And 35 minutes later, https://bitcointalk.org/index.php?topic=626.msg6480#msg6480[he wrote]
 
@@ -291,6 +336,11 @@ and bitcoin's value was close to zero. If this bug response was
 played out today, it would be considered a complete shit-show for
 multiple reasons:
 
+[qrcode,role=qrcode]
+----
+https://example.com/6111048e
+----
+
 * Satoshi made a binary-only release of 0.3.5 containing the fix. No
 patch or code was provided, maybe as a measure to obfuscate the issue.
 * 0.3.5 https://bitcointalk.org/index.php?topic=626.msg6455#msg6455[didn't even work].
@@ -304,6 +354,11 @@ was possible to do this, it might have been a sensible thing to do.
 
 [[combined-output-overflow]]
 ==== 2010-08-15 Combined output overflow (CVE-2010-5139)
+
+[qrcode,role=qrcode]
+----
+https://example.com/d9857a0a
+----
 
 In mid-August 2010, Bitcointalk forum user jgarzik, a.k.a. Jeff Garzik,
 https://bitcointalk.org/index.php?topic=822.msg9474#msg9474[discovered
@@ -341,6 +396,11 @@ In this case, the bug had been disclosed and published through an actual exploit
 had been created, which severely diluted the money supply of around 3.7
 million coins that existed at that time.
 
+[qrcode,role=qrcode]
+----
+https://example.com/316ba2c0
+----
+
 In a related thread,
 https://bitcointalk.org/index.php?topic=823.msg9531#msg9531[Satoshi
 posted] that he'd appreciate it if people stopped mining (or _generating_,
@@ -356,6 +416,16 @@ A first patch will be in SVN rev 132.  It's not uploaded yet.  I'm
 pushing some other misc changes out of the way first, then I'll upload
 the patch for this.
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/90ca248e
+----
+
+[qrcode,role=qrcode]
+----
+https://example.com/423476a5
+----
 
 His plan was to make a soft fork to make transactions like the one
 discussed here invalid, thus invalidating the blocks (especially block
@@ -387,6 +457,7 @@ the files blkXXXX.dat and blkindex.dat. The reason for downloading the
 blockchain data this way, as opposed to synchronizing from scratch, was
 to reduce network bandwidth bottlenecks.
 
+//noqr
 There was a big caveat with this: the data users would download from
 knightmb https://bitcoin.stackexchange.com/a/113682/69518[weren't
 verified by the Bitcoin software] at startup. The blkindex.dat file
@@ -394,6 +465,7 @@ contained the UTXO set, and the software would accept any data therein
 as if it had already verified it. knightmb could have manipulated the
 data to give himself or anyone else some bitcoins.
 
+//noqr
 Again, people seemed to go along with this, and the reversal of the
 invalid block and its successors was successful. Miners started
 working on a new successor to block
@@ -431,6 +503,11 @@ that didn't directly reveal what the issue was.
 [[march2013split]]
 ==== 2013-03-11 DB locks issue 0.7.2 - 0.8.0 (CVE-2013-3220)
 
+[qrcode,role=qrcode]
+----
+https://example.com/cdda8bd8
+----
+
 A very interesting an educationally valuable issue surfaced in March
 2013. It appeared that the blockchain had split (although the word
 "`fork`" is used in the quote below) after block 225429. The details
@@ -460,6 +537,11 @@ The quick action that the mining pools BTCGuild and Slush took was
 imperative in this emergency. They were able to tip the majority of the hash power
 over to the pre-0.8 branch of the split, and thus help restore
 consensus. This gave developers the time to figure out a sustainable fix.
+
+[qrcode,role=qrcode]
+----
+https://example.com/eb312495
+----
 
 What's also very interesting in this issue is that version 0.7.2 was
 incompatible with itself, as was the case with prior
@@ -520,6 +602,11 @@ BIP66 is interesting because it highlights the importance of
 * deployment without revealing the vulnerability
 * mining on top of verified blocks
 
+[qrcode,role=qrcode]
+----
+https://example.com/1644e2c0
+----
+
 BIP66 was a proposal to tighten up the rules for signature encodings
 in Bitcoin Script. The
 https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki#motivation[motivation]
@@ -531,6 +618,11 @@ The BIP activated on July 4, 2015. However, while the above is true,
 BIP66 also fixes a much more severe issue not mentioned in the BIP.
 
 ===== The vulnerability
+
+[qrcode,role=qrcode]
+----
+https://example.com/98084430
+----
 
 The full disclosure of this issue was published on July 28 2015 by
 Pieter Wuille in an
@@ -595,6 +687,11 @@ more complete way.
 
 ===== After discovery
 
+[qrcode,role=qrcode]
+----
+https://example.com/35e5e92e
+----
+
 OpenSSL released new versions of their software with patches that, if
 used in Bitcoin since the beginning, would have solved the
 issue. However, using any new version of OpenSSL only in a
@@ -648,6 +745,11 @@ acceptance.
 [[bip66splits]]
 ===== Splits due to validationless mining
 
+[qrcode,role=qrcode]
+----
+https://example.com/d8436636
+----
+
 Unfortunately, the story of BIP66 didn't end there. When BIP66 was
 activated, it turned out quite messy because some miners didn't verify
 the blocks they were trying to extend. This is called validationless mining,
@@ -669,6 +771,7 @@ ____
 The alert page instructed people to wait for 30 additional confirmations
 than they normally would in case they were using older versions of Bitcoin Core.
 
+//noqr
 The split mentioned above occurred on 2015-07-04 at 02:10 UTC after block
 height
 https://mempool.space/block/000000000000000006a320d752b46b532ec0f3f815c5dae467aff5715a6e579e[363730]. This
@@ -690,4 +793,5 @@ delicate one.
 * Retaining consensus is hard.
 * Software not intended for consensus systems are generally risky.
 * BIPs should be somewhat atomic.
+
 

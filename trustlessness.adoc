@@ -11,6 +11,11 @@ between Bitcoin and actual softwares or users, and the need to make
 trade-offs between convenience and trustlessness to get anything done
 at all.
 
+[qrcode,role=qrcode]
+----
+https://example.com/64ddcc12
+----
+
 People often say things like "`Bitcoin is great because it's
 trustless`". What do they mean by trustless? Pieter Wuille explains
 this widely used term on
@@ -28,6 +33,11 @@ protocol whereby it can logically function without "`any trusted
 parties`". This is different from the trust you inevitably have to
 put into the software or hardware you run. More on this latter aspect of trust will be discussed further
 in this chapter.
+
+[qrcode,role=qrcode]
+----
+https://example.com/6fac08a1
+----
 
 In centralized systems, we rely on a central actor's reputation in order to make sure
 that they will take care of security or roll back in case of issues,
@@ -69,6 +79,11 @@ double-spends occur on the blockchain. If you don't run a full node,
 you outsource verification of Bitcoin blocks to someone else and
 trust them to tell you the truth, which means you're not using Bitcoin
 trustlessly.
+
+[qrcode,role=qrcode]
+----
+https://example.com/f272ce6d
+----
 
 David Harding has authored
 https://bitcoin.org/en/bitcoin-core/features/validation[an article on
@@ -126,6 +141,11 @@ against malicious changes to the protocol. But unfortunately, as
 explained in the full node decentralization section, users often opt
 for trusted services as consequence of the inevitable trade-off between trustlessness and convenience.
 
+[qrcode,role=qrcode]
+----
+https://example.com/f4531b36
+----
+
 Bitcoin's trustlessness is absolutely imperative from a system
 perspective. In 2018, Matt Corallo,
 https://btctranscripts.com/baltic-honeybadger/2018/trustlessness-scalability-and-directions-in-security-models/[spoke
@@ -155,6 +175,11 @@ might not be programmed to do what's stated on the box. For example:
 * Bitcoin Core might have sneaked in code that will send your private
   keys to some bad actor.
 
+[qrcode,role=qrcode]
+----
+https://example.com/0bc861ed
+----
+
 So, besides running a full node, you also need to make sure you're
 running what you intend to. Reddit user brianddk
 https://www.reddit.com/r/Bitcoin/comments/smj1ep/bitcoin_v220_and_guix_stronger_defense_against/[wrote
@@ -176,10 +201,15 @@ ____
 The article defines 5 levels of trust: trusting the site, the
 builders, the compiler, the kernel, and the hardware.
 
+[qrcode,role=qrcode]
+----
+https://example.com/d9362359
+----
+
 To further deepen the topic of reproducible builds, Carl Dong
 https://btctranscripts.com/breaking-bitcoin/2019/bitcoin-build-system/[made
 a presentation about Guix]
-(https://www.youtube.com/watch?v=I2iShmUTEl8[video]) explaining why
+explaining why
 trusting the operating system, libraries, and compilers can be
 problematic, and how to fix that with a system called Guix, which is
 used by Bitcoin Core today.
@@ -214,6 +244,7 @@ ____
 Don't trust, verify.
 ____
 
+//noqr
 This alludes to the phrase
 "https://en.wikipedia.org/wiki/Trust,_but_verify[trust, but verify]"
 that former U.S. president Ronald Reagan used in the context of
@@ -231,6 +262,11 @@ hardware. However, as Bitcoin software is maturing and user interfaces are
 improving, over time it should get better at supporting users willing to work
 towards trustlessness. Also, as users gain more knowledge over time,
 they should be able to gradually remove trust from the equation.
+
+[qrcode,role=qrcode]
+----
+https://example.com/f5e6c987
+----
 
 Some users think adversarially (see <<adversarialthinking>>) and verify
 most aspects of the software they run. As a consequence, they reduce the need for trust to the bare minimum,
@@ -263,3 +299,4 @@ but should rather verify for themselves whenever and whatever they can; that's h
 sovereign as possible, and how Bitcoin prospers. The more eyes on
 the software, the less likely it is that malicious code and security
 flaws slip through.
+

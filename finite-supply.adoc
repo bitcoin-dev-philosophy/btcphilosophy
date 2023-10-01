@@ -12,6 +12,11 @@ subsidy-based to fee-based.
 The well-known finite supply of 21 million BTC is regarded as a
 fundamental property of Bitcoin. But is it really set in stone?
 
+[qrcode,role=qrcode]
+----
+https://example.com/14659236
+----
+
 Let's start by looking at what the current consensus rules say about
 the supply of bitcoin, and how much of it will actually be
 usable. Pieter Wuille wrote a piece about this
@@ -34,6 +39,7 @@ ____
 This leaves us with *20999817.31308491* BTC (taking everything up to
 block 528333 into account)
 
+//noqr
 \... However, various wallets have been lost or stolen, transactions
 have been sent to the wrong address, people forgot they owned
 bitcoin. The totals of this may well be millions. People have tried to
@@ -42,6 +48,11 @@ https://bitcointalk.org/index.php?topic=7253.0[here].
 
 This leaves us with: *???* BTC.
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/afb103f2
+----
 
 We can thus be sure that the bitcoin supply will be
 20999817.31308491 BTC at most. Any lost or unverifiably burnt coins will make
@@ -59,6 +70,11 @@ ____
 
 The finite supply will shrink and this should, at least in theory,
 cause price deflation.
+
+[qrcode,role=qrcode]
+----
+https://example.com/b8092a76
+----
 
 More important than the exact number of coins in circulation is
 the way the supply limit is enforced without any central
@@ -90,6 +106,11 @@ bitcoin price, mempool size, hash power, degree of decentralization
 etc., the incentives for every player to play by the rules are high enough to preserve a
 secure monetary system.
 
+[qrcode,role=qrcode]
+----
+https://example.com/6879b195
+----
+
 What happens when the block subsidy approaches zero? To keep things simple, let's
 assume it actually equals zero. At this point, the system's security cost
 is covered through transaction fees only. What the future holds
@@ -115,6 +136,11 @@ illustrated below.
 .As time goes by, the bearing of security costs will shift from holders to spenders.
 image::finitesupply.png[width=60%]
 
+[qrcode,role=qrcode]
+----
+https://example.com/315d837b
+----
+
 When transaction fees are the main motivation for mining, the
 incentives shift. Most notably, if the mempool of a miner doesn't
 contain enough transaction fees, it might become more profitable for
@@ -123,6 +149,7 @@ extending it. Bitcoin Optech has a specific
 https://bitcoinops.org/en/topics/fee-sniping/[section on this
 behavior], called _fee sniping_, written by David Harding:
 
+//noqr
 [quote,"David Harding, fee sniping", Bitcoin Optech website]
 ____
 Fee sniping is a problem that may occur as Bitcoin’s subsidy continues
@@ -154,6 +181,11 @@ countermeasures that can be taken, such as relying on transaction
 time locks to restrict where in the blockchain the transaction may
 appear.
 
+[qrcode,role=qrcode]
+----
+https://example.com/9d6d0592
+----
+
 So, given that the consensus on finite supply remains, the block
 subsidy will - thanks to
 https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki[BIP42]
@@ -168,6 +200,11 @@ network? It's impossible to say, but we do know a few things:
   monetary inflation, the supply of bitcoin will no longer be finite.
 * With zero block subsidy and an empty or nearly empty mempool, things
   can become shaky due to fee sniping.
+
+[qrcode,role=qrcode]
+----
+https://example.com/e6937a5e
+----
 
 Since the transition to a fee-only block reward is so far in the future, it
 might be wise not to jump to conclusions and try to fix the potential
@@ -196,3 +233,4 @@ Whether the bitcoin supply will grow past 21 million we cannot say
 today, and that is probably not so bad. Ensuring that the security
 budget remains high enough is crucial but not urgent. Let's have this
 discussion in 10-50 years, when we know more. If it's still relevant.
+

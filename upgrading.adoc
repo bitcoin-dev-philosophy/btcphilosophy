@@ -9,6 +9,11 @@ examples of historic upgrades to its protocol as well as the insights that we ga
 from them. Finally, we talk about chain splits and the risks and costs 
 related to them.
 
+[qrcode,role=qrcode]
+----
+https://example.com/6d1da141
+----
+
 To get in tune for this chapter, you should read
 https://bitcointalk.org/dec/p1.html[David Harding's piece on harmony
 and discord].
@@ -18,7 +23,7 @@ ____
 Bitcoin experts talk often of consensus, whose meaning is abstract and
 hard to pin down. But the word consensus evolved from the Latin word
 concentus, "a singing together,
-harmony,"[https://bitcointalk.org/dec/p1.html#ftnt1[1]] so let us talk
+harmony,"[1] so let us talk
 not of Bitcoin consensus but of Bitcoin harmony.
 
 Harmony is what makes Bitcoin work. Thousands of full nodes each work
@@ -44,8 +49,14 @@ it starts by setting the stage with some useful vocabulary.
 
 === Vocabulary
 
+[qrcode,role=qrcode]
+----
+https://example.com/a3c71862
+----
+
 According to Wikipedia,
-https://en.wikipedia.org/wiki/Forward_compatibility[*forward compatibility*]
+https://en.wikipedia.org/wiki/Forward_compatibility[_forward
+compatibility_]
 refers to the condition in which an old software can process data
 created by newer softwares, ignoring the parts it doesn't understand.
 
@@ -57,9 +68,15 @@ later versions of the standard, ignoring new parts which it does not
 understand.
 ____
 
+[qrcode,role=qrcode]
+----
+https://example.com/4d0984aa
+----
+
 Vice versa,
-https://en.wikipedia.org/wiki/Backward_compatibility[*backward
-compatibility*] refers to when data from an old software is usable on newer
+https://en.wikipedia.org/wiki/Backward_compatibility[_backward
+compatibility_] refers to when data from an old software is usable
+on newer
 softwares. A change is said to be fully compatible if it's both forward
 and backward compatible.
 
@@ -68,6 +85,11 @@ it is fully compatible. This is the most common way to upgrade
 Bitcoin, for a number of reasons that we'll discuss further in this
 chapter. If a change to the Bitcoin consensus rules is backward
 compatible but not forward compatible, it is called a *hard fork*.
+
+[qrcode,role=qrcode]
+----
+https://example.com/6e718074
+----
 
 For a technical overview of soft forks and hard forks, please read
 https://rosenbaum.se/book/grokking-bitcoin-11.html[chapter 11 of
@@ -78,16 +100,21 @@ necessary, to get a grip on this before you continue reading.
 [[historic-upgrades]]
 === Historic upgrades
 
+[qrcode,role=qrcode]
+----
+https://example.com/c3d4084c
+----
+
 Bitcoin is not the same today as it was when the genesis block was
 created. Several upgrades have been made throughout the years. In 2017, Eric
 Lombrozo
 https://btctranscripts.com/breaking-bitcoin/2017/changing-consensus-rules-without-breaking-bitcoin/[spoke
 at the Breaking Bitcoin conference]
-(https://www.youtube.com/watch?v=0WCaoGiAOHE&t=1926s[video])
 about Bitcoin's different upgrading mechanisms, pointing out how much they
 have evolved over time. He even explained how Satoshi Nakamoto
 once upgraded Bitcoin through a hard fork.
 
+//noqr
 [quote, Eric Lombrozo, Changing Consensus Rules Without Breaking Bitcoin at Breaking Bitcoin conference (2017)]
 ____
 There was actually a hard-fork in bitcoin that Satoshi did that we
@@ -108,10 +135,21 @@ add some optimizations in the same code. Fix a bug and add some
 optimizations.
 ____
 
+[qrcode,role=qrcode]
+----
+https://example.com/74c2acce
+----
+
+[qrcode,role=qrcode]
+----
+https://example.com/e65ad75a
+----
+
 He points out that, be it intentionally or not, this hard fork created
 opportunities for future soft forks, namely the Script operators
-(opcodes) OP_NOP1-OP_NOP10. We'll look more into <<cve-2010-5141,this
-code change>> in chapter 9. These opcodes have been used for two soft
+(opcodes) OP_NOP1-OP_NOP10. We'll look more into this
+code change in <<cve-2010-5141>>. These opcodes have
+been used for two soft
 forks so far:
 https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki[BIP65]
 (OP_CHECKLOCKTIMEVERIFY), and
@@ -119,7 +157,9 @@ https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki[BIP113]
 (OP_SEQUENCEVERIFY).
 
 Lombrozo also provides an overview of the way upgrade mechanisms have evolved
-throughout the years, up until 2017. Since then, only one other major upgrade, which we analyze in <<taproot-deployment>>, has been deployed. The long and somewhat chaotic process that led to its activation has helped us gain further insights on upgrading mechanisms in Bitcoin. 
+throughout the years, up until 2017. Since then, only one other
+major upgrade, Taproot (analyzed in <<taproot-deployment>>),
+has been deployed. The long and somewhat chaotic process that led to its activation has helped us gain further insights on upgrading mechanisms in Bitcoin.
 
 [[segwit-upgrade]]
 ==== Segwit upgrade
@@ -129,6 +169,11 @@ painless, this one was different. When Segwit activation code was released, in O
 support for it among Bitcoin users, but for some reason miners
 didn't signal support for this upgrade, which stalled the activation
 with no resolution in sight.
+
+[qrcode,role=qrcode]
+----
+https://example.com/b7a65dca
+----
 
 Aaron van Wirdum describes this winding road in his Bitcoin Magazine
 article
@@ -148,6 +193,11 @@ predetermined time in the future.” As long as such a UASF is enforced
 by an economic majority, this should compel a majority of miners to
 follow (or activate) the soft fork.
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/2aed092a
+----
 
 Among other things, he cites Shaolinfry's email to the Bitcoin-dev
 mailing list. In that occasion Shaolinfry
@@ -193,6 +243,11 @@ parameter which will transition the BIP9 state to LOCKED_IN before the
 end of the BIP9 deployment timeout.
 ____
 
+[qrcode,role=qrcode]
+----
+https://example.com/8fedc188
+----
+
 This idea caught a lot of interest, but didn't seem to reach near
 unanimous support, which caused concern for a potential chain
 split. The article by Aaron van Wirdum explains how this finally got
@@ -216,11 +271,16 @@ the many interesting details in this story.
 
 ==== Post-Segwit discussion
 
+[qrcode,role=qrcode]
+----
+https://example.com/c3d4084c
+----
+
 After the Segwit deployment, a discussion about deployment mechanisms
 emerged. As noted by Eric Lombrozo in
 https://btctranscripts.com/breaking-bitcoin/2017/changing-consensus-rules-without-breaking-bitcoin/[his
 talk at the Breaking Bitcoin conference]
-(https://www.youtube.com/watch?v=0WCaoGiAOHE&t=1926s[video]) and by
+and by
 Shaolinfry (see <<segwit-upgrade>> above), a miner activated soft fork isn't the ideal upgrade
 mechanism.
 
@@ -232,6 +292,16 @@ ourselves. Do we do a UASF for the next one? What about a hybrid
 approach? Miner activated by itself has been ruled out. bip9 we’re not
 going to use again.
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/f64f8401
+----
+
+[qrcode,role=qrcode]
+----
+https://example.com/f767b20a
+----
 
 In January 2020, Matt Corallo
 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-January/017547.html[sent
@@ -294,6 +364,11 @@ approval within the community, discussions on how to actually deploy it
 started to heat up. These discussions had been pretty low key up until
 that point.
 
+[qrcode,role=qrcode]
+----
+https://example.com/4b226a84
+----
+
 Lots of proposals for activation mechanisms started floating around, and
 David Harding
 https://en.bitcoin.it/wiki/Taproot_activation_proposals[summarized
@@ -301,6 +376,7 @@ them on the Bitcoin Wiki]. In his article he explained some properties
 of BIP8, which at that time had some recent changes made in order to make it
 more flexible.
 
+//noqr
 [quote, David Harding, Taproot Activation Proposals on the Bitcoin Wiki (2020)]
 ____
 At the time this document is being written,
@@ -312,6 +388,7 @@ forced activation is a boolean parameter chosen when a soft fork’s
 activation parameters are set either for the initial deployment or
 updated in a later deployment.
 
+//noqr
 BIP8 without forced activation is very similar to
 https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki[BIP9]
 version bits with timeout and delay, with the only significant
@@ -345,6 +422,11 @@ Among the proposals listed, one of them was titled "`Let’s see what
 happens`". For some reason, this proposal didn't get much traction
 until seven months later.
 
+[qrcode,role=qrcode]
+----
+https://example.com/127ad2ec
+----
+
 During those seven months, the discussion went on and it seemed like
 there was no way to reach broad consensus over which deployment
 mechanism to use. There were mainly two camps: one that preferred
@@ -373,6 +455,11 @@ ____
 ....
 ____
 
+[qrcode,role=qrcode]
+----
+https://example.com/6909dcf1
+----
+
 The "`let's see what happens`" approach finally seemed to click in
 peoples`' minds. This process would later be labeled as "`Speedy Trial`"
 due to its short signaling period. David Harding explains this idea
@@ -397,6 +484,7 @@ end the debate (for now, if activation is successful) or give us some
 actual data upon which to base future taproot activation proposals.
 ____
 
+//noqr
 This deployment mechanism was refined over the course of two months
 and then released in
 https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.1.md#taproot-soft-fork[Bitcoin
@@ -445,6 +533,11 @@ reality when BIP66 was deployed (see <<bip66-splits>>), but it got resolved
 within 6 blocks or so.
 
 ==== Costs of a split
+
+[qrcode,role=qrcode]
+----
+https://example.com/89ef1cdb
+----
 
 Jimmy Song
 https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/[spoke
@@ -521,3 +614,4 @@ learn more about how the network reacts.
 To keep Bitcoin in harmony, soft forks have proven to be the way
 forward, but the big question is still not fully answered: how do we
 safely deploy soft forks without causing discord?
+

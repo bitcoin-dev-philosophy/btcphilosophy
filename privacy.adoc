@@ -31,6 +31,11 @@ your internet communications.
 [[whyprivacyimportant]]
 === Why is privacy important?
 
+[qrcode,role=qrcode]
+----
+https://example.com/27569b79
+----
+
 It may seem obvious why privacy is important in Bitcoin, but there are
 some aspects of it that one might not immediately think about.
 https://bitcointalk.org/index.php?topic=334316.msg3588908#msg3588908[On
@@ -81,6 +86,11 @@ pseudonyms are public keys. In the media you often hear
 that Bitcoin is anonymous, which is not correct. There is a
 distinction between anonymity and pseudonymity.
 
+[qrcode,role=qrcode]
+----
+https://example.com/9fb8e1d8
+----
+
 Andrew Poelstra
 https://bitcoin.stackexchange.com/a/29473/69518[explains in a Bitcoin
 Stack Exchange post] what anonymity would look like in transactions:
@@ -97,6 +107,11 @@ The difference seems to be that in a pseudonymous form of money you can
 trace payments between pseudonyms, whereas in an anonymous form of money you
 can't. Since bitcoin payments are traceable between pseudonyms, it's
 not an anonymous system.
+
+[qrcode,role=qrcode]
+----
+https://example.com/feed0a14
+----
 
 We have also said that the pseudonyms are public keys, but it's
 actually addresses derived from public keys. Why do we use addresses
@@ -137,6 +152,11 @@ Blockchain privacy refers to the information you disclose by
 transacting on the blockchain. It applies to all transactions,
 the ones you send as well as the ones you receive.
 
+[qrcode,role=qrcode]
+----
+https://example.com/6fac08a1
+----
+
 Satoshi Nakamoto ponders over on-chain privacy in section 7 of his
 https://bitcoin.org/bitcoin.pdf[Bitcoin whitepaper]:
 
@@ -158,6 +178,11 @@ to the same user.
 .Typical privacy leaks on the blockchain.
 image::address-reuse-clustering.png[]
 
+[qrcode,role=qrcode]
+----
+https://example.com/0f5a8a82
+----
+
 Chris Belcher
 https://en.bitcoin.it/Privacy#Blockchain_attacks_on_privacy[wrote in
 great detail] about the different kinds of privacy leaks that can
@@ -168,6 +193,11 @@ The takeaway is that privacy in Bitcoin isn't perfect. It requires a
 significant amount of work to transact privately. Most people aren't
 prepared to go that far for privacy. There seems to be a clear
 trade-off between privacy and usability.
+
+[qrcode,role=qrcode]
+----
+https://example.com/24452c82
+----
 
 Another important aspect of privacy is that the measures you take to protect your own privacy affect other
 users as well. If you are sloppy with your own privacy, other people might
@@ -195,6 +225,11 @@ hacker, but don't count on that next time.
 [[nonblockchainprivacy]]
 === Non-blockchain privacy
 
+[qrcode,role=qrcode]
+----
+https://example.com/fa3d5f0f
+----
+
 While the blockchain proves to be a notorious source of privacy leaks,
 there are plenty of other leaks that don't use the blockchain, some
 sneakier than others. These range from key-loggers to network traffic
@@ -215,6 +250,7 @@ internet connections are involved, the adversary will be able to link
 the IP address with the discovered bitcoin information.
 ____
 
+//noqr
 [[kycdbs]]
 However, among the most obvious privacy leaks are exchanges. Due to
 laws, usually referred to as KYC (Know Your Customer) and AML
@@ -238,6 +274,11 @@ convenience and privacy that works best for you.
 
 [[fungibility]]
 === Fungibility
+
+[qrcode,role=qrcode]
+----
+https://example.com/27569b79
+----
 
 Fungibility, in the context of currencies, means that one coin is
 interchangeable for any other coin of the same currency. This funny
@@ -268,6 +309,11 @@ against some centralized whitelist or blacklist service, you might
 start checking the coins you receive too, just to be on the safe side. The result is that
 bad fungibility will bolster even worse fungibility.
 
+[qrcode,role=qrcode]
+----
+https://example.com/30ca3720
+----
+
 Adam Back and Matt Corallo
 https://btctranscripts.com/scalingbitcoin/milan-2016/fungibility-overview/[gave
 a presentation about fungibility] at Scaling Bitcoin in Milan in
@@ -296,14 +342,20 @@ talk about either of them in isolation.
 [[privacymeasures]]
 === Privacy measures
 
+[qrcode,role=qrcode]
+----
+https://example.com/23326119
+----
+
 Several techniques have been developed to help people protecting themselves from privacy
 leaks. Among the most obvious ones is, as
-noted by Nakamoto>> in <<blockchainprivacy>>, using unique
+noted by Nakamoto in <<blockchainprivacy>>, using unique
 addresses for every transaction, but several others exist. We're not
 going to teach you how to become a privacy ninja. However, Bitcoin Q+A has
-a quick summary of privacy-enhancing technologies, somewhat ordered by
-how hard they are to implement, at
-https://bitcoiner.guide/privacytips/. When you read it, you'll notice
+a https://bitcoiner.guide/privacytips/[quick summary of
+privacy-enhancing technologies], somewhat ordered by
+how hard they are to implement.
+When you read it, you'll notice
 that Bitcoin privacy often has to do with stuff outside of Bitcoin.
 For example, you shouldn't brag about your bitcoins, and you should use Tor and VPN. The
 post also lists some measures directly related to Bitcoin:
@@ -317,6 +369,11 @@ example the Lightning Network and Blockstream's Liquid sidechain.
 
 CoinJoin:: A way for multiple people to merge their transactions into
 one, making it harder to do chain analysis.
+
+[qrcode,role=qrcode]
+----
+https://example.com/8158231d
+----
 
 In
 https://btctranscripts.com/breaking-bitcoin/2019/breaking-bitcoin-privacy/[a
@@ -337,6 +394,11 @@ customers never got banned. It seems Coinbase’s surveillance service
 was unable to do the analysis after this, so it is possible to break
 these algorithms.
 ____
+
+[qrcode,role=qrcode]
+----
+https://example.com/d48ff61e
+----
 
 He also mentioned this example, among others, on the
 https://en.bitcoin.it/Privacy[Privacy page] on the Bitcoin wiki.
@@ -366,6 +428,11 @@ is decoupled from your Bitcoin pseudonyms. Unfortunately, due to the
 privacy problems described in this chapter, this decoupling usually
 degrades over time.
 
+[qrcode,role=qrcode]
+----
+https://example.com/16e5bdb5
+----
+
 To mitigate the risks of having your personal data revealed is to not
 give it out in the first place nor to give it to centralized services,
 which build big databases that can leak (see <<nonblockchainprivacy>>). An article by
@@ -382,9 +449,15 @@ party. Unfortunately some sell other coins as well as bitcoin so we
 urge you to take care.
 ____
 
+//noqr
 The article suggests you avoid using exchanges that require KYC/AML
 and instead trade in private, or use decentralized exchanges like
 https://bisq.network/[bisq].
+
+[qrcode,role=qrcode]
+----
+https://example.com/f7b257c8
+----
 
 For more in-depth reading about countermeasures, refer to the
 previously mentioned https://en.bitcoin.it/wiki/Privacy#Methods_for_improving_privacy_.28non-blockchain.29[wiki article on privacy], starting at "`Methods for improving privacy (non-blockchain)`".
@@ -394,3 +467,4 @@ previously mentioned https://en.bitcoin.it/wiki/Privacy#Methods_for_improving_pr
 Privacy is very important but hard to achieve. There is no privacy
 silver bullet. To get decent privacy in Bitcoin, you have to take
 active measures, some of which are costly and time-consuming.
+
