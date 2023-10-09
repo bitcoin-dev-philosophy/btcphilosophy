@@ -1,19 +1,24 @@
-\nadversarial-thinking.adoc
+
+adversarial-thinking.adoc
 https://strfsh.xyz/a/b98fbe44 https://btctranscripts.com/scalingbitcoin/hong-kong-2015/security-assumptions/
 https://strfsh.xyz/a/bc757384 https://blog.lopp.net/bitcoins-security-model-a-deep-dive/
 https://strfsh.xyz/a/f8f9b1ea https://bitcoinwords.github.io/tweetstorm-on-adversarial-thinking
 https://strfsh.xyz/a/66e76f6d https://en.bitcoin.it/wiki/Weaknesses
 https://strfsh.xyz/a/79009f8f https://www.gutenberg.org/ebooks/26184
 https://strfsh.xyz/a/6eb1519b https://github.com/libbitcoin/libbitcoin-system/wiki/Axiom-of-Resistance
-\nappendix-discussion.adoc
+
+appendix-discussion.adoc
 https://strfsh.xyz/a/9da9b641 https://github.com/bitcoin/bitcoin
-\nbtcphilosophy.adoc
-\nbuild.adoc
+
+btcphilosophy.adoc
+
+build.adoc
 https://strfsh.xyz/a/518d0ac9 https://github.com/bitcoin-dev-philosophy/btcphilosophy
 https://strfsh.xyz/a/d74e85f0 https://asciidoctor.org/
 https://strfsh.xyz/a/88cd100b https://docs.asciidoctor.org/asciidoctor/latest/install/
 https://strfsh.xyz/a/00f91bd9 https://docs.asciidoctor.org/diagram-extension/latest/#installation
-\ndecentralization.adoc
+
+decentralization.adoc
 https://strfsh.xyz/a/1751af12 https://www.blockstream.com/sidechains.pdf
 https://strfsh.xyz/a/2859f80d https://bitcoin.org/bitcoin.pdf
 https://strfsh.xyz/a/219c645e https://www.reddit.com/r/Bitcoin/comments/ddddfl/question_on_the_vulnerability_of_bitcoin/f2g9e7b/
@@ -21,7 +26,8 @@ https://strfsh.xyz/a/ded44527 https://bitcoinmagazine.com/technical/decentralist
 https://strfsh.xyz/a/07f80e69 https://bitcoin.stackexchange.com/a/92055/69518
 https://strfsh.xyz/a/1e6dc10d https://www.reddit.com/r/Bitcoin/comments/s82t2n/comment/htdte7w/?utm_source=share&utm_medium=web2x&context=3
 https://strfsh.xyz/a/9f6e3241 https://www.ted.com/talks/radhika_nagpal_what_intelligent_machines_can_learn_from_a_school_of_fish
-\nfinite-supply.adoc
+
+finite-supply.adoc
 https://strfsh.xyz/a/275b53ff https://bitcoin.stackexchange.com/a/38998/69518
 https://strfsh.xyz/a/1b5eb474 https://bitcointalk.org/index.php?topic=198.msg1647#msg1647
 https://strfsh.xyz/a/ac60f364 https://bitcoin.stackexchange.com/a/106830/69518
@@ -29,7 +35,8 @@ https://strfsh.xyz/a/a048dab4 https://www.truthcoin.info/blog/security-budget/
 https://strfsh.xyz/a/7c2125d9 https://bitcoinops.org/en/topics/fee-sniping/
 https://strfsh.xyz/a/494cd3e1 https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki
 https://strfsh.xyz/a/693d3c77 https://www.whatbitcoindid.com/podcast/peter-todd-on-the-essence-of-bitcoin
-\nopen-source.adoc
+
+open-source.adoc
 https://strfsh.xyz/a/c5cfab1c https://opensource.org/osd
 https://strfsh.xyz/a/151b0077 https://github.com/bitcoin/bitcoin/blob/master/COPYING
 https://strfsh.xyz/a/9da9b641 https://github.com/bitcoin/bitcoin
@@ -45,7 +52,8 @@ https://strfsh.xyz/a/1a20cb3f https://lists.linuxfoundation.org/pipermail/bitcoi
 https://strfsh.xyz/a/fb20e79a https://www.reddit.com/r/Bitcoin/comments/hrlpnc/technical_taproot_why_activate/fyqbn8s/?utm_source=share&utm_medium=web2x&context=3
 https://strfsh.xyz/a/79009f8f https://www.gutenberg.org/ebooks/26184
 https://strfsh.xyz/a/0ca4dc4b https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md
-\nprivacy.adoc
+
+privacy.adoc
 https://strfsh.xyz/a/26413b66 https://bitcointalk.org/index.php?topic=334316.msg3588908#msg3588908
 https://strfsh.xyz/a/d0593f90 https://bitcoin.stackexchange.com/a/29473/69518
 https://strfsh.xyz/a/9c97694c https://bitcoin.stackexchange.com/a/25175/69518
@@ -60,12 +68,14 @@ https://strfsh.xyz/a/802fc42a https://btctranscripts.com/breaking-bitcoin/2019/b
 https://strfsh.xyz/a/4050388a https://en.bitcoin.it/Privacy
 https://strfsh.xyz/a/1aafc7af https://bitcoiner.guide/nokyconly/
 https://strfsh.xyz/a/aa632378 https://en.bitcoin.it/wiki/Privacy#Methods_for_improving_privacy_.28non-blockchain.29
-\nreadme.adoc
+
+readme.adoc
 https://strfsh.xyz/a/49160501 https://learning.chaincode.com/
 https://strfsh.xyz/a/a8c15a15 https://rosenbaum.se/book/
 https://strfsh.xyz/a/f31485b2 https://konsensus.network/product/lilla-boken-om-bitcoin/
 https://strfsh.xyz/a/a34b3a86 https://konsensus.network/product/sverige-bitcoinstandarden/
-\nscaling.adoc
+
+scaling.adoc
 https://strfsh.xyz/a/ff1445ad https://www.metzdowd.com/pipermail/cryptography/2008-November/014814.html
 https://strfsh.xyz/a/263209f3 https://scalingbitcoin.org/
 https://strfsh.xyz/a/410f890f https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-December/011865.html
@@ -75,8 +85,10 @@ https://strfsh.xyz/a/f9458850 https://github.com/bitcoin-core/secp256k1
 https://strfsh.xyz/a/34aa88b6 https://twitter.com/pwuille/status/1450471673321381896
 https://strfsh.xyz/a/892d92ee https://murchandamus.medium.com/2-of-3-multisig-inputs-using-pay-to-taproot-d5faf2312ba3
 https://strfsh.xyz/a/faec8cf8 https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/
-\nsettings.adoc
-\ntrustlessness.adoc
+
+settings.adoc
+
+trustlessness.adoc
 https://strfsh.xyz/a/5989e3b6 https://bitcoin.stackexchange.com/a/45674/69518
 https://strfsh.xyz/a/2859f80d https://bitcoin.org/bitcoin.pdf
 https://strfsh.xyz/a/f28517e8 https://bitcoin.org/en/bitcoin-core/features/validation
@@ -84,7 +96,8 @@ https://strfsh.xyz/a/2bf61d6f https://btctranscripts.com/baltic-honeybadger/2018
 https://strfsh.xyz/a/aba94420 https://www.reddit.com/r/Bitcoin/comments/smj1ep/bitcoin_v220_and_guix_stronger_defense_against/
 https://strfsh.xyz/a/35073fbe https://btctranscripts.com/breaking-bitcoin/2019/bitcoin-build-system/
 https://strfsh.xyz/a/2ea04967 https://bitcoincore.org/en/2018/09/20/notice/
-\nupgrading.adoc
+
+upgrading.adoc
 https://strfsh.xyz/a/8426afb9 https://bitcointalk.org/dec/p1.html
 https://strfsh.xyz/a/0a2e0e90 https://en.wikipedia.org/wiki/Forward_compatibility
 https://strfsh.xyz/a/1ebe4844 https://en.wikipedia.org/wiki/Backward_compatibility
@@ -102,7 +115,8 @@ https://strfsh.xyz/a/ae8829d0 https://en.bitcoin.it/wiki/Taproot_activation_prop
 https://strfsh.xyz/a/182fc781 https://gnusha.org/taproot-activation/2021-03-05.log
 https://strfsh.xyz/a/9301645d https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-March/018583.html
 https://strfsh.xyz/a/32d9464d https://btctranscripts.com/breaking-bitcoin/2017/socialized-costs-of-hard-forks/
-\nwhen-shit-hits-the-fan.adoc
+
+when-shit-hits-the-fan.adoc
 https://strfsh.xyz/a/232698de https://en.wikipedia.org/wiki/Coordinated_vulnerability_disclosure
 https://strfsh.xyz/a/9da9b641 https://github.com/bitcoin/bitcoin
 https://strfsh.xyz/a/dbacf818 https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-September/015002.html
