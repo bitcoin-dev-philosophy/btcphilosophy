@@ -27,7 +27,7 @@ and you can't be sure that person won't be malicious.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/d818b994
+https://strfsh.xyz/a/232698de
 ----
 
 When a security issue is discovered, the person discovering it should
@@ -53,7 +53,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://example.com/381eaff1
+https://strfsh.xyz/a/9da9b641
 ----
 
 This means that if you find a security issue, you should
@@ -69,7 +69,7 @@ an email to security@bitcoincore.org.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/0fdc10d1
+https://strfsh.xyz/a/dbacf818
 ----
 
 In an
@@ -126,7 +126,7 @@ others to discover it.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/9f7392b0
+https://strfsh.xyz/a/ec3ab5be
 ----
 
 The thread that led to this email was discussing whether, when, and how
@@ -152,7 +152,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://example.com/9a4c0cba
+https://strfsh.xyz/a/a51899bc
 ----
 
 Also leading up to Town's email above was a
@@ -197,7 +197,7 @@ they are today.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/a07154e0
+https://strfsh.xyz/a/f906df3f
 ----
 
 The Bitcoin wiki has a
@@ -262,12 +262,12 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://example.com/aff07473
+https://strfsh.xyz/a/cf15799e
 ----
 
 [qrcode,role=qrcode]
 ----
-https://example.com/4929309d
+https://strfsh.xyz/a/ee3bc267
 ----
 
 The original message was later edited and is no longer available in its full
@@ -284,7 +284,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://example.com/e99e44bf
+https://strfsh.xyz/a/33ed86be
 ----
 
 And 35 minutes later, https://bitcointalk.org/index.php?topic=626.msg6480#msg6480[he wrote]
@@ -338,7 +338,7 @@ multiple reasons:
 
 [qrcode,role=qrcode]
 ----
-https://example.com/6111048e
+https://strfsh.xyz/a/d87417df
 ----
 
 * Satoshi made a binary-only release of 0.3.5 containing the fix. No
@@ -357,7 +357,7 @@ was possible to do this, it might have been a sensible thing to do.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/d9857a0a
+https://strfsh.xyz/a/74528d62
 ----
 
 In mid-August 2010, Bitcointalk forum user jgarzik, a.k.a. Jeff Garzik,
@@ -398,7 +398,7 @@ million coins that existed at that time.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/316ba2c0
+https://strfsh.xyz/a/368abc42
 ----
 
 In a related thread,
@@ -419,12 +419,12 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://example.com/90ca248e
+https://strfsh.xyz/a/708b9fba
 ----
 
 [qrcode,role=qrcode]
 ----
-https://example.com/423476a5
+https://strfsh.xyz/a/fe997955
 ----
 
 His plan was to make a soft fork to make transactions like the one
@@ -505,7 +505,7 @@ that didn't directly reveal what the issue was.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/cdda8bd8
+https://strfsh.xyz/a/4c1c622e
 ----
 
 A very interesting an educationally valuable issue surfaced in March
@@ -540,7 +540,7 @@ consensus. This gave developers the time to figure out a sustainable fix.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/eb312495
+https://strfsh.xyz/a/74a0c4a9
 ----
 
 What's also very interesting in this issue is that version 0.7.2 was
@@ -604,7 +604,7 @@ BIP66 is interesting because it highlights the importance of
 
 [qrcode,role=qrcode]
 ----
-https://example.com/1644e2c0
+https://strfsh.xyz/a/772050dc
 ----
 
 BIP66 was a proposal to tighten up the rules for signature encodings
@@ -621,7 +621,7 @@ BIP66 also fixes a much more severe issue not mentioned in the BIP.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/98084430
+https://strfsh.xyz/a/0af4e409
 ----
 
 The full disclosure of this issue was published on July 28 2015 by
@@ -689,7 +689,7 @@ more complete way.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/35e5e92e
+https://strfsh.xyz/a/0f0e2d26
 ----
 
 OpenSSL released new versions of their software with patches that, if
@@ -747,7 +747,7 @@ acceptance.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/d8436636
+https://strfsh.xyz/a/355530f6
 ----
 
 Unfortunately, the story of BIP66 didn't end there. When BIP66 was

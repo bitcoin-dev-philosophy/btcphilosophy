@@ -14,7 +14,7 @@ health.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/4ac12271
+https://strfsh.xyz/a/c5cfab1c
 ----
 
 Most Bitcoin softwares, and especially Bitcoin Core, is open
@@ -47,7 +47,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://example.com/2810d4a8
+https://strfsh.xyz/a/151b0077
 ----
 
 Bitcoin Core adheres to this definition by being distributed under the
@@ -84,7 +84,7 @@ Bitcoin.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/381eaff1
+https://strfsh.xyz/a/9da9b641
 ----
 
 Bitcoin Core's source code is maintained in a Git repository hosted on
@@ -98,7 +98,7 @@ but socially it has become the focal point of Bitcoin development.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/5ab278ac
+https://strfsh.xyz/a/782b1c3f
 ----
 
 Bitcoin and security expert Jameson Lopp
@@ -129,7 +129,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://example.com/63f1756b
+https://strfsh.xyz/a/34451422
 ----
 
 Bitcoin Core developer Eric Lombrozo talks further about the
@@ -213,7 +213,7 @@ without revealing your identity.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/6ceeb78f
+https://strfsh.xyz/a/5570813c
 ----
 
 Many developers choose this option by operating under a pseudonym
@@ -240,7 +240,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://example.com/6bf93700
+https://strfsh.xyz/a/3a71c31f
 ----
 
 In his case, the reason for using a pseudonym is to be judged on his
@@ -261,7 +261,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://example.com/aba12943
+https://strfsh.xyz/a/85703ce7
 ----
 
 Using a pseudonym indeed allows you to speak more freely without putting
@@ -297,7 +297,7 @@ ecosystem. But Bitcoin software deals with real money and, in light of this, dev
 
 [qrcode,role=qrcode]
 ----
-https://example.com/926e5d32
+https://strfsh.xyz/a/1974524a
 ----
 
 In a philosophical
@@ -377,7 +377,7 @@ them. Different people may also provide feedback during different phases.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/da4deccf
+https://strfsh.xyz/a/b0041ccd
 ----
 
 One of the most prolific code reviewers on Bitcoin Core is Jon
@@ -419,7 +419,7 @@ important documentation for further reading.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/fddeea26
+https://strfsh.xyz/a/60da26f2
 ----
 
 Bitcoin Core developer and code reviewer Gloria Zhao has written
@@ -469,7 +469,7 @@ incapable of making decisions.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/920bfe3b
+https://strfsh.xyz/a/1a20cb3f
 ----
 
 For example, the Taproot deployment mechanism, described in <<taproot-deployment>>,
@@ -483,7 +483,7 @@ to the Bitcoin-dev mailing list.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/0da07144
+https://strfsh.xyz/a/fb20e79a
 ----
 
 The debate went on seemingly forever, and it was really hard to
@@ -530,7 +530,7 @@ outcome.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/5dce8791
+https://strfsh.xyz/a/79009f8f
 ----
 
 As hinted in <<threats>>, the second
@@ -541,7 +541,7 @@ process.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/71246804
+https://strfsh.xyz/a/0ca4dc4b
 ----
 
 Another thing worth mentioning is that, as noted in <<selectioncryptography>>,

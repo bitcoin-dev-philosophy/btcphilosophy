@@ -13,7 +13,7 @@ at all.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/64ddcc12
+https://strfsh.xyz/a/5989e3b6
 ----
 
 People often say things like "`Bitcoin is great because it's
@@ -36,7 +36,7 @@ in this chapter.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/6fac08a1
+https://strfsh.xyz/a/2859f80d
 ----
 
 In centralized systems, we rely on a central actor's reputation in order to make sure
@@ -82,7 +82,7 @@ trustlessly.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/f272ce6d
+https://strfsh.xyz/a/f28517e8
 ----
 
 David Harding has authored
@@ -143,7 +143,7 @@ for trusted services as consequence of the inevitable trade-off between trustles
 
 [qrcode,role=qrcode]
 ----
-https://example.com/f4531b36
+https://strfsh.xyz/a/2bf61d6f
 ----
 
 Bitcoin's trustlessness is absolutely imperative from a system
@@ -177,7 +177,7 @@ might not be programmed to do what's stated on the box. For example:
 
 [qrcode,role=qrcode]
 ----
-https://example.com/0bc861ed
+https://strfsh.xyz/a/aba94420
 ----
 
 So, besides running a full node, you also need to make sure you're
@@ -203,7 +203,7 @@ builders, the compiler, the kernel, and the hardware.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/d9362359
+https://strfsh.xyz/a/35073fbe
 ----
 
 To further deepen the topic of reproducible builds, Carl Dong
@@ -265,7 +265,7 @@ they should be able to gradually remove trust from the equation.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/f5e6c987
+https://strfsh.xyz/a/2ea04967
 ----
 
 Some users think adversarially (see <<adversarialthinking>>) and verify

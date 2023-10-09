@@ -42,7 +42,7 @@ attempt to stick to the domain of facts, where opinions do not matter.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/748e4109
+https://strfsh.xyz/a/49160501
 ----
 
 The main author of this book is Kalle Rosenbaum, and Linnéa Rosenbaum contributed as a co-author. This work
@@ -51,7 +51,7 @@ programs for developers who want to learn about Bitcoin development.
 
 [qrcode,role=qrcode]
 ----
-https://example.com/7543f04c
+https://strfsh.xyz/a/a8c15a15
 ----
 
 Kalle is the author of https://rosenbaum.se/book/[_Grokking Bitcoin_] (Manning Publications) and is a 
@@ -60,12 +60,12 @@ seasoned software developer. He's been working professionally with Bitcoin-relat
 
 [qrcode,role=qrcode]
 ----
-https://example.com/30d8a7b4
+https://strfsh.xyz/a/f31485b2
 ----
 
 [qrcode,role=qrcode]
 ----
-https://example.com/f3d3ce0a
+https://strfsh.xyz/a/a34b3a86
 ----
 
 Linnéa has a Ph.D. in Electronic Systems. She is the Swedish translator of https://konsensus.network/product/lilla-boken-om-bitcoin/[_The Little Bitcoin Book_] and co-translator of https://konsensus.network/product/sverige-bitcoinstandarden/[_The Bitcoin Standard_].  She is also on the board of the Swedish Bitcoin Association. Her background is in firmware development with a recent shift towards software development.

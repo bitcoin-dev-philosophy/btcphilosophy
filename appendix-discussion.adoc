@@ -47,7 +47,7 @@ These discussion questions are not just a recap of the content in "`Bitcoin deve
 
 [qrcode,role=qrcode]
 ----
-https://example.com/381eaff1
+https://strfsh.xyz/a/9da9b641
 ----
 
 * Only a handful of maintainers have the necessary GitHub permissions to merge code into into the https://github.com/bitcoin/bitcoin[Bitcoin Core] repository. Isn't that at odds with a permissionless network?
