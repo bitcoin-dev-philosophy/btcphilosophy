@@ -51,7 +51,8 @@ $(SOURCESIMAGES): $(B)/%: %
 	cp $< $@
 
 $(ALLADOC): $(B)/%: %
-	echo "\n"$< >> $(URLLISTFILE)
+	echo >> $(URLLISTFILE)
+	echo $< >> $(URLLISTFILE)
 	cat $< | notes/qrcodes.sh $(SHORTURLPREFIX) $(URLLISTFILE) > $@
 
 $(ALLIMGS): $(B)/%: %
