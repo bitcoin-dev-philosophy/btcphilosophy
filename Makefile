@@ -18,7 +18,8 @@ ALLSOURCESADOC := $(MAINSOURCESADOC) $(wildcard $(SOURCES)/**/*.adoc)
 SOURCESCSS := $(B)/sources/style/btcphilosophy.css
 SOURCESDOCINFO := $(B)/sources/style/docinfo.html
 SOURCESHTML=$(B)/$(SOURCES)/sources.html
-
+SHORTURLPREFIX=https://strfsh.xyz/a/
+URLLISTFILE=$(B)/linklist.txt
 IMEXISTS := $(shell command -v convert 2> /dev/null)
 ADPDFEXISTS := $(shell $(ADPDF) --version 2> /dev/null)
 
@@ -50,7 +51,8 @@ $(SOURCESIMAGES): $(B)/%: %
 	cp $< $@
 
 $(ALLADOC): $(B)/%: %
-	cat $< | notes/qrcodes.sh > $@
+	echo "\n"$< >> $(URLLISTFILE)
+	cat $< | notes/qrcodes.sh $(SHORTURLPREFIX) $(URLLISTFILE) > $@
 
 $(ALLIMGS): $(B)/%: %
 	mkdir -p $(dir $@)
