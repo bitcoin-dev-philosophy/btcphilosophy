@@ -300,3 +300,17 @@ sovereign as possible, and how Bitcoin prospers. The more eyes on
 the software, the less likely it is that malicious code and security
 flaws slip through.
 
+=== Conclusion
+
+The Bitcoin protocol is trustless because it allows users to interact
+with it without trusting a third party. In practice, however, most
+people aren't able to verify the full stack of software and hardware
+they run Bitcoin on. Skilled people that verify software or hardware
+are able to warn other, less skilled, people when they find malicious
+code or bugs.
+
+Without trustlessness, we can't have decentralizaion, because trust
+inevitebly involves some central point of authority. You can build a
+trusted system on top of a trustless system, but you can't build a
+trustless system on top of a trusted system.
+

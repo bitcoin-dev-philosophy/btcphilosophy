@@ -795,3 +795,15 @@ delicate one.
 * BIPs should be somewhat atomic.
 
 
+=== Conclusion
+
+Bitcoin has bugs. People discovering bugs are encouraged to disclose
+them responsibly to Bitcoin developers, so they can fix the bug
+without revealing it publicly. Ideally, the bug fix can be disguised
+as a performace improvement, or some other smoke screen.
+
+We've looked at some of the more severe issues that's surfaced through
+the years, and how they were handled. Some were discovered publicly
+through exploits while other were responisibly disclosed and could be
+fixed before malicious actors had a chance to exploit them.
+
