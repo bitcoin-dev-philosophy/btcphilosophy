@@ -4,7 +4,7 @@ URLPREFIX=$1
 URLLISTFILE=$2
 
 function shorten() {
-  hash=`echo -e "$1" | sha256sum`
+  hash=`echo -n "$1" | sha256sum`
   path=${hash:0:8}
   shorturl=${URLPREFIX}${path}
   echo "${shorturl}"
