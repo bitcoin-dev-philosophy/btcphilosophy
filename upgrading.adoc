@@ -11,7 +11,7 @@ related to them.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/8426afb9
+https://strfsh.xyz/bdp/b2f4f1ac
 ----
 
 To get in tune for this chapter, you should read
@@ -51,7 +51,7 @@ it starts by setting the stage with some useful vocabulary.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/0a2e0e90
+https://strfsh.xyz/bdp/077f7e1f
 ----
 
 According to Wikipedia,
@@ -70,7 +70,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/1ebe4844
+https://strfsh.xyz/bdp/30edaffc
 ----
 
 Vice versa,
@@ -88,7 +88,7 @@ compatible but not forward compatible, it is called a *hard fork*.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/7b1120d6
+https://strfsh.xyz/bdp/6e0253c6
 ----
 
 For a technical overview of soft forks and hard forks, please read
@@ -102,7 +102,7 @@ necessary, to get a grip on this before you continue reading.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/d7764201
+https://strfsh.xyz/bdp/4854f768
 ----
 
 Bitcoin is not the same today as it was when the genesis block was
@@ -137,12 +137,12 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/a7d6aac9
+https://strfsh.xyz/bdp/6078ad7d
 ----
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/f9ceed3e
+https://strfsh.xyz/bdp/2adf8702
 ----
 
 He points out that, be it intentionally or not, this hard fork created
@@ -172,7 +172,7 @@ with no resolution in sight.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/8bb77389
+https://strfsh.xyz/bdp/9ce32dab
 ----
 
 Aaron van Wirdum describes this winding road in his Bitcoin Magazine
@@ -196,7 +196,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/10761d47
+https://strfsh.xyz/bdp/99a5f82f
 ----
 
 Among other things, he cites Shaolinfry's email to the Bitcoin-dev
@@ -245,7 +245,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/d9ddf729
+https://strfsh.xyz/bdp/1b3750a0
 ----
 
 This idea caught a lot of interest, but didn't seem to reach near
@@ -273,7 +273,7 @@ the many interesting details in this story.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/d7764201
+https://strfsh.xyz/bdp/4854f768
 ----
 
 After the Segwit deployment, a discussion about deployment mechanisms
@@ -295,12 +295,12 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/d0cece4d
+https://strfsh.xyz/bdp/dcefe8a4
 ----
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/5dcbae38
+https://strfsh.xyz/bdp/95fdc9b8
 ----
 
 In January 2020, Matt Corallo
@@ -366,7 +366,7 @@ that point.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/ae8829d0
+https://strfsh.xyz/bdp/9a35bb28
 ----
 
 Lots of proposals for activation mechanisms started floating around, and
@@ -424,7 +424,7 @@ until seven months later.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/182fc781
+https://strfsh.xyz/bdp/0dbff39a
 ----
 
 During those seven months, the discussion went on and it seemed like
@@ -457,7 +457,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/9301645d
+https://strfsh.xyz/bdp/a20ca180
 ----
 
 The "`let's see what happens`" approach finally seemed to click in
@@ -536,7 +536,7 @@ within 6 blocks or so.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/32d9464d
+https://strfsh.xyz/bdp/4c6c5ded
 ----
 
 Jimmy Song

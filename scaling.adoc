@@ -32,7 +32,7 @@ with a brief overview of Bitcoin's history within the context of scaling.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/ff1445ad
+https://strfsh.xyz/bdp/9f79f114
 ----
 
 Scaling has been a focal point of discussion since the genesis of Bitcoin. The
@@ -66,7 +66,7 @@ further into the future, building technical debt.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/263209f3
+https://strfsh.xyz/bdp/cf0c3f3d
 ----
 
 In 2015, a conference called https://scalingbitcoin.org/[Scaling
@@ -79,7 +79,7 @@ solutions.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/410f890f
+https://strfsh.xyz/bdp/d184b53d
 ----
 
 After the Hong Kong conference in December 2015, Gregory Maxwell
@@ -200,7 +200,7 @@ Bitcoin.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/249f4f83
+https://strfsh.xyz/bdp/e594d321
 ----
 
 Many people refer to this Bitcoin scaling approach as _sharding_. Basically, it consists in letting
@@ -257,7 +257,7 @@ limits of the system.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/20354b90
+https://strfsh.xyz/bdp/7800912a
 ----
 
 The improvements that have been achieved through inward scaling are
@@ -283,12 +283,12 @@ contribute to the improvements in the diagram above.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/f9458850
+https://strfsh.xyz/bdp/2f41bb71
 ----
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/34aa88b6
+https://strfsh.xyz/bdp/c5915194
 ----
 
 A good example of computational improvement can be found in the
@@ -312,7 +312,7 @@ improvements look less impressive than they actually are.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/892d92ee
+https://strfsh.xyz/bdp/aa53a838
 ----
 
 There are also several good examples of space-saving improvements that contributed to
@@ -410,7 +410,7 @@ if done right, but it can also be an advantage for scalability.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/faec8cf8
+https://strfsh.xyz/bdp/55062529
 ----
 
 In a https://www.reddit.com/r/Bitcoin/comments/438hx0/a_trip_to_the_moon_requires_a_rocket_with/[Reddit post] titled "`A trip to the moon requires a rocket with

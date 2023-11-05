@@ -23,7 +23,7 @@ proven wrong, then Bitcoin is in trouble.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/b98fbe44
+https://strfsh.xyz/bdp/3742d45d
 ----
 
 In 2015 Andrew Poelstra
@@ -56,7 +56,7 @@ clear-cut security assumptions.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/bc757384
+https://strfsh.xyz/bdp/179dc095
 ----
 
 On his personal blog, software engineer Jameson Lopp,
@@ -78,7 +78,7 @@ the complexity of the system itself.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/f8f9b1ea
+https://strfsh.xyz/bdp/b503ad4d
 ----
 
 The importance of adversarial thinking also extends to everyday
@@ -107,7 +107,7 @@ best to use Bitcoin in a trustless manner.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/66e76f6d
+https://strfsh.xyz/bdp/2ac24dfb
 ----
 
 There are a lot of known weaknesses in Bitcoin, and many of them are
@@ -147,7 +147,7 @@ image::sabotage-manual.png[role="right half-width"]
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/79009f8f
+https://strfsh.xyz/bdp/53b84f77
 ----
 
 [[sabotage]]
@@ -182,7 +182,7 @@ Bitcoin as an enemy.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/6eb1519b
+https://strfsh.xyz/bdp/bed45d12
 ----
 
 [[axiomofresistance]]

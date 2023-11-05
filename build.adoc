@@ -3,7 +3,7 @@
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/518d0ac9
+https://strfsh.xyz/bdp/58e12e44
 ----
 
 The project is maintained on
@@ -15,7 +15,7 @@ new issue there or submit a pull request.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/d74e85f0
+https://strfsh.xyz/bdp/f1d007bb
 ----
 
 The book is written in https://asciidoctor.org/[Asciidoctor]. The main
@@ -30,12 +30,12 @@ Before you build, you need to install some dependencies:
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/88cd100b
+https://strfsh.xyz/bdp/fe485257
 ----
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/00f91bd9
+https://strfsh.xyz/bdp/3e296f70
 ----
 
 * `asciidoctor`, See

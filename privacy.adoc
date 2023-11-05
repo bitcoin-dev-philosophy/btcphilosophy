@@ -33,7 +33,7 @@ your internet communications.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/26413b66
+https://strfsh.xyz/bdp/cb7871a9
 ----
 
 It may seem obvious why privacy is important in Bitcoin, but there are
@@ -88,7 +88,7 @@ distinction between anonymity and pseudonymity.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/d0593f90
+https://strfsh.xyz/bdp/3d37d30e
 ----
 
 Andrew Poelstra
@@ -110,7 +110,7 @@ not an anonymous system.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/9c97694c
+https://strfsh.xyz/bdp/6960ad66
 ----
 
 We have also said that the pseudonyms are public keys, but it's
@@ -154,7 +154,7 @@ the ones you send as well as the ones you receive.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/2859f80d
+https://strfsh.xyz/bdp/0e46aca4
 ----
 
 Satoshi Nakamoto ponders over on-chain privacy in section 7 of his
@@ -180,7 +180,7 @@ image::address-reuse-clustering.png[]
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/b67a5fd4
+https://strfsh.xyz/bdp/18e105b8
 ----
 
 Chris Belcher
@@ -196,7 +196,7 @@ trade-off between privacy and usability.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/00a4fd30
+https://strfsh.xyz/bdp/b8f6a74a
 ----
 
 Another important aspect of privacy is that the measures you take to protect your own privacy affect other
@@ -227,7 +227,7 @@ hacker, but don't count on that next time.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/da5507d2
+https://strfsh.xyz/bdp/f99c6f48
 ----
 
 While the blockchain proves to be a notorious source of privacy leaks,
@@ -277,7 +277,7 @@ convenience and privacy that works best for you.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/26413b66
+https://strfsh.xyz/bdp/cb7871a9
 ----
 
 Fungibility, in the context of currencies, means that one coin is
@@ -311,7 +311,7 @@ bad fungibility will bolster even worse fungibility.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/d8b26551
+https://strfsh.xyz/bdp/72edcb93
 ----
 
 Adam Back and Matt Corallo
@@ -344,7 +344,7 @@ talk about either of them in isolation.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/1515c067
+https://strfsh.xyz/bdp/f51e47c9
 ----
 
 Several techniques have been developed to help people protecting themselves from privacy
@@ -372,7 +372,7 @@ one, making it harder to do chain analysis.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/802fc42a
+https://strfsh.xyz/bdp/825e766f
 ----
 
 In
@@ -397,7 +397,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/4050388a
+https://strfsh.xyz/bdp/0a07f8cf
 ----
 
 He also mentioned this example, among others, on the
@@ -430,7 +430,7 @@ degrades over time.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/1aafc7af
+https://strfsh.xyz/bdp/2fec6d14
 ----
 
 To mitigate the risks of having your personal data revealed is to not
@@ -456,7 +456,7 @@ https://bisq.network/[bisq].
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/aa632378
+https://strfsh.xyz/bdp/8f0cc580
 ----
 
 For more in-depth reading about countermeasures, refer to the

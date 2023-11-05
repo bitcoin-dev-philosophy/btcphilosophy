@@ -41,7 +41,7 @@ join or leave as they wish. This property makes Bitcoin censorship-resistant.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/1751af12
+https://strfsh.xyz/bdp/6f4786f4
 ----
 
 If Bitcoin were centralized, it would be vulnerable to those who
@@ -102,7 +102,7 @@ None of these options are beneficial to the user.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/2859f80d
+https://strfsh.xyz/bdp/0e46aca4
 ----
 
 Censorship resistance through decentralization is what separates Bitcoin from
@@ -122,7 +122,7 @@ ____
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/219c645e
+https://strfsh.xyz/bdp/a2e371ff
 ----
 
 Here he uses the peculiar-sounding phrase "`peer-to-peer distributed timestamp
@@ -185,7 +185,7 @@ network rules can be changed by conspiring malicious actors.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/ded44527
+https://strfsh.xyz/bdp/4ed0fc3b
 ----
 
 In
@@ -263,7 +263,7 @@ living up to its value proposition.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/07f80e69
+https://strfsh.xyz/bdp/9c56ced3
 ----
 
 Pieter Wuille https://bitcoin.stackexchange.com/a/92055/69518[answers
@@ -293,7 +293,7 @@ system itself.
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/1e6dc10d
+https://strfsh.xyz/bdp/ffe43c2c
 ----
 
 A compelling aspect of Bitcoin is how hard it is to grasp
@@ -325,7 +325,7 @@ image::fishschool.jpg[]
 
 [qrcode,role=qrcode]
 ----
-https://strfsh.xyz/a/9f6e3241
+https://strfsh.xyz/bdp/00d3cde5
 ----
 
 The way Bitcoin works through decentralization resembles the
